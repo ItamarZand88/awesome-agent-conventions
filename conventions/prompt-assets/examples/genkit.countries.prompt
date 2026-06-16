@@ -1,0 +1,14 @@
+<!-- source: genkit — https://raw.githubusercontent.com/firebase/genkit/main/go/samples/prompts/prompts/countries.prompt -->
+---
+model: googleai/gemini-2.5-flash
+config:
+  temperature: 0.5
+output:
+  format: json
+  schema:
+    countries(array, A list of countries with their inhabitants):
+      name: string, Name of the country
+      habitants: integer, Number of inhabitants in the country
+      language: string, Official language of the country
+---
+Generate a list of countries with their habitants and language

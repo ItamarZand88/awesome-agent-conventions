@@ -17,7 +17,7 @@ JetBrains Junie / AI Assistant.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `c9s-bbgo` | [`c9s-bbgo..aiignore`](examples/c9s-bbgo..aiignore) | [source](https://raw.githubusercontent.com/c9s/bbgo/main/.aiignore) |
+| `bbgo` | [`bbgo..aiignore`](examples/bbgo..aiignore) | [source](https://raw.githubusercontent.com/c9s/bbgo/main/.aiignore) |
 
 ### `.cursorignore`
 
@@ -25,8 +25,8 @@ Cursor.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `holochain-holochain` | [`holochain-holochain..cursorignore`](examples/holochain-holochain..cursorignore) | [source](https://raw.githubusercontent.com/holochain/holochain/develop/.cursorignore) |
-| `mulesoft-api-console` | [`mulesoft-api-console..cursorignore`](examples/mulesoft-api-console..cursorignore) | [source](https://raw.githubusercontent.com/mulesoft/api-console/master/.cursorignore) |
+| `api-console` | [`api-console..cursorignore`](examples/api-console..cursorignore) | [source](https://raw.githubusercontent.com/mulesoft/api-console/master/.cursorignore) |
+| `holochain` | [`holochain..cursorignore`](examples/holochain..cursorignore) | [source](https://raw.githubusercontent.com/holochain/holochain/develop/.cursorignore) |
 
 ### `.codeiumignore`
 
@@ -34,7 +34,7 @@ Codeium / Windsurf.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `seontechnologies-playwright-utils` | [`seontechnologies-playwright-utils..codeiumignore`](examples/seontechnologies-playwright-utils..codeiumignore) | [source](https://raw.githubusercontent.com/seontechnologies/playwright-utils/main/.codeiumignore) |
+| `playwright-utils` | [`playwright-utils..codeiumignore`](examples/playwright-utils..codeiumignore) | [source](https://raw.githubusercontent.com/seontechnologies/playwright-utils/main/.codeiumignore) |
 
 ## Field notes
 

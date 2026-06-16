@@ -17,7 +17,7 @@ Project principles and non-negotiable rules the agent honors across every featur
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `github-spec-kit` | [`github-spec-kit.constitution.md`](examples/github-spec-kit.constitution.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/constitution-template.md) |
+| `spec-kit` | [`spec-kit.constitution.md`](examples/spec-kit.constitution.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/constitution-template.md) |
 
 ### `spec.md`
 
@@ -25,7 +25,7 @@ The what and why of one feature — requirements and user stories, no implementa
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `github-spec-kit` | [`github-spec-kit.spec.md`](examples/github-spec-kit.spec.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/spec-template.md) |
+| `spec-kit` | [`spec-kit.spec.md`](examples/spec-kit.spec.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/spec-template.md) |
 
 ### `plan.md`
 
@@ -33,7 +33,7 @@ The technical approach, stack, and architecture for the spec.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `github-spec-kit` | [`github-spec-kit.plan.md`](examples/github-spec-kit.plan.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/plan-template.md) |
+| `spec-kit` | [`spec-kit.plan.md`](examples/spec-kit.plan.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/plan-template.md) |
 
 ### `tasks.md`
 
@@ -41,7 +41,7 @@ An ordered, reviewable task list generated from the plan.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `github-spec-kit` | [`github-spec-kit.tasks.md`](examples/github-spec-kit.tasks.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/tasks-template.md) |
+| `spec-kit` | [`spec-kit.tasks.md`](examples/spec-kit.tasks.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/tasks-template.md) |
 
 ## Field notes
 

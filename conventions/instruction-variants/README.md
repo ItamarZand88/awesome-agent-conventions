@@ -17,7 +17,7 @@ Google Gemini CLI.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `google-gemini-gemini-cli` | [`google-gemini-gemini-cli.GEMINI.md`](examples/google-gemini-gemini-cli.GEMINI.md) | [source](https://raw.githubusercontent.com/google-gemini/gemini-cli/main/GEMINI.md) |
+| `gemini-cli` | [`gemini-cli.GEMINI.md`](examples/gemini-cli.GEMINI.md) | [source](https://raw.githubusercontent.com/google-gemini/gemini-cli/main/GEMINI.md) |
 
 ### `AGENT.md`
 
@@ -25,7 +25,7 @@ Amp (Sourcegraph) — singular, distinct from AGENTS.md.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `amantus-ai-vibetunnel` | [`amantus-ai-vibetunnel.AGENT.md`](examples/amantus-ai-vibetunnel.AGENT.md) | [source](https://raw.githubusercontent.com/amantus-ai/vibetunnel/main/AGENT.md) |
+| `vibetunnel` | [`vibetunnel.AGENT.md`](examples/vibetunnel.AGENT.md) | [source](https://raw.githubusercontent.com/amantus-ai/vibetunnel/main/AGENT.md) |
 
 ### `QWEN.md`
 
@@ -33,7 +33,7 @@ Qwen Code.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `Hxy1992-MapDownload` | [`Hxy1992-MapDownload.QWEN.md`](examples/Hxy1992-MapDownload.QWEN.md) | [source](https://raw.githubusercontent.com/Hxy1992/MapDownload/main/QWEN.md) |
+| `MapDownload` | [`MapDownload.QWEN.md`](examples/MapDownload.QWEN.md) | [source](https://raw.githubusercontent.com/Hxy1992/MapDownload/main/QWEN.md) |
 
 ### `WARP.md`
 
@@ -41,7 +41,7 @@ Warp terminal's agent.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `SuperJMN-Zafiro.Avalonia` | [`SuperJMN-Zafiro.Avalonia.WARP.md`](examples/SuperJMN-Zafiro.Avalonia.WARP.md) | [source](https://raw.githubusercontent.com/SuperJMN/Zafiro.Avalonia/master/WARP.md) |
+| `Zafiro.Avalonia` | [`Zafiro.Avalonia.WARP.md`](examples/Zafiro.Avalonia.WARP.md) | [source](https://raw.githubusercontent.com/SuperJMN/Zafiro.Avalonia/master/WARP.md) |
 
 ### `CONVENTIONS.md`
 
@@ -49,7 +49,7 @@ Aider.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `phel-lang-phel-lang` | [`phel-lang-phel-lang.CONVENTIONS.md`](examples/phel-lang-phel-lang.CONVENTIONS.md) | [source](https://raw.githubusercontent.com/phel-lang/phel-lang/master/resources/agents/skills/aider/CONVENTIONS.md) |
+| `phel-lang` | [`phel-lang.CONVENTIONS.md`](examples/phel-lang.CONVENTIONS.md) | [source](https://raw.githubusercontent.com/phel-lang/phel-lang/master/resources/agents/skills/aider/CONVENTIONS.md) |
 
 ### `copilot-instructions.md`
 
@@ -57,7 +57,7 @@ GitHub Copilot (lives under .github/).
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `microsoft-vscode` | [`microsoft-vscode.copilot-instructions.md`](examples/microsoft-vscode.copilot-instructions.md) | [source](https://raw.githubusercontent.com/microsoft/vscode/main/.github/copilot-instructions.md) |
+| `vscode` | [`vscode.copilot-instructions.md`](examples/vscode.copilot-instructions.md) | [source](https://raw.githubusercontent.com/microsoft/vscode/main/.github/copilot-instructions.md) |
 
 ## Field notes
 

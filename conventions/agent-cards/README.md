@@ -15,8 +15,8 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `a2aproject-a2a-samples` | [`a2aproject-a2a-samples.air-ticketing.agent.json`](examples/a2aproject-a2a-samples.air-ticketing.agent.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/air_ticketing_agent.json) |
-| `a2aproject-a2a-samples` | [`a2aproject-a2a-samples.currency.agent.json`](examples/a2aproject-a2a-samples.currency.agent.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json) |
+| `air-ticketing` | [`air-ticketing.agent.json`](examples/air-ticketing.agent.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/air_ticketing_agent.json) |
+| `currency` | [`currency.agent.json`](examples/currency.agent.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json) |
 
 ## Field notes
 

@@ -17,7 +17,7 @@ Foundation doc — why the project exists, core requirements and goals.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `gitpod-io-gitpod` | [`gitpod-io-gitpod.projectbrief.md`](examples/gitpod-io-gitpod.projectbrief.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/projectbrief.md) |
+| `gitpod` | [`gitpod.projectbrief.md`](examples/gitpod.projectbrief.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/projectbrief.md) |
 
 ### `productContext.md`
 
@@ -25,7 +25,7 @@ Problem space and the intended user experience.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `gitpod-io-gitpod` | [`gitpod-io-gitpod.productContext.md`](examples/gitpod-io-gitpod.productContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/productContext.md) |
+| `gitpod` | [`gitpod.productContext.md`](examples/gitpod.productContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/productContext.md) |
 
 ### `activeContext.md`
 
@@ -33,7 +33,7 @@ Current focus, recent changes, next steps — the most frequently updated file.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `gitpod-io-gitpod` | [`gitpod-io-gitpod.activeContext.md`](examples/gitpod-io-gitpod.activeContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/activeContext.md) |
+| `gitpod` | [`gitpod.activeContext.md`](examples/gitpod.activeContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/activeContext.md) |
 
 ### `systemPatterns.md`
 
@@ -41,7 +41,7 @@ Architecture, key technical decisions, and design patterns.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `gitpod-io-gitpod` | [`gitpod-io-gitpod.systemPatterns.md`](examples/gitpod-io-gitpod.systemPatterns.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/systemPatterns.md) |
+| `gitpod` | [`gitpod.systemPatterns.md`](examples/gitpod.systemPatterns.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/systemPatterns.md) |
 
 ### `techContext.md`
 
@@ -49,7 +49,7 @@ Technologies, setup, constraints, and dependencies.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `gitpod-io-gitpod` | [`gitpod-io-gitpod.techContext.md`](examples/gitpod-io-gitpod.techContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/techContext.md) |
+| `gitpod` | [`gitpod.techContext.md`](examples/gitpod.techContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/techContext.md) |
 
 ### `progress.md`
 
@@ -57,7 +57,7 @@ What works, what's left to build, and known issues.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `gitpod-io-gitpod` | [`gitpod-io-gitpod.progress.md`](examples/gitpod-io-gitpod.progress.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/progress.md) |
+| `gitpod` | [`gitpod.progress.md`](examples/gitpod.progress.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/progress.md) |
 
 ## Field notes
 

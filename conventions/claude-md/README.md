@@ -15,9 +15,9 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `anthropics-anthropic-sdk-typescript` | [`anthropics-anthropic-sdk-typescript.CLAUDE.md`](examples/anthropics-anthropic-sdk-typescript.CLAUDE.md) | [source](https://raw.githubusercontent.com/anthropics/anthropic-sdk-typescript/main/CLAUDE.md) |
-| `microsoft-playwright-mcp` | [`microsoft-playwright-mcp.CLAUDE.md`](examples/microsoft-playwright-mcp.CLAUDE.md) | [source](https://raw.githubusercontent.com/microsoft/playwright-mcp/main/CLAUDE.md) |
-| `modelcontextprotocol-servers` | [`modelcontextprotocol-servers.CLAUDE.md`](examples/modelcontextprotocol-servers.CLAUDE.md) | [source](https://raw.githubusercontent.com/modelcontextprotocol/servers/main/CLAUDE.md) |
+| `anthropic-sdk-ts` | [`anthropic-sdk-ts.CLAUDE.md`](examples/anthropic-sdk-ts.CLAUDE.md) | [source](https://raw.githubusercontent.com/anthropics/anthropic-sdk-typescript/main/CLAUDE.md) |
+| `mcp-servers` | [`mcp-servers.CLAUDE.md`](examples/mcp-servers.CLAUDE.md) | [source](https://raw.githubusercontent.com/modelcontextprotocol/servers/main/CLAUDE.md) |
+| `playwright-mcp` | [`playwright-mcp.CLAUDE.md`](examples/playwright-mcp.CLAUDE.md) | [source](https://raw.githubusercontent.com/microsoft/playwright-mcp/main/CLAUDE.md) |
 
 ## Field notes
 

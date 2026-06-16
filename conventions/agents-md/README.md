@@ -15,8 +15,8 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `apache-airflow` | [`apache-airflow.AGENTS.md`](examples/apache-airflow.AGENTS.md) | [source](https://raw.githubusercontent.com/apache/airflow/main/AGENTS.md) |
-| `openai-codex` | [`openai-codex.AGENTS.md`](examples/openai-codex.AGENTS.md) | [source](https://raw.githubusercontent.com/openai/codex/main/AGENTS.md) |
+| `airflow` | [`airflow.AGENTS.md`](examples/airflow.AGENTS.md) | [source](https://raw.githubusercontent.com/apache/airflow/main/AGENTS.md) |
+| `codex` | [`codex.AGENTS.md`](examples/codex.AGENTS.md) | [source](https://raw.githubusercontent.com/openai/codex/main/AGENTS.md) |
 
 ## Field notes
 

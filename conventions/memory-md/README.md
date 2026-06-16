@@ -15,8 +15,8 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `Harzva-learn-likecc` | [`Harzva-learn-likecc.MEMORY.md`](examples/Harzva-learn-likecc.MEMORY.md) | [source](https://raw.githubusercontent.com/Harzva/learn-likecc/main/MEMORY.md) |
-| `aaronjmars-soul.md` | [`aaronjmars-soul.md.MEMORY.md`](examples/aaronjmars-soul.md.MEMORY.md) | [source](https://raw.githubusercontent.com/aaronjmars/soul.md/main/MEMORY.md) |
+| `learn-likecc` | [`learn-likecc.MEMORY.md`](examples/learn-likecc.MEMORY.md) | [source](https://raw.githubusercontent.com/Harzva/learn-likecc/main/MEMORY.md) |
+| `soul.md` | [`soul.md.MEMORY.md`](examples/soul.md.MEMORY.md) | [source](https://raw.githubusercontent.com/aaronjmars/soul.md/main/MEMORY.md) |
 
 ## Field notes
 

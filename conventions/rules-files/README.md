@@ -17,7 +17,7 @@ Cursor — legacy single-file form (superseded by .cursor/rules/*.mdc).
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `grapeot-devin.cursorrules` | [`grapeot-devin.cursorrules..cursorrules`](examples/grapeot-devin.cursorrules..cursorrules) | [source](https://raw.githubusercontent.com/grapeot/devin.cursorrules/master/.cursorrules) |
+| `devin` | [`devin..cursorrules`](examples/devin..cursorrules) | [source](https://raw.githubusercontent.com/grapeot/devin.cursorrules/master/.cursorrules) |
 
 ### `.mdc`
 
@@ -25,7 +25,7 @@ Cursor — modern rule file with frontmatter and glob scoping, under .cursor/rul
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `PatrickJS-awesome-cursorrules` | [`PatrickJS-awesome-cursorrules.angular-typescript-cursorrules-prompt-file.mdc`](examples/PatrickJS-awesome-cursorrules.angular-typescript-cursorrules-prompt-file.mdc) | [source](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/angular-typescript-cursorrules-prompt-file.mdc) |
+| `awesome-cursorrules` | [`awesome-cursorrules.angular-typescript-cursorrules-prompt-file.mdc`](examples/awesome-cursorrules.angular-typescript-cursorrules-prompt-file.mdc) | [source](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/angular-typescript-cursorrules-prompt-file.mdc) |
 
 ### `.clinerules`
 
@@ -33,7 +33,7 @@ Cline — a rules file or a directory of rules.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `raycast-extensions` | [`raycast-extensions..clinerules`](examples/raycast-extensions..clinerules) | [source](https://raw.githubusercontent.com/raycast/extensions/main/extensions/1bookmark/.clinerules) |
+| `raycast` | [`raycast..clinerules`](examples/raycast..clinerules) | [source](https://raw.githubusercontent.com/raycast/extensions/main/extensions/1bookmark/.clinerules) |
 
 ### `.windsurfrules`
 
@@ -41,7 +41,7 @@ Windsurf — project rules.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `gui-cs-Terminal.Gui` | [`gui-cs-Terminal.Gui..windsurfrules`](examples/gui-cs-Terminal.Gui..windsurfrules) | [source](https://raw.githubusercontent.com/gui-cs/Terminal.Gui/develop/.windsurfrules) |
+| `Terminal.Gui` | [`Terminal.Gui..windsurfrules`](examples/Terminal.Gui..windsurfrules) | [source](https://raw.githubusercontent.com/gui-cs/Terminal.Gui/develop/.windsurfrules) |
 
 ## Field notes
 

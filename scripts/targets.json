@@ -24,8 +24,8 @@
       "spec": "https://agents.md",
       "summary": "A plain-Markdown \"README for agents\" — build/test commands, conventions, and gotchas an agent needs before touching the code. The most widely adopted cross-tool instruction file.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/openai/codex/main/AGENTS.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/apache/airflow/main/AGENTS.md" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/openai/codex/main/AGENTS.md", "source_label": "codex" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/apache/airflow/main/AGENTS.md", "source_label": "airflow" }
       ]
     },
     "claude-md": {
@@ -40,9 +40,9 @@
       "spec": "https://www.anthropic.com/engineering/claude-code-best-practices",
       "summary": "Anthropic's memory file for Claude Code — loaded automatically at session start to carry project commands, style rules, and standing instructions across turns.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/modelcontextprotocol/servers/main/CLAUDE.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/anthropics/anthropic-sdk-typescript/main/CLAUDE.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/playwright-mcp/main/CLAUDE.md" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/modelcontextprotocol/servers/main/CLAUDE.md", "source_label": "mcp-servers" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/anthropics/anthropic-sdk-typescript/main/CLAUDE.md", "source_label": "anthropic-sdk-ts" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/playwright-mcp/main/CLAUDE.md", "source_label": "playwright-mcp" }
       ]
     },
     "instruction-variants": {
@@ -62,12 +62,12 @@
       "spec": "https://agents.md",
       "summary": "Per-tool instruction files that predate or coexist with AGENTS.md. Many tools now fall back to or symlink AGENTS.md, but these named variants are still read in the wild.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/main/GEMINI.md", "as": "GEMINI.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/vscode/main/.github/copilot-instructions.md", "as": "copilot-instructions.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/amantus-ai/vibetunnel/main/AGENT.md", "as": "AGENT.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/Hxy1992/MapDownload/main/QWEN.md", "as": "QWEN.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/SuperJMN/Zafiro.Avalonia/master/WARP.md", "as": "WARP.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/phel-lang/phel-lang/master/resources/agents/skills/aider/CONVENTIONS.md", "as": "CONVENTIONS.md" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/main/GEMINI.md", "as": "GEMINI.md", "source_label": "gemini-cli" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/vscode/main/.github/copilot-instructions.md", "as": "copilot-instructions.md", "source_label": "vscode" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/amantus-ai/vibetunnel/main/AGENT.md", "as": "AGENT.md", "source_label": "vibetunnel" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/Hxy1992/MapDownload/main/QWEN.md", "as": "QWEN.md", "source_label": "MapDownload" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/SuperJMN/Zafiro.Avalonia/master/WARP.md", "as": "WARP.md", "source_label": "Zafiro.Avalonia" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/phel-lang/phel-lang/master/resources/agents/skills/aider/CONVENTIONS.md", "as": "CONVENTIONS.md", "source_label": "phel-lang" }
       ]
     },
     "memory-md": {
@@ -82,8 +82,8 @@
       "spec": "https://code.claude.com/docs",
       "summary": "A persistent, agent-maintained index of durable facts — written and re-read across sessions so an agent accumulates project memory instead of relearning each time.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/Harzva/learn-likecc/main/MEMORY.md", "as": "MEMORY.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/aaronjmars/soul.md/main/MEMORY.md", "as": "MEMORY.md" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/Harzva/learn-likecc/main/MEMORY.md", "as": "MEMORY.md", "source_label": "learn-likecc" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/aaronjmars/soul.md/main/MEMORY.md", "as": "MEMORY.md", "source_label": "soul.md" }
       ]
     },
     "memory-bank": {
@@ -103,12 +103,12 @@
       "spec": "https://docs.cline.bot/prompting/cline-memory-bank",
       "summary": "Cline's structured memory system — a set of Markdown files an agent reads at the start of every task to reconstruct full project context after its session memory resets.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/projectbrief.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/productContext.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/activeContext.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/systemPatterns.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/techContext.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/progress.md" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/projectbrief.md", "source_label": "gitpod" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/productContext.md", "source_label": "gitpod" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/activeContext.md", "source_label": "gitpod" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/systemPatterns.md", "source_label": "gitpod" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/techContext.md", "source_label": "gitpod" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/progress.md", "source_label": "gitpod" }
       ]
     },
     "spec-kit": {
@@ -126,10 +126,10 @@
       "spec": "https://github.com/github/spec-kit",
       "summary": "GitHub's spec-driven workflow — a constitution plus per-feature spec → plan → tasks files that drive an agent through structured, reviewable implementation.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/github/spec-kit/main/templates/constitution-template.md", "as": "constitution.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/github/spec-kit/main/templates/spec-template.md", "as": "spec.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/github/spec-kit/main/templates/plan-template.md", "as": "plan.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/github/spec-kit/main/templates/tasks-template.md", "as": "tasks.md" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/github/spec-kit/main/templates/constitution-template.md", "as": "constitution.md", "source_label": "spec-kit" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/github/spec-kit/main/templates/spec-template.md", "as": "spec.md", "source_label": "spec-kit" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/github/spec-kit/main/templates/plan-template.md", "as": "plan.md", "source_label": "spec-kit" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/github/spec-kit/main/templates/tasks-template.md", "as": "tasks.md", "source_label": "spec-kit" }
       ]
     },
     "kiro-steering": {
@@ -146,9 +146,9 @@
       "spec": "https://kiro.dev/docs/steering",
       "summary": "Kiro's always-on steering docs — product, structure, and tech files that give the agent persistent project context outside of any single spec.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/product.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/structure.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/tech.md" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/product.md", "source_label": "fame2" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/structure.md", "source_label": "fame2" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/tech.md", "source_label": "fame2" }
       ]
     },
     "skill-md": {
@@ -163,8 +163,8 @@
       "spec": "https://agentskills.io",
       "summary": "A self-contained, model-invoked capability: YAML frontmatter (name + description) tells the agent when to load it; the body teaches it how. Progressive disclosure keeps it cheap until needed.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/mcp-builder/SKILL.md", "as": "mcp-builder.SKILL.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/pdf/SKILL.md", "as": "pdf.SKILL.md" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/mcp-builder/SKILL.md", "source_label": "mcp-builder" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/pdf/SKILL.md", "source_label": "pdf" }
       ]
     },
     "prompt-assets": {
@@ -181,10 +181,10 @@
       "spec": "https://prompty.ai",
       "summary": "Externalized prompt files — Prompty's YAML-front-mattered .prompty, plain .prompt templates, and system_prompt.txt — that pull the prompt out of source code so it can be versioned and edited on its own.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/prompty/main/web/docs-examples/prompts/chat-basic.prompty" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/prompty/main/web/src/content/docs/assets/code/basic.prompty" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/firebase/genkit/main/go/samples/prompts/prompts/countries.prompt" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/diffbot/diffbot-llm-inference/main/system_prompt.txt" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/prompty/main/web/docs-examples/prompts/chat-basic.prompty", "source_label": "prompty" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/prompty/main/web/src/content/docs/assets/code/basic.prompty", "source_label": "prompty" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/firebase/genkit/main/go/samples/prompts/prompts/countries.prompt", "source_label": "genkit" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/diffbot/diffbot-llm-inference/main/system_prompt.txt", "source_label": "diffbot" }
       ]
     },
     "rules-files": {
@@ -202,10 +202,10 @@
       "spec": "https://docs.cursor.com",
       "summary": "Per-tool rule files that scope agent behavior — older single-file forms (.cursorrules, .windsurfrules) and newer directory-based, glob-scoped forms (.cursor/rules/*.mdc).",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/grapeot/devin.cursorrules/master/.cursorrules" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/angular-typescript-cursorrules-prompt-file.mdc" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/raycast/extensions/main/extensions/1bookmark/.clinerules" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/gui-cs/Terminal.Gui/develop/.windsurfrules" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/grapeot/devin.cursorrules/master/.cursorrules", "source_label": "devin" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/angular-typescript-cursorrules-prompt-file.mdc", "source_label": "awesome-cursorrules" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/raycast/extensions/main/extensions/1bookmark/.clinerules", "source_label": "raycast" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/gui-cs/Terminal.Gui/develop/.windsurfrules", "source_label": "Terminal.Gui" }
       ]
     },
     "ignore-files": {
@@ -222,10 +222,10 @@
       "spec": "https://www.jetbrains.com/help/junie/aiignore.html",
       "summary": "gitignore-syntax files that fence an AI agent out of paths — secrets, vendored code, generated output — so they're never sent to the model as context.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/c9s/bbgo/main/.aiignore" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/holochain/holochain/develop/.cursorignore" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/mulesoft/api-console/master/.cursorignore" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/seontechnologies/playwright-utils/main/.codeiumignore" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/c9s/bbgo/main/.aiignore", "source_label": "bbgo" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/holochain/holochain/develop/.cursorignore", "source_label": "holochain" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/mulesoft/api-console/master/.cursorignore", "source_label": "api-console" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/seontechnologies/playwright-utils/main/.codeiumignore", "source_label": "playwright-utils" }
       ]
     },
     "design-md": {
@@ -316,8 +316,8 @@
       "spec": "https://google.github.io/A2A/",
       "summary": "The Agent2Agent (A2A) capability card — a JSON document at a well-known path advertising an agent's skills, endpoints, and auth so other agents can discover and call it. Backed by a real spec; adoption is growing but early.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json", "as": "currency.agent.json" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/air_ticketing_agent.json", "as": "air-ticketing.agent.json" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json", "as": "agent.json", "source_label": "currency" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/air_ticketing_agent.json", "as": "agent.json", "source_label": "air-ticketing" }
       ]
     },
     "proposed-protocols-md": {

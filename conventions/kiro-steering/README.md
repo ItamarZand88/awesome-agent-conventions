@@ -17,7 +17,7 @@ What the product is and who it's for.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `HimangshuPronoy-fame2` | [`HimangshuPronoy-fame2.product.md`](examples/HimangshuPronoy-fame2.product.md) | [source](https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/product.md) |
+| `fame2` | [`fame2.product.md`](examples/fame2.product.md) | [source](https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/product.md) |
 
 ### `structure.md`
 
@@ -25,7 +25,7 @@ File organization and architectural conventions.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `HimangshuPronoy-fame2` | [`HimangshuPronoy-fame2.structure.md`](examples/HimangshuPronoy-fame2.structure.md) | [source](https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/structure.md) |
+| `fame2` | [`fame2.structure.md`](examples/fame2.structure.md) | [source](https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/structure.md) |
 
 ### `tech.md`
 
@@ -33,7 +33,7 @@ Allowed frameworks, libraries, and technical constraints.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `HimangshuPronoy-fame2` | [`HimangshuPronoy-fame2.tech.md`](examples/HimangshuPronoy-fame2.tech.md) | [source](https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/tech.md) |
+| `fame2` | [`fame2.tech.md`](examples/fame2.tech.md) | [source](https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/tech.md) |
 
 ## Field notes
 

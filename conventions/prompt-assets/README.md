@@ -17,8 +17,8 @@ Prompty — YAML frontmatter (model + inputs) over a templated prompt body.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `microsoft-prompty` | [`microsoft-prompty.basic.prompty`](examples/microsoft-prompty.basic.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/web/src/content/docs/assets/code/basic.prompty) |
-| `microsoft-prompty` | [`microsoft-prompty.chat-basic.prompty`](examples/microsoft-prompty.chat-basic.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/web/docs-examples/prompts/chat-basic.prompty) |
+| `prompty` | [`prompty.basic.prompty`](examples/prompty.basic.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/web/src/content/docs/assets/code/basic.prompty) |
+| `prompty` | [`prompty.chat-basic.prompty`](examples/prompty.chat-basic.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/web/docs-examples/prompts/chat-basic.prompty) |
 
 ### `.prompt`
 
@@ -26,7 +26,7 @@ Generic templated prompt file (Genkit dotprompt and similar).
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `firebase-genkit` | [`firebase-genkit.countries.prompt`](examples/firebase-genkit.countries.prompt) | [source](https://raw.githubusercontent.com/firebase/genkit/main/go/samples/prompts/prompts/countries.prompt) |
+| `genkit` | [`genkit.countries.prompt`](examples/genkit.countries.prompt) | [source](https://raw.githubusercontent.com/firebase/genkit/main/go/samples/prompts/prompts/countries.prompt) |
 
 ### `system_prompt.txt`
 
@@ -34,7 +34,7 @@ A plain-text externalized system prompt.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `diffbot-diffbot-llm-inference` | [`diffbot-diffbot-llm-inference.system_prompt.txt`](examples/diffbot-diffbot-llm-inference.system_prompt.txt) | [source](https://raw.githubusercontent.com/diffbot/diffbot-llm-inference/main/system_prompt.txt) |
+| `diffbot` | [`diffbot.system_prompt.txt`](examples/diffbot.system_prompt.txt) | [source](https://raw.githubusercontent.com/diffbot/diffbot-llm-inference/main/system_prompt.txt) |
 
 ## Field notes
 
