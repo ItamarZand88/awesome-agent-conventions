@@ -1,0 +1,77 @@
+# Tool-specific instruction files 🟢 Adopted
+
+> Per-tool instruction files that predate or coexist with AGENTS.md. Many tools now fall back to or symlink AGENTS.md, but these named variants are still read in the wild.
+
+- **Read by:** Each file is read by its namesake tool — Gemini CLI, Amp, Qwen Code, Warp, Aider, GitHub Copilot
+- **Location:** Repository root (or .github/ for copilot-instructions.md)
+- **Spec:** [https://agents.md](https://agents.md)
+- **Files:** `GEMINI.md`, `AGENT.md`, `QWEN.md`, `WARP.md`, `CONVENTIONS.md`, `copilot-instructions.md`
+
+## Examples
+
+_Every file below was fetched from a public source by [`scripts/extract.py`](../../scripts/extract.py) — none are hand-written._
+
+### `GEMINI.md`
+
+Google Gemini CLI.
+
+| Source | File | Provenance |
+| --- | --- | --- |
+| `google-gemini-gemini-cli` | [`google-gemini-gemini-cli.GEMINI.md`](examples/google-gemini-gemini-cli.GEMINI.md) | [source](https://raw.githubusercontent.com/google-gemini/gemini-cli/main/GEMINI.md) |
+
+### `AGENT.md`
+
+Amp (Sourcegraph) — singular, distinct from AGENTS.md.
+
+| Source | File | Provenance |
+| --- | --- | --- |
+| `amantus-ai-vibetunnel` | [`amantus-ai-vibetunnel.AGENT.md`](examples/amantus-ai-vibetunnel.AGENT.md) | [source](https://raw.githubusercontent.com/amantus-ai/vibetunnel/main/AGENT.md) |
+
+### `QWEN.md`
+
+Qwen Code.
+
+| Source | File | Provenance |
+| --- | --- | --- |
+| `Hxy1992-MapDownload` | [`Hxy1992-MapDownload.QWEN.md`](examples/Hxy1992-MapDownload.QWEN.md) | [source](https://raw.githubusercontent.com/Hxy1992/MapDownload/main/QWEN.md) |
+
+### `WARP.md`
+
+Warp terminal's agent.
+
+| Source | File | Provenance |
+| --- | --- | --- |
+| `SuperJMN-Zafiro.Avalonia` | [`SuperJMN-Zafiro.Avalonia.WARP.md`](examples/SuperJMN-Zafiro.Avalonia.WARP.md) | [source](https://raw.githubusercontent.com/SuperJMN/Zafiro.Avalonia/master/WARP.md) |
+
+### `CONVENTIONS.md`
+
+Aider.
+
+| Source | File | Provenance |
+| --- | --- | --- |
+| `phel-lang-phel-lang` | [`phel-lang-phel-lang.CONVENTIONS.md`](examples/phel-lang-phel-lang.CONVENTIONS.md) | [source](https://raw.githubusercontent.com/phel-lang/phel-lang/master/resources/agents/skills/aider/CONVENTIONS.md) |
+
+### `copilot-instructions.md`
+
+GitHub Copilot (lives under .github/).
+
+| Source | File | Provenance |
+| --- | --- | --- |
+| `microsoft-vscode` | [`microsoft-vscode.copilot-instructions.md`](examples/microsoft-vscode.copilot-instructions.md) | [source](https://raw.githubusercontent.com/microsoft/vscode/main/.github/copilot-instructions.md) |
+
+## Field notes
+
+### Composition
+All of these share the AGENTS.md shape — title, tech stack, build/test commands, conventions — and several announce their reader explicitly:
+- **WARP.md** opens *"This file provides guidance to WARP (warp.dev) when working with code in this repository."*
+- **AGENT.md** (Amp) leads with **Build/Test Commands** and a single-test recipe.
+- **CONVENTIONS.md** (Aider) is loaded *explicitly* — *"Pass to Aider via `--read CONVENTIONS.md`"* — and itself documents a load order of further `.agents/*.md` files.
+- **QWEN.md** / **GEMINI.md** mirror CLAUDE.md, including `@`-imports.
+
+### Anti-patterns
+- Hand-maintaining six near-identical files until they drift. The common fix is to keep one source (usually AGENTS.md) and symlink the rest.
+- Putting tool-specific paths in the wrong place — `copilot-instructions.md` lives under `.github/`, not the repo root.
+
+### Edge cases
+- **Discovery differs:** most are auto-loaded by their tool, but Aider's `CONVENTIONS.md` is opt-in via `--read` / `.aider.conf.yml`.
+- **Singular vs plural:** Amp's `AGENT.md` is deliberately distinct from `AGENTS.md` — don't conflate them.

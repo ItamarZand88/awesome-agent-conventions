@@ -1,0 +1,5 @@
+<!-- source: holochain-holochain — https://raw.githubusercontent.com/holochain/holochain/develop/.cursorignore -->
+# Add directories or file patterns to ignore during indexing (e.g. foo/ or *.csv)
+target/
+**/target/**
+.git/
