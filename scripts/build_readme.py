@@ -71,7 +71,7 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 | Badge | Tier | Meaning |
 | --- | --- | --- |
 | 🟢 | **Adopted** | In production across multiple tools or teams. |
-| 🟡 | **Emerging** | A real published spec from a real org, but early / limited adoption. |
+| 🟠 | **Emerging** | A real published spec from a real org, but early / limited adoption. |
 | 🔵 | **Proposed** | A published concept with no demonstrated adoption (often one author staking a namespace). |
 """
 

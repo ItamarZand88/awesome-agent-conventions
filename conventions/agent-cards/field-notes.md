@@ -10,5 +10,5 @@ A flat JSON capability descriptor. The A2A currency-agent card carries:
 - Pinning a stale `protocolVersion` after upgrading the runtime.
 
 ### Edge cases
-- **🟡 Emerging:** the spec defines a well-known path (`/.well-known/agent.json`, a.k.a. `agent-card.json`), but in practice cards are often **served at runtime** rather than committed — both examples here come from the A2A samples repo, not a live `.well-known/` path.
+- **🟠 Emerging:** the spec defines a well-known path (`/.well-known/agent.json`, a.k.a. `agent-card.json`), but in practice cards are often **served at runtime** rather than committed — both examples here come from the A2A samples repo, not a live `.well-known/` path.
 - Naming is still settling (`agent.json` vs `agent-card.json`); fetchers should tolerate both.

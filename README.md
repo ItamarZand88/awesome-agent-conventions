@@ -24,7 +24,7 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 | Badge | Tier | Meaning |
 | --- | --- | --- |
 | 🟢 | **Adopted** | In production across multiple tools or teams. |
-| 🟡 | **Emerging** | A real published spec from a real org, but early / limited adoption. |
+| 🟠 | **Emerging** | A real published spec from a real org, but early / limited adoption. |
 | 🔵 | **Proposed** | A published concept with no demonstrated adoption (often one author staking a namespace). |
 
 ## Contents
@@ -51,9 +51,9 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
   - 🟢 [llms.txt](conventions/llms-txt/)
   - 🟢 [pricing.md](conventions/pricing-md/)
 - [Agent-web trust](#agent-web-trust)
-  - 🟡 [auth.md](conventions/auth-md/)
+  - 🟠 [auth.md](conventions/auth-md/)
 - [Identity & protocols](#identity--protocols)
-  - 🟡 [Agent Cards (A2A)](conventions/agent-cards/)
+  - 🟠 [Agent Cards (A2A)](conventions/agent-cards/)
 - [Proposed namespace](#proposed-namespace)
   - 🔵 [The protocols.md namespace](conventions/proposed-protocols-md/)
 
@@ -131,7 +131,7 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
-| 🟡 | [auth.md](conventions/auth-md/) | `auth.md` | Agents discovering how to authenticate to a service (early adopters) | [spec ↗](https://auth-md.com) |
+| 🟠 | [auth.md](conventions/auth-md/) | `auth.md` | Agents discovering how to authenticate to a service (early adopters) | [spec ↗](https://auth-md.com) |
 
 - **[auth.md](conventions/auth-md/)** — A published spec for a Markdown file that tells an agent how to authenticate with a service — discovery of auth endpoints and flows. A real spec from a real org, but adoption is still early.
 
@@ -139,7 +139,7 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
-| 🟡 | [Agent Cards (A2A)](conventions/agent-cards/) | `agent.json` | A2A-compatible agents discovering another agent's capabilities | [spec ↗](https://google.github.io/A2A/) |
+| 🟠 | [Agent Cards (A2A)](conventions/agent-cards/) | `agent.json` | A2A-compatible agents discovering another agent's capabilities | [spec ↗](https://google.github.io/A2A/) |
 
 - **[Agent Cards (A2A)](conventions/agent-cards/)** — The Agent2Agent (A2A) capability card — a JSON document at a well-known path advertising an agent's skills, endpoints, and auth so other agents can discover and call it. Backed by a real spec; adoption is growing but early.
 

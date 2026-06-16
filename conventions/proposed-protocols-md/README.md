@@ -12,16 +12,16 @@
 > - **Coverage is wildly uneven.** The namespace is built from individually-registered apex `.md` domains. As of **2026-06-16**, of the 74 listed only **16** serve first-party content; **18** are empty `Create Next App` scaffolds; **6** redirect to a sibling; **4** are parked **"for sale"** domains the project doesn't even control; and **30 don't resolve at all.** The full audit is below.
 > - **No demonstrated adoption.** No tool, agent, or team is known to read any of these endpoints. This is the textbook 🔵 **Proposed** case: one author staking a namespace and describing what it *could* coordinate.
 >
-> This entry exists to document the namespace **honestly**, not to endorse it. It is deliberately kept apart from the 🟢 Adopted and 🟡 Emerging entries so a reader never mistakes a reserved name for a shipping convention.
+> This entry exists to document the namespace **honestly**, not to endorse it. It is deliberately kept apart from the 🟢 Adopted and 🟠 Emerging entries so a reader never mistakes a reserved name for a shipping convention.
 
 ## Why it's catalogued at all
 
-The whole repo runs on one promise: real, extracted files labelled by how widely they're actually used. A namespace that's mostly empty-but-named domains is the opposite of that — so it lives here, in its own 🔵 Proposed category, with the caveats up top. It's worth recording because the *idea* (canonical, machine-discoverable `.md` endpoints as coordination primitives) is a genuine thread in the agent-web conversation, and a reader deserves to see where that thread is actually shipping (the 🟢/🟡 entries like [`llms.txt`](../llms-txt/) and [`pricing.md`](../pricing-md/)) versus where it's only been claimed (here).
+The whole repo runs on one promise: real, extracted files labelled by how widely they're actually used. A namespace that's mostly empty-but-named domains is the opposite of that — so it lives here, in its own 🔵 Proposed category, with the caveats up top. It's worth recording because the *idea* (canonical, machine-discoverable `.md` endpoints as coordination primitives) is a genuine thread in the agent-web conversation, and a reader deserves to see where that thread is actually shipping (the 🟢/🟠 entries like [`llms.txt`](../llms-txt/) and [`pricing.md`](../pricing-md/)) versus where it's only been claimed (here).
 
 ## Held out on purpose
 
 - **`undo.md`** — frequently floated as an agent-safety primitive (a documented "undo" affordance an agent can rely on), but it is **not** part of the protocols.md namespace and has **no published spec**. Held out entirely until a real spec or any adoption appears.
-- **`auth.md`** — a sibling "agent-web trust" idea, but it has a real published spec and at least one live example in the wild, so it is filed one tier up under 🟡 **Emerging** at [`../auth-md/`](../auth-md/) — not here. Same family, different evidence, different tier.
+- **`auth.md`** — a sibling "agent-web trust" idea, but it has a real published spec and at least one live example in the wild, so it is filed one tier up under 🟠 **Emerging** at [`../auth-md/`](../auth-md/) — not here. Same family, different evidence, different tier.
 
 ## The namespace, audited
 

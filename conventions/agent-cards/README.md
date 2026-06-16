@@ -1,4 +1,4 @@
-# Agent Cards (A2A) 🟡 Emerging
+# Agent Cards (A2A) 🟠 Emerging
 
 > The Agent2Agent (A2A) capability card — a JSON document at a well-known path advertising an agent's skills, endpoints, and auth so other agents can discover and call it. Backed by a real spec; adoption is growing but early.
 
@@ -32,5 +32,5 @@ A flat JSON capability descriptor. The A2A currency-agent card carries:
 - Pinning a stale `protocolVersion` after upgrading the runtime.
 
 ### Edge cases
-- **🟡 Emerging:** the spec defines a well-known path (`/.well-known/agent.json`, a.k.a. `agent-card.json`), but in practice cards are often **served at runtime** rather than committed — both examples here come from the A2A samples repo, not a live `.well-known/` path.
+- **🟠 Emerging:** the spec defines a well-known path (`/.well-known/agent.json`, a.k.a. `agent-card.json`), but in practice cards are often **served at runtime** rather than committed — both examples here come from the A2A samples repo, not a live `.well-known/` path.
 - Naming is still settling (`agent.json` vs `agent-card.json`); fetchers should tolerate both.

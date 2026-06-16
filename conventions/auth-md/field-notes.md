@@ -11,5 +11,5 @@ The WorkOS example is the clearest live instance and worth studying:
 - Unordered or branchy instructions an agent can't follow deterministically.
 
 ### Edge cases
-- **🟡 Emerging:** strong spec, essentially one polished live example. Treat the shape as indicative, not settled.
+- **🟠 Emerging:** strong spec, essentially one polished live example. Treat the shape as indicative, not settled.
 - Flows vary (user-claimed vs verified registration); placement (`/auth.md` vs `.well-known/`) is still converging.

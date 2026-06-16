@@ -292,7 +292,7 @@
     "auth-md": {
       "name": "auth.md",
       "category": "Agent-web trust",
-      "maturity": "🟡",
+      "maturity": "🟠",
       "files": [
         { "name": "auth.md" }
       ],
@@ -307,7 +307,7 @@
     "agent-cards": {
       "name": "Agent Cards (A2A)",
       "category": "Identity & protocols",
-      "maturity": "🟡",
+      "maturity": "🟠",
       "files": [
         { "name": "agent.json" }
       ],

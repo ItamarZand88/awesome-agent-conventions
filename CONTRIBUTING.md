@@ -28,7 +28,7 @@ adopted standard as if they were equal.
 | Badge | Tier | Bar to clear |
 | --- | --- | --- |
 | 🟢 | **Adopted** | Demonstrably in production across multiple tools or teams. |
-| 🟡 | **Emerging** | A real published spec from a real org, but early / limited adoption. |
+| 🟠 | **Emerging** | A real published spec from a real org, but early / limited adoption. |
 | 🔵 | **Proposed** | A published concept with no demonstrated adoption — often one author staking a namespace. |
 
 If you can't evidence the tier you want, drop the entry or mark it 🔵. When in
