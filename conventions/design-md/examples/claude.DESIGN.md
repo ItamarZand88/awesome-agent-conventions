@@ -1,4 +1,4 @@
-<!-- source: VoltAgent-awesome-design-md — https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/claude/DESIGN.md -->
+<!-- source: claude — https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/claude/DESIGN.md -->
 ---
 version: alpha
 name: Claude-design-analysis

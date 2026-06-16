@@ -1,4 +1,4 @@
-<!-- source: VoltAgent-awesome-design-md — https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/figma/DESIGN.md -->
+<!-- source: figma — https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/figma/DESIGN.md -->
 ---
 version: alpha
 name: Figma-design-analysis

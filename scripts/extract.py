@@ -54,7 +54,14 @@ PROVENANCE_RE = re.compile(r"<!-- source: (?P<label>.+?) — (?P<url>.+?) -->")
 # --- target helpers --------------------------------------------------------
 
 def source_label(target, url):
-    """Domain for plain web URLs, owner-repo for GitHub sources."""
+    """Explicit `source_label` override, else domain / owner-repo.
+
+    The label drives both the saved filename prefix and the "Source" column,
+    so an override (e.g. "apple") lets several examples from one repo surface
+    by what they actually are rather than by the shared repo name.
+    """
+    if target.get("source_label"):
+        return target["source_label"]
     if target.get("type") == "github":
         return f"{target['owner']}-{target['repo']}"
     host = urlparse(url).netloc

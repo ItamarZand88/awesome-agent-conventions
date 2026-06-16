@@ -45,6 +45,10 @@ doubt, label down, not up.
    (`{"type": "web", "url": "…"}`), optionally with an `"as"` rename so the saved
    filename matches a declared file. A `{"type": "github", "owner", "repo",
    "path"}` form is also supported via the Contents API (`GITHUB_TOKEN` optional).
+   Add `"source_label": "…"` to override the auto-computed label (which defaults
+   to the domain or `owner-repo`) — useful when several examples come from one
+   repo and should surface by what they are: the design.md entries pull from
+   `VoltAgent/awesome-design-md` but label as `apple`, `claude`, `cursor`, `figma`.
 3. **Regenerate:**
 
    ```bash

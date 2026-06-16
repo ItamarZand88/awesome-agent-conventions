@@ -1,4 +1,4 @@
-<!-- source: VoltAgent-awesome-design-md — https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/apple/DESIGN.md -->
+<!-- source: apple — https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/apple/DESIGN.md -->
 ---
 version: alpha
 name: Apple-design-analysis

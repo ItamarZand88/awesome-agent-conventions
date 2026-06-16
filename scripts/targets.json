@@ -240,10 +240,10 @@
       "spec": "https://stitch.withgoogle.com/docs/design-md/specification",
       "summary": "A structured, machine-readable design specification — tokens, components, and layout intent — that an agent reads to generate or keep UI consistent with an established system.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/apple/DESIGN.md", "as": "apple.DESIGN.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/claude/DESIGN.md", "as": "claude.DESIGN.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/cursor/DESIGN.md", "as": "cursor.DESIGN.md" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/figma/DESIGN.md", "as": "figma.DESIGN.md" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/apple/DESIGN.md", "source_label": "apple" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/claude/DESIGN.md", "source_label": "claude" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/cursor/DESIGN.md", "source_label": "cursor" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/figma/DESIGN.md", "source_label": "figma" }
       ]
     },
     "llms-txt": {

@@ -1,4 +1,4 @@
-<!-- source: VoltAgent-awesome-design-md — https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/cursor/DESIGN.md -->
+<!-- source: cursor — https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/cursor/DESIGN.md -->
 ---
 version: alpha
 name: Cursor-design-analysis
