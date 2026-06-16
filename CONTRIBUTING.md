@@ -60,6 +60,22 @@ doubt, label down, not up.
    prose plus `### Composition` / `### Anti-patterns` / `### Edge cases`); the H2 is
    added by the generator. This is where the collection earns its depth.
 
+## Examples vs. patterns
+
+Most files are **artifacts**: the extractor vendors the real file into `examples/`
+because its specific content is what teaches. A few files are better shown as a
+**pattern** — when the real file is a multi-megabyte dump or pure boilerplate
+where any instance just restates the schema (the canonical case is
+`llms-full.txt`). For those, set `"kind": "pattern"` on the file in
+`scripts/targets.json`, give it a short `pattern` description and a list of
+`instances` (`{ "label", "url" }`), and add **no** `targets` for it. The generator
+then renders a "Pattern — not an extracted file" block linking the live instances
+instead of an examples table, and clears any stale vendored copy.
+
+Default to `artifact`. Reach for `pattern` only when a vendored file would be
+noise rather than something worth copying — real files are the whole point of
+this collection.
+
 ## Rules of the road
 
 - **Don't hand-write example files.** Only the extractor creates them, each with

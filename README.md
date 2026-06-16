@@ -121,7 +121,7 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
-| 🟢 | [llms.txt](conventions/llms-txt/) | `llms.txt` `llms-full.txt` | LLM-powered docs tools, agents, and crawlers that look for /llms.txt | [spec ↗](https://llmstxt.org) |
+| 🟢 | [llms.txt](conventions/llms-txt/) | `llms.txt` `llms-full.txt` _(pattern)_ | LLM-powered docs tools, agents, and crawlers that look for /llms.txt | [spec ↗](https://llmstxt.org) |
 | 🟢 | [pricing.md](conventions/pricing-md/) | `pricing.md` | Agents and LLM browsers fetching a clean, parse-able pricing page | [spec ↗](https://resend.com/pricing.md) |
 
 - **[llms.txt](conventions/llms-txt/)** — A proposed-turned-widely-shipped standard: a root-level Markdown file giving LLMs a curated, link-rich map of a site's docs. Adopted across hundreds of developer-docs sites.

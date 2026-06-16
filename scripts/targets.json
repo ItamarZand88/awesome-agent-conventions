@@ -240,7 +240,10 @@
       "spec": "https://stitch.withgoogle.com/docs/design-md/specification",
       "summary": "A structured, machine-readable design specification — tokens, components, and layout intent — that an agent reads to generate or keep UI consistent with an established system.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/vinta/awesome-python/master/DESIGN.md" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/apple/DESIGN.md", "as": "apple.DESIGN.md" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/claude/DESIGN.md", "as": "claude.DESIGN.md" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/cursor/DESIGN.md", "as": "cursor.DESIGN.md" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/figma/DESIGN.md", "as": "figma.DESIGN.md" }
       ]
     },
     "llms-txt": {
@@ -249,7 +252,16 @@
       "maturity": "🟢",
       "files": [
         { "name": "llms.txt", "note": "Curated index: short description plus linked sections of the key docs." },
-        { "name": "llms-full.txt", "note": "The full docs concatenated into one file for direct ingestion." }
+        {
+          "name": "llms-full.txt",
+          "kind": "pattern",
+          "note": "The full docs concatenated into one file for direct ingestion.",
+          "pattern": "Every documentation page concatenated into a single plain-text file for direct ingestion — routinely multiple megabytes. Structurally it's `llms.txt` with each linked page inlined in full; nothing instance-specific is worth vendoring, so this entry links live instances rather than copying a dump.",
+          "instances": [
+            { "label": "docs.anthropic.com/llms-full.txt", "url": "https://docs.anthropic.com/llms-full.txt" },
+            { "label": "prisma.io/docs/llms-full.txt", "url": "https://www.prisma.io/docs/llms-full.txt" }
+          ]
+        }
       ],
       "read_by": "LLM-powered docs tools, agents, and crawlers that look for /llms.txt",
       "location": "Site root: /llms.txt (and optionally /llms-full.txt)",
@@ -257,9 +269,7 @@
       "summary": "A proposed-turned-widely-shipped standard: a root-level Markdown file giving LLMs a curated, link-rich map of a site's docs. Adopted across hundreds of developer-docs sites.",
       "targets": [
         { "type": "web", "url": "https://docs.anthropic.com/llms.txt" },
-        { "type": "web", "url": "https://docs.stripe.com/llms.txt" },
-        { "type": "web", "url": "https://docs.anthropic.com/llms-full.txt" },
-        { "type": "web", "url": "https://www.prisma.io/docs/llms-full.txt" }
+        { "type": "web", "url": "https://docs.stripe.com/llms.txt" }
       ]
     },
     "pricing-md": {

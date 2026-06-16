@@ -163,6 +163,13 @@ def rebuild_convention_readme(slug, conv):
     examples_dir = os.path.join(slug_dir, "examples")
     os.makedirs(slug_dir, exist_ok=True)
 
+    # Pattern files vendor nothing — clear any stale extracted examples so the
+    # repo never carries a dump that the page no longer references.
+    for f in conv["files"]:
+        if f.get("kind") == "pattern":
+            for stale in examples_for(examples_dir, f["name"]):
+                os.remove(stale)
+
     badge = BADGES.get(conv["maturity"], conv["maturity"])
     out = []
     out.append(f"# {conv['name']} {badge}")
@@ -190,6 +197,20 @@ def rebuild_convention_readme(slug, conv):
         if f.get("note"):
             out.append(f["note"])
             out.append("")
+        if f.get("kind") == "pattern":
+            out.append("**Pattern — not an extracted file.**")
+            out.append("")
+            if f.get("pattern"):
+                out.append(f["pattern"])
+                out.append("")
+            instances = f.get("instances", [])
+            if instances:
+                out.append("Live instances (fetch directly — too large or instance-specific to vendor):")
+                out.append("")
+                for inst in instances:
+                    out.append(f"- [{inst['label']}]({inst['url']})")
+                out.append("")
+            continue
         matches = examples_for(examples_dir, fname)
         if matches:
             out.append("| Source | File | Provenance |")

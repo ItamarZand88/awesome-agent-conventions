@@ -24,10 +24,14 @@ Curated index: short description plus linked sections of the key docs.
 
 The full docs concatenated into one file for direct ingestion.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `docs.anthropic.com` | [`docs.anthropic.com.llms-full.txt`](examples/docs.anthropic.com.llms-full.txt) | [source](https://docs.anthropic.com/llms-full.txt) |
-| `www.prisma.io` | [`www.prisma.io.llms-full.txt`](examples/www.prisma.io.llms-full.txt) | [source](https://www.prisma.io/docs/llms-full.txt) |
+**Pattern — not an extracted file.**
+
+Every documentation page concatenated into a single plain-text file for direct ingestion — routinely multiple megabytes. Structurally it's `llms.txt` with each linked page inlined in full; nothing instance-specific is worth vendoring, so this entry links live instances rather than copying a dump.
+
+Live instances (fetch directly — too large or instance-specific to vendor):
+
+- [docs.anthropic.com/llms-full.txt](https://docs.anthropic.com/llms-full.txt)
+- [prisma.io/docs/llms-full.txt](https://www.prisma.io/docs/llms-full.txt)
 
 ## Field notes
 

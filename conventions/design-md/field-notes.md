@@ -1,14 +1,15 @@
 ### Composition
-The vinta/awesome-python example is a textbook machine-readable spec:
-- **Frontmatter** (`version`, `name`, `description`) + an **Overview** that states audience and *jobs-to-be-done* before any pixels.
-- **Token sections** — Colors / Typography / Layout / Elevation & Depth / Shapes / Components — and it explicitly *"follows the Google Stitch DESIGN.md format."*
-- A **source-of-truth pointer**: *"token values live in `website/static/style.css`"* — the `.md` mirrors the system, it doesn't own it.
+The VoltAgent brand examples (Apple, Claude, Cursor, Figma) share a consistent, machine-readable spine:
+- **Frontmatter** — `version`, `name`, and a dense `description` that captures the brand's whole visual thesis in a sentence (Apple: *"a photography-first interface… a single Action Blue (#0066cc)… UI chrome recedes"*).
+- **A fixed section order** — `Overview → Colors → Typography → Layout → Elevation & Depth → Shapes → Components`, then the parts that make it *operable* by an agent: `Do's and Don'ts`, `Responsive Behavior`, an `Iteration Guide`, and an honest `Known Gaps`.
+- **Token-keyed values** — colors/sizes are referenced as `{colors.canvas}` (#f7f7f4), `{colors.primary}` (#f54e00), so prose and tokens stay bound together rather than drifting.
 
 ### Anti-patterns
 - A human architecture/design doc mislabeled `DESIGN.md` — that's a doc for people and fails this collection's filter.
-- Tokens that drift from the real stylesheet; once they disagree, the agent generates against fiction.
-- Marketing copy where the spec wants terse, structured values.
+- Prose that describes vibes without emitting tokens an agent can apply ("clean and modern" generates nothing).
+- Dropping the `Do's and Don'ts` / `Known Gaps` sections — without them the file documents a look but can't *steer* generation.
 
 ### Edge cases
-- **Principled divergence is allowed if declared:** the spec calls for hex tokens, but this file uses **OKLCH** and *says so*, naming the divergence rather than hiding it.
-- "Source of truth lives in CSS" means the `.md` can go stale — date it or generate it from the stylesheet.
+- **Scarcity is encoded, not assumed:** Cursor's spec reserves its one brand color (`{colors.primary}`, Cursor Orange) "used scarcely" and pins display weight at 400 — constraints an agent must be told, because it will otherwise reach for bold and accent everything.
+- **`version: alpha`** across these files is a tell: the format itself is still settling, so treat token names as per-file, not a shared vocabulary.
+- A `DESIGN.md` is a *mirror* of a design system, not its source of truth — when the site changes, the file goes stale unless regenerated.
