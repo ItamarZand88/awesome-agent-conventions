@@ -20,9 +20,23 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 ## Field notes
 
+### Fields (frontmatter)
+**Open standard ([agentskills.io](https://agentskills.io/specification))** - `name` and `description` are required, the rest optional:
+
+| Field | Req | Notes |
+| --- | --- | --- |
+| `name` | yes | 1-64 chars, lowercase `a-z0-9` + hyphens; no leading/trailing or consecutive hyphens; **must match the parent directory name** |
+| `description` | yes | 1-1024 chars; says *what* it does and *when* to use it - this is the trigger signal |
+| `license` | no | license name, or a reference to a bundled license file |
+| `compatibility` | no | 1-500 chars; environment requirements (product, system packages, network) |
+| `metadata` | no | map of string->string; arbitrary client-defined keys (there is **no** top-level `version` - put it here) |
+| `allowed-tools` | no | **space-separated** tool list, e.g. `Bash(git:*) Read`; **experimental**, support varies |
+
+**Claude Code superset** (all optional; `name` defaults to the directory name) adds: `when_to_use`, `argument-hint`, `arguments`, `disable-model-invocation`, `user-invocable`, `disallowed-tools`, `model` (or `inherit`), `effort` (`low`/`medium`/`high`/`xhigh`/`max`), `context: fork`, `agent`, `hooks`, `paths` (activation globs), `shell` (`bash`/`powershell`). Body substitutions: `$ARGUMENTS`, `$ARGUMENTS[N]`, `$N`, `$name`, `${CLAUDE_SESSION_ID}`, `${CLAUDE_EFFORT}`, `${CLAUDE_SKILL_DIR}`, and `` !`cmd` `` dynamic injection.
+
 ### Composition
-- **Frontmatter is the contract.** `name` + `description` are always in context; the body is loaded only when the skill triggers. The mcp-builder example's description spells out *when* to use it and *in which languages* (*"Use when building MCP servers… whether in Python (FastMCP) or Node/TypeScript"*) - that sentence is what makes the trigger fire.
-- **Body = procedure.** A phased workflow ("Phase 1: Deep Research and Planning…"), not reference prose.
+- **Frontmatter is the contract.** `name` + `description` are always in context; the body loads only when the skill triggers. The mcp-builder example's description spells out *when* to use it and *in which languages* (*"Use when building MCP servers... whether in Python (FastMCP) or Node/TypeScript"*) - that sentence is what makes the trigger fire.
+- **Body = procedure.** A phased workflow ("Phase 1: Deep Research and Planning..."), not reference prose.
 - Optional `license` and bundled scripts/resources sit beside `SKILL.md` and load on demand.
 
 ### Anti-patterns
@@ -31,6 +45,6 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 - A description that describes the topic but never says *when to use it*.
 
 ### Edge cases
-- **Progressive disclosure** is the whole economy: keep the always-loaded surface (description) small and push detail into the on-demand body/resources.
-- The same `SKILL.md` format spans Claude.ai, Claude Code, and the open Agent Skills ecosystem - write the description tool-agnostically.
-- Beyond `name`/`description`, the spec defines optional `license`, `compatibility`, `metadata`, and experimental `allowed-tools`. `name` must match the skill's directory (lowercase, digits, hyphens; <=64 chars), `description` caps at 1024 chars, and the body should stay under ~500 lines / 5k tokens.
+- **Progressive disclosure** is the whole economy: `name` + `description` (~100 tokens) are always loaded; the body is recommended **under 5000 tokens / 500 lines**, with bundled files referenced one level deep.
+- Two description caps to know: the open spec limits `description` to **1024 chars**; Claude Code truncates the *listed* description at ~**1536 chars** (configurable via `maxSkillDescriptionChars`).
+- The same `SKILL.md` format spans Claude.ai, Claude Code, and the open Agent Skills ecosystem - write the description tool-agnostically. `.claude/skills/` is loaded from `--add-dir` (commands are not).

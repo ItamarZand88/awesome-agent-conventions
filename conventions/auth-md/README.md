@@ -19,12 +19,18 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 ## Field notes
 
+### The protocol
+WorkOS formalized auth.md (May 2026) as an open protocol over OAuth standards (RFC 7523 JWT-bearer + the ID-JAG draft), published at the domain root `https://service.com/auth.md`. A well-formed file is a numbered walkthrough in canonical order: **Discover -> Pick a Method -> Register -> Claim Ceremony -> Exchange the Assertion -> Use the Access Token -> Errors -> Revocation**.
+
+- **Three registration methods (a decision tree):** `identity_assertion` (the agent already has a session exchangeable for an ID-JAG bound to this service), `service_auth` (only the user's email - requires a claim ceremony / OTP), or `anonymous` (credential issued immediately at pre-claim scope, claimable later).
+- **Two endpoints:** `POST /agent/identity` (returns a service-signed assertion) and `POST /oauth2/token` (RFC 7523 grant -> `access_token`).
+- **Errors are protocol strings**, not exit codes: `invalid_issuer`, `invalid_signature`, `expired`, `replay_detected`, `invalid_audience`, `authorization_pending`, `slow_down`, etc.
+
 ### Composition
-The WorkOS example is the clearest live instance and worth studying:
-- **Addressed to the agent**, in the second person: *"You are an agent. This document tells you how to register a credential…"* - and it forks immediately: *"Not an agent? You might be looking for workos.com/auth-md."*
-- **Ordered steps** ("Follow the steps in order; do not skip ahead") with a named flow (anonymous provision → later user-claim).
-- **A CLI shortcut *and* a raw-HTTP fallback**, so it works whether or not Node is present.
-- Concrete machine affordances: agent-context detection (`CLAUDECODE`, `CURSOR_AGENT`, `CODEX_SANDBOX`), structured JSON output, and `gh`-style exit codes (`0/1/2/4`).
+The vendored WorkOS example is the clearest live instance:
+- **Addressed to the agent**, second person: *"You are an agent. This document tells you how to register a credential..."* - forking immediately: *"Not an agent? You might be looking for workos.com/auth-md."*
+- **Ordered steps** ("do not skip ahead") for the anonymous-provision -> later-claim flow.
+- **A CLI shortcut *and* a raw-HTTP fallback**, so it works whether or not Node is present. The CLI affordances it documents (agent-context detection via `CLAUDECODE` / `CURSOR_AGENT` / `CODEX_SANDBOX`, structured JSON, `gh`-style exit codes `0/1/2/4`) belong to the WorkOS CLI it recommends, not to the wire protocol.
 
 ### Anti-patterns
 - Assuming a human reader - WorkOS explicitly branches instead.
@@ -32,5 +38,5 @@ The WorkOS example is the clearest live instance and worth studying:
 - Unordered or branchy instructions an agent can't follow deterministically.
 
 ### Edge cases
-- **🟠 Emerging:** strong spec, essentially one polished live example. Treat the shape as indicative, not settled.
-- Flows vary (user-claimed vs verified registration); placement (`/auth.md` vs `.well-known/`) is still converging.
+- **🟠 Emerging:** a real published protocol, but essentially one polished implementation (WorkOS). Treat the shape as indicative, not an industry standard yet.
+- Placement is `/auth.md` at the domain root (not `.well-known/`); the registration method varies (`identity_assertion` / `service_auth` / `anonymous`).

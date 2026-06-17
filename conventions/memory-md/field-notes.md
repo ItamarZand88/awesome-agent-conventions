@@ -1,13 +1,19 @@
+### How Claude Code auto-memory works
+- **Path:** `~/.claude/projects/<project>/memory/MEMORY.md`. `<project>` is keyed to the **git repo**, so all worktrees/subdirs of one repo **share** the memory dir; outside git it's the project root. **Machine-local** (not synced). Relocatable via `autoMemoryDirectory`.
+- **Structure:** `MEMORY.md` is a concise **index**; detail lives in topic files beside it (`debugging.md`, ...) that are **read on demand**, not at launch.
+- **Load cap:** only the **first 200 lines or 25 KB** of `MEMORY.md` (whichever comes first) loads each session. This cap applies **only to MEMORY.md** (CLAUDE.md loads in full).
+- **Enable/disable:** on by default since **v2.1.59**; toggle via `/memory`, `autoMemoryEnabled: false`, or env `CLAUDE_CODE_DISABLE_AUTO_MEMORY=1`. "Remember X" routes here; "add this to CLAUDE.md" routes to CLAUDE.md. Subagents can keep their own auto-memory.
+
 ### Composition
-- **An index, not a store.** The Harzva/learn-likecc file is a `# Memory Index` of one-line links grouped by type (User / Project / Feedback / Reference) into `.claude/memory/*.md` - the facts live in the linked files, not here.
-- **Or an append log.** The soul.md file is a `# Memory` with an HTML-comment header that instructs the agent: *"The agent appends to this file during sessions… continuity across sessions."*
+- **An index, not a store.** The Harzva/learn-likecc file is a `# Memory Index` of one-line links grouped by type (User / Project / Feedback / Reference) - the facts live in the linked files. Claude Code's own auto-memory uses this index-plus-topic-files shape.
+- **Or an append log.** The soul.md file is a `# Memory` whose HTML-comment header tells the agent to append across sessions.
 
 ### Anti-patterns
-- Inlining the actual facts instead of linking out - that re-bloats the context the index was meant to keep small.
+- Inlining the actual facts instead of linking out - that re-bloats the context the index was meant to keep small (and past the 200-line cap, content simply isn't loaded).
 - Unbounded growth with no curation/compaction pass.
 - Recording what the repo or git already says (structure, past fixes) instead of the non-obvious.
 
 ### Edge cases
-- This file is both **read and written** by the agent - the format has to be one the model can reliably append to. In Claude Code it lives at `~/.claude/projects/<project>/memory/MEMORY.md`, only the first ~200 lines / 25 KB load per session, and it's treated as an index with topic files read on demand - which is exactly why it must stay an index, not a store. (Built-in auto-memory, on by default since Claude Code v2.1.59.)
-- Two live shapes coexist: a **curated index** (re-read, hand-tended) vs an **append-only log** (chronological). Pick one and be consistent.
-- Links are relative into a memory directory; a moved file breaks recall silently.
+- This file is both **read and written** by the agent - the format must be one the model can reliably append to.
+- Two live shapes coexist: a **curated index** (re-read, hand-tended) vs an **append-only log** (chronological). Claude Code's built-in form is the curated index. Pick one and be consistent.
+- Links are relative into the memory directory; a moved file breaks recall silently.
