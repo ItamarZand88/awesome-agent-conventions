@@ -3,7 +3,7 @@
 > Anthropic's memory file for Claude Code - loaded automatically at session start to carry project commands, style rules, and standing instructions across turns.
 
 - **Read by:** Claude Code, and tools that read the Claude memory convention
-- **Location:** Repo root, subdirectories, ~/.claude/ (user-global), and CLAUDE.local.md (untracked, personal)
+- **Location:** Repo root or .claude/CLAUDE.md, subdirectories, ~/.claude/ (user-global), enterprise-managed policy paths, and CLAUDE.local.md (untracked, personal)
 - **Spec:** [https://code.claude.com/docs/en/memory](https://code.claude.com/docs/en/memory)
 - **Files:** `CLAUDE.md`
 
@@ -24,7 +24,7 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 ### Composition
 - The canonical opener is literal: *"# CLAUDE.md - This file provides guidance to Claude Code when working with code in this repository"* (modelcontextprotocol/servers), followed by **Project Overview → repo map → exact build/test commands**.
 - Topic-led variants work too: the playwright-mcp file leads with its **Commit Convention**.
-- Keep it short. CLAUDE.md is injected into *every* session, so its length is a recurring context tax.
+- Keep it short. CLAUDE.md is injected into *every* session, so its length is a recurring context tax - Anthropic targets **under ~200 lines**, with longer or path-specific guidance pushed into `.claude/rules/` files. Block-level HTML comments are stripped before injection, so they make free maintainer notes.
 
 ### Anti-patterns
 - **The bloated CLAUDE.md** - pages of prose that re-explain the codebase burn tokens on every turn.
@@ -32,5 +32,5 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 ### Edge cases
 - **`@path` imports:** the Cline example is essentially just `@.clinerules/general.md @.clinerules/network.md` - CLAUDE.md as an include manifest rather than content.
-- **Layering:** `~/.claude/CLAUDE.md` (user-global) + repo `CLAUDE.md` + subdir files merge down the tree; `CLAUDE.local.md` is the untracked personal overlay.
+- **Layering:** `~/.claude/CLAUDE.md` (user-global), the repo file (root `CLAUDE.md` or `.claude/CLAUDE.md`), subdir files, and enterprise-managed policy files merge down the tree. `CLAUDE.local.md` still loads but is no longer the recommended personal overlay - it doesn't span git worktrees, so Anthropic now points to importing `@~/.claude/...` instead.
 - **The pointer pattern:** some repos (Airflow, Vercel AI) ship a one-line CLAUDE.md that just says `AGENTS.md` - a deliberate redirect to the cross-tool file.

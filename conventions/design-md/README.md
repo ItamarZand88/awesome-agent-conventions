@@ -1,10 +1,10 @@
 # DESIGN.md 🟢 Adopted
 
-> A structured, machine-readable design specification - tokens, components, and layout intent - that an agent reads to generate or keep UI consistent with an established system.
+> A structured, machine-readable design specification - tokens, components, and layout intent - that an agent reads to generate or keep UI consistent with an established system. Open-sourced by Google Labs in 2026 as a cross-tool draft spec.
 
-- **Read by:** Google Stitch and design-aware agents that consume a design spec
+- **Read by:** Google Stitch and, since the format was open-sourced, coding agents like Claude Code that consume a design spec
 - **Location:** Repository root or a design/ directory
-- **Spec:** [https://stitch.withgoogle.com/docs/design-md/specification](https://stitch.withgoogle.com/docs/design-md/specification)
+- **Spec:** [https://github.com/google-labs-code/design.md](https://github.com/google-labs-code/design.md)
 - **Files:** `DESIGN.md`
 
 ## Examples
@@ -35,5 +35,5 @@ The VoltAgent brand examples (Apple, Claude, Cursor, Figma) share a consistent, 
 
 ### Edge cases
 - **Scarcity is encoded, not assumed:** Cursor's spec reserves its one brand color (`{colors.primary}`, Cursor Orange) "used scarcely" and pins display weight at 400 - constraints an agent must be told, because it will otherwise reach for bold and accent everything.
-- **`version: alpha`** across these files is a tell: the format itself is still settling, so treat token names as per-file, not a shared vocabulary.
+- **The format was open-sourced by Google Labs in 2026** (draft spec at `github.com/google-labs-code/design.md`) and repositioned as cross-tool - meant for Claude Code and other coding agents, not just Stitch. It's still a draft (`version: alpha` in these files), so treat token names as per-file, not yet a shared vocabulary.
 - A `DESIGN.md` is a *mirror* of a design system, not its source of truth - when the site changes, the file goes stale unless regenerated.

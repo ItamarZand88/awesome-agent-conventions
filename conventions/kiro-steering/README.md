@@ -3,7 +3,7 @@
 > Kiro's always-on steering docs - product, structure, and tech files that give the agent persistent project context outside of any single spec.
 
 - **Read by:** AWS Kiro, and Kiro-compatible agents
-- **Location:** .kiro/steering/*.md
+- **Location:** .kiro/steering/*.md (or ~/.kiro/steering/ for global)
 - **Spec:** [https://kiro.dev/docs/steering](https://kiro.dev/docs/steering)
 - **Files:** `product.md`, `structure.md`, `tech.md`
 
@@ -49,5 +49,5 @@ Three always-on files, each a tight single concern:
 - A `tech.md` that lists versions and then rots - an agent will trust "Next.js 15 / React 19" literally.
 
 ### Edge cases
-- Steering supports **inclusion modes** (always-on vs file-match vs manual) via front-matter - use them to keep large or niche guidance out of every prompt.
-- `.kiro/steering/` isn't limited to the three default files; teams add custom steering docs there.
+- Steering supports four **inclusion modes** via front-matter - `always`, `fileMatch` (with a `fileMatchPattern`), `manual` (pulled in by a `#name` reference), and `auto` (matched against the file's `description`) - use them to keep large or niche guidance out of every prompt.
+- Steering is project-scoped (`.kiro/steering/`) or global (`~/.kiro/steering/`), project winning on conflict; neither is limited to the three default files - teams add custom steering docs.

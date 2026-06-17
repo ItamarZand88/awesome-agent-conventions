@@ -36,7 +36,7 @@
         { "name": "CLAUDE.md" }
       ],
       "read_by": "Claude Code, and tools that read the Claude memory convention",
-      "location": "Repo root, subdirectories, ~/.claude/ (user-global), and CLAUDE.local.md (untracked, personal)",
+      "location": "Repo root or .claude/CLAUDE.md, subdirectories, ~/.claude/ (user-global), enterprise-managed policy paths, and CLAUDE.local.md (untracked, personal)",
       "spec": "https://code.claude.com/docs/en/memory",
       "summary": "Anthropic's memory file for Claude Code - loaded automatically at session start to carry project commands, style rules, and standing instructions across turns.",
       "targets": [
@@ -51,9 +51,9 @@
       "maturity": "🟢",
       "files": [
         { "name": "GEMINI.md", "note": "Google Gemini CLI." },
-        { "name": "AGENT.md", "note": "Amp (Sourcegraph) - singular, distinct from AGENTS.md." },
+        { "name": "AGENT.md", "note": "Amp (Sourcegraph) - legacy singular form; Amp now reads AGENTS.md (plural)." },
         { "name": "QWEN.md", "note": "Qwen Code." },
-        { "name": "WARP.md", "note": "Warp terminal's agent." },
+        { "name": "WARP.md", "note": "Warp terminal - backwards-compat; Warp now defaults to AGENTS.md." },
         { "name": "CONVENTIONS.md", "note": "Aider." },
         { "name": "copilot-instructions.md", "note": "GitHub Copilot (lives under .github/)." }
       ],
@@ -78,7 +78,7 @@
         { "name": "MEMORY.md" }
       ],
       "read_by": "Claude Code's auto-memory, and agent frameworks that persist a memory index",
-      "location": "An agent-managed memory directory (e.g. .claude/.../memory/MEMORY.md)",
+      "location": "Claude Code: ~/.claude/projects/<project>/memory/MEMORY.md (the index), with detail offloaded to topic files beside it",
       "spec": "https://code.claude.com/docs/en/memory",
       "summary": "A persistent, agent-maintained index of durable facts - written and re-read across sessions so an agent accumulates project memory instead of relearning each time.",
       "targets": [
@@ -142,7 +142,7 @@
         { "name": "tech.md", "note": "Allowed frameworks, libraries, and technical constraints." }
       ],
       "read_by": "AWS Kiro, and Kiro-compatible agents",
-      "location": ".kiro/steering/*.md",
+      "location": ".kiro/steering/*.md (or ~/.kiro/steering/ for global)",
       "spec": "https://kiro.dev/docs/steering",
       "summary": "Kiro's always-on steering docs - product, structure, and tech files that give the agent persistent project context outside of any single spec.",
       "targets": [
@@ -215,7 +215,7 @@
       "files": [
         { "name": ".aiignore", "note": "JetBrains Junie / AI Assistant." },
         { "name": ".cursorignore", "note": "Cursor." },
-        { "name": ".codeiumignore", "note": "Codeium / Windsurf." }
+        { "name": ".codeiumignore", "note": "Codeium (now Windsurf)." }
       ],
       "read_by": "JetBrains Junie (.aiignore), Cursor (.cursorignore), Codeium/Windsurf (.codeiumignore)",
       "location": "Repository root (gitignore-style glob syntax)",
@@ -235,10 +235,10 @@
       "files": [
         { "name": "DESIGN.md" }
       ],
-      "read_by": "Google Stitch and design-aware agents that consume a design spec",
+      "read_by": "Google Stitch and, since the format was open-sourced, coding agents like Claude Code that consume a design spec",
       "location": "Repository root or a design/ directory",
-      "spec": "https://stitch.withgoogle.com/docs/design-md/specification",
-      "summary": "A structured, machine-readable design specification - tokens, components, and layout intent - that an agent reads to generate or keep UI consistent with an established system.",
+      "spec": "https://github.com/google-labs-code/design.md",
+      "summary": "A structured, machine-readable design specification - tokens, components, and layout intent - that an agent reads to generate or keep UI consistent with an established system. Open-sourced by Google Labs in 2026 as a cross-tool draft spec.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/apple/DESIGN.md", "source_label": "apple" },
         { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/claude/DESIGN.md", "source_label": "claude" },
@@ -263,10 +263,10 @@
           ]
         }
       ],
-      "read_by": "LLM-powered docs tools, agents, and crawlers that look for /llms.txt",
+      "read_by": "Docs sites publish it for LLM tools and crawlers - though no major provider has confirmed reading it",
       "location": "Site root: /llms.txt (and optionally /llms-full.txt)",
       "spec": "https://llmstxt.org",
-      "summary": "A proposed-turned-widely-shipped standard: a root-level Markdown file giving LLMs a curated, link-rich map of a site's docs. Adopted across hundreds of developer-docs sites.",
+      "summary": "A proposed-turned-widely-published standard: a root-level Markdown file giving LLMs a curated, link-rich map of a site's docs. Published across hundreds of developer-docs sites - though whether the major LLM providers actually read it remains unproven.",
       "targets": [
         { "type": "web", "url": "https://docs.anthropic.com/llms.txt" },
         { "type": "web", "url": "https://docs.stripe.com/llms.txt" }
@@ -312,9 +312,9 @@
         { "name": "agent.json" }
       ],
       "read_by": "A2A-compatible agents discovering another agent's capabilities",
-      "location": "/.well-known/agent.json (a.k.a. /.well-known/agent-card.json)",
+      "location": "/.well-known/agent-card.json (the older /.well-known/agent.json is a legacy alias)",
       "spec": "https://a2a-protocol.org/latest/specification/",
-      "summary": "The Agent2Agent (A2A) capability card - a JSON document at a well-known path advertising an agent's skills, endpoints, and auth so other agents can discover and call it. Backed by a real spec; adoption is growing but early.",
+      "summary": "The Agent2Agent (A2A) capability card - a JSON document at a well-known path advertising an agent's skills, endpoints, and auth so other agents can discover and call it. Now a Linux Foundation project at v1.0; adoption is growing but early.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json", "as": "agent.json", "source_label": "currency" },
         { "type": "web", "url": "https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/air_ticketing_agent.json", "as": "agent.json", "source_label": "air-ticketing" }

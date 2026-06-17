@@ -1,8 +1,8 @@
 # llms.txt 🟢 Adopted
 
-> A proposed-turned-widely-shipped standard: a root-level Markdown file giving LLMs a curated, link-rich map of a site's docs. Adopted across hundreds of developer-docs sites.
+> A proposed-turned-widely-published standard: a root-level Markdown file giving LLMs a curated, link-rich map of a site's docs. Published across hundreds of developer-docs sites - though whether the major LLM providers actually read it remains unproven.
 
-- **Read by:** LLM-powered docs tools, agents, and crawlers that look for /llms.txt
+- **Read by:** Docs sites publish it for LLM tools and crawlers - though no major provider has confirmed reading it
 - **Location:** Site root: /llms.txt (and optionally /llms-full.txt)
 - **Spec:** [https://llmstxt.org](https://llmstxt.org)
 - **Files:** `llms.txt`, `llms-full.txt`
@@ -46,6 +46,7 @@ Two files, two jobs:
 - Letting either file drift out of sync with the live docs.
 
 ### Edge cases
+- **Published is not the same as read.** Hundreds of sites ship `llms.txt`, but consumption is unproven: Google has publicly said it doesn't use it, and studies find most `llms.txt` files draw little or no crawler traffic. Treat it as making docs *available* to agents that choose to fetch it, not a channel the major providers read by default.
 - `llms.txt` (curated map) vs `llms-full.txt` (full dump) are complementary, not alternatives - ship the map always, the full file when ingestion is the goal.
 - `llms-full.txt` can blow past a model's context window; some sites paginate or offer per-section full files.
 - Both live at the **site root**, discoverable by convention (`/llms.txt`).

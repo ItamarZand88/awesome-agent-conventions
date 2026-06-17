@@ -56,4 +56,4 @@ Windsurf - project rules.
 
 ### Edge cases
 - Three activation modes coexist: **always**, **glob-scoped**, and **agent-requested** (by description) - pick the narrowest that works.
-- `.cursorrules` is deprecated in favor of `.cursor/rules/*.mdc`; `.clinerules` can be a single file *or* a directory of rules.
+- `.cursorrules` is deprecated in favor of `.cursor/rules/*.mdc`, and `.windsurfrules` is the legacy single-file form (superseded by `.windsurf/rules/`); both Cursor and Windsurf now also accept a plain `AGENTS.md` as a simpler alternative. `.clinerules` can be a single file *or* a directory of rules.

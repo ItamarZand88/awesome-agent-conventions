@@ -10,5 +10,5 @@ Three always-on files, each a tight single concern:
 - A `tech.md` that lists versions and then rots - an agent will trust "Next.js 15 / React 19" literally.
 
 ### Edge cases
-- Steering supports **inclusion modes** (always-on vs file-match vs manual) via front-matter - use them to keep large or niche guidance out of every prompt.
-- `.kiro/steering/` isn't limited to the three default files; teams add custom steering docs there.
+- Steering supports four **inclusion modes** via front-matter - `always`, `fileMatch` (with a `fileMatchPattern`), `manual` (pulled in by a `#name` reference), and `auto` (matched against the file's `description`) - use them to keep large or niche guidance out of every prompt.
+- Steering is project-scoped (`.kiro/steering/`) or global (`~/.kiro/steering/`), project winning on conflict; neither is limited to the three default files - teams add custom steering docs.

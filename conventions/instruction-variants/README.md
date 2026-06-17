@@ -21,7 +21,7 @@ Google Gemini CLI.
 
 ### `AGENT.md`
 
-Amp (Sourcegraph) - singular, distinct from AGENTS.md.
+Amp (Sourcegraph) - legacy singular form; Amp now reads AGENTS.md (plural).
 
 | Source | File | Provenance |
 | --- | --- | --- |
@@ -37,7 +37,7 @@ Qwen Code.
 
 ### `WARP.md`
 
-Warp terminal's agent.
+Warp terminal - backwards-compat; Warp now defaults to AGENTS.md.
 
 | Source | File | Provenance |
 | --- | --- | --- |
@@ -74,4 +74,4 @@ All of these share the AGENTS.md shape - title, tech stack, build/test commands,
 
 ### Edge cases
 - **Discovery differs:** most are auto-loaded by their tool, but Aider's `CONVENTIONS.md` is opt-in via `--read` / `.aider.conf.yml`.
-- **Singular vs plural:** Amp's `AGENT.md` is deliberately distinct from `AGENTS.md` - don't conflate them.
+- **Convergence on `AGENTS.md` (plural):** Amp now reads `AGENTS.md`, and Warp defaults to `AGENTS.md` with `WARP.md` kept only for backwards-compatibility. The singular `AGENT.md` and the standalone `WARP.md` are now legacy - the ecosystem moved toward the shared file, not away from it.

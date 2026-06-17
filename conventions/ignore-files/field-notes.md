@@ -7,5 +7,5 @@
 - Forgetting generated/vendored output, so the agent wastes its window indexing `dist/`.
 
 ### Edge cases
-- Tools split the job: Cursor distinguishes **index-ignore** (`.cursorignore`) from indexing-only variants, and behavior around *access* vs *indexing* differs per tool - read the specific tool's semantics.
+- Tools split the job: Cursor's `.cursorignore` blocks both **access and indexing**, while `.cursorindexingignore` excludes from indexing *only* (the file stays readable) - the names are easy to get backwards. An Agent's terminal and MCP-server tools can't enforce `.cursorignore` at all, a second reason it isn't a hard boundary.
 - Negation (`!pattern`) and precedence interact with `.gitignore`; an agent may union both.

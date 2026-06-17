@@ -125,18 +125,18 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
-| 🟢 | [DESIGN.md](conventions/design-md/) | `DESIGN.md` | Google Stitch and design-aware agents that consume a design spec | [spec ↗](https://stitch.withgoogle.com/docs/design-md/specification) |
+| 🟢 | [DESIGN.md](conventions/design-md/) | `DESIGN.md` | Google Stitch and, since the format was open-sourced, coding agents like Claude Code that consume a design spec | [spec ↗](https://github.com/google-labs-code/design.md) |
 
-- **[DESIGN.md](conventions/design-md/)** - A structured, machine-readable design specification - tokens, components, and layout intent - that an agent reads to generate or keep UI consistent with an established system.
+- **[DESIGN.md](conventions/design-md/)** - A structured, machine-readable design specification - tokens, components, and layout intent - that an agent reads to generate or keep UI consistent with an established system. Open-sourced by Google Labs in 2026 as a cross-tool draft spec.
 
 ## Web & discoverability
 
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
-| 🟢 | [llms.txt](conventions/llms-txt/) | `llms.txt` `llms-full.txt` _(pattern)_ | LLM-powered docs tools, agents, and crawlers that look for /llms.txt | [spec ↗](https://llmstxt.org) |
+| 🟢 | [llms.txt](conventions/llms-txt/) | `llms.txt` `llms-full.txt` _(pattern)_ | Docs sites publish it for LLM tools and crawlers - though no major provider has confirmed reading it | [spec ↗](https://llmstxt.org) |
 | 🟢 | [pricing.md](conventions/pricing-md/) | `pricing.md` | Agents and LLM browsers fetching a clean, parse-able pricing page | [spec ↗](https://resend.com/pricing.md) |
 
-- **[llms.txt](conventions/llms-txt/)** - A proposed-turned-widely-shipped standard: a root-level Markdown file giving LLMs a curated, link-rich map of a site's docs. Adopted across hundreds of developer-docs sites.
+- **[llms.txt](conventions/llms-txt/)** - A proposed-turned-widely-published standard: a root-level Markdown file giving LLMs a curated, link-rich map of a site's docs. Published across hundreds of developer-docs sites - though whether the major LLM providers actually read it remains unproven.
 - **[pricing.md](conventions/pricing-md/)** - The Markdown twin of a pricing page - same URL with a .md suffix - so an agent gets structured plans and numbers instead of scraping marketing HTML. A concrete, shipping instance of the page.md pattern.
 
 ## Agent-web trust
@@ -153,7 +153,7 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 | --- | --- | --- | --- | --- |
 | 🟠 | [Agent Cards (A2A)](conventions/agent-cards/) | `agent.json` | A2A-compatible agents discovering another agent's capabilities | [spec ↗](https://a2a-protocol.org/latest/specification/) |
 
-- **[Agent Cards (A2A)](conventions/agent-cards/)** - The Agent2Agent (A2A) capability card - a JSON document at a well-known path advertising an agent's skills, endpoints, and auth so other agents can discover and call it. Backed by a real spec; adoption is growing but early.
+- **[Agent Cards (A2A)](conventions/agent-cards/)** - The Agent2Agent (A2A) capability card - a JSON document at a well-known path advertising an agent's skills, endpoints, and auth so other agents can discover and call it. Now a Linux Foundation project at v1.0; adoption is growing but early.
 
 ## Proposed namespace
 

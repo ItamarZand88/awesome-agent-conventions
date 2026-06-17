@@ -8,6 +8,6 @@
 - Recording what the repo or git already says (structure, past fixes) instead of the non-obvious.
 
 ### Edge cases
-- This file is both **read and written** by the agent - the format has to be one the model can reliably append to.
+- This file is both **read and written** by the agent - the format has to be one the model can reliably append to. In Claude Code it lives at `~/.claude/projects/<project>/memory/MEMORY.md`, only the first ~200 lines / 25 KB load per session, and it's treated as an index with topic files read on demand - which is exactly why it must stay an index, not a store. (Built-in auto-memory, on by default since Claude Code v2.1.59.)
 - Two live shapes coexist: a **curated index** (re-read, hand-tended) vs an **append-only log** (chronological). Pick one and be consistent.
 - Links are relative into a memory directory; a moved file breaks recall silently.

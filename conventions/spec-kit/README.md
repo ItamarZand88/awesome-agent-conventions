@@ -59,4 +59,4 @@ A four-stage funnel, narrowing from principles to actions:
 
 ### Edge cases
 - Layout splits by role: `constitution.md` lives in `.specify/memory/`; `spec/plan/tasks` are per-feature under `specs/<feature>/`.
-- The templates are tool-agnostic - the same files drive Copilot, Claude, Gemini, and Cursor via their slash commands.
+- The templates are tool-agnostic - the same files drive Copilot, Claude, Gemini, and Cursor (30+ agents) via namespaced slash commands (`/speckit.constitution`, `/speckit.specify`, `/speckit.plan`, `/speckit.tasks`, `/speckit.implement`).

@@ -33,3 +33,4 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 ### Edge cases
 - **Progressive disclosure** is the whole economy: keep the always-loaded surface (description) small and push detail into the on-demand body/resources.
 - The same `SKILL.md` format spans Claude.ai, Claude Code, and the open Agent Skills ecosystem - write the description tool-agnostically.
+- Beyond `name`/`description`, the spec defines optional `license`, `compatibility`, `metadata`, and experimental `allowed-tools`. `name` must match the skill's directory (lowercase, digits, hyphens; <=64 chars), `description` caps at 1024 chars, and the body should stay under ~500 lines / 5k tokens.
