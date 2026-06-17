@@ -155,8 +155,9 @@ def read_provenance(path):
 def examples_for(examples_dir, filename):
     """Match saved examples to a declared file by filename suffix.
 
-    Saved files are named `<label>.<saved-filename>`, so a declared file like
-    `AGENTS.md` matches anything ending in `.AGENTS.md`, and a dot-extension
+    Saved files are named `<label>.<saved-filename>` (or `<label><dotfile>` when
+    the file is itself a dotfile, e.g. `devin.cursorrules`), so a declared file
+    like `AGENTS.md` matches anything ending in `.AGENTS.md`, and a dot-extension
     declared file like `.prompty` matches anything ending in `.prompty`
     (e.g. a saved `microsoft-prompty.chat-basic.prompty`). Suffix-matching -
     rather than `*.AGENTS.md` globbing - is what lets one declared file collect
@@ -293,7 +294,11 @@ def process_convention(slug, conv, index_only):
                 continue
             label = source_label(target, url)
             fname = target_filename(target, url)
-            dest = os.path.join(examples_dir, f"{label}.{fname}")
+            # Join label and filename with a single dot. When the file is itself
+            # a dotfile (.cursorrules, .aiignore), it already carries the dot, so
+            # don't add another - otherwise the name doubles up (devin..cursorrules).
+            sep = "" if fname.startswith(".") else "."
+            dest = os.path.join(examples_dir, f"{label}{sep}{fname}")
             provenance = f"<!-- source: {label} — {url} -->\n"
             full_len = len(text.encode("utf-8"))
             truncated = full_len > MAX_EXAMPLE_BYTES

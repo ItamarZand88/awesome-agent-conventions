@@ -17,7 +17,7 @@ Cursor - legacy single-file form (superseded by .cursor/rules/*.mdc).
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `devin` | [`devin..cursorrules`](examples/devin..cursorrules) | [source](https://raw.githubusercontent.com/grapeot/devin.cursorrules/master/.cursorrules) |
+| `devin` | [`devin.cursorrules`](examples/devin.cursorrules) | [source](https://raw.githubusercontent.com/grapeot/devin.cursorrules/master/.cursorrules) |
 
 ### `.mdc`
 
@@ -33,7 +33,7 @@ Cline - a rules file or a directory of rules.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `raycast` | [`raycast..clinerules`](examples/raycast..clinerules) | [source](https://raw.githubusercontent.com/raycast/extensions/main/extensions/1bookmark/.clinerules) |
+| `raycast` | [`raycast.clinerules`](examples/raycast.clinerules) | [source](https://raw.githubusercontent.com/raycast/extensions/main/extensions/1bookmark/.clinerules) |
 
 ### `.windsurfrules`
 
@@ -41,7 +41,7 @@ Windsurf - project rules.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `Terminal.Gui` | [`Terminal.Gui..windsurfrules`](examples/Terminal.Gui..windsurfrules) | [source](https://raw.githubusercontent.com/gui-cs/Terminal.Gui/develop/.windsurfrules) |
+| `Terminal.Gui` | [`Terminal.Gui.windsurfrules`](examples/Terminal.Gui.windsurfrules) | [source](https://raw.githubusercontent.com/gui-cs/Terminal.Gui/develop/.windsurfrules) |
 
 ## Field notes
 
