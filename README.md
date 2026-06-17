@@ -13,13 +13,22 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
 </p>
 
-**A collection of the real files AI agents read, write, and act on - extracted from production, organized by purpose, and labelled by how widely they're actually adopted.**
+**The files AI coding agents actually read - `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, `SKILL.md`, `.mcp.json`, `llms.txt`, and more - collected in one place, with a real example of each.**
 
 **21 conventions across 11 categories** - from the instruction files every coding agent reads to the discovery files the agent web is still inventing.
 
-Not a glossary. Every entry links to a folder of *real files* pulled from public
-sources by an extractor - so you can fork this and copy the actual artifact, not
-a description of one.
+Every AI tool invented its own files for steering an agent: what to build and
+test, which rules to follow, what tools to connect, how to remember things
+between sessions. They're scattered across docs and easy to confuse. This repo
+gathers them in one place and answers three questions for each one:
+
+- **What is it, and which agent reads it?** A one-line summary, the tools that
+  consume it, and where the file lives.
+- **What does a real one look like?** Every entry links a folder of actual
+  example files pulled from public repos by a script - so you copy a working
+  file, not a description of one.
+- **Should I trust it?** Each entry is labelled by how widely it's *actually*
+  adopted, so a proposed idea never sits beside a settled standard as its equal.
 
 ## What counts
 
