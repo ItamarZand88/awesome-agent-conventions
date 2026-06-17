@@ -4,6 +4,7 @@
     "Memory & state",
     "Spec-driven development",
     "Skills & prompt assets",
+    "Tooling & connections",
     "Rules & ignore files",
     "Design",
     "Web & discoverability",
@@ -187,6 +188,55 @@
         { "type": "web", "url": "https://raw.githubusercontent.com/diffbot/diffbot-llm-inference/main/system_prompt.txt", "source_label": "diffbot" }
       ]
     },
+    "claude-commands": {
+      "name": "Claude Code commands",
+      "category": "Skills & prompt assets",
+      "maturity": "🟢",
+      "files": [
+        { "name": ".md", "note": "Any Markdown file under .claude/commands/; the filename is the command name (pr.md -> /pr). Optional YAML frontmatter: description, argument-hint, allowed-tools, model." }
+      ],
+      "read_by": "Claude Code - project .claude/commands/ and user ~/.claude/commands/",
+      "location": ".claude/commands/*.md (project) and ~/.claude/commands/*.md (user)",
+      "spec": "https://code.claude.com/docs/en/slash-commands",
+      "summary": "A Markdown file Claude Code exposes as a /slash-command - a reusable, version-controlled prompt workflow, with optional frontmatter (allowed-tools, model, argument-hint) and $ARGUMENTS / shell / @file placeholders. Now converging with Agent Skills, but still widely committed in its own right.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/chrisbenincasa/tunarr/main/.claude/commands/pr.md", "source_label": "tunarr" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/marigold-ui/marigold/main/.claude/commands/vrt.md", "source_label": "marigold" }
+      ]
+    },
+    "copilot-prompt-files": {
+      "name": "Copilot prompt & instruction files",
+      "category": "Skills & prompt assets",
+      "maturity": "🟢",
+      "files": [
+        { "name": ".prompt.md", "note": "Invokable saved prompts under .github/prompts/, run as a slash-command." },
+        { "name": ".instructions.md", "note": "Auto-attached instructions under .github/instructions/, scoped by an applyTo glob in frontmatter." }
+      ],
+      "read_by": "GitHub Copilot in VS Code / Copilot CLI",
+      "location": ".github/prompts/*.prompt.md and .github/instructions/*.instructions.md",
+      "spec": "https://code.visualstudio.com/docs/agent-customization/prompt-files",
+      "summary": "Modular, path-scoped Copilot context: *.instructions.md auto-attach to matching files via an applyTo glob, while *.prompt.md are reusable prompts you invoke by name - the granular cousins of a single .github/copilot-instructions.md.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/debs-obrien/playwright-movies-app/main/.github/prompts/generate.prompt.md", "source_label": "playwright-movies" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/github/awesome-copilot/main/instructions/a11y.instructions.md", "source_label": "awesome-copilot" }
+      ]
+    },
+    "mcp-config": {
+      "name": "MCP server config",
+      "category": "Tooling & connections",
+      "maturity": "🟢",
+      "files": [
+        { "name": ".mcp.json", "note": "Project-scoped MCP servers. The same { \"mcpServers\": {...} } schema also appears as .vscode/mcp.json (VS Code / Copilot) and claude_desktop_config.json (Claude Desktop)." }
+      ],
+      "read_by": "Claude Code, Claude Desktop, Cursor, VS Code / Copilot - any MCP host",
+      "location": "Repo root (.mcp.json), .vscode/mcp.json, or the app config dir (claude_desktop_config.json)",
+      "spec": "https://code.claude.com/docs/en/mcp",
+      "summary": "A JSON file that tells an agent which Model Context Protocol servers to launch and how (command, args, env) - making a project's tool and data integrations portable, shareable, and version-controlled across every MCP-capable client.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/Automattic/wp-calypso/trunk/.mcp.json", "as": ".mcp.json", "source_label": "wp-calypso" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/inspec/inspec/main/.vscode/mcp.json", "as": ".mcp.json", "source_label": "inspec-vscode" }
+      ]
+    },
     "rules-files": {
       "name": "Rules files",
       "category": "Rules & ignore files",
@@ -302,6 +352,21 @@
       "summary": "A Markdown file that tells an agent how to authenticate with a service - discovery of auth endpoints and flows. Shipped by WorkOS as a real, working convention, but adoption beyond it is still early.",
       "targets": [
         { "type": "web", "url": "https://workos.com/auth.md" }
+      ]
+    },
+    "ai-txt": {
+      "name": "ai.txt",
+      "category": "Agent-web trust",
+      "maturity": "🔵",
+      "files": [
+        { "name": "ai.txt" }
+      ],
+      "read_by": "AI training-data crawlers that honor Spawning's opt-out (early adopters)",
+      "location": "Site root or /.well-known/ai.txt",
+      "spec": "https://site.spawning.ai/spawning-ai-txt",
+      "summary": "A text file declaring machine-readable consent for AI training and data-mining of a site's content - a robots.txt analogue for the training era. A real spec from a real org (Spawning, tied to the EU TDM opt-out), but adoption is thin and live files use divergent schemas - labelled down to 🔵 until consumption is demonstrable.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/ZenonEl/zenonel.github.io/main/.well-known/ai.txt", "as": "ai.txt", "source_label": "zenonel" }
       ]
     },
     "agent-cards": {

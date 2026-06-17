@@ -15,7 +15,7 @@
 
 **A collection of the real files AI agents read, write, and act on - extracted from production, organized by purpose, and labelled by how widely they're actually adopted.**
 
-**17 conventions across 10 categories** - from the instruction files every coding agent reads to the discovery files the agent web is still inventing.
+**21 conventions across 11 categories** - from the instruction files every coding agent reads to the discovery files the agent web is still inventing.
 
 Not a glossary. Every entry links to a folder of *real files* pulled from public
 sources by an extractor - so you can fork this and copy the actual artifact, not
@@ -54,6 +54,10 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 - [Skills & prompt assets](#skills--prompt-assets)
   - 🟢 [SKILL.md](conventions/skill-md/)
   - 🟢 [Prompt asset files](conventions/prompt-assets/)
+  - 🟢 [Claude Code commands](conventions/claude-commands/)
+  - 🟢 [Copilot prompt & instruction files](conventions/copilot-prompt-files/)
+- [Tooling & connections](#tooling--connections)
+  - 🟢 [MCP server config](conventions/mcp-config/)
 - [Rules & ignore files](#rules--ignore-files)
   - 🟢 [Rules files](conventions/rules-files/)
   - 🟢 [AI ignore files](conventions/ignore-files/)
@@ -64,6 +68,7 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
   - 🟢 [pricing.md](conventions/pricing-md/)
 - [Agent-web trust](#agent-web-trust)
   - 🟠 [auth.md](conventions/auth-md/)
+  - 🔵 [ai.txt](conventions/ai-txt/)
 - [Identity & protocols](#identity--protocols)
   - 🟠 [Agent Cards (A2A)](conventions/agent-cards/)
 - [Proposed namespace](#proposed-namespace)
@@ -107,9 +112,21 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 | --- | --- | --- | --- | --- |
 | 🟢 | [SKILL.md](conventions/skill-md/) | `SKILL.md` | Claude (Agent Skills), Claude Code, and the open Agent Skills ecosystem | [spec ↗](https://agentskills.io) |
 | 🟢 | [Prompt asset files](conventions/prompt-assets/) | `.prompty` `.prompt` `system_prompt.txt` | Prompty tooling, Azure AI / Semantic Kernel, and apps that load externalized prompts | [spec ↗](https://prompty.ai) |
+| 🟢 | [Claude Code commands](conventions/claude-commands/) | `.md` | Claude Code - project .claude/commands/ and user ~/.claude/commands/ | [spec ↗](https://code.claude.com/docs/en/slash-commands) |
+| 🟢 | [Copilot prompt & instruction files](conventions/copilot-prompt-files/) | `.prompt.md` `.instructions.md` | GitHub Copilot in VS Code / Copilot CLI | [spec ↗](https://code.visualstudio.com/docs/agent-customization/prompt-files) |
 
 - **[SKILL.md](conventions/skill-md/)** - A self-contained, model-invoked capability: YAML frontmatter (name + description) tells the agent when to load it; the body teaches it how. Progressive disclosure keeps it cheap until needed.
 - **[Prompt asset files](conventions/prompt-assets/)** - Externalized prompt files - Prompty's YAML-front-mattered .prompty, plain .prompt templates, and system_prompt.txt - that pull the prompt out of source code so it can be versioned and edited on its own.
+- **[Claude Code commands](conventions/claude-commands/)** - A Markdown file Claude Code exposes as a /slash-command - a reusable, version-controlled prompt workflow, with optional frontmatter (allowed-tools, model, argument-hint) and $ARGUMENTS / shell / @file placeholders. Now converging with Agent Skills, but still widely committed in its own right.
+- **[Copilot prompt & instruction files](conventions/copilot-prompt-files/)** - Modular, path-scoped Copilot context: *.instructions.md auto-attach to matching files via an applyTo glob, while *.prompt.md are reusable prompts you invoke by name - the granular cousins of a single .github/copilot-instructions.md.
+
+## Tooling & connections
+
+| | Convention | Files | Read by | Spec |
+| --- | --- | --- | --- | --- |
+| 🟢 | [MCP server config](conventions/mcp-config/) | `.mcp.json` | Claude Code, Claude Desktop, Cursor, VS Code / Copilot - any MCP host | [spec ↗](https://code.claude.com/docs/en/mcp) |
+
+- **[MCP server config](conventions/mcp-config/)** - A JSON file that tells an agent which Model Context Protocol servers to launch and how (command, args, env) - making a project's tool and data integrations portable, shareable, and version-controlled across every MCP-capable client.
 
 ## Rules & ignore files
 
@@ -144,8 +161,10 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
 | 🟠 | [auth.md](conventions/auth-md/) | `auth.md` | Agents discovering how to authenticate to a service (early adopters) | [spec ↗](https://workos.com/auth-md) |
+| 🔵 | [ai.txt](conventions/ai-txt/) | `ai.txt` | AI training-data crawlers that honor Spawning's opt-out (early adopters) | [spec ↗](https://site.spawning.ai/spawning-ai-txt) |
 
 - **[auth.md](conventions/auth-md/)** - A Markdown file that tells an agent how to authenticate with a service - discovery of auth endpoints and flows. Shipped by WorkOS as a real, working convention, but adoption beyond it is still early.
+- **[ai.txt](conventions/ai-txt/)** - A text file declaring machine-readable consent for AI training and data-mining of a site's content - a robots.txt analogue for the training era. A real spec from a real org (Spawning, tied to the EU TDM opt-out), but adoption is thin and live files use divergent schemas - labelled down to 🔵 until consumption is demonstrable.
 
 ## Identity & protocols
 
