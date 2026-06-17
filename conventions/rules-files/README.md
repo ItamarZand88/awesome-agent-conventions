@@ -41,7 +41,7 @@ Windsurf - project rules.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `Terminal.Gui` | [`Terminal.Gui.windsurfrules`](examples/Terminal.Gui.windsurfrules) | [source](https://raw.githubusercontent.com/gui-cs/Terminal.Gui/develop/.windsurfrules) |
+| `snyk` | [`snyk.windsurfrules`](examples/snyk.windsurfrules) | [source](https://raw.githubusercontent.com/snyk/vscode-extension/main/.windsurfrules) |
 
 ## Field notes
 

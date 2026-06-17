@@ -15,7 +15,7 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `zenonel` | [`zenonel.ai.txt`](examples/zenonel.ai.txt) | [source](https://raw.githubusercontent.com/ZenonEl/zenonel.github.io/main/.well-known/ai.txt) |
+| `openverse` | [`openverse.ai.txt`](examples/openverse.ai.txt) | [source](https://raw.githubusercontent.com/WordPress/openverse/main/frontend/src/static/ai.txt) |
 
 ## Field notes
 
@@ -24,7 +24,7 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 ### Anti-patterns
 - Treating it as enforcement. It's a *declaration* of consent, not a technical block - crawlers can ignore it, and most do.
-- Hand-rolling a schema that diverges from Spawning's. The live example vendored here is itself a community variant - which is the cautionary tale.
+- Hand-rolling a schema that diverges from Spawning's. Live files vary widely: adopters that get it right (WordPress's Openverse uses the canonical Spawning shape) sit beside ad-hoc variants elsewhere.
 
 ### Edge cases
 - **🔵 Proposed, labelled down on purpose.** There's a real org (Spawning) and a real spec tied to the EU TDM opt-out, but adoption is thin: Spawning's own docs concede most bots don't honor it, and live files disagree on format. Until consumption is demonstrable, it sits below 🟠.

@@ -25,7 +25,7 @@ Amp (Sourcegraph) - legacy singular form; Amp now reads AGENTS.md (plural).
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `vibetunnel` | [`vibetunnel.AGENT.md`](examples/vibetunnel.AGENT.md) | [source](https://raw.githubusercontent.com/amantus-ai/vibetunnel/main/AGENT.md) |
+| `dagger` | [`dagger.AGENT.md`](examples/dagger.AGENT.md) | [source](https://raw.githubusercontent.com/dagger/container-use/main/AGENT.md) |
 
 ### `QWEN.md`
 
@@ -33,7 +33,7 @@ Qwen Code.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `MapDownload` | [`MapDownload.QWEN.md`](examples/MapDownload.QWEN.md) | [source](https://raw.githubusercontent.com/Hxy1992/MapDownload/main/QWEN.md) |
+| `qwen-code` | [`qwen-code.QWEN.md`](examples/qwen-code.QWEN.md) | [source](https://raw.githubusercontent.com/QwenLM/qwen-code/main/packages/cli/src/commands/extensions/examples/context/QWEN.md) |
 
 ### `WARP.md`
 
@@ -41,7 +41,7 @@ Warp terminal - backwards-compat; Warp now defaults to AGENTS.md.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `Zafiro.Avalonia` | [`Zafiro.Avalonia.WARP.md`](examples/Zafiro.Avalonia.WARP.md) | [source](https://raw.githubusercontent.com/SuperJMN/Zafiro.Avalonia/master/WARP.md) |
+| `warp` | [`warp.WARP.md`](examples/warp.WARP.md) | [source](https://raw.githubusercontent.com/warpdotdev/warp/master/WARP.md) |
 
 ### `CONVENTIONS.md`
 
@@ -49,7 +49,7 @@ Aider.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `phel-lang` | [`phel-lang.CONVENTIONS.md`](examples/phel-lang.CONVENTIONS.md) | [source](https://raw.githubusercontent.com/phel-lang/phel-lang/master/resources/agents/skills/aider/CONVENTIONS.md) |
+| `aider` | [`aider.CONVENTIONS.md`](examples/aider.CONVENTIONS.md) | [source](https://raw.githubusercontent.com/Aider-AI/conventions/main/golang/CONVENTIONS.md) |
 
 ### `copilot-instructions.md`
 
@@ -63,9 +63,9 @@ GitHub Copilot (lives under .github/).
 
 ### Composition
 All of these share the AGENTS.md shape - title, tech stack, build/test commands, conventions - and several announce their reader explicitly:
-- **WARP.md** opens *"This file provides guidance to WARP (warp.dev) when working with code in this repository."*
-- **AGENT.md** (Amp) leads with **Build/Test Commands** and a single-test recipe.
-- **CONVENTIONS.md** (Aider) is loaded *explicitly* - *"Pass to Aider via `--read CONVENTIONS.md`"* - and itself documents a load order of further `.agents/*.md` files.
+- **WARP.md** (now Warp's backwards-compat file) follows the standard *"This file provides guidance to WARP..."* shape.
+- **AGENT.md** (Amp's legacy singular form) leads with build/test commands.
+- **CONVENTIONS.md** (Aider) is loaded *explicitly* - via `--read CONVENTIONS.md` or a `read:` entry in `.aider.conf.yml`, not auto-discovered.
 - **QWEN.md** / **GEMINI.md** mirror CLAUDE.md, including `@`-imports.
 
 ### Anti-patterns

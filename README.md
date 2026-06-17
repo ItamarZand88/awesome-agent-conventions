@@ -13,7 +13,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
 </p>
 
-**The files AI coding agents actually read - `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, `SKILL.md`, `.mcp.json`, `llms.txt`, and more - collected in one place, with a real example of each.**
+**The files AI coding agents actually read - `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, `SKILL.md`, `llms.txt`, and more - collected in one place, with a real example of each.**
 
 **21 conventions across 11 categories** - from the instruction files every coding agent reads to the discovery files the agent web is still inventing.
 

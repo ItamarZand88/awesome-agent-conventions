@@ -17,7 +17,7 @@ What the product is and who it's for.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `fame2` | [`fame2.product.md`](examples/fame2.product.md) | [source](https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/product.md) |
+| `spirit-of-kiro` | [`spirit-of-kiro.product.md`](examples/spirit-of-kiro.product.md) | [source](https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/product.md) |
 
 ### `structure.md`
 
@@ -25,7 +25,7 @@ File organization and architectural conventions.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `fame2` | [`fame2.structure.md`](examples/fame2.structure.md) | [source](https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/structure.md) |
+| `spirit-of-kiro` | [`spirit-of-kiro.structure.md`](examples/spirit-of-kiro.structure.md) | [source](https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/structure.md) |
 
 ### `tech.md`
 
@@ -33,7 +33,7 @@ Allowed frameworks, libraries, and technical constraints.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `fame2` | [`fame2.tech.md`](examples/fame2.tech.md) | [source](https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/tech.md) |
+| `spirit-of-kiro` | [`spirit-of-kiro.tech.md`](examples/spirit-of-kiro.tech.md) | [source](https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/tech.md) |
 
 ## Field notes
 
@@ -41,7 +41,7 @@ Allowed frameworks, libraries, and technical constraints.
 Three always-on files, each a tight single concern:
 - **`product.md`** - what the product is and who it's for.
 - **`structure.md`** - file organization and architectural conventions.
-- **`tech.md`** - the stack plus **Common Commands**. The fame2 example goes further and encodes a real guardrail: *"`supabaseAdmin` (bypasses RLS) - ONLY use in Server Actions/API routes"* - exactly the kind of standing rule steering exists to carry.
+- **`tech.md`** - the stack plus common commands, and often a standing guardrail (e.g. "use the admin client that bypasses row-level security *only* in server code") - exactly the kind of always-true rule steering exists to carry.
 
 ### Anti-patterns
 - Collapsing all three into one file, which loses the always-on/per-topic clarity.

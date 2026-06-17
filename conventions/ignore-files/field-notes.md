@@ -1,5 +1,5 @@
 ### Composition
-- **gitignore syntax, verbatim.** The bbgo `.aiignore` says so outright and links the gitignore docs; holochain's `.cursorignore` is three lines (`target/`, `**/target/**`, `.git/`). Short, pattern-based, build-output- and VCS-focused.
+- **gitignore syntax, verbatim.** Short, pattern-based files focused on build output, secrets, and VCS dirs - holochain's `.cursorignore` is three lines (`target/`, `**/target/**`, `.git/`); ag-grid's `.aiignore` fences off `credentials/` and `.env.local`.
 
 ### Anti-patterns
 - **Treating it as a security boundary.** It reduces what's sent as context; it is *not* a hard secret control. Don't rely on `.cursorignore` to keep credentials out of the model - keep secrets out of the tree.

@@ -65,10 +65,10 @@
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/main/GEMINI.md", "as": "GEMINI.md", "source_label": "gemini-cli" },
         { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/vscode/main/.github/copilot-instructions.md", "as": "copilot-instructions.md", "source_label": "vscode" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/amantus-ai/vibetunnel/main/AGENT.md", "as": "AGENT.md", "source_label": "vibetunnel" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/Hxy1992/MapDownload/main/QWEN.md", "as": "QWEN.md", "source_label": "MapDownload" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/SuperJMN/Zafiro.Avalonia/master/WARP.md", "as": "WARP.md", "source_label": "Zafiro.Avalonia" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/phel-lang/phel-lang/master/resources/agents/skills/aider/CONVENTIONS.md", "as": "CONVENTIONS.md", "source_label": "phel-lang" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/dagger/container-use/main/AGENT.md", "as": "AGENT.md", "source_label": "dagger" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/QwenLM/qwen-code/main/packages/cli/src/commands/extensions/examples/context/QWEN.md", "as": "QWEN.md", "source_label": "qwen-code" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/warpdotdev/warp/master/WARP.md", "as": "WARP.md", "source_label": "warp" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/Aider-AI/conventions/main/golang/CONVENTIONS.md", "as": "CONVENTIONS.md", "source_label": "aider" }
       ]
     },
     "memory-md": {
@@ -147,9 +147,9 @@
       "spec": "https://kiro.dev/docs/steering",
       "summary": "Kiro's always-on steering docs - product, structure, and tech files that give the agent persistent project context outside of any single spec.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/product.md", "source_label": "fame2" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/structure.md", "source_label": "fame2" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/tech.md", "source_label": "fame2" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/product.md", "source_label": "spirit-of-kiro" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/structure.md", "source_label": "spirit-of-kiro" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/tech.md", "source_label": "spirit-of-kiro" }
       ]
     },
     "skill-md": {
@@ -200,8 +200,9 @@
       "spec": "https://code.claude.com/docs/en/slash-commands",
       "summary": "A Markdown file Claude Code exposes as a /slash-command - a reusable, version-controlled prompt workflow, with optional frontmatter (allowed-tools, model, argument-hint) and $ARGUMENTS / shell / @file placeholders. Now converging with Agent Skills, but still widely committed in its own right.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/chrisbenincasa/tunarr/main/.claude/commands/pr.md", "source_label": "tunarr" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/marigold-ui/marigold/main/.claude/commands/vrt.md", "source_label": "marigold" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/.claude/commands/dedupe.md", "source_label": "claude-code" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/.claude/commands/commit-push-pr.md", "source_label": "claude-code" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/getsentry/sentry/master/.claude/commands/gh-pr.md", "source_label": "sentry" }
       ]
     },
     "copilot-prompt-files": {
@@ -255,7 +256,7 @@
         { "type": "web", "url": "https://raw.githubusercontent.com/grapeot/devin.cursorrules/master/.cursorrules", "source_label": "devin" },
         { "type": "web", "url": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/angular-typescript-cursorrules-prompt-file.mdc", "source_label": "awesome-cursorrules" },
         { "type": "web", "url": "https://raw.githubusercontent.com/raycast/extensions/main/extensions/1bookmark/.clinerules", "source_label": "raycast" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/gui-cs/Terminal.Gui/develop/.windsurfrules", "source_label": "Terminal.Gui" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/snyk/vscode-extension/main/.windsurfrules", "source_label": "snyk" }
       ]
     },
     "ignore-files": {
@@ -272,10 +273,10 @@
       "spec": "https://cursor.com/docs/reference/ignore-file",
       "summary": "gitignore-syntax files that fence an AI agent out of paths - secrets, vendored code, generated output - so they're never sent to the model as context.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/c9s/bbgo/main/.aiignore", "source_label": "bbgo" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/ag-grid/ag-grid/latest/.rulesync/.aiignore", "source_label": "ag-grid" },
         { "type": "web", "url": "https://raw.githubusercontent.com/holochain/holochain/develop/.cursorignore", "source_label": "holochain" },
         { "type": "web", "url": "https://raw.githubusercontent.com/mulesoft/api-console/master/.cursorignore", "source_label": "api-console" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/seontechnologies/playwright-utils/main/.codeiumignore", "source_label": "playwright-utils" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/wikimedia/wikimedia-fundraising-dev/master/.codeiumignore", "source_label": "wikimedia" }
       ]
     },
     "design-md": {
@@ -366,7 +367,7 @@
       "spec": "https://site.spawning.ai/spawning-ai-txt",
       "summary": "A text file declaring machine-readable consent for AI training and data-mining of a site's content - a robots.txt analogue for the training era. A real spec from a real org (Spawning, tied to the EU TDM opt-out), but adoption is thin and live files use divergent schemas - labelled down to 🔵 until consumption is demonstrable.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/ZenonEl/zenonel.github.io/main/.well-known/ai.txt", "as": "ai.txt", "source_label": "zenonel" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/WordPress/openverse/main/frontend/src/static/ai.txt", "as": "ai.txt", "source_label": "openverse" }
       ]
     },
     "agent-cards": {

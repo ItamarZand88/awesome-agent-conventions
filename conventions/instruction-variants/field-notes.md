@@ -1,8 +1,8 @@
 ### Composition
 All of these share the AGENTS.md shape - title, tech stack, build/test commands, conventions - and several announce their reader explicitly:
-- **WARP.md** opens *"This file provides guidance to WARP (warp.dev) when working with code in this repository."*
-- **AGENT.md** (Amp) leads with **Build/Test Commands** and a single-test recipe.
-- **CONVENTIONS.md** (Aider) is loaded *explicitly* - *"Pass to Aider via `--read CONVENTIONS.md`"* - and itself documents a load order of further `.agents/*.md` files.
+- **WARP.md** (now Warp's backwards-compat file) follows the standard *"This file provides guidance to WARP..."* shape.
+- **AGENT.md** (Amp's legacy singular form) leads with build/test commands.
+- **CONVENTIONS.md** (Aider) is loaded *explicitly* - via `--read CONVENTIONS.md` or a `read:` entry in `.aider.conf.yml`, not auto-discovered.
 - **QWEN.md** / **GEMINI.md** mirror CLAUDE.md, including `@`-imports.
 
 ### Anti-patterns

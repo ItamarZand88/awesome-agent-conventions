@@ -2,7 +2,7 @@
 Three always-on files, each a tight single concern:
 - **`product.md`** - what the product is and who it's for.
 - **`structure.md`** - file organization and architectural conventions.
-- **`tech.md`** - the stack plus **Common Commands**. The fame2 example goes further and encodes a real guardrail: *"`supabaseAdmin` (bypasses RLS) - ONLY use in Server Actions/API routes"* - exactly the kind of standing rule steering exists to carry.
+- **`tech.md`** - the stack plus common commands, and often a standing guardrail (e.g. "use the admin client that bypasses row-level security *only* in server code") - exactly the kind of always-true rule steering exists to carry.
 
 ### Anti-patterns
 - Collapsing all three into one file, which loses the always-on/per-topic clarity.

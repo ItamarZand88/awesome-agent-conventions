@@ -17,8 +17,9 @@ Any Markdown file under .claude/commands/; the filename is the command name (pr.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `marigold` | [`marigold.vrt.md`](examples/marigold.vrt.md) | [source](https://raw.githubusercontent.com/marigold-ui/marigold/main/.claude/commands/vrt.md) |
-| `tunarr` | [`tunarr.pr.md`](examples/tunarr.pr.md) | [source](https://raw.githubusercontent.com/chrisbenincasa/tunarr/main/.claude/commands/pr.md) |
+| `claude-code` | [`claude-code.commit-push-pr.md`](examples/claude-code.commit-push-pr.md) | [source](https://raw.githubusercontent.com/anthropics/claude-code/main/.claude/commands/commit-push-pr.md) |
+| `claude-code` | [`claude-code.dedupe.md`](examples/claude-code.dedupe.md) | [source](https://raw.githubusercontent.com/anthropics/claude-code/main/.claude/commands/dedupe.md) |
+| `sentry` | [`sentry.gh-pr.md`](examples/sentry.gh-pr.md) | [source](https://raw.githubusercontent.com/getsentry/sentry/master/.claude/commands/gh-pr.md) |
 
 ## Field notes
 
