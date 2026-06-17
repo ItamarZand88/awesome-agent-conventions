@@ -6,7 +6,7 @@ marked `manual_readme`) this fetches each declared target, saves it under
 conventions/<slug>/examples/ with a line-1 provenance comment, then rebuilds
 conventions/<slug>/README.md from what was actually captured.
 
-Never crashes on a bad target — a non-200 or network error prints a `miss`
+Never crashes on a bad target - a non-200 or network error prints a `miss`
 and moves on. The only hard exit is a GitHub API rate-limit (403/429), which
 is unrecoverable without waiting or a token.
 
@@ -33,7 +33,7 @@ USER_AGENT = (
 TIMEOUT = 30
 
 # Examples are representative samples, not archives. Some real files (notably
-# llms-full.txt — the entire docs concatenated) run to tens of MB, which has no
+# llms-full.txt - the entire docs concatenated) run to tens of MB, which has no
 # place in a forkable catalog. Cap each saved example and mark any truncation.
 MAX_EXAMPLE_BYTES = 256 * 1024
 
@@ -79,12 +79,12 @@ def target_filename(target, url):
 # --- fetching --------------------------------------------------------------
 
 def _requests():
-    """Import requests lazily — only fetching needs it, so --index-only and
+    """Import requests lazily - only fetching needs it, so --index-only and
     README rebuilds run with no third-party deps installed."""
     try:
         import requests
     except ImportError:
-        sys.exit("requests not installed — run: pip install -r scripts/requirements.txt")
+        sys.exit("requests not installed - run: pip install -r scripts/requirements.txt")
     return requests
 
 
@@ -139,7 +139,7 @@ def fetch_target(target):
 
 def spec_link(spec):
     if not spec:
-        return "—"
+        return "-"
     href = spec if spec.startswith("http") else f"https://{spec}"
     return f"[{spec}]({href})"
 
@@ -158,8 +158,8 @@ def examples_for(examples_dir, filename):
     Saved files are named `<label>.<saved-filename>`, so a declared file like
     `AGENTS.md` matches anything ending in `.AGENTS.md`, and a dot-extension
     declared file like `.prompty` matches anything ending in `.prompty`
-    (e.g. a saved `microsoft-prompty.chat-basic.prompty`). Suffix-matching —
-    rather than `*.AGENTS.md` globbing — is what lets one declared file collect
+    (e.g. a saved `microsoft-prompty.chat-basic.prompty`). Suffix-matching -
+    rather than `*.AGENTS.md` globbing - is what lets one declared file collect
     examples whose own basenames differ.
     """
     if not os.path.isdir(examples_dir):
@@ -177,7 +177,7 @@ def rebuild_convention_readme(slug, conv):
     examples_dir = os.path.join(slug_dir, "examples")
     os.makedirs(slug_dir, exist_ok=True)
 
-    # Pattern files vendor nothing — clear any stale extracted examples so the
+    # Pattern files vendor nothing - clear any stale extracted examples so the
     # repo never carries a dump that the page no longer references.
     for f in conv["files"]:
         if f.get("kind") == "pattern":
@@ -200,7 +200,7 @@ def rebuild_convention_readme(slug, conv):
     out.append("")
     out.append(
         "_Every file below was fetched from a public source by "
-        "[`scripts/extract.py`](../../scripts/extract.py) — none are hand-written._"
+        "[`scripts/extract.py`](../../scripts/extract.py) - none are hand-written._"
     )
     out.append("")
 
@@ -212,14 +212,14 @@ def rebuild_convention_readme(slug, conv):
             out.append(f["note"])
             out.append("")
         if f.get("kind") == "pattern":
-            out.append("**Pattern — not an extracted file.**")
+            out.append("**Pattern - not an extracted file.**")
             out.append("")
             if f.get("pattern"):
                 out.append(f["pattern"])
                 out.append("")
             instances = f.get("instances", [])
             if instances:
-                out.append("Live instances (fetch directly — too large or instance-specific to vendor):")
+                out.append("Live instances (fetch directly - too large or instance-specific to vendor):")
                 out.append("")
                 for inst in instances:
                     out.append(f"- [{inst['label']}]({inst['url']})")
@@ -232,11 +232,11 @@ def rebuild_convention_readme(slug, conv):
             for m in matches:
                 base = os.path.basename(m)
                 label, url = read_provenance(m)
-                prov = f"[source]({url})" if url else "—"
+                prov = f"[source]({url})" if url else "-"
                 out.append(f"| `{label}` | [`{base}`](examples/{base}) | {prov} |")
         else:
             out.append(
-                "_No example captured yet — add a target in "
+                "_No example captured yet - add a target in "
                 "[`scripts/targets.json`](../../scripts/targets.json) and run "
                 "`python scripts/extract.py --only " + slug + "`._"
             )
@@ -287,9 +287,9 @@ def process_convention(slug, conv, index_only):
                 text, url = fetch_target(target)
             except SystemExit:
                 raise  # rate-limit: propagate the hard exit
-            except Exception as exc:  # noqa: BLE001 — never crash on one target
+            except Exception as exc:  # noqa: BLE001 - never crash on one target
                 ref = target.get("url") or target
-                print(f"  miss: {ref} — {exc}")
+                print(f"  miss: {ref} - {exc}")
                 continue
             label = source_label(target, url)
             fname = target_filename(target, url)
@@ -343,7 +343,7 @@ def main():
     for slug in slugs:
         conv = conventions[slug]
         if conv.get("manual_readme"):
-            print(f"== {slug} == (manual README — skipped)")
+            print(f"== {slug} == (manual README - skipped)")
             continue
         print(f"== {slug} ==")
         process_convention(slug, conv, args.index_only)

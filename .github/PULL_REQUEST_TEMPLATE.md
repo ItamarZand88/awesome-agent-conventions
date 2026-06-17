@@ -7,7 +7,7 @@
 
 ## Inclusion filter
 
-- [ ] This is an **agent convention file** — a file an AI agent **reads, writes, or acts on** (not a human doc like `README.md` / `CONTRIBUTING.md`).
+- [ ] This is an **agent convention file** - a file an AI agent **reads, writes, or acts on** (not a human doc like `README.md` / `CONTRIBUTING.md`).
 - [ ] I can name **which agent reads or writes it and what it does with it**.
 
 ## Maturity tier
@@ -17,11 +17,11 @@
 
 ## Mechanics
 
-- [ ] I edited **`scripts/targets.json`** (the single source of truth) — not the generated `README.md` files directly.
+- [ ] I edited **`scripts/targets.json`** (the single source of truth) - not the generated `README.md` files directly.
 - [ ] Example sources are **real, public URLs** (I did not hand-write example files).
 - [ ] I ran the generators and committed the result:
       `python scripts/extract.py && python scripts/build_readme.py`
 - [ ] `python scripts/check_links.py` passes (all new links resolve).
 
-<!-- New observations? Drop them in conventions/<slug>/field-notes.md — that
+<!-- New observations? Drop them in conventions/<slug>/field-notes.md - that
      sidecar survives every regeneration and is where the list earns its depth. -->

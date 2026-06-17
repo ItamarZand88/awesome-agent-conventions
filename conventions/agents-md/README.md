@@ -1,15 +1,15 @@
 # AGENTS.md 🟢 Adopted
 
-> A plain-Markdown "README for agents" — build/test commands, conventions, and gotchas an agent needs before touching the code. The most widely adopted cross-tool instruction file.
+> A plain-Markdown "README for agents" - build/test commands, conventions, and gotchas an agent needs before touching the code. The most widely adopted cross-tool instruction file.
 
-- **Read by:** Most coding agents — OpenAI Codex, Cursor, Jules, Aider, Gemini CLI, Zed, and others
+- **Read by:** Most coding agents - OpenAI Codex, Cursor, Jules, Aider, Gemini CLI, Zed, and others
 - **Location:** Repository root; the nearest AGENTS.md up the tree wins, and nested files override parents
 - **Spec:** [https://agents.md](https://agents.md)
 - **Files:** `AGENTS.md`
 
 ## Examples
 
-_Every file below was fetched from a public source by [`scripts/extract.py`](../../scripts/extract.py) — none are hand-written._
+_Every file below was fetched from a public source by [`scripts/extract.py`](../../scripts/extract.py) - none are hand-written._
 
 ### `AGENTS.md`
 
@@ -22,9 +22,9 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 ### Composition
 Strong AGENTS.md files are **imperative and executable**, not descriptive:
-- **Exact commands first** — how to build, test, and run a *single* test. An agent can't guess `just argument-comment-lint`; spell it out.
-- **Code-style rules as a checklist** — the Codex example is almost entirely rules (honor specific clippy lints, exhaustive `match`, the `/*param_name*/` argument-comment lint), each with a link to the rule it enforces.
-- **A sandbox/environment contract** — Codex documents `CODEX_SANDBOX_NETWORK_DISABLED=1` and *why* certain tests early-exit, so the agent doesn't "fix" tests that were written around its sandbox.
+- **Exact commands first** - how to build, test, and run a *single* test. An agent can't guess `just argument-comment-lint`; spell it out.
+- **Code-style rules as a checklist** - the Codex example is almost entirely rules (honor specific clippy lints, exhaustive `match`, the `/*param_name*/` argument-comment lint), each with a link to the rule it enforces.
+- **A sandbox/environment contract** - Codex documents `CODEX_SANDBOX_NETWORK_DISABLED=1` and *why* certain tests early-exit, so the agent doesn't "fix" tests that were written around its sandbox.
 
 ### Anti-patterns
 - Restating the human `README.md` instead of telling the agent what to *do*.

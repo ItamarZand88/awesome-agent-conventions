@@ -9,17 +9,17 @@ Failure policy is deliberately honest-but-not-flaky:
 - 2xx / 3xx                  → ok
 - 404 / 410                  → FAIL (the link is genuinely gone)
 - persistent connection error → FAIL (dead host / DNS)
-- 401 / 403 / 429 / 5xx      → WARN, not fail (bot-blocking or transient — a
+- 401 / 403 / 429 / 5xx      → WARN, not fail (bot-blocking or transient - a
                                CI runner getting Cloudflare-challenged is not
                                the same as a dead link)
 - redirect to a shallower path → DEGRADED, not fail (a deep link that now
-                               bounces to a docs index — still 200, but no
+                               bounces to a docs index - still 200, but no
                                longer lands on the page we promised; the silent
                                rot a plain status check misses)
 
 Exit code is non-zero only when there is at least one FAIL, so CI stays green
 through the noise that isn't our problem and goes red on the rot that is.
-DEGRADED is surfaced loudly for review but does not break the build — vendors
+DEGRADED is surfaced loudly for review but does not break the build - vendors
 restructure docs, and that shouldn't redden every contributor's PR.
 
 Usage:
@@ -61,7 +61,7 @@ def collect(data, only=None):
 
 
 def _depth(url):
-    """Count non-empty path segments — /a/b/c → 3, / or bare host → 0."""
+    """Count non-empty path segments - /a/b/c → 3, / or bare host → 0."""
     return len([p for p in urlparse(url).path.split("/") if p])
 
 
@@ -82,8 +82,8 @@ def check(item):
         except urllib.error.HTTPError as e:
             if e.code in DEAD:
                 return (item, "fail", e.code)
-            last = ("warn", e.code)            # 401/403/429/5xx — don't fail
-        except Exception as e:                 # noqa: BLE001 — connection/DNS/timeout
+            last = ("warn", e.code)            # 401/403/429/5xx - don't fail
+        except Exception as e:                 # noqa: BLE001 - connection/DNS/timeout
             last = ("conn", type(e).__name__)
         if attempt < RETRIES:
             time.sleep(1.5 * (attempt + 1))
@@ -120,7 +120,7 @@ def main():
 
     ok = len(results) - len(fails) - len(degraded) - len(warns)
     print(
-        f"\nchecked {len(results)} urls — {ok} ok, "
+        f"\nchecked {len(results)} urls - {ok} ok, "
         f"{len(degraded)} degraded, {len(warns)} warn, {len(fails)} FAIL"
     )
     if degraded:

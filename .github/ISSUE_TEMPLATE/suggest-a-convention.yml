@@ -19,7 +19,7 @@ body:
   - type: textarea
     id: read_by
     attributes:
-      label: Which agent reads or writes it — and what does it do with it?
+      label: Which agent reads or writes it - and what does it do with it?
       placeholder: "e.g. Cursor reads .cursorrules at session start to scope behavior."
     validations:
       required: true
@@ -28,16 +28,16 @@ body:
     attributes:
       label: Maturity tier (label down, not up)
       options:
-        - "🟢 Adopted — in production across multiple tools or teams"
-        - "🟠 Emerging — real published spec, early/limited adoption"
-        - "🔵 Proposed — published concept, no demonstrated adoption"
+        - "🟢 Adopted - in production across multiple tools or teams"
+        - "🟠 Emerging - real published spec, early/limited adoption"
+        - "🔵 Proposed - published concept, no demonstrated adoption"
     validations:
       required: true
   - type: textarea
     id: sources
     attributes:
       label: Real, public example sources
-      description: Links to actual files in public repos or sites (prefer raw.githubusercontent.com). These get vendored by the extractor — not hand-written.
+      description: Links to actual files in public repos or sites (prefer raw.githubusercontent.com). These get vendored by the extractor - not hand-written.
       placeholder: "https://raw.githubusercontent.com/owner/repo/main/AGENTS.md"
     validations:
       required: true

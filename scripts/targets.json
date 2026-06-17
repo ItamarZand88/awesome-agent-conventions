@@ -19,10 +19,10 @@
       "files": [
         { "name": "AGENTS.md" }
       ],
-      "read_by": "Most coding agents — OpenAI Codex, Cursor, Jules, Aider, Gemini CLI, Zed, and others",
+      "read_by": "Most coding agents - OpenAI Codex, Cursor, Jules, Aider, Gemini CLI, Zed, and others",
       "location": "Repository root; the nearest AGENTS.md up the tree wins, and nested files override parents",
       "spec": "https://agents.md",
-      "summary": "A plain-Markdown \"README for agents\" — build/test commands, conventions, and gotchas an agent needs before touching the code. The most widely adopted cross-tool instruction file.",
+      "summary": "A plain-Markdown \"README for agents\" - build/test commands, conventions, and gotchas an agent needs before touching the code. The most widely adopted cross-tool instruction file.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/openai/codex/main/AGENTS.md", "source_label": "codex" },
         { "type": "web", "url": "https://raw.githubusercontent.com/apache/airflow/main/AGENTS.md", "source_label": "airflow" }
@@ -38,7 +38,7 @@
       "read_by": "Claude Code, and tools that read the Claude memory convention",
       "location": "Repo root, subdirectories, ~/.claude/ (user-global), and CLAUDE.local.md (untracked, personal)",
       "spec": "https://code.claude.com/docs/en/memory",
-      "summary": "Anthropic's memory file for Claude Code — loaded automatically at session start to carry project commands, style rules, and standing instructions across turns.",
+      "summary": "Anthropic's memory file for Claude Code - loaded automatically at session start to carry project commands, style rules, and standing instructions across turns.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/modelcontextprotocol/servers/main/CLAUDE.md", "source_label": "mcp-servers" },
         { "type": "web", "url": "https://raw.githubusercontent.com/anthropics/anthropic-sdk-typescript/main/CLAUDE.md", "source_label": "anthropic-sdk-ts" },
@@ -51,13 +51,13 @@
       "maturity": "🟢",
       "files": [
         { "name": "GEMINI.md", "note": "Google Gemini CLI." },
-        { "name": "AGENT.md", "note": "Amp (Sourcegraph) — singular, distinct from AGENTS.md." },
+        { "name": "AGENT.md", "note": "Amp (Sourcegraph) - singular, distinct from AGENTS.md." },
         { "name": "QWEN.md", "note": "Qwen Code." },
         { "name": "WARP.md", "note": "Warp terminal's agent." },
         { "name": "CONVENTIONS.md", "note": "Aider." },
         { "name": "copilot-instructions.md", "note": "GitHub Copilot (lives under .github/)." }
       ],
-      "read_by": "Each file is read by its namesake tool — Gemini CLI, Amp, Qwen Code, Warp, Aider, GitHub Copilot",
+      "read_by": "Each file is read by its namesake tool - Gemini CLI, Amp, Qwen Code, Warp, Aider, GitHub Copilot",
       "location": "Repository root (or .github/ for copilot-instructions.md)",
       "spec": "https://agents.md",
       "summary": "Per-tool instruction files that predate or coexist with AGENTS.md. Many tools now fall back to or symlink AGENTS.md, but these named variants are still read in the wild.",
@@ -80,7 +80,7 @@
       "read_by": "Claude Code's auto-memory, and agent frameworks that persist a memory index",
       "location": "An agent-managed memory directory (e.g. .claude/.../memory/MEMORY.md)",
       "spec": "https://code.claude.com/docs/en/memory",
-      "summary": "A persistent, agent-maintained index of durable facts — written and re-read across sessions so an agent accumulates project memory instead of relearning each time.",
+      "summary": "A persistent, agent-maintained index of durable facts - written and re-read across sessions so an agent accumulates project memory instead of relearning each time.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/Harzva/learn-likecc/main/MEMORY.md", "as": "MEMORY.md", "source_label": "learn-likecc" },
         { "type": "web", "url": "https://raw.githubusercontent.com/aaronjmars/soul.md/main/MEMORY.md", "as": "MEMORY.md", "source_label": "soul.md" }
@@ -91,9 +91,9 @@
       "category": "Memory & state",
       "maturity": "🟢",
       "files": [
-        { "name": "projectbrief.md", "note": "Foundation doc — why the project exists, core requirements and goals." },
+        { "name": "projectbrief.md", "note": "Foundation doc - why the project exists, core requirements and goals." },
         { "name": "productContext.md", "note": "Problem space and the intended user experience." },
-        { "name": "activeContext.md", "note": "Current focus, recent changes, next steps — the most frequently updated file." },
+        { "name": "activeContext.md", "note": "Current focus, recent changes, next steps - the most frequently updated file." },
         { "name": "systemPatterns.md", "note": "Architecture, key technical decisions, and design patterns." },
         { "name": "techContext.md", "note": "Technologies, setup, constraints, and dependencies." },
         { "name": "progress.md", "note": "What works, what's left to build, and known issues." }
@@ -101,7 +101,7 @@
       "read_by": "Cline, Roo Code, and Cursor (via the Memory Bank custom-instructions pattern)",
       "location": "A memory-bank/ directory at the repository root",
       "spec": "https://docs.cline.bot/best-practices/memory-bank",
-      "summary": "Cline's structured memory system — a set of Markdown files an agent reads at the start of every task to reconstruct full project context after its session memory resets.",
+      "summary": "Cline's structured memory system - a set of Markdown files an agent reads at the start of every task to reconstruct full project context after its session memory resets.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/projectbrief.md", "source_label": "gitpod" },
         { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/productContext.md", "source_label": "gitpod" },
@@ -117,14 +117,14 @@
       "maturity": "🟢",
       "files": [
         { "name": "constitution.md", "note": "Project principles and non-negotiable rules the agent honors across every feature." },
-        { "name": "spec.md", "note": "The what and why of one feature — requirements and user stories, no implementation detail." },
+        { "name": "spec.md", "note": "The what and why of one feature - requirements and user stories, no implementation detail." },
         { "name": "plan.md", "note": "The technical approach, stack, and architecture for the spec." },
         { "name": "tasks.md", "note": "An ordered, reviewable task list generated from the plan." }
       ],
       "read_by": "GitHub Spec Kit's slash-command agents (Copilot, Claude, Gemini, Cursor, and more)",
       "location": ".specify/memory/constitution.md and specs/<feature>/{spec,plan,tasks}.md",
       "spec": "https://github.com/github/spec-kit",
-      "summary": "GitHub's spec-driven workflow — a constitution plus per-feature spec → plan → tasks files that drive an agent through structured, reviewable implementation.",
+      "summary": "GitHub's spec-driven workflow - a constitution plus per-feature spec → plan → tasks files that drive an agent through structured, reviewable implementation.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/github/spec-kit/main/templates/constitution-template.md", "as": "constitution.md", "source_label": "spec-kit" },
         { "type": "web", "url": "https://raw.githubusercontent.com/github/spec-kit/main/templates/spec-template.md", "as": "spec.md", "source_label": "spec-kit" },
@@ -144,7 +144,7 @@
       "read_by": "AWS Kiro, and Kiro-compatible agents",
       "location": ".kiro/steering/*.md",
       "spec": "https://kiro.dev/docs/steering",
-      "summary": "Kiro's always-on steering docs — product, structure, and tech files that give the agent persistent project context outside of any single spec.",
+      "summary": "Kiro's always-on steering docs - product, structure, and tech files that give the agent persistent project context outside of any single spec.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/product.md", "source_label": "fame2" },
         { "type": "web", "url": "https://raw.githubusercontent.com/HimangshuPronoy/fame2/main/.kiro/steering/structure.md", "source_label": "fame2" },
@@ -172,14 +172,14 @@
       "category": "Skills & prompt assets",
       "maturity": "🟢",
       "files": [
-        { "name": ".prompty", "note": "Prompty — YAML frontmatter (model + inputs) over a templated prompt body." },
+        { "name": ".prompty", "note": "Prompty - YAML frontmatter (model + inputs) over a templated prompt body." },
         { "name": ".prompt", "note": "Generic templated prompt file (Genkit dotprompt and similar)." },
         { "name": "system_prompt.txt", "note": "A plain-text externalized system prompt." }
       ],
       "read_by": "Prompty tooling, Azure AI / Semantic Kernel, and apps that load externalized prompts",
       "location": "Alongside application code (e.g. prompts/*.prompty)",
       "spec": "https://prompty.ai",
-      "summary": "Externalized prompt files — Prompty's YAML-front-mattered .prompty, plain .prompt templates, and system_prompt.txt — that pull the prompt out of source code so it can be versioned and edited on its own.",
+      "summary": "Externalized prompt files - Prompty's YAML-front-mattered .prompty, plain .prompt templates, and system_prompt.txt - that pull the prompt out of source code so it can be versioned and edited on its own.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/prompty/main/web/docs-examples/prompts/chat-basic.prompty", "source_label": "prompty" },
         { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/prompty/main/web/src/content/docs/assets/code/basic.prompty", "source_label": "prompty" },
@@ -192,15 +192,15 @@
       "category": "Rules & ignore files",
       "maturity": "🟢",
       "files": [
-        { "name": ".cursorrules", "note": "Cursor — legacy single-file form (superseded by .cursor/rules/*.mdc)." },
-        { "name": ".mdc", "note": "Cursor — modern rule file with frontmatter and glob scoping, under .cursor/rules/." },
-        { "name": ".clinerules", "note": "Cline — a rules file or a directory of rules." },
-        { "name": ".windsurfrules", "note": "Windsurf — project rules." }
+        { "name": ".cursorrules", "note": "Cursor - legacy single-file form (superseded by .cursor/rules/*.mdc)." },
+        { "name": ".mdc", "note": "Cursor - modern rule file with frontmatter and glob scoping, under .cursor/rules/." },
+        { "name": ".clinerules", "note": "Cline - a rules file or a directory of rules." },
+        { "name": ".windsurfrules", "note": "Windsurf - project rules." }
       ],
       "read_by": "Cursor (.cursorrules / .mdc), Cline (.clinerules), Windsurf (.windsurfrules)",
       "location": "Repo root, or a rules directory (.cursor/rules/*.mdc, .clinerules/)",
       "spec": "https://cursor.com/docs/rules",
-      "summary": "Per-tool rule files that scope agent behavior — older single-file forms (.cursorrules, .windsurfrules) and newer directory-based, glob-scoped forms (.cursor/rules/*.mdc).",
+      "summary": "Per-tool rule files that scope agent behavior - older single-file forms (.cursorrules, .windsurfrules) and newer directory-based, glob-scoped forms (.cursor/rules/*.mdc).",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/grapeot/devin.cursorrules/master/.cursorrules", "source_label": "devin" },
         { "type": "web", "url": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/angular-typescript-cursorrules-prompt-file.mdc", "source_label": "awesome-cursorrules" },
@@ -220,7 +220,7 @@
       "read_by": "JetBrains Junie (.aiignore), Cursor (.cursorignore), Codeium/Windsurf (.codeiumignore)",
       "location": "Repository root (gitignore-style glob syntax)",
       "spec": "https://cursor.com/docs/reference/ignore-file",
-      "summary": "gitignore-syntax files that fence an AI agent out of paths — secrets, vendored code, generated output — so they're never sent to the model as context.",
+      "summary": "gitignore-syntax files that fence an AI agent out of paths - secrets, vendored code, generated output - so they're never sent to the model as context.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/c9s/bbgo/main/.aiignore", "source_label": "bbgo" },
         { "type": "web", "url": "https://raw.githubusercontent.com/holochain/holochain/develop/.cursorignore", "source_label": "holochain" },
@@ -238,7 +238,7 @@
       "read_by": "Google Stitch and design-aware agents that consume a design spec",
       "location": "Repository root or a design/ directory",
       "spec": "https://stitch.withgoogle.com/docs/design-md/specification",
-      "summary": "A structured, machine-readable design specification — tokens, components, and layout intent — that an agent reads to generate or keep UI consistent with an established system.",
+      "summary": "A structured, machine-readable design specification - tokens, components, and layout intent - that an agent reads to generate or keep UI consistent with an established system.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/apple/DESIGN.md", "source_label": "apple" },
         { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/claude/DESIGN.md", "source_label": "claude" },
@@ -256,7 +256,7 @@
           "name": "llms-full.txt",
           "kind": "pattern",
           "note": "The full docs concatenated into one file for direct ingestion.",
-          "pattern": "Every documentation page concatenated into a single plain-text file for direct ingestion — routinely multiple megabytes. Structurally it's `llms.txt` with each linked page inlined in full; nothing instance-specific is worth vendoring, so this entry links live instances rather than copying a dump.",
+          "pattern": "Every documentation page concatenated into a single plain-text file for direct ingestion - routinely multiple megabytes. Structurally it's `llms.txt` with each linked page inlined in full; nothing instance-specific is worth vendoring, so this entry links live instances rather than copying a dump.",
           "instances": [
             { "label": "docs.anthropic.com/llms-full.txt", "url": "https://docs.anthropic.com/llms-full.txt" },
             { "label": "prisma.io/docs/llms-full.txt", "url": "https://www.prisma.io/docs/llms-full.txt" }
@@ -282,7 +282,7 @@
       "read_by": "Agents and LLM browsers fetching a clean, parse-able pricing page",
       "location": "Site path mirroring the HTML page: /pricing.md",
       "spec": "https://resend.com/pricing.md",
-      "summary": "The Markdown twin of a pricing page — same URL with a .md suffix — so an agent gets structured plans and numbers instead of scraping marketing HTML. A concrete, shipping instance of the page.md pattern.",
+      "summary": "The Markdown twin of a pricing page - same URL with a .md suffix - so an agent gets structured plans and numbers instead of scraping marketing HTML. A concrete, shipping instance of the page.md pattern.",
       "targets": [
         { "type": "web", "url": "https://resend.com/pricing.md" },
         { "type": "web", "url": "https://auth0.com/pricing.md" },
@@ -299,7 +299,7 @@
       "read_by": "Agents discovering how to authenticate to a service (early adopters)",
       "location": "Site root or .well-known: /auth.md",
       "spec": "https://workos.com/auth-md",
-      "summary": "A Markdown file that tells an agent how to authenticate with a service — discovery of auth endpoints and flows. Shipped by WorkOS as a real, working convention, but adoption beyond it is still early.",
+      "summary": "A Markdown file that tells an agent how to authenticate with a service - discovery of auth endpoints and flows. Shipped by WorkOS as a real, working convention, but adoption beyond it is still early.",
       "targets": [
         { "type": "web", "url": "https://workos.com/auth.md" }
       ]
@@ -314,7 +314,7 @@
       "read_by": "A2A-compatible agents discovering another agent's capabilities",
       "location": "/.well-known/agent.json (a.k.a. /.well-known/agent-card.json)",
       "spec": "https://a2a-protocol.org/latest/specification/",
-      "summary": "The Agent2Agent (A2A) capability card — a JSON document at a well-known path advertising an agent's skills, endpoints, and auth so other agents can discover and call it. Backed by a real spec; adoption is growing but early.",
+      "summary": "The Agent2Agent (A2A) capability card - a JSON document at a well-known path advertising an agent's skills, endpoints, and auth so other agents can discover and call it. Backed by a real spec; adoption is growing but early.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json", "as": "agent.json", "source_label": "currency" },
         { "type": "web", "url": "https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/air_ticketing_agent.json", "as": "agent.json", "source_label": "air-ticketing" }
@@ -325,12 +325,12 @@
       "category": "Proposed namespace",
       "maturity": "🔵",
       "files": [
-        { "name": "proof.md", "note": "The namespace's flagship — live at its own apex domain (proof.md → www.proof.md), a v1.0 'living specification' that self-describes as 'an experiment.'" }
+        { "name": "proof.md", "note": "The namespace's flagship - live at its own apex domain (proof.md → www.proof.md), a v1.0 'living specification' that self-describes as 'an experiment.'" }
       ],
-      "read_by": "— (no demonstrated readers; aspirational)",
+      "read_by": "- (no demonstrated readers; aspirational)",
       "location": "Per-domain pages under the protocols.md namespace (e.g. proof.md)",
       "spec": "https://protocols.md",
-      "summary": "A single maintainer's pre-registered namespace of ~74 aspirational .md \"protocols\" (proof.md, signature.md, reputation.md, …) staked as Schelling points for a future agent web. Published concept, no demonstrated adoption — see the page for the audited, honest caveats.",
+      "summary": "A single maintainer's pre-registered namespace of ~74 aspirational .md \"protocols\" (proof.md, signature.md, reputation.md, …) staked as Schelling points for a future agent web. Published concept, no demonstrated adoption - see the page for the audited, honest caveats.",
       "manual_readme": true,
       "targets": []
     }

@@ -1,6 +1,6 @@
 # Rules files 🟢 Adopted
 
-> Per-tool rule files that scope agent behavior — older single-file forms (.cursorrules, .windsurfrules) and newer directory-based, glob-scoped forms (.cursor/rules/*.mdc).
+> Per-tool rule files that scope agent behavior - older single-file forms (.cursorrules, .windsurfrules) and newer directory-based, glob-scoped forms (.cursor/rules/*.mdc).
 
 - **Read by:** Cursor (.cursorrules / .mdc), Cline (.clinerules), Windsurf (.windsurfrules)
 - **Location:** Repo root, or a rules directory (.cursor/rules/*.mdc, .clinerules/)
@@ -9,11 +9,11 @@
 
 ## Examples
 
-_Every file below was fetched from a public source by [`scripts/extract.py`](../../scripts/extract.py) — none are hand-written._
+_Every file below was fetched from a public source by [`scripts/extract.py`](../../scripts/extract.py) - none are hand-written._
 
 ### `.cursorrules`
 
-Cursor — legacy single-file form (superseded by .cursor/rules/*.mdc).
+Cursor - legacy single-file form (superseded by .cursor/rules/*.mdc).
 
 | Source | File | Provenance |
 | --- | --- | --- |
@@ -21,7 +21,7 @@ Cursor — legacy single-file form (superseded by .cursor/rules/*.mdc).
 
 ### `.mdc`
 
-Cursor — modern rule file with frontmatter and glob scoping, under .cursor/rules/.
+Cursor - modern rule file with frontmatter and glob scoping, under .cursor/rules/.
 
 | Source | File | Provenance |
 | --- | --- | --- |
@@ -29,7 +29,7 @@ Cursor — modern rule file with frontmatter and glob scoping, under .cursor/rul
 
 ### `.clinerules`
 
-Cline — a rules file or a directory of rules.
+Cline - a rules file or a directory of rules.
 
 | Source | File | Provenance |
 | --- | --- | --- |
@@ -37,7 +37,7 @@ Cline — a rules file or a directory of rules.
 
 ### `.windsurfrules`
 
-Windsurf — project rules.
+Windsurf - project rules.
 
 | Source | File | Provenance |
 | --- | --- | --- |
@@ -46,14 +46,14 @@ Windsurf — project rules.
 ## Field notes
 
 ### Composition
-- **Modern (`.mdc`)** carries frontmatter that *scopes* the rule: the awesome-cursorrules Angular example uses `description`, `globs: **/*`, `alwaysApply: false` — so the rule attaches by file pattern instead of being on for everything.
+- **Modern (`.mdc`)** carries frontmatter that *scopes* the rule: the awesome-cursorrules Angular example uses `description`, `globs: **/*`, `alwaysApply: false` - so the rule attaches by file pattern instead of being on for everything.
 - **Legacy (`.cursorrules`, `.windsurfrules`)** is a flat prose file. The well-known devin.cursorrules is structured as *Instructions / Lessons / Scratchpad*.
 
 ### Anti-patterns
-- Large `alwaysApply: true` rule files — they're prepended to every request and quietly inflate token cost.
-- Affirmation prose that doesn't change behavior — the Angular `.mdc` opens with *"you are a genius at reasoning… double check your work"*, which reads well but steers little. Concrete rules ("do not nest code more than 2 levels deep") earn their place.
+- Large `alwaysApply: true` rule files - they're prepended to every request and quietly inflate token cost.
+- Affirmation prose that doesn't change behavior - the Angular `.mdc` opens with *"you are a genius at reasoning… double check your work"*, which reads well but steers little. Concrete rules ("do not nest code more than 2 levels deep") earn their place.
 - Keeping a flat `.cursorrules` when glob-scoped `.cursor/rules/*.mdc` would target the rule precisely.
 
 ### Edge cases
-- Three activation modes coexist: **always**, **glob-scoped**, and **agent-requested** (by description) — pick the narrowest that works.
+- Three activation modes coexist: **always**, **glob-scoped**, and **agent-requested** (by description) - pick the narrowest that works.
 - `.cursorrules` is deprecated in favor of `.cursor/rules/*.mdc`; `.clinerules` can be a single file *or* a directory of rules.

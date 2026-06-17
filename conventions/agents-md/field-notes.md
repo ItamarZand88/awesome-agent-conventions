@@ -1,8 +1,8 @@
 ### Composition
 Strong AGENTS.md files are **imperative and executable**, not descriptive:
-- **Exact commands first** — how to build, test, and run a *single* test. An agent can't guess `just argument-comment-lint`; spell it out.
-- **Code-style rules as a checklist** — the Codex example is almost entirely rules (honor specific clippy lints, exhaustive `match`, the `/*param_name*/` argument-comment lint), each with a link to the rule it enforces.
-- **A sandbox/environment contract** — Codex documents `CODEX_SANDBOX_NETWORK_DISABLED=1` and *why* certain tests early-exit, so the agent doesn't "fix" tests that were written around its sandbox.
+- **Exact commands first** - how to build, test, and run a *single* test. An agent can't guess `just argument-comment-lint`; spell it out.
+- **Code-style rules as a checklist** - the Codex example is almost entirely rules (honor specific clippy lints, exhaustive `match`, the `/*param_name*/` argument-comment lint), each with a link to the rule it enforces.
+- **A sandbox/environment contract** - Codex documents `CODEX_SANDBOX_NETWORK_DISABLED=1` and *why* certain tests early-exit, so the agent doesn't "fix" tests that were written around its sandbox.
 
 ### Anti-patterns
 - Restating the human `README.md` instead of telling the agent what to *do*.
