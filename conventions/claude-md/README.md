@@ -4,7 +4,7 @@
 
 - **Read by:** Claude Code, and tools that read the Claude memory convention
 - **Location:** Repo root, subdirectories, ~/.claude/ (user-global), and CLAUDE.local.md (untracked, personal)
-- **Spec:** [https://www.anthropic.com/engineering/claude-code-best-practices](https://www.anthropic.com/engineering/claude-code-best-practices)
+- **Spec:** [https://code.claude.com/docs/en/memory](https://code.claude.com/docs/en/memory)
 - **Files:** `CLAUDE.md`
 
 ## Examples

@@ -7,7 +7,15 @@
 
 # awesome-agent-conventions
 
+<p align="center">
+  <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
+  <a href="https://github.com/ItamarZand88/awesome-agent-conventions/actions/workflows/verify.yml"><img src="https://github.com/ItamarZand88/awesome-agent-conventions/actions/workflows/verify.yml/badge.svg" alt="verify"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
+</p>
+
 **A collection of the real files AI agents read, write, and act on — extracted from production, organized by purpose, and labelled by how widely they're actually adopted.**
+
+**17 conventions across 10 categories** — from the instruction files every coding agent reads to the discovery files the agent web is still inventing.
 
 Not a glossary. Every entry links to a folder of *real files* pulled from public
 sources by an extractor — so you can fork this and copy the actual artifact, not
@@ -66,7 +74,7 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
 | 🟢 | [AGENTS.md](conventions/agents-md/) | `AGENTS.md` | Most coding agents — OpenAI Codex, Cursor, Jules, Aider, Gemini CLI, Zed, and others | [spec ↗](https://agents.md) |
-| 🟢 | [CLAUDE.md](conventions/claude-md/) | `CLAUDE.md` | Claude Code, and tools that read the Claude memory convention | [spec ↗](https://www.anthropic.com/engineering/claude-code-best-practices) |
+| 🟢 | [CLAUDE.md](conventions/claude-md/) | `CLAUDE.md` | Claude Code, and tools that read the Claude memory convention | [spec ↗](https://code.claude.com/docs/en/memory) |
 | 🟢 | [Tool-specific instruction files](conventions/instruction-variants/) | `GEMINI.md` `AGENT.md` `QWEN.md` `WARP.md` `CONVENTIONS.md` `copilot-instructions.md` | Each file is read by its namesake tool — Gemini CLI, Amp, Qwen Code, Warp, Aider, GitHub Copilot | [spec ↗](https://agents.md) |
 
 - **[AGENTS.md](conventions/agents-md/)** — A plain-Markdown "README for agents" — build/test commands, conventions, and gotchas an agent needs before touching the code. The most widely adopted cross-tool instruction file.
@@ -77,8 +85,8 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
-| 🟢 | [MEMORY.md](conventions/memory-md/) | `MEMORY.md` | Claude Code's auto-memory, and agent frameworks that persist a memory index | [spec ↗](https://code.claude.com/docs) |
-| 🟢 | [Memory Bank](conventions/memory-bank/) | `projectbrief.md` `productContext.md` `activeContext.md` `systemPatterns.md` `techContext.md` `progress.md` | Cline, Roo Code, and Cursor (via the Memory Bank custom-instructions pattern) | [spec ↗](https://docs.cline.bot/prompting/cline-memory-bank) |
+| 🟢 | [MEMORY.md](conventions/memory-md/) | `MEMORY.md` | Claude Code's auto-memory, and agent frameworks that persist a memory index | [spec ↗](https://code.claude.com/docs/en/memory) |
+| 🟢 | [Memory Bank](conventions/memory-bank/) | `projectbrief.md` `productContext.md` `activeContext.md` `systemPatterns.md` `techContext.md` `progress.md` | Cline, Roo Code, and Cursor (via the Memory Bank custom-instructions pattern) | [spec ↗](https://docs.cline.bot/best-practices/memory-bank) |
 
 - **[MEMORY.md](conventions/memory-md/)** — A persistent, agent-maintained index of durable facts — written and re-read across sessions so an agent accumulates project memory instead of relearning each time.
 - **[Memory Bank](conventions/memory-bank/)** — Cline's structured memory system — a set of Markdown files an agent reads at the start of every task to reconstruct full project context after its session memory resets.
@@ -107,8 +115,8 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
-| 🟢 | [Rules files](conventions/rules-files/) | `.cursorrules` `.mdc` `.clinerules` `.windsurfrules` | Cursor (.cursorrules / .mdc), Cline (.clinerules), Windsurf (.windsurfrules) | [spec ↗](https://docs.cursor.com) |
-| 🟢 | [AI ignore files](conventions/ignore-files/) | `.aiignore` `.cursorignore` `.codeiumignore` | JetBrains Junie (.aiignore), Cursor (.cursorignore), Codeium/Windsurf (.codeiumignore) | [spec ↗](https://www.jetbrains.com/help/junie/aiignore.html) |
+| 🟢 | [Rules files](conventions/rules-files/) | `.cursorrules` `.mdc` `.clinerules` `.windsurfrules` | Cursor (.cursorrules / .mdc), Cline (.clinerules), Windsurf (.windsurfrules) | [spec ↗](https://cursor.com/docs/rules) |
+| 🟢 | [AI ignore files](conventions/ignore-files/) | `.aiignore` `.cursorignore` `.codeiumignore` | JetBrains Junie (.aiignore), Cursor (.cursorignore), Codeium/Windsurf (.codeiumignore) | [spec ↗](https://cursor.com/docs/reference/ignore-file) |
 
 - **[Rules files](conventions/rules-files/)** — Per-tool rule files that scope agent behavior — older single-file forms (.cursorrules, .windsurfrules) and newer directory-based, glob-scoped forms (.cursor/rules/*.mdc).
 - **[AI ignore files](conventions/ignore-files/)** — gitignore-syntax files that fence an AI agent out of paths — secrets, vendored code, generated output — so they're never sent to the model as context.
@@ -135,15 +143,15 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
-| 🟠 | [auth.md](conventions/auth-md/) | `auth.md` | Agents discovering how to authenticate to a service (early adopters) | [spec ↗](https://auth-md.com) |
+| 🟠 | [auth.md](conventions/auth-md/) | `auth.md` | Agents discovering how to authenticate to a service (early adopters) | [spec ↗](https://workos.com/auth-md) |
 
-- **[auth.md](conventions/auth-md/)** — A published spec for a Markdown file that tells an agent how to authenticate with a service — discovery of auth endpoints and flows. A real spec from a real org, but adoption is still early.
+- **[auth.md](conventions/auth-md/)** — A Markdown file that tells an agent how to authenticate with a service — discovery of auth endpoints and flows. Shipped by WorkOS as a real, working convention, but adoption beyond it is still early.
 
 ## Identity & protocols
 
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
-| 🟠 | [Agent Cards (A2A)](conventions/agent-cards/) | `agent.json` | A2A-compatible agents discovering another agent's capabilities | [spec ↗](https://google.github.io/A2A/) |
+| 🟠 | [Agent Cards (A2A)](conventions/agent-cards/) | `agent.json` | A2A-compatible agents discovering another agent's capabilities | [spec ↗](https://a2a-protocol.org/latest/specification/) |
 
 - **[Agent Cards (A2A)](conventions/agent-cards/)** — The Agent2Agent (A2A) capability card — a JSON document at a well-known path advertising an agent's skills, endpoints, and auth so other agents can discover and call it. Backed by a real spec; adoption is growing but early.
 
@@ -171,6 +179,11 @@ just prints a `miss` and is skipped. Examples are representative samples: any
 file over 256 KB (e.g. a multi-MB `llms-full.txt`) is truncated with a marker
 pointing back to the full source. `scripts/targets.json` is the single source of
 truth; edit it and re-run both scripts.
+
+Every link is held to its promise by CI: a [GitHub Action](.github/workflows/verify.yml)
+re-checks that the generated files are in sync with `targets.json` and that every
+spec, example, and instance URL still resolves — on each pull request and weekly.
+Run the same check locally with `python scripts/check_links.py`.
 
 ## Contributing
 

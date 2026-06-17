@@ -4,7 +4,7 @@
 
 - **Read by:** A2A-compatible agents discovering another agent's capabilities
 - **Location:** /.well-known/agent.json (a.k.a. /.well-known/agent-card.json)
-- **Spec:** [https://google.github.io/A2A/](https://google.github.io/A2A/)
+- **Spec:** [https://a2a-protocol.org/latest/specification/](https://a2a-protocol.org/latest/specification/)
 - **Files:** `agent.json`
 
 ## Examples

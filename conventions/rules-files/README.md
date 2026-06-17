@@ -4,7 +4,7 @@
 
 - **Read by:** Cursor (.cursorrules / .mdc), Cline (.clinerules), Windsurf (.windsurfrules)
 - **Location:** Repo root, or a rules directory (.cursor/rules/*.mdc, .clinerules/)
-- **Spec:** [https://docs.cursor.com](https://docs.cursor.com)
+- **Spec:** [https://cursor.com/docs/rules](https://cursor.com/docs/rules)
 - **Files:** `.cursorrules`, `.mdc`, `.clinerules`, `.windsurfrules`
 
 ## Examples

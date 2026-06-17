@@ -4,7 +4,7 @@
 
 - **Read by:** Cline, Roo Code, and Cursor (via the Memory Bank custom-instructions pattern)
 - **Location:** A memory-bank/ directory at the repository root
-- **Spec:** [https://docs.cline.bot/prompting/cline-memory-bank](https://docs.cline.bot/prompting/cline-memory-bank)
+- **Spec:** [https://docs.cline.bot/best-practices/memory-bank](https://docs.cline.bot/best-practices/memory-bank)
 - **Files:** `projectbrief.md`, `productContext.md`, `activeContext.md`, `systemPatterns.md`, `techContext.md`, `progress.md`
 
 ## Examples

@@ -22,11 +22,6 @@ import re
 import sys
 from urllib.parse import urlparse
 
-try:
-    import requests
-except ImportError:
-    sys.exit("requests not installed — run: pip install -r scripts/requirements.txt")
-
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGETS_PATH = os.path.join(ROOT, "scripts", "targets.json")
 CONVENTIONS_DIR = os.path.join(ROOT, "conventions")
@@ -83,7 +78,18 @@ def target_filename(target, url):
 
 # --- fetching --------------------------------------------------------------
 
+def _requests():
+    """Import requests lazily — only fetching needs it, so --index-only and
+    README rebuilds run with no third-party deps installed."""
+    try:
+        import requests
+    except ImportError:
+        sys.exit("requests not installed — run: pip install -r scripts/requirements.txt")
+    return requests
+
+
 def fetch_web(url):
+    requests = _requests()
     resp = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=TIMEOUT)
     resp.raise_for_status()
     return resp.text
@@ -91,6 +97,7 @@ def fetch_web(url):
 
 def fetch_github(owner, repo, path):
     """Optional GitHub Contents-API path; uses GITHUB_TOKEN if present."""
+    requests = _requests()
     api = f"https://api.github.com/repos/{owner}/{repo}/contents/{path}"
     headers = {
         "Accept": "application/vnd.github.raw+json",

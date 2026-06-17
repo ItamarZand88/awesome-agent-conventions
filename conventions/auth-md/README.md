@@ -1,10 +1,10 @@
 # auth.md 🟠 Emerging
 
-> A published spec for a Markdown file that tells an agent how to authenticate with a service — discovery of auth endpoints and flows. A real spec from a real org, but adoption is still early.
+> A Markdown file that tells an agent how to authenticate with a service — discovery of auth endpoints and flows. Shipped by WorkOS as a real, working convention, but adoption beyond it is still early.
 
 - **Read by:** Agents discovering how to authenticate to a service (early adopters)
 - **Location:** Site root or .well-known: /auth.md
-- **Spec:** [https://auth-md.com](https://auth-md.com)
+- **Spec:** [https://workos.com/auth-md](https://workos.com/auth-md)
 - **Files:** `auth.md`
 
 ## Examples

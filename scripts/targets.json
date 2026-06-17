@@ -37,7 +37,7 @@
       ],
       "read_by": "Claude Code, and tools that read the Claude memory convention",
       "location": "Repo root, subdirectories, ~/.claude/ (user-global), and CLAUDE.local.md (untracked, personal)",
-      "spec": "https://www.anthropic.com/engineering/claude-code-best-practices",
+      "spec": "https://code.claude.com/docs/en/memory",
       "summary": "Anthropic's memory file for Claude Code — loaded automatically at session start to carry project commands, style rules, and standing instructions across turns.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/modelcontextprotocol/servers/main/CLAUDE.md", "source_label": "mcp-servers" },
@@ -79,7 +79,7 @@
       ],
       "read_by": "Claude Code's auto-memory, and agent frameworks that persist a memory index",
       "location": "An agent-managed memory directory (e.g. .claude/.../memory/MEMORY.md)",
-      "spec": "https://code.claude.com/docs",
+      "spec": "https://code.claude.com/docs/en/memory",
       "summary": "A persistent, agent-maintained index of durable facts — written and re-read across sessions so an agent accumulates project memory instead of relearning each time.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/Harzva/learn-likecc/main/MEMORY.md", "as": "MEMORY.md", "source_label": "learn-likecc" },
@@ -100,7 +100,7 @@
       ],
       "read_by": "Cline, Roo Code, and Cursor (via the Memory Bank custom-instructions pattern)",
       "location": "A memory-bank/ directory at the repository root",
-      "spec": "https://docs.cline.bot/prompting/cline-memory-bank",
+      "spec": "https://docs.cline.bot/best-practices/memory-bank",
       "summary": "Cline's structured memory system — a set of Markdown files an agent reads at the start of every task to reconstruct full project context after its session memory resets.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/projectbrief.md", "source_label": "gitpod" },
@@ -199,7 +199,7 @@
       ],
       "read_by": "Cursor (.cursorrules / .mdc), Cline (.clinerules), Windsurf (.windsurfrules)",
       "location": "Repo root, or a rules directory (.cursor/rules/*.mdc, .clinerules/)",
-      "spec": "https://docs.cursor.com",
+      "spec": "https://cursor.com/docs/rules",
       "summary": "Per-tool rule files that scope agent behavior — older single-file forms (.cursorrules, .windsurfrules) and newer directory-based, glob-scoped forms (.cursor/rules/*.mdc).",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/grapeot/devin.cursorrules/master/.cursorrules", "source_label": "devin" },
@@ -219,7 +219,7 @@
       ],
       "read_by": "JetBrains Junie (.aiignore), Cursor (.cursorignore), Codeium/Windsurf (.codeiumignore)",
       "location": "Repository root (gitignore-style glob syntax)",
-      "spec": "https://www.jetbrains.com/help/junie/aiignore.html",
+      "spec": "https://cursor.com/docs/reference/ignore-file",
       "summary": "gitignore-syntax files that fence an AI agent out of paths — secrets, vendored code, generated output — so they're never sent to the model as context.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/c9s/bbgo/main/.aiignore", "source_label": "bbgo" },
@@ -298,8 +298,8 @@
       ],
       "read_by": "Agents discovering how to authenticate to a service (early adopters)",
       "location": "Site root or .well-known: /auth.md",
-      "spec": "https://auth-md.com",
-      "summary": "A published spec for a Markdown file that tells an agent how to authenticate with a service — discovery of auth endpoints and flows. A real spec from a real org, but adoption is still early.",
+      "spec": "https://workos.com/auth-md",
+      "summary": "A Markdown file that tells an agent how to authenticate with a service — discovery of auth endpoints and flows. Shipped by WorkOS as a real, working convention, but adoption beyond it is still early.",
       "targets": [
         { "type": "web", "url": "https://workos.com/auth.md" }
       ]
@@ -313,7 +313,7 @@
       ],
       "read_by": "A2A-compatible agents discovering another agent's capabilities",
       "location": "/.well-known/agent.json (a.k.a. /.well-known/agent-card.json)",
-      "spec": "https://google.github.io/A2A/",
+      "spec": "https://a2a-protocol.org/latest/specification/",
       "summary": "The Agent2Agent (A2A) capability card — a JSON document at a well-known path advertising an agent's skills, endpoints, and auth so other agents can discover and call it. Backed by a real spec; adoption is growing but early.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json", "as": "agent.json", "source_label": "currency" },

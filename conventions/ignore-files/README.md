@@ -4,7 +4,7 @@
 
 - **Read by:** JetBrains Junie (.aiignore), Cursor (.cursorignore), Codeium/Windsurf (.codeiumignore)
 - **Location:** Repository root (gitignore-style glob syntax)
-- **Spec:** [https://www.jetbrains.com/help/junie/aiignore.html](https://www.jetbrains.com/help/junie/aiignore.html)
+- **Spec:** [https://cursor.com/docs/reference/ignore-file](https://cursor.com/docs/reference/ignore-file)
 - **Files:** `.aiignore`, `.cursorignore`, `.codeiumignore`
 
 ## Examples

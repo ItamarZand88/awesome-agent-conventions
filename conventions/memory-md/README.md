@@ -4,7 +4,7 @@
 
 - **Read by:** Claude Code's auto-memory, and agent frameworks that persist a memory index
 - **Location:** An agent-managed memory directory (e.g. .claude/.../memory/MEMORY.md)
-- **Spec:** [https://code.claude.com/docs](https://code.claude.com/docs)
+- **Spec:** [https://code.claude.com/docs/en/memory](https://code.claude.com/docs/en/memory)
 - **Files:** `MEMORY.md`
 
 ## Examples

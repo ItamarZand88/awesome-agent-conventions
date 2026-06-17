@@ -55,7 +55,12 @@ doubt, label down, not up.
    pip install -r scripts/requirements.txt
    python scripts/extract.py --only <your-slug>   # fetch + rebuild that page
    python scripts/build_readme.py                 # rebuild the root index
+   python scripts/check_links.py --only <your-slug>  # confirm your links resolve
    ```
+
+   CI runs the same link check plus an in-sync check (it regenerates and fails
+   if your committed output drifts from `targets.json`), so regenerate before
+   you push.
 
 4. **Write Field notes** in a `conventions/<slug>/field-notes.md` sidecar if you
    have real observations (composition, anti-patterns, edge cases). The extractor
