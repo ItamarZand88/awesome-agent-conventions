@@ -2,10 +2,10 @@
 <!-- Edit scripts/targets.json (or per-convention pages), then re-run the script. -->
 
 <p align="center">
-  <img src="assets/hero.png" alt="awesome-agent-conventions - the real files AI agents read, write, and act on" width="100%">
+  <img src="assets/hero.png" alt="Awesome Agent Conventions - convention files for AI agents" width="100%">
 </p>
 
-# awesome-agent-conventions
+# Awesome Agent Conventions
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
@@ -13,40 +13,23 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
 </p>
 
-**The files AI coding agents actually read - `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, `SKILL.md`, `llms.txt`, and more - collected in one place, with a real example of each.**
+**A curated field guide to the convention files AI agents read, write, and act on.**
 
-**21 conventions across 11 categories** - from the instruction files every coding agent reads to the discovery files the agent web is still inventing.
+**21 conventions across 11 categories.** From common project instruction files to newer agent-web discovery and trust formats.
 
-Every AI tool invented its own files for steering an agent: what to build and
-test, which rules to follow, what tools to connect, how to remember things
-between sessions. They're scattered across docs and easy to confuse. This repo
-gathers them in one place and answers three questions for each one:
+Agent tools increasingly rely on plain files in a repository or website root:
+instructions, memory, rules, tool connections, prompt assets, discovery
+metadata, and protocol hints. The names are easy to mix up, and the adoption
+levels vary a lot.
 
-- **What is it, and which agent reads it?** A one-line summary, the tools that
-  consume it, and where the file lives.
-- **What does a real one look like?** Every entry links a folder of actual
-  example files pulled from public repos by a script - so you copy a working
-  file, not a description of one.
-- **Should I trust it?** Each entry is labelled by how widely it's *actually*
-  adopted, so a proposed idea never sits beside a settled standard as its equal.
+This repo keeps the map practical:
 
-## What counts
-
-A file qualifies only if it is an **agent convention file**: it exists for an AI
-agent to **read, write, or act on**. Any extension - `.md`, `.txt`, `.prompty`,
-`.json`, dotfiles. Files written for humans (`README.md`, `CONTRIBUTING.md`,
-`SECURITY.md`, `CHANGELOG.md`) are **out**.
-
-## Maturity tiers
-
-Every entry carries one tier, with evidence. Honest labelling is the whole point -
-a proposed idea is never shown beside an adopted standard as if they were equal.
-
-| Badge | Tier | Meaning |
-| --- | --- | --- |
-| 🟢 | **Adopted** | In production across multiple tools or teams. |
-| 🟠 | **Emerging** | A real published spec from a real org, but early / limited adoption. |
-| 🔵 | **Proposed** | A published concept with no demonstrated adoption (often one author staking a namespace). |
+- **Know what a file is for.** Each entry names the convention, usual filename,
+  primary readers, and spec or source.
+- **Study real examples.** Examples are fetched from public repositories by
+  script, with provenance kept at the top of each file.
+- **Separate practice from proposal.** Maturity labels show what is widely used,
+  what is early, and what is still only proposed.
 
 ## Contents
 
@@ -82,6 +65,28 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
   - 🟠 [Agent Cards (A2A)](conventions/agent-cards/)
 - [Proposed namespace](#proposed-namespace) · [category page](categories/proposed-namespace.md)
   - 🔵 [The protocols.md namespace](conventions/protocols-md/)
+
+## What counts
+
+This list is intentionally narrow. A file belongs here when it is a convention
+for agent behavior or agent-readable metadata: instructions, memory, skills,
+rules, tool config, prompt assets, or web-discovery hints.
+
+Any file type can qualify - `.md`, `.txt`, `.prompty`, `.json`, dotfiles, or a
+directory pattern. Human-first project docs such as `README.md`,
+`CONTRIBUTING.md`, `SECURITY.md`, and `CHANGELOG.md` stay out unless the file has
+become an agent convention in its own right.
+
+## Maturity tiers
+
+The badge is a claim about adoption, not quality. It keeps a proven convention
+from being presented the same way as a new idea.
+
+| Badge | Tier | Meaning |
+| --- | --- | --- |
+| 🟢 | **Adopted** | Used in production by multiple tools, projects, or teams. |
+| 🟠 | **Emerging** | Published by a real organization, but still early or limited in adoption. |
+| 🔵 | **Proposed** | Publicly described, but without clear adoption beyond the proposal. |
 
 ## Instruction & context
 
@@ -213,13 +218,14 @@ Standalone page: [categories/proposed-namespace.md](categories/proposed-namespac
 
 - **[The protocols.md namespace](conventions/protocols-md/)** - A single maintainer's pre-registered namespace of ~74 aspirational .md "protocols" (proof.md, signature.md, reputation.md, …) staked as Schelling points for a future agent web. Published concept, no demonstrated adoption - see the page for the audited, honest caveats.
 
-## How the examples stay real
+## Maintaining examples
 
-Example files are never hand-written - an extractor fetches them from public
-sources and stamps each with a line-1 provenance comment. The examples remain
-under their upstream owners' licenses and terms; see
-[THIRD_PARTY_EXAMPLES.md](THIRD_PARTY_EXAMPLES.md) before reusing them. To
-refresh everything:
+Example files are fetched, not invented. The extractor pulls them from public
+sources and adds a line-1 provenance comment. The examples remain under their
+upstream owners' licenses and terms; see
+[THIRD_PARTY_EXAMPLES.md](THIRD_PARTY_EXAMPLES.md) before reusing them.
+
+To refresh everything:
 
 ```bash
 pip install -r scripts/requirements.txt
@@ -227,11 +233,11 @@ python scripts/extract.py          # fetch real files + rebuild each convention'
 python scripts/build_readme.py     # rebuild this README from scripts/targets.json
 ```
 
-Re-running is idempotent and never crashes on a missing source - a dead target
-just prints a `miss` and is skipped. Examples are representative samples: any
-file over 256 KB (e.g. a multi-MB `llms-full.txt`) is truncated with a marker
-pointing back to the full source. `scripts/targets.json` is the single source of
-truth; edit it and re-run both scripts.
+Re-running is idempotent. A missing target prints a `miss` and is skipped.
+Examples are representative samples: any file over 256 KB (for example, a
+multi-MB `llms-full.txt`) is truncated with a marker pointing back to the full
+source. `scripts/targets.json` is the single source of truth; edit it and re-run
+both scripts.
 
 Shortcut targets are available in the [Makefile](Makefile):
 
@@ -241,16 +247,17 @@ make extract         # refetch public examples and rebuild generated docs
 make license-report  # summarize upstream licenses for vendored examples
 ```
 
-Every link is held to its promise by CI: a [GitHub Action](.github/workflows/verify.yml)
-re-checks that the generated files are in sync with `targets.json` and that every
-spec, example, and instance URL still resolves - on each pull request and weekly.
-Run the same check locally with `python scripts/check_links.py`.
+CI keeps the generated files and links honest. The
+[verify workflow](.github/workflows/verify.yml) checks that generated docs match
+`targets.json` and that every spec, example, and instance URL still resolves on
+each pull request and weekly. Run the same link check locally with
+`python scripts/check_links.py`.
 
 ## Contributing
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md). In short: an entry must pass the filter
-above and carry an evidenced maturity tier. Add your source to
-`scripts/targets.json`, run the two scripts, and open a PR - don't hand-write
+above and carry evidence for its maturity tier. Add sources to
+`scripts/targets.json`, run the scripts, and open a PR. Do not hand-write
 example files.
 
 Before proposing adjacent standards, check [WATCHLIST.md](WATCHLIST.md). Project
