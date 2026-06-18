@@ -36,7 +36,8 @@ doubt, label down, not up.
 
 ## How to add or update an entry
 
-`scripts/targets.json` is the single source of truth. Everything else is generated.
+For conventions that have not moved to local metadata yet, `scripts/targets.json`
+is the source of truth. Everything else is generated.
 
 1. **Add the convention** to `conventions` in `scripts/targets.json` with its
    `name`, `category` (one of the declared `categories`), `maturity`, `files`,
@@ -80,6 +81,22 @@ doubt, label down, not up.
    prose plus sections such as `### Composition`, `### Anti-patterns`,
    `### Edge cases`, and `### Sources checked`); the H2 is added by the generator.
    This is where the collection earns its depth.
+
+## Convention-led metadata pilot
+
+`skill-md` is the first convention-led page. It keeps hand-curated convention
+metadata in `conventions/skill-md/convention.yml` and evidence/example metadata
+in `conventions/skill-md/sources.yml`. During the pilot, other conventions still
+use `scripts/targets.json`.
+
+For migrated conventions:
+
+- Put stable facts in `convention.yml`.
+- Put specs, docs, repos, and example fetch targets in `sources.yml`.
+- Keep interpretation, anti-patterns, and edge cases in `field-notes.md`.
+- Let `scripts/extract.py` regenerate the README and examples.
+
+Do not migrate another convention until the `skill-md` pilot has been reviewed.
 
 ## Examples vs. patterns
 

@@ -169,8 +169,9 @@ python scripts/build_readme.py     # rebuild this README from scripts/targets.js
 Re-running is idempotent. A missing target prints a `miss` and is skipped.
 Examples are representative samples: any file over 256 KB (for example, a
 multi-MB `llms-full.txt`) is truncated with a marker pointing back to the full
-source. `scripts/targets.json` is the single source of truth; edit it and re-run
-both scripts.
+source. `scripts/targets.json` remains the source of truth for conventions that
+have not been migrated yet; the `skill-md` pilot uses local convention metadata
+instead. Edit the relevant source and re-run both scripts.
 
 Shortcut targets are available in the [Makefile](Makefile):
 
@@ -191,8 +192,9 @@ CONTRIB = """## Contributing
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md). In short: an entry must pass the filter
 above and carry evidence for its maturity tier. Add sources to
-`scripts/targets.json`, run the scripts, and open a PR. Do not hand-write
-example files.
+`scripts/targets.json` for non-migrated conventions, run the scripts, and open
+a PR. The `skill-md` pilot uses local convention metadata instead. Do not
+hand-write example files.
 
 Before proposing adjacent standards, check [WATCHLIST.md](WATCHLIST.md). Project
 direction lives in [ROADMAP.md](ROADMAP.md), and the one-time public release
