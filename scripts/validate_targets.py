@@ -12,6 +12,7 @@ import sys
 from urllib.parse import urlparse
 
 import jsonschema
+from catalog import has_local_metadata, validate_local_metadata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGETS_PATH = os.path.join(ROOT, "scripts", "targets.json")
@@ -78,6 +79,8 @@ def main():
             errors.append(f"{slug}: unknown category {conv.get('category')!r}")
         if conv.get("maturity") not in MATURITIES:
             errors.append(f"{slug}: unknown maturity {conv.get('maturity')!r}")
+        if has_local_metadata(slug):
+            errors.extend(validate_local_metadata(slug, category_set))
 
         files = conv.get("files", [])
         names = [f.get("name") for f in files]
