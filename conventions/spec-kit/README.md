@@ -17,33 +17,33 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 Project principles and non-negotiable rules the agent honors across every feature.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `spec-kit` | [`examples/spec-kit/constitution.md`](examples/spec-kit/constitution.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/constitution-template.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `spec-kit` | [`github/spec-kit`](https://github.com/github/spec-kit) | [`examples/spec-kit/constitution.md`](examples/spec-kit/constitution.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/constitution-template.md) |
 
 ### `spec.md`
 
 The what and why of one feature - requirements and user stories, no implementation detail.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `spec-kit` | [`examples/spec-kit/spec.md`](examples/spec-kit/spec.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/spec-template.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `spec-kit` | [`github/spec-kit`](https://github.com/github/spec-kit) | [`examples/spec-kit/spec.md`](examples/spec-kit/spec.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/spec-template.md) |
 
 ### `plan.md`
 
 The technical approach, stack, and architecture for the spec.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `spec-kit` | [`examples/spec-kit/plan.md`](examples/spec-kit/plan.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/plan-template.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `spec-kit` | [`github/spec-kit`](https://github.com/github/spec-kit) | [`examples/spec-kit/plan.md`](examples/spec-kit/plan.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/plan-template.md) |
 
 ### `tasks.md`
 
 An ordered, reviewable task list generated from the plan.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `spec-kit` | [`examples/spec-kit/tasks.md`](examples/spec-kit/tasks.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/tasks-template.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `spec-kit` | [`github/spec-kit`](https://github.com/github/spec-kit) | [`examples/spec-kit/tasks.md`](examples/spec-kit/tasks.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/tasks-template.md) |
 
 ## Field notes
 

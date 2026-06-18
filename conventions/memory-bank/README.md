@@ -17,49 +17,49 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 Foundation doc - why the project exists, core requirements and goals.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `gitpod` | [`examples/gitpod/projectbrief.md`](examples/gitpod/projectbrief.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/projectbrief.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `gitpod` | [`gitpod-io/gitpod`](https://github.com/gitpod-io/gitpod) | [`examples/gitpod/projectbrief.md`](examples/gitpod/projectbrief.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/projectbrief.md) |
 
 ### `productContext.md`
 
 Problem space and the intended user experience.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `gitpod` | [`examples/gitpod/productContext.md`](examples/gitpod/productContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/productContext.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `gitpod` | [`gitpod-io/gitpod`](https://github.com/gitpod-io/gitpod) | [`examples/gitpod/productContext.md`](examples/gitpod/productContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/productContext.md) |
 
 ### `activeContext.md`
 
 Current focus, recent changes, next steps - the most frequently updated file.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `gitpod` | [`examples/gitpod/activeContext.md`](examples/gitpod/activeContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/activeContext.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `gitpod` | [`gitpod-io/gitpod`](https://github.com/gitpod-io/gitpod) | [`examples/gitpod/activeContext.md`](examples/gitpod/activeContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/activeContext.md) |
 
 ### `systemPatterns.md`
 
 Architecture, key technical decisions, and design patterns.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `gitpod` | [`examples/gitpod/systemPatterns.md`](examples/gitpod/systemPatterns.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/systemPatterns.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `gitpod` | [`gitpod-io/gitpod`](https://github.com/gitpod-io/gitpod) | [`examples/gitpod/systemPatterns.md`](examples/gitpod/systemPatterns.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/systemPatterns.md) |
 
 ### `techContext.md`
 
 Technologies, setup, constraints, and dependencies.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `gitpod` | [`examples/gitpod/techContext.md`](examples/gitpod/techContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/techContext.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `gitpod` | [`gitpod-io/gitpod`](https://github.com/gitpod-io/gitpod) | [`examples/gitpod/techContext.md`](examples/gitpod/techContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/techContext.md) |
 
 ### `progress.md`
 
 What works, what's left to build, and known issues.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `gitpod` | [`examples/gitpod/progress.md`](examples/gitpod/progress.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/progress.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `gitpod` | [`gitpod-io/gitpod`](https://github.com/gitpod-io/gitpod) | [`examples/gitpod/progress.md`](examples/gitpod/progress.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/progress.md) |
 
 ## Field notes
 

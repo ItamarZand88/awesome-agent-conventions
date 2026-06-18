@@ -17,11 +17,11 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 Any Markdown file under .claude/commands/; the filename is the command name (pr.md -> /pr). Optional YAML frontmatter: description, argument-hint, allowed-tools, model.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `claude-code` | [`examples/claude-code/commit-push-pr.md`](examples/claude-code/commit-push-pr.md) | [source](https://raw.githubusercontent.com/anthropics/claude-code/main/.claude/commands/commit-push-pr.md) |
-| `claude-code` | [`examples/claude-code/dedupe.md`](examples/claude-code/dedupe.md) | [source](https://raw.githubusercontent.com/anthropics/claude-code/main/.claude/commands/dedupe.md) |
-| `sentry` | [`examples/sentry/gh-pr.md`](examples/sentry/gh-pr.md) | [source](https://raw.githubusercontent.com/getsentry/sentry/master/.claude/commands/gh-pr.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `claude-code` | [`anthropics/claude-code`](https://github.com/anthropics/claude-code) | [`examples/claude-code/commit-push-pr.md`](examples/claude-code/commit-push-pr.md) | [source](https://raw.githubusercontent.com/anthropics/claude-code/main/.claude/commands/commit-push-pr.md) |
+| `claude-code` | [`anthropics/claude-code`](https://github.com/anthropics/claude-code) | [`examples/claude-code/dedupe.md`](examples/claude-code/dedupe.md) | [source](https://raw.githubusercontent.com/anthropics/claude-code/main/.claude/commands/dedupe.md) |
+| `sentry` | [`getsentry/sentry`](https://github.com/getsentry/sentry) | [`examples/sentry/gh-pr.md`](examples/sentry/gh-pr.md) | [source](https://raw.githubusercontent.com/getsentry/sentry/master/.claude/commands/gh-pr.md) |
 
 ## Field notes
 

@@ -17,10 +17,10 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 Project-scoped MCP servers. The same { "mcpServers": {...} } schema also appears as .vscode/mcp.json (VS Code / Copilot) and claude_desktop_config.json (Claude Desktop).
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `inspec-vscode` | [`examples/inspec-vscode/.mcp.json`](examples/inspec-vscode/.mcp.json) | [source](https://raw.githubusercontent.com/inspec/inspec/main/.vscode/mcp.json) |
-| `wp-calypso` | [`examples/wp-calypso/.mcp.json`](examples/wp-calypso/.mcp.json) | [source](https://raw.githubusercontent.com/Automattic/wp-calypso/trunk/.mcp.json) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `inspec-vscode` | [`inspec/inspec`](https://github.com/inspec/inspec) | [`examples/inspec-vscode/.mcp.json`](examples/inspec-vscode/.mcp.json) | [source](https://raw.githubusercontent.com/inspec/inspec/main/.vscode/mcp.json) |
+| `wp-calypso` | [`Automattic/wp-calypso`](https://github.com/Automattic/wp-calypso) | [`examples/wp-calypso/.mcp.json`](examples/wp-calypso/.mcp.json) | [source](https://raw.githubusercontent.com/Automattic/wp-calypso/trunk/.mcp.json) |
 
 ## Field notes
 

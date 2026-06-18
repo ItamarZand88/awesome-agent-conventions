@@ -49,7 +49,9 @@ doubt, label down, not up.
    to the domain or `owner-repo`) - useful when several examples come from one
    repo and should surface by what they are: the design.md entries pull from
    `VoltAgent/awesome-design-md` but label as `apple`, `claude`, `cursor`, `figma`.
-   Extracted files are stored as `conventions/<slug>/examples/<source>/<filename>`.
+   Extracted files are stored as `conventions/<slug>/examples/<source>/<filename>`;
+   generated example tables show both that local label and the upstream repo or
+   domain derived from the provenance URL.
 3. **Check the watchlist first** if the source is an adjacent protocol or draft
    rather than an already-deployed convention. [`WATCHLIST.md`](WATCHLIST.md)
    records ideas we are tracking but not ready to list.

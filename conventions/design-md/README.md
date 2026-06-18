@@ -15,12 +15,12 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 ### `DESIGN.md`
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `apple` | [`examples/apple/DESIGN.md`](examples/apple/DESIGN.md) | [source](https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/apple/DESIGN.md) |
-| `claude` | [`examples/claude/DESIGN.md`](examples/claude/DESIGN.md) | [source](https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/claude/DESIGN.md) |
-| `cursor` | [`examples/cursor/DESIGN.md`](examples/cursor/DESIGN.md) | [source](https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/cursor/DESIGN.md) |
-| `figma` | [`examples/figma/DESIGN.md`](examples/figma/DESIGN.md) | [source](https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/figma/DESIGN.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `apple` | [`VoltAgent/awesome-design-md`](https://github.com/VoltAgent/awesome-design-md) | [`examples/apple/DESIGN.md`](examples/apple/DESIGN.md) | [source](https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/apple/DESIGN.md) |
+| `claude` | [`VoltAgent/awesome-design-md`](https://github.com/VoltAgent/awesome-design-md) | [`examples/claude/DESIGN.md`](examples/claude/DESIGN.md) | [source](https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/claude/DESIGN.md) |
+| `cursor` | [`VoltAgent/awesome-design-md`](https://github.com/VoltAgent/awesome-design-md) | [`examples/cursor/DESIGN.md`](examples/cursor/DESIGN.md) | [source](https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/cursor/DESIGN.md) |
+| `figma` | [`VoltAgent/awesome-design-md`](https://github.com/VoltAgent/awesome-design-md) | [`examples/figma/DESIGN.md`](examples/figma/DESIGN.md) | [source](https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/figma/DESIGN.md) |
 
 ## Field notes
 

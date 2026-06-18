@@ -17,25 +17,25 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 What the product is and who it's for.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `spirit-of-kiro` | [`examples/spirit-of-kiro/product.md`](examples/spirit-of-kiro/product.md) | [source](https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/product.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `spirit-of-kiro` | [`kirodotdev/spirit-of-kiro`](https://github.com/kirodotdev/spirit-of-kiro) | [`examples/spirit-of-kiro/product.md`](examples/spirit-of-kiro/product.md) | [source](https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/product.md) |
 
 ### `structure.md`
 
 File organization and architectural conventions.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `spirit-of-kiro` | [`examples/spirit-of-kiro/structure.md`](examples/spirit-of-kiro/structure.md) | [source](https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/structure.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `spirit-of-kiro` | [`kirodotdev/spirit-of-kiro`](https://github.com/kirodotdev/spirit-of-kiro) | [`examples/spirit-of-kiro/structure.md`](examples/spirit-of-kiro/structure.md) | [source](https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/structure.md) |
 
 ### `tech.md`
 
 Allowed frameworks, libraries, and technical constraints.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `spirit-of-kiro` | [`examples/spirit-of-kiro/tech.md`](examples/spirit-of-kiro/tech.md) | [source](https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/tech.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `spirit-of-kiro` | [`kirodotdev/spirit-of-kiro`](https://github.com/kirodotdev/spirit-of-kiro) | [`examples/spirit-of-kiro/tech.md`](examples/spirit-of-kiro/tech.md) | [source](https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/tech.md) |
 
 ## Field notes
 

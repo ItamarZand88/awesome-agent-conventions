@@ -15,10 +15,10 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 ### `MEMORY.md`
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `learn-likecc` | [`examples/learn-likecc/MEMORY.md`](examples/learn-likecc/MEMORY.md) | [source](https://raw.githubusercontent.com/Harzva/learn-likecc/main/MEMORY.md) |
-| `soul.md` | [`examples/soul/MEMORY.md`](examples/soul/MEMORY.md) | [source](https://raw.githubusercontent.com/aaronjmars/soul.md/main/MEMORY.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `learn-likecc` | [`Harzva/learn-likecc`](https://github.com/Harzva/learn-likecc) | [`examples/learn-likecc/MEMORY.md`](examples/learn-likecc/MEMORY.md) | [source](https://raw.githubusercontent.com/Harzva/learn-likecc/main/MEMORY.md) |
+| `soul.md` | [`aaronjmars/soul.md`](https://github.com/aaronjmars/soul.md) | [`examples/soul/MEMORY.md`](examples/soul/MEMORY.md) | [source](https://raw.githubusercontent.com/aaronjmars/soul.md/main/MEMORY.md) |
 
 ## Field notes
 

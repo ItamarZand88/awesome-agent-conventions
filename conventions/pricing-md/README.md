@@ -15,11 +15,11 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 ### `pricing.md`
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `auth0.com` | [`examples/auth0/pricing.md`](examples/auth0/pricing.md) | [source](https://auth0.com/pricing.md) |
-| `resend.com` | [`examples/resend/pricing.md`](examples/resend/pricing.md) | [source](https://resend.com/pricing.md) |
-| `workos.com` | [`examples/workos/pricing.md`](examples/workos/pricing.md) | [source](https://workos.com/pricing.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `auth0.com` | [`auth0.com`](https://auth0.com) | [`examples/auth0/pricing.md`](examples/auth0/pricing.md) | [source](https://auth0.com/pricing.md) |
+| `resend.com` | [`resend.com`](https://resend.com) | [`examples/resend/pricing.md`](examples/resend/pricing.md) | [source](https://resend.com/pricing.md) |
+| `workos.com` | [`workos.com`](https://workos.com) | [`examples/workos/pricing.md`](examples/workos/pricing.md) | [source](https://workos.com/pricing.md) |
 
 ## Field notes
 

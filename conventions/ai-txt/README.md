@@ -15,9 +15,9 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 ### `ai.txt`
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `openverse` | [`examples/openverse/ai.txt`](examples/openverse/ai.txt) | [source](https://raw.githubusercontent.com/WordPress/openverse/main/frontend/src/static/ai.txt) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `openverse` | [`WordPress/openverse`](https://github.com/WordPress/openverse) | [`examples/openverse/ai.txt`](examples/openverse/ai.txt) | [source](https://raw.githubusercontent.com/WordPress/openverse/main/frontend/src/static/ai.txt) |
 
 ## Field notes
 

@@ -17,49 +17,49 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 Google Gemini CLI.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `gemini-cli` | [`examples/gemini-cli/GEMINI.md`](examples/gemini-cli/GEMINI.md) | [source](https://raw.githubusercontent.com/google-gemini/gemini-cli/main/GEMINI.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `gemini-cli` | [`google-gemini/gemini-cli`](https://github.com/google-gemini/gemini-cli) | [`examples/gemini-cli/GEMINI.md`](examples/gemini-cli/GEMINI.md) | [source](https://raw.githubusercontent.com/google-gemini/gemini-cli/main/GEMINI.md) |
 
 ### `AGENT.md`
 
 Amp (Sourcegraph) - legacy singular form; Amp now reads AGENTS.md (plural).
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `dagger` | [`examples/dagger/AGENT.md`](examples/dagger/AGENT.md) | [source](https://raw.githubusercontent.com/dagger/container-use/main/AGENT.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `dagger` | [`dagger/container-use`](https://github.com/dagger/container-use) | [`examples/dagger/AGENT.md`](examples/dagger/AGENT.md) | [source](https://raw.githubusercontent.com/dagger/container-use/main/AGENT.md) |
 
 ### `QWEN.md`
 
 Qwen Code.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `qwen-code` | [`examples/qwen-code/QWEN.md`](examples/qwen-code/QWEN.md) | [source](https://raw.githubusercontent.com/QwenLM/qwen-code/main/packages/cli/src/commands/extensions/examples/context/QWEN.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `qwen-code` | [`QwenLM/qwen-code`](https://github.com/QwenLM/qwen-code) | [`examples/qwen-code/QWEN.md`](examples/qwen-code/QWEN.md) | [source](https://raw.githubusercontent.com/QwenLM/qwen-code/main/packages/cli/src/commands/extensions/examples/context/QWEN.md) |
 
 ### `WARP.md`
 
 Warp terminal - backwards-compatible with project rules; Warp now defaults new projects to AGENTS.md, but WARP.md still takes same-directory priority.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `warp` | [`examples/warp/WARP.md`](examples/warp/WARP.md) | [source](https://raw.githubusercontent.com/warpdotdev/warp/master/WARP.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `warp` | [`warpdotdev/warp`](https://github.com/warpdotdev/warp) | [`examples/warp/WARP.md`](examples/warp/WARP.md) | [source](https://raw.githubusercontent.com/warpdotdev/warp/master/WARP.md) |
 
 ### `CONVENTIONS.md`
 
 Aider.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `aider` | [`examples/aider/CONVENTIONS.md`](examples/aider/CONVENTIONS.md) | [source](https://raw.githubusercontent.com/Aider-AI/conventions/main/golang/CONVENTIONS.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `aider` | [`Aider-AI/conventions`](https://github.com/Aider-AI/conventions) | [`examples/aider/CONVENTIONS.md`](examples/aider/CONVENTIONS.md) | [source](https://raw.githubusercontent.com/Aider-AI/conventions/main/golang/CONVENTIONS.md) |
 
 ### `copilot-instructions.md`
 
 GitHub Copilot (lives under .github/).
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `vscode` | [`examples/vscode/copilot-instructions.md`](examples/vscode/copilot-instructions.md) | [source](https://raw.githubusercontent.com/microsoft/vscode/main/.github/copilot-instructions.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `vscode` | [`microsoft/vscode`](https://github.com/microsoft/vscode) | [`examples/vscode/copilot-instructions.md`](examples/vscode/copilot-instructions.md) | [source](https://raw.githubusercontent.com/microsoft/vscode/main/.github/copilot-instructions.md) |
 
 ## Field notes
 

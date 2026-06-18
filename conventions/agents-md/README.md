@@ -15,10 +15,10 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 ### `AGENTS.md`
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `airflow` | [`examples/airflow/AGENTS.md`](examples/airflow/AGENTS.md) | [source](https://raw.githubusercontent.com/apache/airflow/main/AGENTS.md) |
-| `codex` | [`examples/codex/AGENTS.md`](examples/codex/AGENTS.md) | [source](https://raw.githubusercontent.com/openai/codex/main/AGENTS.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `airflow` | [`apache/airflow`](https://github.com/apache/airflow) | [`examples/airflow/AGENTS.md`](examples/airflow/AGENTS.md) | [source](https://raw.githubusercontent.com/apache/airflow/main/AGENTS.md) |
+| `codex` | [`openai/codex`](https://github.com/openai/codex) | [`examples/codex/AGENTS.md`](examples/codex/AGENTS.md) | [source](https://raw.githubusercontent.com/openai/codex/main/AGENTS.md) |
 
 ## Field notes
 

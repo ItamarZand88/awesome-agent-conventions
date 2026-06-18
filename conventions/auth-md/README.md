@@ -15,9 +15,9 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 ### `auth.md`
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `workos.com` | [`examples/workos/auth.md`](examples/workos/auth.md) | [source](https://workos.com/auth.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `workos.com` | [`workos.com`](https://workos.com) | [`examples/workos/auth.md`](examples/workos/auth.md) | [source](https://workos.com/auth.md) |
 
 ## Field notes
 

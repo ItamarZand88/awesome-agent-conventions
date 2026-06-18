@@ -17,10 +17,10 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 Current A2A well-known Agent Card filename.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `air-ticketing` | [`examples/air-ticketing/agent-card.json`](examples/air-ticketing/agent-card.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/air_ticketing_agent.json) |
-| `currency` | [`examples/currency/agent-card.json`](examples/currency/agent-card.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `air-ticketing` | [`a2aproject/a2a-samples`](https://github.com/a2aproject/a2a-samples) | [`examples/air-ticketing/agent-card.json`](examples/air-ticketing/agent-card.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/air_ticketing_agent.json) |
+| `currency` | [`a2aproject/a2a-samples`](https://github.com/a2aproject/a2a-samples) | [`examples/currency/agent-card.json`](examples/currency/agent-card.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json) |
 
 ### `agent.json`
 

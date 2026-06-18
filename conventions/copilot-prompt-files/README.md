@@ -17,17 +17,17 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 Invokable saved prompts under .github/prompts/, run as a slash-command.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `playwright-movies` | [`examples/playwright-movies/generate.prompt.md`](examples/playwright-movies/generate.prompt.md) | [source](https://raw.githubusercontent.com/debs-obrien/playwright-movies-app/main/.github/prompts/generate.prompt.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `playwright-movies` | [`debs-obrien/playwright-movies-app`](https://github.com/debs-obrien/playwright-movies-app) | [`examples/playwright-movies/generate.prompt.md`](examples/playwright-movies/generate.prompt.md) | [source](https://raw.githubusercontent.com/debs-obrien/playwright-movies-app/main/.github/prompts/generate.prompt.md) |
 
 ### `.instructions.md`
 
 Auto-attached instructions under .github/instructions/, scoped by an applyTo glob in frontmatter.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `awesome-copilot` | [`examples/awesome-copilot/a11y.instructions.md`](examples/awesome-copilot/a11y.instructions.md) | [source](https://raw.githubusercontent.com/github/awesome-copilot/main/instructions/a11y.instructions.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `awesome-copilot` | [`github/awesome-copilot`](https://github.com/github/awesome-copilot) | [`examples/awesome-copilot/a11y.instructions.md`](examples/awesome-copilot/a11y.instructions.md) | [source](https://raw.githubusercontent.com/github/awesome-copilot/main/instructions/a11y.instructions.md) |
 
 ## Field notes
 

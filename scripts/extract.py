@@ -203,6 +203,26 @@ def read_provenance(path):
     return os.path.basename(path), None
 
 
+def upstream_link(url):
+    if not url:
+        return "-"
+    parsed = urlparse(url)
+    host = parsed.netloc
+    parts = [p for p in parsed.path.split("/") if p]
+
+    if host == "raw.githubusercontent.com" and len(parts) >= 2:
+        owner, repo = parts[0], parts[1]
+        return f"[`{owner}/{repo}`](https://github.com/{owner}/{repo})"
+    if host == "github.com" and len(parts) >= 2:
+        owner, repo = parts[0], parts[1]
+        return f"[`{owner}/{repo}`](https://github.com/{owner}/{repo})"
+    if host:
+        label = host.removeprefix("www.")
+        scheme = parsed.scheme or "https"
+        return f"[`{label}`]({scheme}://{host})"
+    return "-"
+
+
 def examples_for(examples_dir, filename):
     """Match nested examples to a declared file.
 
@@ -300,13 +320,15 @@ def rebuild_convention_readme(slug, conv):
             continue
         matches = examples_for(examples_dir, fname)
         if matches:
-            out.append("| Source | File | Provenance |")
-            out.append("| --- | --- | --- |")
+            out.append("| Example | Upstream | File | Exact source |")
+            out.append("| --- | --- | --- | --- |")
             for m in matches:
                 rel = os.path.relpath(m, slug_dir)
                 label, url = read_provenance(m)
-                prov = f"[source]({url})" if url else "-"
-                out.append(f"| `{label}` | [`{rel}`]({rel}) | {prov} |")
+                exact = f"[source]({url})" if url else "-"
+                out.append(
+                    f"| `{label}` | {upstream_link(url)} | [`{rel}`]({rel}) | {exact} |"
+                )
         else:
             out.append(
                 "_No example captured yet - add a target in "

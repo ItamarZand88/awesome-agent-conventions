@@ -17,10 +17,10 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 Curated index: short description plus linked sections of the key docs.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `docs.anthropic.com` | [`examples/docs-anthropic/llms.txt`](examples/docs-anthropic/llms.txt) | [source](https://docs.anthropic.com/llms.txt) |
-| `docs.stripe.com` | [`examples/docs-stripe/llms.txt`](examples/docs-stripe/llms.txt) | [source](https://docs.stripe.com/llms.txt) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `docs.anthropic.com` | [`docs.anthropic.com`](https://docs.anthropic.com) | [`examples/docs-anthropic/llms.txt`](examples/docs-anthropic/llms.txt) | [source](https://docs.anthropic.com/llms.txt) |
+| `docs.stripe.com` | [`docs.stripe.com`](https://docs.stripe.com) | [`examples/docs-stripe/llms.txt`](examples/docs-stripe/llms.txt) | [source](https://docs.stripe.com/llms.txt) |
 
 ### `llms-full.txt`
 

@@ -15,10 +15,10 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 ### `SKILL.md`
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `mcp-builder` | [`examples/mcp-builder/SKILL.md`](examples/mcp-builder/SKILL.md) | [source](https://raw.githubusercontent.com/anthropics/skills/main/skills/mcp-builder/SKILL.md) |
-| `pdf` | [`examples/pdf/SKILL.md`](examples/pdf/SKILL.md) | [source](https://raw.githubusercontent.com/anthropics/skills/main/skills/pdf/SKILL.md) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `mcp-builder` | [`anthropics/skills`](https://github.com/anthropics/skills) | [`examples/mcp-builder/SKILL.md`](examples/mcp-builder/SKILL.md) | [source](https://raw.githubusercontent.com/anthropics/skills/main/skills/mcp-builder/SKILL.md) |
+| `pdf` | [`anthropics/skills`](https://github.com/anthropics/skills) | [`examples/pdf/SKILL.md`](examples/pdf/SKILL.md) | [source](https://raw.githubusercontent.com/anthropics/skills/main/skills/pdf/SKILL.md) |
 
 ## Field notes
 

@@ -17,25 +17,25 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 Cursor - legacy single-file form (superseded by .cursor/rules/*.mdc).
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `devin` | [`examples/devin/.cursorrules`](examples/devin/.cursorrules) | [source](https://raw.githubusercontent.com/grapeot/devin.cursorrules/master/.cursorrules) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `devin` | [`grapeot/devin.cursorrules`](https://github.com/grapeot/devin.cursorrules) | [`examples/devin/.cursorrules`](examples/devin/.cursorrules) | [source](https://raw.githubusercontent.com/grapeot/devin.cursorrules/master/.cursorrules) |
 
 ### `.mdc`
 
 Cursor - modern rule file with frontmatter and glob scoping, under .cursor/rules/.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `awesome-cursorrules` | [`examples/awesome-cursorrules/angular-typescript-cursorrules-prompt-file.mdc`](examples/awesome-cursorrules/angular-typescript-cursorrules-prompt-file.mdc) | [source](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/angular-typescript-cursorrules-prompt-file.mdc) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `awesome-cursorrules` | [`PatrickJS/awesome-cursorrules`](https://github.com/PatrickJS/awesome-cursorrules) | [`examples/awesome-cursorrules/angular-typescript-cursorrules-prompt-file.mdc`](examples/awesome-cursorrules/angular-typescript-cursorrules-prompt-file.mdc) | [source](https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/angular-typescript-cursorrules-prompt-file.mdc) |
 
 ### `.clinerules`
 
 Cline - legacy single-file form, still detected.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `raycast` | [`examples/raycast/.clinerules`](examples/raycast/.clinerules) | [source](https://raw.githubusercontent.com/raycast/extensions/main/extensions/1bookmark/.clinerules) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `raycast` | [`raycast/extensions`](https://github.com/raycast/extensions) | [`examples/raycast/.clinerules`](examples/raycast/.clinerules) | [source](https://raw.githubusercontent.com/raycast/extensions/main/extensions/1bookmark/.clinerules) |
 
 ### `.clinerules/`
 
@@ -54,9 +54,9 @@ Live instances (fetch directly - too large or instance-specific to vendor):
 
 Windsurf - project rules.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `snyk` | [`examples/snyk/.windsurfrules`](examples/snyk/.windsurfrules) | [source](https://raw.githubusercontent.com/snyk/vscode-extension/main/.windsurfrules) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `snyk` | [`snyk/vscode-extension`](https://github.com/snyk/vscode-extension) | [`examples/snyk/.windsurfrules`](examples/snyk/.windsurfrules) | [source](https://raw.githubusercontent.com/snyk/vscode-extension/main/.windsurfrules) |
 
 ## Field notes
 

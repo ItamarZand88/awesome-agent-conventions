@@ -17,26 +17,26 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 JetBrains Junie / AI Assistant.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `ag-grid` | [`examples/ag-grid/.aiignore`](examples/ag-grid/.aiignore) | [source](https://raw.githubusercontent.com/ag-grid/ag-grid/latest/.rulesync/.aiignore) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `ag-grid` | [`ag-grid/ag-grid`](https://github.com/ag-grid/ag-grid) | [`examples/ag-grid/.aiignore`](examples/ag-grid/.aiignore) | [source](https://raw.githubusercontent.com/ag-grid/ag-grid/latest/.rulesync/.aiignore) |
 
 ### `.cursorignore`
 
 Cursor.
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `api-console` | [`examples/api-console/.cursorignore`](examples/api-console/.cursorignore) | [source](https://raw.githubusercontent.com/mulesoft/api-console/master/.cursorignore) |
-| `holochain` | [`examples/holochain/.cursorignore`](examples/holochain/.cursorignore) | [source](https://raw.githubusercontent.com/holochain/holochain/develop/.cursorignore) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `api-console` | [`mulesoft/api-console`](https://github.com/mulesoft/api-console) | [`examples/api-console/.cursorignore`](examples/api-console/.cursorignore) | [source](https://raw.githubusercontent.com/mulesoft/api-console/master/.cursorignore) |
+| `holochain` | [`holochain/holochain`](https://github.com/holochain/holochain) | [`examples/holochain/.cursorignore`](examples/holochain/.cursorignore) | [source](https://raw.githubusercontent.com/holochain/holochain/develop/.cursorignore) |
 
 ### `.codeiumignore`
 
 Codeium (now Windsurf).
 
-| Source | File | Provenance |
-| --- | --- | --- |
-| `wikimedia` | [`examples/wikimedia/.codeiumignore`](examples/wikimedia/.codeiumignore) | [source](https://raw.githubusercontent.com/wikimedia/wikimedia-fundraising-dev/master/.codeiumignore) |
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `wikimedia` | [`wikimedia/wikimedia-fundraising-dev`](https://github.com/wikimedia/wikimedia-fundraising-dev) | [`examples/wikimedia/.codeiumignore`](examples/wikimedia/.codeiumignore) | [source](https://raw.githubusercontent.com/wikimedia/wikimedia-fundraising-dev/master/.codeiumignore) |
 
 ## Field notes
 
