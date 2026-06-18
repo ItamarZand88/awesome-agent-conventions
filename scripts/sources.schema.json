@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ItamarZand88/awesome-agent-conventions/blob/main/scripts/sources.schema.json",
+  "title": "awesome-agent-conventions local sources metadata",
+  "type": "object",
+  "required": ["slug", "research", "examples"],
+  "additionalProperties": false,
+  "properties": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "research": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["label", "url", "type", "why"],
+        "additionalProperties": false,
+        "properties": {
+          "label": { "type": "string", "minLength": 1 },
+          "url": { "type": "string", "format": "uri" },
+          "type": { "enum": ["spec", "docs", "repo", "example", "article"] },
+          "why": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "represents",
+          "upstream",
+          "url",
+          "filename"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "label": { "type": "string", "minLength": 1 },
+          "represents": { "type": "string", "minLength": 1 },
+          "upstream": {
+            "type": "object",
+            "required": ["label", "url"],
+            "additionalProperties": false,
+            "properties": {
+              "label": { "type": "string", "minLength": 1 },
+              "url": { "type": "string", "format": "uri" }
+            }
+          },
+          "url": { "type": "string", "format": "uri" },
+          "filename": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}
