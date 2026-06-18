@@ -41,6 +41,20 @@ def load_local_metadata(slug):
     return load_yaml(convention_path), load_yaml(sources_path)
 
 
+def local_targets(sources):
+    targets = []
+    for example in sources.get("examples", []):
+        targets.append(
+            {
+                "type": "web",
+                "url": example["url"],
+                "as": example["filename"],
+                "source_label": example["label"],
+            }
+        )
+    return targets
+
+
 def _schema_errors(schema_path, data):
     schema = load_json(schema_path)
     validator = jsonschema.Draft202012Validator(

@@ -23,6 +23,8 @@ import re
 import sys
 from urllib.parse import urlparse
 
+from catalog import has_local_metadata, load_local_metadata, local_targets
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGETS_PATH = os.path.join(ROOT, "scripts", "targets.json")
 CONVENTIONS_DIR = os.path.join(ROOT, "conventions")
@@ -369,11 +371,133 @@ def rebuild_convention_readme(slug, conv):
     print(f"  readme: {os.path.relpath(readme_path, ROOT)}")
 
 
+def markdown_list(items):
+    return "\n".join(f"- {item}" for item in items)
+
+
+def rebuild_local_convention_readme(slug, convention, sources):
+    slug_dir = os.path.join(CONVENTIONS_DIR, slug)
+    examples_dir = os.path.join(slug_dir, "examples")
+    badge = BADGES.get(convention["maturity"], convention["maturity"])
+    out = []
+
+    out.append(f"# {convention['name']} {badge}")
+    out.append("")
+    out.append(f"> {convention['summary']}")
+    out.append("")
+    out.append("## What it is")
+    out.append("")
+    out.append(convention["purpose"])
+    out.append("")
+    out.append("## Who reads or writes it")
+    out.append("")
+    out.append("**Readers:**")
+    out.append("")
+    out.append(markdown_list(convention["readers"]))
+    if convention.get("writers"):
+        out.append("")
+        out.append("**Writers:**")
+        out.append("")
+        out.append(markdown_list(convention["writers"]))
+    out.append("")
+    out.append("## Where it lives")
+    out.append("")
+    for item in convention["locations"]:
+        out.append(f"- `{item['path']}` - {item['description']}")
+    if convention.get("loading"):
+        out.append("")
+        out.append("## Loading rules")
+        out.append("")
+        out.append(markdown_list(convention["loading"]))
+    out.append("")
+    out.append("## File shape")
+    out.append("")
+    out.append("| Part | Required | Meaning |")
+    out.append("| --- | --- | --- |")
+    for item in convention.get("shape", []):
+        req = "yes" if item.get("required") else "no"
+        out.append(f"| `{item['name']}` | {req} | {item['description']} |")
+    out.append("")
+    out.append("## Operational principles")
+    out.append("")
+    out.append(markdown_list(convention["principles"]))
+    if convention.get("related"):
+        out.append("")
+        out.append("## Interoperability")
+        out.append("")
+        for item in convention["related"]:
+            out.append(f"- [`{item['slug']}`](../{item['slug']}/) - {item['relationship']}")
+    out.append("")
+    out.append("## Field notes")
+    out.append("")
+    notes_path = os.path.join(slug_dir, "field-notes.md")
+    with open(notes_path, encoding="utf-8") as fh:
+        out.append(fh.read().strip("\n"))
+    out.append("")
+    out.append("## Evidence and sources")
+    out.append("")
+    out.append("| Source | Type | Why it matters |")
+    out.append("| --- | --- | --- |")
+    for item in sources["research"]:
+        out.append(f"| [{item['label']}]({item['url']}) | `{item['type']}` | {item['why']} |")
+    out.append("")
+    out.append("## Examples")
+    out.append("")
+    out.append(
+        "_Examples are curated evidence for the convention. They are fetched by "
+        "[`scripts/extract.py`](../../scripts/extract.py) and keep line-1 provenance._"
+    )
+    out.append("")
+    if sources.get("examples"):
+        out.append("| Example | Represents | Upstream | File | Exact source |")
+        out.append("| --- | --- | --- | --- | --- |")
+        for example in sources["examples"]:
+            local_path = os.path.join(
+                "examples",
+                source_dirname(example["label"]),
+                example["filename"],
+            )
+            out.append(
+                f"| `{example['label']}` | {example['represents']} | "
+                f"[`{example['upstream']['label']}`]({example['upstream']['url']}) | "
+                f"[`{local_path}`]({local_path}) | [source]({example['url']}) |"
+            )
+    else:
+        out.append("_No examples are currently vendored for this convention._")
+    out.append("")
+
+    readme_path = os.path.join(slug_dir, "README.md")
+    with open(readme_path, "w", encoding="utf-8") as fh:
+        fh.write("\n".join(out))
+    print(f"  readme: {os.path.relpath(readme_path, ROOT)}")
+
+
 # --- per-convention pipeline -----------------------------------------------
 
 def process_convention(slug, conv, index_only):
     slug_dir = os.path.join(CONVENTIONS_DIR, slug)
     examples_dir = os.path.join(slug_dir, "examples")
+    local_convention = None
+    local_sources = None
+    if has_local_metadata(slug):
+        local_convention, local_sources = load_local_metadata(slug)
+        conv = {
+            **conv,
+            "name": local_convention["name"],
+            "category": local_convention["category"],
+            "maturity": local_convention["maturity"],
+            "summary": local_convention["summary"],
+            "read_by": ", ".join(local_convention["readers"]),
+            "location": "; ".join(
+                f"{item['path']} - {item['description']}"
+                for item in local_convention["locations"]
+            ),
+            "files": [
+                {"name": item["name"], "note": item["description"]}
+                for item in local_convention["files"]
+            ],
+            "targets": local_targets(local_sources),
+        }
 
     if not index_only:
         os.makedirs(examples_dir, exist_ok=True)
@@ -414,7 +538,10 @@ def process_convention(slug, conv, index_only):
                 msg += f"  (truncated {full_len} → {MAX_EXAMPLE_BYTES} bytes)"
             print(msg)
 
-    rebuild_convention_readme(slug, conv)
+    if local_convention and local_sources:
+        rebuild_local_convention_readme(slug, local_convention, local_sources)
+    else:
+        rebuild_convention_readme(slug, conv)
 
 
 def main():

@@ -1,24 +1,61 @@
 # SKILL.md 🟢 Adopted
 
-> A self-contained, model-invoked capability: YAML frontmatter (name + description) tells the agent when to load it; the body teaches it how. Progressive disclosure keeps it cheap until needed.
+> A self-contained, model-invoked capability file that tells an agent when to load a reusable procedure and how to execute it.
 
-- **Read by:** Claude (Agent Skills), Claude Code, and the open Agent Skills ecosystem
-- **Location:** A skill directory: <skill-name>/SKILL.md (plus bundled scripts and resources)
-- **Spec:** [https://agentskills.io](https://agentskills.io)
-- **Evidence:** Agent Skills documentation and public skill repositories define SKILL.md as the load-on-demand capability manifest.
-- **Last verified:** 2026-06-18
-- **Files:** `SKILL.md`
+## What it is
 
-## Examples
+SKILL.md lets an agent keep specialized workflows, scripts, references, and resources out of the main context until the model or user needs that capability.
 
-_Every file below was fetched from a public source by [`scripts/extract.py`](../../scripts/extract.py) - none are hand-written._
+## Who reads or writes it
 
-### `SKILL.md`
+**Readers:**
 
-| Example | Upstream | File | Exact source |
-| --- | --- | --- | --- |
-| `mcp-builder` | [`anthropics/skills`](https://github.com/anthropics/skills) | [`examples/mcp-builder/SKILL.md`](examples/mcp-builder/SKILL.md) | [source](https://raw.githubusercontent.com/anthropics/skills/main/skills/mcp-builder/SKILL.md) |
-| `pdf` | [`anthropics/skills`](https://github.com/anthropics/skills) | [`examples/pdf/SKILL.md`](examples/pdf/SKILL.md) | [source](https://raw.githubusercontent.com/anthropics/skills/main/skills/pdf/SKILL.md) |
+- Claude Agent Skills
+- Claude Code
+- Amp
+- Agent Skills-compatible tools
+
+**Writers:**
+
+- Tool authors
+- Product teams packaging agent capabilities
+- Developers turning repeated agent workflows into reusable capabilities
+
+## Where it lives
+
+- `<skill-name>/SKILL.md` - Portable Agent Skills directory format; bundled scripts and resources live beside the manifest.
+- `.claude/skills/<skill-name>/SKILL.md` - Claude Code project skill location.
+- `~/.claude/skills/<skill-name>/SKILL.md` - Claude Code user skill location.
+
+## Loading rules
+
+- The skill name and description are listed up front; the body and bundled files are loaded only when the skill is relevant.
+- The open specification requires name and description frontmatter; product-specific runtimes may add optional fields.
+- Keep the description precise because it is the activation signal.
+
+## File shape
+
+| Part | Required | Meaning |
+| --- | --- | --- |
+| `name` | yes | Lowercase skill identifier; in the open spec it must match the parent directory. |
+| `description` | yes | Activation text that states what the skill does and when to use it. |
+| `body` | yes | Procedural instructions, references to bundled resources, and workflow steps. |
+| `bundled files` | no | Optional scripts, references, templates, and assets loaded only after the skill is activated. |
+
+## Operational principles
+
+- Use SKILL.md for repeatable capabilities, not standing project context.
+- Put activation criteria in the description, not buried in the body.
+- Keep the body procedural and move bulky reference material into bundled files.
+- Prefer portable open-spec fields unless a runtime-specific extension is necessary.
+- Treat examples as capability packages, not as the definition of the convention.
+
+## Interoperability
+
+- [`claude-commands`](../claude-commands/) - Claude commands are legacy or direct-invocation workflows; SKILL.md is better when a capability needs resources, scripts, references, or model-invoked activation.
+- [`agents-md`](../agents-md/) - AGENTS.md carries standing project instructions; SKILL.md carries reusable procedures.
+- [`claude-md`](../claude-md/) - CLAUDE.md is project memory loaded into context; SKILL.md is loaded on demand.
+- [`prompt-assets`](../prompt-assets/) - Prompt assets externalize prompts; SKILL.md packages a broader operational capability around instructions and resources.
 
 ## Field notes
 
@@ -64,3 +101,22 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 - [Anthropic Agent Skills overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)
 - [Claude Code skills docs](https://code.claude.com/docs/en/slash-commands)
 - [Amp skill format docs](https://ampcode.com/manual)
+
+## Evidence and sources
+
+| Source | Type | Why it matters |
+| --- | --- | --- |
+| [Agent Skills specification](https://agentskills.io/specification) | `spec` | Defines the portable SKILL.md contract, required frontmatter, and packaging model. |
+| [Anthropic Agent Skills overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) | `docs` | Documents Anthropic product support and how skills are used by Claude. |
+| [Claude Code skills and commands docs](https://code.claude.com/docs/en/slash-commands) | `docs` | Captures Claude Code's command-to-skill convergence and runtime extensions. |
+| [Amp manual](https://ampcode.com/manual) | `docs` | Shows another implementation using skills and runtime-specific skill metadata. |
+| [anthropics/skills](https://github.com/anthropics/skills) | `repo` | Provides maintained public examples of complete skill packages. |
+
+## Examples
+
+_Examples are curated evidence for the convention. They are fetched by [`scripts/extract.py`](../../scripts/extract.py) and keep line-1 provenance._
+
+| Example | Represents | Upstream | File | Exact source |
+| --- | --- | --- | --- | --- |
+| `mcp-builder` | A procedure-heavy skill with a precise activation description and implementation workflow. | [`anthropics/skills`](https://github.com/anthropics/skills) | [`examples/mcp-builder/SKILL.md`](examples/mcp-builder/SKILL.md) | [source](https://raw.githubusercontent.com/anthropics/skills/main/skills/mcp-builder/SKILL.md) |
+| `pdf` | A skill that relies on bundled tooling and domain-specific operational guidance. | [`anthropics/skills`](https://github.com/anthropics/skills) | [`examples/pdf/SKILL.md`](examples/pdf/SKILL.md) | [source](https://raw.githubusercontent.com/anthropics/skills/main/skills/pdf/SKILL.md) |
