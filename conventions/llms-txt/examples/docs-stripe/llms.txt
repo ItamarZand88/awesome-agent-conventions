@@ -73,7 +73,7 @@ Build a low-code payment form and embed it on your site or host it on Stripe. Ch
 - [Limit customers to one subscription](https://docs.stripe.com/payments/checkout/limit-subscriptions.md): Direct customers to manage their subscription when they already have one.
 - [Cross-sells](https://docs.stripe.com/payments/checkout/cross-sells.md): Enable customers to purchase complementary products at checkout by using cross-sells.
 - [Overview](https://docs.stripe.com/products-prices/overview.md): Model your business on Stripe with products and prices.
-- [Subscriptions](https://docs.stripe.com/payments/subscriptions.md): Create subscriptions for your customers.
+- [Subscriptions with Checkout Sessions](https://docs.stripe.com/payments/subscriptions.md): Create subscriptions for your customers with the Checkout Sessions API.
 - [Charge for shipping](https://docs.stripe.com/payments/during-payment/charge-shipping.md): Create different shipping rates for your customers.
 - [Collect taxes](https://docs.stripe.com/payments/checkout/taxes.md): Learn how to collect taxes with Stripe Tax.
 - [Manage payment methods](https://docs.stripe.com/payments/checkout/payment-methods.md): Use dynamic payment methods or manually define the payment methods to allow per checkout session.

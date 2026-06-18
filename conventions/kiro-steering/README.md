@@ -19,7 +19,7 @@ What the product is and who it's for.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `spirit-of-kiro` | [`spirit-of-kiro.product.md`](examples/spirit-of-kiro.product.md) | [source](https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/product.md) |
+| `spirit-of-kiro` | [`examples/spirit-of-kiro/product.md`](examples/spirit-of-kiro/product.md) | [source](https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/product.md) |
 
 ### `structure.md`
 
@@ -27,7 +27,7 @@ File organization and architectural conventions.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `spirit-of-kiro` | [`spirit-of-kiro.structure.md`](examples/spirit-of-kiro.structure.md) | [source](https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/structure.md) |
+| `spirit-of-kiro` | [`examples/spirit-of-kiro/structure.md`](examples/spirit-of-kiro/structure.md) | [source](https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/structure.md) |
 
 ### `tech.md`
 
@@ -35,7 +35,7 @@ Allowed frameworks, libraries, and technical constraints.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `spirit-of-kiro` | [`spirit-of-kiro.tech.md`](examples/spirit-of-kiro.tech.md) | [source](https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/tech.md) |
+| `spirit-of-kiro` | [`examples/spirit-of-kiro/tech.md`](examples/spirit-of-kiro/tech.md) | [source](https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/tech.md) |
 
 ## Field notes
 
@@ -64,3 +64,15 @@ Allowed frameworks, libraries, and technical constraints.
 - `auto` mode needs **both** `name` and `description`; `manual` is pulled in via a `#steering-file-name` reference (also works as a slash command).
 - Kiro also reads the **`AGENTS.md`** standard in steering, but AGENTS.md files don't support inclusion modes - they're always included when at the workspace root or in `~/.kiro/steering/`.
 - Steering is project-scoped (`.kiro/steering/`) or global (`~/.kiro/steering/`); neither is limited to the three default files.
+
+### Adoption / maturity
+- Kiro steering is an official AWS Kiro feature with documented workspace, global, and team deployment scopes. The three foundation files are the default starting point, but custom steering files are first-class.
+- The inclusion mode is the key differentiator from AGENTS.md: `always`, `fileMatch`, `manual`, and `auto` let teams keep context narrow instead of putting everything into one always-on file.
+
+### Related conventions
+- AGENTS.md is supported by Kiro, but it does not support Kiro's inclusion modes.
+- Spec Kit files are per-feature execution artifacts; steering files are the persistent baseline that every feature should respect.
+
+### Sources checked
+- [Kiro steering docs](https://kiro.dev/docs/steering/)
+- [Spirit of Kiro steering examples](https://github.com/kirodotdev/spirit-of-kiro/tree/main/.kiro/steering)

@@ -17,7 +17,7 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `workos.com` | [`workos.com.auth.md`](examples/workos.com.auth.md) | [source](https://workos.com/auth.md) |
+| `workos.com` | [`examples/workos/auth.md`](examples/workos/auth.md) | [source](https://workos.com/auth.md) |
 
 ## Field notes
 
@@ -42,3 +42,17 @@ The vendored WorkOS example is the clearest live instance:
 ### Edge cases
 - **🟠 Emerging:** a real published protocol, but essentially one polished implementation (WorkOS). Treat the shape as indicative, not an industry standard yet.
 - Placement is `/auth.md` at the domain root (not `.well-known/`); the registration method varies (`identity_assertion` / `service_auth` / `anonymous`).
+
+### Adoption / maturity
+- WorkOS publishes auth.md as an open protocol and a reference implementation. The repository separates three roles: an agent acting for a user, an agent provider that can mint identity assertions, and a service that accepts assertions or runs a claim ceremony before issuing credentials.
+- The protocol composes existing OAuth/OIDC-era building blocks: Protected Resource Metadata, Authorization Server Metadata, JWT bearer exchange (RFC 7523), revocation, and ID-JAG-style identity assertions. That makes the design credible even though ecosystem adoption is early.
+
+### Related conventions
+- `auth.md` is about registration and credential issuance. It complements MCP remote-server auth and A2A Agent Cards, but does not replace either.
+- `pricing.md` and `llms.txt` are discovery/documentation files; `auth.md` is a procedural protocol document agents follow step by step.
+
+### Sources checked
+- [WorkOS auth.md product page](https://workos.com/auth-md)
+- [WorkOS app implementation guide](https://workos.com/auth-md/docs/apps)
+- [workos/auth.md reference implementation](https://github.com/workos/auth.md)
+- [Agent Registration with Auth.md announcement](https://workos.com/blog/agent-registration-with-auth-md)

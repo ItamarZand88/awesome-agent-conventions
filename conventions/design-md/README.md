@@ -17,10 +17,10 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `apple` | [`apple.DESIGN.md`](examples/apple.DESIGN.md) | [source](https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/apple/DESIGN.md) |
-| `claude` | [`claude.DESIGN.md`](examples/claude.DESIGN.md) | [source](https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/claude/DESIGN.md) |
-| `cursor` | [`cursor.DESIGN.md`](examples/cursor.DESIGN.md) | [source](https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/cursor/DESIGN.md) |
-| `figma` | [`figma.DESIGN.md`](examples/figma.DESIGN.md) | [source](https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/figma/DESIGN.md) |
+| `apple` | [`examples/apple/DESIGN.md`](examples/apple/DESIGN.md) | [source](https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/apple/DESIGN.md) |
+| `claude` | [`examples/claude/DESIGN.md`](examples/claude/DESIGN.md) | [source](https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/claude/DESIGN.md) |
+| `cursor` | [`examples/cursor/DESIGN.md`](examples/cursor/DESIGN.md) | [source](https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/cursor/DESIGN.md) |
+| `figma` | [`examples/figma/DESIGN.md`](examples/figma/DESIGN.md) | [source](https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/figma/DESIGN.md) |
 
 ## Field notes
 
@@ -53,3 +53,15 @@ The frontmatter is the **machine-readable token store**, not just metadata. `nam
 - **Open-sourced by Google Labs in 2026** (Apache-2.0 draft spec at `github.com/google-labs-code/design.md`) and repositioned as cross-tool - meant for Claude Code and other coding agents, not just Stitch. Still a draft (`version: alpha`), so the `components` token vocabulary is per-file, not yet a shared standard.
 - **Scarcity is encoded, not assumed:** Cursor's spec reserves its one brand color "used scarcely" and pins display weight at 400 - constraints an agent must be told.
 - A `DESIGN.md` is a *mirror* of a design system, not its source of truth - it goes stale unless regenerated when the system changes.
+
+### Adoption / maturity
+- DESIGN.md is adopted enough to matter because the spec, CLI, examples, and Google Labs repository are public, and example libraries already collect real brand files. The format itself is still marked `alpha`, so lint against the current spec before treating a file as authoritative.
+- The CLI makes the format more than prose: `lint` catches broken token references and contrast issues, `diff` surfaces regressions, and `export` can emit Tailwind v3, Tailwind v4 CSS tokens, or W3C DTCG-compatible tokens.
+
+### Related conventions
+- Use DESIGN.md for visual identity and reusable UI system constraints. Do not use it for product requirements, architecture notes, or generic app documentation.
+- Pair with AGENTS.md when the agent also needs build/test commands or implementation workflow; keep those out of the design spec.
+
+### Sources checked
+- [Google Labs DESIGN.md repository](https://github.com/google-labs-code/design.md)
+- [DESIGN.md examples collection](https://github.com/VoltAgent/awesome-design-md)

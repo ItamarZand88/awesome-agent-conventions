@@ -153,8 +153,9 @@ from being presented the same way as a new idea.
 HOW = """## Maintaining examples
 
 Example files are fetched, not invented. The extractor pulls them from public
-sources and adds a line-1 provenance comment. The examples remain under their
-upstream owners' licenses and terms; see
+sources, stores them under `conventions/<slug>/examples/<source>/<filename>`,
+and adds a line-1 provenance comment. The examples remain under their upstream
+owners' licenses and terms; see
 [THIRD_PARTY_EXAMPLES.md](THIRD_PARTY_EXAMPLES.md) before reusing them.
 
 To refresh everything:

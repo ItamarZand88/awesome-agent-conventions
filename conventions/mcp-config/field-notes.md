@@ -5,10 +5,10 @@ The three hosts share the *idea* but differ in keys - this is the part people ge
 
 | Field | Notes |
 | --- | --- |
-| `type` | `stdio` (default) / `sse` / `http` |
+| `type` | `stdio` (default) / `http` / `sse` / `ws`; `streamable-http` aliases to `http` |
 | `command`, `args` | required for stdio |
 | `env` | `{VAR: value}`; supports `${VAR}` and `${VAR:-default}` expansion |
-| `url`, `headers` | required for sse/http remote servers (`headers` also expands `${VAR}`) |
+| `url`, `headers` | required for remote servers (`headers` also expands `${VAR}`) |
 
 Scopes: `local` (per-project, in `~/.claude.json`), `project` (committed `.mcp.json`), `user` (global).
 
@@ -27,3 +27,16 @@ Scopes: `local` (per-project, in `~/.claude.json`), `project` (committed `.mcp.j
 - **Same idea, different keys:** Claude Code/Desktop use `mcpServers`; VS Code uses `servers` + `inputs`. A `.mcp.json` schema is not drop-in for `.vscode/mcp.json`.
 - A malformed entry can fail silently or block startup; hosts vary in how loudly they report a server that won't launch.
 - The two examples here pair a root `.mcp.json` with a `.vscode/mcp.json` to make the cross-tool shape concrete.
+
+### Adoption / maturity
+- MCP config is adopted because the protocol is widely supported, but the on-disk config shape is host-specific. The convention here is "project-shared MCP server configuration," not one universal JSON schema.
+- Remote HTTP is the direction of travel for cloud services; SSE remains supported in some clients but is increasingly legacy. Stdio remains the right fit for local tools that need filesystem/process access.
+
+### Related conventions
+- MCP config tells the agent what tools to connect. AGENTS.md / CLAUDE.md should explain when to use those tools and any safety expectations.
+- Never put credentials directly in committed config; use environment expansion, host secret prompts, or VS Code `inputs`.
+
+### Sources checked
+- [Claude Code MCP docs](https://code.claude.com/docs/en/mcp)
+- [VS Code MCP server docs](https://code.visualstudio.com/docs/agent-customization/mcp-servers)
+- [Model Context Protocol specification](https://modelcontextprotocol.io/specification)

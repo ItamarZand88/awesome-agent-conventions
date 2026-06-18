@@ -49,6 +49,7 @@ doubt, label down, not up.
    to the domain or `owner-repo`) - useful when several examples come from one
    repo and should surface by what they are: the design.md entries pull from
    `VoltAgent/awesome-design-md` but label as `apple`, `claude`, `cursor`, `figma`.
+   Extracted files are stored as `conventions/<slug>/examples/<source>/<filename>`.
 3. **Check the watchlist first** if the source is an adjacent protocol or draft
    rather than an already-deployed convention. [`WATCHLIST.md`](WATCHLIST.md)
    records ideas we are tracking but not ready to list.
@@ -74,8 +75,9 @@ doubt, label down, not up.
    have real observations (composition, anti-patterns, edge cases). The extractor
    inlines that sidecar under the generated `## Field notes` heading, so your prose
    survives every regeneration. The sidecar holds the section *body* only (lead
-   prose plus `### Composition` / `### Anti-patterns` / `### Edge cases`); the H2 is
-   added by the generator. This is where the collection earns its depth.
+   prose plus sections such as `### Composition`, `### Anti-patterns`,
+   `### Edge cases`, and `### Sources checked`); the H2 is added by the generator.
+   This is where the collection earns its depth.
 
 ## Examples vs. patterns
 

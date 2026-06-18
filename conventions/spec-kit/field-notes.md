@@ -30,3 +30,15 @@ A funnel narrowing from principles to actions:
 ### Edge cases
 - Layout splits by role: `constitution.md` in `.specify/memory/`; `spec/plan/tasks` per-feature under `specs/<feature>/`.
 - Tool-agnostic: the same files drive Copilot, Claude, Gemini, Cursor (30+ agents). In skills mode the commands map to `speckit-<name>`.
+
+### Adoption / maturity
+- Spec Kit is adopted as a GitHub-published workflow and template set, not merely a naming idea. The repository provides both the files and the slash-command flow that consumes them.
+- The important boundary is role separation: `spec.md` is requirements, `plan.md` is implementation approach, and `tasks.md` is execution order. Mixing those roles makes consistency checks less useful.
+
+### Related conventions
+- Use Kiro steering or AGENTS.md for persistent project context that applies across many specs.
+- Use Claude/GitHub/Cursor command files for the command surface; the durable artifacts are the Spec Kit Markdown files themselves.
+
+### Sources checked
+- [GitHub Spec Kit repository](https://github.com/github/spec-kit)
+- [Spec Kit templates](https://github.com/github/spec-kit/tree/main/templates)

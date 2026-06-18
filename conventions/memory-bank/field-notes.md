@@ -26,3 +26,15 @@ projectbrief  ->  productContext, systemPatterns, techContext  ->  activeContext
 ### Edge cases
 - The whole premise is **memory reset**: each file must stand on its own because the agent re-reads the bank cold every task.
 - `projectbrief.md` should rarely change; `activeContext.md` / `progress.md` are the churn files. Mixing those cadences in one file defeats the structure.
+
+### Adoption / maturity
+- Memory Bank is a Cline-documented pattern, not a generic Markdown folder convention. Roo Code and Cursor users commonly reuse it through custom instructions, but the canonical shape and commands come from Cline.
+- Because the files are version-controlled, the bank is more auditable than local auto-memory, but also easier to pollute with transient notes unless `update memory bank` is treated like a review step.
+
+### Related conventions
+- Use `MEMORY.md` for local agent recall that should not be committed.
+- Use AGENTS.md or tool-specific instruction files for rules that must always steer implementation, rather than for historical state.
+
+### Sources checked
+- [Cline Memory Bank docs](https://docs.cline.bot/best-practices/memory-bank)
+- [Gitpod Memory Bank examples](https://github.com/gitpod-io/gitpod/tree/main/memory-bank)

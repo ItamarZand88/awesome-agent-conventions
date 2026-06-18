@@ -19,8 +19,8 @@ Prompty - YAML frontmatter (model + inputs) over a templated prompt body.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `prompty` | [`prompty.basic.prompty`](examples/prompty.basic.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/web/src/content/docs/assets/code/basic.prompty) |
-| `prompty` | [`prompty.chat-basic.prompty`](examples/prompty.chat-basic.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/web/docs-examples/prompts/chat-basic.prompty) |
+| `prompty` | [`examples/prompty/basic.prompty`](examples/prompty/basic.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/web/src/content/docs/assets/code/basic.prompty) |
+| `prompty` | [`examples/prompty/chat-basic.prompty`](examples/prompty/chat-basic.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/web/docs-examples/prompts/chat-basic.prompty) |
 
 ### `.prompt`
 
@@ -28,7 +28,7 @@ Generic templated prompt file (Genkit dotprompt and similar).
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `genkit` | [`genkit.countries.prompt`](examples/genkit.countries.prompt) | [source](https://raw.githubusercontent.com/firebase/genkit/main/go/samples/prompts/prompts/countries.prompt) |
+| `genkit` | [`examples/genkit/countries.prompt`](examples/genkit/countries.prompt) | [source](https://raw.githubusercontent.com/firebase/genkit/main/go/samples/prompts/prompts/countries.prompt) |
 
 ### `system_prompt.txt`
 
@@ -36,7 +36,7 @@ A plain-text externalized system prompt.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `diffbot` | [`diffbot.system_prompt.txt`](examples/diffbot.system_prompt.txt) | [source](https://raw.githubusercontent.com/diffbot/diffbot-llm-inference/main/system_prompt.txt) |
+| `diffbot` | [`examples/diffbot/system_prompt.txt`](examples/diffbot/system_prompt.txt) | [source](https://raw.githubusercontent.com/diffbot/diffbot-llm-inference/main/system_prompt.txt) |
 
 ## Field notes
 
@@ -71,3 +71,17 @@ Values support `${env:VAR}`. (A TypeSpec-based **Prompty 2.0** schema is in deve
 - **`.prompty` (Prompty / Azure / Semantic Kernel) vs `.prompt` (Genkit dotprompt)** look alike but are different toolchains with different templating (Jinja2 vs Handlebars) - don't assume one parser reads both.
 - dotprompt's `ext` collects any dotted-key frontmatter (`myext.foo: bar`) so non-standard keys don't collide with the reserved schema.
 - `system_prompt.txt` carries no version metadata, so provenance relies entirely on git history.
+
+### Adoption / maturity
+- Prompt assets are adopted as a family rather than one single standard. Prompty, Genkit Dotprompt, and plain prompt text files all externalize prompt behavior into files that can be versioned and reviewed.
+- The portability boundary is the parser: a `.prompty` file can carry model, inputs, tools, and template metadata, while Genkit `.prompt` uses Dotprompt semantics and Handlebars. The same extension shape does not imply compatible runtimes.
+
+### Related conventions
+- Use `*.prompt.md` when the file is a VS Code/Copilot slash-command prompt. Use `.prompty` or `.prompt` when application code loads the prompt at runtime.
+- Use `SKILL.md` when the prompt needs a reusable agent capability with resources and activation logic.
+
+### Sources checked
+- [Prompty file format docs](https://prompty.ai/core-concepts/file-format/)
+- [microsoft/prompty repository](https://github.com/microsoft/prompty)
+- [Genkit Dotprompt docs](https://genkit.dev/docs/js/dotprompt/)
+- [Diffbot system_prompt.txt example](https://raw.githubusercontent.com/diffbot/diffbot-llm-inference/main/system_prompt.txt)

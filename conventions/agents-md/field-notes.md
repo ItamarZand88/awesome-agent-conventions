@@ -16,3 +16,16 @@ Strong AGENTS.md files are **imperative and executable**, not descriptive:
 - **Precedence:** the nearest AGENTS.md up the tree wins and nested files override parents - but an **explicit user chat prompt overrides everything**. The Codex file scopes itself to the `codex-rs/` subtree.
 - **Monorepos:** prefer a per-package AGENTS.md over one giant root file (OpenAI's monorepo ships 88 of them).
 - **Convergence:** many tools now read AGENTS.md as the canonical file, with `CLAUDE.md`/`GEMINI.md` symlinking or `@`-importing it.
+
+### Adoption / maturity
+- The public spec positions AGENTS.md as a cross-tool, plain-Markdown convention rather than a vendor-specific config file. It reports broad open-source adoption and lists compatible tools across OpenAI Codex, Google Jules, Aider, Zed, Warp, Cursor, Amp, GitHub Copilot, Devin/Cascade, and others.
+- The format is intentionally low ceremony: no required fields beyond the filename, no frontmatter, and no parser contract beyond Markdown. That is why it has become the migration target for older `CLAUDE.md`, `GEMINI.md`, `.cursorrules`, `.windsurfrules`, and singular `AGENT.md` files.
+
+### Related conventions
+- Use `CLAUDE.md`, `GEMINI.md`, `QWEN.md`, `WARP.md`, or `.github/copilot-instructions.md` only when a specific tool needs behavior AGENTS.md cannot express or has not yet adopted.
+- Use rules directories (`.cursor/rules/`, `.devin/rules/`, `.clinerules/`) for narrow file-glob or model-decision activation; use AGENTS.md for durable directory-scoped project guidance.
+
+### Sources checked
+- [AGENTS.md spec](https://agents.md/)
+- [OpenAI Codex AGENTS.md example](https://raw.githubusercontent.com/openai/codex/main/AGENTS.md)
+- [Apache Airflow AGENTS.md example](https://raw.githubusercontent.com/apache/airflow/main/AGENTS.md)

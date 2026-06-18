@@ -19,8 +19,8 @@ Curated index: short description plus linked sections of the key docs.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `docs.anthropic.com` | [`docs.anthropic.com.llms.txt`](examples/docs.anthropic.com.llms.txt) | [source](https://docs.anthropic.com/llms.txt) |
-| `docs.stripe.com` | [`docs.stripe.com.llms.txt`](examples/docs.stripe.com.llms.txt) | [source](https://docs.stripe.com/llms.txt) |
+| `docs.anthropic.com` | [`examples/docs-anthropic/llms.txt`](examples/docs-anthropic/llms.txt) | [source](https://docs.anthropic.com/llms.txt) |
+| `docs.stripe.com` | [`examples/docs-stripe/llms.txt`](examples/docs-stripe/llms.txt) | [source](https://docs.stripe.com/llms.txt) |
 
 ### `llms-full.txt`
 
@@ -60,3 +60,17 @@ Strict element order (only the H1 is required):
 ### Edge cases
 - **Published is not the same as read.** Hundreds of sites ship `llms.txt`, but consumption is unproven: Google has publicly said it doesn't use it, and studies find most files draw little or no crawler traffic. Treat it as making docs *available* to agents that choose to fetch it, not a channel the major providers read by default.
 - `llms-full.txt` can blow past a model's context window; some sites paginate or offer per-section full files.
+
+### Adoption / maturity
+- The format is adopted as a publishing pattern: developer-docs sites such as Anthropic and Stripe expose it, and docs tooling can generate it. The consumer side is weaker: no major model provider has made a durable, public commitment that its production retrieval or training systems obey `llms.txt`.
+- The honest use case is "give agents a clean map they can fetch," not "control crawler behavior" and not "force AI search visibility." For control/consent, look at robots.txt, AI Preferences drafts, or `ai.txt` proposals instead.
+
+### Related conventions
+- `llms.txt` is an index. `llms-full.txt` is the expanded payload. `pricing.md` is a page-level Markdown twin that can be linked from either.
+- A site can publish all three, but each answers a different question: "where is the useful docs context?", "give me the full docs text", and "give me this page in parseable Markdown."
+
+### Sources checked
+- [llms.txt proposal](https://llmstxt.org/)
+- [Anthropic docs llms.txt](https://docs.anthropic.com/llms.txt)
+- [Stripe docs llms.txt](https://docs.stripe.com/llms.txt)
+- [llms_txt2ctx parser / CLI](https://github.com/AnswerDotAI/llms-txt)

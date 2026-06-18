@@ -30,3 +30,15 @@ Commands now share the full Skills frontmatter (all optional):
 - **Commands merged into skills.** `.claude/commands/deploy.md` and `.claude/skills/deploy/SKILL.md` both create `/deploy`; if both exist, the skill wins. Treat `commands/*.md` as the legacy single-file form and `SKILL.md` as the successor (it adds a supporting-file directory plus auto-invocation).
 - **Discovery is bounded.** Commands load only from the starting directory up to the repo root, plus `~/.claude/commands/` - not from `--add-dir` paths (skills are the exception). The `disableSkillShellExecution` setting neutralizes `` !`cmd` ``.
 - `!` is recognized only at line start or after whitespace, so `KEY=!`cmd`` is left as literal text.
+
+### Adoption / maturity
+- Claude command files are adopted because many repos already committed them, but Claude Code now describes custom commands as part of the Skills surface. That makes `.claude/commands/*.md` a legacy-compatible single-file form rather than the preferred home for complex workflows.
+- Dynamic shell injection is powerful but high-risk: it should be paired with narrow `allowed-tools`, explicit arguments, and `disable-model-invocation` for side-effectful flows.
+
+### Related conventions
+- Prefer `SKILL.md` when a command needs support files, scripts, references, or automatic model invocation.
+- Prefer AGENTS.md / CLAUDE.md for standing project facts; command files are for tasks the user intentionally invokes.
+
+### Sources checked
+- [Claude Code skills and custom commands docs](https://code.claude.com/docs/en/slash-commands)
+- [Claude Code command examples](https://github.com/anthropics/claude-code/tree/main/.claude/commands)

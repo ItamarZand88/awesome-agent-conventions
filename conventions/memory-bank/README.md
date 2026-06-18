@@ -19,7 +19,7 @@ Foundation doc - why the project exists, core requirements and goals.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `gitpod` | [`gitpod.projectbrief.md`](examples/gitpod.projectbrief.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/projectbrief.md) |
+| `gitpod` | [`examples/gitpod/projectbrief.md`](examples/gitpod/projectbrief.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/projectbrief.md) |
 
 ### `productContext.md`
 
@@ -27,7 +27,7 @@ Problem space and the intended user experience.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `gitpod` | [`gitpod.productContext.md`](examples/gitpod.productContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/productContext.md) |
+| `gitpod` | [`examples/gitpod/productContext.md`](examples/gitpod/productContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/productContext.md) |
 
 ### `activeContext.md`
 
@@ -35,7 +35,7 @@ Current focus, recent changes, next steps - the most frequently updated file.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `gitpod` | [`gitpod.activeContext.md`](examples/gitpod.activeContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/activeContext.md) |
+| `gitpod` | [`examples/gitpod/activeContext.md`](examples/gitpod/activeContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/activeContext.md) |
 
 ### `systemPatterns.md`
 
@@ -43,7 +43,7 @@ Architecture, key technical decisions, and design patterns.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `gitpod` | [`gitpod.systemPatterns.md`](examples/gitpod.systemPatterns.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/systemPatterns.md) |
+| `gitpod` | [`examples/gitpod/systemPatterns.md`](examples/gitpod/systemPatterns.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/systemPatterns.md) |
 
 ### `techContext.md`
 
@@ -51,7 +51,7 @@ Technologies, setup, constraints, and dependencies.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `gitpod` | [`gitpod.techContext.md`](examples/gitpod.techContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/techContext.md) |
+| `gitpod` | [`examples/gitpod/techContext.md`](examples/gitpod/techContext.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/techContext.md) |
 
 ### `progress.md`
 
@@ -59,7 +59,7 @@ What works, what's left to build, and known issues.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `gitpod` | [`gitpod.progress.md`](examples/gitpod.progress.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/progress.md) |
+| `gitpod` | [`examples/gitpod/progress.md`](examples/gitpod/progress.md) | [source](https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/progress.md) |
 
 ## Field notes
 
@@ -91,3 +91,15 @@ projectbrief  ->  productContext, systemPatterns, techContext  ->  activeContext
 ### Edge cases
 - The whole premise is **memory reset**: each file must stand on its own because the agent re-reads the bank cold every task.
 - `projectbrief.md` should rarely change; `activeContext.md` / `progress.md` are the churn files. Mixing those cadences in one file defeats the structure.
+
+### Adoption / maturity
+- Memory Bank is a Cline-documented pattern, not a generic Markdown folder convention. Roo Code and Cursor users commonly reuse it through custom instructions, but the canonical shape and commands come from Cline.
+- Because the files are version-controlled, the bank is more auditable than local auto-memory, but also easier to pollute with transient notes unless `update memory bank` is treated like a review step.
+
+### Related conventions
+- Use `MEMORY.md` for local agent recall that should not be committed.
+- Use AGENTS.md or tool-specific instruction files for rules that must always steer implementation, rather than for historical state.
+
+### Sources checked
+- [Cline Memory Bank docs](https://docs.cline.bot/best-practices/memory-bank)
+- [Gitpod Memory Bank examples](https://github.com/gitpod-io/gitpod/tree/main/memory-bank)

@@ -19,7 +19,7 @@ Project principles and non-negotiable rules the agent honors across every featur
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `spec-kit` | [`spec-kit.constitution.md`](examples/spec-kit.constitution.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/constitution-template.md) |
+| `spec-kit` | [`examples/spec-kit/constitution.md`](examples/spec-kit/constitution.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/constitution-template.md) |
 
 ### `spec.md`
 
@@ -27,7 +27,7 @@ The what and why of one feature - requirements and user stories, no implementati
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `spec-kit` | [`spec-kit.spec.md`](examples/spec-kit.spec.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/spec-template.md) |
+| `spec-kit` | [`examples/spec-kit/spec.md`](examples/spec-kit/spec.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/spec-template.md) |
 
 ### `plan.md`
 
@@ -35,7 +35,7 @@ The technical approach, stack, and architecture for the spec.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `spec-kit` | [`spec-kit.plan.md`](examples/spec-kit.plan.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/plan-template.md) |
+| `spec-kit` | [`examples/spec-kit/plan.md`](examples/spec-kit/plan.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/plan-template.md) |
 
 ### `tasks.md`
 
@@ -43,7 +43,7 @@ An ordered, reviewable task list generated from the plan.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `spec-kit` | [`spec-kit.tasks.md`](examples/spec-kit.tasks.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/tasks-template.md) |
+| `spec-kit` | [`examples/spec-kit/tasks.md`](examples/spec-kit/tasks.md) | [source](https://raw.githubusercontent.com/github/spec-kit/main/templates/tasks-template.md) |
 
 ## Field notes
 
@@ -79,3 +79,15 @@ A funnel narrowing from principles to actions:
 ### Edge cases
 - Layout splits by role: `constitution.md` in `.specify/memory/`; `spec/plan/tasks` per-feature under `specs/<feature>/`.
 - Tool-agnostic: the same files drive Copilot, Claude, Gemini, Cursor (30+ agents). In skills mode the commands map to `speckit-<name>`.
+
+### Adoption / maturity
+- Spec Kit is adopted as a GitHub-published workflow and template set, not merely a naming idea. The repository provides both the files and the slash-command flow that consumes them.
+- The important boundary is role separation: `spec.md` is requirements, `plan.md` is implementation approach, and `tasks.md` is execution order. Mixing those roles makes consistency checks less useful.
+
+### Related conventions
+- Use Kiro steering or AGENTS.md for persistent project context that applies across many specs.
+- Use Claude/GitHub/Cursor command files for the command surface; the durable artifacts are the Spec Kit Markdown files themselves.
+
+### Sources checked
+- [GitHub Spec Kit repository](https://github.com/github/spec-kit)
+- [Spec Kit templates](https://github.com/github/spec-kit/tree/main/templates)

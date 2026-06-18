@@ -26,3 +26,17 @@
 - **Progressive disclosure** is the whole economy: `name` + `description` (~100 tokens) are always loaded; the body is recommended **under 5000 tokens / 500 lines**, with bundled files referenced one level deep.
 - Two description caps to know: the open spec limits `description` to **1024 chars**; Claude Code truncates the *listed* description at ~**1536 chars** (configurable via `maxSkillDescriptionChars`).
 - The same `SKILL.md` format spans Claude.ai, Claude Code, and the open Agent Skills ecosystem - write the description tool-agnostically. `.claude/skills/` is loaded from `--add-dir` (commands are not).
+
+### Adoption / maturity
+- `SKILL.md` has both an open specification and Anthropic product support. The open spec defines the portable minimum; Claude Code and Amp add richer invocation, tool, and subagent behavior.
+- The main operational risk is trigger quality. A skill with a precise "use when..." description can stay out of context until needed; a vague one either never triggers or triggers too broadly.
+
+### Related conventions
+- Claude commands have merged into skills in Claude Code. Keep a workflow in `.claude/commands/*.md` only when you need legacy single-file compatibility; use `SKILL.md` when the capability needs resources, scripts, references, or model-invoked activation.
+- AGENTS.md / CLAUDE.md should hold standing facts; SKILL.md should hold procedures.
+
+### Sources checked
+- [Agent Skills specification](https://agentskills.io/specification)
+- [Anthropic Agent Skills overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)
+- [Claude Code skills docs](https://code.claude.com/docs/en/slash-commands)
+- [Amp skill format docs](https://ampcode.com/manual)

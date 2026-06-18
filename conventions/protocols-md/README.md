@@ -78,3 +78,8 @@ _Verified by fetching each apex `https://<name>.md/`. Note: the `protocols.md/<n
 
 ### If this changes
 - If a specific domain (say `proof.md`) starts being read by a real tool, *that* convention graduates to its own entry at the appropriate tier - promotion is per-file and evidence-driven; it does not lift the whole namespace. Re-verify the audit above before promoting anything.
+
+### Sources checked
+- [`protocols.md` / `discover.md` namespace page](https://protocols.md/)
+- [`proof.md`](https://proof.md/)
+- Live-domain audit recorded above, last verified 2026-06-16.

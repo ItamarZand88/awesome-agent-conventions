@@ -51,10 +51,11 @@ def iter_examples():
         examples_dir = os.path.join(CONVENTIONS_DIR, slug, "examples")
         if not os.path.isdir(examples_dir):
             continue
-        for name in sorted(os.listdir(examples_dir)):
-            path = os.path.join(examples_dir, name)
-            if os.path.isfile(path):
-                yield slug, name, path
+        for root, _, names in os.walk(examples_dir):
+            for name in sorted(names):
+                path = os.path.join(root, name)
+                rel = os.path.relpath(path, examples_dir)
+                yield slug, rel, path
 
 
 def read_provenance(path):
@@ -118,6 +119,8 @@ def collect(offline):
     websites = defaultdict(set)
 
     for slug, name, path in iter_examples():
+        if os.sep not in name:
+            errors.append(f"{slug}/examples/{name}: examples must live under examples/<source>/<filename>")
         provenance = read_provenance(path)
         if not provenance:
             errors.append(f"{slug}/examples/{name}: missing line-1 provenance")

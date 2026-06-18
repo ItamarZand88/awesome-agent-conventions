@@ -17,9 +17,9 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `anthropic-sdk-ts` | [`anthropic-sdk-ts.CLAUDE.md`](examples/anthropic-sdk-ts.CLAUDE.md) | [source](https://raw.githubusercontent.com/anthropics/anthropic-sdk-typescript/main/CLAUDE.md) |
-| `mcp-servers` | [`mcp-servers.CLAUDE.md`](examples/mcp-servers.CLAUDE.md) | [source](https://raw.githubusercontent.com/modelcontextprotocol/servers/main/CLAUDE.md) |
-| `playwright-mcp` | [`playwright-mcp.CLAUDE.md`](examples/playwright-mcp.CLAUDE.md) | [source](https://raw.githubusercontent.com/microsoft/playwright-mcp/main/CLAUDE.md) |
+| `anthropic-sdk-ts` | [`examples/anthropic-sdk-ts/CLAUDE.md`](examples/anthropic-sdk-ts/CLAUDE.md) | [source](https://raw.githubusercontent.com/anthropics/anthropic-sdk-typescript/main/CLAUDE.md) |
+| `mcp-servers` | [`examples/mcp-servers/CLAUDE.md`](examples/mcp-servers/CLAUDE.md) | [source](https://raw.githubusercontent.com/modelcontextprotocol/servers/main/CLAUDE.md) |
+| `playwright-mcp` | [`examples/playwright-mcp/CLAUDE.md`](examples/playwright-mcp/CLAUDE.md) | [source](https://raw.githubusercontent.com/microsoft/playwright-mcp/main/CLAUDE.md) |
 
 ## Field notes
 
@@ -46,3 +46,16 @@ Free-form Markdown (no schema). All discovered files are **concatenated root -> 
 ### Edge cases
 - **Layering:** `CLAUDE.local.md` still loads (treated like CLAUDE.md) but is no longer the recommended personal overlay - it doesn't span git worktrees, so Anthropic now points to importing `@~/.claude/...` instead.
 - **The pointer pattern:** some repos (Airflow, Vercel AI) ship a one-line CLAUDE.md that just `@AGENTS.md`-imports or symlinks the cross-tool file. `/init` seeds CLAUDE.md from an existing AGENTS.md / `.cursorrules` / `.windsurfrules`.
+
+### Adoption / maturity
+- This is an official Claude Code memory mechanism, not just a community file name. Claude Code documents CLAUDE.md and auto-memory as separate systems: CLAUDE.md is human-authored standing instruction; auto-memory is agent-authored recall.
+- The practical migration path is increasingly AGENTS.md-first: keep tool-specific CLAUDE.md files short, or make them import the cross-tool AGENTS.md so humans do not have to maintain parallel rule sets.
+
+### Related conventions
+- Use `MEMORY.md` for machine-local, agent-maintained learnings; use CLAUDE.md for version-controlled project, user, or org instructions.
+- Move multi-step procedures or long references into `SKILL.md` when they do not need to load on every conversation.
+
+### Sources checked
+- [Claude Code memory docs](https://code.claude.com/docs/en/memory)
+- [modelcontextprotocol/servers CLAUDE.md](https://raw.githubusercontent.com/modelcontextprotocol/servers/main/CLAUDE.md)
+- [anthropics/anthropic-sdk-typescript CLAUDE.md](https://raw.githubusercontent.com/anthropics/anthropic-sdk-typescript/main/CLAUDE.md)

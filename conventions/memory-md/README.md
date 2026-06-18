@@ -17,8 +17,8 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `learn-likecc` | [`learn-likecc.MEMORY.md`](examples/learn-likecc.MEMORY.md) | [source](https://raw.githubusercontent.com/Harzva/learn-likecc/main/MEMORY.md) |
-| `soul.md` | [`soul.md.MEMORY.md`](examples/soul.md.MEMORY.md) | [source](https://raw.githubusercontent.com/aaronjmars/soul.md/main/MEMORY.md) |
+| `learn-likecc` | [`examples/learn-likecc/MEMORY.md`](examples/learn-likecc/MEMORY.md) | [source](https://raw.githubusercontent.com/Harzva/learn-likecc/main/MEMORY.md) |
+| `soul.md` | [`examples/soul/MEMORY.md`](examples/soul/MEMORY.md) | [source](https://raw.githubusercontent.com/aaronjmars/soul.md/main/MEMORY.md) |
 
 ## Field notes
 
@@ -41,3 +41,16 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 - This file is both **read and written** by the agent - the format must be one the model can reliably append to.
 - Two live shapes coexist: a **curated index** (re-read, hand-tended) vs an **append-only log** (chronological). Claude Code's built-in form is the curated index. Pick one and be consistent.
 - Links are relative into the memory directory; a moved file breaks recall silently.
+
+### Adoption / maturity
+- Claude Code documents auto-memory as a first-class mechanism distinct from CLAUDE.md: it is written by Claude, scoped per repository, shared across worktrees, and capped when loaded into a fresh session.
+- Public `MEMORY.md` examples are less uniform than `CLAUDE.md`; some are hand-maintained indexes and some are append logs. The maturity rating reflects the mechanism, not a single strict schema.
+
+### Related conventions
+- Use `CLAUDE.md` for project facts that every Claude Code session should read in full.
+- Use Memory Bank when a team wants a version-controlled, multi-file memory system that is deliberately reviewed and updated in the repo.
+
+### Sources checked
+- [Claude Code memory docs](https://code.claude.com/docs/en/memory)
+- [learn-likecc MEMORY.md example](https://raw.githubusercontent.com/Harzva/learn-likecc/main/MEMORY.md)
+- [soul.md MEMORY.md example](https://raw.githubusercontent.com/aaronjmars/soul.md/main/MEMORY.md)

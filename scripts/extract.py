@@ -3,8 +3,9 @@
 
 Source of truth: scripts/targets.json. For every convention (except those
 marked `manual_readme`) this fetches each declared target, saves it under
-conventions/<slug>/examples/ with a line-1 provenance comment, then rebuilds
-conventions/<slug>/README.md from what was actually captured.
+conventions/<slug>/examples/<source>/<filename> with a line-1 provenance
+comment, then rebuilds conventions/<slug>/README.md from what was actually
+captured.
 
 Never crashes on a bad target - a non-200 or network error prints a `miss`
 and moves on. The only hard exit is a GitHub API rate-limit (403/429), which
@@ -44,6 +45,21 @@ BADGES = {
 }
 
 PROVENANCE_RE = re.compile(r"<!-- source: (?P<label>.+?) — (?P<url>.+?) -->")
+COMMON_SOURCE_SUFFIXES = {
+    "ai",
+    "app",
+    "chat",
+    "cloud",
+    "com",
+    "dev",
+    "io",
+    "md",
+    "net",
+    "org",
+    "sh",
+    "so",
+    "txt",
+}
 
 
 # --- target helpers --------------------------------------------------------
@@ -67,6 +83,21 @@ def source_label(target, url):
     return host or "source"
 
 
+def source_dirname(label):
+    """Directory-safe source name for examples/<source>/<filename>.
+
+    Host-like labels drop a common final suffix, so `auth0.com` becomes
+    `auth0` and `docs.anthropic.com` becomes `docs-anthropic`. Non-host labels
+    simply slugify punctuation.
+    """
+    cleaned = label.strip().lower()
+    parts = [part for part in cleaned.split(".") if part]
+    if len(parts) >= 2 and parts[-1] in COMMON_SOURCE_SUFFIXES:
+        cleaned = ".".join(parts[:-1])
+    cleaned = re.sub(r"[^a-z0-9]+", "-", cleaned).strip("-")
+    return cleaned or "source"
+
+
 def target_filename(target, url):
     """`as` override, else the URL/path basename."""
     if target.get("as"):
@@ -74,6 +105,25 @@ def target_filename(target, url):
     if target.get("type") == "github":
         return os.path.basename(target["path"]) or "index"
     return os.path.basename(urlparse(url).path) or "index"
+
+
+def canonical_target_url(target):
+    if target.get("type") == "github":
+        return (
+            f"https://github.com/{target['owner']}/{target['repo']}"
+            f"/blob/HEAD/{target['path']}"
+        )
+    return target["url"]
+
+
+def example_path(examples_dir, target, url=None):
+    url = url or canonical_target_url(target)
+    label = source_label(target, url)
+    return os.path.join(
+        examples_dir,
+        source_dirname(label),
+        target_filename(target, url),
+    )
 
 
 # --- fetching --------------------------------------------------------------
@@ -143,6 +193,7 @@ def spec_link(spec):
     href = spec if spec.startswith("http") else f"https://{spec}"
     return f"[{spec}]({href})"
 
+
 def read_provenance(path):
     with open(path, encoding="utf-8") as fh:
         first = fh.readline()
@@ -153,24 +204,41 @@ def read_provenance(path):
 
 
 def examples_for(examples_dir, filename):
-    """Match saved examples to a declared file by filename suffix.
+    """Match nested examples to a declared file.
 
-    Saved files are named `<label>.<saved-filename>` (or `<label><dotfile>` when
-    the file is itself a dotfile, e.g. `devin.cursorrules`), so a declared file
-    like `AGENTS.md` matches anything ending in `.AGENTS.md`, and a dot-extension
-    declared file like `.prompty` matches anything ending in `.prompty`
-    (e.g. a saved `microsoft-prompty.chat-basic.prompty`). Suffix-matching -
-    rather than `*.AGENTS.md` globbing - is what lets one declared file collect
-    examples whose own basenames differ.
+    Concrete filenames (`AGENTS.md`, `pricing.md`) match exactly. Dot-prefixed
+    declarations (`.prompt.md`, `.md`, `.prompty`) are families, so they match
+    any example filename ending in that suffix.
     """
     if not os.path.isdir(examples_dir):
         return []
-    suffix = filename if filename.startswith(".") else f".{filename}"
+
+    def matches(name):
+        return name.endswith(filename) if filename.startswith(".") else name == filename
+
     return sorted(
-        os.path.join(examples_dir, name)
-        for name in os.listdir(examples_dir)
-        if name.endswith(suffix)
+        os.path.join(root, name)
+        for root, _, names in os.walk(examples_dir)
+        for name in names
+        if matches(name)
     )
+
+
+def cleanup_stale_examples(examples_dir, expected_paths):
+    if not os.path.isdir(examples_dir):
+        return
+    expected = {os.path.abspath(path) for path in expected_paths}
+    for root, dirs, names in os.walk(examples_dir, topdown=False):
+        for name in names:
+            full = os.path.abspath(os.path.join(root, name))
+            if full not in expected:
+                os.remove(full)
+        for dirname in dirs:
+            full = os.path.join(root, dirname)
+            try:
+                os.rmdir(full)
+            except OSError:
+                pass
 
 
 def rebuild_convention_readme(slug, conv):
@@ -235,10 +303,10 @@ def rebuild_convention_readme(slug, conv):
             out.append("| Source | File | Provenance |")
             out.append("| --- | --- | --- |")
             for m in matches:
-                base = os.path.basename(m)
+                rel = os.path.relpath(m, slug_dir)
                 label, url = read_provenance(m)
                 prov = f"[source]({url})" if url else "-"
-                out.append(f"| `{label}` | [`{base}`](examples/{base}) | {prov} |")
+                out.append(f"| `{label}` | [`{rel}`]({rel}) | {prov} |")
         else:
             out.append(
                 "_No example captured yet - add a target in "
@@ -287,6 +355,8 @@ def process_convention(slug, conv, index_only):
 
     if not index_only:
         os.makedirs(examples_dir, exist_ok=True)
+        expected = {example_path(examples_dir, target) for target in conv.get("targets", [])}
+        cleanup_stale_examples(examples_dir, expected)
         for target in conv.get("targets", []):
             try:
                 text, url = fetch_target(target)
@@ -298,11 +368,8 @@ def process_convention(slug, conv, index_only):
                 continue
             label = source_label(target, url)
             fname = target_filename(target, url)
-            # Join label and filename with a single dot. When the file is itself
-            # a dotfile (.cursorrules, .aiignore), it already carries the dot, so
-            # don't add another - otherwise the name doubles up (devin..cursorrules).
-            sep = "" if fname.startswith(".") else "."
-            dest = os.path.join(examples_dir, f"{label}{sep}{fname}")
+            dest = example_path(examples_dir, target, url)
+            os.makedirs(os.path.dirname(dest), exist_ok=True)
             provenance = f"<!-- source: {label} — {url} -->\n"
             full_len = len(text.encode("utf-8"))
             truncated = full_len > MAX_EXAMPLE_BYTES

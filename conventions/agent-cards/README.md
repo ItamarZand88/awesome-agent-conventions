@@ -19,8 +19,8 @@ Current A2A well-known Agent Card filename.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `air-ticketing` | [`air-ticketing.agent-card.json`](examples/air-ticketing.agent-card.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/air_ticketing_agent.json) |
-| `currency` | [`currency.agent-card.json`](examples/currency.agent-card.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json) |
+| `air-ticketing` | [`examples/air-ticketing/agent-card.json`](examples/air-ticketing/agent-card.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/air_ticketing_agent.json) |
+| `currency` | [`examples/currency/agent-card.json`](examples/currency/agent-card.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json) |
 
 ### `agent.json`
 
@@ -63,3 +63,16 @@ Nested objects: **`AgentInterface`** {`url`, `protocolBinding` (open string: `JS
 - **v1.0 restructured the card.** There is **no top-level `protocolVersion`** anymore - it moved to `AgentInterface.protocolVersion` (per endpoint). `preferredTransport` and `additionalInterfaces` were consolidated into `supportedInterfaces[]` (preference = first entry), the per-interface field is `protocolBinding` (an open string, not the old `transport` enum), and `supportsAuthenticatedExtendedCard` moved to `capabilities.extendedAgentCard`. (There is no `protocolVersions` array - that spelling was a rejected proposal.)
 - **Governance:** A2A was donated to the **Linux Foundation** (June 2025) and reached **v1.0** - the 🟠 reflects real-world adoption, not an unfinished spec. The proto at `a2aproject/A2A` is the authoritative source.
 - **Well-known path:** the current standard is `/.well-known/agent-card.json`; `/.well-known/agent.json` is a legacy alias, so tolerate both but publish the current name for new agents. In practice cards are often **served at runtime** rather than committed - both examples here come from the A2A samples repo.
+
+### Adoption / maturity
+- A2A Agent Cards are real protocol objects in a public v1.0 spec. They remain 🟠 rather than 🟢 here because broad independent production discovery is still early, and many public samples still show pre-v1 fields.
+- A card is a discovery contract. If the card advertises a skill, transport, media type, auth scheme, or extension, clients may select behavior from that declaration before ever talking to the agent.
+
+### Related conventions
+- Agent Cards are for agent-to-agent discovery and invocation. MCP config is for connecting an agent host to tools. They can coexist, but one does not substitute for the other.
+- `auth.md` can describe how an agent obtains credentials; Agent Card `securitySchemes` and `security` describe what the A2A endpoint requires.
+
+### Sources checked
+- [A2A protocol specification](https://a2a-protocol.org/latest/specification/)
+- [a2aproject/A2A repository](https://github.com/a2aproject/A2A)
+- [A2A sample Agent Cards](https://github.com/a2aproject/a2a-samples)

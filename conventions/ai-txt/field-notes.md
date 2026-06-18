@@ -31,3 +31,17 @@ Spawning's generator emits:
 - **🔵 Proposed, labelled down on purpose.** There's real work here (Spawning's deployed pattern, an IETF AI Preferences WG vocabulary/attachment effort, and a June 2026 individual Internet-Draft for `/.well-known/ai.txt`), but adoption is thin and crawler obedience is not demonstrable. Until consumption is reliable, it sits below 🟠.
 - Read at **media-download / usage-policy** time, not plain crawl discovery time. Orthogonal to the files it's confused with: `robots.txt` AI user-agents (`GPTBot`...) restrict *crawling*; `llms.txt` *exposes* docs; `ai.txt` declares *training / usage preference*. Placement is still unsettled - Spawning uses `/ai.txt`, while the Internet-Draft proposes `/.well-known/ai.txt`.
 - **Adjacent draft:** `agents.txt` / `agents.json` now has its own Internet-Draft for site-level capability declarations. It is related, but not listed as a full convention here until there are live examples or demonstrated readers beyond the draft.
+
+### Adoption / maturity
+- The label stays 🔵 because there are multiple competing shapes and no clear consumption contract. Spawning's original root-file syntax exists in public examples; the June 2026 Internet-Draft proposes `/.well-known/ai.txt` and `/.well-known/ai.json` with a different structured vocabulary.
+- The IETF AI Preferences work is adjacent but not identical: it defines vocabulary for expressing use preferences over digital assets, while `ai.txt` is one possible discovery/container file shape.
+
+### Related conventions
+- Use robots.txt for crawl access preferences, `llms.txt` for inference-time content maps, and `ai.txt` only as a policy declaration whose enforcement depends on reader cooperation.
+- Do not present `ai.txt` as a legal or technical blocker unless a consuming crawler explicitly documents support.
+
+### Sources checked
+- [Spawning ai.txt announcement](https://spawning.substack.com/p/aitxt-a-new-way-for-websites-to-set)
+- [IETF draft-car-ai-txt-wellknown-00](https://datatracker.ietf.org/doc/html/draft-car-ai-txt-wellknown-00)
+- [IETF AI Preferences vocabulary draft](https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/03/)
+- [Openverse ai.txt example](https://raw.githubusercontent.com/WordPress/openverse/main/frontend/src/static/ai.txt)

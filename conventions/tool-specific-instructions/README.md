@@ -19,7 +19,7 @@ Google Gemini CLI.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `gemini-cli` | [`gemini-cli.GEMINI.md`](examples/gemini-cli.GEMINI.md) | [source](https://raw.githubusercontent.com/google-gemini/gemini-cli/main/GEMINI.md) |
+| `gemini-cli` | [`examples/gemini-cli/GEMINI.md`](examples/gemini-cli/GEMINI.md) | [source](https://raw.githubusercontent.com/google-gemini/gemini-cli/main/GEMINI.md) |
 
 ### `AGENT.md`
 
@@ -27,7 +27,7 @@ Amp (Sourcegraph) - legacy singular form; Amp now reads AGENTS.md (plural).
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `dagger` | [`dagger.AGENT.md`](examples/dagger.AGENT.md) | [source](https://raw.githubusercontent.com/dagger/container-use/main/AGENT.md) |
+| `dagger` | [`examples/dagger/AGENT.md`](examples/dagger/AGENT.md) | [source](https://raw.githubusercontent.com/dagger/container-use/main/AGENT.md) |
 
 ### `QWEN.md`
 
@@ -35,7 +35,7 @@ Qwen Code.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `qwen-code` | [`qwen-code.QWEN.md`](examples/qwen-code.QWEN.md) | [source](https://raw.githubusercontent.com/QwenLM/qwen-code/main/packages/cli/src/commands/extensions/examples/context/QWEN.md) |
+| `qwen-code` | [`examples/qwen-code/QWEN.md`](examples/qwen-code/QWEN.md) | [source](https://raw.githubusercontent.com/QwenLM/qwen-code/main/packages/cli/src/commands/extensions/examples/context/QWEN.md) |
 
 ### `WARP.md`
 
@@ -43,7 +43,7 @@ Warp terminal - backwards-compatible with project rules; Warp now defaults new p
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `warp` | [`warp.WARP.md`](examples/warp.WARP.md) | [source](https://raw.githubusercontent.com/warpdotdev/warp/master/WARP.md) |
+| `warp` | [`examples/warp/WARP.md`](examples/warp/WARP.md) | [source](https://raw.githubusercontent.com/warpdotdev/warp/master/WARP.md) |
 
 ### `CONVENTIONS.md`
 
@@ -51,7 +51,7 @@ Aider.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `aider` | [`aider.CONVENTIONS.md`](examples/aider.CONVENTIONS.md) | [source](https://raw.githubusercontent.com/Aider-AI/conventions/main/golang/CONVENTIONS.md) |
+| `aider` | [`examples/aider/CONVENTIONS.md`](examples/aider/CONVENTIONS.md) | [source](https://raw.githubusercontent.com/Aider-AI/conventions/main/golang/CONVENTIONS.md) |
 
 ### `copilot-instructions.md`
 
@@ -59,17 +59,17 @@ GitHub Copilot (lives under .github/).
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `vscode` | [`vscode.copilot-instructions.md`](examples/vscode.copilot-instructions.md) | [source](https://raw.githubusercontent.com/microsoft/vscode/main/.github/copilot-instructions.md) |
+| `vscode` | [`examples/vscode/copilot-instructions.md`](examples/vscode/copilot-instructions.md) | [source](https://raw.githubusercontent.com/microsoft/vscode/main/.github/copilot-instructions.md) |
 
 ## Field notes
 
 ### Per-tool reference
 | File | Tool | Location & loading |
 | --- | --- | --- |
-| `GEMINI.md` | Gemini CLI | `~/.gemini/` global + project tree; `@`-imports; `contextFileName` accepts a string **or array**; `/memory show|refresh|add` |
-| `QWEN.md` | Qwen Code | like Gemini; `@`-imports with a configurable **max depth (default 5)**; also reads `AGENTS.md` |
-| `AGENT.md` | Amp | **legacy** - Amp now reads `AGENTS.md` (plural) and falls back to `CLAUDE.md`; nearest wins |
-| `WARP.md` | Warp | repo root + cwd; filename **must be ALL-CAPS**; supports Global Rules |
+| `GEMINI.md` | Gemini CLI | Hierarchical context file; default filename is configurable via `context.fileName` as a string or array; supports `@` imports and `/memory show|reload` |
+| `QWEN.md` | Qwen Code | Hierarchical context file; default filename is configurable via `context.fileName`; `includeDirectories` can add up to 5 extra roots; `/memory show|refresh` inspects/reloads context |
+| `AGENT.md` | Amp | **legacy singular fallback** - Amp now reads `AGENTS.md` first and falls back to `AGENT.md` or `CLAUDE.md` when no AGENTS.md exists |
+| `WARP.md` | Warp | Backwards-compatible project rules file; Warp also supports rules and AGENTS.md, with same-directory WARP.md still relevant for older projects |
 | `CONVENTIONS.md` | Aider | **opt-in only**: `--read CONVENTIONS.md` or `read:` in `.aider.conf.yml` (single or list); marks the file read-only + cached; filename is arbitrary |
 | `copilot-instructions.md` | GitHub Copilot | `.github/copilot-instructions.md`; path-scoped variants in `.github/instructions/*.instructions.md` (`applyTo` glob, optional `excludeAgent`) |
 
@@ -88,3 +88,15 @@ All share the AGENTS.md shape - title, tech stack, build/test commands, conventi
 - **WARP.md takes priority over AGENTS.md** when both exist in the same directory (Warp defaults new projects to AGENTS.md, but does not let it override an existing WARP.md). Amp is the opposite - it converged onto AGENTS.md and treats singular `AGENT.md` as legacy.
 - **Copilot precedence** is combine-not-override: Personal > Repository > Organization instructions all apply together. Copilot also reads `AGENTS.md` / `CLAUDE.md` / `GEMINI.md` as alternatives.
 - Import-depth differs per tool: Claude = 4 hops, Qwen = 5 (configurable), Gemini undocumented - they are not identical despite sharing `@`-import syntax.
+
+### Adoption / maturity
+- The direction of travel is convergence on AGENTS.md, but the old tool-specific names are still important in audits because many public repositories created guidance before AGENTS.md existed or before their tool added support.
+- Treat these files as compatibility shims unless a tool still exposes unique behavior through the file name. One canonical source plus symlinks/imports is safer than six copies that drift.
+
+### Sources checked
+- [Gemini CLI project context docs](https://geminicli.com/docs/cli/gemini-md/)
+- [Qwen Code configuration docs](https://qwenlm.github.io/qwen-code-docs/en/users/configuration/settings/)
+- [Amp AGENTS.md manual section](https://ampcode.com/manual)
+- [Warp rules docs](https://docs.warp.dev/agent-platform/capabilities/rules/)
+- [Aider conventions docs](https://aider.chat/docs/usage/conventions.html)
+- [GitHub Copilot repository instructions docs](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions)
