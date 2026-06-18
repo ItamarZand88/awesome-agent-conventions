@@ -5,6 +5,8 @@
 - **Read by:** Cline, Roo Code, and Cursor (via the Memory Bank custom-instructions pattern)
 - **Location:** A memory-bank/ directory at the repository root
 - **Spec:** [https://docs.cline.bot/best-practices/memory-bank](https://docs.cline.bot/best-practices/memory-bank)
+- **Evidence:** Cline documents Memory Bank as a structured multi-file context system, and public repositories commit the full file set.
+- **Last verified:** 2026-06-18
 - **Files:** `projectbrief.md`, `productContext.md`, `activeContext.md`, `systemPatterns.md`, `techContext.md`, `progress.md`
 
 ## Examples

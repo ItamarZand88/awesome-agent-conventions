@@ -5,6 +5,8 @@
 - **Read by:** Docs sites publish it for LLM tools and crawlers - though no major provider has confirmed reading it
 - **Location:** Site root: /llms.txt (and optionally /llms-full.txt)
 - **Spec:** [https://llmstxt.org](https://llmstxt.org)
+- **Evidence:** llms.txt is published by many developer-docs sites, including Anthropic and Stripe, even though major-provider consumption is unconfirmed.
+- **Last verified:** 2026-06-18
 - **Files:** `llms.txt`, `llms-full.txt`
 
 ## Examples

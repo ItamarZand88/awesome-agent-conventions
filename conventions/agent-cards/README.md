@@ -5,18 +5,30 @@
 - **Read by:** A2A-compatible agents discovering another agent's capabilities
 - **Location:** /.well-known/agent-card.json (the older /.well-known/agent.json is a legacy alias)
 - **Spec:** [https://a2a-protocol.org/latest/specification/](https://a2a-protocol.org/latest/specification/)
-- **Files:** `agent.json`
+- **Evidence:** A2A v1.0 specifies Agent Cards and the well-known agent-card.json path, with public sample cards but still-early ecosystem adoption.
+- **Last verified:** 2026-06-18
+- **Files:** `agent-card.json`, `agent.json`
 
 ## Examples
 
 _Every file below was fetched from a public source by [`scripts/extract.py`](../../scripts/extract.py) - none are hand-written._
 
-### `agent.json`
+### `agent-card.json`
+
+Current A2A well-known Agent Card filename.
 
 | Source | File | Provenance |
 | --- | --- | --- |
-| `air-ticketing` | [`air-ticketing.agent.json`](examples/air-ticketing.agent.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/air_ticketing_agent.json) |
-| `currency` | [`currency.agent.json`](examples/currency.agent.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json) |
+| `air-ticketing` | [`air-ticketing.agent-card.json`](examples/air-ticketing.agent-card.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/air_ticketing_agent.json) |
+| `currency` | [`currency.agent-card.json`](examples/currency.agent-card.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json) |
+
+### `agent.json`
+
+Legacy alias seen in earlier A2A material and deployments.
+
+**Pattern - not an extracted file.**
+
+A legacy well-known alias for an A2A Agent Card. New agents should publish `/.well-known/agent-card.json`; clients may still tolerate `/.well-known/agent.json` while interoperating with older deployments.
 
 ## Field notes
 
@@ -40,7 +52,7 @@ Nested objects: **`AgentInterface`** {`url`, `protocolBinding` (open string: `JS
 
 ### Composition
 - A JSON capability descriptor: identity (`name`/`description`/`version`/`provider`), the transport endpoints (`supportedInterfaces`), `capabilities`, and a `skills` array describing what the agent can actually do.
-- The two vendored samples are **0.x cards**: they still carry a top-level `protocolVersion: "0.3.0"`, a top-level `url`, and `preferredTransport` - the fields v1.0 restructured.
+- The vendored samples still show **pre-v1 card shapes** in the wild: top-level `url`, and in one case top-level `protocolVersion: "0.3.0"` plus `preferredTransport` - fields that v1.0 restructured.
 
 ### Anti-patterns
 - Hand-rolling JSON that drifts from the spec's required fields - `skills`, `capabilities`, and `supportedInterfaces` are not optional decoration.
@@ -50,4 +62,4 @@ Nested objects: **`AgentInterface`** {`url`, `protocolBinding` (open string: `JS
 ### Edge cases
 - **v1.0 restructured the card.** There is **no top-level `protocolVersion`** anymore - it moved to `AgentInterface.protocolVersion` (per endpoint). `preferredTransport` and `additionalInterfaces` were consolidated into `supportedInterfaces[]` (preference = first entry), the per-interface field is `protocolBinding` (an open string, not the old `transport` enum), and `supportsAuthenticatedExtendedCard` moved to `capabilities.extendedAgentCard`. (There is no `protocolVersions` array - that spelling was a rejected proposal.)
 - **Governance:** A2A was donated to the **Linux Foundation** (June 2025) and reached **v1.0** - the 🟠 reflects real-world adoption, not an unfinished spec. The proto at `a2aproject/A2A` is the authoritative source.
-- **Well-known path:** the current standard is `/.well-known/agent-card.json`; `/.well-known/agent.json` is a legacy alias, so tolerate both. In practice cards are often **served at runtime** rather than committed - both examples here come from the A2A samples repo.
+- **Well-known path:** the current standard is `/.well-known/agent-card.json`; `/.well-known/agent.json` is a legacy alias, so tolerate both but publish the current name for new agents. In practice cards are often **served at runtime** rather than committed - both examples here come from the A2A samples repo.

@@ -5,6 +5,8 @@
 - **Read by:** Most coding agents - OpenAI Codex, Cursor, Jules, Aider, Gemini CLI, Zed, and others
 - **Location:** Repository root; the nearest AGENTS.md up the tree wins, and nested files override parents
 - **Spec:** [https://agents.md](https://agents.md)
+- **Evidence:** Cross-tool convention documented at agents.md and read by multiple coding agents, with public examples from OpenAI Codex and Apache Airflow.
+- **Last verified:** 2026-06-18
 - **Files:** `AGENTS.md`
 
 ## Examples

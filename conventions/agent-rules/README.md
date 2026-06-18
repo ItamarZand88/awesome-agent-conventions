@@ -1,11 +1,13 @@
 # Rules files 🟢 Adopted
 
-> Per-tool rule files that scope agent behavior - older single-file forms (.cursorrules, .windsurfrules) and newer directory-based, glob-scoped forms (.cursor/rules/*.mdc).
+> Per-tool rule files that scope agent behavior - older single-file forms (.cursorrules, .clinerules, .windsurfrules) and newer directory-based, glob-scoped forms (.cursor/rules/*.mdc, .clinerules/, .windsurf/rules/*.md).
 
-- **Read by:** Cursor (.cursorrules / .mdc), Cline (.clinerules), Windsurf (.windsurfrules)
-- **Location:** Repo root, or a rules directory (.cursor/rules/*.mdc, .clinerules/)
-- **Spec:** [https://cursor.com/docs/rules](https://cursor.com/docs/rules)
-- **Files:** `.cursorrules`, `.mdc`, `.clinerules`, `.windsurfrules`
+- **Read by:** Cursor (.cursorrules / .mdc), Cline (.clinerules/ and legacy .clinerules), Windsurf (.windsurfrules)
+- **Location:** Repo root, or a rules directory (.cursor/rules/*.mdc, .clinerules/, .windsurf/rules/*.md)
+- **Spec:** [https://docs.cline.bot/customization/cline-rules](https://docs.cline.bot/customization/cline-rules)
+- **Evidence:** Cursor, Cline, and Windsurf document and/or detect project rule files, including both legacy single files and directory-based rules.
+- **Last verified:** 2026-06-18
+- **Files:** `.cursorrules`, `.mdc`, `.clinerules`, `.clinerules/`, `.windsurfrules`
 
 ## Examples
 
@@ -29,11 +31,24 @@ Cursor - modern rule file with frontmatter and glob scoping, under .cursor/rules
 
 ### `.clinerules`
 
-Cline - a rules file or a directory of rules.
+Cline - legacy single-file form, still detected.
 
 | Source | File | Provenance |
 | --- | --- | --- |
 | `raycast` | [`raycast.clinerules`](examples/raycast.clinerules) | [source](https://raw.githubusercontent.com/raycast/extensions/main/extensions/1bookmark/.clinerules) |
+
+### `.clinerules/`
+
+Cline - primary workspace rules directory; Markdown/text files are combined and can be toggled.
+
+**Pattern - not an extracted file.**
+
+A project-root directory containing focused Markdown or text rule files such as `coding.md`, `testing.md`, and `architecture.md`. Cline combines the files into one workspace rule set, while the UI can toggle individual rules.
+
+Live instances (fetch directly - too large or instance-specific to vendor):
+
+- [Cline docs example](https://docs.cline.bot/customization/cline-rules)
+- [wjmuse/mcp_daily_life .clinerules directory](https://github.com/wjmuse/mcp_daily_life/tree/main/.clinerules)
 
 ### `.windsurfrules`
 
@@ -57,7 +72,7 @@ Windsurf - project rules.
 
 **Windsurf `.windsurf/rules/*.md`**: `trigger` (`always_on` / `model_decision` / `glob` / `manual`), `description` (for `model_decision`), `globs` (for `glob`). Limits: **12,000 chars** per workspace rule file, **6,000** global.
 
-**Cline `.clinerules`** (file or directory): optional frontmatter `paths` (glob[]), `alwaysApply` (bool), `description`; a file with no frontmatter is always active; toggleable in the UI.
+**Cline `.clinerules/`**: primary workspace rules directory at the project root. Cline processes all `.md` and `.txt` files inside it, combines workspace and global rules, and gives workspace rules precedence when they conflict. Legacy `.clinerules` single-file rules are still detected.
 
 **Legacy single-file forms** - `.cursorrules`, `.windsurfrules` - are plain prose, always injected, no frontmatter.
 
@@ -72,4 +87,4 @@ Windsurf - project rules.
 
 ### Edge cases
 - **Four activation modes**, not three: Always, Auto-Attached (glob), Agent-Requested (by description), and **Manual** (`@rule` mention) - pick the narrowest that works. Windsurf mirrors these via its `trigger` field.
-- `.cursorrules` is superseded by `.cursor/rules/*.mdc` and `.windsurfrules` by `.windsurf/rules/`; both tools now also accept a plain `AGENTS.md`. `.cursor/rules/` can be **nested** per subdirectory, and rules reference files with `@filename`.
+- `.cursorrules` is superseded by `.cursor/rules/*.mdc`, `.clinerules` by `.clinerules/`, and `.windsurfrules` by `.windsurf/rules/`; these tools increasingly also accept a plain `AGENTS.md`. `.cursor/rules/` can be **nested** per subdirectory, and rules reference files with `@filename`.

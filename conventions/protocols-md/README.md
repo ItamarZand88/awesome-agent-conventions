@@ -4,6 +4,13 @@
 
 > A single maintainer's pre-registered namespace of ~74 aspirational `.md` "protocols" - `proof.md`, `signature.md`, `reputation.md`, `compliance.md`, `negotiate.md`, `gametheory.md`, `alignment.md`, and dozens of supply-chain / financial domains - staked as Schelling points for a hypothetical future agent web. A published concept with **no demonstrated adoption**.
 
+- **Read by:** - (no demonstrated readers; aspirational)
+- **Location:** Per-domain pages under the protocols.md namespace (e.g. proof.md)
+- **Spec:** [https://protocols.md](https://protocols.md)
+- **Evidence:** protocols.md is a published namespace of aspirational .md protocols, but there are no demonstrated readers or broad deployments.
+- **Last verified:** 2026-06-18
+- **Files:** `proof.md`
+
 > [!WARNING]
 > **Proposed / aspirational - read this before citing the namespace.**
 >

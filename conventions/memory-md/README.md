@@ -5,6 +5,8 @@
 - **Read by:** Claude Code's auto-memory, and agent frameworks that persist a memory index
 - **Location:** Claude Code: ~/.claude/projects/<project>/memory/MEMORY.md (the index), with detail offloaded to topic files beside it
 - **Spec:** [https://code.claude.com/docs/en/memory](https://code.claude.com/docs/en/memory)
+- **Evidence:** Claude Code auto-memory docs describe MEMORY.md as the per-project memory index loaded every session, with public examples of the pattern.
+- **Last verified:** 2026-06-18
 - **Files:** `MEMORY.md`
 
 ## Examples

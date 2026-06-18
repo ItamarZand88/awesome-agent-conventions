@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ItamarZand88/awesome-agent-conventions/blob/main/scripts/targets.schema.json",
+  "title": "awesome-agent-conventions targets",
+  "type": "object",
+  "required": ["categories", "conventions"],
+  "additionalProperties": false,
+  "properties": {
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "conventions": {
+      "type": "object",
+      "minProperties": 1,
+      "patternProperties": {
+        "^[a-z0-9]+(?:-[a-z0-9]+)*$": { "$ref": "#/$defs/convention" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "convention": {
+      "type": "object",
+      "required": [
+        "name",
+        "category",
+        "maturity",
+        "evidence",
+        "last_verified",
+        "files",
+        "read_by",
+        "location",
+        "spec",
+        "summary",
+        "targets"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "category": { "type": "string", "minLength": 1 },
+        "maturity": { "enum": ["🟢", "🟠", "🔵"] },
+        "evidence": { "type": "string", "minLength": 1 },
+        "last_verified": {
+          "type": "string",
+          "pattern": "^20[0-9]{2}-[0-9]{2}-[0-9]{2}$"
+        },
+        "files": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/file" }
+        },
+        "read_by": { "type": "string", "minLength": 1 },
+        "location": { "type": "string", "minLength": 1 },
+        "spec": { "type": "string" },
+        "summary": { "type": "string", "minLength": 1 },
+        "manual_readme": { "type": "boolean" },
+        "targets": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/target" }
+        }
+      }
+    },
+    "file": {
+      "type": "object",
+      "required": ["name"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "kind": { "enum": ["pattern"] },
+        "note": { "type": "string" },
+        "pattern": { "type": "string" },
+        "instances": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/instance" }
+        }
+      }
+    },
+    "instance": {
+      "type": "object",
+      "required": ["label", "url"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "target": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["type", "url"],
+          "additionalProperties": false,
+          "properties": {
+            "type": { "const": "web" },
+            "url": { "type": "string", "format": "uri" },
+            "as": { "type": "string", "minLength": 1 },
+            "source_label": { "type": "string", "minLength": 1 }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["type", "owner", "repo", "path"],
+          "additionalProperties": false,
+          "properties": {
+            "type": { "const": "github" },
+            "owner": { "type": "string", "minLength": 1 },
+            "repo": { "type": "string", "minLength": 1 },
+            "path": { "type": "string", "minLength": 1 },
+            "as": { "type": "string", "minLength": 1 },
+            "source_label": { "type": "string", "minLength": 1 }
+          }
+        }
+      ]
+    }
+  }
+}

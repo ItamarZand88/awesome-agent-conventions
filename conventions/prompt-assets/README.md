@@ -5,6 +5,8 @@
 - **Read by:** Prompty tooling, Azure AI / Semantic Kernel, and apps that load externalized prompts
 - **Location:** Alongside application code (e.g. prompts/*.prompty)
 - **Spec:** [https://prompty.ai](https://prompty.ai)
+- **Evidence:** Prompty, Genkit, and application repos publish external prompt files that tools load independently of source code.
+- **Last verified:** 2026-06-18
 - **Files:** `.prompty`, `.prompt`, `system_prompt.txt`
 
 ## Examples

@@ -5,6 +5,8 @@
 - **Read by:** Agents and LLM browsers fetching a clean, parse-able pricing page
 - **Location:** Site path mirroring the HTML page: /pricing.md
 - **Spec:** [https://resend.com/pricing.md](https://resend.com/pricing.md)
+- **Evidence:** Multiple production SaaS sites expose Markdown pricing pages at predictable .md URLs for agent-friendly retrieval.
+- **Last verified:** 2026-06-18
 - **Files:** `pricing.md`
 
 ## Examples

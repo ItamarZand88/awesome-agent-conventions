@@ -3,8 +3,10 @@
 > Anthropic's memory file for Claude Code - loaded automatically at session start to carry project commands, style rules, and standing instructions across turns.
 
 - **Read by:** Claude Code, and tools that read the Claude memory convention
-- **Location:** Repo root or .claude/CLAUDE.md, subdirectories, ~/.claude/ (user-global), enterprise-managed policy paths, and CLAUDE.local.md (untracked, personal)
+- **Location:** Repo root or .claude/CLAUDE.md, ancestor/subdirectory CLAUDE.md files, ~/.claude/ (user-global), enterprise-managed policy paths, .claude/rules/*.md, and CLAUDE.local.md (personal)
 - **Spec:** [https://code.claude.com/docs/en/memory](https://code.claude.com/docs/en/memory)
+- **Evidence:** Official Claude Code memory docs define CLAUDE.md loading locations and behavior; public examples appear in multiple active repos.
+- **Last verified:** 2026-06-18
 - **Files:** `CLAUDE.md`
 
 ## Examples

@@ -194,6 +194,10 @@ def rebuild_convention_readme(slug, conv):
     out.append(f"- **Read by:** {conv['read_by']}")
     out.append(f"- **Location:** {conv['location']}")
     out.append(f"- **Spec:** {spec_link(conv['spec'])}")
+    if conv.get("evidence"):
+        out.append(f"- **Evidence:** {conv['evidence']}")
+    if conv.get("last_verified"):
+        out.append(f"- **Last verified:** {conv['last_verified']}")
     file_list = ", ".join(f"`{f['name']}`" for f in conv["files"])
     out.append(f"- **Files:** {file_list}")
     out.append("")

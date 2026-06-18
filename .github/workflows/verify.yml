@@ -1,8 +1,10 @@
 name: verify
 
-# Two guards for a list whose credibility is "the files and links are real":
-#   1. generated files are in sync with scripts/targets.json (no hand-edits)
-#   2. every spec / example / instance URL still resolves
+# Guards for a list whose credibility is "the files and links are real":
+#   1. scripts/targets.json matches its schema and local invariants
+#   2. generated files are in sync with scripts/targets.json (no hand-edits)
+#   3. vendored examples have provenance
+#   4. every spec / example / instance URL still resolves
 on:
   push:
     branches: [main]
@@ -10,6 +12,9 @@ on:
   schedule:
     - cron: "0 6 * * 1"   # Mondays 06:00 UTC - catch upstream rot
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   verify:
@@ -24,16 +29,5 @@ jobs:
       - name: Install deps
         run: pip install -r scripts/requirements.txt
 
-      - name: Generated files are in sync with targets.json
-        run: |
-          python scripts/build_readme.py
-          python scripts/extract.py --index-only
-          if ! git diff --quiet; then
-            echo "::error::Generated files are out of date. Run the generators and commit:"
-            echo "  python scripts/extract.py && python scripts/build_readme.py"
-            git --no-pager diff --stat
-            exit 1
-          fi
-
-      - name: All links resolve
-        run: python scripts/check_links.py
+      - name: Verify catalog
+        run: make verify

@@ -5,6 +5,8 @@
 - **Read by:** Agents discovering how to authenticate to a service (early adopters)
 - **Location:** Site root or .well-known: /auth.md
 - **Spec:** [https://workos.com/auth-md](https://workos.com/auth-md)
+- **Evidence:** WorkOS publishes both the auth.md spec page and a live auth.md file, but adoption beyond that ecosystem remains early.
+- **Last verified:** 2026-06-18
 - **Files:** `auth.md`
 
 ## Examples

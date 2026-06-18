@@ -49,20 +49,28 @@ doubt, label down, not up.
    to the domain or `owner-repo`) - useful when several examples come from one
    repo and should surface by what they are: the design.md entries pull from
    `VoltAgent/awesome-design-md` but label as `apple`, `claude`, `cursor`, `figma`.
-3. **Regenerate:**
+3. **Check the watchlist first** if the source is an adjacent protocol or draft
+   rather than an already-deployed convention. [`WATCHLIST.md`](WATCHLIST.md)
+   records ideas we are tracking but not ready to list.
+4. **Check license and permission for examples.** Public does not mean
+   reusable. Prefer examples from official docs, permissively licensed repos, or
+   sources whose terms clearly allow this kind of cataloging. If a source has no
+   detected license, a copyleft license, or website terms instead of a repo
+   license, call that out in the PR and be ready to use a pattern link instead
+   of vendoring the file. The root MIT license does **not** relicense extracted
+   examples; see [`THIRD_PARTY_EXAMPLES.md`](THIRD_PARTY_EXAMPLES.md).
+5. **Regenerate:**
 
    ```bash
    pip install -r scripts/requirements.txt
-   python scripts/extract.py --only <your-slug>   # fetch + rebuild that page
-   python scripts/build_readme.py                 # rebuild the root index
-   python scripts/check_links.py --only <your-slug>  # confirm your links resolve
+   make extract       # fetch examples + rebuild generated docs
+   make verify        # schema + generated files + provenance + links
    ```
 
-   CI runs the same link check plus an in-sync check (it regenerates and fails
-   if your committed output drifts from `targets.json`), so regenerate before
-   you push.
+   CI runs the same schema, generated-output, provenance, and link checks, so
+   regenerate before you push.
 
-4. **Write Field notes** in a `conventions/<slug>/field-notes.md` sidecar if you
+6. **Write Field notes** in a `conventions/<slug>/field-notes.md` sidecar if you
    have real observations (composition, anti-patterns, edge cases). The extractor
    inlines that sidecar under the generated `## Field notes` heading, so your prose
    survives every regeneration. The sidecar holds the section *body* only (lead
@@ -89,6 +97,9 @@ this collection.
 
 - **Don't hand-write example files.** Only the extractor creates them, each with
   a line-1 provenance comment. Hand-typed examples will be rejected.
+- **Don't assume a public URL grants reuse rights.** Include license/permission
+  evidence for new vendored examples, and downgrade to a pattern link when
+  vendoring would be legally or ethically muddy.
 - **Don't hand-edit generated files** - the root `README.md` and most convention
   `README.md`s are rebuilt by the scripts. The human-editable surfaces are
   `scripts/targets.json` and the per-convention `field-notes.md` sidecars. A

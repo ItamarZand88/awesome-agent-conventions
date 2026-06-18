@@ -5,6 +5,8 @@
 - **Read by:** GitHub Copilot in VS Code / Copilot CLI
 - **Location:** .github/prompts/*.prompt.md and .github/instructions/*.instructions.md
 - **Spec:** [https://code.visualstudio.com/docs/agent-customization/prompt-files](https://code.visualstudio.com/docs/agent-customization/prompt-files)
+- **Evidence:** VS Code Copilot docs define .github/prompts/*.prompt.md and .github/instructions/*.instructions.md, with public examples in GitHub repos.
+- **Last verified:** 2026-06-18
 - **Files:** `.prompt.md`, `.instructions.md`
 
 ## Examples

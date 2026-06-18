@@ -19,9 +19,10 @@
 
 - [ ] I edited **`scripts/targets.json`** (the single source of truth) - not the generated `README.md` files directly.
 - [ ] Example sources are **real, public URLs** (I did not hand-write example files).
+- [ ] I checked the upstream license/terms for vendored examples and noted anything non-permissive, unclear, or website-specific.
 - [ ] I ran the generators and committed the result:
-      `python scripts/extract.py && python scripts/build_readme.py`
-- [ ] `python scripts/check_links.py` passes (all new links resolve).
+      `make extract`
+- [ ] `make verify` passes.
 
 <!-- New observations? Drop them in conventions/<slug>/field-notes.md - that
      sidecar survives every regeneration and is where the list earns its depth. -->

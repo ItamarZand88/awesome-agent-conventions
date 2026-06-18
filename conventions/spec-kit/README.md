@@ -5,6 +5,8 @@
 - **Read by:** GitHub Spec Kit's slash-command agents (Copilot, Claude, Gemini, Cursor, and more)
 - **Location:** .specify/memory/constitution.md and specs/<feature>/{spec,plan,tasks}.md
 - **Spec:** [https://github.com/github/spec-kit](https://github.com/github/spec-kit)
+- **Evidence:** GitHub Spec Kit publishes templates and slash-command workflows that consume constitution, spec, plan, and tasks files.
+- **Last verified:** 2026-06-18
 - **Files:** `constitution.md`, `spec.md`, `plan.md`, `tasks.md`
 
 ## Examples

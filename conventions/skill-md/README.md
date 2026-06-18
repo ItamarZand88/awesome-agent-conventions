@@ -5,6 +5,8 @@
 - **Read by:** Claude (Agent Skills), Claude Code, and the open Agent Skills ecosystem
 - **Location:** A skill directory: <skill-name>/SKILL.md (plus bundled scripts and resources)
 - **Spec:** [https://agentskills.io](https://agentskills.io)
+- **Evidence:** Agent Skills documentation and public skill repositories define SKILL.md as the load-on-demand capability manifest.
+- **Last verified:** 2026-06-18
 - **Files:** `SKILL.md`
 
 ## Examples

@@ -1,10 +1,12 @@
 # Tool-specific instruction files 🟢 Adopted
 
-> Per-tool instruction files that predate or coexist with AGENTS.md. Many tools now fall back to or symlink AGENTS.md, but these named variants are still read in the wild.
+> Per-tool instruction files that predate or coexist with AGENTS.md. Some tools now default to AGENTS.md while keeping legacy filenames alive, so these variants still matter when auditing real repositories.
 
-- **Read by:** Each file is read by its namesake tool - Gemini CLI, Amp, Qwen Code, Warp, Aider, GitHub Copilot
+- **Read by:** Each file is read by its namesake tool - Gemini CLI, Amp, Qwen Code, Warp, Aider, GitHub Copilot - often alongside or as a bridge to AGENTS.md
 - **Location:** Repository root (or .github/ for copilot-instructions.md)
 - **Spec:** [https://agents.md](https://agents.md)
+- **Evidence:** Gemini, Qwen, Warp, Amp, Aider, and Copilot each document or ship named instruction files, while several now bridge to AGENTS.md.
+- **Last verified:** 2026-06-18
 - **Files:** `GEMINI.md`, `AGENT.md`, `QWEN.md`, `WARP.md`, `CONVENTIONS.md`, `copilot-instructions.md`
 
 ## Examples
@@ -37,7 +39,7 @@ Qwen Code.
 
 ### `WARP.md`
 
-Warp terminal - backwards-compat; Warp now defaults to AGENTS.md.
+Warp terminal - backwards-compatible with project rules; Warp now defaults new projects to AGENTS.md, but WARP.md still takes same-directory priority.
 
 | Source | File | Provenance |
 | --- | --- | --- |

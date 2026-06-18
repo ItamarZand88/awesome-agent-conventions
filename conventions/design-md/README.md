@@ -5,6 +5,8 @@
 - **Read by:** Google Stitch and, since the format was open-sourced, coding agents like Claude Code that consume a design spec
 - **Location:** Repository root or a design/ directory
 - **Spec:** [https://github.com/google-labs-code/design.md](https://github.com/google-labs-code/design.md)
+- **Evidence:** Google Labs published design.md as a machine-readable design spec, and public design-md catalogs contain real examples.
+- **Last verified:** 2026-06-18
 - **Files:** `DESIGN.md`
 
 ## Examples

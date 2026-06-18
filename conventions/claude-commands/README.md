@@ -5,6 +5,8 @@
 - **Read by:** Claude Code - project .claude/commands/ and user ~/.claude/commands/
 - **Location:** .claude/commands/*.md (project) and ~/.claude/commands/*.md (user)
 - **Spec:** [https://code.claude.com/docs/en/slash-commands](https://code.claude.com/docs/en/slash-commands)
+- **Evidence:** Claude Code slash-command docs define .claude/commands/*.md, and active repos commit reusable command files.
+- **Last verified:** 2026-06-18
 - **Files:** `.md`
 
 ## Examples

@@ -17,6 +17,8 @@
       "name": "AGENTS.md",
       "category": "Instruction & context",
       "maturity": "🟢",
+      "evidence": "Cross-tool convention documented at agents.md and read by multiple coding agents, with public examples from OpenAI Codex and Apache Airflow.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": "AGENTS.md" }
       ],
@@ -33,11 +35,13 @@
       "name": "CLAUDE.md",
       "category": "Instruction & context",
       "maturity": "🟢",
+      "evidence": "Official Claude Code memory docs define CLAUDE.md loading locations and behavior; public examples appear in multiple active repos.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": "CLAUDE.md" }
       ],
       "read_by": "Claude Code, and tools that read the Claude memory convention",
-      "location": "Repo root or .claude/CLAUDE.md, subdirectories, ~/.claude/ (user-global), enterprise-managed policy paths, and CLAUDE.local.md (untracked, personal)",
+      "location": "Repo root or .claude/CLAUDE.md, ancestor/subdirectory CLAUDE.md files, ~/.claude/ (user-global), enterprise-managed policy paths, .claude/rules/*.md, and CLAUDE.local.md (personal)",
       "spec": "https://code.claude.com/docs/en/memory",
       "summary": "Anthropic's memory file for Claude Code - loaded automatically at session start to carry project commands, style rules, and standing instructions across turns.",
       "targets": [
@@ -46,22 +50,24 @@
         { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/playwright-mcp/main/CLAUDE.md", "source_label": "playwright-mcp" }
       ]
     },
-    "instruction-variants": {
+    "tool-specific-instructions": {
       "name": "Tool-specific instruction files",
       "category": "Instruction & context",
       "maturity": "🟢",
+      "evidence": "Gemini, Qwen, Warp, Amp, Aider, and Copilot each document or ship named instruction files, while several now bridge to AGENTS.md.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": "GEMINI.md", "note": "Google Gemini CLI." },
         { "name": "AGENT.md", "note": "Amp (Sourcegraph) - legacy singular form; Amp now reads AGENTS.md (plural)." },
         { "name": "QWEN.md", "note": "Qwen Code." },
-        { "name": "WARP.md", "note": "Warp terminal - backwards-compat; Warp now defaults to AGENTS.md." },
+        { "name": "WARP.md", "note": "Warp terminal - backwards-compatible with project rules; Warp now defaults new projects to AGENTS.md, but WARP.md still takes same-directory priority." },
         { "name": "CONVENTIONS.md", "note": "Aider." },
         { "name": "copilot-instructions.md", "note": "GitHub Copilot (lives under .github/)." }
       ],
-      "read_by": "Each file is read by its namesake tool - Gemini CLI, Amp, Qwen Code, Warp, Aider, GitHub Copilot",
+      "read_by": "Each file is read by its namesake tool - Gemini CLI, Amp, Qwen Code, Warp, Aider, GitHub Copilot - often alongside or as a bridge to AGENTS.md",
       "location": "Repository root (or .github/ for copilot-instructions.md)",
       "spec": "https://agents.md",
-      "summary": "Per-tool instruction files that predate or coexist with AGENTS.md. Many tools now fall back to or symlink AGENTS.md, but these named variants are still read in the wild.",
+      "summary": "Per-tool instruction files that predate or coexist with AGENTS.md. Some tools now default to AGENTS.md while keeping legacy filenames alive, so these variants still matter when auditing real repositories.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/main/GEMINI.md", "as": "GEMINI.md", "source_label": "gemini-cli" },
         { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/vscode/main/.github/copilot-instructions.md", "as": "copilot-instructions.md", "source_label": "vscode" },
@@ -75,6 +81,8 @@
       "name": "MEMORY.md",
       "category": "Memory & state",
       "maturity": "🟢",
+      "evidence": "Claude Code auto-memory docs describe MEMORY.md as the per-project memory index loaded every session, with public examples of the pattern.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": "MEMORY.md" }
       ],
@@ -91,6 +99,8 @@
       "name": "Memory Bank",
       "category": "Memory & state",
       "maturity": "🟢",
+      "evidence": "Cline documents Memory Bank as a structured multi-file context system, and public repositories commit the full file set.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": "projectbrief.md", "note": "Foundation doc - why the project exists, core requirements and goals." },
         { "name": "productContext.md", "note": "Problem space and the intended user experience." },
@@ -116,6 +126,8 @@
       "name": "Spec Kit",
       "category": "Spec-driven development",
       "maturity": "🟢",
+      "evidence": "GitHub Spec Kit publishes templates and slash-command workflows that consume constitution, spec, plan, and tasks files.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": "constitution.md", "note": "Project principles and non-negotiable rules the agent honors across every feature." },
         { "name": "spec.md", "note": "The what and why of one feature - requirements and user stories, no implementation detail." },
@@ -137,6 +149,8 @@
       "name": "Kiro steering files",
       "category": "Spec-driven development",
       "maturity": "🟢",
+      "evidence": "Kiro docs define .kiro/steering files and public Kiro projects commit the standard product, structure, and tech files.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": "product.md", "note": "What the product is and who it's for." },
         { "name": "structure.md", "note": "File organization and architectural conventions." },
@@ -156,6 +170,8 @@
       "name": "SKILL.md",
       "category": "Skills & prompt assets",
       "maturity": "🟢",
+      "evidence": "Agent Skills documentation and public skill repositories define SKILL.md as the load-on-demand capability manifest.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": "SKILL.md" }
       ],
@@ -172,6 +188,8 @@
       "name": "Prompt asset files",
       "category": "Skills & prompt assets",
       "maturity": "🟢",
+      "evidence": "Prompty, Genkit, and application repos publish external prompt files that tools load independently of source code.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": ".prompty", "note": "Prompty - YAML frontmatter (model + inputs) over a templated prompt body." },
         { "name": ".prompt", "note": "Generic templated prompt file (Genkit dotprompt and similar)." },
@@ -192,6 +210,8 @@
       "name": "Claude Code commands",
       "category": "Skills & prompt assets",
       "maturity": "🟢",
+      "evidence": "Claude Code slash-command docs define .claude/commands/*.md, and active repos commit reusable command files.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": ".md", "note": "Any Markdown file under .claude/commands/; the filename is the command name (pr.md -> /pr). Optional YAML frontmatter: description, argument-hint, allowed-tools, model." }
       ],
@@ -209,6 +229,8 @@
       "name": "Copilot prompt & instruction files",
       "category": "Skills & prompt assets",
       "maturity": "🟢",
+      "evidence": "VS Code Copilot docs define .github/prompts/*.prompt.md and .github/instructions/*.instructions.md, with public examples in GitHub repos.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": ".prompt.md", "note": "Invokable saved prompts under .github/prompts/, run as a slash-command." },
         { "name": ".instructions.md", "note": "Auto-attached instructions under .github/instructions/, scoped by an applyTo glob in frontmatter." }
@@ -226,6 +248,8 @@
       "name": "MCP server config",
       "category": "Tooling & connections",
       "maturity": "🟢",
+      "evidence": "MCP hosts including Claude Code, Claude Desktop, Cursor, and VS Code document project or app-level MCP server config files.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": ".mcp.json", "note": "Project-scoped MCP servers. The same { \"mcpServers\": {...} } schema also appears as .vscode/mcp.json (VS Code / Copilot) and claude_desktop_config.json (Claude Desktop)." }
       ],
@@ -238,20 +262,32 @@
         { "type": "web", "url": "https://raw.githubusercontent.com/inspec/inspec/main/.vscode/mcp.json", "as": ".mcp.json", "source_label": "inspec-vscode" }
       ]
     },
-    "rules-files": {
+    "agent-rules": {
       "name": "Rules files",
       "category": "Rules & ignore files",
       "maturity": "🟢",
+      "evidence": "Cursor, Cline, and Windsurf document and/or detect project rule files, including both legacy single files and directory-based rules.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": ".cursorrules", "note": "Cursor - legacy single-file form (superseded by .cursor/rules/*.mdc)." },
         { "name": ".mdc", "note": "Cursor - modern rule file with frontmatter and glob scoping, under .cursor/rules/." },
-        { "name": ".clinerules", "note": "Cline - a rules file or a directory of rules." },
+        { "name": ".clinerules", "note": "Cline - legacy single-file form, still detected." },
+        {
+          "name": ".clinerules/",
+          "kind": "pattern",
+          "note": "Cline - primary workspace rules directory; Markdown/text files are combined and can be toggled.",
+          "pattern": "A project-root directory containing focused Markdown or text rule files such as `coding.md`, `testing.md`, and `architecture.md`. Cline combines the files into one workspace rule set, while the UI can toggle individual rules.",
+          "instances": [
+            { "label": "Cline docs example", "url": "https://docs.cline.bot/customization/cline-rules" },
+            { "label": "wjmuse/mcp_daily_life .clinerules directory", "url": "https://github.com/wjmuse/mcp_daily_life/tree/main/.clinerules" }
+          ]
+        },
         { "name": ".windsurfrules", "note": "Windsurf - project rules." }
       ],
-      "read_by": "Cursor (.cursorrules / .mdc), Cline (.clinerules), Windsurf (.windsurfrules)",
-      "location": "Repo root, or a rules directory (.cursor/rules/*.mdc, .clinerules/)",
-      "spec": "https://cursor.com/docs/rules",
-      "summary": "Per-tool rule files that scope agent behavior - older single-file forms (.cursorrules, .windsurfrules) and newer directory-based, glob-scoped forms (.cursor/rules/*.mdc).",
+      "read_by": "Cursor (.cursorrules / .mdc), Cline (.clinerules/ and legacy .clinerules), Windsurf (.windsurfrules)",
+      "location": "Repo root, or a rules directory (.cursor/rules/*.mdc, .clinerules/, .windsurf/rules/*.md)",
+      "spec": "https://docs.cline.bot/customization/cline-rules",
+      "summary": "Per-tool rule files that scope agent behavior - older single-file forms (.cursorrules, .clinerules, .windsurfrules) and newer directory-based, glob-scoped forms (.cursor/rules/*.mdc, .clinerules/, .windsurf/rules/*.md).",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/grapeot/devin.cursorrules/master/.cursorrules", "source_label": "devin" },
         { "type": "web", "url": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/angular-typescript-cursorrules-prompt-file.mdc", "source_label": "awesome-cursorrules" },
@@ -259,10 +295,12 @@
         { "type": "web", "url": "https://raw.githubusercontent.com/snyk/vscode-extension/main/.windsurfrules", "source_label": "snyk" }
       ]
     },
-    "ignore-files": {
+    "ai-ignore-files": {
       "name": "AI ignore files",
       "category": "Rules & ignore files",
       "maturity": "🟢",
+      "evidence": "Cursor, JetBrains Junie, and Codeium/Windsurf-style tools use gitignore-like files to exclude paths from AI context.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": ".aiignore", "note": "JetBrains Junie / AI Assistant." },
         { "name": ".cursorignore", "note": "Cursor." },
@@ -283,6 +321,8 @@
       "name": "DESIGN.md",
       "category": "Design",
       "maturity": "🟢",
+      "evidence": "Google Labs published design.md as a machine-readable design spec, and public design-md catalogs contain real examples.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": "DESIGN.md" }
       ],
@@ -301,6 +341,8 @@
       "name": "llms.txt",
       "category": "Web & discoverability",
       "maturity": "🟢",
+      "evidence": "llms.txt is published by many developer-docs sites, including Anthropic and Stripe, even though major-provider consumption is unconfirmed.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": "llms.txt", "note": "Curated index: short description plus linked sections of the key docs." },
         {
@@ -327,6 +369,8 @@
       "name": "pricing.md",
       "category": "Web & discoverability",
       "maturity": "🟢",
+      "evidence": "Multiple production SaaS sites expose Markdown pricing pages at predictable .md URLs for agent-friendly retrieval.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": "pricing.md" }
       ],
@@ -344,6 +388,8 @@
       "name": "auth.md",
       "category": "Agent-web trust",
       "maturity": "🟠",
+      "evidence": "WorkOS publishes both the auth.md spec page and a live auth.md file, but adoption beyond that ecosystem remains early.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": "auth.md" }
       ],
@@ -359,13 +405,15 @@
       "name": "ai.txt",
       "category": "Agent-web trust",
       "maturity": "🔵",
+      "evidence": "Spawning popularized deployed ai.txt files and a 2026 Internet-Draft proposes /.well-known/ai.txt, but crawler obedience and adoption remain unproven.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": "ai.txt" }
       ],
-      "read_by": "AI training-data crawlers that honor Spawning's opt-out (early adopters)",
-      "location": "Site root or /.well-known/ai.txt",
-      "spec": "https://site.spawning.ai/spawning-ai-txt",
-      "summary": "A text file declaring machine-readable consent for AI training and data-mining of a site's content - a robots.txt analogue for the training era. A real spec from a real org (Spawning, tied to the EU TDM opt-out), but adoption is thin and live files use divergent schemas - labelled down to 🔵 until consumption is demonstrable.",
+      "read_by": "AI training/data-mining crawlers that voluntarily honor AI usage preferences; crawler support is not yet reliable",
+      "location": "Site root /ai.txt in Spawning's deployed pattern; /.well-known/ai.txt in the newer Internet-Draft",
+      "spec": "https://datatracker.ietf.org/doc/draft-car-ai-txt-wellknown/",
+      "summary": "A text file declaring machine-readable consent, licensing, or policy preferences for AI training and data-mining. Spawning popularized the deployed root-file pattern, and a 2026 Internet-Draft now proposes a well-known URI; adoption and crawler obedience are still thin, so it stays 🔵.",
       "targets": [
         { "type": "web", "url": "https://raw.githubusercontent.com/WordPress/openverse/main/frontend/src/static/ai.txt", "as": "ai.txt", "source_label": "openverse" }
       ]
@@ -374,22 +422,32 @@
       "name": "Agent Cards (A2A)",
       "category": "Identity & protocols",
       "maturity": "🟠",
+      "evidence": "A2A v1.0 specifies Agent Cards and the well-known agent-card.json path, with public sample cards but still-early ecosystem adoption.",
+      "last_verified": "2026-06-18",
       "files": [
-        { "name": "agent.json" }
+        { "name": "agent-card.json", "note": "Current A2A well-known Agent Card filename." },
+        {
+          "name": "agent.json",
+          "kind": "pattern",
+          "note": "Legacy alias seen in earlier A2A material and deployments.",
+          "pattern": "A legacy well-known alias for an A2A Agent Card. New agents should publish `/.well-known/agent-card.json`; clients may still tolerate `/.well-known/agent.json` while interoperating with older deployments."
+        }
       ],
       "read_by": "A2A-compatible agents discovering another agent's capabilities",
       "location": "/.well-known/agent-card.json (the older /.well-known/agent.json is a legacy alias)",
       "spec": "https://a2a-protocol.org/latest/specification/",
       "summary": "The Agent2Agent (A2A) capability card - a JSON document at a well-known path advertising an agent's skills, endpoints, and auth so other agents can discover and call it. Now a Linux Foundation project at v1.0; adoption is growing but early.",
       "targets": [
-        { "type": "web", "url": "https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json", "as": "agent.json", "source_label": "currency" },
-        { "type": "web", "url": "https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/air_ticketing_agent.json", "as": "agent.json", "source_label": "air-ticketing" }
+        { "type": "web", "url": "https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json", "as": "agent-card.json", "source_label": "currency" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/air_ticketing_agent.json", "as": "agent-card.json", "source_label": "air-ticketing" }
       ]
     },
-    "proposed-protocols-md": {
+    "protocols-md": {
       "name": "The protocols.md namespace",
       "category": "Proposed namespace",
       "maturity": "🔵",
+      "evidence": "protocols.md is a published namespace of aspirational .md protocols, but there are no demonstrated readers or broad deployments.",
+      "last_verified": "2026-06-18",
       "files": [
         { "name": "proof.md", "note": "The namespace's flagship - live at its own apex domain (proof.md → www.proof.md), a v1.0 'living specification' that self-describes as 'an experiment.'" }
       ],

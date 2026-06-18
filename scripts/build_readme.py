@@ -16,6 +16,21 @@ import re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGETS_PATH = os.path.join(ROOT, "scripts", "targets.json")
 README_PATH = os.path.join(ROOT, "README.md")
+CATEGORIES_DIR = os.path.join(ROOT, "categories")
+
+CATEGORY_SLUGS = {
+    "Instruction & context": "instruction-context",
+    "Memory & state": "memory-state",
+    "Spec-driven development": "spec-driven-development",
+    "Skills & prompt assets": "skills-prompt-assets",
+    "Tooling & connections": "tooling-connections",
+    "Rules & ignore files": "rules-ignore-files",
+    "Design": "design",
+    "Web & discoverability": "web-discoverability",
+    "Agent-web trust": "agent-web-trust",
+    "Identity & protocols": "identity-protocols",
+    "Proposed namespace": "proposed-namespace",
+}
 
 
 def anchor(text):
@@ -41,6 +56,38 @@ def files_cell(conv):
         else:
             parts.append(f"`{f['name']}`")
     return " ".join(parts)
+
+
+def category_slug(category):
+    """Stable filenames for generated category index pages."""
+    if category in CATEGORY_SLUGS:
+        return CATEGORY_SLUGS[category]
+    slug = anchor(category).replace("--", "-")
+    return slug or "category"
+
+
+def category_page_path(category):
+    return os.path.join(CATEGORIES_DIR, f"{category_slug(category)}.md")
+
+
+def convention_row(slug, conv):
+    return (
+        f"| {conv['maturity']} "
+        f"| [{conv['name']}](../conventions/{slug}/) "
+        f"| {files_cell(conv)} "
+        f"| {conv['read_by']} "
+        f"| {spec_link(conv['spec'])} |"
+    )
+
+
+def root_convention_row(slug, conv):
+    return (
+        f"| {conv['maturity']} "
+        f"| [{conv['name']}](conventions/{slug}/) "
+        f"| {files_cell(conv)} "
+        f"| {conv['read_by']} "
+        f"| {spec_link(conv['spec'])} |"
+    )
 
 
 REPO = "ItamarZand88/awesome-agent-conventions"
@@ -101,7 +148,10 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 HOW = """## How the examples stay real
 
 Example files are never hand-written - an extractor fetches them from public
-sources and stamps each with a line-1 provenance comment. To refresh everything:
+sources and stamps each with a line-1 provenance comment. The examples remain
+under their upstream owners' licenses and terms; see
+[THIRD_PARTY_EXAMPLES.md](THIRD_PARTY_EXAMPLES.md) before reusing them. To
+refresh everything:
 
 ```bash
 pip install -r scripts/requirements.txt
@@ -114,6 +164,14 @@ just prints a `miss` and is skipped. Examples are representative samples: any
 file over 256 KB (e.g. a multi-MB `llms-full.txt`) is truncated with a marker
 pointing back to the full source. `scripts/targets.json` is the single source of
 truth; edit it and re-run both scripts.
+
+Shortcut targets are available in the [Makefile](Makefile):
+
+```bash
+make verify          # schema + generated files + example provenance + links
+make extract         # refetch public examples and rebuild generated docs
+make license-report  # summarize upstream licenses for vendored examples
+```
 
 Every link is held to its promise by CI: a [GitHub Action](.github/workflows/verify.yml)
 re-checks that the generated files are in sync with `targets.json` and that every
@@ -128,9 +186,15 @@ above and carry an evidenced maturity tier. Add your source to
 `scripts/targets.json`, run the two scripts, and open a PR - don't hand-write
 example files.
 
+Before proposing adjacent standards, check [WATCHLIST.md](WATCHLIST.md). Project
+direction lives in [ROADMAP.md](ROADMAP.md), and the one-time public release
+checklist lives in [OPEN_SOURCE_LAUNCH_CHECKLIST.md](OPEN_SOURCE_LAUNCH_CHECKLIST.md).
+
 ## License
 
-[MIT](LICENSE).
+The curation, scripts, and original prose in this repository are
+[MIT](LICENSE). Vendored example files remain under their upstream owners'
+licenses and terms; see [THIRD_PARTY_EXAMPLES.md](THIRD_PARTY_EXAMPLES.md).
 """
 
 
@@ -161,7 +225,8 @@ def build():
         entries = by_cat.get(cat, [])
         if not entries:
             continue
-        toc.append(f"- [{cat}](#{anchor(cat)})")
+        cat_page = f"categories/{category_slug(cat)}.md"
+        toc.append(f"- [{cat}](#{anchor(cat)}) · [category page]({cat_page})")
         for slug, conv in entries:
             toc.append(f"  - {conv['maturity']} [{conv['name']}](conventions/{slug}/)")
     out.append("\n".join(toc) + "\n")
@@ -172,16 +237,12 @@ def build():
         if not entries:
             continue
         section = [f"## {cat}\n"]
+        section.append(f"Standalone page: [categories/{category_slug(cat)}.md](categories/{category_slug(cat)}.md)")
+        section.append("")
         section.append("| | Convention | Files | Read by | Spec |")
         section.append("| --- | --- | --- | --- | --- |")
         for slug, conv in entries:
-            section.append(
-                f"| {conv['maturity']} "
-                f"| [{conv['name']}](conventions/{slug}/) "
-                f"| {files_cell(conv)} "
-                f"| {conv['read_by']} "
-                f"| {spec_link(conv['spec'])} |"
-            )
+            section.append(root_convention_row(slug, conv))
         section.append("")
         for slug, conv in entries:
             section.append(
@@ -195,6 +256,47 @@ def build():
     with open(README_PATH, "w", encoding="utf-8") as fh:
         fh.write("\n".join(out))
     print(f"wrote {os.path.relpath(README_PATH, ROOT)}")
+
+    build_category_pages(categories, by_cat)
+
+
+def build_category_pages(categories, by_cat):
+    os.makedirs(CATEGORIES_DIR, exist_ok=True)
+    expected = set()
+
+    for cat in categories:
+        entries = by_cat.get(cat, [])
+        if not entries:
+            continue
+
+        path = category_page_path(cat)
+        expected.add(os.path.basename(path))
+        out = [
+            "<!-- GENERATED by scripts/build_readme.py - do not hand-edit. -->",
+            "",
+            f"# {cat}",
+            "",
+            "[Back to README](../README.md)",
+            "",
+            "| | Convention | Files | Read by | Spec |",
+            "| --- | --- | --- | --- | --- |",
+        ]
+        for slug, conv in entries:
+            out.append(convention_row(slug, conv))
+        out.append("")
+        for slug, conv in entries:
+            out.append(f"## [{conv['name']}](../conventions/{slug}/)")
+            out.append("")
+            out.append(conv["summary"])
+            out.append("")
+        with open(path, "w", encoding="utf-8") as fh:
+            fh.write("\n".join(out))
+        print(f"wrote {os.path.relpath(path, ROOT)}")
+
+    for name in os.listdir(CATEGORIES_DIR):
+        if name.endswith(".md") and name not in expected:
+            os.remove(os.path.join(CATEGORIES_DIR, name))
+            print(f"removed {os.path.join('categories', name)}")
 
 
 if __name__ == "__main__":

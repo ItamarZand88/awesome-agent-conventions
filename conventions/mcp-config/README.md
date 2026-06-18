@@ -5,6 +5,8 @@
 - **Read by:** Claude Code, Claude Desktop, Cursor, VS Code / Copilot - any MCP host
 - **Location:** Repo root (.mcp.json), .vscode/mcp.json, or the app config dir (claude_desktop_config.json)
 - **Spec:** [https://code.claude.com/docs/en/mcp](https://code.claude.com/docs/en/mcp)
+- **Evidence:** MCP hosts including Claude Code, Claude Desktop, Cursor, and VS Code document project or app-level MCP server config files.
+- **Last verified:** 2026-06-18
 - **Files:** `.mcp.json`
 
 ## Examples

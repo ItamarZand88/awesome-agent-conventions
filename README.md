@@ -50,52 +50,56 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 
 ## Contents
 
-- [Instruction & context](#instruction--context)
+- [Instruction & context](#instruction--context) · [category page](categories/instruction-context.md)
   - 🟢 [AGENTS.md](conventions/agents-md/)
   - 🟢 [CLAUDE.md](conventions/claude-md/)
-  - 🟢 [Tool-specific instruction files](conventions/instruction-variants/)
-- [Memory & state](#memory--state)
+  - 🟢 [Tool-specific instruction files](conventions/tool-specific-instructions/)
+- [Memory & state](#memory--state) · [category page](categories/memory-state.md)
   - 🟢 [MEMORY.md](conventions/memory-md/)
   - 🟢 [Memory Bank](conventions/memory-bank/)
-- [Spec-driven development](#spec-driven-development)
+- [Spec-driven development](#spec-driven-development) · [category page](categories/spec-driven-development.md)
   - 🟢 [Spec Kit](conventions/spec-kit/)
   - 🟢 [Kiro steering files](conventions/kiro-steering/)
-- [Skills & prompt assets](#skills--prompt-assets)
+- [Skills & prompt assets](#skills--prompt-assets) · [category page](categories/skills-prompt-assets.md)
   - 🟢 [SKILL.md](conventions/skill-md/)
   - 🟢 [Prompt asset files](conventions/prompt-assets/)
   - 🟢 [Claude Code commands](conventions/claude-commands/)
   - 🟢 [Copilot prompt & instruction files](conventions/copilot-prompt-files/)
-- [Tooling & connections](#tooling--connections)
+- [Tooling & connections](#tooling--connections) · [category page](categories/tooling-connections.md)
   - 🟢 [MCP server config](conventions/mcp-config/)
-- [Rules & ignore files](#rules--ignore-files)
-  - 🟢 [Rules files](conventions/rules-files/)
-  - 🟢 [AI ignore files](conventions/ignore-files/)
-- [Design](#design)
+- [Rules & ignore files](#rules--ignore-files) · [category page](categories/rules-ignore-files.md)
+  - 🟢 [Rules files](conventions/agent-rules/)
+  - 🟢 [AI ignore files](conventions/ai-ignore-files/)
+- [Design](#design) · [category page](categories/design.md)
   - 🟢 [DESIGN.md](conventions/design-md/)
-- [Web & discoverability](#web--discoverability)
+- [Web & discoverability](#web--discoverability) · [category page](categories/web-discoverability.md)
   - 🟢 [llms.txt](conventions/llms-txt/)
   - 🟢 [pricing.md](conventions/pricing-md/)
-- [Agent-web trust](#agent-web-trust)
+- [Agent-web trust](#agent-web-trust) · [category page](categories/agent-web-trust.md)
   - 🟠 [auth.md](conventions/auth-md/)
   - 🔵 [ai.txt](conventions/ai-txt/)
-- [Identity & protocols](#identity--protocols)
+- [Identity & protocols](#identity--protocols) · [category page](categories/identity-protocols.md)
   - 🟠 [Agent Cards (A2A)](conventions/agent-cards/)
-- [Proposed namespace](#proposed-namespace)
-  - 🔵 [The protocols.md namespace](conventions/proposed-protocols-md/)
+- [Proposed namespace](#proposed-namespace) · [category page](categories/proposed-namespace.md)
+  - 🔵 [The protocols.md namespace](conventions/protocols-md/)
 
 ## Instruction & context
+
+Standalone page: [categories/instruction-context.md](categories/instruction-context.md)
 
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
 | 🟢 | [AGENTS.md](conventions/agents-md/) | `AGENTS.md` | Most coding agents - OpenAI Codex, Cursor, Jules, Aider, Gemini CLI, Zed, and others | [spec ↗](https://agents.md) |
 | 🟢 | [CLAUDE.md](conventions/claude-md/) | `CLAUDE.md` | Claude Code, and tools that read the Claude memory convention | [spec ↗](https://code.claude.com/docs/en/memory) |
-| 🟢 | [Tool-specific instruction files](conventions/instruction-variants/) | `GEMINI.md` `AGENT.md` `QWEN.md` `WARP.md` `CONVENTIONS.md` `copilot-instructions.md` | Each file is read by its namesake tool - Gemini CLI, Amp, Qwen Code, Warp, Aider, GitHub Copilot | [spec ↗](https://agents.md) |
+| 🟢 | [Tool-specific instruction files](conventions/tool-specific-instructions/) | `GEMINI.md` `AGENT.md` `QWEN.md` `WARP.md` `CONVENTIONS.md` `copilot-instructions.md` | Each file is read by its namesake tool - Gemini CLI, Amp, Qwen Code, Warp, Aider, GitHub Copilot - often alongside or as a bridge to AGENTS.md | [spec ↗](https://agents.md) |
 
 - **[AGENTS.md](conventions/agents-md/)** - A plain-Markdown "README for agents" - build/test commands, conventions, and gotchas an agent needs before touching the code. The most widely adopted cross-tool instruction file.
 - **[CLAUDE.md](conventions/claude-md/)** - Anthropic's memory file for Claude Code - loaded automatically at session start to carry project commands, style rules, and standing instructions across turns.
-- **[Tool-specific instruction files](conventions/instruction-variants/)** - Per-tool instruction files that predate or coexist with AGENTS.md. Many tools now fall back to or symlink AGENTS.md, but these named variants are still read in the wild.
+- **[Tool-specific instruction files](conventions/tool-specific-instructions/)** - Per-tool instruction files that predate or coexist with AGENTS.md. Some tools now default to AGENTS.md while keeping legacy filenames alive, so these variants still matter when auditing real repositories.
 
 ## Memory & state
+
+Standalone page: [categories/memory-state.md](categories/memory-state.md)
 
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
@@ -107,6 +111,8 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 
 ## Spec-driven development
 
+Standalone page: [categories/spec-driven-development.md](categories/spec-driven-development.md)
+
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
 | 🟢 | [Spec Kit](conventions/spec-kit/) | `constitution.md` `spec.md` `plan.md` `tasks.md` | GitHub Spec Kit's slash-command agents (Copilot, Claude, Gemini, Cursor, and more) | [spec ↗](https://github.com/github/spec-kit) |
@@ -116,6 +122,8 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 - **[Kiro steering files](conventions/kiro-steering/)** - Kiro's always-on steering docs - product, structure, and tech files that give the agent persistent project context outside of any single spec.
 
 ## Skills & prompt assets
+
+Standalone page: [categories/skills-prompt-assets.md](categories/skills-prompt-assets.md)
 
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
@@ -131,6 +139,8 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 
 ## Tooling & connections
 
+Standalone page: [categories/tooling-connections.md](categories/tooling-connections.md)
+
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
 | 🟢 | [MCP server config](conventions/mcp-config/) | `.mcp.json` | Claude Code, Claude Desktop, Cursor, VS Code / Copilot - any MCP host | [spec ↗](https://code.claude.com/docs/en/mcp) |
@@ -139,15 +149,19 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 
 ## Rules & ignore files
 
+Standalone page: [categories/rules-ignore-files.md](categories/rules-ignore-files.md)
+
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
-| 🟢 | [Rules files](conventions/rules-files/) | `.cursorrules` `.mdc` `.clinerules` `.windsurfrules` | Cursor (.cursorrules / .mdc), Cline (.clinerules), Windsurf (.windsurfrules) | [spec ↗](https://cursor.com/docs/rules) |
-| 🟢 | [AI ignore files](conventions/ignore-files/) | `.aiignore` `.cursorignore` `.codeiumignore` | JetBrains Junie (.aiignore), Cursor (.cursorignore), Codeium/Windsurf (.codeiumignore) | [spec ↗](https://cursor.com/docs/reference/ignore-file) |
+| 🟢 | [Rules files](conventions/agent-rules/) | `.cursorrules` `.mdc` `.clinerules` `.clinerules/` _(pattern)_ `.windsurfrules` | Cursor (.cursorrules / .mdc), Cline (.clinerules/ and legacy .clinerules), Windsurf (.windsurfrules) | [spec ↗](https://docs.cline.bot/customization/cline-rules) |
+| 🟢 | [AI ignore files](conventions/ai-ignore-files/) | `.aiignore` `.cursorignore` `.codeiumignore` | JetBrains Junie (.aiignore), Cursor (.cursorignore), Codeium/Windsurf (.codeiumignore) | [spec ↗](https://cursor.com/docs/reference/ignore-file) |
 
-- **[Rules files](conventions/rules-files/)** - Per-tool rule files that scope agent behavior - older single-file forms (.cursorrules, .windsurfrules) and newer directory-based, glob-scoped forms (.cursor/rules/*.mdc).
-- **[AI ignore files](conventions/ignore-files/)** - gitignore-syntax files that fence an AI agent out of paths - secrets, vendored code, generated output - so they're never sent to the model as context.
+- **[Rules files](conventions/agent-rules/)** - Per-tool rule files that scope agent behavior - older single-file forms (.cursorrules, .clinerules, .windsurfrules) and newer directory-based, glob-scoped forms (.cursor/rules/*.mdc, .clinerules/, .windsurf/rules/*.md).
+- **[AI ignore files](conventions/ai-ignore-files/)** - gitignore-syntax files that fence an AI agent out of paths - secrets, vendored code, generated output - so they're never sent to the model as context.
 
 ## Design
+
+Standalone page: [categories/design.md](categories/design.md)
 
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
@@ -156,6 +170,8 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 - **[DESIGN.md](conventions/design-md/)** - A structured, machine-readable design specification - tokens, components, and layout intent - that an agent reads to generate or keep UI consistent with an established system. Open-sourced by Google Labs in 2026 as a cross-tool draft spec.
 
 ## Web & discoverability
+
+Standalone page: [categories/web-discoverability.md](categories/web-discoverability.md)
 
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
@@ -167,34 +183,43 @@ a proposed idea is never shown beside an adopted standard as if they were equal.
 
 ## Agent-web trust
 
+Standalone page: [categories/agent-web-trust.md](categories/agent-web-trust.md)
+
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
 | 🟠 | [auth.md](conventions/auth-md/) | `auth.md` | Agents discovering how to authenticate to a service (early adopters) | [spec ↗](https://workos.com/auth-md) |
-| 🔵 | [ai.txt](conventions/ai-txt/) | `ai.txt` | AI training-data crawlers that honor Spawning's opt-out (early adopters) | [spec ↗](https://site.spawning.ai/spawning-ai-txt) |
+| 🔵 | [ai.txt](conventions/ai-txt/) | `ai.txt` | AI training/data-mining crawlers that voluntarily honor AI usage preferences; crawler support is not yet reliable | [spec ↗](https://datatracker.ietf.org/doc/draft-car-ai-txt-wellknown/) |
 
 - **[auth.md](conventions/auth-md/)** - A Markdown file that tells an agent how to authenticate with a service - discovery of auth endpoints and flows. Shipped by WorkOS as a real, working convention, but adoption beyond it is still early.
-- **[ai.txt](conventions/ai-txt/)** - A text file declaring machine-readable consent for AI training and data-mining of a site's content - a robots.txt analogue for the training era. A real spec from a real org (Spawning, tied to the EU TDM opt-out), but adoption is thin and live files use divergent schemas - labelled down to 🔵 until consumption is demonstrable.
+- **[ai.txt](conventions/ai-txt/)** - A text file declaring machine-readable consent, licensing, or policy preferences for AI training and data-mining. Spawning popularized the deployed root-file pattern, and a 2026 Internet-Draft now proposes a well-known URI; adoption and crawler obedience are still thin, so it stays 🔵.
 
 ## Identity & protocols
 
+Standalone page: [categories/identity-protocols.md](categories/identity-protocols.md)
+
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
-| 🟠 | [Agent Cards (A2A)](conventions/agent-cards/) | `agent.json` | A2A-compatible agents discovering another agent's capabilities | [spec ↗](https://a2a-protocol.org/latest/specification/) |
+| 🟠 | [Agent Cards (A2A)](conventions/agent-cards/) | `agent-card.json` `agent.json` _(pattern)_ | A2A-compatible agents discovering another agent's capabilities | [spec ↗](https://a2a-protocol.org/latest/specification/) |
 
 - **[Agent Cards (A2A)](conventions/agent-cards/)** - The Agent2Agent (A2A) capability card - a JSON document at a well-known path advertising an agent's skills, endpoints, and auth so other agents can discover and call it. Now a Linux Foundation project at v1.0; adoption is growing but early.
 
 ## Proposed namespace
 
+Standalone page: [categories/proposed-namespace.md](categories/proposed-namespace.md)
+
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
-| 🔵 | [The protocols.md namespace](conventions/proposed-protocols-md/) | `proof.md` | - (no demonstrated readers; aspirational) | [spec ↗](https://protocols.md) |
+| 🔵 | [The protocols.md namespace](conventions/protocols-md/) | `proof.md` | - (no demonstrated readers; aspirational) | [spec ↗](https://protocols.md) |
 
-- **[The protocols.md namespace](conventions/proposed-protocols-md/)** - A single maintainer's pre-registered namespace of ~74 aspirational .md "protocols" (proof.md, signature.md, reputation.md, …) staked as Schelling points for a future agent web. Published concept, no demonstrated adoption - see the page for the audited, honest caveats.
+- **[The protocols.md namespace](conventions/protocols-md/)** - A single maintainer's pre-registered namespace of ~74 aspirational .md "protocols" (proof.md, signature.md, reputation.md, …) staked as Schelling points for a future agent web. Published concept, no demonstrated adoption - see the page for the audited, honest caveats.
 
 ## How the examples stay real
 
 Example files are never hand-written - an extractor fetches them from public
-sources and stamps each with a line-1 provenance comment. To refresh everything:
+sources and stamps each with a line-1 provenance comment. The examples remain
+under their upstream owners' licenses and terms; see
+[THIRD_PARTY_EXAMPLES.md](THIRD_PARTY_EXAMPLES.md) before reusing them. To
+refresh everything:
 
 ```bash
 pip install -r scripts/requirements.txt
@@ -208,6 +233,14 @@ file over 256 KB (e.g. a multi-MB `llms-full.txt`) is truncated with a marker
 pointing back to the full source. `scripts/targets.json` is the single source of
 truth; edit it and re-run both scripts.
 
+Shortcut targets are available in the [Makefile](Makefile):
+
+```bash
+make verify          # schema + generated files + example provenance + links
+make extract         # refetch public examples and rebuild generated docs
+make license-report  # summarize upstream licenses for vendored examples
+```
+
 Every link is held to its promise by CI: a [GitHub Action](.github/workflows/verify.yml)
 re-checks that the generated files are in sync with `targets.json` and that every
 spec, example, and instance URL still resolves - on each pull request and weekly.
@@ -220,6 +253,12 @@ above and carry an evidenced maturity tier. Add your source to
 `scripts/targets.json`, run the two scripts, and open a PR - don't hand-write
 example files.
 
+Before proposing adjacent standards, check [WATCHLIST.md](WATCHLIST.md). Project
+direction lives in [ROADMAP.md](ROADMAP.md), and the one-time public release
+checklist lives in [OPEN_SOURCE_LAUNCH_CHECKLIST.md](OPEN_SOURCE_LAUNCH_CHECKLIST.md).
+
 ## License
 
-[MIT](LICENSE).
+The curation, scripts, and original prose in this repository are
+[MIT](LICENSE). Vendored example files remain under their upstream owners'
+licenses and terms; see [THIRD_PARTY_EXAMPLES.md](THIRD_PARTY_EXAMPLES.md).

@@ -5,6 +5,8 @@
 - **Read by:** AWS Kiro, and Kiro-compatible agents
 - **Location:** .kiro/steering/*.md (or ~/.kiro/steering/ for global)
 - **Spec:** [https://kiro.dev/docs/steering](https://kiro.dev/docs/steering)
+- **Evidence:** Kiro docs define .kiro/steering files and public Kiro projects commit the standard product, structure, and tech files.
+- **Last verified:** 2026-06-18
 - **Files:** `product.md`, `structure.md`, `tech.md`
 
 ## Examples

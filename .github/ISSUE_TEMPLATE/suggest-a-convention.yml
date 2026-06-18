@@ -8,7 +8,8 @@ body:
       value: |
         Thanks! A file qualifies only if an AI agent **reads, writes, or acts on** it.
         Human docs (`README.md`, `CONTRIBUTING.md`, …) are out. The more evidence you
-        bring, the faster it lands.
+        bring, the faster it lands. Please include license/permission context for any
+        example file you want vendored into the repo.
   - type: input
     id: name
     attributes:
@@ -39,6 +40,14 @@ body:
       label: Real, public example sources
       description: Links to actual files in public repos or sites (prefer raw.githubusercontent.com). These get vendored by the extractor - not hand-written.
       placeholder: "https://raw.githubusercontent.com/owner/repo/main/AGENTS.md"
+    validations:
+      required: true
+  - type: textarea
+    id: license
+    attributes:
+      label: Upstream license / reuse evidence
+      description: Public URLs are not automatically reusable. Link the upstream license, terms, or permission context; say if the source has no detected license.
+      placeholder: "MIT license in repo, Apache-2.0 docs sample, website terms permit reuse, or no license detected."
     validations:
       required: true
   - type: input

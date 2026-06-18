@@ -5,6 +5,8 @@
 - **Read by:** JetBrains Junie (.aiignore), Cursor (.cursorignore), Codeium/Windsurf (.codeiumignore)
 - **Location:** Repository root (gitignore-style glob syntax)
 - **Spec:** [https://cursor.com/docs/reference/ignore-file](https://cursor.com/docs/reference/ignore-file)
+- **Evidence:** Cursor, JetBrains Junie, and Codeium/Windsurf-style tools use gitignore-like files to exclude paths from AI context.
+- **Last verified:** 2026-06-18
 - **Files:** `.aiignore`, `.cursorignore`, `.codeiumignore`
 
 ## Examples

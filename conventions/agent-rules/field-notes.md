@@ -10,7 +10,7 @@
 
 **Windsurf `.windsurf/rules/*.md`**: `trigger` (`always_on` / `model_decision` / `glob` / `manual`), `description` (for `model_decision`), `globs` (for `glob`). Limits: **12,000 chars** per workspace rule file, **6,000** global.
 
-**Cline `.clinerules`** (file or directory): optional frontmatter `paths` (glob[]), `alwaysApply` (bool), `description`; a file with no frontmatter is always active; toggleable in the UI.
+**Cline `.clinerules/`**: primary workspace rules directory at the project root. Cline processes all `.md` and `.txt` files inside it, combines workspace and global rules, and gives workspace rules precedence when they conflict. Legacy `.clinerules` single-file rules are still detected.
 
 **Legacy single-file forms** - `.cursorrules`, `.windsurfrules` - are plain prose, always injected, no frontmatter.
 
@@ -25,4 +25,4 @@
 
 ### Edge cases
 - **Four activation modes**, not three: Always, Auto-Attached (glob), Agent-Requested (by description), and **Manual** (`@rule` mention) - pick the narrowest that works. Windsurf mirrors these via its `trigger` field.
-- `.cursorrules` is superseded by `.cursor/rules/*.mdc` and `.windsurfrules` by `.windsurf/rules/`; both tools now also accept a plain `AGENTS.md`. `.cursor/rules/` can be **nested** per subdirectory, and rules reference files with `@filename`.
+- `.cursorrules` is superseded by `.cursor/rules/*.mdc`, `.clinerules` by `.clinerules/`, and `.windsurfrules` by `.windsurf/rules/`; these tools increasingly also accept a plain `AGENTS.md`. `.cursor/rules/` can be **nested** per subdirectory, and rules reference files with `@filename`.
