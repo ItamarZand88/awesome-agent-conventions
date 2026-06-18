@@ -23,7 +23,7 @@ import re
 import sys
 from urllib.parse import urlparse
 
-from catalog import has_local_metadata, load_local_metadata, local_targets
+from catalog import has_complete_local_metadata, load_local_metadata, local_targets
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGETS_PATH = os.path.join(ROOT, "scripts", "targets.json")
@@ -479,7 +479,7 @@ def process_convention(slug, conv, index_only):
     examples_dir = os.path.join(slug_dir, "examples")
     local_convention = None
     local_sources = None
-    if has_local_metadata(slug):
+    if has_complete_local_metadata(slug):
         local_convention, local_sources = load_local_metadata(slug)
         conv = {
             **conv,

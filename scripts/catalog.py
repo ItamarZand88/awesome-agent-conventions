@@ -36,6 +36,11 @@ def has_local_metadata(slug):
     return os.path.exists(convention_path) or os.path.exists(sources_path)
 
 
+def has_complete_local_metadata(slug):
+    convention_path, sources_path = local_metadata_paths(slug)
+    return os.path.exists(convention_path) and os.path.exists(sources_path)
+
+
 def load_local_metadata(slug):
     convention_path, sources_path = local_metadata_paths(slug)
     return load_yaml(convention_path), load_yaml(sources_path)
