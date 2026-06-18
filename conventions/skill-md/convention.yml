@@ -1,0 +1,58 @@
+slug: skill-md
+name: SKILL.md
+category: Skills & prompt assets
+maturity: 🟢
+summary: A self-contained, model-invoked capability file that tells an agent when to load a reusable procedure and how to execute it.
+purpose: SKILL.md lets an agent keep specialized workflows, scripts, references, and resources out of the main context until the model or user needs that capability.
+readers:
+  - Claude Agent Skills
+  - Claude Code
+  - Amp
+  - Agent Skills-compatible tools
+writers:
+  - Tool authors
+  - Product teams packaging agent capabilities
+  - Developers turning repeated agent workflows into reusable capabilities
+locations:
+  - path: <skill-name>/SKILL.md
+    description: Portable Agent Skills directory format; bundled scripts and resources live beside the manifest.
+  - path: .claude/skills/<skill-name>/SKILL.md
+    description: Claude Code project skill location.
+  - path: ~/.claude/skills/<skill-name>/SKILL.md
+    description: Claude Code user skill location.
+loading:
+  - The skill name and description are listed up front; the body and bundled files are loaded only when the skill is relevant.
+  - The open specification requires name and description frontmatter; product-specific runtimes may add optional fields.
+  - Keep the description precise because it is the activation signal.
+files:
+  - name: SKILL.md
+    required: true
+    description: Markdown manifest with YAML frontmatter followed by task instructions.
+shape:
+  - name: name
+    required: true
+    description: Lowercase skill identifier; in the open spec it must match the parent directory.
+  - name: description
+    required: true
+    description: Activation text that states what the skill does and when to use it.
+  - name: body
+    required: true
+    description: Procedural instructions, references to bundled resources, and workflow steps.
+  - name: bundled files
+    required: false
+    description: Optional scripts, references, templates, and assets loaded only after the skill is activated.
+principles:
+  - Use SKILL.md for repeatable capabilities, not standing project context.
+  - Put activation criteria in the description, not buried in the body.
+  - Keep the body procedural and move bulky reference material into bundled files.
+  - Prefer portable open-spec fields unless a runtime-specific extension is necessary.
+  - Treat examples as capability packages, not as the definition of the convention.
+related:
+  - slug: claude-commands
+    relationship: Claude commands are legacy or direct-invocation workflows; SKILL.md is better when a capability needs resources, scripts, references, or model-invoked activation.
+  - slug: agents-md
+    relationship: AGENTS.md carries standing project instructions; SKILL.md carries reusable procedures.
+  - slug: claude-md
+    relationship: CLAUDE.md is project memory loaded into context; SKILL.md is loaded on demand.
+  - slug: prompt-assets
+    relationship: Prompt assets externalize prompts; SKILL.md packages a broader operational capability around instructions and resources.

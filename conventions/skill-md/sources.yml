@@ -1,0 +1,37 @@
+slug: skill-md
+research:
+  - label: Agent Skills specification
+    type: spec
+    url: https://agentskills.io/specification
+    why: Defines the portable SKILL.md contract, required frontmatter, and packaging model.
+  - label: Anthropic Agent Skills overview
+    type: docs
+    url: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview
+    why: Documents Anthropic product support and how skills are used by Claude.
+  - label: Claude Code skills and commands docs
+    type: docs
+    url: https://code.claude.com/docs/en/slash-commands
+    why: Captures Claude Code's command-to-skill convergence and runtime extensions.
+  - label: Amp manual
+    type: docs
+    url: https://ampcode.com/manual
+    why: Shows another implementation using skills and runtime-specific skill metadata.
+  - label: anthropics/skills
+    type: repo
+    url: https://github.com/anthropics/skills
+    why: Provides maintained public examples of complete skill packages.
+examples:
+  - label: mcp-builder
+    represents: A procedure-heavy skill with a precise activation description and implementation workflow.
+    upstream:
+      label: anthropics/skills
+      url: https://github.com/anthropics/skills
+    url: https://raw.githubusercontent.com/anthropics/skills/main/skills/mcp-builder/SKILL.md
+    filename: SKILL.md
+  - label: pdf
+    represents: A skill that relies on bundled tooling and domain-specific operational guidance.
+    upstream:
+      label: anthropics/skills
+      url: https://github.com/anthropics/skills
+    url: https://raw.githubusercontent.com/anthropics/skills/main/skills/pdf/SKILL.md
+    filename: SKILL.md
