@@ -45,7 +45,7 @@
 
 **Interfaces:**
 - Consumes: Existing `jsonschema` validation pattern in `scripts/validate_targets.py`.
-- Produces: JSON Schemas consumed by `scripts/catalog.py` / `scripts/validate_targets.py`.
+- Produces: JSON Schemas consumed by `catalog.py` / `scripts/validate_targets.py`.
 
 - [ ] **Step 1: Add the YAML dependency**
 
@@ -357,7 +357,7 @@ Run:
 
 ```bash
 .venv/bin/python - <<'PY'
-import scripts.catalog
+import catalog
 print("catalog import ok")
 PY
 ```
@@ -369,7 +369,7 @@ Expected after installing `PyYAML`: prints `catalog import ok`. If it fails with
 Add this import near the top:
 
 ```python
-from scripts.catalog import has_local_metadata, validate_local_metadata
+from catalog import has_local_metadata, validate_local_metadata
 ```
 
 Inside the `for slug, conv in conventions.items():` loop, after category/maturity checks, add:
@@ -572,7 +572,7 @@ def local_targets(sources):
 Add near imports:
 
 ```python
-from scripts.catalog import has_local_metadata, load_local_metadata, local_targets
+from catalog import has_local_metadata, load_local_metadata, local_targets
 ```
 
 - [ ] **Step 3: Use local targets for fetching migrated conventions**
