@@ -16,7 +16,7 @@ import urllib.request
 from collections import defaultdict
 from urllib.parse import urlparse
 
-from catalog import effective_example_urls
+from catalog import effective_example_urls, has_complete_local_metadata, local_example_path_map
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGETS_PATH = os.path.join(ROOT, "scripts", "targets.json")
@@ -51,6 +51,29 @@ def iter_examples():
                 path = os.path.join(root, name)
                 rel = os.path.relpath(path, examples_dir)
                 yield slug, rel, path
+
+
+def validate_declared_local_examples(slug, errors):
+    if not has_complete_local_metadata(slug):
+        return []
+
+    declared = []
+    slug_dir = os.path.join(CONVENTIONS_DIR, slug)
+    for rel, example in local_example_path_map(slug).items():
+        path = os.path.join(slug_dir, rel)
+        declared.append((rel, path, example))
+        if not os.path.exists(path):
+            errors.append(f"{slug}/{rel}: declared local example is missing")
+            continue
+        provenance = read_provenance(path)
+        if not provenance:
+            continue
+        _, url = provenance
+        if url != example["url"]:
+            errors.append(
+                f"{slug}/{rel}: provenance URL {url!r} does not match declared example URL {example['url']!r}"
+            )
+    return declared
 
 
 def read_provenance(path):
@@ -112,6 +135,11 @@ def collect(offline):
     examples = []
     repos = defaultdict(set)
     websites = defaultdict(set)
+    declared_locals = {}
+
+    for slug in allowed_urls:
+        for rel, path, example in validate_declared_local_examples(slug, errors):
+            declared_locals.setdefault(slug, {})[rel] = example
 
     for slug, name, path in iter_examples():
         if os.sep not in name:
@@ -124,6 +152,11 @@ def collect(offline):
         if url not in allowed_urls.get(slug, set()):
             errors.append(
                 f"{slug}/examples/{name}: provenance URL is not declared in the active metadata source for this convention"
+            )
+        expected = declared_locals.get(slug, {}).get(os.path.join("examples", name))
+        if expected and url != expected["url"]:
+            errors.append(
+                f"{slug}/examples/{name}: provenance URL {url!r} does not match declared example URL {expected['url']!r}"
             )
         examples.append((slug, name, label, url))
         repo = github_repo_from_url(url)

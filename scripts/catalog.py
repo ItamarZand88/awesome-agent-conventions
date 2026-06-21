@@ -2,6 +2,7 @@
 """Catalog metadata helpers for convention-led pages."""
 import json
 import os
+import re
 
 import jsonschema
 import yaml
@@ -10,6 +11,21 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONVENTIONS_DIR = os.path.join(ROOT, "conventions")
 CONVENTION_SCHEMA_PATH = os.path.join(ROOT, "scripts", "convention.schema.json")
 SOURCES_SCHEMA_PATH = os.path.join(ROOT, "scripts", "sources.schema.json")
+COMMON_SOURCE_SUFFIXES = {
+    "ai",
+    "app",
+    "chat",
+    "cloud",
+    "com",
+    "dev",
+    "io",
+    "md",
+    "net",
+    "org",
+    "sh",
+    "so",
+    "txt",
+}
 
 
 def load_json(path):
@@ -68,6 +84,40 @@ def local_targets(sources):
             }
         )
     return targets
+
+
+def source_dirname(label):
+    """Directory-safe source name for examples/<source>/<filename>."""
+    cleaned = label.strip().lower()
+    parts = [part for part in cleaned.split(".") if part]
+    if len(parts) >= 2 and parts[-1] in COMMON_SOURCE_SUFFIXES:
+        cleaned = ".".join(parts[:-1])
+    cleaned = re.sub(r"[^a-z0-9]+", "-", cleaned).strip("-")
+    return cleaned or "source"
+
+
+def local_example_relpaths(slug_or_sources):
+    if isinstance(slug_or_sources, str):
+        _, sources = load_local_metadata(slug_or_sources)
+    else:
+        sources = slug_or_sources
+
+    return [
+        os.path.join("examples", source_dirname(example["label"]), example["filename"])
+        for example in sources.get("examples", [])
+    ]
+
+
+def local_example_path_map(slug_or_sources):
+    if isinstance(slug_or_sources, str):
+        _, sources = load_local_metadata(slug_or_sources)
+    else:
+        sources = slug_or_sources
+
+    return {
+        os.path.join("examples", source_dirname(example["label"]), example["filename"]): example
+        for example in sources.get("examples", [])
+    }
 
 
 def local_example_urls(slug_or_sources):

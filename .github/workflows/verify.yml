@@ -1,8 +1,8 @@
 name: verify
 
 # Guards for a list whose credibility is "the files and links are real":
-#   1. scripts/targets.json matches its schema and local invariants
-#   2. generated files are in sync with scripts/targets.json (no hand-edits)
+#   1. catalog metadata matches schema and local invariants
+#   2. generated files are in sync with active catalog metadata, including migrated local metadata
 #   3. vendored examples have provenance
 #   4. every spec / example / instance URL still resolves
 on:
