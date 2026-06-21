@@ -35,3 +35,10 @@ examples:
       url: https://github.com/anthropics/skills
     url: https://raw.githubusercontent.com/anthropics/skills/main/skills/pdf/SKILL.md
     filename: SKILL.md
+  - label: x-twitter-scraper
+    represents: A product API skill with precise activation text, safety metadata, and bundled reference links for agent use.
+    upstream:
+      label: Xquik-dev/x-twitter-scraper
+      url: https://github.com/Xquik-dev/x-twitter-scraper
+    url: https://raw.githubusercontent.com/Xquik-dev/x-twitter-scraper/master/skills/x-twitter-scraper/SKILL.md
+    filename: SKILL.md
