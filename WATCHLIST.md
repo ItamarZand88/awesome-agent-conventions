@@ -5,7 +5,7 @@ entries yet. A watchlist item is not a rejection; it means the project needs
 live examples, demonstrated readers, or a more stable spec before cataloging it
 as a convention.
 
-Last reviewed: 2026-06-18.
+Last reviewed: 2026-06-21.
 
 ## Strong candidates
 
@@ -61,6 +61,17 @@ Last reviewed: 2026-06-18.
   preferences.
 - Why not listed yet: This repo catalogs files an agent reads, writes, or acts
   on; headers are adjacent but outside the current inclusion filter.
+
+### `PLAYBOOK.md`
+
+- Status: Single-team, in-production convention (surfaced via community feedback).
+- Why watch: A procedures/runbook file paired with `CLAUDE.md`-style policy. Same
+  read-only, enforced role, but a distinct function: how to run the cycle (call
+  order, dedup logic, crash recovery) rather than identity and rules.
+- Why not listed yet: No adoption evidence beyond one team's system, and no tool
+  reads it by name.
+- Promotion bar: a few independent public repos committing `PLAYBOOK.md`, or a
+  tool that reads it by name.
 
 ## How to promote an item
 
