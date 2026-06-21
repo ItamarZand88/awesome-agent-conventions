@@ -251,8 +251,9 @@ make license-report  # summarize upstream licenses for vendored examples
 
 CI keeps the generated files and links honest. The
 [verify workflow](.github/workflows/verify.yml) checks that generated docs match
-`targets.json` and that every spec, example, and instance URL still resolves on
-each pull request and weekly. Run the same link check locally with
+catalog metadata and migrated local metadata, and that every spec, example, and
+instance URL still resolves on each pull request and weekly. Run the same link
+check locally with
 `python scripts/check_links.py`.
 
 ## Contributing
