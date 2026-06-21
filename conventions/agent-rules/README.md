@@ -90,6 +90,11 @@ Windsurf - legacy single-file form (superseded by .windsurf/rules/*.md).
 - `.cursorrules` is superseded by `.cursor/rules/*.mdc`, `.clinerules` by `.clinerules/`, and `.windsurfrules` by `.devin/rules/*.md` / `.windsurf/rules/*.md`; these tools increasingly also accept a plain `AGENTS.md`. `.cursor/rules/` can be **nested** per subdirectory, and rules reference files with `@filename`.
 - Root-level AGENTS.md in Devin/Cascade is processed by the same rules engine as always-on context, while subdirectory AGENTS.md files act like location-scoped glob rules. Do not duplicate the same guidance in both a rule and AGENTS.md.
 
+### Effective context boundary
+- A filename match is not enough. For each rules convention, ask **what actually reaches the model or agent runtime**: the whole file, a glob-matched subset, a model-selected rule by description, a manually mentioned rule, or only an indexed/searchable artifact.
+- Keep **ignore semantics** separate from rule activation. `.cursorignore` can block Cursor access/indexing, `.cursorindexingignore` blocks indexing only, and terminal/MCP tools may still see files unless the harness enforces a stronger boundary.
+- Catalog portability by behavior, not just by Markdown shape. Copying `.cursorrules`, `.cursor/rules/*.mdc`, `.clinerules/`, `.devin/rules/*.md`, and AGENTS.md between tools can silently change activation, precedence, scope, and whether referenced files/tools are available.
+
 ### Adoption / maturity
 - Rules files are adopted, but fragmented. Cursor, Cline, Devin/Cascade/Windsurf, and legacy tools all have slightly different names and activation semantics.
 - The safest repo policy is "narrow by default": keep global/always-on rules short, move language-specific or workflow-specific instructions into glob/model/manual rules, and keep one canonical source for cross-tool instructions.
