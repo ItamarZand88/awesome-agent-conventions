@@ -1,0 +1,3 @@
+jsonschema>=4.23
+requests>=2.31
+PyYAML>=6.0

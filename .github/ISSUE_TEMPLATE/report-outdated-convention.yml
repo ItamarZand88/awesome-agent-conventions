@@ -1,0 +1,44 @@
+name: Report outdated convention
+description: Tell us when a listed convention, reader, path, or maturity tier is stale
+title: "[outdated] <convention>"
+labels: ["outdated"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep the catalog honest. Please link primary sources
+        where possible: official docs, specs, release notes, or public examples.
+  - type: input
+    id: convention
+    attributes:
+      label: Convention
+      placeholder: "e.g. Agent Cards (A2A), ai.txt, Rules files"
+    validations:
+      required: true
+  - type: textarea
+    id: stale
+    attributes:
+      label: What is stale or wrong?
+      placeholder: "The path changed from X to Y, the reader no longer loads this file, or the maturity tier should move."
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link official docs, specs, release notes, source code, or public examples.
+      placeholder: "https://docs.example.com/new-convention-path"
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Suggested impact
+      options:
+        - "Docs wording only"
+        - "Spec URL/path update"
+        - "Examples need refresh"
+        - "Maturity tier should change"
+        - "Convention should be removed"
+    validations:
+      required: true

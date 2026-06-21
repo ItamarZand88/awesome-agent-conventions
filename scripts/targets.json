@@ -1,0 +1,462 @@
+{
+  "categories": [
+    "Instruction & context",
+    "Memory & state",
+    "Spec-driven development",
+    "Skills & prompt assets",
+    "Tooling & connections",
+    "Rules & ignore files",
+    "Design",
+    "Web & discoverability",
+    "Agent-web trust",
+    "Identity & protocols",
+    "Proposed namespace"
+  ],
+  "conventions": {
+    "agents-md": {
+      "name": "AGENTS.md",
+      "category": "Instruction & context",
+      "maturity": "🟢",
+      "evidence": "Cross-tool convention documented at agents.md and read by multiple coding agents, with public examples from OpenAI Codex and Apache Airflow.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": "AGENTS.md" }
+      ],
+      "read_by": "Most coding agents - OpenAI Codex, Cursor, Jules, Aider, Gemini CLI, Zed, and others",
+      "location": "Repository root; the nearest AGENTS.md up the tree wins, and nested files override parents",
+      "spec": "https://agents.md",
+      "summary": "A plain-Markdown \"README for agents\" - build/test commands, conventions, and gotchas an agent needs before touching the code. The most widely adopted cross-tool instruction file.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/openai/codex/main/AGENTS.md", "source_label": "codex" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/apache/airflow/main/AGENTS.md", "source_label": "airflow" }
+      ]
+    },
+    "claude-md": {
+      "name": "CLAUDE.md",
+      "category": "Instruction & context",
+      "maturity": "🟢",
+      "evidence": "Official Claude Code memory docs define CLAUDE.md loading locations and behavior; public examples appear in multiple active repos.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": "CLAUDE.md" }
+      ],
+      "read_by": "Claude Code, and tools that read the Claude memory convention",
+      "location": "Repo root or .claude/CLAUDE.md, ancestor/subdirectory CLAUDE.md files, ~/.claude/ (user-global), enterprise-managed policy paths, .claude/rules/*.md, and CLAUDE.local.md (personal)",
+      "spec": "https://code.claude.com/docs/en/memory",
+      "summary": "Anthropic's memory file for Claude Code - loaded automatically at session start to carry project commands, style rules, and standing instructions across turns.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/modelcontextprotocol/servers/main/CLAUDE.md", "source_label": "mcp-servers" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/anthropics/anthropic-sdk-typescript/main/CLAUDE.md", "source_label": "anthropic-sdk-ts" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/playwright-mcp/main/CLAUDE.md", "source_label": "playwright-mcp" }
+      ]
+    },
+    "tool-specific-instructions": {
+      "name": "Tool-specific instruction files",
+      "category": "Instruction & context",
+      "maturity": "🟢",
+      "evidence": "Gemini, Qwen, Warp, Amp, Aider, and Copilot each document or ship named instruction files, while several now bridge to AGENTS.md.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": "GEMINI.md", "note": "Google Gemini CLI." },
+        { "name": "AGENT.md", "note": "Amp (Sourcegraph) - legacy singular form; Amp now reads AGENTS.md (plural)." },
+        { "name": "QWEN.md", "note": "Qwen Code." },
+        { "name": "WARP.md", "note": "Warp terminal - backwards-compatible with project rules; Warp now defaults new projects to AGENTS.md, but WARP.md still takes same-directory priority." },
+        { "name": "CONVENTIONS.md", "note": "Aider - opt-in: loaded via --read CONVENTIONS.md or a .aider.conf.yml entry, not auto-read like AGENTS.md." },
+        { "name": "copilot-instructions.md", "note": "GitHub Copilot (lives under .github/)." }
+      ],
+      "read_by": "Each file is read by its namesake tool - Gemini CLI, Amp, Qwen Code, Warp, Aider, GitHub Copilot - often alongside or as a bridge to AGENTS.md",
+      "location": "Repository root (or .github/ for copilot-instructions.md)",
+      "spec": "https://agents.md",
+      "summary": "Per-tool instruction files that predate or coexist with AGENTS.md. Some tools now default to AGENTS.md while keeping legacy filenames alive, so these variants still matter when auditing real repositories.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/main/GEMINI.md", "as": "GEMINI.md", "source_label": "gemini-cli" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/vscode/main/.github/copilot-instructions.md", "as": "copilot-instructions.md", "source_label": "vscode" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/dagger/container-use/main/AGENT.md", "as": "AGENT.md", "source_label": "dagger" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/QwenLM/qwen-code/main/packages/cli/src/commands/extensions/examples/context/QWEN.md", "as": "QWEN.md", "source_label": "qwen-code" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/warpdotdev/warp/master/WARP.md", "as": "WARP.md", "source_label": "warp" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/Aider-AI/conventions/main/golang/CONVENTIONS.md", "as": "CONVENTIONS.md", "source_label": "aider" }
+      ]
+    },
+    "memory-md": {
+      "name": "MEMORY.md",
+      "category": "Memory & state",
+      "maturity": "🟢",
+      "evidence": "Claude Code auto-memory docs describe MEMORY.md as the per-project memory index loaded every session, with public examples of the pattern.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": "MEMORY.md" }
+      ],
+      "read_by": "Claude Code's auto-memory - the per-project MEMORY.md index it writes and re-reads each session",
+      "location": "Claude Code: ~/.claude/projects/<project>/memory/MEMORY.md (the index), with detail offloaded to topic files beside it",
+      "spec": "https://code.claude.com/docs/en/memory",
+      "summary": "A persistent, agent-maintained index of durable facts - written and re-read across sessions so an agent accumulates project memory instead of relearning each time.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/Harzva/learn-likecc/main/MEMORY.md", "as": "MEMORY.md", "source_label": "learn-likecc" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/aaronjmars/soul.md/main/MEMORY.md", "as": "MEMORY.md", "source_label": "soul.md" }
+      ]
+    },
+    "memory-bank": {
+      "name": "Memory Bank",
+      "category": "Memory & state",
+      "maturity": "🟢",
+      "evidence": "Cline documents Memory Bank as a structured multi-file context system, and public repositories commit the full file set.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": "projectbrief.md", "note": "Foundation doc - why the project exists, core requirements and goals." },
+        { "name": "productContext.md", "note": "Problem space and the intended user experience." },
+        { "name": "activeContext.md", "note": "Current focus, recent changes, next steps - the most frequently updated file." },
+        { "name": "systemPatterns.md", "note": "Architecture, key technical decisions, and design patterns." },
+        { "name": "techContext.md", "note": "Technologies, setup, constraints, and dependencies." },
+        { "name": "progress.md", "note": "What works, what's left to build, and known issues." }
+      ],
+      "read_by": "Cline, Roo Code, and Cursor (via the Memory Bank custom-instructions pattern)",
+      "location": "A memory-bank/ directory at the repository root",
+      "spec": "https://docs.cline.bot/best-practices/memory-bank",
+      "summary": "Cline's structured memory system - a set of Markdown files an agent reads at the start of every task to reconstruct full project context after its session memory resets. The six files shown are Cline's set; tools like Roo Code use an overlapping but different variant.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/projectbrief.md", "source_label": "gitpod" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/productContext.md", "source_label": "gitpod" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/activeContext.md", "source_label": "gitpod" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/systemPatterns.md", "source_label": "gitpod" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/techContext.md", "source_label": "gitpod" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/gitpod-io/gitpod/main/memory-bank/progress.md", "source_label": "gitpod" }
+      ]
+    },
+    "spec-kit": {
+      "name": "Spec Kit",
+      "category": "Spec-driven development",
+      "maturity": "🟢",
+      "evidence": "GitHub Spec Kit publishes templates and slash-command workflows that consume constitution, spec, plan, and tasks files.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": "constitution.md", "note": "Project principles and non-negotiable rules the agent honors across every feature." },
+        { "name": "spec.md", "note": "The what and why of one feature - requirements and user stories, no implementation detail." },
+        { "name": "plan.md", "note": "The technical approach, stack, and architecture for the spec." },
+        { "name": "tasks.md", "note": "An ordered, reviewable task list generated from the plan." }
+      ],
+      "read_by": "GitHub Spec Kit's slash-command agents (Copilot, Claude, Gemini, Cursor, and more)",
+      "location": ".specify/memory/constitution.md and specs/<feature>/{spec,plan,tasks}.md",
+      "spec": "https://github.com/github/spec-kit",
+      "summary": "GitHub's spec-driven workflow - a constitution plus per-feature spec → plan → tasks files that drive an agent through structured, reviewable implementation.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/github/spec-kit/main/templates/constitution-template.md", "as": "constitution.md", "source_label": "spec-kit" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/github/spec-kit/main/templates/spec-template.md", "as": "spec.md", "source_label": "spec-kit" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/github/spec-kit/main/templates/plan-template.md", "as": "plan.md", "source_label": "spec-kit" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/github/spec-kit/main/templates/tasks-template.md", "as": "tasks.md", "source_label": "spec-kit" }
+      ]
+    },
+    "kiro-steering": {
+      "name": "Kiro steering files",
+      "category": "Spec-driven development",
+      "maturity": "🟢",
+      "evidence": "Kiro docs define .kiro/steering files and public Kiro projects commit the standard product, structure, and tech files.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": "product.md", "note": "What the product is and who it's for." },
+        { "name": "structure.md", "note": "File organization and architectural conventions." },
+        { "name": "tech.md", "note": "Allowed frameworks, libraries, and technical constraints." }
+      ],
+      "read_by": "AWS Kiro (steering files are largely Kiro-specific)",
+      "location": ".kiro/steering/*.md (or ~/.kiro/steering/ for global)",
+      "spec": "https://kiro.dev/docs/steering",
+      "summary": "Kiro's always-on steering docs - product, structure, and tech files that give the agent persistent project context outside of any single spec.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/product.md", "source_label": "spirit-of-kiro" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/structure.md", "source_label": "spirit-of-kiro" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/kirodotdev/spirit-of-kiro/main/.kiro/steering/tech.md", "source_label": "spirit-of-kiro" }
+      ]
+    },
+    "skill-md": {
+      "name": "SKILL.md",
+      "category": "Skills & prompt assets",
+      "maturity": "🟢",
+      "evidence": "Agent Skills documentation and public skill repositories define SKILL.md as the load-on-demand capability manifest.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": "SKILL.md" }
+      ],
+      "read_by": "Claude (Agent Skills), Claude Code, and the open Agent Skills ecosystem",
+      "location": "A skill directory: <skill-name>/SKILL.md (plus bundled scripts and resources)",
+      "spec": "https://agentskills.io/specification",
+      "summary": "A self-contained, model-invoked capability: YAML frontmatter (name + description) tells the agent when to load it; the body teaches it how. Progressive disclosure keeps it cheap until needed.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/mcp-builder/SKILL.md", "source_label": "mcp-builder" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/pdf/SKILL.md", "source_label": "pdf" }
+      ]
+    },
+    "prompt-assets": {
+      "name": "Prompt asset files",
+      "category": "Skills & prompt assets",
+      "maturity": "🟢",
+      "evidence": "Prompty, Genkit, and application repos publish external prompt files that tools load independently of source code.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": ".prompty", "note": "Prompty - YAML frontmatter (model + inputs) over a templated prompt body." },
+        { "name": ".prompt", "note": "Generic templated prompt file (Genkit dotprompt and similar)." },
+        { "name": "system_prompt.txt", "note": "A plain-text externalized system prompt." }
+      ],
+      "read_by": "Prompty tooling, Azure AI / Semantic Kernel, and apps that load externalized prompts",
+      "location": "Alongside application code (e.g. prompts/*.prompty)",
+      "spec": "https://prompty.ai",
+      "summary": "Externalized prompt files - Prompty's YAML-front-mattered .prompty, plain .prompt templates, and system_prompt.txt - that pull the prompt out of source code so it can be versioned and edited on its own. Only .prompty has a formal spec (prompty.ai); .prompt and system_prompt.txt are ad-hoc externalized-prompt filenames.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/prompty/main/web/docs-examples/prompts/chat-basic.prompty", "source_label": "prompty" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/microsoft/prompty/main/web/src/content/docs/assets/code/basic.prompty", "source_label": "prompty" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/firebase/genkit/main/go/samples/prompts/prompts/countries.prompt", "source_label": "genkit" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/diffbot/diffbot-llm-inference/main/system_prompt.txt", "source_label": "diffbot" }
+      ]
+    },
+    "claude-commands": {
+      "name": "Claude Code commands",
+      "category": "Skills & prompt assets",
+      "maturity": "🟢",
+      "evidence": "Claude Code slash-command docs define .claude/commands/*.md, and active repos commit reusable command files.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": ".md", "note": "Any Markdown file under .claude/commands/; the filename is the command name (pr.md -> /pr). Optional YAML frontmatter: description, argument-hint, allowed-tools, model." }
+      ],
+      "read_by": "Claude Code - project .claude/commands/ and user ~/.claude/commands/",
+      "location": ".claude/commands/*.md (project) and ~/.claude/commands/*.md (user)",
+      "spec": "https://code.claude.com/docs/en/slash-commands",
+      "summary": "A Markdown file Claude Code exposes as a /slash-command - a reusable, version-controlled prompt workflow, with optional frontmatter (allowed-tools, model, argument-hint) and $ARGUMENTS and shell placeholders (@file references are a general Claude Code prompt feature, not command-specific). Now converging with Agent Skills, but still widely committed in its own right.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/.claude/commands/dedupe.md", "source_label": "claude-code" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/.claude/commands/commit-push-pr.md", "source_label": "claude-code" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/getsentry/sentry/master/.claude/commands/gh-pr.md", "source_label": "sentry" }
+      ]
+    },
+    "copilot-prompt-files": {
+      "name": "Copilot prompt & instruction files",
+      "category": "Skills & prompt assets",
+      "maturity": "🟢",
+      "evidence": "VS Code Copilot docs define .github/prompts/*.prompt.md and .github/instructions/*.instructions.md, with public examples in GitHub repos.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": ".prompt.md", "note": "Invokable saved prompts under .github/prompts/, run as a slash-command." },
+        { "name": ".instructions.md", "note": "Auto-attached instructions under .github/instructions/, scoped by an applyTo glob in frontmatter." }
+      ],
+      "read_by": "GitHub Copilot in VS Code / Copilot CLI",
+      "location": ".github/prompts/*.prompt.md and .github/instructions/*.instructions.md",
+      "spec": "https://code.visualstudio.com/docs/agent-customization/prompt-files",
+      "summary": "Modular, path-scoped Copilot context: *.instructions.md auto-attach to matching files via an applyTo glob, while *.prompt.md are reusable prompts you invoke by name - the granular cousins of a single .github/copilot-instructions.md.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/debs-obrien/playwright-movies-app/main/.github/prompts/generate.prompt.md", "source_label": "playwright-movies" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/github/awesome-copilot/main/instructions/a11y.instructions.md", "source_label": "awesome-copilot" }
+      ]
+    },
+    "mcp-config": {
+      "name": "MCP server config",
+      "category": "Tooling & connections",
+      "maturity": "🟢",
+      "evidence": "MCP hosts including Claude Code, Claude Desktop, Cursor, and VS Code document project or app-level MCP server config files.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": ".mcp.json", "note": "Claude Code project-scoped MCP servers. The same { \"mcpServers\": {...} } schema is reused under different filenames: .cursor/mcp.json (Cursor), .vscode/mcp.json (VS Code / Copilot), and claude_desktop_config.json (Claude Desktop)." }
+      ],
+      "read_by": "Claude Code, Cursor, VS Code / Copilot, and Claude Desktop - every MCP host reads the same mcpServers schema, though the filename and path differ per tool",
+      "location": "Per tool: .mcp.json (Claude Code repo root), .cursor/mcp.json (Cursor), .vscode/mcp.json (VS Code / Copilot), or the app config dir (claude_desktop_config.json)",
+      "spec": "https://code.claude.com/docs/en/mcp",
+      "summary": "A JSON file that tells an agent which Model Context Protocol servers to launch and how (command, args, env) - making a project's tool and data integrations portable, shareable, and version-controlled across every MCP-capable client.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/Automattic/wp-calypso/trunk/.mcp.json", "as": ".mcp.json", "source_label": "wp-calypso" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/inspec/inspec/main/.vscode/mcp.json", "as": ".mcp.json", "source_label": "inspec-vscode" }
+      ]
+    },
+    "agent-rules": {
+      "name": "Rules files",
+      "category": "Rules & ignore files",
+      "maturity": "🟢",
+      "evidence": "Cursor, Cline, and Windsurf document and/or detect project rule files, including both legacy single files and directory-based rules.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": ".cursorrules", "note": "Cursor - legacy single-file form (superseded by .cursor/rules/*.mdc)." },
+        { "name": ".mdc", "note": "Cursor - modern rule file with frontmatter and glob scoping, under .cursor/rules/." },
+        { "name": ".clinerules", "note": "Cline - legacy single-file form, still detected." },
+        {
+          "name": ".clinerules/",
+          "kind": "pattern",
+          "note": "Cline - primary workspace rules directory; Markdown/text files are combined and can be toggled.",
+          "pattern": "A project-root directory containing focused Markdown or text rule files such as `coding.md`, `testing.md`, and `architecture.md`. Cline combines the files into one workspace rule set, while the UI can toggle individual rules.",
+          "instances": [
+            { "label": "Cline docs example", "url": "https://docs.cline.bot/customization/cline-rules" },
+            { "label": "wjmuse/mcp_daily_life .clinerules directory", "url": "https://github.com/wjmuse/mcp_daily_life/tree/main/.clinerules" }
+          ]
+        },
+        { "name": ".windsurfrules", "note": "Windsurf - legacy single-file form (superseded by .windsurf/rules/*.md)." }
+      ],
+      "read_by": "Cursor (.cursorrules / .mdc), Cline (.clinerules/ and legacy .clinerules), Windsurf (.windsurfrules)",
+      "location": "Repo root, or a rules directory (.cursor/rules/*.mdc, .clinerules/, .windsurf/rules/*.md)",
+      "spec": "https://docs.cline.bot/customization/cline-rules",
+      "summary": "Per-tool rule files that scope agent behavior - older single-file forms (.cursorrules, .clinerules, .windsurfrules) and newer directory-based, glob-scoped forms (.cursor/rules/*.mdc, .clinerules/, .windsurf/rules/*.md).",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/grapeot/devin.cursorrules/master/.cursorrules", "source_label": "devin" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/rules/angular-typescript-cursorrules-prompt-file.mdc", "source_label": "awesome-cursorrules" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/raycast/extensions/main/extensions/1bookmark/.clinerules", "source_label": "raycast" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/snyk/vscode-extension/main/.windsurfrules", "source_label": "snyk" }
+      ]
+    },
+    "ai-ignore-files": {
+      "name": "AI ignore files",
+      "category": "Rules & ignore files",
+      "maturity": "🟢",
+      "evidence": "Cursor, JetBrains Junie, and Codeium/Windsurf-style tools use gitignore-like files to exclude paths from AI context.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": ".aiignore", "note": "JetBrains Junie / AI Assistant." },
+        { "name": ".cursorignore", "note": "Cursor." },
+        { "name": ".codeiumignore", "note": "Codeium (now Windsurf)." }
+      ],
+      "read_by": "JetBrains Junie (.aiignore), Cursor (.cursorignore), Codeium/Windsurf (.codeiumignore)",
+      "location": "Repository root (gitignore-style glob syntax)",
+      "spec": "https://cursor.com/docs/reference/ignore-file",
+      "summary": "gitignore-syntax files that fence an AI agent out of paths - secrets, vendored code, generated output - so they're never sent to the model as context.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/ag-grid/ag-grid/latest/.rulesync/.aiignore", "source_label": "ag-grid" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/holochain/holochain/develop/.cursorignore", "source_label": "holochain" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/mulesoft/api-console/master/.cursorignore", "source_label": "api-console" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/wikimedia/wikimedia-fundraising-dev/master/.codeiumignore", "source_label": "wikimedia" }
+      ]
+    },
+    "design-md": {
+      "name": "DESIGN.md",
+      "category": "Design",
+      "maturity": "🟢",
+      "evidence": "Google Labs published design.md as a machine-readable design spec, and public design-md catalogs contain real examples.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": "DESIGN.md" }
+      ],
+      "read_by": "Google Stitch natively; and coding agents (e.g. Claude Code) when pointed at it as design context",
+      "location": "Repository root or a design/ directory",
+      "spec": "https://github.com/google-labs-code/design.md",
+      "summary": "A structured, machine-readable design specification - tokens, components, and layout intent - that an agent reads to generate or keep UI consistent with an established system. Open-sourced by Google Labs in 2026 as a cross-tool draft spec.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/apple/DESIGN.md", "source_label": "apple" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/claude/DESIGN.md", "source_label": "claude" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/cursor/DESIGN.md", "source_label": "cursor" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/figma/DESIGN.md", "source_label": "figma" }
+      ]
+    },
+    "llms-txt": {
+      "name": "llms.txt",
+      "category": "Web & discoverability",
+      "maturity": "🟢",
+      "evidence": "llms.txt is published by many developer-docs sites, including Anthropic and Stripe, even though major-provider consumption is unconfirmed.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": "llms.txt", "note": "Curated index: short description plus linked sections of the key docs." },
+        {
+          "name": "llms-full.txt",
+          "kind": "pattern",
+          "note": "The full docs concatenated into one file for direct ingestion.",
+          "pattern": "Every documentation page concatenated into a single plain-text file for direct ingestion - routinely multiple megabytes. Structurally it's `llms.txt` with each linked page inlined in full; nothing instance-specific is worth vendoring, so this entry links live instances rather than copying a dump.",
+          "instances": [
+            { "label": "docs.anthropic.com/llms-full.txt", "url": "https://docs.anthropic.com/llms-full.txt" },
+            { "label": "prisma.io/docs/llms-full.txt", "url": "https://www.prisma.io/docs/llms-full.txt" }
+          ]
+        }
+      ],
+      "read_by": "Docs sites publish it for LLM tools and crawlers - though no major provider has confirmed reading it",
+      "location": "Site root: /llms.txt (and optionally /llms-full.txt)",
+      "spec": "https://llmstxt.org",
+      "summary": "A proposed-turned-widely-published standard: a root-level Markdown file giving LLMs a curated, link-rich map of a site's docs. Published across hundreds of developer-docs sites - though whether the major LLM providers actually read it remains unproven.",
+      "targets": [
+        { "type": "web", "url": "https://docs.anthropic.com/llms.txt" },
+        { "type": "web", "url": "https://docs.stripe.com/llms.txt" }
+      ]
+    },
+    "pricing-md": {
+      "name": "pricing.md",
+      "category": "Web & discoverability",
+      "maturity": "🟢",
+      "evidence": "Multiple production SaaS sites expose Markdown pricing pages at predictable .md URLs for agent-friendly retrieval.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": "pricing.md" }
+      ],
+      "read_by": "Agents and LLM browsers fetching a clean, parse-able pricing page",
+      "location": "Site path mirroring the HTML page: /pricing.md",
+      "spec": "https://resend.com/pricing.md",
+      "summary": "The Markdown twin of a pricing page - same URL with a .md suffix - so an agent gets structured plans and numbers instead of scraping marketing HTML. A concrete, shipping instance of the page.md pattern.",
+      "targets": [
+        { "type": "web", "url": "https://resend.com/pricing.md" },
+        { "type": "web", "url": "https://auth0.com/pricing.md" },
+        { "type": "web", "url": "https://workos.com/pricing.md" }
+      ]
+    },
+    "auth-md": {
+      "name": "auth.md",
+      "category": "Agent-web trust",
+      "maturity": "🟠",
+      "evidence": "WorkOS publishes both the auth.md spec page and a live auth.md file, but adoption beyond that ecosystem remains early.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": "auth.md" }
+      ],
+      "read_by": "Agents discovering how to authenticate to a service (early adopters)",
+      "location": "Site root or .well-known: /auth.md",
+      "spec": "https://workos.com/auth-md",
+      "summary": "A Markdown file that tells an agent how to authenticate with a service - discovery of auth endpoints and flows. Shipped by WorkOS as a real, working convention, but adoption beyond it is still early.",
+      "targets": [
+        { "type": "web", "url": "https://workos.com/auth.md" }
+      ]
+    },
+    "ai-txt": {
+      "name": "ai.txt",
+      "category": "Agent-web trust",
+      "maturity": "🔵",
+      "evidence": "Spawning popularized deployed ai.txt files and a 2026 Internet-Draft proposes /.well-known/ai.txt, but crawler obedience and adoption remain unproven.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": "ai.txt" }
+      ],
+      "read_by": "AI training/data-mining crawlers that voluntarily honor AI usage preferences; crawler support is not yet reliable",
+      "location": "Site root /ai.txt in Spawning's deployed pattern; /.well-known/ai.txt in the newer Internet-Draft",
+      "spec": "https://datatracker.ietf.org/doc/draft-car-ai-txt-wellknown/",
+      "summary": "A text file declaring machine-readable consent, licensing, or policy preferences for AI training and data-mining. Spawning popularized the deployed root-file pattern, and a 2026 Internet-Draft now proposes a well-known URI; adoption and crawler obedience are still thin, so it stays 🔵.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/WordPress/openverse/main/frontend/src/static/ai.txt", "as": "ai.txt", "source_label": "openverse" }
+      ]
+    },
+    "agent-cards": {
+      "name": "Agent Cards (A2A)",
+      "category": "Identity & protocols",
+      "maturity": "🟠",
+      "evidence": "A2A v1.0 specifies Agent Cards and the well-known agent-card.json path, with public sample cards but still-early ecosystem adoption.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": "agent-card.json", "note": "Current A2A well-known Agent Card filename." },
+        {
+          "name": "agent.json",
+          "kind": "pattern",
+          "note": "Legacy alias seen in earlier A2A material and deployments.",
+          "pattern": "A legacy well-known alias for an A2A Agent Card. New agents should publish `/.well-known/agent-card.json`; clients may still tolerate `/.well-known/agent.json` while interoperating with older deployments."
+        }
+      ],
+      "read_by": "A2A-compatible agents discovering another agent's capabilities",
+      "location": "/.well-known/agent-card.json (the older /.well-known/agent.json is a legacy alias)",
+      "spec": "https://a2a-protocol.org/latest/specification/",
+      "summary": "The Agent2Agent (A2A) capability card - a JSON document at a well-known path advertising an agent's skills, endpoints, and auth so other agents can discover and call it. Now a Linux Foundation project at v1.0; adoption is growing but early.",
+      "targets": [
+        { "type": "web", "url": "https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json", "as": "agent-card.json", "source_label": "currency" },
+        { "type": "web", "url": "https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/air_ticketing_agent.json", "as": "agent-card.json", "source_label": "air-ticketing" }
+      ]
+    },
+    "protocols-md": {
+      "name": "The protocols.md namespace",
+      "category": "Proposed namespace",
+      "maturity": "🔵",
+      "evidence": "protocols.md is a published namespace of aspirational .md protocols, but there are no demonstrated readers or broad deployments.",
+      "last_verified": "2026-06-18",
+      "files": [
+        { "name": "proof.md", "note": "The namespace's flagship - live at its own apex domain (proof.md → www.proof.md), a v1.0 'living specification' that self-describes as 'an experiment.'" }
+      ],
+      "read_by": "- (no demonstrated readers; aspirational)",
+      "location": "Per-domain pages under the protocols.md namespace (e.g. proof.md)",
+      "spec": "https://protocols.md",
+      "summary": "A single maintainer's pre-registered namespace of ~74 aspirational .md \"protocols\" (proof.md, signature.md, reputation.md, …) staked as Schelling points for a future agent web. Published concept, no demonstrated adoption - see the page for the audited, honest caveats.",
+      "manual_readme": true,
+      "targets": []
+    }
+  }
+}

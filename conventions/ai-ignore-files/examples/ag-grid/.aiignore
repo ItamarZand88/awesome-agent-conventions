@@ -1,0 +1,3 @@
+<!-- source: ag-grid — https://raw.githubusercontent.com/ag-grid/ag-grid/latest/.rulesync/.aiignore -->
+credentials/
+.env.local

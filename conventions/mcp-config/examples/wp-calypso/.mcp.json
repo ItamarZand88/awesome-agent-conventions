@@ -1,0 +1,9 @@
+<!-- source: wp-calypso — https://raw.githubusercontent.com/Automattic/wp-calypso/trunk/.mcp.json -->
+{
+	"mcpServers": {
+		"playwright-test": {
+			"command": "npx",
+			"args": [ "playwright", "run-test-mcp-server" ]
+		}
+	}
+}

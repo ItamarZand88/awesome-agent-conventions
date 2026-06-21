@@ -1,0 +1,33 @@
+name: verify
+
+# Guards for a list whose credibility is "the files and links are real":
+#   1. catalog metadata matches schema and local invariants
+#   2. generated files are in sync with active catalog metadata, including migrated local metadata
+#   3. vendored examples have provenance
+#   4. every spec / example / instance URL still resolves
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 6 * * 1"   # Mondays 06:00 UTC - catch upstream rot
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install deps
+        run: pip install -r scripts/requirements.txt
+
+      - name: Verify catalog
+        run: make verify

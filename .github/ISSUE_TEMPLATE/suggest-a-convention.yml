@@ -1,0 +1,57 @@
+name: Suggest a convention
+description: Propose an agent convention file to add to the catalog
+title: "[convention] <name>"
+labels: ["new-convention"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! A file qualifies only if an AI agent **reads, writes, or acts on** it.
+        Human docs (`README.md`, `CONTRIBUTING.md`, …) are out. The more evidence you
+        bring, the faster it lands. Please include license/permission context for any
+        example file you want vendored into the repo.
+  - type: input
+    id: name
+    attributes:
+      label: Convention name / file(s)
+      placeholder: "e.g. AGENTS.md, or .mcp.json"
+    validations:
+      required: true
+  - type: textarea
+    id: read_by
+    attributes:
+      label: Which agent reads or writes it - and what does it do with it?
+      placeholder: "e.g. Cursor reads .cursorrules at session start to scope behavior."
+    validations:
+      required: true
+  - type: dropdown
+    id: maturity
+    attributes:
+      label: Maturity tier (label down, not up)
+      options:
+        - "🟢 Adopted - in production across multiple tools or teams"
+        - "🟠 Emerging - real published spec, early/limited adoption"
+        - "🔵 Proposed - published concept, no demonstrated adoption"
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Real, public example sources
+      description: Links to actual files in public repos or sites (prefer raw.githubusercontent.com). These get vendored by the extractor - not hand-written.
+      placeholder: "https://raw.githubusercontent.com/owner/repo/main/AGENTS.md"
+    validations:
+      required: true
+  - type: textarea
+    id: license
+    attributes:
+      label: Upstream license / reuse evidence
+      description: Public URLs are not automatically reusable. Link the upstream license, terms, or permission context; say if the source has no detected license.
+      placeholder: "MIT license in repo, Apache-2.0 docs sample, website terms permit reuse, or no license detected."
+    validations:
+      required: true
+  - type: input
+    id: spec
+    attributes:
+      label: Spec / canonical doc URL
+      placeholder: "https://agents.md"

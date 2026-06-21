@@ -1,0 +1,4 @@
+<!-- source: wikimedia — https://raw.githubusercontent.com/wikimedia/wikimedia-fundraising-dev/master/.codeiumignore -->
+config/
+config-private/
+**/LocalSettings.php

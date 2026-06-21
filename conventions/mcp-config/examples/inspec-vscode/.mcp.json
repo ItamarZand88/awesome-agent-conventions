@@ -1,0 +1,9 @@
+<!-- source: inspec-vscode — https://raw.githubusercontent.com/inspec/inspec/main/.vscode/mcp.json -->
+{
+  "servers": {
+    "atlassian-mcp-server": {
+      "url": "https://mcp.atlassian.com/v1/sse",
+      "type": "http"
+    }
+  }
+}
