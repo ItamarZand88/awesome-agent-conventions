@@ -22,7 +22,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGETS_PATH = os.path.join(ROOT, "scripts", "targets.json")
 CONVENTIONS_DIR = os.path.join(ROOT, "conventions")
 
-PROVENANCE_RE = re.compile(r"<!-- source: (?P<label>.+?) — (?P<url>.+?) -->")
+PROVENANCE_RE = re.compile(r"<!-- source: (?P<label>.+?) (?:\u2014|-) (?P<url>.+?) -->")
 UA = "awesome-agent-conventions-license-audit/1.0 (+https://github.com/ItamarZand88/awesome-agent-conventions)"
 
 COPYLEFT = {"AGPL-3.0", "GPL-2.0", "GPL-3.0", "LGPL-2.1", "LGPL-3.0"}

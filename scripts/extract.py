@@ -48,7 +48,7 @@ BADGES = {
     "🔵": "🔵 Proposed",
 }
 
-PROVENANCE_RE = re.compile(r"<!-- source: (?P<label>.+?) — (?P<url>.+?) -->")
+PROVENANCE_RE = re.compile(r"<!-- source: (?P<label>.+?) (?:\u2014|-) (?P<url>.+?) -->")
 COMMON_SOURCE_SUFFIXES = {
     "ai",
     "app",
@@ -502,7 +502,7 @@ def process_convention(slug, conv, index_only):
             fname = target_filename(target, url)
             dest = example_path(examples_dir, target, url)
             os.makedirs(os.path.dirname(dest), exist_ok=True)
-            provenance = f"<!-- source: {label} — {url} -->\n"
+            provenance = f"<!-- source: {label} - {url} -->\n"
             full_len = len(text.encode("utf-8"))
             truncated = full_len > MAX_EXAMPLE_BYTES
             body = (
