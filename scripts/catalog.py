@@ -97,6 +97,61 @@ def local_source_urls(slug_or_sources):
     return urls
 
 
+def local_link_entries(slug_or_sources):
+    if isinstance(slug_or_sources, str):
+        _, sources = load_local_metadata(slug_or_sources)
+    else:
+        sources = slug_or_sources
+
+    entries = []
+    for item in sources.get("research", []):
+        if item.get("url"):
+            entries.append(("research", item["url"]))
+    for example in sources.get("examples", []):
+        if example.get("url"):
+            entries.append(("example", example["url"]))
+        upstream = example.get("upstream", {})
+        if upstream.get("url"):
+            entries.append(("upstream", upstream["url"]))
+    return entries
+
+
+def legacy_example_urls(convention):
+    urls = []
+    for target in convention.get("targets", []):
+        if target.get("url"):
+            urls.append(target["url"])
+        elif target.get("type") == "github":
+            urls.append(
+                f"https://github.com/{target['owner']}/{target['repo']}"
+                f"/blob/HEAD/{target['path']}"
+            )
+    return urls
+
+
+def effective_example_urls(slug, convention):
+    if has_complete_local_metadata(slug):
+        return local_example_urls(slug)
+    return legacy_example_urls(convention)
+
+
+def effective_link_entries(slug, convention):
+    if has_complete_local_metadata(slug):
+        return local_link_entries(slug)
+
+    entries = []
+    if convention.get("spec"):
+        entries.append(("spec", convention["spec"]))
+    for target in convention.get("targets", []):
+        if target.get("url"):
+            entries.append(("target", target["url"]))
+    for file_entry in convention.get("files", []):
+        for instance in file_entry.get("instances", []):
+            if instance.get("url"):
+                entries.append(("instance", instance["url"]))
+    return entries
+
+
 def local_spec_url(sources):
     for item in sources.get("research", []):
         if item.get("type") == "spec" and item.get("url"):

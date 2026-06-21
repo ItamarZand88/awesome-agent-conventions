@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Verify every catalog URL still resolves.
 
-The whole list rests on one promise: the links are real. This checks each
-legacy `spec`, each `targets[].url`, each pattern-file `instances[].url`, plus
-local metadata URLs from migrated `sources.yml` files.
+The whole list rests on one promise: the links are real. This checks legacy
+`spec`, `targets[].url`, and pattern-file `instances[].url` for conventions
+that still rely on `scripts/targets.json`, plus local metadata URLs from
+migrated `sources.yml` files for conventions that have complete local metadata.
 
 Failure policy is deliberately honest-but-not-flaky:
 
@@ -37,7 +38,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import urlparse
 
-from catalog import has_complete_local_metadata, load_local_metadata, local_source_urls
+from catalog import effective_link_entries
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGETS_PATH = os.path.join(ROOT, "scripts", "targets.json")
@@ -54,30 +55,11 @@ def collect(data, only=None):
     for slug, conv in data["conventions"].items():
         if only and slug != only:
             continue
-        if conv.get("spec"):
-            item = ("spec", slug, conv["spec"])
-            if (slug, conv["spec"]) not in seen_urls:
-                seen_urls.add((slug, conv["spec"]))
+        for kind, url in effective_link_entries(slug, conv):
+            item = (kind, slug, url)
+            if (slug, url) not in seen_urls:
+                seen_urls.add((slug, url))
                 yield item
-        for t in conv.get("targets", []):
-            if t.get("url"):
-                item = ("target", slug, t["url"])
-                if (slug, t["url"]) not in seen_urls:
-                    seen_urls.add((slug, t["url"]))
-                    yield item
-        for f in conv.get("files", []):
-            for inst in f.get("instances", []):
-                item = ("instance", slug, inst["url"])
-                if (slug, inst["url"]) not in seen_urls:
-                    seen_urls.add((slug, inst["url"]))
-                    yield item
-        if has_complete_local_metadata(slug):
-            _, sources = load_local_metadata(slug)
-            for url in local_source_urls(sources):
-                item = ("local", slug, url)
-                if (slug, url) not in seen_urls:
-                    seen_urls.add((slug, url))
-                    yield item
 
 
 def _depth(url):
@@ -146,10 +128,14 @@ def main():
     if degraded:
         print(
             "\nDegraded links still return 200 but no longer land on the promised page. "
-            "Point scripts/targets.json at the new canonical URL and re-run the generators."
+            "Update local metadata for migrated conventions or scripts/targets.json for legacy conventions, "
+            "then re-run the generators."
         )
     if fails:
-        print("\nDead links found. Update scripts/targets.json and re-run the generators.")
+        print(
+            "\nDead links found. Update local metadata for migrated conventions or scripts/targets.json "
+            "for legacy conventions, then re-run the generators."
+        )
         sys.exit(1)
     if not degraded:
         print("All links resolve and land where promised (warnings are tolerated bot-blocks / transient codes).")
