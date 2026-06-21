@@ -9,6 +9,19 @@ Last reviewed: 2026-06-21.
 
 ## Strong candidates
 
+### Agent Client Protocol (ACP)
+
+- Status: Adopted open protocol (Apache-2.0); v1 stable, agent registry launched
+  January 2026.
+- Why watch: The editor-to-agent counterpart of MCP's agent-to-tools, with broad
+  adoption (Zed, JetBrains, Google, GitHub, and 25+ agents including Claude Code,
+  Codex CLI, Copilot CLI, Gemini CLI, OpenCode).
+- Why not listed yet: It is a pure JSON-RPC-over-stdio protocol with no
+  committed-file or `.well-known` surface (unlike A2A's `agent-card.json` or
+  `.mcp.json`), so it sits outside this repo's file-focused inclusion filter.
+- Promotion bar: a standard committed file or `.well-known` registration artifact
+  that editors/agents read by name.
+
 ### `agents.txt` / `agents.json`
 
 - Status: Internet-Draft / proposed site-level capability declaration.
@@ -61,6 +74,15 @@ Last reviewed: 2026-06-21.
   preferences.
 - Why not listed yet: This repo catalogs files an agent reads, writes, or acts
   on; headers are adjacent but outside the current inclusion filter.
+
+### `CAPABILITY.md`
+
+- Status: Community proposal (surfaced in discussion); no implementation yet.
+- Why watch: A declarative manifest of what an agent must *not* do (scoped or
+  negative permissions), instead of trusting the model to self-limit. Matters
+  most when agents touch production databases or billing.
+- Why not listed yet: No published spec and no tool reads it; the closest
+  shipping analogues are the ignore files (path fencing) and MCP server scoping.
 
 ### `PLAYBOOK.md`
 
