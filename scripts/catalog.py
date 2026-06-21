@@ -46,6 +46,16 @@ def load_local_metadata(slug):
     return load_yaml(convention_path), load_yaml(sources_path)
 
 
+def iter_complete_local_metadata():
+    for slug in sorted(os.listdir(CONVENTIONS_DIR)):
+        if has_complete_local_metadata(slug):
+            yield slug, *load_local_metadata(slug)
+
+
+def complete_local_metadata_slugs():
+    return [slug for slug, _, _ in iter_complete_local_metadata()]
+
+
 def local_targets(sources):
     targets = []
     for example in sources.get("examples", []):
@@ -58,6 +68,66 @@ def local_targets(sources):
             }
         )
     return targets
+
+
+def local_example_urls(slug_or_sources):
+    if isinstance(slug_or_sources, str):
+        _, sources = load_local_metadata(slug_or_sources)
+    else:
+        sources = slug_or_sources
+    return [example["url"] for example in sources.get("examples", []) if example.get("url")]
+
+
+def local_source_urls(slug_or_sources):
+    if isinstance(slug_or_sources, str):
+        _, sources = load_local_metadata(slug_or_sources)
+    else:
+        sources = slug_or_sources
+
+    urls = []
+    for item in sources.get("research", []):
+        if item.get("url"):
+            urls.append(item["url"])
+    for example in sources.get("examples", []):
+        if example.get("url"):
+            urls.append(example["url"])
+        upstream = example.get("upstream", {})
+        if upstream.get("url"):
+            urls.append(upstream["url"])
+    return urls
+
+
+def local_spec_url(sources):
+    for item in sources.get("research", []):
+        if item.get("type") == "spec" and item.get("url"):
+            return item["url"]
+    return None
+
+
+def overlay_local_convention(conv, local_convention, local_sources):
+    overlaid = dict(conv)
+    overlaid.update(
+        {
+            "name": local_convention["name"],
+            "category": local_convention["category"],
+            "maturity": local_convention["maturity"],
+            "summary": local_convention["summary"],
+            "read_by": ", ".join(local_convention["readers"]),
+            "location": "; ".join(
+                f"{item['path']} - {item['description']}"
+                for item in local_convention["locations"]
+            ),
+            "files": [
+                {"name": item["name"], "note": item["description"]}
+                for item in local_convention["files"]
+            ],
+            "targets": local_targets(local_sources),
+        }
+    )
+    spec = local_spec_url(local_sources)
+    if spec:
+        overlaid["spec"] = spec
+    return overlaid
 
 
 def _schema_errors(schema_path, data):

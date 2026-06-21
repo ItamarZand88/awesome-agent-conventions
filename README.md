@@ -132,12 +132,12 @@ Standalone page: [categories/skills-prompt-assets.md](categories/skills-prompt-a
 
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
-| 🟢 | [SKILL.md](conventions/skill-md/) | `SKILL.md` | Claude (Agent Skills), Claude Code, and the open Agent Skills ecosystem | [spec ↗](https://agentskills.io) |
+| 🟢 | [SKILL.md](conventions/skill-md/) | `SKILL.md` | Claude Agent Skills, Claude Code, Amp, Agent Skills-compatible tools | [spec ↗](https://agentskills.io/specification) |
 | 🟢 | [Prompt asset files](conventions/prompt-assets/) | `.prompty` `.prompt` `system_prompt.txt` | Prompty tooling, Azure AI / Semantic Kernel, and apps that load externalized prompts | [spec ↗](https://prompty.ai) |
 | 🟢 | [Claude Code commands](conventions/claude-commands/) | `.md` | Claude Code - project .claude/commands/ and user ~/.claude/commands/ | [spec ↗](https://code.claude.com/docs/en/slash-commands) |
 | 🟢 | [Copilot prompt & instruction files](conventions/copilot-prompt-files/) | `.prompt.md` `.instructions.md` | GitHub Copilot in VS Code / Copilot CLI | [spec ↗](https://code.visualstudio.com/docs/agent-customization/prompt-files) |
 
-- **[SKILL.md](conventions/skill-md/)** - A self-contained, model-invoked capability: YAML frontmatter (name + description) tells the agent when to load it; the body teaches it how. Progressive disclosure keeps it cheap until needed.
+- **[SKILL.md](conventions/skill-md/)** - A self-contained, model-invoked capability file that tells an agent when to load a reusable procedure and how to execute it.
 - **[Prompt asset files](conventions/prompt-assets/)** - Externalized prompt files - Prompty's YAML-front-mattered .prompty, plain .prompt templates, and system_prompt.txt - that pull the prompt out of source code so it can be versioned and edited on its own.
 - **[Claude Code commands](conventions/claude-commands/)** - A Markdown file Claude Code exposes as a /slash-command - a reusable, version-controlled prompt workflow, with optional frontmatter (allowed-tools, model, argument-hint) and $ARGUMENTS / shell / @file placeholders. Now converging with Agent Skills, but still widely committed in its own right.
 - **[Copilot prompt & instruction files](conventions/copilot-prompt-files/)** - Modular, path-scoped Copilot context: *.instructions.md auto-attach to matching files via an applyTo glob, while *.prompt.md are reusable prompts you invoke by name - the granular cousins of a single .github/copilot-instructions.md.

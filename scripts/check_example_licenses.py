@@ -16,6 +16,8 @@ import urllib.request
 from collections import defaultdict
 from urllib.parse import urlparse
 
+from catalog import has_complete_local_metadata, local_example_urls, load_local_metadata
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGETS_PATH = os.path.join(ROOT, "scripts", "targets.json")
 CONVENTIONS_DIR = os.path.join(ROOT, "conventions")
@@ -34,7 +36,7 @@ def load_targets():
 
 def declared_urls(conventions):
     urls = set()
-    for conv in conventions.values():
+    for slug, conv in conventions.items():
         for target in conv.get("targets", []):
             if target.get("url"):
                 urls.add(target["url"])
@@ -43,6 +45,9 @@ def declared_urls(conventions):
                     f"https://github.com/{target['owner']}/{target['repo']}"
                     f"/blob/HEAD/{target['path']}"
                 )
+        if has_complete_local_metadata(slug):
+            _, sources = load_local_metadata(slug)
+            urls.update(local_example_urls(sources))
     return urls
 
 
@@ -127,7 +132,9 @@ def collect(offline):
             continue
         label, url = provenance
         if url not in allowed_urls:
-            errors.append(f"{slug}/examples/{name}: provenance URL is not declared in scripts/targets.json")
+            errors.append(
+                f"{slug}/examples/{name}: provenance URL is not declared in legacy targets or local sources metadata"
+            )
         examples.append((slug, name, label, url))
         repo = github_repo_from_url(url)
         if repo:

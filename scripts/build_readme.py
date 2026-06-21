@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Rebuild the root README.md from scripts/targets.json.
+"""Rebuild the root README.md from catalog metadata.
 
-The root README is GENERATED - do not hand-edit it. Edit targets.json (or the
-per-convention pages), then run this script. Conventions are grouped by
+The root README is GENERATED - do not hand-edit it. Edit `scripts/targets.json`
+for non-migrated conventions, or local convention metadata for complete pilot
+entries such as `skill-md`, then run this script. Conventions are grouped by
 category in the declared order; manual_readme conventions appear as normal
 index rows (their detailed page is hand-written).
 
@@ -12,6 +13,8 @@ Usage:
 import json
 import os
 import re
+
+from catalog import has_complete_local_metadata, load_local_metadata, overlay_local_convention
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGETS_PATH = os.path.join(ROOT, "scripts", "targets.json")
@@ -213,7 +216,13 @@ def build():
     with open(TARGETS_PATH, encoding="utf-8") as fh:
         data = json.load(fh)
     categories = data["categories"]
-    conventions = data["conventions"]
+    conventions = {}
+    for slug, conv in data["conventions"].items():
+        if has_complete_local_metadata(slug):
+            local_convention, local_sources = load_local_metadata(slug)
+            conventions[slug] = overlay_local_convention(conv, local_convention, local_sources)
+        else:
+            conventions[slug] = conv
 
     by_cat = {c: [] for c in categories}
     for slug, conv in conventions.items():

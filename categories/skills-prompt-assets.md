@@ -6,14 +6,14 @@
 
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
-| 🟢 | [SKILL.md](../conventions/skill-md/) | `SKILL.md` | Claude (Agent Skills), Claude Code, and the open Agent Skills ecosystem | [spec ↗](https://agentskills.io) |
+| 🟢 | [SKILL.md](../conventions/skill-md/) | `SKILL.md` | Claude Agent Skills, Claude Code, Amp, Agent Skills-compatible tools | [spec ↗](https://agentskills.io/specification) |
 | 🟢 | [Prompt asset files](../conventions/prompt-assets/) | `.prompty` `.prompt` `system_prompt.txt` | Prompty tooling, Azure AI / Semantic Kernel, and apps that load externalized prompts | [spec ↗](https://prompty.ai) |
 | 🟢 | [Claude Code commands](../conventions/claude-commands/) | `.md` | Claude Code - project .claude/commands/ and user ~/.claude/commands/ | [spec ↗](https://code.claude.com/docs/en/slash-commands) |
 | 🟢 | [Copilot prompt & instruction files](../conventions/copilot-prompt-files/) | `.prompt.md` `.instructions.md` | GitHub Copilot in VS Code / Copilot CLI | [spec ↗](https://code.visualstudio.com/docs/agent-customization/prompt-files) |
 
 ## [SKILL.md](../conventions/skill-md/)
 
-A self-contained, model-invoked capability: YAML frontmatter (name + description) tells the agent when to load it; the body teaches it how. Progressive disclosure keeps it cheap until needed.
+A self-contained, model-invoked capability file that tells an agent when to load a reusable procedure and how to execute it.
 
 ## [Prompt asset files](../conventions/prompt-assets/)
 

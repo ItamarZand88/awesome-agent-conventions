@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Verify every URL in scripts/targets.json still resolves.
+"""Verify every catalog URL still resolves.
 
 The whole list rests on one promise: the links are real. This checks each
-`spec`, each `targets[].url`, and each pattern-file `instances[].url`.
+legacy `spec`, each `targets[].url`, each pattern-file `instances[].url`, plus
+local metadata URLs from migrated `sources.yml` files.
 
 Failure policy is deliberately honest-but-not-flaky:
 
@@ -36,6 +37,8 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import urlparse
 
+from catalog import has_complete_local_metadata, load_local_metadata, local_source_urls
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGETS_PATH = os.path.join(ROOT, "scripts", "targets.json")
 
@@ -47,17 +50,34 @@ DEAD = {404, 410}    # the only codes that mean "this link is gone"
 
 def collect(data, only=None):
     """Yield (kind, slug, url) for every URL we promise resolves."""
+    seen_urls = set()
     for slug, conv in data["conventions"].items():
         if only and slug != only:
             continue
         if conv.get("spec"):
-            yield ("spec", slug, conv["spec"])
+            item = ("spec", slug, conv["spec"])
+            if (slug, conv["spec"]) not in seen_urls:
+                seen_urls.add((slug, conv["spec"]))
+                yield item
         for t in conv.get("targets", []):
             if t.get("url"):
-                yield ("target", slug, t["url"])
+                item = ("target", slug, t["url"])
+                if (slug, t["url"]) not in seen_urls:
+                    seen_urls.add((slug, t["url"]))
+                    yield item
         for f in conv.get("files", []):
             for inst in f.get("instances", []):
-                yield ("instance", slug, inst["url"])
+                item = ("instance", slug, inst["url"])
+                if (slug, inst["url"]) not in seen_urls:
+                    seen_urls.add((slug, inst["url"]))
+                    yield item
+        if has_complete_local_metadata(slug):
+            _, sources = load_local_metadata(slug)
+            for url in local_source_urls(sources):
+                item = ("local", slug, url)
+                if (slug, url) not in seen_urls:
+                    seen_urls.add((slug, url))
+                    yield item
 
 
 def _depth(url):

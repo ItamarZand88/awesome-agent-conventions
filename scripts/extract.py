@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Fetch real agent-convention files and rebuild per-convention READMEs.
 
-Source of truth: scripts/targets.json. For every convention (except those
-marked `manual_readme`) this fetches each declared target, saves it under
-conventions/<slug>/examples/<source>/<filename> with a line-1 provenance
-comment, then rebuilds conventions/<slug>/README.md from what was actually
+Source of truth: `scripts/targets.json` for non-migrated conventions, plus
+complete local metadata (`convention.yml` + `sources.yml`) for migrated pilot
+entries such as `skill-md`. For every convention (except those marked
+`manual_readme`) this fetches each declared target, saves it under
+`conventions/<slug>/examples/<source>/<filename>` with a line-1 provenance
+comment, then rebuilds `conventions/<slug>/README.md` from what was actually
 captured.
 
 Never crashes on a bad target - a non-200 or network error prints a `miss`
@@ -23,7 +25,7 @@ import re
 import sys
 from urllib.parse import urlparse
 
-from catalog import has_complete_local_metadata, load_local_metadata, local_targets
+from catalog import has_complete_local_metadata, load_local_metadata, overlay_local_convention
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGETS_PATH = os.path.join(ROOT, "scripts", "targets.json")
@@ -481,23 +483,7 @@ def process_convention(slug, conv, index_only):
     local_sources = None
     if has_complete_local_metadata(slug):
         local_convention, local_sources = load_local_metadata(slug)
-        conv = {
-            **conv,
-            "name": local_convention["name"],
-            "category": local_convention["category"],
-            "maturity": local_convention["maturity"],
-            "summary": local_convention["summary"],
-            "read_by": ", ".join(local_convention["readers"]),
-            "location": "; ".join(
-                f"{item['path']} - {item['description']}"
-                for item in local_convention["locations"]
-            ),
-            "files": [
-                {"name": item["name"], "note": item["description"]}
-                for item in local_convention["files"]
-            ],
-            "targets": local_targets(local_sources),
-        }
+        conv = overlay_local_convention(conv, local_convention, local_sources)
 
     if not index_only:
         os.makedirs(examples_dir, exist_ok=True)
