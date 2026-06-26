@@ -28,6 +28,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/mcp-builder/SKILL.md
   filename: SKILL.md
+  domain: Dev & Tooling
 - label: pdf
   represents: A skill that relies on bundled tooling and domain-specific operational guidance.
   upstream:
@@ -35,6 +36,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/pdf/SKILL.md
   filename: SKILL.md
+  domain: Documents & Office
 - label: algorithmic-art
   represents: Generative art with p5.js using seeded randomness and interactive parameter exploration
   upstream:
@@ -42,6 +44,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/algorithmic-art/SKILL.md
   filename: SKILL.md
+  domain: Design & Creative
 - label: brand-guidelines
   represents: Applies Anthropic brand colors and typography to artifacts
   upstream:
@@ -49,6 +52,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/brand-guidelines/SKILL.md
   filename: SKILL.md
+  domain: Design & Creative
 - label: canvas-design
   represents: Create visual art as .png/.pdf using design philosophy
   upstream:
@@ -56,6 +60,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/canvas-design/SKILL.md
   filename: SKILL.md
+  domain: Design & Creative
 - label: claude-api
   represents: Building applications with the Claude API
   upstream:
@@ -63,6 +68,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/claude-api/SKILL.md
   filename: SKILL.md
+  domain: Dev & Tooling
 - label: doc-coauthoring
   represents: Structured workflow for co-authoring documentation
   upstream:
@@ -70,6 +76,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/doc-coauthoring/SKILL.md
   filename: SKILL.md
+  domain: Content & Comms
 - label: docx
   represents: Create, read, and edit Word .docx files
   upstream:
@@ -77,6 +84,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/docx/SKILL.md
   filename: SKILL.md
+  domain: Documents & Office
 - label: frontend-design
   represents: Guidance for distinctive, intentional frontend UI design
   upstream:
@@ -84,6 +92,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/frontend-design/SKILL.md
   filename: SKILL.md
+  domain: Design & Creative
 - label: internal-comms
   represents: Write internal communications in company formats
   upstream:
@@ -91,6 +100,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/internal-comms/SKILL.md
   filename: SKILL.md
+  domain: Content & Comms
 - label: pptx
   represents: Create, read, and edit PowerPoint .pptx files
   upstream:
@@ -98,6 +108,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/pptx/SKILL.md
   filename: SKILL.md
+  domain: Documents & Office
 - label: skill-creator
   represents: Create, modify, and measure Agent Skills
   upstream:
@@ -105,6 +116,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/skill-creator/SKILL.md
   filename: SKILL.md
+  domain: Dev & Tooling
 - label: slack-gif-creator
   represents: Create animated GIFs optimized for Slack
   upstream:
@@ -112,6 +124,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/slack-gif-creator/SKILL.md
   filename: SKILL.md
+  domain: Design & Creative
 - label: theme-factory
   represents: Toolkit for styling artifacts with a consistent theme
   upstream:
@@ -119,6 +132,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/theme-factory/SKILL.md
   filename: SKILL.md
+  domain: Design & Creative
 - label: web-artifacts-builder
   represents: Build elaborate multi-component claude.ai HTML artifacts
   upstream:
@@ -126,6 +140,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/web-artifacts-builder/SKILL.md
   filename: SKILL.md
+  domain: Design & Creative
 - label: webapp-testing
   represents: Test local web apps with Playwright
   upstream:
@@ -133,6 +148,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/webapp-testing/SKILL.md
   filename: SKILL.md
+  domain: Dev & Tooling
 - label: xlsx
   represents: Create, read, and edit Excel .xlsx spreadsheets
   upstream:
@@ -140,6 +156,7 @@ examples:
     url: https://github.com/anthropics/skills
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/xlsx/SKILL.md
   filename: SKILL.md
+  domain: Documents & Office
 - label: xhs-note-creator
   represents: 'Community: Xiaohongshu (RedBook) note creator with themed image cards'
   upstream:
@@ -147,6 +164,7 @@ examples:
     url: https://github.com/comeonzhj/Auto-Redbook-Skills
   url: https://raw.githubusercontent.com/comeonzhj/Auto-Redbook-Skills/main/SKILL.md
   filename: SKILL.md
+  domain: Content & Comms
 - label: repo-task-proof-loop
   represents: 'Community: repo-local spec-freeze build-evidence-verify loop for large coding tasks'
   upstream:
@@ -154,6 +172,7 @@ examples:
     url: https://github.com/DenisSergeevitch/repo-task-proof-loop
   url: https://raw.githubusercontent.com/DenisSergeevitch/repo-task-proof-loop/main/SKILL.md
   filename: SKILL.md
+  domain: Dev & Tooling
 - label: guardian-cli
   represents: 'Community: AI-powered penetration-testing automation CLI orchestrating multiple agents'
   upstream:
@@ -161,6 +180,7 @@ examples:
     url: https://github.com/zakirkun/guardian-cli
   url: https://raw.githubusercontent.com/zakirkun/guardian-cli/main/SKILL.md
   filename: SKILL.md
+  domain: Dev & Tooling
 - label: bazi
   represents: 'Community: Chinese four-pillars (Bazi) birth-chart analysis'
   upstream:
@@ -168,6 +188,7 @@ examples:
     url: https://github.com/jinchenma94/bazi-skill
   url: https://raw.githubusercontent.com/jinchenma94/bazi-skill/main/SKILL.md
   filename: SKILL.md
+  domain: Domain-specific & Niche
 - label: web-access
   represents: 'Community: route all networking via a real browser CDP skill'
   upstream:
@@ -175,3 +196,684 @@ examples:
     url: https://github.com/eze-is/web-access
   url: https://raw.githubusercontent.com/eze-is/web-access/main/SKILL.md
   filename: SKILL.md
+  domain: Dev & Tooling
+- label: swiftui-design-skill
+  represents: Designs distinctive iOS/macOS SwiftUI interfaces with anti-AI-slop rules and a 5-dimension review
+  upstream:
+    label: Wholiver/swiftui-design-skill
+    url: https://github.com/Wholiver/swiftui-design-skill
+  url: https://raw.githubusercontent.com/Wholiver/swiftui-design-skill/main/SKILL.md
+  filename: SKILL.md
+  domain: Design & Creative
+- label: spine-2d-animation
+  represents: Rigs and keyframes 2D characters into Spine skeletal animations (.json/.atlas/.png) with HTML5 preview
+  upstream:
+    label: GenielabsOpenSource/spine-animation-ai
+    url: https://github.com/GenielabsOpenSource/spine-animation-ai
+  url: https://raw.githubusercontent.com/GenielabsOpenSource/spine-animation-ai/main/SKILL.md
+  filename: SKILL.md
+  domain: Design & Creative
+- label: nano-image-generator
+  represents: Generates icons, logos, banners and illustrations via Nano Banana Pro with reference-image style transfer
+  upstream:
+    label: lxfater/nano-image-generator-skill
+    url: https://github.com/lxfater/nano-image-generator-skill
+  url: https://raw.githubusercontent.com/lxfater/nano-image-generator-skill/main/SKILL.md
+  filename: SKILL.md
+  domain: Design & Creative
+- label: claw3d-print-workflow
+  represents: 'Unified 3D workflow: AI model creation, Thingiverse search, slicing and 3D printing as opt-in modules'
+  upstream:
+    label: makermate/claw3d-skill
+    url: https://github.com/makermate/claw3d-skill
+  url: https://raw.githubusercontent.com/makermate/claw3d-skill/main/SKILL.md
+  filename: SKILL.md
+  domain: Design & Creative
+- label: qwen3-tts-voice
+  represents: Local Qwen3-TTS voice workflow for single-line synthesis, audiobook batch dubbing, and voice cloning
+  upstream:
+    label: mu-zi-lee/qwen3-tts-skill
+    url: https://github.com/mu-zi-lee/qwen3-tts-skill
+  url: https://raw.githubusercontent.com/mu-zi-lee/qwen3-tts-skill/main/SKILL.md
+  filename: SKILL.md
+  domain: Design & Creative
+- label: game-character-sprites
+  represents: Creates fixed-cell pixel-art character spritesheets (idle/walk/attack, 4/8-way) with transparent previews
+  upstream:
+    label: tachikomared/character-animation-creator-skill
+    url: https://github.com/tachikomared/character-animation-creator-skill
+  url: https://raw.githubusercontent.com/tachikomared/character-animation-creator-skill/main/SKILL.md
+  filename: SKILL.md
+  domain: Design & Creative
+- label: premium-ui-builder
+  represents: Premium UI design advisor that turns generic/AI-looking interfaces into polished, implementation-ready directions
+  upstream:
+    label: ziguishian/premium-ui-builder-skill
+    url: https://github.com/ziguishian/premium-ui-builder-skill
+  url: https://raw.githubusercontent.com/ziguishian/premium-ui-builder-skill/main/SKILL.md
+  filename: SKILL.md
+  domain: Design & Creative
+- label: market-sages-investors
+  represents: Convenes a council of 13 legendary investors to analyze a stock ticker and synthesize a recommendation
+  upstream:
+    label: hyhmrright/market-sages
+    url: https://github.com/hyhmrright/market-sages
+  url: https://raw.githubusercontent.com/hyhmrright/market-sages/main/skill.md
+  filename: SKILL.md
+  domain: Domain-specific & Niche
+- label: milo-solana-portfolio
+  represents: 'Autonomous Solana portfolio management API: non-custodial wallets, transfers, orders, auto-trading'
+  upstream:
+    label: and-milo/agent-to-agent-portfolio-manager
+    url: https://github.com/and-milo/agent-to-agent-portfolio-manager
+  url: https://raw.githubusercontent.com/and-milo/agent-to-agent-portfolio-manager/main/skill.md
+  filename: SKILL.md
+  domain: Domain-specific & Niche
+- label: weixin-minigame-dev
+  represents: 'WeChat Mini Game development guide: platform API limits, Canvas constraints, best practices'
+  upstream:
+    label: wukaikailive/weixin-game-skill
+    url: https://github.com/wukaikailive/weixin-game-skill
+  url: https://raw.githubusercontent.com/wukaikailive/weixin-game-skill/main/skill.md
+  filename: SKILL.md
+  domain: Domain-specific & Niche
+- label: mlai-textbooks
+  represents: Expert tutor for ML/AI algorithms from Bishop's PRML and Norvig's AIMA via the mlai-textbooks package
+  upstream:
+    label: dhruv-anand-aintech/mlai-textbooks-skill
+    url: https://github.com/dhruv-anand-aintech/mlai-textbooks-skill
+  url: https://raw.githubusercontent.com/dhruv-anand-aintech/mlai-textbooks-skill/main/skill.md
+  filename: SKILL.md
+  domain: Domain-specific & Niche
+- label: taleb-perspective
+  represents: Applies Nassim Taleb's mental models (antifragility, black swan, barbell, skin-in-the-game) to decisions
+  upstream:
+    label: alchaincyf/taleb-skill
+    url: https://github.com/alchaincyf/taleb-skill
+  url: https://raw.githubusercontent.com/alchaincyf/taleb-skill/main/SKILL.md
+  filename: SKILL.md
+  domain: Domain-specific & Niche
+- label: employment-contract-templates
+  represents: Drafts employment contracts, offer letters, and HR policy documents following legal best practices
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/hr-legal-compliance/skills/employment-contract-templates/SKILL.md
+  filename: SKILL.md
+  domain: Domain-specific & Niche
+- label: superpowers-systematic-debugging
+  represents: Four-phase root-cause debugging discipline; activates on any bug, test failure, or unexpected behavior before proposing fixes
+  upstream:
+    label: obra/superpowers
+    url: https://github.com/obra/superpowers
+  url: https://raw.githubusercontent.com/obra/superpowers/main/skills/systematic-debugging/SKILL.md
+  filename: SKILL.md
+  domain: Dev & Tooling
+- label: superpowers-git-worktrees
+  represents: Sets up isolated git worktrees for parallel feature work
+  upstream:
+    label: obra/superpowers
+    url: https://github.com/obra/superpowers
+  url: https://raw.githubusercontent.com/obra/superpowers/main/skills/using-git-worktrees/SKILL.md
+  filename: SKILL.md
+  domain: Dev & Tooling
+- label: superpowers-test-driven-development
+  represents: Red-green-refactor TDD loop with failing-test-first enforcement
+  upstream:
+    label: obra/superpowers
+    url: https://github.com/obra/superpowers
+  url: https://raw.githubusercontent.com/obra/superpowers/main/skills/test-driven-development/SKILL.md
+  filename: SKILL.md
+  domain: Dev & Tooling
+- label: wshobson-terraform-module-library
+  represents: Builds reusable IaC modules for AWS/Azure/GCP/OCI
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/cloud-infrastructure/skills/terraform-module-library/SKILL.md
+  filename: SKILL.md
+  domain: Dev & Tooling
+- label: wshobson-git-advanced-workflows
+  represents: 'Advanced git: rebase, cherry-pick, bisect, worktrees, reflog recovery'
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/developer-essentials/skills/git-advanced-workflows/SKILL.md
+  filename: SKILL.md
+  domain: Dev & Tooling
+- label: browserbase-browser
+  represents: Drives a web browser via natural-language CLI (local Chrome or remote Browserbase)
+  upstream:
+    label: browserbase/skills
+    url: https://github.com/browserbase/skills
+  url: https://raw.githubusercontent.com/browserbase/skills/main/skills/browser/SKILL.md
+  filename: SKILL.md
+  domain: Dev & Tooling
+- label: prowler-pytest
+  represents: Pytest patterns (fixtures, mocking, parametrize, markers) for Python
+  upstream:
+    label: prowler-cloud/prowler
+    url: https://github.com/prowler-cloud/prowler
+  url: https://raw.githubusercontent.com/prowler-cloud/prowler/master/skills/pytest/SKILL.md
+  filename: SKILL.md
+  domain: Dev & Tooling
+- label: wshobson-backtesting-frameworks
+  represents: Builds robust trading backtests handling look-ahead/survivorship bias and transaction costs
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/quantitative-trading/skills/backtesting-frameworks/SKILL.md
+  filename: SKILL.md
+  domain: Data & Analysis
+- label: chdb-datastore
+  represents: pandas API over a ClickHouse engine for fast filter/group/join across parquet/csv/S3/Postgres
+  upstream:
+    label: chdb-io/chdb
+    url: https://github.com/chdb-io/chdb
+  url: https://raw.githubusercontent.com/chdb-io/chdb/main/agent/skills/chdb-datastore/SKILL.md
+  filename: SKILL.md
+  domain: Data & Analysis
+- label: pycse
+  represents: 'Scientific computing toolkit: nonlinear regression, uncertainty quantification, design of experiments'
+  upstream:
+    label: jkitchin/pycse
+    url: https://github.com/jkitchin/pycse
+  url: https://raw.githubusercontent.com/jkitchin/pycse/master/src/pycse/SKILL.md
+  filename: SKILL.md
+  domain: Data & Analysis
+- label: research-time-series-econometrics
+  represents: 'Time-series econometrics: ARIMA, VAR, cointegration, stationarity, forecasting'
+  upstream:
+    label: wentorai/research-plugins
+    url: https://github.com/wentorai/research-plugins
+  url: https://raw.githubusercontent.com/wentorai/research-plugins/main/skills/analysis/econometrics/time-series-guide/SKILL.md
+  filename: SKILL.md
+  domain: Data & Analysis
+- label: research-hypothesis-testing
+  represents: Statistical hypothesis testing, power analysis, and significance reporting
+  upstream:
+    label: wentorai/research-plugins
+    url: https://github.com/wentorai/research-plugins
+  url: https://raw.githubusercontent.com/wentorai/research-plugins/main/skills/analysis/statistics/hypothesis-testing-guide/SKILL.md
+  filename: SKILL.md
+  domain: Data & Analysis
+- label: omicverse-single-cell-clustering
+  represents: Single-cell clustering (Leiden, Louvain, GMM, cNMF) and batch correction for scRNA-seq
+  upstream:
+    label: omicverse/omicverse
+    url: https://github.com/omicverse/omicverse
+  url: https://raw.githubusercontent.com/omicverse/omicverse/master/.claude/skills/single-clustering/SKILL.md
+  filename: SKILL.md
+  domain: Data & Analysis
+- label: zorai-yfinance
+  represents: Downloads Yahoo Finance market data (prices, options, fundamentals) into pandas
+  upstream:
+    label: mkurman/zorai
+    url: https://github.com/mkurman/zorai
+  url: https://raw.githubusercontent.com/mkurman/zorai/main/skills/scientific-skills/yfinance/SKILL.md
+  filename: SKILL.md
+  domain: Data & Analysis
+- label: docx-tracked-changes
+  represents: Produces Word tracked changes (insertions, deletions, margin comments); activates on requests to redline/markup a document for review
+  upstream:
+    label: mohitagw15856/pm-claude-skills
+    url: https://github.com/mohitagw15856/pm-claude-skills
+  url: https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/skills/docx-tracked-changes/SKILL.md
+  filename: SKILL.md
+  domain: Documents & Office
+- label: pptx-slide-auditor
+  represents: Slide-by-slide PowerPoint audit for layout, overflow, hierarchy and inconsistency before a meeting
+  upstream:
+    label: mohitagw15856/pm-claude-skills
+    url: https://github.com/mohitagw15856/pm-claude-skills
+  url: https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/skills/pptx-slide-auditor/SKILL.md
+  filename: SKILL.md
+  domain: Documents & Office
+- label: md-document-html
+  represents: Converts long-form markdown (specs/RFCs/reports) into a single-file interactive HTML document with TOC and search
+  upstream:
+    label: alirezarezvani/claude-skills
+    url: https://github.com/alirezarezvani/claude-skills
+  url: https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/markdown-html/skills/md-document/SKILL.md
+  filename: SKILL.md
+  domain: Documents & Office
+- label: md-slides-html
+  represents: Converts a markdown deck into a single-file HTML presentation with keyboard nav, presenter mode and print-to-PDF
+  upstream:
+    label: alirezarezvani/claude-skills
+    url: https://github.com/alirezarezvani/claude-skills
+  url: https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/markdown-html/skills/md-slides/SKILL.md
+  filename: SKILL.md
+  domain: Documents & Office
+- label: quarto-authoring
+  represents: Authoring guidance for Quarto (.qmd) documents, books, sites, presentations incl. callouts, cross-refs and citations
+  upstream:
+    label: posit-dev/skills
+    url: https://github.com/posit-dev/skills
+  url: https://raw.githubusercontent.com/posit-dev/skills/main/quarto/quarto-authoring/SKILL.md
+  filename: SKILL.md
+  domain: Documents & Office
+- label: google-apps-script-sheets
+  represents: Builds Google Sheets/Workspace automation (menus, triggers, sidebars, email batches, PDF export)
+  upstream:
+    label: jezweb/claude-skills
+    url: https://github.com/jezweb/claude-skills
+  url: https://raw.githubusercontent.com/jezweb/claude-skills/main/plugins/integrations/skills/google-apps-script/SKILL.md
+  filename: SKILL.md
+  domain: Documents & Office
+- label: newsletter-writer
+  represents: Writes a full creator newsletter issue (subject lines, hook, body, CTA) for Substack/beehiiv/ConvertKit
+  upstream:
+    label: mohitagw15856/pm-claude-skills
+    url: https://github.com/mohitagw15856/pm-claude-skills
+  url: https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/skills/newsletter-writer/SKILL.md
+  filename: SKILL.md
+  domain: Content & Comms
+- label: press-release-writer
+  represents: Writes a structured press release (headline, dateline, body, boilerplate, contact) around the news angle
+  upstream:
+    label: mohitagw15856/pm-claude-skills
+    url: https://github.com/mohitagw15856/pm-claude-skills
+  url: https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/skills/press-release/SKILL.md
+  filename: SKILL.md
+  domain: Content & Comms
+- label: seo-keyword-research
+  represents: SEO keyword research prioritizing volume, difficulty, intent and topic clusters (English + Chinese)
+  upstream:
+    label: aaron-he-zhu/seo-geo-claude-skills
+    url: https://github.com/aaron-he-zhu/seo-geo-claude-skills
+  url: https://raw.githubusercontent.com/aaron-he-zhu/seo-geo-claude-skills/main/research/keyword-research/SKILL.md
+  filename: SKILL.md
+  domain: Content & Comms
+- label: seo-content-writer
+  represents: Drafts SEO-optimized posts, articles and landing pages with target keywords and snippet structure
+  upstream:
+    label: aaron-he-zhu/seo-geo-claude-skills
+    url: https://github.com/aaron-he-zhu/seo-geo-claude-skills
+  url: https://raw.githubusercontent.com/aaron-he-zhu/seo-geo-claude-skills/main/build/seo-content-writer/SKILL.md
+  filename: SKILL.md
+  domain: Content & Comms
+- label: geo-content-optimizer
+  represents: Improves content citation-readiness for AI engines (ChatGPT, Perplexity, AI Overviews, Gemini)
+  upstream:
+    label: aaron-he-zhu/seo-geo-claude-skills
+    url: https://github.com/aaron-he-zhu/seo-geo-claude-skills
+  url: https://raw.githubusercontent.com/aaron-he-zhu/seo-geo-claude-skills/main/build/geo-content-optimizer/SKILL.md
+  filename: SKILL.md
+  domain: Content & Comms
+- label: character-voice-writing
+  represents: Writes dialogue and explores a character's voice from a full profile or bare sketch (model-invocable)
+  upstream:
+    label: haowjy/creative-writing-skills
+    url: https://github.com/haowjy/creative-writing-skills
+  url: https://raw.githubusercontent.com/haowjy/creative-writing-skills/main/skills/character-voice/SKILL.md
+  filename: SKILL.md
+  domain: Content & Comms
+- label: brand-copywriter
+  represents: Generates marketing copy via proven frameworks for ads, landing/sales pages, email sequences and LinkedIn
+  upstream:
+    label: ognjengt/founder-skills
+    url: https://github.com/ognjengt/founder-skills
+  url: https://raw.githubusercontent.com/ognjengt/founder-skills/main/skills/brand-copywriter/SKILL.md
+  filename: SKILL.md
+  domain: Content & Comms
+- label: social-publishing-socialclaw
+  represents: Schedules/publishes social posts across 13 platforms via the SocialClaw API (needs SOCIALCLAW_API_KEY)
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/social-publishing/skills/social-publishing/SKILL.md
+  filename: SKILL.md
+  domain: Content & Comms
+- label: resume-cover-letter
+  represents: Writes role-tailored resumes/CVs and cover letters with ATS-friendly formatting and regional formats
+  upstream:
+    label: jezweb/claude-skills
+    url: https://github.com/jezweb/claude-skills
+  url: https://raw.githubusercontent.com/jezweb/claude-skills/main/plugins/writing/skills/resume-cover-letter/SKILL.md
+  filename: SKILL.md
+  domain: Content & Comms
+- label: wshobson-visual-design-foundations
+  represents: Core visual-design principles (hierarchy, color, type, spacing) for establishing or auditing a UI
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/ui-design/skills/visual-design-foundations/SKILL.md
+  filename: SKILL.md
+  domain: Design & Creative
+- label: wshobson-interaction-design
+  represents: Patterns for micro-interactions, states, and motion when designing interactive UI behavior
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/ui-design/skills/interaction-design/SKILL.md
+  filename: SKILL.md
+  domain: Design & Creative
+- label: wshobson-tailwind-design-system
+  represents: 'Build a token-driven Tailwind design system: themes, tokens, reusable component styles'
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/frontend-mobile-development/skills/tailwind-design-system/SKILL.md
+  filename: SKILL.md
+  domain: Design & Creative
+- label: alireza-apple-hig-expert
+  represents: Audit/design Apple-platform UI against the Human Interface Guidelines incl. Liquid Glass
+  upstream:
+    label: alirezarezvani/claude-skills
+    url: https://github.com/alirezarezvani/claude-skills
+  url: https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/product-team/apple-hig-expert/skills/apple-hig-expert/SKILL.md
+  filename: SKILL.md
+  domain: Design & Creative
+- label: claudekit-aesthetic-ui
+  represents: Make interfaces beautiful via proven design principles and inspiration analysis
+  upstream:
+    label: mrgoonie/claudekit-skills
+    url: https://github.com/mrgoonie/claudekit-skills
+  url: https://raw.githubusercontent.com/mrgoonie/claudekit-skills/main/.claude/skills/aesthetic/SKILL.md
+  filename: SKILL.md
+  domain: Design & Creative
+- label: aso-appstore-screenshots
+  represents: Generate high-converting ASO-optimized App Store screenshot images from an app's codebase
+  upstream:
+    label: adamlyttleapps/claude-skill-aso-appstore-screenshots
+    url: https://github.com/adamlyttleapps/claude-skill-aso-appstore-screenshots
+  url: https://raw.githubusercontent.com/adamlyttleapps/claude-skill-aso-appstore-screenshots/main/SKILL.md
+  filename: SKILL.md
+  domain: Design & Creative
+- label: webgpu-threejs-tsl
+  represents: WebGPU + Three.js TSL shaders, node materials, compute and post-processing for creative-coding scenes
+  upstream:
+    label: dgreenheck/webgpu-claude-skill
+    url: https://github.com/dgreenheck/webgpu-claude-skill
+  url: https://raw.githubusercontent.com/dgreenheck/webgpu-claude-skill/main/skills/webgpu-threejs-tsl/SKILL.md
+  filename: SKILL.md
+  domain: Design & Creative
+- label: wshobson-godot-gdscript-patterns
+  represents: Godot 4 GDScript patterns (signals, scenes, state machines, optimization) for building games
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/game-development/skills/godot-gdscript-patterns/SKILL.md
+  filename: SKILL.md
+  domain: Domain-specific & Niche
+- label: wshobson-unity-ecs-patterns
+  represents: Unity DOTS/ECS architecture and performance patterns for data-oriented game systems
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/game-development/skills/unity-ecs-patterns/SKILL.md
+  filename: SKILL.md
+  domain: Domain-specific & Niche
+- label: wshobson-risk-metrics-calculation
+  represents: Compute trading/portfolio risk metrics (VaR, drawdown, Sharpe, volatility)
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/quantitative-trading/skills/risk-metrics-calculation/SKILL.md
+  filename: SKILL.md
+  domain: Domain-specific & Niche
+- label: wshobson-gdpr-data-handling
+  represents: GDPR-compliant data handling, consent, and data-subject rights for systems processing EU personal data
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/hr-legal-compliance/skills/gdpr-data-handling/SKILL.md
+  filename: SKILL.md
+  domain: Domain-specific & Niche
+- label: alireza-clinical-research
+  represents: Design prospective clinical studies (endpoints, power/sample-size, GO/NO-GO phase-gate)
+  upstream:
+    label: alirezarezvani/claude-skills
+    url: https://github.com/alirezarezvani/claude-skills
+  url: https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/research-ops/skills/clinical-research/SKILL.md
+  filename: SKILL.md
+  domain: Domain-specific & Niche
+- label: jeffallan-shopify-expert
+  represents: Build/debug Shopify themes, apps, and Storefront/Hydrogen integrations
+  upstream:
+    label: Jeffallan/claude-skills
+    url: https://github.com/Jeffallan/claude-skills
+  url: https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/shopify-expert/SKILL.md
+  filename: SKILL.md
+  domain: Domain-specific & Niche
+- label: pm-retention-analysis
+  represents: Structure a product retention/churn deep-dive with root-cause hypotheses and interventions
+  upstream:
+    label: mohitagw15856/pm-claude-skills
+    url: https://github.com/mohitagw15856/pm-claude-skills
+  url: https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/plugins/pm-analytics/skills/retention-analysis/SKILL.md
+  filename: SKILL.md
+  domain: Domain-specific & Niche
+- label: china-finance-dcf
+  represents: DCF valuation for A-share equities using Chinese financial data and China-specific WACC inputs
+  upstream:
+    label: jwangkun/claude-for-financial-services-cn
+    url: https://github.com/jwangkun/claude-for-financial-services-cn
+  url: https://raw.githubusercontent.com/jwangkun/claude-for-financial-services-cn/main/vertical-plugins/china-finance/skills/china-dcf/SKILL.md
+  filename: SKILL.md
+  domain: Domain-specific & Niche
+- label: superpowers-requesting-code-review
+  represents: Dispatches a fresh-context reviewer subagent to catch issues before merge; activates when completing features or before merging
+  upstream:
+    label: obra/superpowers
+    url: https://github.com/obra/superpowers
+  url: https://raw.githubusercontent.com/obra/superpowers/main/skills/requesting-code-review/SKILL.md
+  filename: SKILL.md
+  domain: Dev & Tooling
+- label: wshobson-rag-implementation
+  represents: Builds Retrieval-Augmented Generation systems with vector DBs and semantic search for knowledge-grounded AI
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/llm-application-dev/skills/rag-implementation/SKILL.md
+  filename: SKILL.md
+  domain: Data & Analysis
+- label: wshobson-spark-optimization
+  represents: Optimizes Apache Spark jobs via partitioning, caching, shuffle and memory tuning
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/data-engineering/skills/spark-optimization/SKILL.md
+  filename: SKILL.md
+  domain: Data & Analysis
+- label: wshobson-ml-pipeline-workflow
+  represents: End-to-end MLOps pipelines from data prep through training, validation and deployment
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/machine-learning-ops/skills/ml-pipeline-workflow/SKILL.md
+  filename: SKILL.md
+  domain: Data & Analysis
+- label: wshobson-debugging-strategies
+  represents: Systematic debugging, profiling and root-cause analysis across any stack
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/developer-essentials/skills/debugging-strategies/SKILL.md
+  filename: SKILL.md
+  domain: Dev & Tooling
+- label: wshobson-github-actions-templates
+  represents: Production-ready GitHub Actions CI/CD workflows for test/build/deploy
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/cicd-automation/skills/github-actions-templates/SKILL.md
+  filename: SKILL.md
+  domain: Dev & Tooling
+- label: trailofbits-semgrep
+  represents: Runs Semgrep SAST with parallel subagents (full or high-confidence modes, Pro taint analysis)
+  upstream:
+    label: trailofbits/skills
+    url: https://github.com/trailofbits/skills
+  url: https://raw.githubusercontent.com/trailofbits/skills/main/plugins/static-analysis/skills/semgrep/SKILL.md
+  filename: SKILL.md
+  domain: Dev & Tooling
+- label: trailofbits-codeql
+  represents: Scans codebases with CodeQL interprocedural data-flow/taint tracking
+  upstream:
+    label: trailofbits/skills
+    url: https://github.com/trailofbits/skills
+  url: https://raw.githubusercontent.com/trailofbits/skills/main/plugins/static-analysis/skills/codeql/SKILL.md
+  filename: SKILL.md
+  domain: Dev & Tooling
+- label: browserbase-ui-test
+  represents: AI-powered adversarial UI testing via the browse CLI, diff-aware; QAs UI changes and accessibility
+  upstream:
+    label: browserbase/skills
+    url: https://github.com/browserbase/skills
+  url: https://raw.githubusercontent.com/browserbase/skills/main/skills/ui-test/SKILL.md
+  filename: SKILL.md
+  domain: Dev & Tooling
+- label: browserbase-company-research
+  represents: Discovers and deep-researches target companies via Browserbase Search, scores ICP fit into a report/CSV
+  upstream:
+    label: browserbase/skills
+    url: https://github.com/browserbase/skills
+  url: https://raw.githubusercontent.com/browserbase/skills/main/skills/company-research/SKILL.md
+  filename: SKILL.md
+  domain: Data & Analysis
+- label: playwright-browser-testing
+  represents: Playwright browser automation that auto-detects dev servers and writes clean test scripts
+  upstream:
+    label: lackeyjb/playwright-skill
+    url: https://github.com/lackeyjb/playwright-skill
+  url: https://raw.githubusercontent.com/lackeyjb/playwright-skill/main/skills/playwright-skill/SKILL.md
+  filename: SKILL.md
+  domain: Dev & Tooling
+- label: tradermonty-technical-analyst
+  represents: Technical analysis of weekly price charts (trends, support/resistance, scenarios) for stocks/crypto/forex
+  upstream:
+    label: tradermonty/claude-trading-skills
+    url: https://github.com/tradermonty/claude-trading-skills
+  url: https://raw.githubusercontent.com/tradermonty/claude-trading-skills/main/skills/technical-analyst/SKILL.md
+  filename: SKILL.md
+  domain: Data & Analysis
+- label: tradermonty-backtest-expert
+  represents: Systematic backtesting of trading strategies (robustness, slippage, bias prevention)
+  upstream:
+    label: tradermonty/claude-trading-skills
+    url: https://github.com/tradermonty/claude-trading-skills
+  url: https://raw.githubusercontent.com/tradermonty/claude-trading-skills/main/skills/backtest-expert/SKILL.md
+  filename: SKILL.md
+  domain: Data & Analysis
+- label: dotnet-csharp-coding-standards
+  represents: Modern high-performance C# patterns (records, pattern matching, Span<T>, async, C#12+)
+  upstream:
+    label: Aaronontheweb/dotnet-skills
+    url: https://github.com/Aaronontheweb/dotnet-skills
+  url: https://raw.githubusercontent.com/Aaronontheweb/dotnet-skills/master/skills/csharp-coding-standards/SKILL.md
+  filename: SKILL.md
+  domain: Dev & Tooling
+- label: posit-ggsql
+  represents: Writes ggsql queries (a grammar-of-graphics for SQL) for data visualization
+  upstream:
+    label: posit-dev/skills
+    url: https://github.com/posit-dev/skills
+  url: https://raw.githubusercontent.com/posit-dev/skills/main/ggsql/ggsql/SKILL.md
+  filename: SKILL.md
+  domain: Data & Analysis
+- label: excel-automation-composio
+  represents: Create/format workbooks and read/write cells across Microsoft Excel (OneDrive) and Google Sheets
+  upstream:
+    label: ComposioHQ/awesome-claude-skills
+    url: https://github.com/ComposioHQ/awesome-claude-skills
+  url: https://raw.githubusercontent.com/ComposioHQ/awesome-claude-skills/master/composio-skills/excel-automation/SKILL.md
+  filename: SKILL.md
+  domain: Documents & Office
+- label: googleslides-automation-composio
+  represents: Build and batch-edit Google Slides decks from Markdown/templates and pull thumbnails
+  upstream:
+    label: ComposioHQ/awesome-claude-skills
+    url: https://github.com/ComposioHQ/awesome-claude-skills
+  url: https://raw.githubusercontent.com/ComposioHQ/awesome-claude-skills/master/composio-skills/googleslides-automation/SKILL.md
+  filename: SKILL.md
+  domain: Documents & Office
+- label: ocrspace-automation-composio
+  represents: Run OCR over images/PDFs to extract text via the OCR.space toolkit
+  upstream:
+    label: ComposioHQ/awesome-claude-skills
+    url: https://github.com/ComposioHQ/awesome-claude-skills
+  url: https://raw.githubusercontent.com/ComposioHQ/awesome-claude-skills/master/composio-skills/ocrspace-automation/SKILL.md
+  filename: SKILL.md
+  domain: Documents & Office
+- label: file-conversion-changethisfile
+  represents: Convert files across ~999 routes (PDF to Word, HEIC to JPG, MP4 to MP3, CSV to JSON) via ChangeThisFile
+  upstream:
+    label: wshobson/agents
+    url: https://github.com/wshobson/agents
+  url: https://raw.githubusercontent.com/wshobson/agents/main/plugins/file-conversion/skills/file-conversion/SKILL.md
+  filename: SKILL.md
+  domain: Documents & Office
+- label: opendataloader-pdf
+  represents: Parse PDFs into Markdown/JSON/HTML (tables, scans, formulas) for RAG/LLM pipelines
+  upstream:
+    label: chujianyun/skills
+    url: https://github.com/chujianyun/skills
+  url: https://raw.githubusercontent.com/chujianyun/skills/main/skills/opendataloader-pdf/SKILL.md
+  filename: SKILL.md
+  domain: Documents & Office
+- label: alt-text-figures
+  represents: Generate and audit accessible alt text for figures in R packages and Quarto documents
+  upstream:
+    label: posit-dev/skills
+    url: https://github.com/posit-dev/skills
+  url: https://raw.githubusercontent.com/posit-dev/skills/main/alt-text/SKILL.md
+  filename: SKILL.md
+  domain: Documents & Office
+- label: competitive-ads-extractor
+  represents: Scrape and analyze competitor ads from Facebook/LinkedIn ad libraries for messaging insight
+  upstream:
+    label: ComposioHQ/awesome-claude-skills
+    url: https://github.com/ComposioHQ/awesome-claude-skills
+  url: https://raw.githubusercontent.com/ComposioHQ/awesome-claude-skills/master/competitive-ads-extractor/SKILL.md
+  filename: SKILL.md
+  domain: Content & Comms
+- label: ad-creative-paid-ads
+  represents: Generate and iterate paid-ad copy and headlines (RSA, Meta, LinkedIn) at scale
+  upstream:
+    label: alirezarezvani/claude-skills
+    url: https://github.com/alirezarezvani/claude-skills
+  url: https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/marketing-skill/skills/ad-creative/SKILL.md
+  filename: SKILL.md
+  domain: Content & Comms
+- label: cold-email-outreach
+  represents: Write and sequence B2B cold-outreach emails and humanize sales-y drafts
+  upstream:
+    label: alirezarezvani/claude-skills
+    url: https://github.com/alirezarezvani/claude-skills
+  url: https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/marketing-skill/skills/cold-email/SKILL.md
+  filename: SKILL.md
+  domain: Content & Comms
+- label: content-gap-analysis
+  represents: Map missing topics and keyword gaps versus competitors for editorial planning
+  upstream:
+    label: aaron-he-zhu/seo-geo-claude-skills
+    url: https://github.com/aaron-he-zhu/seo-geo-claude-skills
+  url: https://raw.githubusercontent.com/aaron-he-zhu/seo-geo-claude-skills/main/research/content-gap-analysis/SKILL.md
+  filename: SKILL.md
+  domain: Content & Comms
+- label: content-repurposer
+  represents: Atomize one source into X thread, LinkedIn post, newsletter section, IG carousel, and short-form script
+  upstream:
+    label: mohitagw15856/pm-claude-skills
+    url: https://github.com/mohitagw15856/pm-claude-skills
+  url: https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/plugins/pm-creator/skills/content-repurposer/SKILL.md
+  filename: SKILL.md
+  domain: Content & Comms
+- label: social-media-posts
+  represents: Produce platform-specific posts for LinkedIn/Facebook/Instagram/Reddit with limits, hashtags, hooks
+  upstream:
+    label: jezweb/claude-skills
+    url: https://github.com/jezweb/claude-skills
+  url: https://raw.githubusercontent.com/jezweb/claude-skills/main/plugins/social-media/skills/social-media-posts/SKILL.md
+  filename: SKILL.md
+  domain: Content & Comms
+- label: remove-ai-flavor
+  represents: Rewrite drafts to strip AI-tells and template tone for a natural human voice
+  upstream:
+    label: chujianyun/skills
+    url: https://github.com/chujianyun/skills
+  url: https://raw.githubusercontent.com/chujianyun/skills/main/skills/remove-ai-flavor/SKILL.md
+  filename: SKILL.md
+  domain: Content & Comms

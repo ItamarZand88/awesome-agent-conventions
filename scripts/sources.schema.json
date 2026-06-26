@@ -47,7 +47,17 @@
             }
           },
           "url": { "type": "string", "format": "uri" },
-          "filename": { "type": "string", "minLength": 1 }
+          "filename": { "type": "string", "minLength": 1 },
+          "domain": {
+            "enum": [
+              "Documents & Office",
+              "Design & Creative",
+              "Dev & Tooling",
+              "Content & Comms",
+              "Data & Analysis",
+              "Domain-specific & Niche"
+            ]
+          }
         }
       }
     }

@@ -48,6 +48,17 @@ BADGES = {
     "🔵": "🔵 Proposed",
 }
 
+# Fixed render order for grouping examples by `domain` (skill-md and any future
+# convention whose sources.yml tags examples). Untagged examples trail in "Other".
+DOMAIN_ORDER = [
+    "Documents & Office",
+    "Design & Creative",
+    "Dev & Tooling",
+    "Content & Comms",
+    "Data & Analysis",
+    "Domain-specific & Niche",
+]
+
 PROVENANCE_RE = re.compile(r"<!-- source: (?P<label>.+?) — (?P<url>.+?) -->")
 COMMON_SOURCE_SUFFIXES = {
     "ai",
@@ -451,19 +462,49 @@ def rebuild_local_convention_readme(slug, convention, sources):
     )
     out.append("")
     if sources.get("examples"):
-        out.append("| Example | Represents | Upstream | File | Exact source |")
-        out.append("| --- | --- | --- | --- | --- |")
-        for example in sources["examples"]:
+        examples = sources["examples"]
+        header = "| Example | Represents | Upstream | File | Exact source |"
+        divider = "| --- | --- | --- | --- | --- |"
+
+        def example_row(example):
             local_path = os.path.join(
                 "examples",
                 source_dirname(example["label"]),
                 example["filename"],
             )
-            out.append(
+            return (
                 f"| `{example['label']}` | {example['represents']} | "
                 f"[`{example['upstream']['label']}`]({example['upstream']['url']}) | "
                 f"[`{local_path}`]({local_path}) | [source]({example['url']}) |"
             )
+
+        # When examples carry a `domain`, group them under sub-headings in a
+        # fixed order; anything untagged falls into a trailing "Other" group.
+        if any(ex.get("domain") for ex in examples):
+            extra = sorted(
+                {ex.get("domain") for ex in examples if ex.get("domain")}
+                - set(DOMAIN_ORDER)
+            )
+            first = True
+            for group in DOMAIN_ORDER + extra + ["Other"]:
+                if group == "Other":
+                    rows = [ex for ex in examples if not ex.get("domain")]
+                else:
+                    rows = [ex for ex in examples if ex.get("domain") == group]
+                if not rows:
+                    continue
+                if not first:
+                    out.append("")
+                first = False
+                out.append(f"### {group}")
+                out.append("")
+                out.append(header)
+                out.append(divider)
+                out.extend(example_row(ex) for ex in rows)
+        else:
+            out.append(header)
+            out.append(divider)
+            out.extend(example_row(ex) for ex in examples)
     else:
         out.append("_No examples are currently vendored for this convention._")
     out.append("")
