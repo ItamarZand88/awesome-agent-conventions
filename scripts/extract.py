@@ -25,7 +25,13 @@ import re
 import sys
 from urllib.parse import urlparse
 
-from catalog import has_complete_local_metadata, load_local_metadata, overlay_local_convention
+from catalog import (
+    domain_dirname,
+    has_complete_local_metadata,
+    load_local_metadata,
+    local_example_relpath,
+    overlay_local_convention,
+)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGETS_PATH = os.path.join(ROOT, "scripts", "targets.json")
@@ -134,11 +140,13 @@ def canonical_target_url(target):
 def example_path(examples_dir, target, url=None):
     url = url or canonical_target_url(target)
     label = source_label(target, url)
-    return os.path.join(
-        examples_dir,
-        source_dirname(label),
-        target_filename(target, url),
-    )
+    parts = [examples_dir]
+    domain = domain_dirname(target.get("domain")) if target.get("domain") else None
+    if domain:
+        parts.append(domain)
+    parts.append(source_dirname(label))
+    parts.append(target_filename(target, url))
+    return os.path.join(*parts)
 
 
 # --- fetching --------------------------------------------------------------
@@ -467,11 +475,7 @@ def rebuild_local_convention_readme(slug, convention, sources):
         divider = "| --- | --- | --- | --- | --- |"
 
         def example_row(example):
-            local_path = os.path.join(
-                "examples",
-                source_dirname(example["label"]),
-                example["filename"],
-            )
+            local_path = local_example_relpath(example)
             return (
                 f"| `{example['label']}` | {example['represents']} | "
                 f"[`{example['upstream']['label']}`]({example['upstream']['url']}) | "

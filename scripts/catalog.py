@@ -75,14 +75,15 @@ def complete_local_metadata_slugs():
 def local_targets(sources):
     targets = []
     for example in sources.get("examples", []):
-        targets.append(
-            {
-                "type": "web",
-                "url": example["url"],
-                "as": example["filename"],
-                "source_label": example["label"],
-            }
-        )
+        target = {
+            "type": "web",
+            "url": example["url"],
+            "as": example["filename"],
+            "source_label": example["label"],
+        }
+        if example.get("domain"):
+            target["domain"] = example["domain"]
+        targets.append(target)
     return targets
 
 
@@ -96,16 +97,30 @@ def source_dirname(label):
     return cleaned or "source"
 
 
+def domain_dirname(domain):
+    """Folder-safe slug for an example domain, e.g. 'Dev & Tooling' -> 'dev-tooling'."""
+    cleaned = re.sub(r"[^a-z0-9]+", "-", (domain or "").strip().lower()).strip("-")
+    return cleaned or None
+
+
+def local_example_relpath(example):
+    """examples/[<domain>/]<source>/<filename>; domain-tagged examples nest by domain."""
+    parts = ["examples"]
+    domain = domain_dirname(example.get("domain"))
+    if domain:
+        parts.append(domain)
+    parts.append(source_dirname(example["label"]))
+    parts.append(example["filename"])
+    return os.path.join(*parts)
+
+
 def local_example_relpaths(slug_or_sources):
     if isinstance(slug_or_sources, str):
         _, sources = load_local_metadata(slug_or_sources)
     else:
         sources = slug_or_sources
 
-    return [
-        os.path.join("examples", source_dirname(example["label"]), example["filename"])
-        for example in sources.get("examples", [])
-    ]
+    return [local_example_relpath(example) for example in sources.get("examples", [])]
 
 
 def local_example_path_map(slug_or_sources):
@@ -115,7 +130,7 @@ def local_example_path_map(slug_or_sources):
         sources = slug_or_sources
 
     return {
-        os.path.join("examples", source_dirname(example["label"]), example["filename"]): example
+        local_example_relpath(example): example
         for example in sources.get("examples", [])
     }
 
