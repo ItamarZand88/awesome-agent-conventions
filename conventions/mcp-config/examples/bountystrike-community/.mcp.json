@@ -1,0 +1,154 @@
+<!-- source: bountystrike-community — https://raw.githubusercontent.com/nilhemdot/bountystrike-community/master/.mcp.json -->
+{
+  "mcpServers": {
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "${DATABASE_URL}"
+      ]
+    },
+    "scope": {
+      "command": "node",
+      "args": [
+        "mcp/scope-mcp/dist/index.js"
+      ]
+    },
+    "oracle": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "mcp/oracle-mcp",
+        "oracle-mcp"
+      ]
+    },
+    "dedup": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "mcp/dedup-mcp",
+        "dedup-mcp"
+      ],
+      "env": {
+        "DATABASE_URL": "${DATABASE_URL}"
+      }
+    },
+    "state": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "mcp/state-mcp",
+        "state-mcp"
+      ],
+      "env": {
+        "DATABASE_URL": "${DATABASE_URL}"
+      }
+    },
+    "evidence": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "mcp/evidence-mcp",
+        "evidence-mcp"
+      ]
+    },
+    "sandbox": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "mcp/sandbox-mcp",
+        "sandbox-mcp"
+      ]
+    },
+    "politeness": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "mcp/politeness-mcp",
+        "politeness-mcp"
+      ]
+    },
+    "kev": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "mcp/kev-mcp",
+        "kev-mcp"
+      ]
+    },
+    "normalize": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "mcp/normalize-mcp",
+        "normalize-mcp"
+      ]
+    },
+    "ev": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "mcp/ev-mcp",
+        "ev-mcp"
+      ],
+      "env": {
+        "DATABASE_URL": "${DATABASE_URL}"
+      }
+    },
+    "h1": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "mcp/h1-mcp",
+        "h1-mcp"
+      ]
+    },
+    "bugcrowd": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "mcp/bugcrowd-mcp",
+        "bugcrowd-mcp"
+      ]
+    },
+    "intigriti": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "mcp/intigriti-mcp",
+        "intigriti-mcp"
+      ]
+    },
+    "yeswehack": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "mcp/yeswehack-mcp",
+        "yeswehack-mcp"
+      ]
+    },
+    "immunefi": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "mcp/immunefi-mcp",
+        "immunefi-mcp"
+      ]
+    }
+  }
+}

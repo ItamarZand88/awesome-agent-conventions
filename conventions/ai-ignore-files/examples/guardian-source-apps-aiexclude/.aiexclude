@@ -1,0 +1,3 @@
+<!-- source: guardian-source-apps-aiexclude — https://raw.githubusercontent.com/guardian/source-apps/main/.aiexclude -->
+# This is in place to prevent accidentally sharing code/context with Gemini in Android Studio.
+*

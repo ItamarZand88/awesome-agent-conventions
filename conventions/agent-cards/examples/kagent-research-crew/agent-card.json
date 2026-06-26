@@ -1,0 +1,21 @@
+<!-- source: kagent-research-crew — https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/crewai/research-crew/src/research_crew/agent-card.json -->
+{
+  "name": "research-crew",
+  "description": "A research CrewAI agent that can conduct research and analysis",
+  "url": "localhost:8080",
+  "version": "0.1.0",
+  "capabilities": {
+    "streaming": true
+  },
+  "defaultInputModes": ["application/json", "text/plain"],
+  "defaultOutputModes": ["text"],
+  "skills": [
+    {
+      "id": "research-crew",
+      "name": "Research Crew",
+      "description": "Can conduct research and analysis by providing a topic as input",
+      "example": "{\"input\": \"Latest advancements in AI\"}",
+      "tags": ["research", "analysis"]
+    }
+  ]
+}

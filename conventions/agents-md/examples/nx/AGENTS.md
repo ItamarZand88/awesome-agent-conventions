@@ -1,0 +1,235 @@
+<!-- source: nx — https://raw.githubusercontent.com/nrwl/nx/master/AGENTS.md -->
+When responding to queries about this repository:
+
+1. Suggest relevant commands from the "Essential Commands" section when applicable
+2. Highlight Nx's focus on monorepos and its key features like smart task execution, code generation, and project graph
+   analysis
+3. Mention the plugin ecosystem and support for various frameworks when relevant
+4. Emphasize the importance of running the full validation suite before committing changes
+
+Always strive to provide accurate, helpful responses that align with the best practices and workflows described in this
+file.
+
+## Documentation Contributions
+
+When working on Nx documentation, all documentation content lives in the `astro-docs/` folder. This is the new Astro-based documentation site built with Starlight.
+
+**Important**: Before making any documentation changes, read the `astro-docs/README.md` file for detailed guidance on:
+
+- Project structure and architecture
+- Content types (regular docs, dynamic plugin docs, CLI docs)
+- Available Markdoc tags for rich content
+- Development workflow and commands
+- Sidebar management
+
+### Quick Reference
+
+- Documentation content: `astro-docs/src/content/docs/`
+- Use `.mdoc` (Markdoc) or `.mdx` format for documentation files
+- Run `nx serve astro-docs` to start the local dev server
+- Sidebar structure is defined in `astro-docs/sidebar.mts`
+
+## GitHub Issue Response Mode
+
+When responding to GitHub issues, determine your approach based on how the request is phrased:
+
+### Plan-First Mode (Default)
+
+Use this approach when users ask you to:
+
+- "analyze", "investigate", "assess", "review", "examine", or "plan"
+- Or when the request is ambiguous
+
+In this mode:
+
+1. Provide a detailed analysis of the issue
+2. Create a comprehensive implementation plan
+3. Break down the solution into clear steps
+4. Then please post the plan as a comment on the issue
+
+### Immediate Implementation Mode
+
+Use this approach when users ask you to:
+
+- "fix", "implement", "solve", "build", "create", "update", or "add"
+- Or when they explicitly request immediate action
+
+In this mode:
+
+1. Analyze the issue quickly
+2. Implement the complete solution immediately
+3. Make all necessary code changes. Please make multiple commits so that the changes are easier to review.
+4. Run appropriate tests and validation
+5. If the tests, are not passing, please fix the issues and continue doing this up to 3 more times until the tests pass
+6. Once the tests pass, push a branch and then suggest opening a PR which has a description of the changes made, and
+   that
+   it make sure that it explicitly says "Fixes #ISSUE_NUMBER" to automatically close the issue when the PR is merged.
+
+## Avoid making changes to generated files
+
+Files under `generated` directories are generated based on a different source file and should not be modified directly.
+Find the underlying source and modify that instead.
+
+## Essential Commands
+
+### Code Formatting
+
+After code changes are made, please make sure to format the files with prettier via `npx prettier -- FILE_NAME`
+
+### Pre-push Validation
+
+```bash
+# Full validation suite - run before committing
+nx prepush
+```
+
+If the prepush validation suite fails, please fix the issues before proceeding with your work. This ensures that all
+code adheres to the project's standards and passes all tests. DO NOT make a new commit to fix these issues. Instead,
+amend the current commit.
+
+### Testing Changes in Other Repos
+
+To test a locally built Nx package in another repository (e.g., to verify a fix end-to-end):
+
+```bash
+pnpm copy-built-package --package nx --repo ../path/to/test-repo
+```
+
+This builds the package and copies it into the target repo's `node_modules`. It works for all packages including native Rust code.
+
+### Testing Changes
+
+After code changes are made, first test the specific project where the changes were made:
+
+```bash
+nx run-many -t test,build,lint -p PROJECT_NAME
+```
+
+After verifying the individual project, validate that the changes in projects which have been affected:
+
+```bash
+# Test only affected projects (recommended for development)
+nx affected -t build,test,lint
+```
+
+As the last step, run the e2e tests to fully ensure that changes are valid:
+
+```bash
+# Run affected e2e tests (recommended for development)
+nx affected -t e2e-local
+```
+
+## Fixing GitHub Issues
+
+When working on a GitHub issue, follow this systematic approach:
+
+### 1. Get Issue Details
+
+```bash
+# Get issue details using GitHub CLI (replace ISSUE_NUMBER with actual number)
+gh issue view ISSUE_NUMBER
+
+# View multiple issues efficiently in one command
+gh issue list --limit 50 --json number,title,state,labels,assignees,updatedAt,body --jq '.[] | select(.number == 123 or .number == 456 or .number == 789)'
+
+# Or filter by specific criteria to get multiple related issues
+gh issue list --label "bug" --state "open" --json number,title,body,labels --jq '.[]'
+gh issue list --assignee "@me" --json number,title,body,state --jq '.[]'
+```
+
+**Tip**: Instead of running `gh issue view` multiple times, use `gh issue list` with JSON output and filtering to gather
+information about multiple issues in a single command. This is much more efficient than viewing issues one at a time.
+
+**Always provide clickable links**: When discussing GitHub issues or PRs, always include the full GitHub URL so the user
+can easily open them in their browser. For example:
+
+- Issue #12345: https://github.com/nrwl/nx/issues/12345
+- PR #67890: https://github.com/nrwl/nx/pull/67890
+
+When cloning reproduction repos, please clone within `./tmp/claude/repro-ISSUE_NUMBER`
+
+### 2. Analyze the Plan
+
+- Look for a plan or implementation details in the issue description
+- Check comments for additional context or clarification
+- Identify affected projects and components
+
+### 3. Implement the Solution
+
+- Follow the plan outlined in the issue
+- Make focused changes that address the specific problem
+- Ensure code follows existing patterns and conventions
+
+### 4. Run Full Validation
+
+Use the testing workflow from the "Essential Commands" section.
+
+### 5. Submit Pull Request
+
+- Create a descriptive PR title that references the issue
+- **Always fill in the PR template** - don't leave it empty
+- Include "Fixes #ISSUE_NUMBER" in the PR description
+- Provide a clear summary of changes made
+- Request appropriate reviewers
+
+## Pull Request Template
+
+**IMPORTANT**: When creating a pull request, you MUST fill in the template found in `.github/PULL_REQUEST_TEMPLATE.md`.
+Do not leave the template sections empty. The template includes:
+
+### Required Sections
+
+1. **Current Behavior**: Describe the behavior we have today
+2. **Expected Behavior**: Describe the behavior we should expect with the changes in this PR
+3. **Related Issue(s)**: Link the issue being fixed so it gets closed when the PR is merged
+
+### Template Format
+
+```markdown
+## Current Behavior
+
+<!-- This is the behavior we have today -->
+
+## Expected Behavior
+
+<!-- This is the behavior we should expect with the changes in this PR -->
+
+## Related Issue(s)
+
+<!-- Please link the issue being fixed so it gets closed when this is merged. -->
+
+Fixes #ISSUE_NUMBER
+```
+
+### Guidelines
+
+- Ensure your commit message follows the conventional commit format (use `pnpm commit`)
+  - Use `fix:`, `feat:`, `chore:`, etc. as appropriate types.
+  - Scope is **required** for all commits. Possible scopes are listed in `scripts/commitizen.js`.
+- Read the submission guidelines in CONTRIBUTING.md before posting
+- For complex changes, you can request a dedicated Nx release by mentioning the Nx team
+- Always link the related issue using "Fixes #ISSUE_NUMBER" to automatically close it when merged
+
+<!-- nx configuration start-->
+<!-- Leave the start & end comments to automatically receive updates. -->
+
+## General Guidelines for working with Nx
+
+- For navigating/exploring the workspace, invoke the `nx-workspace` skill first - it has patterns for querying projects, targets, and dependencies
+- When running tasks (for example build, lint, test, e2e, etc.), always prefer running the task through `nx` (i.e. `nx run`, `nx run-many`, `nx affected`) instead of using the underlying tooling directly
+- Prefix nx commands with the workspace's package manager (e.g., `pnpm nx build`, `npm exec nx test`) - avoids using globally installed CLI
+- You have access to the Nx MCP server and its tools, use them to help the user
+- For Nx plugin best practices, check `node_modules/@nx/<plugin>/PLUGIN.md`. Not all plugins have this file - proceed without it if unavailable.
+- NEVER guess CLI flags - always check nx_docs or `--help` first when unsure
+
+## Scaffolding & Generators
+
+- For scaffolding tasks (creating apps, libs, project structure, setup), ALWAYS invoke the `nx-generate` skill FIRST before exploring or calling MCP tools
+
+## When to use nx_docs
+
+- USE for: advanced config options, unfamiliar flags, migration guides, plugin configuration, edge cases
+- DON'T USE for: basic generator syntax (`nx g @nx/react:app`), standard commands, things you already know
+- The `nx-generate` skill handles generator discovery internally - don't call nx_docs just to look up generator syntax
+
+<!-- nx configuration end-->

@@ -1,0 +1,358 @@
+<!-- source: neon — https://neon.com/llms.txt -->
+# Neon Postgres
+
+> Neon is the backend for apps and agents. Services include Neon Postgres, Neon Auth, Data API, Neon Functions, Object Storage, and AI Gateway. Every service is agent-ready: instant, branchable, and serverless. Neon Postgres includes autoscaling, instant restore, and scale-to-zero, and is fully compatible with any language, framework, or ORM that supports Postgres.
+
+Neon docs are available as markdown. Append `.md` to any doc URL or set `Accept: text/markdown`. This is the primary index. Sections with many pages show key pages and link to full sub-indexes.
+
+## Common Queries
+
+- [Pricing and plans](https://neon.com/pricing.md)
+- [Choose a connection method (drivers, pooling, serverless)](https://neon.com/docs/connect/choose-connection.md)
+- [Troubleshoot connection errors and timeouts](https://neon.com/docs/connect/connection-errors.md)
+- [pgvector extension for vector search and embeddings](https://neon.com/docs/extensions/pgvector.md)
+- [Neon API reference (projects, branches, databases, endpoints)](https://neon.com/docs/reference/api-reference.md)
+
+## Introduction
+
+Architecture, features, autoscaling, branching concepts, billing, and plans.
+
+- [All 34 Introduction pages](https://neon.com/docs/introduction/llms.txt) — key pages below
+
+- [Neon's lakebase architecture](https://neon.com/docs/introduction/architecture-overview.md): Inside Neon Postgres: decoupled compute and durable storage
+- [Plans and billing](https://neon.com/docs/introduction/about-billing.md): Learn about Neon's pricing plans and how to manage billing
+- [Autoscaling](https://neon.com/docs/introduction/autoscaling.md): An introduction to Neon's autoscaling
+- [Scale to Zero](https://neon.com/docs/introduction/scale-to-zero.md): Minimize costs by automatically scaling inactive databases to zero
+- [Branching](https://neon.com/docs/introduction/branching.md): Branch your data the same way you branch your code
+- [Neon Read Replicas](https://neon.com/docs/introduction/read-replicas.md): Scale your app, run ad-hoc queries, and provide read-only access without duplicating data
+
+## Get Started
+
+First-time setup: org/project creation, connection strings, driver installation, optional auth, and initial schema setup.
+
+- [Build a full backend with Next.js and Neon](https://neon.com/docs/get-started/full-backend-quickstart.md): Connect Postgres with Drizzle, add managed authentication, and ship a typed server-side backend
+- [Built to scale](https://neon.com/docs/get-started/built-to-scale.md): Neon supports you from prototype to scale-up
+- [Built to scale](https://neon.com/docs/get-started/production-readiness.md): Neon supports you from prototype to scale-up
+- [Connecting Neon to your stack](https://neon.com/docs/get-started/connect-neon.md): Learn how to integrate Neon into your application
+- [Database branching workflow primer](https://neon.com/docs/get-started/workflow-primer.md): An introduction to integrating Postgres branching into your development workflow
+- [Get started with your AI agent](https://neon.com/docs/get-started/with-an-agent.md): Connect your AI coding assistant to Neon
+- [Getting ready for production](https://neon.com/docs/get-started/production-checklist.md): Guidelines to optimize price, performance, and reliability
+- [Neon framework guides](https://neon.com/docs/get-started/frameworks.md): Find detailed instructions for connecting to Neon from various frameworks
+- [Neon language guides](https://neon.com/docs/get-started/languages.md): Find detailed instructions for connecting to Neon from various languages
+- [Neon ORM guides](https://neon.com/docs/get-started/orms.md): Find detailed instructions for connecting to Neon from various ORMs
+- [Our DX Principles](https://neon.com/docs/get-started/dev-experience.md): Neon adapts to your workflow, not the other way around.
+- [Query with Neon's SQL Editor](https://neon.com/docs/get-started/query-with-neon-sql-editor.md): Query your database from the Neon Console using the Neon SQL Editor
+- [Tour the Neon Console](https://neon.com/docs/get-started/signing-up.md): Sign up and explore Neon's core features — the SQL Editor, branching, the Tables view, and Neon Auth
+- [Why Neon?](https://neon.com/docs/get-started/why-neon.md): The backend for apps and agents, by Databricks
+
+## Connect
+
+Drivers, connection strings, pooling, local dev tooling, and troubleshooting.
+
+- [Choosing your connection method](https://neon.com/docs/connect/choose-connection.md): Find the right driver and connection type for your deployment platform
+- [Connect a GUI application](https://neon.com/docs/connect/connect-postgres-gui.md): Learn how to connect a GUI application to Neon
+- [Connect from any application](https://neon.com/docs/connect/connect-from-any-app.md): Learn how to connect to Neon from any application
+- [Connect Looker Studio to Neon](https://neon.com/docs/connect/connect-looker-studio.md): Learn how to connect your Neon Postgres database to Looker Studio
+- [Connect to Neon](https://neon.com/docs/connect/connect-intro.md): Everything you need to know about connecting to Neon
+- [Connect to Neon securely](https://neon.com/docs/connect/connect-securely.md): Learn how to connect to Neon securely when using a connection string
+- [Connect with pgcli](https://neon.com/docs/connect/connect-pgcli.md): Learn how to connect to Neon using the interactive pgcli client
+- [Connect with psql](https://neon.com/docs/connect/query-with-psql-editor.md): Learn how to connect to Neon using psql
+- [Connection errors](https://neon.com/docs/connect/connection-errors.md): Learn how to resolve connection errors
+- [Connection latency and timeouts](https://neon.com/docs/connect/connection-latency.md): Learn about strategies to manage connection latencies and timeouts
+- [Connection pooling](https://neon.com/docs/connect/connection-pooling.md): Learn how connection pooling works in Neon
+- [Neon Local](https://neon.com/docs/local/neon-local.md): Use Docker environments to connect to Neon and manage branches automatically
+- [Neon serverless driver](https://neon.com/docs/serverless/serverless-driver.md): Connect to Neon from serverless environments over HTTP or WebSockets
+- [Neon VS Code Extension](https://neon.com/docs/local/vscode-extension.md): Connect to Neon and manage your database directly in VS Code, Cursor, and other editors
+- [neon.ts](https://neon.com/docs/reference/neon-ts.md): Infrastructure-as-code config for your Neon project.
+- [Passwordless auth](https://neon.com/docs/connect/passwordless-connect.md): Learn how to connect to Neon without a password
+
+## Neon CLI
+
+Install: `npm i -g neonctl`. Use this for terminal-first workflows, scripts, and CI/CD automation with `neonctl`.
+
+- [Neon CLI](https://neon.com/docs/cli.md): The Neon command-line interface: every command, with options and examples
+- [Neon CLI command: auth](https://neon.com/docs/cli/auth.md): Authenticate to Neon via browser or API key and manage credentials
+- [Neon CLI command: bootstrap](https://neon.com/docs/cli/bootstrap.md): Scaffold a new project from a Neon starter template
+- [Neon CLI command: branches](https://neon.com/docs/cli/branches.md): List, create, rename, and delete branches; set default; run schema diff
+- [Neon CLI command: bucket](https://neon.com/docs/cli/bucket.md): Manage branch object-storage buckets and their objects
+- [Neon CLI command: checkout](https://neon.com/docs/cli/checkout.md): Pin a branch in your local .neon context file
+- [Neon CLI command: completion](https://neon.com/docs/cli/completion.md): Generate shell completion scripts for neonctl commands and options
+- [Neon CLI command: config](https://neon.com/docs/cli/config.md): Manage a branch with a neon.ts policy: status, plan, and apply
+- [Neon CLI command: connection-string](https://neon.com/docs/cli/connection-string.md): Get Postgres connection strings for branches and databases
+- [Neon CLI command: data-api](https://neon.com/docs/cli/data-api.md): Provision and manage the Neon Data API from the CLI
+- [Neon CLI command: databases](https://neon.com/docs/cli/databases.md): List, create, and delete databases in a Neon project
+- [Neon CLI command: dev](https://neon.com/docs/cli/dev.md): Run Neon Functions locally with a dev server
+- [Neon CLI command: env](https://neon.com/docs/cli/env.md): Manage a branch's Neon environment variables locally
+- [Neon CLI command: functions](https://neon.com/docs/cli/functions.md): Deploy, list, inspect, and delete Neon Functions
+- [Neon CLI command: init](https://neon.com/docs/cli/init.md): Initialize an app project with Neon, including auth, MCP server, extensions, and agent skills
+- [Neon CLI command: ip-allow](https://neon.com/docs/cli/ip-allow.md): Manage the IP allowlist: list, add, remove, and reset allowed IPs
+- [Neon CLI command: link](https://neon.com/docs/cli/link.md): Link a directory to a Neon project and write a `.neon` context file
+- [Neon CLI command: me](https://neon.com/docs/cli/me.md): View current user info, login details, and project limits
+- [Neon CLI command: neon-auth](https://neon.com/docs/cli/neon-auth.md): Manage Neon Auth from the CLI
+- [Neon CLI command: operations](https://neon.com/docs/cli/operations.md): List and manage long-running operations for a Neon project
+- [Neon CLI command: orgs](https://neon.com/docs/cli/orgs.md): List the Neon organizations you belong to
+- [Neon CLI command: projects](https://neon.com/docs/cli/projects.md): List, create, update, delete, recover, and get Neon projects
+- [Neon CLI command: psql](https://neon.com/docs/cli/psql.md): Connect to a Neon database via psql
+- [Neon CLI command: roles](https://neon.com/docs/cli/roles.md): List, create, and delete database roles in a Neon project
+- [Neon CLI command: set-context](https://neon.com/docs/cli/set-context.md): Set default project context for CLI sessions to avoid repeating project ID
+- [Neon CLI command: vpc](https://neon.com/docs/cli/vpc.md): Manage Private Networking VPC endpoints and project-level restrictions
+- [Neon CLI quickstart](https://neon.com/docs/cli/quickstart.md): Get set up with the Neon CLI in just a few steps
+- [Neon CLI: Install and connect](https://neon.com/docs/cli/install.md): Install the Neon CLI and connect with web auth or API key
+
+## AI & Agents
+
+Agent Skills, MCP integrations, vector search, and tools for building AI-powered applications with Neon.
+
+- [Agent Skills](https://neon.com/docs/ai/agent-skills.md): Teach your AI coding assistant how to work with Neon
+- [AI Concepts](https://neon.com/docs/ai/ai-concepts.md): Learn how embeddings are used to build AI applications
+- [AI Starter Kit](https://neon.com/docs/ai/ai-intro.md): Resources for building AI applications with Neon Postgres
+- [AI tools for Agents](https://neon.com/docs/ai/ai-agents-tools.md): AI-powered tools for development and database management
+- [Azure Data Studio Notebooks](https://neon.com/docs/ai/ai-azure-notebooks.md): Use Azure Data Studio Notebooks with Neon for vector similarity search
+- [Claude Code plugin for Neon](https://neon.com/docs/ai/ai-claude-code-plugin.md)
+- [Codex plugin for Neon](https://neon.com/docs/ai/ai-codex-plugin.md)
+- [Connect MCP clients to Neon](https://neon.com/docs/ai/connect-mcp-clients-to-neon.md): Learn how to connect MCP clients such as Cursor, Claude Code, VS Code, ChatGPT, and other tools to your Neon Postgres database.
+- [Cursor plugin for Neon](https://neon.com/docs/ai/ai-cursor-plugin.md)
+- [Database versioning with snapshots](https://neon.com/docs/ai/ai-database-versioning.md): How AI agents and codegen platforms implement database version control using snapshots and preview branches
+- [Get started with Lakebase Search](https://neon.com/docs/ai/lakebase-search-get-started.md): Set up vector and full-text search on Neon in minutes
+- [Google Colab](https://neon.com/docs/ai/ai-google-colab.md): Use Google Colab with Neon for vector similarity search
+- [Inngest](https://neon.com/docs/ai/inngest.md): Quickly build AI RAG and Agentic workflows that scale with Inngest and Neon
+- [Lakebase Search](https://neon.com/docs/ai/lakebase-search.md): Scalable vector and full-text search for Postgres
+- [LangChain](https://neon.com/docs/ai/langchain.md): Build AI applications faster with LangChain and Postgres
+- [LlamaIndex](https://neon.com/docs/ai/llamaindex.md): Build AI applications faster with LlamaIndex and Postgres
+- [Neon agents for GitHub Copilot](https://neon.com/docs/ai/ai-github-copilot-agents.md): Custom agents for safe database migrations and query optimization in VS Code
+- [Neon MCP Server overview](https://neon.com/docs/ai/neon-mcp-server.md): Connect your AI assistant to Neon to manage projects, run queries, and make schema changes
+- [Optimize pgvector search](https://neon.com/docs/ai/ai-vector-search-optimization.md): Fine-tune parameters for efficient and accurate similarity searches in Postgres
+- [Scale your AI application with Neon](https://neon.com/docs/ai/ai-scale-with-neon.md): Scale your AI application with Neon's Autoscaling and Read Replica features
+- [Semantic Kernel](https://neon.com/docs/ai/semantic-kernel.md): Quickly build AI RAG and Agentic workflows with Semantic Kernel and Neon
+
+## Auth
+
+Managed authentication built on Better Auth that branches with your database.
+
+- [Auth production checklist](https://neon.com/docs/auth/production-checklist.md): Required configuration before launching with Neon Auth
+- [Auth troubleshooting](https://neon.com/docs/auth/troubleshooting.md): Common issues when implementing Neon Auth and how to fix them
+- [Authentication flow](https://neon.com/docs/auth/authentication-flow.md): Understanding the complete sign-in and sign-up process
+- [Branching authentication](https://neon.com/docs/auth/branching-authentication.md): How authentication works with Neon database branches
+- [Neon Auth](https://neon.com/docs/auth/overview.md): Managed authentication that branches with your database
+- [Neon Auth roadmap](https://neon.com/docs/auth/roadmap.md): What's supported today and what's coming next
+
+### Quick Start
+
+- [Use Neon Auth with Next.js (API methods)](https://neon.com/docs/auth/quick-start/nextjs-api-only.md): Build your own auth UI using SDK methods
+- [Use Neon Auth with React (API methods)](https://neon.com/docs/auth/quick-start/react.md): Build your own auth UI
+- [Use Neon Auth with TanStack Router](https://neon.com/docs/auth/quick-start/tanstack-router.md): Set up authentication using pre-built UI components
+
+### Reference
+
+- [Next.js Server SDK Reference](https://neon.com/docs/auth/reference/nextjs-server.md): Server-side authentication API for Next.js with Neon Auth
+- [UI Components Reference](https://neon.com/docs/auth/reference/ui-components.md): Quick reference for Neon Auth UI components
+
+### Guides
+
+- [Admin](https://neon.com/docs/auth/guides/plugins/admin.md): Manage users, roles, bans, sessions, and impersonation
+- [Configure trusted domains](https://neon.com/docs/auth/guides/configure-domains.md): Add your application domains to enable secure authentication redirects
+- [Customize emails](https://neon.com/docs/auth/guides/customize-emails.md): Custom branding, content, and delivery for Neon Auth emails
+- [Email OTP](https://neon.com/docs/auth/guides/plugins/email-otp.md): Sign in and verify email addresses with one-time passwords
+- [Email verification](https://neon.com/docs/auth/guides/email-verification.md): Verify user email addresses during sign-up or account creation
+- [JWT](https://neon.com/docs/auth/guides/plugins/jwt.md): Authenticate using JSON Web Tokens (JWT) for external services
+- [Magic Link](https://neon.com/docs/auth/guides/plugins/magic-link.md): Passwordless sign-in via email magic links
+- [Manage Neon Auth via the API](https://neon.com/docs/auth/guides/manage-auth-api.md): Enable, configure, and disable Neon Auth using the Neon API
+- [Open API](https://neon.com/docs/auth/guides/plugins/openapi.md): Interactive API documentation and client generation
+- [Organization](https://neon.com/docs/auth/guides/plugins/organization.md): Manage multi-tenant organizations, members, and invitations
+- [Password reset](https://neon.com/docs/auth/guides/password-reset.md): Allow users to reset forgotten passwords
+- [Phone Number](https://neon.com/docs/auth/guides/plugins/phone-number.md): Sign in existing users with phone OTP codes delivered via your SMS provider
+- [Plugins](https://neon.com/docs/auth/guides/plugins.md): Supported Better Auth plugins in Neon Auth
+- [Set up OAuth](https://neon.com/docs/auth/guides/setup-oauth.md): Add Google, GitHub, or Vercel sign-in to your application
+- [User management](https://neon.com/docs/auth/guides/user-management.md): Update profiles, change passwords, and manage account settings
+- [Webhooks](https://neon.com/docs/auth/guides/webhooks.md): Handle authentication events with custom server logic
+
+### Migrate
+
+- [Migrate from Supabase to Neon](https://neon.com/docs/auth/migrate/from-supabase.md): Switch from Supabase Auth and Database to Neon in a few steps
+- [Migrate to Neon Auth with Better Auth](https://neon.com/docs/auth/migrate/from-legacy-auth.md): Update from the legacy Stack Auth-based implementation
+
+## Neon Functions
+
+Long-running serverless compute, close to your database.
+
+- [AI agents on Neon Functions](https://neon.com/docs/compute/functions/agents.md): Run streaming, tool-calling agents on Neon Functions.
+- [Deploy and manage Neon Functions](https://neon.com/docs/compute/functions/deploy.md): CLI and API reference for deploying and managing Neon Functions.
+- [Get started with Neon Functions](https://neon.com/docs/compute/functions/get-started.md): Deploy your first Neon Function and call it over HTTP.
+- [Neon Functions](https://neon.com/docs/compute/functions/overview.md): Deploy a backend onto your Neon branch, next to your data.
+- [Neon Functions authentication](https://neon.com/docs/compute/functions/authentication.md): Verify callers before a Neon Function does any work.
+- [Neon Functions environment variables](https://neon.com/docs/compute/functions/environment-variables.md): Neon-injected variables and how to set your own secrets.
+- [Neon Functions preview access](https://neon.com/docs/compute/functions/preview-access.md): What's included in the Neon Functions private preview.
+- [Neon Functions runtime limits](https://neon.com/docs/compute/functions/reference/runtime-limits.md): Hard constraints for Neon Functions.
+- [WebSockets and SSE on Neon Functions](https://neon.com/docs/compute/functions/websockets.md): Hold long-lived connections open for real-time apps.
+
+## Object Storage
+
+S3-compatible object storage that branches with your projects.
+
+- [Buckets](https://neon.com/docs/storage/buckets.md): Create and manage storage buckets
+- [Get started with Neon Storage](https://neon.com/docs/storage/get-started.md): Upload your first file in minutes
+- [Neon Storage](https://neon.com/docs/storage/overview.md): S3-compatible object storage that branches with your database
+- [Objects](https://neon.com/docs/storage/objects.md): Upload, download, list, and delete files
+- [S3 compatibility](https://neon.com/docs/storage/s3-compatibility.md): Which S3 operations Neon Storage supports
+- [Storage authentication](https://neon.com/docs/storage/authentication.md): How Neon credentials map to S3 access keys
+- [Storage troubleshooting](https://neon.com/docs/storage/troubleshooting.md): Common errors and how to fix them
+
+## AI Gateway
+
+Access frontier and open-source models through a single API.
+
+- [AI Gateway authentication](https://neon.com/docs/ai-gateway/authentication.md): How Neon credentials work with AI Gateway
+- [AI Gateway models](https://neon.com/docs/ai-gateway/models.md): Available models and how to specify them
+- [AI Gateway troubleshooting](https://neon.com/docs/ai-gateway/troubleshooting.md): Common errors and how to fix them
+- [Anthropic Messages API](https://neon.com/docs/ai-gateway/anthropic-messages.md): Use the Anthropic SDK with Neon AI Gateway
+- [Chat completions](https://neon.com/docs/ai-gateway/chat-completions.md): The OpenAI-compatible unified endpoint
+- [Gemini API](https://neon.com/docs/ai-gateway/gemini.md): Use the Google Gemini API with Neon AI Gateway
+- [Get started with Neon AI Gateway](https://neon.com/docs/ai-gateway/get-started.md): Make your first inference request in minutes
+- [Neon AI Gateway](https://neon.com/docs/ai-gateway/overview.md): One API for frontier and open-source models from Anthropic, OpenAI, Google, and more. Built into your Neon project.
+- [OpenAI Responses API](https://neon.com/docs/ai-gateway/openai-responses.md): Use the OpenAI Responses API with Neon AI Gateway
+
+## Data API
+
+PostgREST-style REST interface for your Neon database.
+
+- [Access control & security](https://neon.com/docs/data-api/access-control.md): Understand how the Data API authenticates requests and enforces database permissions.
+- [Custom authentication providers](https://neon.com/docs/data-api/custom-authentication-providers.md): Configure custom authentication providers with the Data API
+- [Data API Advisors](https://neon.com/docs/data-api/database-advisor.md): Identify security and performance issues in your API-exposed database
+- [Data API troubleshooting](https://neon.com/docs/data-api/troubleshooting.md): Common issues and solutions when using the Neon Data API
+- [Generate TypeScript types from your database schema](https://neon.com/docs/data-api/generate-types.md): Automatically generate TypeScript types from your database schema for type-safe Data API interactions.
+- [Getting started with Neon Data API](https://neon.com/docs/data-api/get-started.md): Learn how to enable and use the Neon Data API
+- [Manage Data API](https://neon.com/docs/data-api/manage.md): Configure schemas, manage authentication providers, and control API access.
+- [Neon Data API](https://neon.com/docs/data-api/overview.md): A fully managed REST interface for your Neon database
+- [Neon Data API tutorial](https://neon.com/docs/data-api/demo.md): Explore our demo note-taking app to learn about Data API queries with RLS
+- [SQL to PostgREST Converter](https://neon.com/docs/data-api/sql-to-rest.md): Convert SQL queries to PostgREST API calls with real-time preview
+
+## Branching
+
+Instant copy-on-write database environments for dev, CI, previews, and recovery.
+
+- [Blog posts, docs, guides, and more](https://neon.com/branching/tooling-and-automation.md): A collection of tools and resources to implement branching workflows, snapshot-based promotion, automation via APIs, and integrations with GitHub, Vercel, and agents
+- [Branching with the Neon API](https://neon.com/docs/guides/branching-neon-api.md): Learn how to create and delete branches with the Neon API
+- [Branching with the Neon CLI](https://neon.com/docs/guides/branching-neon-cli.md): Learn how to create and delete branches with the Neon CLI
+- [Build versioning / checkpoints for your agent](https://neon.com/branching/branching-for-agents.md): Learn how to use branching in your agents or platforms. Manage databases per user or app and build versioning with snapshots that keep code and database state in sync
+- [Create one branch per PR and per developer](https://neon.com/branching/branching-workflows-for-development.md): Build branching workflows for development: create one branch per developer, shared dev branches, or per-PR databases for safe, isolated, production-like testing
+- [Create one branch per preview and per test run](https://neon.com/branching/ci-preview-workflows.md): Build branching workflows for CI and previews: spin up isolated branches per preview or test run, automate cleanup, and avoid shared test databases
+- [Manage production and staging as branches](https://neon.com/branching/production-staging-workflows.md): Learn how to manage production and staging with database branching. Treat the production branch as the source, derive staging from it, and anonymize data for PII-safe workflows
+- [Promote from dev to prod without conflict](https://neon.com/branching/advanced-branching-workflows.md): Build a snapshot-based promotion workflow for Postgres: replace production with a known-good dev version using database branches, snapshots, and instant restores
+- [The building blocks](https://neon.com/branching/foundational-concepts.md): Learn how Neon projects, branches, and hierarchies work: fast copy-on-write branching, isolated compute per branch, and instant restore with snapshots
+- [Use branches to restore instantly](https://neon.com/branching/recovery-workflows.md): Learn how to use branching for recovery: use database branches to go back in time, recover lost data, debug migrations, and audit historical states safely
+- [Use database branches as environments](https://neon.com/branching/rethinking-the-database.md): Rethink the database developer experience: database branching replaces instance copying with fast, isolated environments built on copy-on-write storage
+
+## Manage
+
+Projects, branches, computes, roles, databases, and organization settings.
+
+- [All 29 Manage pages](https://neon.com/docs/manage/llms.txt) — key pages below
+
+- [Manage projects](https://neon.com/docs/manage/projects.md): Learn how to manage Neon projects from the Neon Console or the Neon API.
+- [Manage branches](https://neon.com/docs/manage/branches.md)
+- [Manage computes](https://neon.com/docs/manage/computes.md)
+- [Organizations](https://neon.com/docs/manage/organizations.md): Manage your projects and collaborate with team members
+- [Backups](https://neon.com/docs/manage/backups.md): An overview of backup strategies for Neon Postgres
+
+## Guides
+
+Step-by-step integration guides for frameworks, ORMs, auth providers, and deployment platforms.
+
+- [All 169 Guides pages](https://neon.com/docs/guides/llms.txt) — key pages below
+
+- [Connect a Next.js application to Neon](https://neon.com/docs/guides/nextjs.md): Set up a Neon project in seconds and connect from a Next.js application
+- [Connect from Prisma to Neon](https://neon.com/docs/guides/prisma.md): Learn how to connect to Neon from Prisma
+- [Connect from Drizzle to Neon](https://neon.com/docs/guides/drizzle.md): Learn how to connect to Neon from Drizzle
+- [Neon integration guides](https://neon.com/docs/guides/integrations.md): Find detailed instructions for integration across various platforms and services.
+- [Integrating Neon with Vercel](https://neon.com/docs/guides/vercel-overview.md): Choose the right connection path in seconds
+- [Integrating with Neon](https://neon.com/docs/guides/platform-integration-overview.md): Choose the right integration path for your platform or application
+- [Row-Level Security with Neon](https://neon.com/docs/guides/row-level-security.md): How Neon features use Postgres Row-Level Security
+
+## Import
+
+Migration guides by source, size, and downtime tolerance. Covers pg_dump, pgcopydb, logical replication, and provider-specific guides.
+
+- [All 24 Import pages](https://neon.com/docs/import/llms.txt) — key pages below
+
+- [Neon data migration guides](https://neon.com/docs/import/migrate-intro.md): Learn how to migrate data to Neon Postgres from different database providers and sources
+- [Migrate data from Postgres with pg_dump and pg_restore](https://neon.com/docs/import/migrate-from-postgres.md)
+- [Postgres sample data](https://neon.com/docs/import/import-sample-data.md): Import sample data for learning, testing, and exploring Neon
+- [Import data from CSV](https://neon.com/docs/import/import-from-csv.md)
+- [Import Data Assistant](https://neon.com/docs/import/import-data-assistant.md): Import a database under 10 GB to Neon using our automated import tool
+- [Migrate from Supabase to Neon Postgres](https://neon.com/docs/import/migrate-from-supabase.md): Learn how to migrate your database from Supabase to Neon Postgres using pg_dump and pg_restore
+
+## Workflows
+
+Automate branching, data anonymization, and database provisioning in CI/CD pipelines and GitHub Actions.
+
+- [Automate branching with GitHub Actions](https://neon.com/docs/guides/branching-github-actions.md): Create and delete branches with GitHub Actions
+- [Claimable database integration guide](https://neon.com/docs/workflows/claimable-database-integration.md): Manage Neon projects for users with the project database claim API
+- [Data anonymization](https://neon.com/docs/workflows/data-anonymization.md): Mask sensitive data in development branches using PostgreSQL Anonymizer
+- [Data anonymization API reference](https://neon.com/docs/workflows/data-anonymization-api.md): API endpoints for managing anonymized branches and masking rules
+- [Data anonymization with GitHub Actions](https://neon.com/docs/workflows/data-anonymization-github-actions.md): Automate anonymized branch creation in your CI/CD pipeline
+
+## Reference
+
+API reference, SDKs, Terraform provider, Postgres compatibility, and platform-level tooling.
+
+- [Claimable Postgres by Neon](https://neon.com/docs/reference/claimable-postgres.md): Launch an instant Neon Postgres database with zero configuration
+- [Manage Neon with Terraform](https://neon.com/docs/reference/terraform.md): Use Terraform to provision and manage your Neon projects, branches, endpoints, roles, databases, and other resources as code.
+- [Metrics and logs reference](https://neon.com/docs/reference/metrics-logs.md): Complete reference for all metrics and log fields exported by Neon
+- [Neon API](https://neon.com/docs/reference/api-reference.md)
+- [Neon API TypeScript SDK](https://neon.com/docs/reference/typescript-sdk.md): Programmatically manage Neon projects, branches, databases, and other platform resources
+- [Neon Auth and Data API SDK](https://neon.com/docs/reference/javascript-sdk.md): Reference documentation for @neondatabase/neon-js (authentication and Data API database queries)
+- [Neon RSS feeds](https://neon.com/docs/reference/feeds.md): Stay updated with the latest news from Neon
+- [Neon SDKs](https://neon.com/docs/reference/sdk.md)
+- [Postgres compatibility](https://neon.com/docs/reference/compatibility.md): Learn about Neon as a managed Postgres service
+- [Python SDK (Neon API)](https://neon.com/docs/reference/python-sdk.md): Programmatically manage Neon projects, branches, databases, and other platform resources
+- [Neon API OpenAPI Spec](https://neon.com/api_spec/release/v2.json): Machine-readable OpenAPI 3.0 specification for the Neon API
+
+## PostgreSQL
+
+Postgres functions, data types, query optimization, indexing strategies, version upgrades, and general Postgres usage with Neon.
+
+- [All 66 PostgreSQL pages](https://neon.com/docs/postgresql/llms.txt) — key pages below
+
+- [Postgres query reference](https://neon.com/docs/postgresql/query-reference.md): Find examples of commonly-used Postgres queries for basic to advanced operations
+- [Optimize Postgres query performance](https://neon.com/docs/postgresql/query-performance.md): Learn about strategies for optimizing Postgres query performance
+- [Postgres indexes](https://neon.com/docs/postgresql/index-types.md): Optimize query performance with indexes in Postgres
+
+## Security
+
+Compliance certifications, acceptable use policies, HIPAA, and security reporting.
+
+- [Acceptable Use Policy](https://neon.com/docs/security/acceptable-use-policy.md)
+- [AI use in Neon](https://neon.com/docs/security/ai-use-in-neon.md): How Neon integrates AI into its platform
+- [Compliance](https://neon.com/docs/security/compliance.md)
+- [HIPAA Compliance](https://neon.com/docs/security/hipaa.md)
+- [Security overview](https://neon.com/docs/security/security-overview.md)
+- [Security reporting](https://neon.com/docs/security/security-reporting.md)
+
+## Extensions
+
+Postgres extensions supported by Neon, with install and usage instructions.
+
+- [All 46 Extensions pages](https://neon.com/docs/extensions/llms.txt) — key pages below
+
+- [Postgres extensions](https://neon.com/docs/extensions/pg-extensions.md)
+- [The pg_stat_statements extension](https://neon.com/docs/extensions/pg_stat_statements.md): Track planning and execution statistics for all SQL statements
+- [The pgvector extension](https://neon.com/docs/extensions/pgvector.md): Enable Postgres as a vector store with the pgvector extension
+- [The pgcrypto extension](https://neon.com/docs/extensions/pgcrypto.md): Secure your data with cryptographic functions in Postgres
+
+## Community
+
+Contributor guides, component architecture, and documentation standards.
+
+- [All 9 Community pages](https://neon.com/docs/community/llms.txt) — key pages below
+
+- [Docs contribution guide](https://neon.com/docs/community/contribution-guide.md): Learn how to contribute to the Neon documentation
+- [Getting Neon docs as Markdown](https://neon.com/docs/community/llms-markdown-guide.md): How to get our documentation as plain Markdown for LLMs, tools, and scripts
+
+## Additional Resources
+
+- [Changelog](https://neon.com/docs/changelog): Latest updates and releases
+- [PostgreSQL Tutorial](https://neon.com/postgresql/tutorial): Comprehensive PostgreSQL tutorial and reference
+- [Community Guides](https://neon.com/guides): Step-by-step tutorials for frameworks and tools
+- [FAQs](https://neon.com/faqs): Frequently asked questions about Neon
+- [Glossary](https://neon.com/docs/reference/glossary.md)
+- [Blog](https://neon.com/blog.md): Engineering, product, and community posts from the Neon team

@@ -1,0 +1,112 @@
+<!-- source: elastiflow-pipelines-cursorignore — https://raw.githubusercontent.com/elastiflow/pipelines/main/.cursorignore -->
+# Go build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.prof
+
+# Go coverage files
+coverage/
+*.out
+*.html
+
+# Go module cache
+go.sum
+
+# Build directories
+bin/
+dist/
+build/
+target/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Documentation build artifacts
+docs/_build/
+docs/.doctrees/
+
+# Test artifacts
+test-results/
+test-output/
+
+# Benchmark results
+bench-results/
+*.bench
+
+# Profiling data
+*.prof
+*.trace
+
+# Dependency directories (if using vendoring)
+vendor/
+
+# Git files
+.git/
+.gitignore
+
+# CI/CD files
+.github/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Large data files
+*.csv
+*.json
+*.xml
+*.yaml
+*.yml
+data/
+datasets/
+
+# Generated code
+generated/
+gen/
+
+AGENTS.md
+.junie/

@@ -1,0 +1,212 @@
+<!-- source: pydantic-ai — https://ai.pydantic.dev/llms.txt -->
+# Pydantic AI
+
+> GenAI Agent Framework, the Pydantic way
+
+Pydantic AI is a Python agent framework designed to make it less painful to build production grade applications with Generative AI.
+
+## Overview
+
+- [Coding Agent Skills](https://pydantic.dev/docs/ai/overview/coding-agent-skills/index.md)
+- [Pydantic AI Gateway](https://pydantic.dev/docs/ai/overview/gateway/index.md)
+- [Getting Help](https://pydantic.dev/docs/ai/overview/help/index.md)
+- [Installation](https://pydantic.dev/docs/ai/overview/install/index.md)
+- [Troubleshooting](https://pydantic.dev/docs/ai/overview/troubleshooting/index.md)
+
+## Core Concepts
+
+- [Agents](https://pydantic.dev/docs/ai/core-concepts/agent/index.md)
+- [Agent Specs](https://pydantic.dev/docs/ai/core-concepts/agent-spec/index.md)
+- [Capabilities](https://pydantic.dev/docs/ai/core-concepts/capabilities/index.md)
+- [Dependencies](https://pydantic.dev/docs/ai/core-concepts/dependencies/index.md)
+- [Direct Model Requests](https://pydantic.dev/docs/ai/core-concepts/direct/index.md)
+- [Hooks](https://pydantic.dev/docs/ai/core-concepts/hooks/index.md)
+- [Messages and chat history](https://pydantic.dev/docs/ai/core-concepts/message-history/index.md)
+- [Output](https://pydantic.dev/docs/ai/core-concepts/output/index.md)
+
+## Models & Providers
+
+- [Anthropic](https://pydantic.dev/docs/ai/models/anthropic/index.md)
+- [Bedrock](https://pydantic.dev/docs/ai/models/bedrock/index.md)
+- [Cerebras](https://pydantic.dev/docs/ai/models/cerebras/index.md)
+- [Cohere](https://pydantic.dev/docs/ai/models/cohere/index.md)
+- [Google](https://pydantic.dev/docs/ai/models/google/index.md)
+- [Groq](https://pydantic.dev/docs/ai/models/groq/index.md)
+- [Hugging Face](https://pydantic.dev/docs/ai/models/huggingface/index.md)
+- [Mistral](https://pydantic.dev/docs/ai/models/mistral/index.md)
+- [Ollama](https://pydantic.dev/docs/ai/models/ollama/index.md)
+- [OpenAI](https://pydantic.dev/docs/ai/models/openai/index.md)
+- [OpenRouter](https://pydantic.dev/docs/ai/models/openrouter/index.md)
+- [Overview](https://pydantic.dev/docs/ai/models/overview/index.md)
+- [xAI](https://pydantic.dev/docs/ai/models/xai/index.md)
+
+## Tools & Toolsets
+
+- [Common Tools](https://pydantic.dev/docs/ai/tools-toolsets/common-tools/index.md)
+- [Deferred Tools](https://pydantic.dev/docs/ai/tools-toolsets/deferred-tools/index.md)
+- [Native Tools](https://pydantic.dev/docs/ai/tools-toolsets/native-tools/index.md)
+- [Third-Party Tools](https://pydantic.dev/docs/ai/tools-toolsets/third-party-tools/index.md)
+- [Function Tools](https://pydantic.dev/docs/ai/tools-toolsets/tools/index.md)
+- [Advanced Tool Features](https://pydantic.dev/docs/ai/tools-toolsets/tools-advanced/index.md)
+- [Toolsets](https://pydantic.dev/docs/ai/tools-toolsets/toolsets/index.md)
+
+## Advanced Features
+
+- [Image, Audio, Video & Document Input](https://pydantic.dev/docs/ai/advanced-features/input/index.md)
+- [HTTP Request Retries](https://pydantic.dev/docs/ai/advanced-features/retries/index.md)
+- [Thinking](https://pydantic.dev/docs/ai/advanced-features/thinking/index.md)
+
+## Guides
+
+- [Embeddings](https://pydantic.dev/docs/ai/guides/embeddings/index.md)
+- [Extensibility](https://pydantic.dev/docs/ai/guides/extensibility/index.md)
+- [Multi-Agent Patterns](https://pydantic.dev/docs/ai/guides/multi-agent-applications/index.md)
+- [Testing](https://pydantic.dev/docs/ai/guides/testing/index.md)
+- [Web Chat UI](https://pydantic.dev/docs/ai/guides/web/index.md)
+
+## MCP
+
+- [Client](https://pydantic.dev/docs/ai/mcp/client/index.md)
+- [Overview](https://pydantic.dev/docs/ai/mcp/overview/index.md)
+- [Server](https://pydantic.dev/docs/ai/mcp/server/index.md)
+
+## Pydantic AI Harness
+
+- [Code Mode](https://pydantic.dev/docs/ai/harness/code-mode/index.md)
+- [Overview](https://pydantic.dev/docs/ai/harness/overview/index.md)
+
+## Pydantic Evals
+
+- [Overview](https://pydantic.dev/docs/ai/evals/evals/index.md)
+- [Built-in Evaluators](https://pydantic.dev/docs/ai/evals/evaluators/built-in/index.md)
+- [Custom Evaluators](https://pydantic.dev/docs/ai/evals/evaluators/custom/index.md)
+- [Third-Party Integrations](https://pydantic.dev/docs/ai/evals/evaluators/framework-integrations/index.md)
+- [LLM Judge](https://pydantic.dev/docs/ai/evals/evaluators/llm-judge/index.md)
+- [Overview](https://pydantic.dev/docs/ai/evals/evaluators/overview/index.md)
+- [Report Evaluators](https://pydantic.dev/docs/ai/evals/evaluators/report-evaluators/index.md)
+- [Span-Based](https://pydantic.dev/docs/ai/evals/evaluators/span-based/index.md)
+- [Simple Validation](https://pydantic.dev/docs/ai/evals/examples/simple-validation/index.md)
+- [Core Concepts](https://pydantic.dev/docs/ai/evals/getting-started/core-concepts/index.md)
+- [Quick Start](https://pydantic.dev/docs/ai/evals/getting-started/quick-start/index.md)
+- [Concurrency & Performance](https://pydantic.dev/docs/ai/evals/how-to/concurrency/index.md)
+- [Dataset Management](https://pydantic.dev/docs/ai/evals/how-to/dataset-management/index.md)
+- [Dataset Serialization](https://pydantic.dev/docs/ai/evals/how-to/dataset-serialization/index.md)
+- [Case Lifecycle Hooks](https://pydantic.dev/docs/ai/evals/how-to/lifecycle/index.md)
+- [Logfire Integration](https://pydantic.dev/docs/ai/evals/how-to/logfire-integration/index.md)
+- [Metrics & Attributes](https://pydantic.dev/docs/ai/evals/how-to/metrics-attributes/index.md)
+- [Multi-Run Evaluation](https://pydantic.dev/docs/ai/evals/how-to/multi-run/index.md)
+- [Retry Strategies](https://pydantic.dev/docs/ai/evals/how-to/retry-strategies/index.md)
+- [Online Evaluation](https://pydantic.dev/docs/ai/evals/online-evaluation/index.md)
+
+## Pydantic Graph
+
+- [Decisions](https://pydantic.dev/docs/ai/graph/builder/decisions/index.md)
+- [Getting Started](https://pydantic.dev/docs/ai/graph/builder/index.md)
+- [Joins & Reducers](https://pydantic.dev/docs/ai/graph/builder/joins/index.md)
+- [Parallel Execution](https://pydantic.dev/docs/ai/graph/builder/parallel/index.md)
+- [Steps](https://pydantic.dev/docs/ai/graph/builder/steps/index.md)
+- [Overview](https://pydantic.dev/docs/ai/graph/graph/index.md)
+
+## Integrations
+
+- [Command Line Interface (CLI)](https://pydantic.dev/docs/ai/integrations/cli/index.md)
+- [Apache Airflow](https://pydantic.dev/docs/ai/integrations/durable_execution/airflow/index.md)
+- [DBOS](https://pydantic.dev/docs/ai/integrations/durable_execution/dbos/index.md)
+- [Kitaru](https://pydantic.dev/docs/ai/integrations/durable_execution/kitaru/index.md)
+- [Overview](https://pydantic.dev/docs/ai/integrations/durable_execution/overview/index.md)
+- [Prefect](https://pydantic.dev/docs/ai/integrations/durable_execution/prefect/index.md)
+- [Restate](https://pydantic.dev/docs/ai/integrations/durable_execution/restate/index.md)
+- [Temporal](https://pydantic.dev/docs/ai/integrations/durable_execution/temporal/index.md)
+- [Debugging & Monitoring with Pydantic Logfire](https://pydantic.dev/docs/ai/integrations/logfire/index.md)
+- [AG-UI](https://pydantic.dev/docs/ai/integrations/ui/ag-ui/index.md)
+- [Overview](https://pydantic.dev/docs/ai/integrations/ui/overview/index.md)
+- [Vercel AI](https://pydantic.dev/docs/ai/integrations/ui/vercel-ai/index.md)
+
+## Examples
+
+- [Agent User Interaction (AG-UI)](https://pydantic.dev/docs/ai/examples/ag-ui/index.md)
+- [Bank Support](https://pydantic.dev/docs/ai/examples/conversational-agents/bank-support/index.md)
+- [Chat App with FastAPI](https://pydantic.dev/docs/ai/examples/conversational-agents/chat-app/index.md)
+- [Data Analyst](https://pydantic.dev/docs/ai/examples/data-analytics/data-analyst/index.md)
+- [RAG](https://pydantic.dev/docs/ai/examples/data-analytics/rag/index.md)
+- [SQL Generation](https://pydantic.dev/docs/ai/examples/data-analytics/sql-gen/index.md)
+- [Flight Booking](https://pydantic.dev/docs/ai/examples/flight-booking/index.md)
+- [Pydantic Model](https://pydantic.dev/docs/ai/examples/getting-started/pydantic-model/index.md)
+- [Weather Agent](https://pydantic.dev/docs/ai/examples/getting-started/weather-agent/index.md)
+- [Setup](https://pydantic.dev/docs/ai/examples/setup/index.md)
+- [Slack Lead Qualifier with Modal](https://pydantic.dev/docs/ai/examples/slack-lead-qualifier/index.md)
+- [Stream Markdown](https://pydantic.dev/docs/ai/examples/streaming/stream-markdown/index.md)
+- [Stream Whales](https://pydantic.dev/docs/ai/examples/streaming/stream-whales/index.md)
+
+## API Reference
+
+- [](https://pydantic.dev/docs/ai/api/builtin_tools/index.md)
+- [pydantic_ai.models.anthropic](https://pydantic.dev/docs/ai/api/models/anthropic/index.md)
+- [pydantic_ai.models](https://pydantic.dev/docs/ai/api/models/base/index.md)
+- [pydantic_ai.models.bedrock](https://pydantic.dev/docs/ai/api/models/bedrock/index.md)
+- [pydantic_ai.models.cerebras](https://pydantic.dev/docs/ai/api/models/cerebras/index.md)
+- [pydantic_ai.models.cohere](https://pydantic.dev/docs/ai/api/models/cohere/index.md)
+- [pydantic_ai.models.fallback](https://pydantic.dev/docs/ai/api/models/fallback/index.md)
+- [pydantic_ai.models.function](https://pydantic.dev/docs/ai/api/models/function/index.md)
+- [pydantic_ai.models.google](https://pydantic.dev/docs/ai/api/models/google/index.md)
+- [pydantic_ai.models.groq](https://pydantic.dev/docs/ai/api/models/groq/index.md)
+- [pydantic_ai.models.huggingface](https://pydantic.dev/docs/ai/api/models/huggingface/index.md)
+- [pydantic_ai.models.instrumented](https://pydantic.dev/docs/ai/api/models/instrumented/index.md)
+- [pydantic_ai.models.mcp_sampling](https://pydantic.dev/docs/ai/api/models/mcp-sampling/index.md)
+- [pydantic_ai.models.mistral](https://pydantic.dev/docs/ai/api/models/mistral/index.md)
+- [pydantic_ai.models.ollama](https://pydantic.dev/docs/ai/api/models/ollama/index.md)
+- [pydantic_ai.models.openai](https://pydantic.dev/docs/ai/api/models/openai/index.md)
+- [pydantic_ai.models.openrouter](https://pydantic.dev/docs/ai/api/models/openrouter/index.md)
+- [pydantic_ai.models.test](https://pydantic.dev/docs/ai/api/models/test/index.md)
+- [pydantic_ai.models.wrapper](https://pydantic.dev/docs/ai/api/models/wrapper/index.md)
+- [pydantic_ai.models.xai](https://pydantic.dev/docs/ai/api/models/xai/index.md)
+- [pydantic_ai.agent](https://pydantic.dev/docs/ai/api/pydantic-ai/agent/index.md)
+- [pydantic_ai.capabilities](https://pydantic.dev/docs/ai/api/pydantic-ai/capabilities/index.md)
+- [pydantic_ai.common_tools](https://pydantic.dev/docs/ai/api/pydantic-ai/common_tools/index.md)
+- [pydantic_ai — Concurrency](https://pydantic.dev/docs/ai/api/pydantic-ai/concurrency/index.md)
+- [pydantic_ai.direct](https://pydantic.dev/docs/ai/api/pydantic-ai/direct/index.md)
+- [pydantic_ai.durable_exec](https://pydantic.dev/docs/ai/api/pydantic-ai/durable_exec/index.md)
+- [pydantic_ai.embeddings](https://pydantic.dev/docs/ai/api/pydantic-ai/embeddings/index.md)
+- [pydantic_ai.exceptions](https://pydantic.dev/docs/ai/api/pydantic-ai/exceptions/index.md)
+- [pydantic_ai.ext](https://pydantic.dev/docs/ai/api/pydantic-ai/ext/index.md)
+- [pydantic_ai.format_prompt](https://pydantic.dev/docs/ai/api/pydantic-ai/format_prompt/index.md)
+- [pydantic_ai.function_signature](https://pydantic.dev/docs/ai/api/pydantic-ai/function_signature/index.md)
+- [pydantic_ai.mcp](https://pydantic.dev/docs/ai/api/pydantic-ai/mcp/index.md)
+- [pydantic_ai.messages](https://pydantic.dev/docs/ai/api/pydantic-ai/messages/index.md)
+- [pydantic_ai.native_tools](https://pydantic.dev/docs/ai/api/pydantic-ai/native_tools/index.md)
+- [pydantic_ai.output](https://pydantic.dev/docs/ai/api/pydantic-ai/output/index.md)
+- [pydantic_ai.profiles](https://pydantic.dev/docs/ai/api/pydantic-ai/profiles/index.md)
+- [pydantic_ai.providers](https://pydantic.dev/docs/ai/api/pydantic-ai/providers/index.md)
+- [pydantic_ai.result](https://pydantic.dev/docs/ai/api/pydantic-ai/result/index.md)
+- [pydantic_ai.retries](https://pydantic.dev/docs/ai/api/pydantic-ai/retries/index.md)
+- [pydantic_ai.run](https://pydantic.dev/docs/ai/api/pydantic-ai/run/index.md)
+- [pydantic_ai.settings](https://pydantic.dev/docs/ai/api/pydantic-ai/settings/index.md)
+- [pydantic_ai.tools](https://pydantic.dev/docs/ai/api/pydantic-ai/tools/index.md)
+- [pydantic_ai.toolsets](https://pydantic.dev/docs/ai/api/pydantic-ai/toolsets/index.md)
+- [pydantic_ai.usage](https://pydantic.dev/docs/ai/api/pydantic-ai/usage/index.md)
+- [pydantic_evals.dataset](https://pydantic.dev/docs/ai/api/pydantic_evals/dataset/index.md)
+- [pydantic_evals.evaluators](https://pydantic.dev/docs/ai/api/pydantic_evals/evaluators/index.md)
+- [pydantic_evals.generation](https://pydantic.dev/docs/ai/api/pydantic_evals/generation/index.md)
+- [pydantic_evals.lifecycle](https://pydantic.dev/docs/ai/api/pydantic_evals/lifecycle/index.md)
+- [pydantic_evals.online](https://pydantic.dev/docs/ai/api/pydantic_evals/online/index.md)
+- [pydantic_evals.online_capability](https://pydantic.dev/docs/ai/api/pydantic_evals/online_capability/index.md)
+- [pydantic_evals.otel](https://pydantic.dev/docs/ai/api/pydantic_evals/otel/index.md)
+- [pydantic_evals.reporting](https://pydantic.dev/docs/ai/api/pydantic_evals/reporting/index.md)
+- [pydantic_graph.basenode](https://pydantic.dev/docs/ai/api/pydantic_graph/basenode/index.md)
+- [pydantic_graph.decision](https://pydantic.dev/docs/ai/api/pydantic_graph/decision/index.md)
+- [pydantic_graph.exceptions](https://pydantic.dev/docs/ai/api/pydantic_graph/exceptions/index.md)
+- [pydantic_graph.graph_builder](https://pydantic.dev/docs/ai/api/pydantic_graph/graph_builder/index.md)
+- [pydantic_graph.join](https://pydantic.dev/docs/ai/api/pydantic_graph/join/index.md)
+- [pydantic_graph.node](https://pydantic.dev/docs/ai/api/pydantic_graph/node/index.md)
+- [pydantic_graph.step](https://pydantic.dev/docs/ai/api/pydantic_graph/step/index.md)
+- [pydantic_graph.util](https://pydantic.dev/docs/ai/api/pydantic_graph/util/index.md)
+- [pydantic_ai.ui.ag_ui](https://pydantic.dev/docs/ai/api/ui/ag_ui/index.md)
+- [pydantic_ai.ui](https://pydantic.dev/docs/ai/api/ui/base/index.md)
+- [pydantic_ai.ui.vercel_ai](https://pydantic.dev/docs/ai/api/ui/vercel_ai/index.md)
+
+## Project
+
+- [Upgrade Guide](https://pydantic.dev/docs/ai/project/changelog/index.md)
+- [Contributing](https://pydantic.dev/docs/ai/project/contributing/index.md)
+- [Version Policy](https://pydantic.dev/docs/ai/project/version-policy/index.md)
+

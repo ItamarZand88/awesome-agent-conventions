@@ -1,0 +1,9 @@
+<!-- source: cultureamp-buildkite — https://raw.githubusercontent.com/cultureamp/step-templates-buildkite-plugin/main/.mcp.json -->
+{
+    "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    }
+  }
+}

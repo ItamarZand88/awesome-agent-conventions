@@ -6,8 +6,8 @@
 - **Location:** Repository root (gitignore-style glob syntax)
 - **Spec:** [https://cursor.com/docs/reference/ignore-file](https://cursor.com/docs/reference/ignore-file)
 - **Evidence:** Cursor, JetBrains Junie, and Codeium/Windsurf-style tools use gitignore-like files to exclude paths from AI context.
-- **Last verified:** 2026-06-18
-- **Files:** `.aiignore`, `.cursorignore`, `.codeiumignore`
+- **Last verified:** 2026-06-26
+- **Files:** `.aiignore`, `.cursorignore`, `.codeiumignore`, `.aiexclude`
 
 ## Examples
 
@@ -20,6 +20,12 @@ JetBrains Junie / AI Assistant.
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
 | `ag-grid` | [`ag-grid/ag-grid`](https://github.com/ag-grid/ag-grid) | [`examples/ag-grid/.aiignore`](examples/ag-grid/.aiignore) | [source](https://raw.githubusercontent.com/ag-grid/ag-grid/latest/.rulesync/.aiignore) |
+| `agentstack-aiignore` | [`i-am-bee/agentstack`](https://github.com/i-am-bee/agentstack) | [`examples/agentstack-aiignore/.aiignore`](examples/agentstack-aiignore/.aiignore) | [source](https://raw.githubusercontent.com/i-am-bee/agentstack/main/.aiignore) |
+| `flutter-genui-aiignore` | [`flutter/genui`](https://github.com/flutter/genui) | [`examples/flutter-genui-aiignore/.aiignore`](examples/flutter-genui-aiignore/.aiignore) | [source](https://raw.githubusercontent.com/flutter/genui/main/packages/json_schema_builder/.aiignore) |
+| `lifi-contracts-aiignore` | [`lifinance/contracts`](https://github.com/lifinance/contracts) | [`examples/lifi-contracts-aiignore/.aiignore`](examples/lifi-contracts-aiignore/.aiignore) | [source](https://raw.githubusercontent.com/lifinance/contracts/main/.aiignore) |
+| `lizmap-aiignore` | [`3liz/lizmap-web-client`](https://github.com/3liz/lizmap-web-client) | [`examples/lizmap-aiignore/.aiignore`](examples/lizmap-aiignore/.aiignore) | [source](https://raw.githubusercontent.com/3liz/lizmap-web-client/master/.aiignore) |
+| `rusefi-aiignore` | [`rusefi/rusefi`](https://github.com/rusefi/rusefi) | [`examples/rusefi-aiignore/.aiignore`](examples/rusefi-aiignore/.aiignore) | [source](https://raw.githubusercontent.com/rusefi/rusefi/master/.aiignore) |
+| `wprig-aiignore` | [`wprig/wprig`](https://github.com/wprig/wprig) | [`examples/wprig-aiignore/.aiignore`](examples/wprig-aiignore/.aiignore) | [source](https://raw.githubusercontent.com/wprig/wprig/master/.aiignore) |
 
 ### `.cursorignore`
 
@@ -28,7 +34,13 @@ Cursor.
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
 | `api-console` | [`mulesoft/api-console`](https://github.com/mulesoft/api-console) | [`examples/api-console/.cursorignore`](examples/api-console/.cursorignore) | [source](https://raw.githubusercontent.com/mulesoft/api-console/master/.cursorignore) |
+| `async-memcached-cursorignore` | [`Shopify/async-memcached`](https://github.com/Shopify/async-memcached) | [`examples/async-memcached-cursorignore/.cursorignore`](examples/async-memcached-cursorignore/.cursorignore) | [source](https://raw.githubusercontent.com/Shopify/async-memcached/main/.cursorignore) |
+| `atlantes-cursorignore` | [`allenai/atlantes`](https://github.com/allenai/atlantes) | [`examples/atlantes-cursorignore/.cursorignore`](examples/atlantes-cursorignore/.cursorignore) | [source](https://raw.githubusercontent.com/allenai/atlantes/main/.cursorignore) |
+| `dbdemos-cursorignore` | [`databricks-demos/dbdemos`](https://github.com/databricks-demos/dbdemos) | [`examples/dbdemos-cursorignore/.cursorignore`](examples/dbdemos-cursorignore/.cursorignore) | [source](https://raw.githubusercontent.com/databricks-demos/dbdemos/main/.cursorignore) |
+| `elastiflow-pipelines-cursorignore` | [`elastiflow/pipelines`](https://github.com/elastiflow/pipelines) | [`examples/elastiflow-pipelines-cursorignore/.cursorignore`](examples/elastiflow-pipelines-cursorignore/.cursorignore) | [source](https://raw.githubusercontent.com/elastiflow/pipelines/main/.cursorignore) |
+| `flatcitybuf-cursorignore` | [`cityjson/flatcitybuf`](https://github.com/cityjson/flatcitybuf) | [`examples/flatcitybuf-cursorignore/.cursorignore`](examples/flatcitybuf-cursorignore/.cursorignore) | [source](https://raw.githubusercontent.com/cityjson/flatcitybuf/main/.cursorignore) |
 | `holochain` | [`holochain/holochain`](https://github.com/holochain/holochain) | [`examples/holochain/.cursorignore`](examples/holochain/.cursorignore) | [source](https://raw.githubusercontent.com/holochain/holochain/develop/.cursorignore) |
+| `plutus-cursorignore` | [`IntersectMBO/plutus`](https://github.com/IntersectMBO/plutus) | [`examples/plutus-cursorignore/.cursorignore`](examples/plutus-cursorignore/.cursorignore) | [source](https://raw.githubusercontent.com/IntersectMBO/plutus/master/.cursorignore) |
 
 ### `.codeiumignore`
 
@@ -37,6 +49,19 @@ Codeium (now Windsurf).
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
 | `wikimedia` | [`wikimedia/wikimedia-fundraising-dev`](https://github.com/wikimedia/wikimedia-fundraising-dev) | [`examples/wikimedia/.codeiumignore`](examples/wikimedia/.codeiumignore) | [source](https://raw.githubusercontent.com/wikimedia/wikimedia-fundraising-dev/master/.codeiumignore) |
+
+### `.aiexclude`
+
+Android Studio Gemini / JetBrains AI exclusion file.
+
+| Example | Upstream | File | Exact source |
+| --- | --- | --- | --- |
+| `adyen-android-aiexclude` | [`Adyen/adyen-android`](https://github.com/Adyen/adyen-android) | [`examples/adyen-android-aiexclude/.aiexclude`](examples/adyen-android-aiexclude/.aiexclude) | [source](https://raw.githubusercontent.com/Adyen/adyen-android/main/.aiexclude) |
+| `guardian-source-apps-aiexclude` | [`guardian/source-apps`](https://github.com/guardian/source-apps) | [`examples/guardian-source-apps-aiexclude/.aiexclude`](examples/guardian-source-apps-aiexclude/.aiexclude) | [source](https://raw.githubusercontent.com/guardian/source-apps/main/.aiexclude) |
+| `meshtastic-android-aiexclude` | [`meshtastic/Meshtastic-Android`](https://github.com/meshtastic/Meshtastic-Android) | [`examples/meshtastic-android-aiexclude/.aiexclude`](examples/meshtastic-android-aiexclude/.aiexclude) | [source](https://raw.githubusercontent.com/meshtastic/Meshtastic-Android/main/.aiexclude) |
+| `rxdb-aiexclude` | [`pubkey/rxdb`](https://github.com/pubkey/rxdb) | [`examples/rxdb-aiexclude/.aiexclude`](examples/rxdb-aiexclude/.aiexclude) | [source](https://raw.githubusercontent.com/pubkey/rxdb/master/.aiexclude) |
+| `stabilitymatrix-aiexclude` | [`LykosAI/StabilityMatrix`](https://github.com/LykosAI/StabilityMatrix) | [`examples/stabilitymatrix-aiexclude/.aiexclude`](examples/stabilitymatrix-aiexclude/.aiexclude) | [source](https://raw.githubusercontent.com/LykosAI/StabilityMatrix/main/.aiexclude) |
+| `wordpress-android-aiexclude` | [`wordpress-mobile/WordPress-Android`](https://github.com/wordpress-mobile/WordPress-Android) | [`examples/wordpress-android-aiexclude/.aiexclude`](examples/wordpress-android-aiexclude/.aiexclude) | [source](https://raw.githubusercontent.com/wordpress-mobile/WordPress-Android/trunk/.aiexclude) |
 
 ## Field notes
 

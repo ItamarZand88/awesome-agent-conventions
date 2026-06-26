@@ -1,0 +1,57 @@
+<!-- source: fuhi-timebaibai — https://raw.githubusercontent.com/FUHI12342/NewFUHI/main/static/ai.txt -->
+# ai.txt — AI Training Opt-Out Declaration
+# Specification: https://www.ai-visibility.org.uk/specifications/ai-txt/
+# Site: https://timebaibai.com
+# Updated: 2026-04-12
+
+# Disallow all AI/ML training on this site's content
+User-Agent: *
+Disallow-Training: /
+Disallow-Synthesis: /
+
+# Specific AI crawlers
+User-Agent: GPTBot
+Disallow-Training: /
+
+User-Agent: ChatGPT-User
+Disallow-Training: /
+
+User-Agent: ClaudeBot
+Disallow-Training: /
+
+User-Agent: Claude-Web
+Disallow-Training: /
+
+User-Agent: CCBot
+Disallow-Training: /
+
+User-Agent: Google-Extended
+Disallow-Training: /
+
+User-Agent: FacebookBot
+Disallow-Training: /
+
+User-Agent: cohere-ai
+Disallow-Training: /
+
+User-Agent: PerplexityBot
+Disallow-Training: /
+
+User-Agent: Bytespider
+Disallow-Training: /
+
+User-Agent: Applebot-Extended
+Disallow-Training: /
+
+User-Agent: Amazonbot
+Disallow-Training: /
+
+# Rights Reservation
+# All content on this site is protected by copyright.
+# No permission is granted for text and data mining (TDM),
+# machine learning training, or any form of AI model development
+# using the content of this website.
+#
+# Contact: info@timebaibai.com
+# Legal basis: EU DSM Directive Article 4 opt-out,
+#              Japanese Copyright Act Article 30-4 consideration

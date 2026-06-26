@@ -1,0 +1,10 @@
+<!-- source: laura-esteves — https://raw.githubusercontent.com/lauralesteves/quecoreagora.lauraesteves.com/main/public/ai.txt -->
+User-agent: *
+Disallow-Training: yes
+
+This site and its content are the original work of Laura Esteves.
+Use of this content for AI/ML training purposes is not permitted
+without explicit written consent.
+
+Contact: lauralesteves [at] gmail.com
+More info: https://lauraesteves.com

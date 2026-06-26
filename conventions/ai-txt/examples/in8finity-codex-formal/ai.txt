@@ -1,0 +1,3 @@
+<!-- source: in8finity-codex-formal — https://raw.githubusercontent.com/in8finity/codex-formal-plugin/main/plugins/formal-methods/ai.txt -->
+User-Agent: *
+Disallow-Training: yes

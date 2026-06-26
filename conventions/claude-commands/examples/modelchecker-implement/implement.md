@@ -1,0 +1,234 @@
+<!-- source: modelchecker-implement — https://raw.githubusercontent.com/benbrastmckie/ModelChecker/master/.claude/commands/implement.md -->
+---
+description: Execute implementation with resume support
+allowed-tools: Skill, Bash(jq:*), Bash(git:*), Read, Edit, Glob
+argument-hint: TASK_NUMBER
+model: claude-opus-4-5-20251101
+---
+
+# /implement Command
+
+Execute implementation plan with automatic resume support by delegating to the appropriate implementation skill/subagent.
+
+## Arguments
+
+- `$1` - Task number (required)
+- Optional: `--force` to override status validation
+
+## Execution
+
+**Note**: Delegate to skills for language-specific implementation.
+
+### CHECKPOINT 1: GATE IN
+
+1. **Generate Session ID**
+   ```
+   session_id = sess_{timestamp}_{random}
+   ```
+
+2. **Lookup Task**
+   ```bash
+   task_data=$(jq -r --arg num "$task_number" \
+     '.active_projects[] | select(.project_number == ($num | tonumber))' \
+     specs/state.json)
+   ```
+
+3. **Validate**
+   - Task exists (ABORT if not)
+   - Status allows implementation: planned, implementing, partial, researched, not_started
+   - If completed: ABORT unless --force
+   - If abandoned: ABORT "Recover task first"
+
+4. **Load Implementation Plan**
+   Find latest: `specs/{NNN}_{SLUG}/plans/implementation-{LATEST}.md`
+
+   If no plan: ABORT "No implementation plan found. Run /plan {N} first."
+
+5. **Detect Resume Point**
+   Scan plan for phase status markers:
+   - [NOT STARTED] → Start here
+   - [IN PROGRESS] → Resume here
+   - [COMPLETED] → Skip
+   - [PARTIAL] → Resume here
+
+   If all [COMPLETED]: Task already done
+
+**ABORT** if any validation fails.
+
+**On GATE IN success**: Task validated. **IMMEDIATELY CONTINUE** to STAGE 2 below.
+
+### STAGE 2: DELEGATE
+
+**EXECUTE NOW**: After CHECKPOINT 1 passes, immediately invoke the Skill tool.
+
+**Language-Based Routing**:
+
+| Language | Skill to Invoke |
+|----------|-----------------|
+| `neovim` | `skill-neovim-implementation` |
+| `latex` | `skill-latex-implementation` |
+| `typst` | `skill-typst-implementation` |
+| `general`, `meta`, `markdown` | `skill-implementer` |
+
+**Invoke the Skill tool NOW** with:
+```
+skill: "{skill-name from table above}"
+args: "task_number={N} plan_path={path to implementation plan} resume_phase={phase number} session_id={session_id}"
+```
+
+The skill will spawn the appropriate agent which executes plan phases sequentially, updates phase markers, creates commits per phase, and returns a structured result.
+
+**On DELEGATE success**: Implementation complete. **IMMEDIATELY CONTINUE** to CHECKPOINT 2 below.
+
+### CHECKPOINT 2: GATE OUT
+
+1. **Validate Return**
+   Required fields: status, summary, artifacts, metadata (phases_completed, phases_total)
+
+2. **Verify Artifacts**
+   Check summary file exists on disk (if implemented)
+
+3. **Verify Status Updated**
+   The skill handles status updates internally (preflight and postflight).
+
+   **If result.status == "implemented":**
+   Confirm status is now "completed" in state.json.
+
+   **If result.status == "partial":**
+   Confirm status is still "implementing", resume point noted.
+
+4. **Populate Completion Summary (if implemented)**
+
+   **Only when result.status == "implemented":**
+
+   Extract the summary from the skill result and update state.json:
+   ```bash
+   # Get completion summary from skill result (result.summary field)
+   completion_summary="$result_summary"
+
+   # Update state.json with completion_summary field
+   jq --arg num "$task_number" \
+      --arg summary "$completion_summary" \
+      '(.active_projects[] | select(.project_number == ($num | tonumber))) += {
+        completion_summary: $summary
+      }' specs/state.json > /tmp/state.json && mv /tmp/state.json specs/state.json
+   ```
+
+   **Update TODO.md with Summary line:**
+   Add a `- **Summary**: {completion_summary}` line to the task entry in TODO.md, after the Completed date line.
+
+   **Skip if result.status == "partial":**
+   Partial implementations do not get completion summaries.
+
+5. **Verify Plan File Status Updated (Defensive)**
+
+   **Only when result.status == "implemented":**
+
+   Check that the plan file status marker was updated to `[COMPLETED]`. If not, apply defensive correction.
+
+   ```bash
+   # Find latest plan file
+   padded_num=$(printf "%03d" "$task_number")
+   project_name=$(jq -r --argjson num "$task_number" \
+     '.active_projects[] | select(.project_number == $num) | .project_name' \
+     specs/state.json)
+   plan_file=$(ls -1 "specs/${padded_num}_${project_name}/plans/implementation-"*.md 2>/dev/null | sort -V | tail -1)
+
+   if [ -n "$plan_file" ] && [ -f "$plan_file" ]; then
+       # Check if plan file has [COMPLETED] status
+       if ! grep -qE '^\*\*Status\*\*: \[COMPLETED\]|^\- \*\*Status\*\*: \[COMPLETED\]' "$plan_file"; then
+           echo "WARNING: Plan file status not updated to [COMPLETED]. Applying defensive correction."
+           # Try bullet pattern first
+           sed -i 's/^\- \*\*Status\*\*: \[.*\]$/- **Status**: [COMPLETED]/' "$plan_file"
+           # Try non-bullet pattern
+           sed -i 's/^\*\*Status\*\*: \[.*\]$/**Status**: [COMPLETED]/' "$plan_file"
+           # Verify correction applied
+           if grep -qE '^\*\*Status\*\*: \[COMPLETED\]|^\- \*\*Status\*\*: \[COMPLETED\]' "$plan_file"; then
+               echo "Plan file status corrected to [COMPLETED]"
+           else
+               echo "WARNING: Could not update plan file status (pattern mismatch)"
+           fi
+       fi
+   fi
+   ```
+
+   **Skip if result.status == "partial":**
+   Partial implementations do not need plan file verification.
+
+**RETRY** skill if validation fails.
+
+**On GATE OUT success**: Artifacts and completion summary verified. **IMMEDIATELY CONTINUE** to CHECKPOINT 3 below.
+
+### CHECKPOINT 3: COMMIT
+
+**On completion:**
+```bash
+git add -A
+git commit -m "$(cat <<'EOF'
+task {N}: complete implementation
+
+Session: {session_id}
+
+Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
+EOF
+)"
+```
+
+**On partial:**
+```bash
+git add -A
+git commit -m "$(cat <<'EOF'
+task {N}: partial implementation (phases 1-{M} of {total})
+
+Session: {session_id}
+
+Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
+EOF
+)"
+```
+
+Commit failure is non-blocking (log and continue).
+
+## Output
+
+**On Completion:**
+```
+Implementation complete for Task #{N}
+
+Summary: {artifact_path from skill result}
+
+Phases completed: {phases_completed}/{phases_total}
+
+Status: [COMPLETED]
+```
+
+**On Partial:**
+```
+Implementation paused for Task #{N}
+
+Completed: Phases 1-{M}
+Remaining: Phase {M+1}
+
+Status: [IMPLEMENTING]
+Next: /implement {N} (will resume from Phase {M+1})
+```
+
+## Error Handling
+
+### GATE IN Failure
+- Task not found: Return error with guidance
+- No plan found: Return error "Run /plan {N} first"
+- Invalid status: Return error with current status
+
+### DELEGATE Failure
+- Skill fails: Keep [IMPLEMENTING], log error
+- Timeout: Progress preserved in plan phase markers, user can re-run
+
+### GATE OUT Failure
+- Missing artifacts: Log warning, continue with available
+- Link failure: Non-blocking warning
+
+### Build Errors
+- Skill returns partial/failed status
+- Error details included in result
+- User can fix issues and re-run /implement

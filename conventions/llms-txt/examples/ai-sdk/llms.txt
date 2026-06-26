@@ -1,0 +1,47 @@
+<!-- source: ai-sdk — https://ai-sdk.dev/llms.txt -->
+# AI SDK
+
+> The AI SDK is a provider-agnostic TypeScript toolkit for building AI-powered applications and agents with React, Next.js, Vue, Svelte, Node.js, and other JavaScript runtimes.
+
+Use this page to find current AI SDK documentation. Prefer search results and targeted Markdown pages over loading the full documentation bundle.
+
+## Web Access
+
+If you can fetch URLs, search the docs first:
+
+- Search endpoint: https://ai-sdk.dev/api/search-docs?q=your+query
+
+Examples:
+
+- https://ai-sdk.dev/api/search-docs?q=building+agents
+- https://ai-sdk.dev/api/search-docs?q=ToolLoopAgent
+- https://ai-sdk.dev/api/search-docs?q=prepareStep
+- https://ai-sdk.dev/api/search-docs?q=generating+structured+output
+
+The search endpoint returns JSON with documentation URLs. Fetch the returned URLs with `.md` appended to get Markdown content.
+
+## Local Coding Agents
+
+If you are working inside a local coding project with filesystem access, install the AI SDK skill first:
+
+```sh
+npx skills add vercel/ai
+```
+
+Then follow the skill instructions before changing code.
+
+## Common Starting Points
+
+- [Getting Started](https://ai-sdk.dev/docs/getting-started.md): Installation and first usage.
+- [Navigating the Library](https://ai-sdk.dev/docs/getting-started/navigating-the-library.md): How the AI SDK packages fit together.
+- [AI SDK Core](https://ai-sdk.dev/docs/ai-sdk-core.md): Core model calls like `generateText`, `streamText`, structured output, tools, embeddings, and providers.
+- [AI SDK UI](https://ai-sdk.dev/docs/ai-sdk-ui.md): Framework-agnostic hooks for chatbots and generative UIs.
+- [Agents](https://ai-sdk.dev/docs/agents.md): Building agents with `ToolLoopAgent` and related APIs.
+- [AI Gateway](https://ai-sdk.dev/providers/ai-sdk-providers/ai-gateway.md): Default provider access through Vercel AI Gateway.
+- [Providers](https://ai-sdk.dev/providers/ai-sdk-providers.md): Supported model providers.
+- [Reference](https://ai-sdk.dev/docs/reference.md): API reference.
+- [Sitemap](https://ai-sdk.dev/sitemap.md): Full documentation index.
+
+## Full Documentation
+
+- [llms-full.txt](https://ai-sdk.dev/llms-full.txt): A concatenated Markdown copy of the AI SDK documentation for models with large context windows.

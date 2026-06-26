@@ -1,0 +1,14 @@
+<!-- source: alexbocken-homepage — https://raw.githubusercontent.com/AlexBocken/homepage/master/.mcp.json -->
+{
+  "mcpServers": {
+    "svelte": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@sveltejs/mcp"
+      ],
+      "env": {}
+    }
+  }
+}

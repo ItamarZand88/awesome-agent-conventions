@@ -1,0 +1,94 @@
+<!-- source: elevenlabs — https://elevenlabs.io/llms.txt -->
+# ElevenLabs
+
+ElevenLabs is an AI research and product company transforming how we interact with technology. We launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses across three main platforms. ElevenAgents enables businesses to deliver seamless and intelligent customer experiences, with the integrations, testing, monitoring, and reliability necessary to deploy voice and chat agents at scale. ElevenCreative empowers creators and marketers to generate and edit speech, music, image, and video across 70+ languages. ElevenAPI gives developers access to our leading AI audio foundational models.
+
+## Fetching Markdown Content
+
+Most ElevenLabs pages support a Markdown-optimized response format. When you request a page with the header `Accept: text/markdown`, the server returns a stripped-down Markdown version of the page — no navigation or boilerplate — containing only the essential content. This significantly reduces token usage and improves parsing accuracy.
+
+**To request Markdown content, add this header to your HTTP requests:**
+
+```
+Accept: text/markdown
+```
+
+**Example (curl):**
+```bash
+curl -H "Accept: text/markdown" https://elevenlabs.io/text-to-speech
+```
+
+
+Where Markdown responses are available, the server will reply with `Content-Type: text/markdown`. If a page does not support this format, it will fall back to the standard HTML response. The [LLM-optimized full documentation](https://elevenlabs.io/docs/llms-full.txt) is always available as a single flat Markdown file without requiring any special headers.
+
+## Products
+
+### ElevenCreative
+- [ElevenCreative overview](https://elevenlabs.io/creative): A single studio for creators to combine voice, music, image, and video. Built for creators, brands, and media companies elevating storytelling and production workflows.
+- [Text to Speech](https://elevenlabs.io/text-to-speech): Controllable, expressive speech across 70+ languages. Our models dynamically predict voice characteristics and adapt to content context.
+- [Speech to Text](https://elevenlabs.io/speech-to-text): Scribe, our most accurate Speech to Text model, with speaker diarization and character-level timestamps.
+- [Voice Library](https://elevenlabs.io/voice-library): Thousands of pre-built voices, plus tools to clone your own voice or design one from a prompt.
+- [Voice Cloning](https://elevenlabs.io/voice-cloning): Create a high-fidelity replica of a voice from audio samples. Requires consent verification for cloning public figures.
+- [Music](https://elevenlabs.io/music): Studio-quality music from natural language prompts in any genre or style, trained on licensed data and cleared for commercial use.
+- [Sound Effects](https://elevenlabs.io/sound-effects): Custom sound effects and ambient audio from text prompts.
+- [Productions](https://elevenlabs.io/productions): Translate and re-voice video and audio content across languages while preserving original speaker characteristics.
+- [Projects / Studio](https://elevenlabs.io/studio): Create and edit audiobooks, podcasts, and voiceovers in an editor built on all of ElevenLabs' audio research.
+- [Video](https://elevenlabs.io/video): Turn ideas into videos using leading models including Veo, Sora, Wan, Kling, and Seedance.
+- [Image](https://elevenlabs.io/image): Generate and edit images with leading AI image models.
+
+### ElevenAgents
+- [ElevenAgents overview](https://elevenlabs.io/agents): Enterprise platform for AI agents that can talk, type, and take action. Elevate customer experience, empower revenue teams, and streamline internal operations.
+- [Conversational AI](https://elevenlabs.io/conversational-ai): Build agents powered by V3, our most expressive text to speech model, with improved turn-taking, natural dialogue, and emotion understanding.
+- [Agents Platform](https://elevenlabs.io/docs/eleven-agents/overview): Configure multimodal agents via dashboard, developer toolkit, or visual workflow builder. Deploy across telephony, web, and mobile.
+- [LLM Integration](https://elevenlabs.io/docs/eleven-agents/customization/llm): Agents support natively integrated LLMs (OpenAI, Claude, Gemini, and others) plus custom LLM endpoints. Backup LLM cascading is configurable to maintain conversation continuity if a primary model fails.
+- [Analytics and Evals](https://elevenlabs.io/docs/eleven-agents/overview): Built-in testing, evaluations, and performance analytics at scale.
+- [HIPAA and Data Residency](https://elevenlabs.io/docs/eleven-agents/customization/llm/llm-cascading): HIPAA-compliant mode and EU/US/IN data residency options available.
+
+### ElevenAPI
+- [ElevenAPI overview](https://elevenlabs.io/api): Direct API access to ElevenLabs' audio intelligence for developers. HTTP and WebSocket support, official Python and Node.js SDKs. For full API details, see the [LLM-optimized docs](https://elevenlabs.io/docs/llms-full.txt).
+- [Text to Speech](https://elevenlabs.io/docs/api-reference/text-to-speech): Convert text to audio using any voice. Supports streaming, multiple output formats, and expressive control.
+- [Speech to Text](https://elevenlabs.io/docs/api-reference/speech-to-text): High-accuracy transcription with speaker diarization and character-level timestamps.
+- [Voice Cloning](https://elevenlabs.io/docs/api-reference/voices/pvc/create): Programmatically clone voices from audio samples.
+- [Voice Design](https://elevenlabs.io/docs/api-reference/voices): Generate novel voices from text prompts or browse the voice library.
+- [Voice Changer](https://elevenlabs.io/docs/api-reference/speech-to-speech/convert): Transform audio from one voice to another in real time.
+- [Music](https://elevenlabs.io/docs/api-reference/music): Generate studio-quality music from natural language prompts.
+- [Sound Effects](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert): Generate custom sound effects and ambient audio from text.
+- [Audio Isolation](https://elevenlabs.io/docs/api-reference/audio-isolation): Separate voice from background noise.
+- [Dubbing](https://elevenlabs.io/docs/api-reference/dubbing): Translate and re-voice audio and video content across languages.
+- [Webhooks](https://elevenlabs.io/docs/api-reference/webhooks): Event-driven integration for platform events.
+- [API servers](https://api.elevenlabs.io): Global (`api.elevenlabs.io`), US residency (`api.us.elevenlabs.io`), EU residency (`api.eu.residency.elevenlabs.io`), India residency (`api.in.residency.elevenlabs.io`).
+
+## Documentation
+
+- [Full documentation](https://elevenlabs.io/docs/overview/intro): Product guides, API reference, best practices, and integration tutorials.
+- [Full documentation (LLM-optimized)](https://elevenlabs.io/docs/llms-full.txt): Complete documentation in a single flat Markdown file — no headers required, always available.
+- [Getting started](https://elevenlabs.io/docs/eleven-creative/overview): Quickstart for new users and developers.
+- [Python SDK](https://elevenlabs.io/docs/api-reference/introduction): `pip install elevenlabs`
+- [Node.js SDK](https://elevenlabs.io/docs/api-reference/introduction): `npm install @elevenlabs/elevenlabs-js`
+
+## Pricing and Plans
+
+- [Pricing](https://elevenlabs.io/pricing): Free tier available. Paid plans (Starter, Creator, Pro, Scale, Business) scale by credit volume and feature access. Creator and above support pay-as-you-go usage-based billing for credits beyond the monthly quota. Enterprise pricing available with custom terms.
+- [Enterprise](https://elevenlabs.io/enterprise): Custom contracts, SLAs, data residency, HIPAA compliance, and dedicated support.
+- [Data Processing Agreement](https://elevenlabs.io/dpa): GDPR-compliant DPA available for enterprise customers.
+
+## Safety and Trust
+
+ElevenLabs is committed to building the most trusted voice and agents AI platform. Our safety program focuses on preventing, detecting, and responding to abusive use of our models - particularly misuse that could lead to serious harm through deception or exploitation.
+
+- [Prohibited Use Policy](https://elevenlabs.io/use-policy): Our external-facing policy governing acceptable use of ElevenLabs products. Violations may result in feature restrictions or account removal.
+- [Safety overview](https://elevenlabs.io/safety): How ElevenLabs approaches responsible AI, including red-teaming, KYC/KYB verification, product safeguards, and monitoring.
+- [Compliance portal](https://compliance.elevenlabs.io/): GDPR, EU AI Act, DORA, HIPAA, SOC 2 certifications and compliance documentation.
+- [C2PA and watermarking](https://elevenlabs.io/safety): ElevenLabs supports open standards for AI content provenance, including C2PA metadata and watermarking. A public classifier is available to detect content created with ElevenLabs.
+
+## Contact and Support
+
+- [Press inquiries](mailto:press@elevenlabs.io): Media and press contact.
+- [Brand assets](https://elevenlabs.io/brand): Official logos, fonts, and brand guidelines.
+
+## Legal
+
+- [Terms of Service](https://elevenlabs.io/terms-of-use): Governs use of ElevenLabs products and services.
+- [Privacy Policy](https://elevenlabs.io/privacy-policy): How ElevenLabs handles user data.
+- [Data Processing Agreement](https://elevenlabs.io/dpa): For GDPR-compliant enterprise data handling.
+- [Service Level Agreement](https://elevenlabs.io/enterprise): Available for enterprise customers upon request, appended to Order Forms.

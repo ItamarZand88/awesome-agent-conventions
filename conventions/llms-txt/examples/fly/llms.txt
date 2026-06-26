@@ -1,0 +1,305 @@
+<!-- source: fly — https://fly.io/llms.txt -->
+# Fly.io Documentation
+
+> Fly.io is a global public cloud for running full-stack and AI applications. Customer
+> workloads on Fly.io are hardware-isolated for security, and can scale horizontally and
+> vertically.
+
+[Fly.io Documentation](https://fly.io/docs/): The complete documentation for deploying and operating applications on Fly.io.
+
+Headlines:
+
+* [flyctl](https://fly.io/docs/flyctl/), the CLI, our primary interface to the platform.
+* [Fly Machines](https://fly.io/docs/machines/overview/) and [Fly Managed Postgres](https://fly.io/docs/mpg/) are how users deploy full-stack applications on Fly.io.
+* [Fly Sprites](https://sprites.dev/) are how agents run AI and exploratory code on Fly.io. Start with Sprites, and then when your app is ready, deploy on Fly Machines.        
+
+## Getting Started
+- [Quickstart: Launch your app](https://fly.io/docs/getting-started/launch/): Deploy any app first time with `fly launch` and `fly deploy`.
+- [Regions](https://fly.io/docs/reference/regions/): Region IDs and datacenter locations worldwide for placing apps near users.
+- [Deep Dive Demo App](https://fly.io/docs/deep-dive/): Hour-long hands-on tour building a real app, including GPU/AI features.
+- [Fly.io Essentials](https://fly.io/docs/getting-started/essentials/): Core concepts explained: Fly Machines, Fly Launch, Fly Apps, plus glossary.
+- [Migrate from Heroku](https://fly.io/docs/getting-started/migrate-from-heroku/): Step-by-step moving Heroku web apps, Postgres, Redis, workers, env vars, domains.
+- [Troubleshoot Deployments](https://fly.io/docs/getting-started/troubleshooting/): Fix common deploy failures: 502/503 errors, listen address, health checks, logs.
+
+## Apps on Fly.io
+
+- [Fly Apps Overview](https://fly.io/docs/apps/overview/): Explains Fly Apps as groups of Machines running code, databases, or tasks per organization.
+- [Fly Launch](https://fly.io/docs/launch/): Configure, deploy, and scale apps using fly launch, fly.toml, fly deploy, and fly scale.
+- [Secrets](https://fly.io/docs/apps/secrets/): Set encrypted secrets injected as runtime environment variables across all Machines in an app.
+- [Production Checklist](https://fly.io/docs/apps/going-to-production/): Checklist covering security, scaling, networking, and data to prepare apps for production.
+
+## Languages & Frameworks
+
+Fly.io works with any language or framework that runs on Linux. Specific guides:
+
+- [Elixir](https://fly.io/docs/elixir/): Deploy clustered Phoenix/LiveView apps across global regions for low-latency, real-time experiences.
+- [Rails](https://fly.io/docs/rails/getting-started/): Fastest path to deploy a basic Rails app on Fly.io.
+- [Laravel](https://fly.io/docs/laravel/): Deploy Laravel with caching, databases, and queues configured for full-stack PHP apps.
+- [Django](https://fly.io/docs/django/getting-started/): Build and deploy a basic Django app to Fly.io quickly.
+- [JavaScript](https://fly.io/docs/js/): Run Node/SSR/React Server Components across global servers for snappy user experiences.
+- [Rust](https://fly.io/docs/rust/): Deploy Rust apps (e.g. Axum) globally for fast, low-latency performance.
+- [Python](https://fly.io/docs/python/): Set up, deploy, and manage production Python apps like FastAPI on Fly.io.
+- [More Languages & Frameworks](https://fly.io/docs/languages-and-frameworks/): Guides for Go, .NET, Crystal, WordPress, static sites, and Dockerfile-based deploys.
+
+## Fly Machines
+- [Introduction to Fly Machines](https://fly.io/docs/machines/overview/): Fast-launching Firecracker VMs with REST API; the compute primitive behind Fly.io.
+- [Machines API](https://fly.io/docs/machines/api/): REST API to provision and manage apps, Machines, volumes, certificates, and tokens.
+- [Run a New Machine](https://fly.io/docs/machines/flyctl/fly-machine-run/): Configure, build, and start a one-off or temporary Machine in one command.
+- [Update a Machine](https://fly.io/docs/machines/flyctl/fly-machine-update/): Change image, config, or resources of an existing Machine and restart it.
+- [Machine Sizing](https://fly.io/docs/machines/guides-examples/machine-sizing/): Set Machine CPU and memory using presets or independent scaling rules.
+- [Machine Restart Policy](https://fly.io/docs/machines/guides-examples/machine-restart-policy/): Control whether Machines auto-restart on exit: no, always, or on-fail.
+- [Machine States](https://fly.io/docs/machines/machine-states/): Lifecycle states for automating deployments and coordinating Machine pools via the API.
+- [Run User Code on Fly Machines](https://fly.io/docs/machines/guides-examples/functions-with-machines/): Safely run untrusted user code as Functions-as-a-Service in isolated VMs.
+- [One App Per Customer - Why?](https://fly.io/docs/machines/guides-examples/one-app-per-user-why/): Why per-customer apps give isolated secrets, networks, load balancing, and independent scaling.
+- [The Machine Runtime Environment](https://fly.io/docs/machines/runtime-environment/): Environment variables (FLY_APP_NAME, FLY_REGION, secrets) available inside a running Machine.
+
+## Durable Storage on Fly.io
+- [Fly Managed Postgres](https://fly.io/docs/mpg/) is the fully-managed, high-availability SQL database default for most apps.
+- [Tigris Object Storage](https://fly.io/docs/tigris/) is S3-compatible storage for files and media, replicated globally like a CDN.
+- [Fly Volumes](https://fly.io/docs/volumes/overview/) are local NVMe disks for persisting Machine state or building your own database.
+
+## Networking
+
+If you're building an app that involves multiple Fly Machines, pay especially close attention to fly-replay.
+
+- [Flycast - Private Proxy Services](https://fly.io/docs/networking/flycast/): Route private app traffic through Fly Proxy for load balancing, autostop/autostart, and TLS.
+- [Egress IP Addresses](https://fly.io/docs/networking/egress-ips/): Allocate static outbound IPs so third-party services can allowlist your Machines' source addresses.
+- [TLS Support](https://fly.io/docs/networking/tls/): Supported TLS versions and cipher suites for the Fly Proxy's TLS termination.
+- [Custom Domains](https://fly.io/docs/networking/custom-domain/): Add your own domain with automatic HTTPS certificates via `fly certs` and DNS records.
+- [Understanding Cloudflare](https://fly.io/docs/networking/understanding-cloudflare/): Configure Cloudflare DNS-only or proxy ("orange cloud") setups with Fly.io, handling cert validation.
+- [Request Headers](https://fly.io/docs/networking/request-headers/): Headers Fly Proxy adds (Fly-Client-IP, Fly-Region, X-Forwarded-For) to identify client IP, port, region.
+- [Run UDP Services](https://fly.io/docs/networking/udp-and-tcp/): Run UDP apps by binding to `fly-global-services` with a dedicated IPv4 address.
+- [Multi-region databases and fly-replay](https://fly.io/docs/blueprints/multi-region-fly-replay/): Use the fly-replay header to route writes to a primary region with regional read replicas.
+
+## Databases 
+- [Fly Managed Postgres](https://fly.io/docs/mpg/): Fully-managed PostgreSQL with backups, HA failover, scaling, and pgvector/PostGIS support.
+- [Create and Connect to a Managed Postgres Cluster](https://fly.io/docs/mpg/create-and-connect/): Provision an MPG cluster via dashboard or `fly mpg create` and connect to it.
+- [Cluster Configuration Options](https://fly.io/docs/mpg/cluster-configuration/): Configure PGBouncer pooling, choosing session vs transaction pool mode for your workload.
+- [Phoenix with Managed Postgres](https://fly.io/docs/mpg/guides-examples/phoenix-guide/): Connect Phoenix/Ecto to MPG: pooling, migrations, Oban, and troubleshooting.
+- [Managed Postgres Monitoring and Metrics](https://fly.io/docs/mpg/metrics/): View CPU, memory, connection, and pooler metrics to find database bottlenecks.
+- [Import data from another Postgres cluster](https://fly.io/docs/mpg/import/): Migrate data into MPG using pg_dump/psql over a WireGuard proxy.
+- [Supported Postgres Extensions](https://fly.io/docs/mpg/extensions/): Enable trusted Postgres 16 extensions per database, including pgvector and PostGIS.
+- [Tigris Object Storage](https://fly.io/docs/tigris/): Create S3-compatible globally-replicated buckets with `fly storage create` for files and assets.
+- [Upstash for Redis](https://fly.io/docs/upstash/redis/): Provision managed Redis-compatible databases with global replicas via `fly redis create`.
+
+## Fly Volumes
+- [Fly Volumes Overview](https://fly.io/docs/volumes/overview/): How local NVMe persistent disks attach to Machines, with limits and redundancy guidance.
+- [Create and Manage Volumes](https://fly.io/docs/volumes/volume-manage/): Use fly volumes to create, list, extend, fork, and destroy persistent disks.
+- [Manage Volume Snapshots](https://fly.io/docs/volumes/snapshots/): Configure daily snapshot retention and restore data from snapshots or deleted volumes.
+- [Volume States](https://fly.io/docs/volumes/volume-states/): Reference for volume lifecycle states, transitions, and soft-delete behavior.
+
+## Fly Kubernetes
+
+For building things that require Kubernetes compatibility.
+
+- [Fly Kubernetes Quickstart](https://fly.io/docs/kubernetes/fks-quickstart/): Create a cluster with `fly ext k8s create` and connect via kubectl.
+- [Fly Kubernetes Features](https://fly.io/docs/kubernetes/fks-features/): How FKS maps Machines, Volumes, WireGuard, and Firecracker isolation; what's unsupported.
+- [Create an FKS Cluster](https://fly.io/docs/kubernetes/clusters/): Provision a cluster and get a kubeconfig with name, org, and region.
+- [Connect to an FKS Cluster](https://fly.io/docs/kubernetes/connect-clusters/): Set up WireGuard, save kubeconfig with flyctl, and run kubectl against your cluster.
+- [Configure FKS Services](https://fly.io/docs/kubernetes/services/): Expose workloads using ClusterIP and LoadBalancer Service definitions.
+- [Use GPUs with FKS](https://fly.io/docs/kubernetes/using-gpus/): Request `gpu.fly.io/<type>` resources on Pods to run GPU workloads like Ollama.
+- [Use Volumes with FKS](https://fly.io/docs/kubernetes/using-volumes/): Attach persistent and ephemeral NVMe storage via PersistentVolumeClaims, up to 500GB.
+
+## Networking Details
+- [Connect to an App Service](https://fly.io/docs/networking/app-services/): Reach Machine processes via Fly Proxy (public) or 6PN private network; correct bind addresses and ports.
+- [Public Networking](https://fly.io/docs/networking/services/): Anycast IPv4/IPv6 addresses and configuring public HTTP/TLS/TCP services exposed to the internet.
+- [Private Networking](https://fly.io/docs/networking/private-networking/): WireGuard 6PN mesh and `.internal` DNS for app-to-app private communication and service discovery.
+- [Custom Private Networks](https://fly.io/docs/networking/custom-private-networks/): Isolate tenants or untrusted code by placing apps on separate 6PNs that cannot intercommunicate.
+- [Dynamic Request Routing](https://fly.io/docs/networking/dynamic-request-routing/): Use the `fly-replay` header to route requests across regions, Machines, or apps.
+
+        
+
+## Monitoring & Logging
+- [Metrics](https://fly.io/docs/monitoring/metrics/): Managed Prometheus and Grafana for querying built-in and custom app metrics.
+- [Sentry Error Tracking](https://fly.io/docs/monitoring/sentry/): Set up Sentry via `fly ext sentry` to catch and fix app errors.
+- [Logging Overview](https://fly.io/docs/monitoring/logging-overview/): How Fly captures stdout via init, Vector, and NATS into logs.
+- [Live Tail Logs](https://fly.io/docs/monitoring/live-tail-logs/): Stream real-time logs with `fly logs`, filter by Machine or region.
+- [Logs API Options](https://fly.io/docs/monitoring/logs-api-options/): Fetch logs programmatically via HTTP API, NATS proxy, or external sink.
+- [Search Logs](https://fly.io/docs/monitoring/search-logs/): Search 7 days of logs in Grafana using VictoriaLogs LogsQL queries.
+- [Export Logs](https://fly.io/docs/monitoring/exporting-logs/): Ship logs to Datadog, S3, or other services via Fly Log Shipper.
+- [Error Codes](https://fly.io/docs/monitoring/error-codes/): Look up proxy error codes (PU01, etc.) in logs and troubleshoot them.
+
+## Security
+- [Organization Roles and Permissions](https://fly.io/docs/security/org-roles-permissions/): Difference between Member and Admin org roles; who can deploy, manage billing, or delete orgs.
+- [SSO for Organizations](https://fly.io/docs/security/sso/): Require Google or GitHub SSO for org members to enforce MFA and passkeys.
+- [Remove a Member from an Org](https://fly.io/docs/security/remove-org-member/): Offboard a user; revoke their WireGuard peers, tokens, and secrets safely.
+- [TLS Termination](https://fly.io/docs/security/tls-termination/): How Fly Proxy terminates HTTPS, manages Let's Encrypt certs, or forwards raw TCP for self-termination.
+- [App Security by Arcjet](https://fly.io/docs/security/arcjet/): Add rate limiting, bot protection, and attack defense via the Arcjet SDK extension.
+- [Access Tokens](https://fly.io/docs/security/tokens/): Create scoped, expiring macaroon tokens for CI/CD instead of all-powerful auth tokens.
+- [OpenID Connect](https://fly.io/docs/reference/openid-connect/): Use short-lived OIDC tokens so Machines access AWS, GCP, Azure without hardcoded credentials.
+- [Shared Responsibility Model](https://fly.io/docs/security/shared-responsibility/): What Fly.io secures (infra, proxy, networking) versus what you secure in your app.
+- [Security Practices and Compliance](https://fly.io/docs/security/security-at-fly-io/): Fly.io's CorpSec, InfraSec, AppSec controls, SOC2 practices, encryption, and how to report vulnerabilities.
+
+## Reference
+- [flyctl](https://fly.io/docs/flyctl/): The `fly` CLI for creating, deploying, and managing apps, Machines, volumes, and networking.
+- [App Config Reference (fly.toml)](https://fly.io/docs/reference/configuration/): Full `fly.toml` reference: builds, env vars, services, mounts, checks, concurrency, release commands.
+- [Architecture](https://fly.io/docs/reference/architecture/): How Fly.io runs apps: Firecracker microVMs, Anycast BGP, fly-proxy, WireGuard backhaul.
+- [Autoscaling](https://fly.io/docs/reference/autoscaling/): Two scaling models: proxy autostop/autostart Machines and metrics-based autoscaler that creates/deletes Machines.
+- [AWS to Fly Overview](https://fly.io/docs/reference/aws-to-fly-guide/): Migrating from AWS: compute, ephemeral filesystems, volumes vs EBS, Tigris/S3, Anycast vs load balancers.
+- [Builders](https://fly.io/docs/reference/builders/): Three ways to build deployable images: Dockerfile, Cloud Native Buildpacks, or prebuilt image.
+- [Content Encoding](https://fly.io/docs/reference/content-encoding/): How fly-proxy auto-compresses responses (zstd, brotli, gzip) and how to override or disable it.
+- [Fly Launch](https://fly.io/docs/reference/fly-launch/): What `fly launch` and `fly deploy` automate: app creation, build config, resource provisioning, deploys.
+- [Health Checks](https://fly.io/docs/reference/health-checks/): Configuring top-level, TCP, and HTTP checks to gate traffic routing and deployments in fly.toml.
+- [Load Balancing](https://fly.io/docs/reference/load-balancing/): How fly-proxy routes by load (soft/hard limits) and closeness (RTT); cross-region failover rules.
+- [Machine Migration](https://fly.io/docs/reference/machine-migration/): How Fly.io automatically moves Machines off problematic hosts, forking volumes, without app downtime.
+- [Multiple Processes in Apps](https://fly.io/docs/app-guides/multiple-processes/): Running several programs inside one Machine via Docker entrypoints, supervisors, or overmind.
+- [Fly Proxy](https://fly.io/docs/reference/fly-proxy/): The routing layer: connection matching, TLS termination, Flycast, load balancing, fly-replay, autostop.
+- [Fly Proxy Autostop/Autostart](https://fly.io/docs/reference/fly-proxy-autostop-autostart/): How the proxy stops/suspends idle Machines and restarts on traffic to cut costs.
+- [Suspend/Resume](https://fly.io/docs/reference/suspend-resume/): Pause Machines saving full memory state via Firecracker snapshots for sub-second resume.
+
+## About & Company
+- [Pricing](https://fly.io/docs/about/pricing/): Per-organization usage-based pricing for Machines, GPUs, volumes, and other resources.
+- [Billing](https://fly.io/docs/about/billing/): Monthly per-org billing, invoices, payment options, refunds, and per-second Machine billing.
+- [Cost Management](https://fly.io/docs/about/cost-management/): Predicting bills, budgeting always-on costs, and how autoscaling affects charges.
+- [Free Trial](https://fly.io/docs/about/free-trial/): Trial limits (2 VM hours, 7 days, 10 machines) before adding a payment method.
+- [Support](https://fly.io/docs/about/support/): Status page, community forum, billing email, and paid support plan options.
+- [Engineering Jobs](https://fly.io/docs/hiring/): Careers at Fly.io, their Rust/Go/Ruby/Elixir stack, and hiring process.
+- [Healthcare on Fly.io](https://fly.io/docs/about/healthcare/): HIPAA/SOC2 compliance, BAAs, and security features for healthcare apps.
+- [Extensions Program](https://fly.io/docs/about/extensions/): Partner program for integrating managed services like databases and log aggregators.
+- [Extensions API](https://fly.io/docs/reference/extensions_api/): Technical spec for provisioning extensions, request signing, webhooks, and SSO.
+- [Merch](https://fly.io/docs/about/merch/): Fly.io branded swag (shirts, stickers, mugs) via the Redbubble shop.
+- [Open Source](https://fly.io/docs/about/open-source/): Equity grants and recurring donations to open source projects Fly.io relies on.
+- [Using Our Brand](https://fly.io/docs/about/brand/): Logo assets, brand guidelines, and trademark usage agreement for Fly.io.
+
+## CLI (flyctl)
+- [Install flyctl](https://fly.io/docs/flyctl/install/): Install the flyctl command-line tool.
+- [flyctl Reference](https://fly.io/docs/flyctl/): Command-line interface for managing apps on Fly.io.
+- [fly apps](https://fly.io/docs/flyctl/apps/): Manage your Fly apps: create, destroy, list, move, restart, open.
+- [fly auth](https://fly.io/docs/flyctl/auth/): Authenticate with Fly: sign up, log in, log out, Docker auth.
+- [fly auth whoami](https://fly.io/docs/flyctl/auth-whoami/): Show the currently authenticated user's email or service identity.
+- [fly certs](https://fly.io/docs/flyctl/certs/): Manage TLS certificates for custom domains; add, check, import, list.
+- [fly certs setup](https://fly.io/docs/flyctl/certs-setup/): Show DNS records needed to configure a custom domain certificate.
+- [fly checks](https://fly.io/docs/flyctl/checks/): List health checks to see if your app instances are healthy.
+- [fly config](https://fly.io/docs/flyctl/config/): View, save, show, or validate an app's fly.toml configuration.
+- [fly console](https://fly.io/docs/flyctl/console/): Run an interactive console in a new or existing Machine.
+- [fly deploy](https://fly.io/docs/flyctl/deploy/): Deploy your app from source or a Docker image to Machines.
+- [fly docs](https://fly.io/docs/flyctl/docs/): Open the Fly.io documentation website in your browser.
+- [fly extensions](https://fly.io/docs/flyctl/extensions/): Add third-party services like Sentry, Tigris, Supabase, MySQL to apps.
+- [fly incidents](https://fly.io/docs/flyctl/incidents/): Show active incidents that may be affecting your apps or hosts.
+- [fly ips](https://fly.io/docs/flyctl/ips/): Allocate, list, or release IPv4, IPv6, and egress IP addresses.
+- [fly launch](https://fly.io/docs/flyctl/launch/): Create and configure a new app from source code or image.
+- [fly logs](https://fly.io/docs/flyctl/logs/): Stream or view application logs, filtered by instance or region.
+- [fly machine](https://fly.io/docs/flyctl/machine/): Manage Fly Machines: create, start, stop, clone, destroy, exec.
+- [fly mcp](https://fly.io/docs/flyctl/mcp/): Launch, proxy, and manage Model Context Protocol servers and clients.
+- [fly mpg](https://fly.io/docs/flyctl/mpg/): Manage Managed Postgres clusters: create, connect, attach, backup, restore.
+- [fly orgs](https://fly.io/docs/flyctl/orgs/): Manage organizations: create, list, invite or remove users.
+- [fly proxy](https://fly.io/docs/flyctl/proxy/): Proxy local connections to a Machine through a WireGuard tunnel.
+- [fly redis](https://fly.io/docs/flyctl/redis/): Launch and manage Upstash Redis databases: create, connect, destroy.
+- [fly scale](https://fly.io/docs/flyctl/scale/): Scale app resources: change VM count, memory, or VM size.
+- [fly secrets](https://fly.io/docs/flyctl/secrets/): Set, list, unset runtime secret env variables for an app.
+- [fly services](https://fly.io/docs/flyctl/services/): List the network services exposed by your application.
+- [fly settings](https://fly.io/docs/flyctl/settings/): Manage flyctl settings: analytics, auto-updates, synthetics agent.
+- [fly ssh](https://fly.io/docs/flyctl/ssh/): SSH into Machines, run commands, transfer files, issue credentials.
+- [fly status](https://fly.io/docs/flyctl/status/): Show app status: details, instances, deployment, and active regions.
+- [fly storage](https://fly.io/docs/flyctl/storage/): Provision and manage Tigris object storage buckets for your app.
+- [fly tokens](https://fly.io/docs/flyctl/tokens/): Create, list, revoke, and attenuate Fly.io API access tokens.
+- [fly version](https://fly.io/docs/flyctl/version/): Show flyctl version and build date, or upgrade to latest.
+- [fly volumes](https://fly.io/docs/flyctl/volumes/): Manage persistent storage volumes: create, extend, fork, snapshot, destroy.
+- [fly wireguard](https://fly.io/docs/flyctl/wireguard/): Manage WireGuard peer connections for private network access to apps.
+
+## Guides (Blueprints)
+- [Guides Overview](https://fly.io/docs/blueprints/): Task-oriented guides for common patterns on Fly.io.
+- [Autoscale Machines](https://fly.io/docs/blueprints/autoscale-machines/): Add or remove Machines automatically as traffic load changes over time.
+- [Autostart and autostop private apps](https://fly.io/docs/blueprints/autostart-internal-apps/): Stop idle internal apps and wake them on private-network requests via Flycast.
+- [Bridge your other deployments to Fly.io](https://fly.io/docs/blueprints/bridge-deployments-wireguard/): Connect external servers (AWS, on-prem) to your Fly private network for incremental migration.
+- [Building Infrastructure Automation without Terraform](https://fly.io/docs/blueprints/infra-automation-without-terraform/): Get declarative, repeatable infrastructure-as-code on Fly.io without a Terraform provider.
+- [Cell-based architecture](https://fly.io/docs/blueprints/cell-based/): Isolate each user or tenant into independent cells to limit blast radius.
+- [Connecting to User Machines](https://fly.io/docs/blueprints/connecting-to-user-machines/): Route and manage requests to per-user Machines when running code for end users.
+- [Crontab with Supercronic](https://fly.io/docs/blueprints/supercronic/): Run cron jobs inside containers using a crontab-compatible tool that respects ENV vars.
+- [Custom Deploy Workflows](https://fly.io/docs/blueprints/custom-deploy-workflows/): Control deploy flow: gradual rollouts, avoiding restarts, or updating specific app parts.
+- [Deferring long-running tasks to a distributed work queue](https://fly.io/docs/blueprints/work-queues/): Offload slow background jobs (PDFs, emails, ML) to a queue so requests don't time out.
+- [Deploy OpenClaw on Fly.io](https://fly.io/docs/blueprints/deploy-openclaw/): Deploy the OpenClaw app with a scripted package handling volumes, secrets, deployment.
+- [Deploying Remote MCP Servers](https://fly.io/docs/blueprints/remote-mcp-servers/): Run Model Context Protocol servers giving LLMs tools on isolated Fly Machines.
+- [Getting Started with N-Tier Architecture](https://fly.io/docs/blueprints/n-tier-architecture/): Split an app into separate layers (web, logic, data) for structure and scaling.
+- [Git Branch Preview Environments on Github](https://fly.io/docs/blueprints/review-apps-guide/): Auto-generate ephemeral review apps per pull request using GitHub Actions.
+- [Going to Production with Healthcare Apps](https://fly.io/docs/blueprints/going-to-production-with-healthcare-apps/): Launch HIPAA-compliant healthcare apps, sign a BAA, and deploy securely to production.
+- [Managing Docker Images with Fly.io's Private Registry](https://fly.io/docs/blueprints/using-the-fly-docker-registry/): Build, push, deploy, and manage your own Docker images in Fly's private registry.
+- [Multi-region databases and fly-replay](https://fly.io/docs/blueprints/multi-region-fly-replay/): Use read replicas globally and re-route writes to the primary via fly-replay.
+- [Observability for User Apps](https://fly.io/docs/blueprints/observability-for-user-apps/): Stream real-time logs and telemetry from user-run apps via Fly's NATS pipeline.
+- [Per-User Dev Environments with Fly Machines](https://fly.io/docs/blueprints/per-user-dev-environments/): Spin up isolated sandbox dev environments per user for running untrusted or LLM-generated code.
+- [Resilient apps use multiple Machines](https://fly.io/docs/blueprints/resilient-apps-multiple-machines/): Run multiple Machines across hosts so a single host failure doesn't take you down.
+- [Rollback Guide](https://fly.io/docs/blueprints/rollback-guide/): Recover from a bad deploy by redeploying a previous working VM image.
+- [Run an SSH server](https://fly.io/docs/blueprints/opensshd/): Run OpenSSH in your app for rsync, scp, sshfs, and SSH-based tooling.
+- [Run Hermes Agent on Fly.io](https://fly.io/docs/blueprints/hermes-agent-on-fly-io/): Run the persistent Hermes AI agent on a Machine with an attached volume.
+- [Run private apps with Flycast](https://fly.io/docs/blueprints/private-applications-flycast/): Expose apps only on your private network via Flycast while keeping proxy load-balancing.
+- [Seamless Deployments on Fly.io](https://fly.io/docs/blueprints/seamless-deployments/): Achieve zero-downtime deploys using health checks before routing traffic to new VMs.
+- [Session Affinity (a.k.a. Sticky Sessions)](https://fly.io/docs/blueprints/sticky-sessions/): Pin a user's session requests to the same Machine consistently.
+- [Setting Hard and Soft Concurrency Limits on Fly.io](https://fly.io/docs/blueprints/setting-concurrency-limits/): Tune soft and hard limits so autostart/autostop scales Machines correctly under load.
+- [Shared Nothing Architecture](https://fly.io/docs/blueprints/shared-nothing/): Scale to per-customer stateful instances worldwide with a shared-nothing design.
+- [Staging and production isolation](https://fly.io/docs/blueprints/staging-prod-isolation/): Isolate production from staging using separate organizations and private networks.
+- [Task scheduling guide with Cron Manager and friends](https://fly.io/docs/blueprints/task-scheduling/): Compare options for running scheduled cron jobs, from robust Cron Manager down.
+- [Using base images for faster deployments](https://fly.io/docs/blueprints/using-base-images-for-faster-deployments/): Share a base image across org apps to speed up Docker builds and deploys.
+- [Using Fly Volume forks for faster startup times](https://fly.io/docs/blueprints/volume-forking/): Preload large model files, binaries, or databases onto forked volumes for fast startup.
+- [Working with Docker on Fly.io](https://fly.io/docs/blueprints/working-with-docker/): Practical guide to using Docker images effectively when deploying as Fly VMs.
+
+## Learn / Topics
+- [Agent Sandboxes: Isolated Runtimes for Testing AI Agent Behavior](https://fly.io/learn/agent-sandbox/): Isolating AI agent tools and state in VMs, away from production
+- [Choosing a Cloud for Your Startup: AWS, Google Cloud, Azure, and Managed Platforms Compared](https://fly.io/learn/what-is-the-best-cloud-for-startups/): Comparing hyperscalers and managed platforms for startup hosting and global compute
+- [Choosing a Cloud Host for Small Teams](https://fly.io/learn/which-cloud-host-fits-small-teams/): Picking low-ops cloud hosts so small teams ship instead of managing servers
+- [Go runs as a single binary. Your hosting environment still has to do real work.](https://fly.io/learn/golang-hosting/): Hosting Go binaries: ports, process supervision, memory, logs, and metrics on Fly.io
+- [How Serverless Hosting Scales: Instances, Cold Starts, and Concurrency Limits](https://fly.io/learn/how-does-serverless-hosting-scale/): How serverless scales instances on demand, cold starts, and scale-to-zero economics
+- [MicroVM vs Container: How the Kernel Boundary Changes Everything](https://fly.io/learn/microvm-vs-container/): Comparing kernel isolation, startup, and blast radius for running untrusted code
+- [Node.js Hosting: How to Pick the Right Platform for Your App](https://fly.io/learn/what-is-the-best-nodejs-hosting/): Choosing Node.js hosting: managed PaaS, VPS, or serverless by workload
+- [Postgres Hosting: How to Choose the Right Option for Your App](https://fly.io/learn/what-is-the-best-postgres-hosting/): Choosing Postgres hosting: managed backups and failover versus self-hosted control
+- [Rails Hosting: What Your App Actually Needs to Run in Production](https://fly.io/learn/rails-hosting/): Deploying Rails on Fly.io: Puma, assets, background jobs, stable production
+- [Rust Hosting: How to Deploy Compiled Binaries Without the Operational Mess](https://fly.io/learn/rust-hosting/): Deploying Rust binaries on Fly.io: cross-compilation, TLS, restarts, and logging
+- [Virtual Sandbox](https://fly.io/learn/virtual-sandbox/): Running untrusted code with hardware isolation, snapshot restore, and network controls
+- [What Is a Cloud Development Environment?](https://fly.io/learn/cloud-development-environment/): Coding and debugging in reproducible browser-based remote workspaces, no local toolchain
+- [What Is a Development Sandbox?](https://fly.io/learn/development-sandbox/): Isolated environment to build, debug, and reset changes without touching production
+- [What Is a Firecracker VM?](https://fly.io/learn/firecracker-vm/): How microVMs use KVM, reduced devices, and seccomp jailers for isolation
+- [What Is a React Sandbox?](https://fly.io/learn/react-sandbox/): Isolating React components to test hooks, state, and JSX; comparing options
+- [What Is a Virtual Lab Cloud?](https://fly.io/learn/virtual-lab-cloud/): Provisioning isolated, internet-accessible environments on demand for testing and training
+
+## Blog & Editorial
+- [Fly.io Blog](https://fly.io/blog/): Engineering, product, and industry writing from the Fly.io team.
+  - [Unfortunately, Sprites Now Speak MCP](https://fly.io/blog/unfortunately-mcp/)
+  - [Litestream Writable VFS](https://fly.io/blog/litestream-writable-vfs/): Lightning fast Litestream VFS, but now with writes!
+  - [Litestream VFS](https://fly.io/blog/litestream-vfs/): Query your SQLite database any time, anywhere
+  - [You Should Write An Agent](https://fly.io/blog/everyone-write-an-agent/): They're like riding a bike: easy, and you don't get it until you try.
+  - [Litestream v0.5.0 is Here](https://fly.io/blog/litestream-v050-is-here/): Same Litestream goodness but better, faster, stronger
+  - [Build Better Agents With MorphLLM](https://fly.io/blog/build-better-agents-with-morphllm/)
+  - [Games as Model Eval: 1-Click Deploy AI Town on Fly.io](https://fly.io/blog/games-as-model-eval/)
+  - [Launching MCP Servers on Fly.io](https://fly.io/blog/mcp-launch/): One command, secure and simple
+  - [Provisioning Machines using MCPs](https://fly.io/blog/mcp-provisioning/): To boldly go where no man has gone before
+- [Infra Log](https://fly.io/infra-log/): Weekly reports on infrastructure work and incidents on the Fly.io platform.
+- [Customer Stories](https://fly.io/customer-stories/): How companies build and scale on Fly.io.
+  - [Struct: A Machine Per Agent, Thousands at a Time](https://fly.io/customer-stories/struct/)
+  - [Kiloclaw: Hosting Thousands of Claws](https://fly.io/customer-stories/kiloclaw/)
+  - [How Steel.dev Turns AI Agents Into True Browser Ninjas](https://fly.io/customer-stories/steel-dev/)
+  - [How CodeCrafters Helps Devs Upskill Faster](https://fly.io/customer-stories/codecrafters/)
+  - [How Reflex Makes Web Development Suck Less](https://fly.io/customer-stories/reflex/)
+  - [How Amplified.ai Keeps Innovation Out of the Shadows](https://fly.io/customer-stories/amplifed-ai/)
+- [Ruby Dispatch](https://fly.io/ruby-dispatch/): Ruby and Rails on Fly.io.
+  - [Execute Third Party Code in a Rails App](https://fly.io/ruby-dispatch/execute-third-party-code-in-a-rails-app/)
+  - [Rails on Docker without Docker](https://fly.io/ruby-dispatch/rails-on-docker-without-docker/)
+  - [SQLite & Rails in Production](https://fly.io/ruby-dispatch/sqlite-and-rails-in-production/)
+- [Phoenix Files](https://fly.io/phoenix-files/): Elixir and Phoenix on Fly.io.
+  - [World Page Speed Test â planet-wide elastic scale with FLAME](https://fly.io/phoenix-files/world-page-speed-test-elastic-scale-with-flame/)
+  - [Easy at-home AI with Bumblebee and Fly GPUs](https://fly.io/phoenix-files/easy-at-home-ai-with-bumblebee-and-fly-gpus/)
+  - [Clustering Elixir From Laptop to Cloud](https://fly.io/phoenix-files/clustering-elixir-from-laptop-to-cloud/)
+  - [What if S3 could be a fast, globally synced, Key Value Database? That's Tigris](https://fly.io/phoenix-files/what-if-s3-could-be-a-fast-globally-synced-key-value-database-that-s-tigris/)
+  - [Real World â¢ Machine Learning on Fly GPU's](https://fly.io/phoenix-files/real-world-machine-learning-on-fly-gpu/)
+- [Laravel Bytes](https://fly.io/laravel-bytes/): Laravel and PHP on Fly.io.
+  - [Never Miss a Webhook](https://fly.io/laravel-bytes/never-miss-a-webhook/)
+  - [Custom Laravel Pulse Cards](https://fly.io/laravel-bytes/custom-laravel-pulse-cards/): Record and aggregate custom Pulse Metrics, and display in a custom Pulse Card!
+  - [Monitoring Fly Machine Resource Usage with Laravel Pulse](https://fly.io/laravel-bytes/laravel-pulse-machines/): We integrate Laravel Pulse's servers card to monitor and display resource usage by Fly Machines running our Laravel app!
+  - [Autoscaled Queue Workers](https://fly.io/laravel-bytes/autoscaled-queue-workers/)
+  - [Streaming updates with Livewire and Fly Machines](https://fly.io/laravel-bytes/streaming-fly-machines/): We briefly check Livewire's wire:stream feature, and create a new Fly Machine to exclusively handle its streams.
+  - [Ad Hoc Tasks, GitHub Actions Style](https://fly.io/laravel-bytes/ad-hoc-tasks/)
+- [Django Beats](https://fly.io/django-beats/): Django and Python on Fly.io.
+  - [ASGI deployment options for Django](https://fly.io/django-beats/asgi-deployment-options-for-django/)
+  - [Django Views as Serverless Functions on Fly Machines](https://fly.io/django-beats/django-views-as-serverless-functions-on-fly-machines/)
+  - [Staging environments on the Fly with GitHub actions](https://fly.io/django-beats/staging-environments-on-the-fly-with-github-actions/): How to create staging environments on the Fly with GitHub actions
+  - [Serverless Functions in Django With Fly Machines](https://fly.io/django-beats/serverless-functions-in-django-with-fly-machines/)
+  - [Smooth Database Changes in Blue-Green Deployments](https://fly.io/django-beats/smooth-database-changes-in-blue-green-deployments/): Let's explore how to make smooth blue-green deployments in Django using advanced migration tools
+  - [Celery Async Tasks on Fly Machines](https://fly.io/django-beats/celery-async-tasks-on-fly-machines/)
+  - [Caching in Django with Redis](https://fly.io/django-beats/caching-in-django-with-redis/): A step-by-step guide on implementing caching with Redis in Django
+- [JavaScript Journal](https://fly.io/javascript-journal/): JavaScript and Node.js on Fly.io.
+  - [Launching a Remix app with Postgres using Prisma](https://fly.io/javascript-journal/remix-with-prisma-postgres/)
+  - [Using WebSockets with Next.js on Fly.io](https://fly.io/javascript-journal/websockets-with-nextjs/)
+  - [Build a file sharing service without making your brain hurt](https://fly.io/javascript-journal/soar-file-sharing/)
+  - [Multi-tenant apps with single-tenant SQLite databases in global Tigris buckets](https://fly.io/javascript-journal/single-tenant-sqlite-in-tigris/)
+  - [Building a Remix app locally with Docker](https://fly.io/javascript-journal/building-remix-app-locally-with-docker/): Building a Remix app locally with Docker
+  - [FLAME for JavaScript: Rethinking Serverless](https://fly.io/javascript-journal/flame-for-javascript-rethinking-serverless/): FLAME for JavaScript; auto-scale tasks by running your functions on another machine
+  - [Demystifying Docker for JavaScript](https://fly.io/javascript-journal/demystify-docker-js/): Demystifying Docker for JavaScript applications
+  - [Ciabatta with Garlic & Basil](https://fly.io/javascript-journal/ciabatta/): deploying Vanilla bun apps on fly.io

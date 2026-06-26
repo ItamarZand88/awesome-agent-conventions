@@ -1,0 +1,13 @@
+<!-- source: genkit-story — https://raw.githubusercontent.com/firebase/genkit/main/js/testapps/prompt-file/prompts/story.prompt -->
+---
+model: googleai/gemini-pro-latest
+input:
+  schema:
+    subject: string
+    personality?: string
+output:
+  format: text
+---
+{{>style personality=personality}}
+
+Tell me a story about {{subject}}.

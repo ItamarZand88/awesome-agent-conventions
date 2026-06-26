@@ -1,0 +1,21 @@
+<!-- source: kagent-openai-basic — https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/openai/basic_agent/basic_agent/agent-card.json -->
+{
+  "name": "basic-openai-agent",
+  "description": "A basic OpenAI agent with calculator and weather tools",
+  "url": "localhost:8000",
+  "version": "0.1.0",
+  "capabilities": {
+    "streaming": true
+  },
+  "defaultInputModes": ["text"],
+  "defaultOutputModes": ["text"],
+  "skills": [
+    {
+      "id": "basic",
+      "name": "Basic Assistant",
+      "description": "Can perform calculations and get weather information",
+      "tags": ["calculator", "weather", "assistant"]
+    }
+  ]
+}
+

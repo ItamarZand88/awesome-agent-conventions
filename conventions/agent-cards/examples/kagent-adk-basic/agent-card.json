@@ -1,0 +1,20 @@
+<!-- source: kagent-adk-basic — https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/adk/basic/basic/agent-card.json -->
+{
+  "name": "basic",
+  "description": "A basic agent",
+  "url": "localhost:8080",
+  "version": "0.0.1",
+  "capabilities": {
+    "streaming": true
+  },
+  "defaultInputModes": ["text"],
+  "defaultOutputModes": ["text"],
+  "skills": [
+    {
+      "id": "basic",
+      "name": "Basic",
+      "description": "A basic agent",
+      "tags": ["basic", "test"]
+    }
+  ]
+}

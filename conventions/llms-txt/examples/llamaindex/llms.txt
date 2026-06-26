@@ -1,0 +1,89 @@
+<!-- source: llamaindex — https://developers.llamaindex.ai/llms.txt -->
+# LlamaIndex Documentation
+
+> LlamaIndex is a framework for building LLM-powered applications over your data. It supports Python and TypeScript, with integrations for LlamaCloud managed services.
+
+## Accessing Documentation Programmatically
+
+All documentation pages are available as raw Markdown by appending `index.md` to the page URL. For example, the page at `https://developers.llamaindex.ai/llamaparse/parse/getting_started/` has its Markdown source at `https://developers.llamaindex.ai/llamaparse/parse/getting_started/index.md`.
+
+The site also exposes REST API endpoints for searching and browsing documentation:
+
+- **Search**: `GET https://developers.llamaindex.ai/api/search?q=<query>&limit=10&section=<section>&full-content=true` — Full-text BM25 search across all docs. `section` and `full-content` are optional.
+- **Grep**: `GET https://developers.llamaindex.ai/api/grep?q=<regex>&context=0&case-sensitive=false&max-results=100` — Regex pattern matching across documentation content.
+- **Read**: `GET https://developers.llamaindex.ai/api/read?path=<doc-path>&startLine=0&endLine=500` — Retrieve content of a specific documentation page (e.g. `path=/llamaparse/parse/getting_started/`). Returns the first 500 lines by default. Use `startLine` and `endLine` to paginate through longer documents.
+- **List**: `GET https://developers.llamaindex.ai/api/list?section=<section>&path=<path>&depth=2` — Browse the documentation tree structure. All parameters are optional.
+
+All API endpoints return JSON with CORS enabled (`Access-Control-Allow-Origin: *`).
+
+## LlamaCloud
+- [LlamaClassify Examples](https://developers.llamaindex.ai/llamaparse/classify/examples/): Collection of examples demonstrating how to use the LlamaClassify for document classification.
+- [Overview of Classify](https://developers.llamaindex.ai/llamaparse/classify/): Learn what the Classification API is, how rules work, and how to run classifications using the client SDK.
+- [Index Examples](https://developers.llamaindex.ai/llamaparse/cloud-index/examples/): Collection of examples demonstrating how to use Index for building RAG applications.
+- [Data Sinks](https://developers.llamaindex.ai/llamaparse/cloud-index/integrations/data_sinks/): Data sinks are the vector databases where a LlamaCloud Index stores processed document embeddings; pick the fully managed option or connect your own.
+- [Data Sources](https://developers.llamaindex.ai/llamaparse/cloud-index/integrations/data_sources/): Overview of data source integrations for Index for connecting and retrieving data for RAG use cases.
+- [Embedding Models](https://developers.llamaindex.ai/llamaparse/cloud-index/integrations/embedding_models/): Embedding models convert a LlamaCloud Index processed documents into vectors; choose from supported providers such as OpenAI, Azure, Bedrock, Cohere, Gemini, and HuggingFace.
+- [Cookbooks](https://developers.llamaindex.ai/llamaparse/cookbooks/): Index of LlamaCloud cookbooks and starter/advanced notebooks for parsing, building extraction agents, and indexing, searching, and chatting over your data.
+- [LlamaExtract Examples](https://developers.llamaindex.ai/llamaparse/extract/examples/): Collection of examples demonstrating how to use the LlamaExtract Python SDK for document extraction.
+- [Overview of Extract](https://developers.llamaindex.ai/llamaparse/extract/): Introduction to LlamaExtract, a tool for extracting structured data from unstructured documents, available as a web UI, Python SDK, and REST API.
+- [LlamaExtract Examples](https://developers.llamaindex.ai/llamaparse/extract/v1/examples/): Collection of examples demonstrating how to use the LlamaExtract Python SDK for document extraction.
+- [Getting Started](https://developers.llamaindex.ai/llamaparse/extract/v1/getting_started/): Introduction to LlamaExtract, a tool for extracting structured data from unstructured documents, available as a web UI, Python SDK, and REST API.
+- [LlamaParse Platform Quickstart](https://developers.llamaindex.ai/llamaparse/): Install the SDK, get an API key, and run your first call against Parse, Extract, Classify, Split, Sheets, or Index — all from one platform.
+- [Parse Examples](https://developers.llamaindex.ai/llamaparse/parse/examples/): Runnable example tutorials demonstrating Parse for common document workflows — first parse, chart extraction, financial table extraction, custom prompts, batch processing, spreadsheets, and TypeScript/Node.js integration.
+- [Overview of Parse](https://developers.llamaindex.ai/llamaparse/parse/): Parse is an agentic document parser built for LLM pipelines—layout-aware OCR that turns PDFs, scans, tables, and charts into clean markdown, text, or JSON.
+- [LlamaParse Examples with llama-cloud-services](https://developers.llamaindex.ai/llamaparse/parse/v1/examples/): Collection of examples demonstrating how to use the LlamaParse
+- [Self-Hosting & BYOC (Bring Your Own Cloud)](https://developers.llamaindex.ai/llamaparse/self_hosting/): Deploy LlamaCloud in your own cloud infrastructure with full self-hosting and BYOC support. Run LlamaParse, LlamaExtract, and the complete LlamaCloud platform on Kubernetes using Helm charts — on AWS, Azure, or GCP.
+- [LlamaSheets Examples](https://developers.llamaindex.ai/llamaparse/sheets/examples/): Collection of examples demonstrating how to use the LlamaSheets API for spreadsheet understanding.
+- [Getting Started](https://developers.llamaindex.ai/llamaparse/sheets/): Introduction to LlamaSheets, a new beta service for extracting regions and tables from spreadsheets.
+- [Split Examples](https://developers.llamaindex.ai/llamaparse/split/examples/): Collection of examples demonstrating how to use the Split API for document segmentation.
+- [Overview of Split](https://developers.llamaindex.ai/llamaparse/split/): Introduction to the Split API, a tool for automatically segmenting concatenated PDFs into logical document sections based on content categories.
+
+## Python LlamaAgents & Workflows
+- [Introduction](https://developers.llamaindex.ai/python/llamaagents/workflows/)
+
+## Python Framework
+- [Frequently Asked Questions](https://developers.llamaindex.ai/python/framework/community/faq/)
+- [Llama Packs 🦙📦](https://developers.llamaindex.ai/python/framework/community/llama_packs/)
+- [Starter Tools](https://developers.llamaindex.ai/python/framework/getting_started/starter_tools/)
+- [Welcome to LlamaIndex 🦙 !](https://developers.llamaindex.ai/python/framework/)
+- [LlamaCloud](https://developers.llamaindex.ai/python/framework/llama_cloud/)
+- [Agents](https://developers.llamaindex.ai/python/framework/module_guides/deploying/agents/)
+- [Chat Engine](https://developers.llamaindex.ai/python/framework/module_guides/deploying/chat_engines/)
+- [Query Engine](https://developers.llamaindex.ai/python/framework/module_guides/deploying/query_engine/)
+- [Evaluating](https://developers.llamaindex.ai/python/framework/module_guides/evaluating/)
+- [Component Guides](https://developers.llamaindex.ai/python/framework/module_guides/)
+- [Indexing](https://developers.llamaindex.ai/python/framework/module_guides/indexing/)
+- [Data Connectors (LlamaHub)](https://developers.llamaindex.ai/python/framework/module_guides/loading/connector/)
+- [Documents / Nodes](https://developers.llamaindex.ai/python/framework/module_guides/loading/documents_and_nodes/)
+- [Loading Data](https://developers.llamaindex.ai/python/framework/module_guides/loading/)
+- [Ingestion Pipeline](https://developers.llamaindex.ai/python/framework/module_guides/loading/ingestion_pipeline/)
+- [Node Parser Usage Pattern](https://developers.llamaindex.ai/python/framework/module_guides/loading/node_parsers/)
+- [Model Context Protocol (MCP)](https://developers.llamaindex.ai/python/framework/module_guides/mcp/)
+- [Models](https://developers.llamaindex.ai/python/framework/module_guides/models/)
+- [Prompts](https://developers.llamaindex.ai/python/framework/module_guides/models/prompts/)
+- [Callbacks](https://developers.llamaindex.ai/python/framework/module_guides/observability/callbacks/)
+- [Observability](https://developers.llamaindex.ai/python/framework/module_guides/observability/)
+- [Querying](https://developers.llamaindex.ai/python/framework/module_guides/querying/)
+- [Node Postprocessor](https://developers.llamaindex.ai/python/framework/module_guides/querying/node_postprocessors/)
+- [Response Synthesizer](https://developers.llamaindex.ai/python/framework/module_guides/querying/response_synthesizers/)
+- [Retriever](https://developers.llamaindex.ai/python/framework/module_guides/querying/retriever/)
+- [Routers](https://developers.llamaindex.ai/python/framework/module_guides/querying/router/)
+- [Structured Outputs](https://developers.llamaindex.ai/python/framework/module_guides/querying/structured_outputs/)
+- [Storing](https://developers.llamaindex.ai/python/framework/module_guides/storing/)
+- [Building an agent](https://developers.llamaindex.ai/python/framework/understanding/agent/)
+- [Cost Analysis](https://developers.llamaindex.ai/python/framework/understanding/evaluating/cost_analysis/)
+- [Introduction to Structured Data Extraction](https://developers.llamaindex.ai/python/framework/understanding/extraction/)
+- [Building an LLM application](https://developers.llamaindex.ai/python/framework/understanding/)
+- [Full-Stack Web Application](https://developers.llamaindex.ai/python/framework/understanding/putting_it_all_together/apps/)
+- [Putting It All Together](https://developers.llamaindex.ai/python/framework/understanding/putting_it_all_together/)
+- [Q&A patterns](https://developers.llamaindex.ai/python/framework/understanding/putting_it_all_together/q_and_a/)
+- [Structured Data](https://developers.llamaindex.ai/python/framework/understanding/putting_it_all_together/structured_data/)
+- [Introduction to RAG](https://developers.llamaindex.ai/python/framework/understanding/rag/)
+- [Indexing](https://developers.llamaindex.ai/python/framework/understanding/rag/indexing/)
+- [Loading Data (Ingestion)](https://developers.llamaindex.ai/python/framework/understanding/rag/loading/)
+- [Querying](https://developers.llamaindex.ai/python/framework/understanding/rag/querying/)
+- [Storing](https://developers.llamaindex.ai/python/framework/understanding/rag/storing/)
+- [Use Cases](https://developers.llamaindex.ai/python/framework/use_cases/)
+
+## Shared
+- [MCP Documentation Search](https://developers.llamaindex.ai/python/shared/mcp/): Connect to our hosted MCP server to search LlamaIndex documentation

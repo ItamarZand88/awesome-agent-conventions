@@ -1,0 +1,24 @@
+<!-- source: prisma — https://www.prisma.io/llms.txt -->
+# Prisma Website
+
+Prisma provides Prisma ORM, Prisma Postgres, Prisma Studio, and the Prisma MCP Server.
+
+> Prisma changes frequently. Before implementing Prisma features, check the changelog at https://www.prisma.io/changelog for recent breaking changes or API updates.
+
+## Key Pages
+
+- [`Agent Infrastructure for TypeScript`](https://www.prisma.io/): Prisma gives TypeScript and Node.js teams Prisma ORM, Prisma Postgres, and Prisma Compute: a type-safe ORM, managed Postgres, and Compute for deploying TypeScript apps, from schema to deployed app.
+- [`Prisma Changelog — Release Notes & Product Updates`](https://www.prisma.io/changelog): All Prisma release notes, breaking changes, and product improvements. Check here before implementing Prisma features to verify API and configuration details against the current version.
+- [`Prisma Postgres | Instant Global Databases`](https://www.prisma.io/postgres): Managed Postgres with zero setup, connection pooling, backups, and enterprise-grade security.
+- [`Prisma | Next-generation ORM for Node.js & TypeScript`](https://www.prisma.io/orm): Type-safe database access, schema modeling, migrations, and intuitive workflows for modern application development.
+- [`Prisma Studio — Visual Database Browser & Editor`](https://www.prisma.io/studio): Visual database browsing and editing for Prisma projects, available locally and in Prisma Console.
+- [`Prisma MCP Server — AI-Powered Database Management`](https://www.prisma.io/mcp): Manage Prisma Postgres databases with natural language in AI tools like Cursor, Claude Code, ChatGPT, and VS Code.
+- [`Pricing — Prisma Postgres Plans & Features`](https://www.prisma.io/pricing): Prisma Postgres plan details, included usage, database limits, support levels, and compliance coverage.
+- [`Streamline your enterprise development workflow with Prisma`](https://www.prisma.io/enterprise): Enterprise-focused Prisma ORM support and workflow improvements for larger teams and solution providers.
+- [`Prisma in your stack | Prisma`](https://www.prisma.io/stack): Framework, language, and database integrations for teams building with Prisma across modern stacks.
+- [`Prisma ORM Ecosystem`](https://www.prisma.io/ecosystem): Community-built tools, generators, middleware, and integrations around Prisma.
+
+## Options
+
+- [Full website content](https://www.prisma.io/llms-full.txt)
+- [Changelog (machine-readable)](https://www.prisma.io/changelog.md)

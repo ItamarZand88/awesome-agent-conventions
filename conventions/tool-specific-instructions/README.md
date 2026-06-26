@@ -6,7 +6,7 @@
 - **Location:** Repository root (or .github/ for copilot-instructions.md)
 - **Spec:** [https://agents.md](https://agents.md)
 - **Evidence:** Gemini, Qwen, Warp, Amp, Aider, and Copilot each document or ship named instruction files, while several now bridge to AGENTS.md.
-- **Last verified:** 2026-06-18
+- **Last verified:** 2026-06-26
 - **Files:** `GEMINI.md`, `AGENT.md`, `QWEN.md`, `WARP.md`, `CONVENTIONS.md`, `copilot-instructions.md`
 
 ## Examples
@@ -20,6 +20,9 @@ Google Gemini CLI.
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
 | `gemini-cli` | [`google-gemini/gemini-cli`](https://github.com/google-gemini/gemini-cli) | [`examples/gemini-cli/GEMINI.md`](examples/gemini-cli/GEMINI.md) | [source](https://raw.githubusercontent.com/google-gemini/gemini-cli/main/GEMINI.md) |
+| `gemini-igniter-js` | [`felipebarcelospro/igniter-js`](https://github.com/felipebarcelospro/igniter-js) | [`examples/gemini-igniter-js/GEMINI.md`](examples/gemini-igniter-js/GEMINI.md) | [source](https://raw.githubusercontent.com/felipebarcelospro/igniter-js/main/GEMINI.md) |
+| `gemini-kube2iam` | [`jtblin/kube2iam`](https://github.com/jtblin/kube2iam) | [`examples/gemini-kube2iam/GEMINI.md`](examples/gemini-kube2iam/GEMINI.md) | [source](https://raw.githubusercontent.com/jtblin/kube2iam/main/GEMINI.md) |
+| `gemini-monibuca` | [`langhuihui/monibuca`](https://github.com/langhuihui/monibuca) | [`examples/gemini-monibuca/GEMINI.md`](examples/gemini-monibuca/GEMINI.md) | [source](https://raw.githubusercontent.com/langhuihui/monibuca/v5/GEMINI.md) |
 
 ### `AGENT.md`
 
@@ -27,6 +30,10 @@ Amp (Sourcegraph) - legacy singular form; Amp now reads AGENTS.md (plural).
 
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
+| `agent-amp-examples` | [`ampcode/amp-examples-and-guides`](https://github.com/ampcode/amp-examples-and-guides) | [`examples/agent-amp-examples/AGENT.md`](examples/agent-amp-examples/AGENT.md) | [source](https://raw.githubusercontent.com/ampcode/amp-examples-and-guides/main/AGENT.md) |
+| `agent-espresso` | [`espressomd/espresso`](https://github.com/espressomd/espresso) | [`examples/agent-espresso/AGENT.md`](examples/agent-espresso/AGENT.md) | [source](https://raw.githubusercontent.com/espressomd/espresso/python/AGENT.md) |
+| `agent-kitesql` | [`KipData/KiteSQL`](https://github.com/KipData/KiteSQL) | [`examples/agent-kitesql/AGENT.md`](examples/agent-kitesql/AGENT.md) | [source](https://raw.githubusercontent.com/KipData/KiteSQL/main/AGENT.md) |
+| `agent-snyk-intellij-plugin` | [`snyk/snyk-intellij-plugin`](https://github.com/snyk/snyk-intellij-plugin) | [`examples/agent-snyk-intellij-plugin/AGENT.md`](examples/agent-snyk-intellij-plugin/AGENT.md) | [source](https://raw.githubusercontent.com/snyk/snyk-intellij-plugin/master/AGENT.md) |
 | `dagger` | [`dagger/container-use`](https://github.com/dagger/container-use) | [`examples/dagger/AGENT.md`](examples/dagger/AGENT.md) | [source](https://raw.githubusercontent.com/dagger/container-use/main/AGENT.md) |
 
 ### `QWEN.md`
@@ -36,6 +43,9 @@ Qwen Code.
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
 | `qwen-code` | [`QwenLM/qwen-code`](https://github.com/QwenLM/qwen-code) | [`examples/qwen-code/QWEN.md`](examples/qwen-code/QWEN.md) | [source](https://raw.githubusercontent.com/QwenLM/qwen-code/main/packages/cli/src/commands/extensions/examples/context/QWEN.md) |
+| `qwen-mapdownload` | [`Hxy1992/MapDownload`](https://github.com/Hxy1992/MapDownload) | [`examples/qwen-mapdownload/QWEN.md`](examples/qwen-mapdownload/QWEN.md) | [source](https://raw.githubusercontent.com/Hxy1992/MapDownload/main/QWEN.md) |
+| `qwen-vernet` | [`osociety/vernet`](https://github.com/osociety/vernet) | [`examples/qwen-vernet/QWEN.md`](examples/qwen-vernet/QWEN.md) | [source](https://raw.githubusercontent.com/osociety/vernet/dev/QWEN.md) |
+| `qwen-zkeacms` | [`SeriaWei/ZKEACMS`](https://github.com/SeriaWei/ZKEACMS) | [`examples/qwen-zkeacms/QWEN.md`](examples/qwen-zkeacms/QWEN.md) | [source](https://raw.githubusercontent.com/SeriaWei/ZKEACMS/master/QWEN.md) |
 
 ### `WARP.md`
 
@@ -43,7 +53,10 @@ Warp terminal - backwards-compatible with project rules; Warp now defaults new p
 
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
-| `warp` | [`warpdotdev/warp`](https://github.com/warpdotdev/warp) | [`examples/warp/WARP.md`](examples/warp/WARP.md) | [source](https://raw.githubusercontent.com/warpdotdev/warp/master/WARP.md) |
+| `warp-abraflexi-widgets` | [`VitexSoftware/php-ease-twbootstrap4-widgets-abraflexi`](https://github.com/VitexSoftware/php-ease-twbootstrap4-widgets-abraflexi) | [`examples/warp-abraflexi-widgets/WARP.md`](examples/warp-abraflexi-widgets/WARP.md) | [source](https://raw.githubusercontent.com/VitexSoftware/php-ease-twbootstrap4-widgets-abraflexi/main/WARP.md) |
+| `warp-commanddotnet` | [`bilal-fazlani/commanddotnet`](https://github.com/bilal-fazlani/commanddotnet) | [`examples/warp-commanddotnet/WARP.md`](examples/warp-commanddotnet/WARP.md) | [source](https://raw.githubusercontent.com/bilal-fazlani/commanddotnet/master/WARP.md) |
+| `warp-twitter-bootstrap-rails` | [`seyhunak/twitter-bootstrap-rails`](https://github.com/seyhunak/twitter-bootstrap-rails) | [`examples/warp-twitter-bootstrap-rails/WARP.md`](examples/warp-twitter-bootstrap-rails/WARP.md) | [source](https://raw.githubusercontent.com/seyhunak/twitter-bootstrap-rails/main/WARP.md) |
+| `warp` | [`warpdotdev/warp`](https://github.com/warpdotdev/warp) | [`examples/warp/WARP.md`](examples/warp/WARP.md) | [source](https://raw.githubusercontent.com/warpdotdev/warp/master/crates/warpui/examples/table-sample/WARP.md) |
 
 ### `CONVENTIONS.md`
 
@@ -52,6 +65,9 @@ Aider - opt-in: loaded via --read CONVENTIONS.md or a .aider.conf.yml entry, not
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
 | `aider` | [`Aider-AI/conventions`](https://github.com/Aider-AI/conventions) | [`examples/aider/CONVENTIONS.md`](examples/aider/CONVENTIONS.md) | [source](https://raw.githubusercontent.com/Aider-AI/conventions/main/golang/CONVENTIONS.md) |
+| `conventions-aider-flutter` | [`Aider-AI/conventions`](https://github.com/Aider-AI/conventions) | [`examples/conventions-aider-flutter/CONVENTIONS.md`](examples/conventions-aider-flutter/CONVENTIONS.md) | [source](https://raw.githubusercontent.com/Aider-AI/conventions/main/flutter/CONVENTIONS.md) |
+| `conventions-aider-functional-programming` | [`Aider-AI/conventions`](https://github.com/Aider-AI/conventions) | [`examples/conventions-aider-functional-programming/CONVENTIONS.md`](examples/conventions-aider-functional-programming/CONVENTIONS.md) | [source](https://raw.githubusercontent.com/Aider-AI/conventions/main/functional-programming/CONVENTIONS.md) |
+| `conventions-aider-nextjs-ts` | [`Aider-AI/conventions`](https://github.com/Aider-AI/conventions) | [`examples/conventions-aider-nextjs-ts/CONVENTIONS.md`](examples/conventions-aider-nextjs-ts/CONVENTIONS.md) | [source](https://raw.githubusercontent.com/Aider-AI/conventions/main/nextjs-ts/CONVENTIONS.md) |
 
 ### `copilot-instructions.md`
 
@@ -59,6 +75,10 @@ GitHub Copilot (lives under .github/).
 
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
+| `copilot-azure-sdk-net` | [`Azure/azure-sdk-for-net`](https://github.com/Azure/azure-sdk-for-net) | [`examples/copilot-azure-sdk-net/copilot-instructions.md`](examples/copilot-azure-sdk-net/copilot-instructions.md) | [source](https://raw.githubusercontent.com/Azure/azure-sdk-for-net/main/.github/copilot-instructions.md) |
+| `copilot-dotnet-aspnetcore` | [`dotnet/aspnetcore`](https://github.com/dotnet/aspnetcore) | [`examples/copilot-dotnet-aspnetcore/copilot-instructions.md`](examples/copilot-dotnet-aspnetcore/copilot-instructions.md) | [source](https://raw.githubusercontent.com/dotnet/aspnetcore/main/.github/copilot-instructions.md) |
+| `copilot-dotnet-runtime` | [`dotnet/runtime`](https://github.com/dotnet/runtime) | [`examples/copilot-dotnet-runtime/copilot-instructions.md`](examples/copilot-dotnet-runtime/copilot-instructions.md) | [source](https://raw.githubusercontent.com/dotnet/runtime/main/.github/copilot-instructions.md) |
+| `copilot-playwright` | [`microsoft/playwright`](https://github.com/microsoft/playwright) | [`examples/copilot-playwright/copilot-instructions.md`](examples/copilot-playwright/copilot-instructions.md) | [source](https://raw.githubusercontent.com/microsoft/playwright/main/.github/copilot-instructions.md) |
 | `vscode` | [`microsoft/vscode`](https://github.com/microsoft/vscode) | [`examples/vscode/copilot-instructions.md`](examples/vscode/copilot-instructions.md) | [source](https://raw.githubusercontent.com/microsoft/vscode/main/.github/copilot-instructions.md) |
 
 ## Field notes

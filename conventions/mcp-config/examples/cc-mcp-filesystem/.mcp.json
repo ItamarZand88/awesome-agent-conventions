@@ -1,0 +1,12 @@
+<!-- source: cc-mcp-filesystem — https://raw.githubusercontent.com/lisaross/cc-mcp/main/.mcp.json -->
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "bunx",
+      "args": [
+        "@modelcontextprotocol/server-filesystem",
+        "./"
+      ]
+    }
+  }
+}

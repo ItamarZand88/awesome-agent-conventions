@@ -6,7 +6,7 @@
 - **Location:** Alongside application code (e.g. prompts/*.prompty)
 - **Spec:** [https://prompty.ai](https://prompty.ai)
 - **Evidence:** Prompty, Genkit, and application repos publish external prompt files that tools load independently of source code.
-- **Last verified:** 2026-06-18
+- **Last verified:** 2026-06-26
 - **Files:** `.prompty`, `.prompt`, `system_prompt.txt`
 
 ## Examples
@@ -19,6 +19,15 @@ Prompty - YAML frontmatter (model + inputs) over a templated prompt body.
 
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
+| `prompty-anthropic-chat` | [`microsoft/prompty`](https://github.com/microsoft/prompty) | [`examples/prompty-anthropic-chat/anthropic_chat.prompty`](examples/prompty-anthropic-chat/anthropic_chat.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/runtime/python/prompty/tests/prompts/anthropic_chat.prompty) |
+| `prompty-csharp-tools` | [`microsoft/prompty`](https://github.com/microsoft/prompty) | [`examples/prompty-csharp-tools/tools.prompty`](examples/prompty-csharp-tools/tools.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/runtime/csharp/Prompty.Core.Tests/Prompts/tools.prompty) |
+| `prompty-docs-chat-agent` | [`microsoft/prompty`](https://github.com/microsoft/prompty) | [`examples/prompty-docs-chat-agent/chat-agent.prompty`](examples/prompty-docs-chat-agent/chat-agent.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/web/docs-examples/prompts/chat-agent.prompty) |
+| `prompty-docs-structured-output` | [`microsoft/prompty`](https://github.com/microsoft/prompty) | [`examples/prompty-docs-structured-output/structured-output.prompty`](examples/prompty-docs-structured-output/structured-output.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/web/docs-examples/prompts/structured-output.prompty) |
+| `prompty-foundry-azure-chat` | [`microsoft/prompty`](https://github.com/microsoft/prompty) | [`examples/prompty-foundry-azure-chat/azure-chat.prompty`](examples/prompty-foundry-azure-chat/azure-chat.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/runtime/typescript/packages/foundry/tests/fixtures/azure-chat.prompty) |
+| `prompty-rich-metadata` | [`microsoft/prompty`](https://github.com/microsoft/prompty) | [`examples/prompty-rich-metadata/rich_metadata.prompty`](examples/prompty-rich-metadata/rich_metadata.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/runtime/python/prompty/tests/prompts/rich_metadata.prompty) |
+| `prompty-shakespeare` | [`microsoft/prompty`](https://github.com/microsoft/prompty) | [`examples/prompty-shakespeare/shakespeare.prompty`](examples/prompty-shakespeare/shakespeare.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/web/src/content/docs/legacy/getting-started/first-prompty/shakespeare.prompty) |
+| `prompty-spec-multimodal` | [`microsoft/prompty`](https://github.com/microsoft/prompty) | [`examples/prompty-spec-multimodal/multimodal.prompty`](examples/prompty-spec-multimodal/multimodal.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/spec/fixtures/multimodal.prompty) |
+| `prompty-spec-tools-function` | [`microsoft/prompty`](https://github.com/microsoft/prompty) | [`examples/prompty-spec-tools-function/tools_function.prompty`](examples/prompty-spec-tools-function/tools_function.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/spec/fixtures/tools_function.prompty) |
 | `prompty` | [`microsoft/prompty`](https://github.com/microsoft/prompty) | [`examples/prompty/basic.prompty`](examples/prompty/basic.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/web/src/content/docs/assets/code/basic.prompty) |
 | `prompty` | [`microsoft/prompty`](https://github.com/microsoft/prompty) | [`examples/prompty/chat-basic.prompty`](examples/prompty/chat-basic.prompty) | [source](https://raw.githubusercontent.com/microsoft/prompty/main/web/docs-examples/prompts/chat-basic.prompty) |
 
@@ -28,6 +37,13 @@ Generic templated prompt file (Genkit dotprompt and similar).
 
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
+| `genkit-analyze-security` | [`firebase/genkit`](https://github.com/firebase/genkit) | [`examples/genkit-analyze-security/analyze_security.prompt`](examples/genkit-analyze-security/analyze_security.prompt) | [source](https://raw.githubusercontent.com/firebase/genkit/main/py/samples/fastapi-bugbot/prompts/analyze_security.prompt) |
+| `genkit-chef-agent` | [`firebase/genkit`](https://github.com/firebase/genkit) | [`examples/genkit-chef-agent/chef.prompt`](examples/genkit-chef-agent/chef.prompt) | [source](https://raw.githubusercontent.com/firebase/genkit/main/go/samples/basic-agents/prompts/chef.prompt) |
+| `genkit-go-recipe` | [`firebase/genkit`](https://github.com/firebase/genkit) | [`examples/genkit-go-recipe/recipe.prompt`](examples/genkit-go-recipe/recipe.prompt) | [source](https://raw.githubusercontent.com/firebase/genkit/main/go/samples/prompts/prompts/recipe.prompt) |
+| `genkit-hello` | [`firebase/genkit`](https://github.com/firebase/genkit) | [`examples/genkit-hello/hello.prompt`](examples/genkit-hello/hello.prompt) | [source](https://raw.githubusercontent.com/firebase/genkit/main/js/testapps/dev-ui-gallery/prompts/hello.prompt) |
+| `genkit-kitchensink` | [`firebase/genkit`](https://github.com/firebase/genkit) | [`examples/genkit-kitchensink/kitchensink.prompt`](examples/genkit-kitchensink/kitchensink.prompt) | [source](https://raw.githubusercontent.com/firebase/genkit/main/js/genkit/tests/prompts/kitchensink.prompt) |
+| `genkit-story` | [`firebase/genkit`](https://github.com/firebase/genkit) | [`examples/genkit-story/story.prompt`](examples/genkit-story/story.prompt) | [source](https://raw.githubusercontent.com/firebase/genkit/main/js/testapps/prompt-file/prompts/story.prompt) |
+| `genkit-trip-planner` | [`firebase/genkit`](https://github.com/firebase/genkit) | [`examples/genkit-trip-planner/tripPlanner.prompt`](examples/genkit-trip-planner/tripPlanner.prompt) | [source](https://raw.githubusercontent.com/firebase/genkit/main/js/testapps/agents/prompts/tripPlanner.prompt) |
 | `genkit` | [`firebase/genkit`](https://github.com/firebase/genkit) | [`examples/genkit/countries.prompt`](examples/genkit/countries.prompt) | [source](https://raw.githubusercontent.com/firebase/genkit/main/go/samples/prompts/prompts/countries.prompt) |
 
 ### `system_prompt.txt`
@@ -36,7 +52,9 @@ A plain-text externalized system prompt.
 
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
+| `claude-autopilot-system-prompt` | [`benbasha/Claude-Autopilot`](https://github.com/benbasha/Claude-Autopilot) | [`examples/claude-autopilot-system-prompt/system_prompt.txt`](examples/claude-autopilot-system-prompt/system_prompt.txt) | [source](https://raw.githubusercontent.com/benbasha/Claude-Autopilot/main/system_prompt.txt) |
 | `diffbot` | [`diffbot/diffbot-llm-inference`](https://github.com/diffbot/diffbot-llm-inference) | [`examples/diffbot/system_prompt.txt`](examples/diffbot/system_prompt.txt) | [source](https://raw.githubusercontent.com/diffbot/diffbot-llm-inference/main/system_prompt.txt) |
+| `podly-system-prompt` | [`podly-pure-podcasts/podly_pure_podcasts`](https://github.com/podly-pure-podcasts/podly_pure_podcasts) | [`examples/podly-system-prompt/system_prompt.txt`](examples/podly-system-prompt/system_prompt.txt) | [source](https://raw.githubusercontent.com/podly-pure-podcasts/podly_pure_podcasts/main/src/system_prompt.txt) |
 
 ## Field notes
 

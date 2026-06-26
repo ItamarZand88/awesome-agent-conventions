@@ -1,0 +1,20 @@
+<!-- source: hyperpolymath-standards — https://raw.githubusercontent.com/hyperpolymath/standards/main/.well-known/ai.txt -->
+# SPDX-License-Identifier: MPL-2.0
+# AI usage & training policy for hyperpolymath/standards.
+# Informal, robots-style directives for AI/ML agents and crawlers.
+# The estate maintains a machine-readable bot-exclusion registry at
+# .machine_readable/bot_exclusion_registry.a2ml and an AI-gatekeeper
+# protocol under 0-ai-gatekeeper-protocol/; this file is the summary.
+
+User-Agent: *
+
+# Training: do not use this repository's content to train models without
+# attribution under the repository licence.
+Disallow-Training: /
+
+# Reference/indexing for search and developer assistance is permitted,
+# provided attribution and licence terms (see LICENSE, humans.txt) are kept.
+Allow: /
+
+Contact: https://github.com/hyperpolymath/standards/security/advisories/new
+Policy: https://github.com/hyperpolymath/standards/blob/main/.claude/CLAUDE.md

@@ -1,0 +1,47 @@
+<!-- source: supabase — https://supabase.com/llms.txt -->
+# Supabase Docs
+
+For the complete documentation in a single file, see [Full Documentation](https://supabase.com/llms-full.txt).
+
+## Documentation
+
+- [Supabase - AI & Vectors](https://supabase.com/docs/guides/ai.md)
+- [Supabase - AI Tools](https://supabase.com/docs/guides/ai-tools.md)
+- [Supabase - Data REST API](https://supabase.com/docs/guides/api.md)
+- [Supabase - Auth](https://supabase.com/docs/guides/auth.md)
+- [Supabase - Cron](https://supabase.com/docs/guides/cron.md)
+- [Supabase - database](https://supabase.com/docs/guides/database.md)
+- [Supabase - Deployment & Branching](https://supabase.com/docs/guides/deployment.md)
+- [Supabase - Edge Functions](https://supabase.com/docs/guides/functions.md)
+- [Supabase - Getting Started](https://supabase.com/docs/guides/getting-started.md)
+- [Supabase - Integrations](https://supabase.com/docs/guides/integrations.md)
+- [Supabase - Local Development & CLI](https://supabase.com/docs/guides/local-development.md)
+- [Supabase - Supabase Platform](https://supabase.com/docs/guides/platform.md)
+- [Supabase - Supabase Queues](https://supabase.com/docs/guides/queues.md)
+- [Supabase - Realtime](https://supabase.com/docs/guides/realtime.md)
+- [Supabase - Resources](https://supabase.com/docs/guides/resources.md)
+- [Supabase - Supabase Security](https://supabase.com/docs/guides/security.md)
+- [Supabase - Self-Hosting](https://supabase.com/docs/guides/self-hosting.md)
+- [Supabase - Storage](https://supabase.com/docs/guides/storage.md)
+- [Supabase - Telemetry](https://supabase.com/docs/guides/telemetry.md)
+- [Supabase Reference (JavaScript)](https://supabase.com/llms/js.txt)
+- [Supabase Reference (Dart)](https://supabase.com/llms/dart.txt)
+- [Supabase Reference (Swift)](https://supabase.com/llms/swift.txt)
+- [Supabase Reference (Kotlin)](https://supabase.com/llms/kotlin.txt)
+- [Supabase Reference (Python)](https://supabase.com/llms/python.txt)
+- [Supabase Reference (C#)](https://supabase.com/llms/csharp.txt)
+- [Supabase CLI Reference](https://supabase.com/llms/cli.txt)
+- [Supabase Management API Reference](https://supabase.com/llms/api.txt)
+
+## Product Overview
+
+- [Supabase Overview](https://supabase.com/homepage.md)
+- [Supabase Database](https://supabase.com/database.md)
+- [Supabase Auth](https://supabase.com/auth.md)
+- [Supabase Storage](https://supabase.com/storage.md)
+- [Supabase Edge Functions](https://supabase.com/edge-functions.md)
+- [Supabase Realtime](https://supabase.com/realtime.md)
+- [Supabase Vector](https://supabase.com/vector.md)
+- [Supabase Cron](https://supabase.com/modules/cron.md)
+- [Supabase Queues](https://supabase.com/modules/queues.md)
+- [Supabase Pricing](https://supabase.com/pricing.md)

@@ -1,0 +1,15 @@
+<!-- source: async-memcached-cursorignore — https://raw.githubusercontent.com/Shopify/async-memcached/main/.cursorignore -->
+**/node_modules/
+.dev/
+.devcontainer/
+.git
+.github/
+.idea/
+.profile.d/
+.vscode/
+log/
+public/
+script/
+sorbet/
+tmp/
+vendor/

@@ -1,0 +1,1772 @@
+<!-- source: vercel — https://vercel.com/llms.txt -->
+> Full documentation content: https://vercel.com/docs/llms-full.txt
+
+# Documentation
+
+# Vercel Documentation
+
+[Vercel Documentation](https://vercel.com/docs): Vercel is the AI Cloud - a unified platform for building, deploying, and scaling AI-powered applications and agentic workloads.
+
+- [Getting Started](https://vercel.com/docs/getting-started-with-vercel): Install the Vercel CLI, add the Vercel Plugin or agent skills, and deploy your first project.
+- [Fundamental Concepts](https://vercel.com/docs/fundamentals): Learn about the core concepts of Vercel
+  - [Request Lifecycle](https://vercel.com/docs/fundamentals/infrastructure): Learn how Vercel routes, secures, and serves requests from your users to your application.
+  - [Build System](https://vercel.com/docs/fundamentals/builds): Learn how Vercel transforms your source code into optimized assets ready to serve globally.
+  - [What is Compute?](https://vercel.com/docs/fundamentals/what-is-compute): Learn about the different models for compute and how they can be used with Vercel.
+- [Supported Frameworks](https://vercel.com/docs/frameworks): Vercel supports a wide range of the most popular frameworks, optimizing how your application builds and runs no matter what tool you use.
+  - [Full-stack](https://vercel.com/docs/frameworks/full-stack): Vercel supports a wide range of the most popular backend frameworks, optimizing how your application builds and runs no matter what tooling you use.
+    - [Next.js](https://vercel.com/docs/frameworks/full-stack/nextjs)
+    - [SvelteKit](https://vercel.com/docs/frameworks/full-stack/sveltekit)
+    - [Nuxt](https://vercel.com/docs/frameworks/full-stack/nuxt)
+    - [Remix](https://vercel.com/docs/frameworks/full-stack/remix)
+    - [TanStack Start](https://vercel.com/docs/frameworks/full-stack/tanstack-start)
+    - [Vite + Nitro](https://vercel.com/docs/frameworks/full-stack/vite-with-nitro)
+    - [Django](https://vercel.com/docs/frameworks/full-stack/django)
+  - [Frontends](https://vercel.com/docs/frameworks/frontend): Vercel supports a wide range of the most popular frontend frameworks, optimizing how your application builds and runs no matter what tooling you use.
+    - [Astro](https://vercel.com/docs/frameworks/frontend/astro)
+    - [Vite](https://vercel.com/docs/frameworks/frontend/vite)
+    - [React Router](https://vercel.com/docs/frameworks/frontend/react-router)
+    - [Create React App](https://vercel.com/docs/frameworks/frontend/create-react-app)
+  - [Backends](https://vercel.com/docs/frameworks/backend): Vercel supports a wide range of the most popular backend frameworks, optimizing how your application builds and runs no matter what tooling you use.
+    - [Nitro](https://vercel.com/docs/frameworks/backend/nitro)
+    - [Express](https://vercel.com/docs/frameworks/backend/express)
+    - [Elysia](https://vercel.com/docs/frameworks/backend/elysia)
+    - [FastAPI](https://vercel.com/docs/frameworks/backend/fastapi)
+    - [Fastify](https://vercel.com/docs/frameworks/backend/fastify)
+    - [Flask](https://vercel.com/docs/frameworks/backend/flask)
+    - [Hono](https://vercel.com/docs/frameworks/backend/hono)
+    - [Koa](https://vercel.com/docs/frameworks/backend/koa)
+    - [NestJS](https://vercel.com/docs/frameworks/backend/nestjs)
+    - [xmcp](https://vercel.com/docs/frameworks/backend/xmcp)
+  - [All Frameworks](https://vercel.com/docs/frameworks/more-frameworks): Learn about the frameworks that can be deployed to Vercel.
+- [Incremental Migration](https://vercel.com/docs/incremental-migration): Learn how to migrate your app or website to Vercel with minimal risk and high impact.
+- [Production Checklist](https://vercel.com/docs/production-checklist): Ensure your application is ready for launch with this comprehensive production checklist by the Vercel engineering team. Covering operational excellence, security, reliability, performance efficiency, and cost optimization.
+- APIs & SDKs
+  - [Marketplace Partner API](https://vercel.com/docs/integrations/create-integration/marketplace-api/reference/partner): Partner API overview page with list of all endpoints
+  - [Marketplace Vercel API](https://vercel.com/docs/integrations/create-integration/marketplace-api/reference/vercel): Vercel API overview page with list of all endpoints
+
+## Access
+- [Account Management](https://vercel.com/docs/accounts): Learn how to manage your Vercel account and team members.
+- [Sign in with Vercel](https://vercel.com/docs/sign-in-with-vercel): Learn how to Sign in with Vercel
+  - [Getting Started](https://vercel.com/docs/sign-in-with-vercel/getting-started)
+  - [Scopes & Permissions](https://vercel.com/docs/sign-in-with-vercel/scopes-and-permissions)
+  - [Tokens](https://vercel.com/docs/sign-in-with-vercel/tokens)
+  - [Authorization Server API](https://vercel.com/docs/sign-in-with-vercel/authorization-server-api)
+  - [Manage from Dashboard](https://vercel.com/docs/sign-in-with-vercel/manage-from-dashboard)
+  - [Consent Page](https://vercel.com/docs/sign-in-with-vercel/consent-page)
+  - [Troubleshooting](https://vercel.com/docs/sign-in-with-vercel/troubleshooting)
+- [Activity Log](https://vercel.com/docs/activity-log): Learn how to use the Activity Log, which provides a list of all events on a team, chronologically organized since its creation.
+- [Deployment Protection](https://vercel.com/docs/deployment-protection): Learn how to control access to your Vercel project
+  - [Bypass Deployment Protection](https://vercel.com/docs/deployment-protection/methods-to-bypass-deployment-protection)
+    - [Trusted Sources](https://vercel.com/docs/deployment-protection/methods-to-bypass-deployment-protection/trusted-sources)
+    - [Protection Bypass for Automation](https://vercel.com/docs/deployment-protection/methods-to-bypass-deployment-protection/protection-bypass-automation)
+    - [OPTIONS Allowlist](https://vercel.com/docs/deployment-protection/methods-to-bypass-deployment-protection/options-allowlist)
+    - [Exceptions](https://vercel.com/docs/deployment-protection/methods-to-bypass-deployment-protection/deployment-protection-exceptions)
+    - [Sharable Links](https://vercel.com/docs/deployment-protection/methods-to-bypass-deployment-protection/sharable-links)
+  - [Protect Deployments](https://vercel.com/docs/deployment-protection/methods-to-protect-deployments)
+    - [Password Protection](https://vercel.com/docs/deployment-protection/methods-to-protect-deployments/password-protection)
+    - [Restrict access to deployments with Vercel Authentication](https://vercel.com/docs/deployment-protection/methods-to-protect-deployments/vercel-authentication)
+    - [Trusted IPs](https://vercel.com/docs/deployment-protection/methods-to-protect-deployments/trusted-ips)
+  - [Automated & Agent Access](https://vercel.com/docs/deployment-protection/automated-agent-access)
+  - [Protected Source Maps](https://vercel.com/docs/deployment-protection/protected-source-maps)
+- [Directory Sync](https://vercel.com/docs/directory-sync): Learn how to configure Directory Sync for your Vercel Team.
+- [Organizations](https://vercel.com/docs/organizations): Learn how organizations let you group multiple Vercel teams under a single entity with consolidated billing and central management.
+- [Passport](https://vercel.com/docs/passport): Learn how to protect deployments with Passport by using your identity provider.
+- [SAML SSO](https://vercel.com/docs/saml): Learn how to configure SAML SSO for your organization on Vercel.
+- [Two-factor (2FA)](https://vercel.com/docs/two-factor-authentication): Learn how to configure two-factor authentication for your Vercel account.
+
+## AI
+- [Vercel Agent](https://vercel.com/docs/agent): AI-powered development tools that speed up your workflow and help resolve issues faster
+  - [Chat](https://vercel.com/docs/agent/chat)
+  - [Code Review](https://vercel.com/docs/agent/pr-review)
+    - [Managing Reviews](https://vercel.com/docs/agent/pr-review/usage)
+  - [Investigation](https://vercel.com/docs/agent/investigation)
+  - [Installation](https://vercel.com/docs/agent/installation)
+  - [Pricing](https://vercel.com/docs/agent/pricing)
+- [AI SDK](https://vercel.com/docs/ai-sdk): TypeScript toolkit for building AI-powered applications with React, Next.js, Vue, Svelte and Node.js
+- [AI Gateway](https://vercel.com/docs/ai-gateway): AI Gateway provides a unified API to access hundreds of AI models through a single endpoint, with text, image, and video generation, embeddings, and built-in budgets, usage monitoring, and fallbacks.
+  - [Getting Started](https://vercel.com/docs/ai-gateway/getting-started)
+    - [Text](https://vercel.com/docs/ai-gateway/getting-started/text)
+    - [Image](https://vercel.com/docs/ai-gateway/getting-started/image)
+    - [Video](https://vercel.com/docs/ai-gateway/getting-started/video)
+    - [Realtime](https://vercel.com/docs/ai-gateway/getting-started/realtime)
+    - [Speech](https://vercel.com/docs/ai-gateway/getting-started/speech)
+  - [SDKs & APIs](https://vercel.com/docs/ai-gateway/sdks-and-apis)
+    - [AI SDK](https://vercel.com/docs/ai-gateway/sdks-and-apis/ai-sdk)
+    - [OpenAI Responses API](https://vercel.com/docs/ai-gateway/sdks-and-apis/responses)
+    - [OpenAI Chat Completions API](https://vercel.com/docs/ai-gateway/sdks-and-apis/openai-chat-completions)
+      - [Chat Completions](https://vercel.com/docs/ai-gateway/sdks-and-apis/openai-chat-completions/chat-completions)
+      - [Tool Calls](https://vercel.com/docs/ai-gateway/sdks-and-apis/openai-chat-completions/tool-calls)
+      - [Structured Outputs](https://vercel.com/docs/ai-gateway/sdks-and-apis/openai-chat-completions/structured-outputs)
+      - [Advanced](https://vercel.com/docs/ai-gateway/sdks-and-apis/openai-chat-completions/advanced)
+      - [Embeddings](https://vercel.com/docs/ai-gateway/sdks-and-apis/openai-chat-completions/embeddings)
+      - [Image Generation](https://vercel.com/docs/ai-gateway/sdks-and-apis/openai-chat-completions/image-generation)
+      - [REST API](https://vercel.com/docs/ai-gateway/sdks-and-apis/openai-chat-completions/rest-api)
+    - [Anthropic Messages API](https://vercel.com/docs/ai-gateway/sdks-and-apis/anthropic-messages-api)
+      - [Messages](https://vercel.com/docs/ai-gateway/sdks-and-apis/anthropic-messages-api/messages)
+      - [Tool Calls](https://vercel.com/docs/ai-gateway/sdks-and-apis/anthropic-messages-api/tool-calls)
+      - [Advanced](https://vercel.com/docs/ai-gateway/sdks-and-apis/anthropic-messages-api/advanced)
+      - [File Attachments](https://vercel.com/docs/ai-gateway/sdks-and-apis/anthropic-messages-api/file-attachments)
+      - [Structured Outputs](https://vercel.com/docs/ai-gateway/sdks-and-apis/anthropic-messages-api/structured-outputs)
+    - [OpenResponses API](https://vercel.com/docs/ai-gateway/sdks-and-apis/openresponses)
+      - [Text Generation](https://vercel.com/docs/ai-gateway/sdks-and-apis/openresponses/text-generation)
+      - [Streaming](https://vercel.com/docs/ai-gateway/sdks-and-apis/openresponses/streaming)
+      - [Image Input](https://vercel.com/docs/ai-gateway/sdks-and-apis/openresponses/image-input)
+      - [Tool Calling](https://vercel.com/docs/ai-gateway/sdks-and-apis/openresponses/tool-calling)
+      - [Provider Options](https://vercel.com/docs/ai-gateway/sdks-and-apis/openresponses/provider-options)
+    - [Python](https://vercel.com/docs/ai-gateway/sdks-and-apis/python)
+    - [REST API](https://vercel.com/docs/ai-gateway/sdks-and-apis/rest-api)
+  - [Observability and Spend](https://vercel.com/docs/ai-gateway/observability-and-spend)
+    - [Observability](https://vercel.com/docs/ai-gateway/observability-and-spend/observability)
+    - [Custom Reporting](https://vercel.com/docs/ai-gateway/observability-and-spend/custom-reporting)
+    - [Usage & Billing](https://vercel.com/docs/ai-gateway/observability-and-spend/usage)
+    - [API Key Budgets](https://vercel.com/docs/ai-gateway/observability-and-spend/api-key-budgets)
+  - [Security and Compliance](https://vercel.com/docs/ai-gateway/security-and-compliance)
+    - [Zero Data Retention](https://vercel.com/docs/ai-gateway/security-and-compliance/zdr)
+    - [Disallow Prompt Training](https://vercel.com/docs/ai-gateway/security-and-compliance/disallow-prompt-training)
+    - [Provider Allowlist](https://vercel.com/docs/ai-gateway/security-and-compliance/provider-allowlist)
+  - [Modalities](https://vercel.com/docs/ai-gateway/modalities)
+    - [Text Generation](https://vercel.com/docs/ai-gateway/modalities/text-generation)
+    - [Image Generation](https://vercel.com/docs/ai-gateway/modalities/image-generation)
+      - [Using AI SDK](https://vercel.com/docs/ai-gateway/modalities/image-generation/ai-sdk)
+      - [Using Chat Completions API](https://vercel.com/docs/ai-gateway/modalities/image-generation/openai)
+    - [Video Generation](https://vercel.com/docs/ai-gateway/modalities/video-generation)
+      - [Text-to-Video](https://vercel.com/docs/ai-gateway/modalities/video-generation/text-to-video)
+      - [Image-to-Video](https://vercel.com/docs/ai-gateway/modalities/video-generation/image-to-video)
+      - [Reference-to-Video](https://vercel.com/docs/ai-gateway/modalities/video-generation/reference-to-video)
+      - [Motion Control](https://vercel.com/docs/ai-gateway/modalities/video-generation/motion-control)
+      - [Video Editing](https://vercel.com/docs/ai-gateway/modalities/video-generation/video-editing)
+    - [Realtime](https://vercel.com/docs/ai-gateway/modalities/realtime)
+    - [Speech to Text](https://vercel.com/docs/ai-gateway/modalities/speech-to-text)
+    - [Text to Speech](https://vercel.com/docs/ai-gateway/modalities/text-to-speech)
+    - [Embeddings](https://vercel.com/docs/ai-gateway/modalities/embeddings)
+    - [Reranking](https://vercel.com/docs/ai-gateway/modalities/reranking)
+  - [Models & Providers](https://vercel.com/docs/ai-gateway/models-and-providers)
+    - [Provider Options](https://vercel.com/docs/ai-gateway/models-and-providers/provider-options)
+    - [Model Fallbacks](https://vercel.com/docs/ai-gateway/models-and-providers/model-fallbacks)
+    - [Provider Timeouts](https://vercel.com/docs/ai-gateway/models-and-providers/provider-timeouts)
+    - [Automatic Caching](https://vercel.com/docs/ai-gateway/models-and-providers/automatic-caching)
+    - [Filtering, Ordering & Sorting](https://vercel.com/docs/ai-gateway/models-and-providers/provider-filtering-and-ordering)
+    - [Virtual Models](https://vercel.com/docs/ai-gateway/models-and-providers/virtual-models)
+    - [Service Tiers](https://vercel.com/docs/ai-gateway/models-and-providers/service-tiers)
+    - [Reasoning](https://vercel.com/docs/ai-gateway/models-and-providers/reasoning)
+      - [OpenAI](https://vercel.com/docs/ai-gateway/models-and-providers/reasoning/openai)
+      - [Anthropic](https://vercel.com/docs/ai-gateway/models-and-providers/reasoning/anthropic)
+      - [Google / Vertex](https://vercel.com/docs/ai-gateway/models-and-providers/reasoning/google)
+      - [Amazon Bedrock](https://vercel.com/docs/ai-gateway/models-and-providers/reasoning/amazon-bedrock)
+    - [Web Search](https://vercel.com/docs/ai-gateway/models-and-providers/web-search)
+    - [Routing Rules](https://vercel.com/docs/ai-gateway/models-and-providers/routing-rules)
+    - [Uptime and Status](https://vercel.com/docs/ai-gateway/models-and-providers/uptime)
+    - [Metrics](https://vercel.com/docs/ai-gateway/models-and-providers/metrics)
+  - [Pricing](https://vercel.com/docs/ai-gateway/pricing)
+  - [Authentication & BYOK](https://vercel.com/docs/ai-gateway/authentication-and-byok)
+    - [API Keys](https://vercel.com/docs/ai-gateway/authentication-and-byok/api-keys)
+    - [OIDC](https://vercel.com/docs/ai-gateway/authentication-and-byok/oidc)
+    - [BYOK](https://vercel.com/docs/ai-gateway/authentication-and-byok/byok)
+  - [Coding Agents](https://vercel.com/docs/ai-gateway/coding-agents)
+    - [Claude Code](https://vercel.com/docs/ai-gateway/coding-agents/claude-code)
+    - [Conductor](https://vercel.com/docs/ai-gateway/coding-agents/conductor)
+    - [OpenAI Codex](https://vercel.com/docs/ai-gateway/coding-agents/openai-codex)
+    - [Roo Code](https://vercel.com/docs/ai-gateway/coding-agents/roo-code)
+    - [Cline](https://vercel.com/docs/ai-gateway/coding-agents/cline)
+    - [Blackbox AI](https://vercel.com/docs/ai-gateway/coding-agents/blackbox)
+    - [Crush](https://vercel.com/docs/ai-gateway/coding-agents/crush)
+    - [Grok Build](https://vercel.com/docs/ai-gateway/coding-agents/grok-build)
+    - [OpenCode](https://vercel.com/docs/ai-gateway/coding-agents/opencode)
+    - [Superset](https://vercel.com/docs/ai-gateway/coding-agents/superset)
+  - [Chat Platforms](https://vercel.com/docs/ai-gateway/chat-platforms)
+    - [LibreChat](https://vercel.com/docs/ai-gateway/chat-platforms/librechat)
+    - [OpenClaw (Clawdbot)](https://vercel.com/docs/ai-gateway/chat-platforms/openclaw)
+    - [Chatbox](https://vercel.com/docs/ai-gateway/chat-platforms/chatbox)
+    - [Open WebUI](https://vercel.com/docs/ai-gateway/chat-platforms/open-webui)
+  - [Ecosystem](https://vercel.com/docs/ai-gateway/ecosystem)
+    - [Framework Integrations](https://vercel.com/docs/ai-gateway/ecosystem/framework-integrations)
+      - [LangChain](https://vercel.com/docs/ai-gateway/ecosystem/framework-integrations/langchain)
+      - [LangFuse](https://vercel.com/docs/ai-gateway/ecosystem/framework-integrations/langfuse)
+      - [LiteLLM](https://vercel.com/docs/ai-gateway/ecosystem/framework-integrations/litellm)
+      - [LlamaIndex](https://vercel.com/docs/ai-gateway/ecosystem/framework-integrations/llamaindex)
+      - [Mastra](https://vercel.com/docs/ai-gateway/ecosystem/framework-integrations/mastra)
+      - [Pydantic AI](https://vercel.com/docs/ai-gateway/ecosystem/framework-integrations/pydantic-ai)
+      - [WordPress](https://vercel.com/docs/ai-gateway/ecosystem/framework-integrations/wordpress)
+    - [App Attribution](https://vercel.com/docs/ai-gateway/ecosystem/app-attribution)
+    - [Stripe Billing](https://vercel.com/docs/ai-gateway/ecosystem/stripe-billing)
+- [MCP](https://vercel.com/docs/mcp): Learn more about MCP and how you can use it on Vercel.
+  - [Deploy MCP servers](https://vercel.com/docs/mcp/deploy-mcp-servers-to-vercel)
+- [Agent Resources](https://vercel.com/docs/agent-resources): Resources for building with AI on Vercel, including documentation access, MCP servers, and agent skills.
+  - [Markdown Access](https://vercel.com/docs/agent-resources/markdown-access)
+  - [Vercel Plugin](https://vercel.com/docs/agent-resources/vercel-plugin)
+  - [Vercel MCP server](https://vercel.com/docs/agent-resources/vercel-mcp)
+    - [Tools](https://vercel.com/docs/agent-resources/vercel-mcp/tools)
+  - [Integrations for Agents](https://vercel.com/docs/agent-resources/integrations-for-agents)
+  - [Integrations for Models](https://vercel.com/docs/agent-resources/integrations-for-models)
+    - [Adding a Provider](https://vercel.com/docs/agent-resources/integrations-for-models/adding-a-provider)
+    - [Adding a Model](https://vercel.com/docs/agent-resources/integrations-for-models/adding-a-model)
+    - [xAI](https://vercel.com/docs/agent-resources/integrations-for-models/xai)
+    - [Groq](https://vercel.com/docs/agent-resources/integrations-for-models/groq)
+    - [fal](https://vercel.com/docs/agent-resources/integrations-for-models/fal)
+    - [Deep Infra](https://vercel.com/docs/agent-resources/integrations-for-models/deepinfra)
+    - [ElevenLabs](https://vercel.com/docs/agent-resources/integrations-for-models/elevenlabs)
+    - [LMNT](https://vercel.com/docs/agent-resources/integrations-for-models/lmnt)
+    - [OpenAI](https://vercel.com/docs/agent-resources/integrations-for-models/openai)
+    - [Perplexity](https://vercel.com/docs/agent-resources/integrations-for-models/perplexity)
+    - [Pinecone](https://vercel.com/docs/agent-resources/integrations-for-models/pinecone)
+    - [Replicate](https://vercel.com/docs/agent-resources/integrations-for-models/replicate)
+    - [Together AI](https://vercel.com/docs/agent-resources/integrations-for-models/togetherai)
+  - [CLI Workflows](https://vercel.com/docs/agent-resources/workflows)
+  - [Skills](https://vercel.com/docs/agent-resources/skills)
+- [eve](https://vercel.com/docs/eve): eve is a filesystem-first framework for building durable backend AI agents that run on Vercel.
+  - [Concepts](https://vercel.com/docs/eve/concepts)
+  - [Pricing and Limits](https://vercel.com/docs/eve/pricing)
+  - [Observability](https://vercel.com/docs/eve/observability)
+
+## Build & Deploy
+- [Builds](https://vercel.com/docs/builds): Understand how the build step works when creating a Vercel Deployment.
+  - [Build Features](https://vercel.com/docs/builds/build-features)
+  - [Build Image](https://vercel.com/docs/builds/build-image)
+  - [Build Queues](https://vercel.com/docs/builds/build-queues)
+  - [Configuring a Build](https://vercel.com/docs/builds/configure-a-build)
+  - [Managing Builds](https://vercel.com/docs/builds/managing-builds)
+- [Deploy Hooks](https://vercel.com/docs/deploy-hooks): Learn how to create and trigger deploy hooks to integrate Vercel deployments with other systems.
+- [Deployment Checks](https://vercel.com/docs/deployment-checks): Set conditions that must be met before proceeding to the next phase of the deployment lifecycle.
+- [Deployment Retention](https://vercel.com/docs/deployment-retention): Learn how Deployment Retention policies affect a deployment
+- [Deployments](https://vercel.com/docs/deployments): Learn how to create and manage deployments on Vercel.
+  - [Environments](https://vercel.com/docs/deployments/environments)
+  - [Generated URLs](https://vercel.com/docs/deployments/generated-urls)
+  - [Managing Deployments](https://vercel.com/docs/deployments/managing-deployments)
+  - [Promoting Deployments](https://vercel.com/docs/deployments/promoting-a-deployment)
+  - [Deployment Policies](https://vercel.com/docs/deployments/deployment-policy)
+  - [Troubleshoot Build Errors](https://vercel.com/docs/deployments/troubleshoot-a-build)
+  - [Accessing Build Logs](https://vercel.com/docs/deployments/logs)
+  - [Claim Deployments](https://vercel.com/docs/deployments/claim-deployments)
+  - [Inspect OG Metadata](https://vercel.com/docs/deployments/og-preview)
+  - [Preview Deployment Suffix](https://vercel.com/docs/deployments/preview-deployment-suffix)
+  - [Promote Preview to Production](https://vercel.com/docs/deployments/promote-preview-to-production)
+  - [Rollback Production](https://vercel.com/docs/deployments/rollback-production-deployment)
+  - [Sharing a Preview Deployment](https://vercel.com/docs/deployments/sharing-deployments)
+  - [Troubleshoot project collaboration](https://vercel.com/docs/deployments/troubleshoot-project-collaboration)
+- [Environment Variables](https://vercel.com/docs/environment-variables): Learn more about environment variables on Vercel.
+  - [Framework Environment Variables](https://vercel.com/docs/environment-variables/framework-environment-variables)
+  - [Manage Across Environments](https://vercel.com/docs/environment-variables/manage-across-environments)
+  - [Managing Environment Variables](https://vercel.com/docs/environment-variables/managing-environment-variables)
+  - [Reserved Environment Variables](https://vercel.com/docs/environment-variables/reserved-environment-variables)
+  - [Rotating Environment Variables](https://vercel.com/docs/environment-variables/rotating-secrets)
+  - [Sensitive Environment Variables](https://vercel.com/docs/environment-variables/sensitive-environment-variables)
+  - [Shared Environment Variables](https://vercel.com/docs/environment-variables/shared-environment-variables)
+  - [System Environment Variables](https://vercel.com/docs/environment-variables/system-environment-variables)
+- [Git Integrations](https://vercel.com/docs/git): Vercel allows for automatic deployments on every branch push and merges onto the production branch of your GitHub, GitLab, and Bitbucket projects.
+  - [GitHub](https://vercel.com/docs/git/vercel-for-github)
+  - [Azure DevOps](https://vercel.com/docs/git/vercel-for-azure-pipelines)
+  - [Bitbucket](https://vercel.com/docs/git/vercel-for-bitbucket)
+  - [GitLab](https://vercel.com/docs/git/vercel-for-gitlab)
+- [Instant Rollback](https://vercel.com/docs/instant-rollback): Learn how to perform an Instant Rollback on your production deployments and quickly roll back to a previously deployed production deployment.
+- [Microfrontends](https://vercel.com/docs/microfrontends): Learn how to use microfrontends on Vercel to split apart large applications, improve developer experience and make incremental migrations easier.
+  - [Getting Started](https://vercel.com/docs/microfrontends/quickstart)
+  - [Local Development](https://vercel.com/docs/microfrontends/local-development)
+  - [Path Routing](https://vercel.com/docs/microfrontends/path-routing)
+  - [Configuration](https://vercel.com/docs/microfrontends/configuration)
+  - [Managing Microfrontends](https://vercel.com/docs/microfrontends/managing-microfrontends)
+    - [Security](https://vercel.com/docs/microfrontends/managing-microfrontends/security)
+    - [Using Vercel Toolbar](https://vercel.com/docs/microfrontends/managing-microfrontends/vercel-toolbar)
+  - [Testing & Troubleshooting](https://vercel.com/docs/microfrontends/troubleshooting)
+- [Monorepos](https://vercel.com/docs/monorepos): Vercel provides support for monorepos. Learn how to deploy a monorepo here.
+  - [Turborepo](https://vercel.com/docs/monorepos/turborepo)
+  - [Remote Caching](https://vercel.com/docs/monorepos/remote-caching)
+  - [Nx](https://vercel.com/docs/monorepos/nx)
+  - [Monorepos FAQ](https://vercel.com/docs/monorepos/monorepo-faq)
+- [Package Managers](https://vercel.com/docs/package-managers): Discover the package managers supported by Vercel for dependency management. Learn how Vercel detects and uses npm, Yarn, pnpm, and Bun for optimal build performance.
+- [Restricting Git Connections to a single Vercel team](https://vercel.com/docs/protected-git-scopes): Information to stop developers from deploying their repositories to a personal Vercel account by using Protected Git Scopes.
+- [Rolling Releases](https://vercel.com/docs/rolling-releases): Learn how to use Rolling Releases for more cautious deployments.
+  - [Rolling Release Deployment](https://vercel.com/docs/rolling-releases/rolling-release-deployment)
+- [Services](https://vercel.com/docs/services): Deploy multiple backends and frontends within a single Vercel project using services.
+  - [Routing](https://vercel.com/docs/services/routing)
+- [Skew Protection](https://vercel.com/docs/skew-protection): Learn how Vercel
+- [Vercel Drop](https://vercel.com/docs/drop): Vercel Drop lets you deploy a file or folder by dragging it into your browser, with no Git or CLI required.
+- [Webhooks](https://vercel.com/docs/webhooks): Learn how to set up webhooks and use them with Vercel Integrations.
+  - [Webhooks API Reference](https://vercel.com/docs/webhooks/webhooks-api)
+
+## CDN
+- [Overview](https://vercel.com/docs/cdn): Vercel
+- [How Vercel CDN works](https://vercel.com/docs/how-vercel-cdn-works): Learn how Vercel
+  - [Compression](https://vercel.com/docs/how-vercel-cdn-works/compression)
+- [Global Network & Regions](https://vercel.com/docs/regions): View the list of regions supported by Vercel
+- [Routing](https://vercel.com/docs/routing): Learn how Vercel
+  - [Redirects](https://vercel.com/docs/routing/redirects)
+    - [Configuration Redirects](https://vercel.com/docs/routing/redirects/configuration-redirects)
+    - [Bulk Redirects](https://vercel.com/docs/routing/redirects/bulk-redirects)
+      - [Getting Started](https://vercel.com/docs/routing/redirects/bulk-redirects/getting-started)
+    - [Manage Redirects at Scale](https://vercel.com/docs/routing/redirects/manage-redirects-at-scale)
+  - [Rewrites](https://vercel.com/docs/routing/rewrites)
+  - [Project Routing Rules](https://vercel.com/docs/routing/project-routing-rules)
+- [Security](https://vercel.com/docs/cdn-security): Learn how Vercel
+  - [Encryption & TLS](https://vercel.com/docs/cdn-security/encryption)
+  - [Security Headers](https://vercel.com/docs/cdn-security/security-headers)
+- [Incremental Static Regeneration](https://vercel.com/docs/incremental-static-regeneration): ISR serves cached static pages while regenerating content in the background. Vercel\
+  - [Getting Started](https://vercel.com/docs/incremental-static-regeneration/quickstart)
+  - [Usage & Pricing](https://vercel.com/docs/incremental-static-regeneration/limits-and-pricing)
+  - [Request Collapsing](https://vercel.com/docs/incremental-static-regeneration/request-collapsing)
+- [Partial Prerendering](https://vercel.com/docs/partial-prerendering): Partial Prerendering serves a cached static shell instantly, then renders and streams the dynamic parts of a page per request.
+- [Caching](https://vercel.com/docs/caching): Learn how Vercel caches content across multiple layers to deliver fast responses and reduce load on your backend.
+  - [CDN Cache](https://vercel.com/docs/caching/cdn-cache)
+    - [Purge CDN Cache](https://vercel.com/docs/caching/cdn-cache/purge)
+    - [Debug Cache Issues](https://vercel.com/docs/caching/cdn-cache/debug-cache-issues)
+  - [Runtime Cache](https://vercel.com/docs/caching/runtime-cache)
+    - [Data Cache](https://vercel.com/docs/caching/runtime-cache/data-cache)
+  - [Cache-Control Headers](https://vercel.com/docs/caching/cache-control-headers)
+- [System Headers](https://vercel.com/docs/headers): This reference covers the list of request, response, cache-control, and custom response headers included with deployments with Vercel.
+  - [Request Headers](https://vercel.com/docs/headers/request-headers)
+  - [Response Headers](https://vercel.com/docs/headers/response-headers)
+- [Image Optimization](https://vercel.com/docs/image-optimization): Transform and optimize images to improve page load performance.
+  - [Getting Started](https://vercel.com/docs/image-optimization/quickstart)
+  - [Limits and Pricing](https://vercel.com/docs/image-optimization/limits-and-pricing)
+  - [Managing Usage & Costs](https://vercel.com/docs/image-optimization/managing-image-optimization-costs)
+  - [Legacy Pricing](https://vercel.com/docs/image-optimization/legacy-pricing)
+- [Custom Error Pages](https://vercel.com/docs/custom-error-pages): Learn how to configure custom error pages for 5xx server errors on Vercel.
+- [Pricing & Usage](https://vercel.com/docs/manage-cdn-usage): Understand CDN pricing resources, monitor usage from your dashboard, and optimize Fast Data Transfer, Fast Origin Transfer, and CDN Requests.
+
+## CLI
+- [Deploying from CLI](https://vercel.com/docs/cli/deploying-from-cli): Learn how to deploy your Vercel Projects from Vercel CLI using the vercel or vercel deploy commands.
+- [Project Linking](https://vercel.com/docs/cli/project-linking): Learn how to link existing Vercel Projects with Vercel CLI.
+- [Telemetry](https://vercel.com/docs/cli/about-telemetry): Vercel CLI collects telemetry data about general usage.
+- [Global Options](https://vercel.com/docs/cli/global-options): Global options are commonly available to use with multiple Vercel CLI commands. Learn about Vercel CLI
+- [vercel activity](https://vercel.com/docs/cli/activity): View activity events for your Vercel project or team, filtered by type, date range, and project.
+- [vercel agent](https://vercel.com/docs/cli/agent): Generate an AGENTS.md file with Vercel deployment best practices using the vercel agent CLI command.
+- [vercel ai-gateway](https://vercel.com/docs/cli/ai-gateway): Manage AI Gateway resources from the Vercel CLI: API keys and routing rules.
+- [vercel alerts](https://vercel.com/docs/cli/alerts): List recent alerts for a linked project, a specific project, or an entire team with the Vercel CLI.
+- [vercel alias](https://vercel.com/docs/cli/alias): Learn how to apply custom domain aliases to your Vercel deployments using the vercel alias CLI command.
+- [vercel api](https://vercel.com/docs/cli/api): Learn how to make authenticated HTTP requests to the Vercel API using the vercel api CLI command.
+- [vercel bisect](https://vercel.com/docs/cli/bisect): Learn how to perform a binary search on your deployments to help surface issues using the vercel bisect CLI command.
+- [vercel blob](https://vercel.com/docs/cli/blob): Learn how to interact with Vercel Blob storage using the vercel blob CLI command.
+- [vercel build](https://vercel.com/docs/cli/build): Learn how to build a Vercel Project locally or in your own CI environment using the vercel build CLI command.
+- [vercel buy](https://vercel.com/docs/cli/buy): Learn how to purchase Vercel products like credits, addons, subscriptions, and domains using the vercel buy CLI command.
+- [vercel cache](https://vercel.com/docs/cli/cache): Learn how to manage cache for your project using the vercel cache CLI command.
+- [vercel certs](https://vercel.com/docs/cli/certs): Learn how to manage certificates for your domains using the vercel certs CLI command.
+- [vercel connect](https://vercel.com/docs/cli/connect): Learn how to manage Vercel Connect connectors using the vercel connect CLI command.
+- [vercel contract](https://vercel.com/docs/cli/contract): Learn how to view contract commitment information for your Vercel account using the vercel contract CLI command.
+- [vercel crons](https://vercel.com/docs/cli/crons): Manage Cron Jobs from the Vercel CLI: add cron entries to your vercel.json, list them, and trigger them on demand.
+- [vercel curl](https://vercel.com/docs/cli/curl): Learn how to make HTTP requests to your Vercel deployments with automatic deployment protection bypass using the vercel curl CLI command.
+- [vercel deploy](https://vercel.com/docs/cli/deploy): Learn how to deploy your Vercel projects using the vercel deploy CLI command.
+- [vercel deploy-hooks](https://vercel.com/docs/cli/deploy-hooks): Manage Deploy Hooks for Git-triggered builds from the Vercel CLI: list, create, and remove deploy hook URLs that trigger new deployments when called.
+- [vercel dev](https://vercel.com/docs/cli/dev): Learn how to replicate the Vercel deployment environment locally and test your Vercel Project before deploying using the vercel dev CLI command.
+- [vercel dns](https://vercel.com/docs/cli/dns): Learn how to manage your DNS records for your domains using the vercel dns CLI command.
+- [vercel domains](https://vercel.com/docs/cli/domains): Learn how to buy, sell, transfer, and manage your domains using the vercel domains CLI command.
+- [vercel edge-config](https://vercel.com/docs/cli/edge-config): Manage Edge Config stores from the Vercel CLI: list, create, inspect, update, remove, and manage items, read tokens, and backups.
+- [vercel env](https://vercel.com/docs/cli/env): Learn how to manage your environment variables in your Vercel Projects using the vercel env CLI command.
+- [vercel firewall](https://vercel.com/docs/cli/firewall): Learn how to manage your project
+- [vercel flags](https://vercel.com/docs/cli/flags): Learn how to manage feature flags for your Vercel project using the vercel flags CLI command.
+- [vercel git](https://vercel.com/docs/cli/git): Learn how to manage your Git provider connections using the vercel git CLI command.
+- [vercel guidance](https://vercel.com/docs/cli/guidance): Enable or disable guidance messages in the Vercel CLI using the vercel guidance command.
+- [vercel help](https://vercel.com/docs/cli/help): Learn how to use the vercel help CLI command to get information about all available Vercel CLI commands.
+- [vercel httpstat](https://vercel.com/docs/cli/httpstat): Learn how to visualize HTTP request timing statistics for your Vercel deployments using the vercel httpstat CLI command.
+- [vercel init](https://vercel.com/docs/cli/init): Learn how to initialize Vercel supported framework examples locally using the vercel init CLI command.
+- [vercel inspect](https://vercel.com/docs/cli/inspect): Learn how to retrieve information about your Vercel deployments using the vercel inspect CLI command.
+- [vercel install](https://vercel.com/docs/cli/install): Learn how to install marketplace native integrations and provision resources with the vercel install CLI command.
+- [vercel integration](https://vercel.com/docs/cli/integration): Learn how to manage marketplace native integrations, provision resources, manage individual resources, and discover available products using the vercel integration CLI command.
+- [vercel link](https://vercel.com/docs/cli/link): Learn how to link a local directory to a Vercel Project using the vercel link CLI command.
+- [vercel list](https://vercel.com/docs/cli/list): Learn how to list out all recent deployments for the current Vercel Project using the vercel list CLI command.
+- [vercel login](https://vercel.com/docs/cli/login): Learn how to login into your Vercel account using the vercel login CLI command.
+- [vercel logout](https://vercel.com/docs/cli/logout): Learn how to logout from your Vercel account using the vercel logout CLI command.
+- [vercel logs](https://vercel.com/docs/cli/logs): View and filter request logs for your Vercel project, or stream live runtime logs from a deployment.
+- [vercel mcp](https://vercel.com/docs/cli/mcp): Set up Model Context Protocol (MCP) usage with a Vercel project using the vercel mcp CLI command.
+- [vercel metrics](https://vercel.com/docs/cli/metrics): Query observability metrics and inspect available metrics, dimensions, and aggregations using the Vercel CLI.
+- [vercel microfrontends](https://vercel.com/docs/cli/microfrontends): Manage microfrontends groups from the CLI. Learn how to create groups, inspect group metadata, add and remove projects, and pull configuration for local development.
+- [vercel oauth-apps](https://vercel.com/docs/cli/oauth-apps): Register Vercel Apps (OAuth) and manage team installations from the CLI: register new apps, list and dismiss installation requests, install apps to a team, and uninstall them.
+- [vercel open](https://vercel.com/docs/cli/open): Learn how to open your current project in the Vercel Dashboard using the vercel open CLI command.
+- [vercel project](https://vercel.com/docs/cli/project): Perform the following commands from the terminal for your Vercel Projects: list, add, inspect, rename, remove, and configure access, checks, protection, analytics.
+- [vercel promote](https://vercel.com/docs/cli/promote): Learn how to promote an existing deployment using the vercel promote CLI command.
+- [vercel pull](https://vercel.com/docs/cli/pull): Learn how to update your local project with remote environment variables using the vercel pull CLI command.
+- [vercel redeploy](https://vercel.com/docs/cli/redeploy): Learn how to redeploy your project using the vercel redeploy CLI command.
+- [vercel redirects](https://vercel.com/docs/cli/redirects): Learn how to manage project-level redirects using the vercel redirects CLI command.
+- [vercel remove](https://vercel.com/docs/cli/remove): Learn how to remove a deployment using the vercel remove CLI command.
+- [vercel rollback](https://vercel.com/docs/cli/rollback): Learn how to roll back your production deployments to previous deployments using the vercel rollback CLI command.
+- [vercel rolling-release](https://vercel.com/docs/cli/rolling-release): Learn how to manage your project
+- [vercel routes](https://vercel.com/docs/cli/routes): Learn how to manage project-level routing rules using the vercel routes CLI command.
+- [vercel sandbox](https://vercel.com/docs/cli/sandbox): Interact with Vercel Sandbox from the Vercel CLI: list, create, connect, exec, copy, stop, and snapshot sandboxes from your terminal.
+- [vercel skills](https://vercel.com/docs/cli/skills): Discover agent skills relevant to your project using the vercel skills CLI command.
+- [vercel switch](https://vercel.com/docs/cli/switch): Learn how to switch between different team scopes using the vercel switch CLI command.
+- [vercel target](https://vercel.com/docs/cli/target): Work with custom environments using the --target flag in Vercel CLI.
+- [vercel teams](https://vercel.com/docs/cli/teams): Learn how to list, add, switch, invite, and manage your teams with the vercel teams CLI command.
+- [vercel telemetry](https://vercel.com/docs/cli/telemetry): Learn how to manage telemetry collection.
+- [vercel tokens](https://vercel.com/docs/cli/tokens): Manage your personal Vercel authentication tokens from the CLI: list, create, and remove access tokens for use with the Vercel API and Vercel CLI.
+- [vercel traces](https://vercel.com/docs/cli/traces): Inspect a request trace in the terminal or open it in the Vercel Dashboard.
+- [vercel upgrade](https://vercel.com/docs/cli/upgrade): Upgrade the Vercel CLI to the latest version and manage automatic updates with the vercel upgrade CLI command.
+- [vercel usage](https://vercel.com/docs/cli/usage): Learn how to view billing usage and costs, for your Vercel account using the vercel usage CLI command.
+- [vercel webhooks](https://vercel.com/docs/cli/webhooks): Learn how to manage webhooks for your Vercel account using the vercel webhooks CLI command.
+- [vercel whoami](https://vercel.com/docs/cli/whoami): Learn how to display the username of the currently logged in user with the vercel whoami CLI command.
+
+## Collaboration
+- [Comments](https://vercel.com/docs/comments): Comments allow teams and invited participants to give direct feedback on preview deployments. Learn more about Comments in this overview.
+  - [Enabling Comments](https://vercel.com/docs/comments/how-comments-work)
+  - [Using Comments](https://vercel.com/docs/comments/using-comments)
+  - [Managing Comments](https://vercel.com/docs/comments/managing-comments)
+  - [Integrations](https://vercel.com/docs/comments/integrations)
+- [Draft Mode](https://vercel.com/docs/draft-mode): Vercel
+- [Edit Mode](https://vercel.com/docs/edit-mode): Discover how Vercel
+- [Toolbar](https://vercel.com/docs/vercel-toolbar): Learn how to use the Vercel Toolbar to leave feedback, navigate through important dashboard pages, share deployments, use Draft Mode for previewing unpublished content, and Edit Mode for editing content in real-time.
+  - [Add to Environments](https://vercel.com/docs/vercel-toolbar/in-production-and-localhost)
+    - [Add to Localhost](https://vercel.com/docs/vercel-toolbar/in-production-and-localhost/add-to-localhost)
+    - [Add to Production](https://vercel.com/docs/vercel-toolbar/in-production-and-localhost/add-to-production)
+  - [Managing Toolbar](https://vercel.com/docs/vercel-toolbar/managing-toolbar)
+  - [Browser Extensions](https://vercel.com/docs/vercel-toolbar/browser-extension)
+  - [Accessibility Audit Tool](https://vercel.com/docs/vercel-toolbar/accessibility-audit-tool)
+  - [Interaction Timing Tool](https://vercel.com/docs/vercel-toolbar/interaction-timing-tool)
+  - [Layout Shift Tool](https://vercel.com/docs/vercel-toolbar/layout-shift-tool)
+
+## Compute
+- [Fluid Compute](https://vercel.com/docs/fluid-compute): Learn about fluid compute, an execution model for Vercel Functions that provides a more flexible and efficient way to run your functions.
+- [Functions](https://vercel.com/docs/functions): Run server-side code on Vercel without managing a server.
+  - [Getting Started](https://vercel.com/docs/functions/quickstart)
+  - [Streaming](https://vercel.com/docs/functions/streaming-functions)
+  - [WebSockets](https://vercel.com/docs/functions/websockets)
+  - [Runtimes](https://vercel.com/docs/functions/runtimes)
+    - [Node.js](https://vercel.com/docs/functions/runtimes/node-js)
+      - [Advanced Node.js Usage](https://vercel.com/docs/functions/runtimes/node-js/advanced-node-configuration)
+      - [Supported Node.js versions](https://vercel.com/docs/functions/runtimes/node-js/node-js-versions)
+    - [Bun](https://vercel.com/docs/functions/runtimes/bun)
+    - [Python](https://vercel.com/docs/functions/runtimes/python)
+      - [Python version](https://vercel.com/docs/functions/runtimes/python/python-version)
+    - [Rust](https://vercel.com/docs/functions/runtimes/rust)
+    - [Go](https://vercel.com/docs/functions/runtimes/go)
+    - [Ruby](https://vercel.com/docs/functions/runtimes/ruby)
+    - [Wasm](https://vercel.com/docs/functions/runtimes/wasm)
+    - [Edge Runtime](https://vercel.com/docs/functions/runtimes/edge)
+  - [Configuring Functions](https://vercel.com/docs/functions/configuring-functions)
+    - [Duration](https://vercel.com/docs/functions/configuring-functions/duration)
+    - [Memory](https://vercel.com/docs/functions/configuring-functions/memory)
+    - [Runtime](https://vercel.com/docs/functions/configuring-functions/runtime)
+    - [Region](https://vercel.com/docs/functions/configuring-functions/region)
+    - [Advanced Configuration](https://vercel.com/docs/functions/configuring-functions/advanced-configuration)
+  - [API Reference](https://vercel.com/docs/functions/functions-api-reference)
+    - [Node.js](https://vercel.com/docs/functions/functions-api-reference/vercel-functions-package)
+    - [Python](https://vercel.com/docs/functions/functions-api-reference/vercel-sdk-python)
+  - [Logs](https://vercel.com/docs/functions/logs)
+  - [Limits](https://vercel.com/docs/functions/limitations)
+  - [Concurrency Scaling](https://vercel.com/docs/functions/concurrency-scaling)
+  - [Debug Slow Functions](https://vercel.com/docs/functions/debug-slow-functions)
+  - [Pricing](https://vercel.com/docs/functions/usage-and-pricing)
+    - [Legacy Usage & Pricing](https://vercel.com/docs/functions/usage-and-pricing/legacy-pricing)
+- [Routing Middleware](https://vercel.com/docs/routing-middleware): Learn how you can use Routing Middleware, code that executes before a request is processed on a site, to provide speed and personalization to your users.
+  - [Getting Started](https://vercel.com/docs/routing-middleware/getting-started)
+  - [API](https://vercel.com/docs/routing-middleware/api)
+- [Cron Jobs](https://vercel.com/docs/cron-jobs): Learn about cron jobs, how they work, and how to use them on Vercel.
+  - [Getting Started](https://vercel.com/docs/cron-jobs/quickstart)
+  - [Managing Cron Jobs](https://vercel.com/docs/cron-jobs/manage-cron-jobs)
+  - [Usage & Pricing](https://vercel.com/docs/cron-jobs/usage-and-pricing)
+- [OG Image Generation](https://vercel.com/docs/og-image-generation): Learn how to optimize social media image generation through the Open Graph Protocol and @vercel/og library.
+  - [@vercel/og](https://vercel.com/docs/og-image-generation/og-image-api)
+  - [Examples](https://vercel.com/docs/og-image-generation/examples)
+- [Sandbox](https://vercel.com/docs/sandbox): Vercel Sandbox allows you to run arbitrary code in isolated, ephemeral Linux VMs.
+  - [Quickstart](https://vercel.com/docs/sandbox/quickstart)
+  - [Concepts](https://vercel.com/docs/sandbox/concepts)
+    - [Authentication](https://vercel.com/docs/sandbox/concepts/authentication)
+    - [Snapshots](https://vercel.com/docs/sandbox/concepts/snapshots)
+    - [Firewall](https://vercel.com/docs/sandbox/concepts/firewall)
+    - [Persistent Sandboxes](https://vercel.com/docs/sandbox/concepts/persistent-sandboxes)
+    - [Tags](https://vercel.com/docs/sandbox/concepts/tags)
+    - [Drives](https://vercel.com/docs/sandbox/concepts/drives)
+  - [Examples](https://vercel.com/docs/sandbox/working-with-sandbox)
+  - [JS SDK Reference](https://vercel.com/docs/sandbox/sdk-reference)
+  - [Python SDK Reference](https://vercel.com/docs/sandbox/python-sdk-reference)
+  - [CLI Reference](https://vercel.com/docs/sandbox/cli-reference)
+  - [System Specifications](https://vercel.com/docs/sandbox/system-specifications)
+  - [Pricing and Limits](https://vercel.com/docs/sandbox/pricing)
+  - [Run Commands in Vercel Sandbox](https://vercel.com/docs/sandbox/run-commands-in-sandbox)
+- [Queues](https://vercel.com/docs/queues): Durable event streaming for serverless. Publish messages to topics and process them reliably with managed consumer groups, automatic scaling, and built-in retries.
+  - [Quickstart](https://vercel.com/docs/queues/quickstart)
+  - [Concepts](https://vercel.com/docs/queues/concepts)
+  - [SDK Reference](https://vercel.com/docs/queues/sdk)
+  - [API Reference](https://vercel.com/docs/queues/api)
+  - [Observability](https://vercel.com/docs/queues/observability)
+  - [Poll Mode](https://vercel.com/docs/queues/poll-mode)
+  - [Pricing and Limits](https://vercel.com/docs/queues/pricing)
+- [Workflows](https://vercel.com/docs/workflows): Vercel Workflows is a fully managed platform for building durable, reliable, and observable applications and AI agents with the Workflow SDK.
+  - [Concepts](https://vercel.com/docs/workflows/concepts)
+  - [Pricing and Limits](https://vercel.com/docs/workflows/pricing)
+  - [Python](https://vercel.com/docs/workflows/python)
+
+## Connect
+- [Quickstart](https://vercel.com/docs/connect/quickstart): Create your first connector in Vercel Connect, install the SDK, and request a runtime provider token from your code.
+- [Concepts](https://vercel.com/docs/connect/concepts): Understand the core building blocks of Vercel Connect: connectors, installations, tokens, project links, triggers, and authentication.
+  - [Connectors](https://vercel.com/docs/connect/concepts/connectors)
+  - [Installations](https://vercel.com/docs/connect/concepts/installations)
+  - [Tokens](https://vercel.com/docs/connect/concepts/tokens)
+  - [Project links](https://vercel.com/docs/connect/concepts/project-links)
+  - [Triggers](https://vercel.com/docs/connect/concepts/triggers)
+  - [Authentication](https://vercel.com/docs/connect/concepts/authentication)
+- [SDK Reference](https://vercel.com/docs/connect/ts-sdk-reference): API reference for @vercel/connect, the TypeScript SDK for requesting runtime tokens from Vercel Connect.
+- [Pricing and Limits](https://vercel.com/docs/connect/pricing): How Vercel Connect is billed across plans, how to stop being billed, and the platform limits that apply during beta.
+- [Legal](https://vercel.com/docs/connect/legal): Product terms governing your use of Vercel Connect, including Customer Managed Connectors, Vercel Managed Connectors, and Vercel Assisted Setup.
+
+## Flags
+- [Vercel Flags](https://vercel.com/docs/flags/vercel-flags): Use Vercel as your feature flag provider to create and manage flags, define targeting rules, and run experiments directly from the dashboard.
+  - [Getting Started](https://vercel.com/docs/flags/vercel-flags/quickstart)
+  - [Dashboard](https://vercel.com/docs/flags/vercel-flags/dashboard)
+    - [Feature Flag](https://vercel.com/docs/flags/vercel-flags/dashboard/feature-flag)
+    - [Entities](https://vercel.com/docs/flags/vercel-flags/dashboard/entities)
+    - [Segments](https://vercel.com/docs/flags/vercel-flags/dashboard/segments)
+    - [SDK Keys](https://vercel.com/docs/flags/vercel-flags/dashboard/sdk-keys)
+    - [Drafts](https://vercel.com/docs/flags/vercel-flags/dashboard/drafts)
+    - [Archive](https://vercel.com/docs/flags/vercel-flags/dashboard/archive)
+  - [SDKs](https://vercel.com/docs/flags/vercel-flags/sdks)
+    - [Flags SDK](https://vercel.com/docs/flags/vercel-flags/sdks/flags-sdk)
+    - [OpenFeature](https://vercel.com/docs/flags/vercel-flags/sdks/openfeature)
+    - [Core](https://vercel.com/docs/flags/vercel-flags/sdks/core)
+  - [Limits and Pricing](https://vercel.com/docs/flags/vercel-flags/limits-and-pricing)
+    - [Clean Up After Rollout](https://vercel.com/docs/flags/vercel-flags/cli/clean-up-after-rollout)
+    - [Roll Out a Feature](https://vercel.com/docs/flags/vercel-flags/cli/roll-out-feature)
+    - [Run an A/B Test](https://vercel.com/docs/flags/vercel-flags/cli/run-ab-test)
+    - [Set Up Flags Explorer](https://vercel.com/docs/flags/vercel-flags/cli/set-up-flags-explorer)
+- [Flags Explorer](https://vercel.com/docs/flags/flags-explorer): View and override your application
+  - [Getting Started](https://vercel.com/docs/flags/flags-explorer/getting-started)
+  - [Reference](https://vercel.com/docs/flags/flags-explorer/reference)
+  - [Pricing](https://vercel.com/docs/flags/flags-explorer/limits-and-pricing)
+- [Marketplace](https://vercel.com/docs/flags/marketplace): Connect your preferred feature flag provider through the Vercel Marketplace for a unified flags experience.
+- [Flags SDK](https://vercel.com/docs/flags/flags-sdk-reference): API reference for the Flags SDK for Next.js and SvelteKit.
+- [Observability](https://vercel.com/docs/flags/observability): Track feature flag evaluations and analyze their impact with Web Analytics.
+  - [Web Analytics](https://vercel.com/docs/flags/observability/web-analytics)
+
+## Integrations
+- [Overview](https://vercel.com/docs/integrations): Learn how to extend Vercel
+- [Install an Integration](https://vercel.com/docs/integrations/install-an-integration): Learn how to pair Vercel
+  - [Add a Native Integration](https://vercel.com/docs/integrations/install-an-integration/product-integration)
+  - [Secure Your Resource](https://vercel.com/docs/integrations/install-an-integration/secure-your-resource)
+  - [Add a Connectable Account](https://vercel.com/docs/integrations/install-an-integration/add-a-connectable-account)
+  - [Agent Tools](https://vercel.com/docs/integrations/install-an-integration/agent-tools)
+  - [Permissions and Access](https://vercel.com/docs/integrations/install-an-integration/manage-integrations-reference)
+  - [Transferring an Integration](https://vercel.com/docs/integrations/install-an-integration/transferring-an-integration)
+- [Create an Integration](https://vercel.com/docs/integrations/create-integration): Learn how to create and manage your own integration for internal or public use with Vercel.
+  - [Native integration concepts](https://vercel.com/docs/integrations/create-integration/native-integration)
+  - [Create a Native Integration](https://vercel.com/docs/integrations/create-integration/marketplace-product)
+  - [Deployment integration actions](https://vercel.com/docs/integrations/create-integration/deployment-integration-action)
+  - [Native Integration Flows](https://vercel.com/docs/integrations/create-integration/marketplace-flows)
+  - [Integration Approval Checklist](https://vercel.com/docs/integrations/create-integration/approval-checklist)
+  - [Using Integrations API](https://vercel.com/docs/integrations/create-integration/marketplace-api)
+  - [Billing and Refunds](https://vercel.com/docs/integrations/create-integration/billing)
+  - [Integration Image Guidelines](https://vercel.com/docs/integrations/create-integration/integration-image-guidelines)
+  - [Requirements for listing an Integration](https://vercel.com/docs/integrations/create-integration/submit-integration)
+  - [Upgrade an Integration](https://vercel.com/docs/integrations/create-integration/upgrade-integration)
+  - [Building Integrations with Vercel REST API](https://vercel.com/docs/integrations/create-integration/vercel-api-integrations)
+  - [Secrets Rotation](https://vercel.com/docs/integrations/create-integration/secrets-rotation)
+- [CMS Integrations](https://vercel.com/docs/integrations/cms): Learn how to integrate Vercel with CMS platforms, including Contentful, Sanity, and Sitecore XM Cloud.
+  - [Agility CMS](https://vercel.com/docs/integrations/cms/agility-cms)
+  - [ButterCMS](https://vercel.com/docs/integrations/cms/butter-cms)
+  - [Contentful](https://vercel.com/docs/integrations/cms/contentful)
+  - [DatoCMS](https://vercel.com/docs/integrations/cms/dato-cms)
+  - [Formspree](https://vercel.com/docs/integrations/cms/formspree)
+  - [Makeswift](https://vercel.com/docs/integrations/cms/makeswift)
+  - [Sanity](https://vercel.com/docs/integrations/cms/sanity)
+  - [Sitecore](https://vercel.com/docs/integrations/cms/sitecore)
+- [Commerce and Payments](https://vercel.com/docs/integrations/ecommerce): Learn how to integrate Vercel with payment processors and ecommerce platforms, including Stripe, Shopify, BigCommerce, and more.
+  - [Stripe](https://vercel.com/docs/integrations/ecommerce/stripe)
+  - [Kubernetes](https://vercel.com/docs/integrations/external-platforms/kubernetes)
+
+## Multi-tenant
+- [Domain Management](https://vercel.com/docs/multi-tenant/domain-management): Manage custom domains, wildcard subdomains, and SSL certificates programmatically for multi-tenant applications using Vercel for Platforms.
+- [Limits](https://vercel.com/docs/multi-tenant/limits): Understand the limits and features available for Vercel for Platforms.
+
+## Observability
+- [Overview](https://vercel.com/docs/observability): Observability on Vercel provides framework-aware insights enabling you to optimize infrastructure and application performance.
+  - [Insights](https://vercel.com/docs/observability/insights)
+  - [Debug 500 Errors](https://vercel.com/docs/observability/debug-production-errors)
+  - [Observability Plus](https://vercel.com/docs/observability/observability-plus)
+- [Alerts](https://vercel.com/docs/alerts): Get notified when something
+  - [Configure Alerts](https://vercel.com/docs/alerts/configure-alerts)
+- [Logs](https://vercel.com/docs/logs): Use logs to find information on deployment builds, function executions, and more.
+  - [Runtime](https://vercel.com/docs/logs/runtime)
+- [Tracing](https://vercel.com/docs/tracing): Learn how to trace your application to understand performance and infrastructure details.
+  - [Instrumentation](https://vercel.com/docs/tracing/instrumentation)
+  - [Session Tracing](https://vercel.com/docs/tracing/session-tracing)
+- [Query](https://vercel.com/docs/query): Query and visualize your Vercel usage, traffic, and more in observability.
+  - [Query Reference](https://vercel.com/docs/query/reference)
+  - [Monitoring](https://vercel.com/docs/query/monitoring)
+    - [Getting Started](https://vercel.com/docs/query/monitoring/quickstart)
+    - [Monitoring Reference](https://vercel.com/docs/query/monitoring/monitoring-reference)
+    - [Limits and Pricing](https://vercel.com/docs/query/monitoring/limits-and-pricing)
+- [Notebooks](https://vercel.com/docs/notebooks): Learn more about Notebooks and how they allow you to organize and save your queries.
+- [Speed Insights](https://vercel.com/docs/speed-insights): This page lists out and explains all the performance metrics provided by Vercel
+  - [Getting Started](https://vercel.com/docs/speed-insights/quickstart)
+  - [Using Speed Insights](https://vercel.com/docs/speed-insights/using-speed-insights)
+  - [Using with CLI](https://vercel.com/docs/speed-insights/accessing-metrics-with-vercel-cli)
+  - [Metrics](https://vercel.com/docs/speed-insights/metrics)
+  - [Privacy](https://vercel.com/docs/speed-insights/privacy-policy)
+  - [@vercel/speed-insights](https://vercel.com/docs/speed-insights/package)
+  - [Limits and Pricing](https://vercel.com/docs/speed-insights/limits-and-pricing)
+  - [Managing Usage & Costs](https://vercel.com/docs/speed-insights/managing-usage)
+  - [Troubleshooting](https://vercel.com/docs/speed-insights/troubleshooting)
+- [Drains](https://vercel.com/docs/drains): Drains collect logs, traces, speed insights, and analytics from your applications. Forward observability data to custom endpoints or popular services.
+  - [Using Drains](https://vercel.com/docs/drains/using-drains)
+    - [Logs](https://vercel.com/docs/drains/reference/logs)
+    - [Traces](https://vercel.com/docs/drains/reference/traces)
+    - [Speed Insights](https://vercel.com/docs/drains/reference/speed-insights)
+    - [Web Analytics](https://vercel.com/docs/drains/reference/analytics)
+  - [Security](https://vercel.com/docs/drains/security)
+- [Web Analytics](https://vercel.com/docs/analytics): With Web Analytics, you can get detailed insights into your website
+  - [Getting Started](https://vercel.com/docs/analytics/quickstart)
+  - [Using Web Analytics](https://vercel.com/docs/analytics/using-web-analytics)
+  - [Using with CLI](https://vercel.com/docs/analytics/accessing-metrics-with-vercel-cli)
+  - [Web Analytics API](https://vercel.com/docs/analytics/web-analytics-api)
+  - [Filtering](https://vercel.com/docs/analytics/filtering)
+  - [Custom Events](https://vercel.com/docs/analytics/custom-events)
+  - [Redacting Sensitive Data](https://vercel.com/docs/analytics/redacting-sensitive-data)
+  - [Privacy](https://vercel.com/docs/analytics/privacy-policy)
+  - [@vercel/analytics](https://vercel.com/docs/analytics/package)
+  - [Pricing](https://vercel.com/docs/analytics/limits-and-pricing)
+  - [Troubleshooting](https://vercel.com/docs/analytics/troubleshooting)
+- [Manage & Optimize](https://vercel.com/docs/manage-and-optimize-observability): Learn how to understand the different charts in the Vercel dashboard, how usage relates to billing, and how to optimize your usage of Web Analytics and Speed Insights.
+
+## Platform
+- [Project Configuration](https://vercel.com/docs/project-configuration): Learn how to configure your Vercel projects using vercel.json, vercel.ts, or the dashboard to control builds, routing, functions, and more.
+  - [vercel.json](https://vercel.com/docs/project-configuration/vercel-json)
+  - [vercel.ts](https://vercel.com/docs/project-configuration/vercel-ts)
+  - [General Settings](https://vercel.com/docs/project-configuration/general-settings)
+  - [Project Settings](https://vercel.com/docs/project-configuration/project-settings)
+  - [Git Configuration](https://vercel.com/docs/project-configuration/git-configuration)
+  - [Git Settings](https://vercel.com/docs/project-configuration/git-settings)
+  - [Global Configuration](https://vercel.com/docs/project-configuration/global-configuration)
+  - [Security settings](https://vercel.com/docs/project-configuration/security-settings)
+- [Projects](https://vercel.com/docs/projects): A project is the application that you have deployed to Vercel.
+  - [Deploy from CLI](https://vercel.com/docs/projects/deploy-from-cli)
+  - [Managing projects](https://vercel.com/docs/projects/managing-projects)
+  - [Transferring a project](https://vercel.com/docs/projects/transferring-projects)
+- [Domains](https://vercel.com/docs/domains): Learn the fundamentals of how domains, DNS, and nameservers work on Vercel.
+  - [Working with Domains](https://vercel.com/docs/domains/working-with-domains)
+    - [Adding a Domain](https://vercel.com/docs/domains/working-with-domains/add-a-domain)
+    - [Adding a Domain to an Environment](https://vercel.com/docs/domains/working-with-domains/add-a-domain-to-environment)
+    - [Assigning a Domain to a Git Branch](https://vercel.com/docs/domains/working-with-domains/assign-domain-to-a-git-branch)
+    - [Claiming Ownership](https://vercel.com/docs/domains/working-with-domains/claim-domain-ownership)
+    - [Deploying & Redirecting Domains](https://vercel.com/docs/domains/working-with-domains/deploying-and-redirecting)
+    - [Removing a Domain](https://vercel.com/docs/domains/working-with-domains/remove-a-domain)
+    - [Renewing a Domain](https://vercel.com/docs/domains/working-with-domains/renew-a-domain)
+    - [Transferring Domains](https://vercel.com/docs/domains/working-with-domains/transfer-your-domain)
+    - [Viewing & Searching Domains](https://vercel.com/docs/domains/working-with-domains/view-and-search-domains)
+  - [Working with DNS](https://vercel.com/docs/domains/working-with-dns)
+  - [Managing DNS Records](https://vercel.com/docs/domains/managing-dns-records)
+  - [Domain Connect](https://vercel.com/docs/domains/domain-connect)
+  - [Working with Nameservers](https://vercel.com/docs/domains/working-with-nameservers)
+  - [Managing Nameservers](https://vercel.com/docs/domains/managing-nameservers)
+  - [Working with SSL](https://vercel.com/docs/domains/working-with-ssl)
+  - [Custom SSL Certificates](https://vercel.com/docs/domains/custom-SSL-certificate)
+  - [Pre-Generate SSL Certificates](https://vercel.com/docs/domains/pre-generating-ssl-certs)
+  - [Supported Domains](https://vercel.com/docs/domains/supported-domains)
+  - [Troubleshooting Domains](https://vercel.com/docs/domains/troubleshooting)
+  - [Set Up Custom Domain](https://vercel.com/docs/domains/set-up-custom-domain)
+  - [Using Domains API](https://vercel.com/docs/domains/registrar-api)
+- [Notifications](https://vercel.com/docs/notifications): Learn how to use Notifications to view and manage important alerts about your deployments, domains, integrations, account, and usage.
+- [Build Output API](https://vercel.com/docs/build-output-api): The Build Output API is a file-system-based specification for a directory structure that can produce a Vercel deployment.
+  - [Build Output Configuration](https://vercel.com/docs/build-output-api/configuration)
+  - [Features](https://vercel.com/docs/build-output-api/features)
+  - [Vercel Primitives](https://vercel.com/docs/build-output-api/primitives)
+- [Glossary](https://vercel.com/docs/glossary): Learn about the terms and concepts used in Vercel
+- [Limits](https://vercel.com/docs/limits): Look up account limits, usage summaries, rate limits, and resource constraints for every Vercel plan.
+  - [Fair Use Guidelines](https://vercel.com/docs/limits/fair-use-guidelines)
+- [Checks](https://vercel.com/docs/checks): Vercel automatically keeps an eye on various aspects of your web application using the Checks API. Learn how to use Checks in your Vercel workflow here.
+  - [Checks API](https://vercel.com/docs/checks/checks-api)
+  - [Checks Reference](https://vercel.com/docs/checks/creating-checks)
+- [Support Center](https://vercel.com/docs/support-center): Learn how to communicate securely with the Vercel support team
+
+## Pricing
+- [Plans](https://vercel.com/docs/plans): Learn about the different plans available on Vercel.
+  - [Hobby Plan](https://vercel.com/docs/plans/hobby)
+  - [Pro Plan](https://vercel.com/docs/plans/pro-plan)
+    - [Pro Plan Trial](https://vercel.com/docs/plans/pro-plan/trials)
+    - [Billing FAQ](https://vercel.com/docs/plans/pro-plan/billing)
+  - [Enterprise Plan](https://vercel.com/docs/plans/enterprise)
+    - [Billing FAQ](https://vercel.com/docs/plans/enterprise/billing)
+- [Pricing](https://vercel.com/docs/pricing): Learn about Vercel
+  - [Regional Pricing](https://vercel.com/docs/pricing/regional-pricing)
+    - [Cape Town, South Africa (cpt1)](https://vercel.com/docs/pricing/regional-pricing/cpt1)
+    - [Cleveland, USA (cle1)](https://vercel.com/docs/pricing/regional-pricing/cle1)
+    - [Dubai, UAE (dxb1)](https://vercel.com/docs/pricing/regional-pricing/dxb1)
+    - [Dublin, Ireland (dub1)](https://vercel.com/docs/pricing/regional-pricing/dub1)
+    - [Frankfurt, Germany (fra1)](https://vercel.com/docs/pricing/regional-pricing/fra1)
+    - [Hong Kong (hkg1)](https://vercel.com/docs/pricing/regional-pricing/hkg1)
+    - [London, UK (lhr1)](https://vercel.com/docs/pricing/regional-pricing/lhr1)
+    - [Montréal, Canada (yul1)](https://vercel.com/docs/pricing/regional-pricing/yul1)
+    - [Mumbai, India (bom1)](https://vercel.com/docs/pricing/regional-pricing/bom1)
+    - [Osaka, Japan (kix1)](https://vercel.com/docs/pricing/regional-pricing/kix1)
+    - [Paris, France (cdg1)](https://vercel.com/docs/pricing/regional-pricing/cdg1)
+    - [Portland, USA (pdx1)](https://vercel.com/docs/pricing/regional-pricing/pdx1)
+    - [San Francisco, USA (sfo1)](https://vercel.com/docs/pricing/regional-pricing/sfo1)
+    - [São Paulo, Brazil (gru1)](https://vercel.com/docs/pricing/regional-pricing/gru1)
+    - [Seoul, South Korea (icn1)](https://vercel.com/docs/pricing/regional-pricing/icn1)
+    - [Singapore (sin1)](https://vercel.com/docs/pricing/regional-pricing/sin1)
+    - [Stockholm, Sweden (arn1)](https://vercel.com/docs/pricing/regional-pricing/arn1)
+    - [Sydney, Australia (syd1)](https://vercel.com/docs/pricing/regional-pricing/syd1)
+    - [Tokyo, Japan (hnd1)](https://vercel.com/docs/pricing/regional-pricing/hnd1)
+    - [Washington D.C., USA (iad1)](https://vercel.com/docs/pricing/regional-pricing/iad1)
+  - [Manage and Optimize Usage](https://vercel.com/docs/pricing/manage-and-optimize-usage)
+  - [Calculating Usage of Resources](https://vercel.com/docs/pricing/how-does-vercel-calculate-usage-of-resources)
+  - [Billing & Invoices](https://vercel.com/docs/pricing/understanding-my-invoice)
+  - [Legacy Metrics](https://vercel.com/docs/pricing/legacy)
+  - [Taxes](https://vercel.com/docs/pricing/taxes)
+- [Spend Management](https://vercel.com/docs/spend-management): Learn how to get notified about your account spend and configure a webhook.
+
+## Products
+
+## Security
+- [Overview](https://vercel.com/docs/security): Vercel provides built-in and customizable features to ensure that your site is secure.
+  - [Security & Compliance Measures](https://vercel.com/docs/security/compliance)
+  - [Shared Responsibility Model](https://vercel.com/docs/security/shared-responsibility)
+  - [PCI DSS iframe Integration](https://vercel.com/docs/security/pci-dss)
+  - [Reverse Proxy Servers and Vercel](https://vercel.com/docs/security/reverse-proxy)
+  - [Access Control](https://vercel.com/docs/security/access-control)
+- [Audit Logs](https://vercel.com/docs/audit-log): Learn how to track and analyze your team members
+- [Firewall](https://vercel.com/docs/vercel-firewall): Learn how Vercel Firewall helps protect your applications and websites from malicious attacks and unauthorized access.
+  - [Firewall Concepts](https://vercel.com/docs/vercel-firewall/firewall-concepts)
+  - [DDoS Mitigation](https://vercel.com/docs/vercel-firewall/ddos-mitigation)
+  - [Attack Mode](https://vercel.com/docs/vercel-firewall/attack-mode)
+  - [Web Application Firewall](https://vercel.com/docs/vercel-firewall/vercel-waf)
+    - [Custom Rules](https://vercel.com/docs/vercel-firewall/vercel-waf/custom-rules)
+    - [Rate Limiting](https://vercel.com/docs/vercel-firewall/vercel-waf/rate-limiting)
+    - [Rule Configuration](https://vercel.com/docs/vercel-firewall/vercel-waf/rule-configuration)
+    - [System Bypass Rules](https://vercel.com/docs/vercel-firewall/vercel-waf/system-bypass-rules)
+    - [Rate Limiting SDK](https://vercel.com/docs/vercel-firewall/vercel-waf/rate-limiting-sdk)
+    - [IP Blocking](https://vercel.com/docs/vercel-firewall/vercel-waf/ip-blocking)
+    - [WAF Managed Rulesets](https://vercel.com/docs/vercel-firewall/vercel-waf/managed-rulesets)
+    - [Examples](https://vercel.com/docs/vercel-firewall/vercel-waf/examples)
+    - [Usage & Pricing](https://vercel.com/docs/vercel-firewall/vercel-waf/usage-and-pricing)
+  - [Firewall API](https://vercel.com/docs/vercel-firewall/firewall-api)
+  - [Firewall Observability](https://vercel.com/docs/vercel-firewall/firewall-observability)
+  - [Page Integrity](https://vercel.com/docs/vercel-firewall/page-integrity)
+- [Bot Management](https://vercel.com/docs/bot-management): Learn how to manage bot traffic to your site.
+- [BotID](https://vercel.com/docs/botid): Protect your applications from automated attacks with intelligent bot detection and verification, powered by Kasada.
+  - [Get Started with BotID](https://vercel.com/docs/botid/get-started)
+  - [Handling Verified Bots](https://vercel.com/docs/botid/verified-bots)
+  - [Advanced BotID Configuration](https://vercel.com/docs/botid/advanced-configuration)
+  - [Form Submissions](https://vercel.com/docs/botid/form-submissions)
+  - [Local Development Behavior](https://vercel.com/docs/botid/local-development-behavior)
+- [Networking](https://vercel.com/docs/networking): Connect your Vercel projects to backend services with static IPs and secure networking options.
+  - [PrivateLink](https://vercel.com/docs/networking/privatelink)
+  - [Secure Compute](https://vercel.com/docs/networking/secure-compute)
+  - [Static IPs](https://vercel.com/docs/networking/static-ips)
+    - [Getting Started](https://vercel.com/docs/networking/static-ips/getting-started)
+- [OIDC](https://vercel.com/docs/oidc): Secure the access to your backend using OIDC Federation to enable auto-generated, short-lived, and non-persistent credentials.
+  - [AWS](https://vercel.com/docs/oidc/aws)
+  - [Azure](https://vercel.com/docs/oidc/azure)
+  - [Connect your API](https://vercel.com/docs/oidc/api)
+  - [Google Cloud Platform](https://vercel.com/docs/oidc/gcp)
+  - [OIDC Reference](https://vercel.com/docs/oidc/reference)
+- [RBAC](https://vercel.com/docs/rbac): Learn how to manage team members on Vercel, and how to assign roles to each member with role-based access control (RBAC).
+  - [Access Roles](https://vercel.com/docs/rbac/access-roles)
+    - [Extended Permissions](https://vercel.com/docs/rbac/access-roles/extended-permissions)
+    - [Project Level Roles](https://vercel.com/docs/rbac/access-roles/project-level-roles)
+    - [Team Level Roles](https://vercel.com/docs/rbac/access-roles/team-level-roles)
+  - [Access Groups](https://vercel.com/docs/rbac/access-groups)
+  - [Managing Team Members](https://vercel.com/docs/rbac/managing-team-members)
+- [Two-factor Enforcement](https://vercel.com/docs/two-factor-enforcement): Learn how to enforce two-factor authentication (2FA) for your Vercel team members to enhance security.
+
+## Storage
+- [Overview](https://vercel.com/docs/storage): Store large files and global configuration with Vercel
+- [Blob](https://vercel.com/docs/vercel-blob): Vercel Blob is a scalable, cost-effective object storage service with private and public access modes for files of any size.
+  - [Private Storage](https://vercel.com/docs/vercel-blob/private-storage)
+  - [Public Storage](https://vercel.com/docs/vercel-blob/public-storage)
+  - [Server Uploads](https://vercel.com/docs/vercel-blob/server-upload)
+  - [Client Uploads](https://vercel.com/docs/vercel-blob/client-upload)
+  - [Using the SDK](https://vercel.com/docs/vercel-blob/using-blob-sdk)
+  - [Vercel Signed URLs](https://vercel.com/docs/vercel-blob/vercel-signed-urls)
+  - [Pricing](https://vercel.com/docs/vercel-blob/usage-and-pricing)
+  - [Security](https://vercel.com/docs/vercel-blob/security)
+  - [Examples](https://vercel.com/docs/vercel-blob/examples)
+  - [Manage Vercel Blob Storage](https://vercel.com/docs/vercel-blob/manage-blob-storage)
+- [Edge Config](https://vercel.com/docs/edge-config): An Edge Config is a global data store that enables experimentation with feature flags, A/B testing, critical redirects, and more.
+  - [Getting Started](https://vercel.com/docs/edge-config/get-started)
+  - [Using Edge Config](https://vercel.com/docs/edge-config/using-edge-config)
+  - [Edge Configs & REST API](https://vercel.com/docs/edge-config/vercel-api)
+  - [Edge Configs & Dashboard](https://vercel.com/docs/edge-config/edge-config-dashboard)
+  - [Edge Config SDK](https://vercel.com/docs/edge-config/edge-config-sdk)
+  - [Limits & Pricing](https://vercel.com/docs/edge-config/edge-config-limits)
+  - [Integrations](https://vercel.com/docs/edge-config/edge-config-integrations)
+    - [DevCycle](https://vercel.com/docs/edge-config/edge-config-integrations/devcycle-edge-config)
+    - [Hypertune](https://vercel.com/docs/edge-config/edge-config-integrations/hypertune-edge-config)
+    - [LaunchDarkly](https://vercel.com/docs/edge-config/edge-config-integrations/launchdarkly-edge-config)
+    - [Split](https://vercel.com/docs/edge-config/edge-config-integrations/split-edge-config)
+    - [Statsig](https://vercel.com/docs/edge-config/edge-config-integrations/statsig-edge-config)
+- [Marketplace](https://vercel.com/docs/marketplace-storage): Connect Postgres, Redis, NoSQL, and other storage solutions through the Vercel Marketplace. Run SQL queries, edit data, and inspect schemas from the dashboard.
+
+# REST API Reference
+
+Base URL: https://api.vercel.com
+OpenAPI spec: https://openapi.vercel.sh/
+Errors reference: https://vercel.com/docs/rest-api/errors
+SDK: `npm i @vercel/sdk` — type-safe TypeScript wrapper for these endpoints.
+
+## Endpoints
+
+### access-groups
+
+- [Reads an access group](https://vercel.com/docs/rest-api/access-groups/reads-an-access-group) `GET /v1/access-groups/{idOrName}`
+- [Update an access group](https://vercel.com/docs/rest-api/access-groups/update-an-access-group) `POST /v1/access-groups/{idOrName}`
+- [Deletes an access group](https://vercel.com/docs/rest-api/access-groups/deletes-an-access-group) `DELETE /v1/access-groups/{idOrName}`
+- [List members of an access group](https://vercel.com/docs/rest-api/access-groups/list-members-of-an-access-group) `GET /v1/access-groups/{idOrName}/members`
+- [List access groups for a team, project or member](https://vercel.com/docs/rest-api/access-groups/list-access-groups-for-a-team-project-or-member) `GET /v1/access-groups`
+- [Creates an access group](https://vercel.com/docs/rest-api/access-groups/creates-an-access-group) `POST /v1/access-groups`
+- [List projects of an access group](https://vercel.com/docs/rest-api/access-groups/list-projects-of-an-access-group) `GET /v1/access-groups/{idOrName}/projects`
+- [Create an access group project](https://vercel.com/docs/rest-api/access-groups/create-an-access-group-project) `POST /v1/access-groups/{accessGroupIdOrName}/projects`
+- [Reads an access group project](https://vercel.com/docs/rest-api/access-groups/reads-an-access-group-project) `GET /v1/access-groups/{accessGroupIdOrName}/projects/{projectId}`
+- [Update an access group project](https://vercel.com/docs/rest-api/access-groups/update-an-access-group-project) `PATCH /v1/access-groups/{accessGroupIdOrName}/projects/{projectId}`
+- [Delete an access group project](https://vercel.com/docs/rest-api/access-groups/delete-an-access-group-project) `DELETE /v1/access-groups/{accessGroupIdOrName}/projects/{projectId}`
+
+### aliases
+
+- [List Deployment Aliases](https://vercel.com/docs/rest-api/aliases/list-deployment-aliases) `GET /v2/deployments/{id}/aliases`
+- [Assign an Alias](https://vercel.com/docs/rest-api/aliases/assign-an-alias) `POST /v2/deployments/{id}/aliases`
+- [List aliases](https://vercel.com/docs/rest-api/aliases/list-aliases) `GET /v4/aliases`
+- [Get an Alias](https://vercel.com/docs/rest-api/aliases/get-an-alias) `GET /v4/aliases/{idOrAlias}`
+- [Delete an Alias](https://vercel.com/docs/rest-api/aliases/delete-an-alias) `DELETE /v2/aliases/{aliasId}`
+- [Update the protection bypass for a URL](https://vercel.com/docs/rest-api/aliases/update-the-protection-bypass-for-a-url) `PATCH /aliases/{id}/protection-bypass`
+
+### api-observability
+
+- [Lists disabled Observability Plus projects](https://vercel.com/docs/rest-api/api-observability/lists-disabled-observability-plus-projects) `GET /v1/observability/manage/configuration/projects`
+- [Updates a disabled Observability Plus project setting](https://vercel.com/docs/rest-api/api-observability/updates-a-disabled-observability-plus-project-setting) `PUT /v1/observability/manage/configuration/projects/{projectIdOrName}`
+
+### artifacts
+
+- [Record an artifacts cache usage event](https://vercel.com/docs/rest-api/artifacts/record-an-artifacts-cache-usage-event) `POST /v8/artifacts/events`
+- [Get status of Remote Caching for this principal](https://vercel.com/docs/rest-api/artifacts/get-status-of-remote-caching-for-this-principal) `GET /v8/artifacts/status`
+- [Upload a cache artifact](https://vercel.com/docs/rest-api/artifacts/upload-a-cache-artifact) `PUT /v8/artifacts/{hash}`
+- [Download a cache artifact](https://vercel.com/docs/rest-api/artifacts/download-a-cache-artifact) `GET /v8/artifacts/{hash}`
+- [Check if a cache artifact exists](https://vercel.com/docs/rest-api/artifacts/check-if-a-cache-artifact-exists) `HEAD /v8/artifacts/{hash}`
+- [Query information about an artifact](https://vercel.com/docs/rest-api/artifacts/query-information-about-an-artifact) `POST /v8/artifacts`
+
+### authentication
+
+- [SSO Token Exchange](https://vercel.com/docs/rest-api/authentication/sso-token-exchange) `POST /v1/integrations/sso/token`
+- [List Auth Tokens](https://vercel.com/docs/rest-api/authentication/list-auth-tokens) `GET /v6/user/tokens`
+- [Create an Auth Token](https://vercel.com/docs/rest-api/authentication/create-an-auth-token) `POST /v3/user/tokens`
+- [Get Auth Token Metadata](https://vercel.com/docs/rest-api/authentication/get-auth-token-metadata) `GET /v5/user/tokens/{tokenId}`
+- [Delete an authentication token](https://vercel.com/docs/rest-api/authentication/delete-an-authentication-token) `DELETE /v3/user/tokens/{tokenId}`
+
+### billing
+
+- [List FOCUS billing charges](https://vercel.com/docs/rest-api/billing/list-focus-billing-charges) `GET /v1/billing/charges`
+- [List FOCUS contract commitments](https://vercel.com/docs/rest-api/billing/list-focus-contract-commitments) `GET /v1/billing/contract-commitments`
+- [Purchase credits](https://vercel.com/docs/rest-api/billing/purchase-credits) `POST /v1/billing/buy`
+
+### bulk-redirects
+
+- [Stages new redirects for a project.](https://vercel.com/docs/rest-api/bulk-redirects/stages-new-redirects-for-a-project) `PUT /v1/bulk-redirects`
+- [Gets project-level redirects.](https://vercel.com/docs/rest-api/bulk-redirects/gets-project-level-redirects) `GET /v1/bulk-redirects`
+- [Delete project-level redirects.](https://vercel.com/docs/rest-api/bulk-redirects/delete-project-level-redirects) `DELETE /v1/bulk-redirects`
+- [Edit a project-level redirect.](https://vercel.com/docs/rest-api/bulk-redirects/edit-a-project-level-redirect) `PATCH /v1/bulk-redirects`
+- [Restore staged project-level redirects to their production version.](https://vercel.com/docs/rest-api/bulk-redirects/restore-staged-project-level-redirects-to-their-production-version) `POST /v1/bulk-redirects/restore`
+- [Get the version history for a project's redirects.](https://vercel.com/docs/rest-api/bulk-redirects/get-the-version-history-for-a-project-s-redirects) `GET /v1/bulk-redirects/versions`
+- [Promote a staging version to production or restore a previous production version.](https://vercel.com/docs/rest-api/bulk-redirects/promote-a-staging-version-to-production-or-restore-a-previous-production-version) `POST /v1/bulk-redirects/versions`
+
+### certs
+
+- [Get cert by id](https://vercel.com/docs/rest-api/certs/get-cert-by-id) `GET /v8/certs/{id}`
+- [Remove cert](https://vercel.com/docs/rest-api/certs/remove-cert) `DELETE /v8/certs/{id}`
+- [Issue a new cert](https://vercel.com/docs/rest-api/certs/issue-a-new-cert) `POST /v8/certs`
+- [Upload a cert](https://vercel.com/docs/rest-api/certs/upload-a-cert) `PUT /v8/certs`
+
+### checks
+
+- [Creates a new Check](https://vercel.com/docs/rest-api/checks/creates-a-new-check) `POST /v1/deployments/{deploymentId}/checks`
+- [Retrieve a list of all checks](https://vercel.com/docs/rest-api/checks/retrieve-a-list-of-all-checks) `GET /v1/deployments/{deploymentId}/checks`
+- [Get a single check](https://vercel.com/docs/rest-api/checks/get-a-single-check) `GET /v1/deployments/{deploymentId}/checks/{checkId}`
+- [Update a check](https://vercel.com/docs/rest-api/checks/update-a-check) `PATCH /v1/deployments/{deploymentId}/checks/{checkId}`
+- [Rerequest a check](https://vercel.com/docs/rest-api/checks/rerequest-a-check) `POST /v1/deployments/{deploymentId}/checks/{checkId}/rerequest`
+
+### checks-v2
+
+- [List all checks for a project](https://vercel.com/docs/rest-api/checks-v2/list-all-checks-for-a-project) `GET /v2/projects/{projectIdOrName}/checks`
+- [Create a check](https://vercel.com/docs/rest-api/checks-v2/create-a-check) `POST /v2/projects/{projectIdOrName}/checks`
+- [Get a check](https://vercel.com/docs/rest-api/checks-v2/get-a-check) `GET /v2/projects/{projectIdOrName}/checks/{checkId}`
+- [Update a check](https://vercel.com/docs/rest-api/checks-v2/update-a-check) `PATCH /v2/projects/{projectIdOrName}/checks/{checkId}`
+- [Delete a check](https://vercel.com/docs/rest-api/checks-v2/delete-a-check) `DELETE /v2/projects/{projectIdOrName}/checks/{checkId}`
+- [List runs for a check](https://vercel.com/docs/rest-api/checks-v2/list-runs-for-a-check) `GET /v2/projects/{projectIdOrName}/checks/{checkId}/runs`
+- [List check runs for a deployment](https://vercel.com/docs/rest-api/checks-v2/list-check-runs-for-a-deployment) `GET /v2/deployments/{deploymentId}/check-runs`
+- [Create a check run](https://vercel.com/docs/rest-api/checks-v2/create-a-check-run) `POST /v2/deployments/{deploymentId}/check-runs`
+- [Get a check run](https://vercel.com/docs/rest-api/checks-v2/get-a-check-run) `GET /v2/deployments/{deploymentId}/check-runs/{checkRunId}`
+- [Update a check run](https://vercel.com/docs/rest-api/checks-v2/update-a-check-run) `PATCH /v2/deployments/{deploymentId}/check-runs/{checkRunId}`
+
+### connect
+
+- [Create a connector](https://vercel.com/docs/rest-api/connect/create-a-connector) `POST /v1/connect/connectors`
+- [Get a Connect token](https://vercel.com/docs/rest-api/connect/get-a-connect-token) `POST /v1/connect/token/{connector}`
+- [Import Connect tokens](https://vercel.com/docs/rest-api/connect/import-connect-tokens) `POST /v1/connect/token/{connector}/import`
+- [Create a Connect authorization request](https://vercel.com/docs/rest-api/connect/create-a-connect-authorization-request) `POST /v1/connect/authorize/{connector}`
+
+### deployments
+
+- [Get deployment events](https://vercel.com/docs/rest-api/deployments/get-deployment-events) `GET /v3/deployments/{idOrUrl}/events`
+- [Update deployment integration action](https://vercel.com/docs/rest-api/deployments/update-deployment-integration-action) `PATCH /v1/deployments/{deploymentId}/integrations/{integrationConfigurationId}/resources/{resourceId}/actions/{action}`
+- [Get a deployment by ID or URL](https://vercel.com/docs/rest-api/deployments/get-a-deployment-by-id-or-url) `GET /v13/deployments/{idOrUrl}`
+- [Create a new deployment](https://vercel.com/docs/rest-api/deployments/create-a-new-deployment) `POST /v13/deployments`
+- [Cancel a deployment](https://vercel.com/docs/rest-api/deployments/cancel-a-deployment) `PATCH /v12/deployments/{id}/cancel`
+- [Upload Deployment Files](https://vercel.com/docs/rest-api/deployments/upload-deployment-files) `POST /v2/files`
+- [List Deployment Files](https://vercel.com/docs/rest-api/deployments/list-deployment-files) `GET /v6/deployments/{id}/files`
+- [Get Deployment File Contents](https://vercel.com/docs/rest-api/deployments/get-deployment-file-contents) `GET /v8/deployments/{id}/files/{fileId}`
+- [List deployments](https://vercel.com/docs/rest-api/deployments/list-deployments) `GET /v7/deployments`
+- [Delete a Deployment](https://vercel.com/docs/rest-api/deployments/delete-a-deployment) `DELETE /v13/deployments/{id}`
+
+### dns
+
+- [List existing DNS records](https://vercel.com/docs/rest-api/dns/list-existing-dns-records) `GET /v5/domains/{domain}/records`
+- [Create a DNS record](https://vercel.com/docs/rest-api/dns/create-a-dns-record) `POST /v2/domains/{domain}/records`
+- [Update an existing DNS record](https://vercel.com/docs/rest-api/dns/update-an-existing-dns-record) `PATCH /v1/domains/records/{recordId}`
+- [Delete a DNS record](https://vercel.com/docs/rest-api/dns/delete-a-dns-record) `DELETE /v2/domains/{domain}/records/{recordId}`
+
+### domains
+
+- [Get a Domain's configuration](https://vercel.com/docs/rest-api/domains/get-a-domain-s-configuration) `GET /v6/domains/{domain}/config`
+- [Get Domain Verification Record](https://vercel.com/docs/rest-api/domains/get-domain-verification-record) `GET /v9/domains/{domain}/verification`
+- [Claim Domain Ownership](https://vercel.com/docs/rest-api/domains/claim-domain-ownership) `POST /v9/domains/{domain}/claim`
+- [List Project Domains by Apex Domain](https://vercel.com/docs/rest-api/domains/list-project-domains-by-apex-domain) `GET /v1/domains/{domain}/project-domains`
+- [Get Information for a Single Domain](https://vercel.com/docs/rest-api/domains/get-information-for-a-single-domain) `GET /v5/domains/{domain}`
+- [List all the domains](https://vercel.com/docs/rest-api/domains/list-all-the-domains) `GET /v5/domains`
+- [Add an existing domain to the Vercel platform](https://vercel.com/docs/rest-api/domains/add-an-existing-domain-to-the-vercel-platform) `POST /v7/domains`
+- [Update or move apex domain](https://vercel.com/docs/rest-api/domains/update-or-move-apex-domain) `PATCH /v3/domains/{domain}`
+- [Remove a domain by name](https://vercel.com/docs/rest-api/domains/remove-a-domain-by-name) `DELETE /v6/domains/{domain}`
+
+### domains-registrar
+
+- [Get supported TLDs](https://vercel.com/docs/rest-api/domains-registrar/get-supported-tld-s) `GET /v1/registrar/tlds/supported`
+- [Get TLD](https://vercel.com/docs/rest-api/domains-registrar/get-tld) `GET /v1/registrar/tlds/{tld}`
+- [Get TLD price data](https://vercel.com/docs/rest-api/domains-registrar/get-tld-price-data) `GET /v1/registrar/tlds/{tld}/price`
+- [Get availability for a domain](https://vercel.com/docs/rest-api/domains-registrar/get-availability-for-a-domain) `GET /v1/registrar/domains/{domain}/availability`
+- [Get price data for a domain](https://vercel.com/docs/rest-api/domains-registrar/get-price-data-for-a-domain) `GET /v1/registrar/domains/{domain}/price`
+- [Get availability for multiple domains](https://vercel.com/docs/rest-api/domains-registrar/get-availability-for-multiple-domains) `POST /v1/registrar/domains/availability`
+- [Get the auth code for a domain](https://vercel.com/docs/rest-api/domains-registrar/get-the-auth-code-for-a-domain) `GET /v1/registrar/domains/{domain}/auth-code`
+- [Buy a domain](https://vercel.com/docs/rest-api/domains-registrar/buy-a-domain) `POST /v1/registrar/domains/{domain}/buy`
+- [Buy multiple domains](https://vercel.com/docs/rest-api/domains-registrar/buy-multiple-domains) `POST /v1/registrar/domains/buy`
+- [Transfer-in a domain](https://vercel.com/docs/rest-api/domains-registrar/transfer-in-a-domain) `POST /v1/registrar/domains/{domain}/transfer`
+- [Get a domain's transfer status](https://vercel.com/docs/rest-api/domains-registrar/get-a-domain-s-transfer-status) `GET /v1/registrar/domains/{domain}/transfer`
+- [Renew a domain](https://vercel.com/docs/rest-api/domains-registrar/renew-a-domain) `POST /v1/registrar/domains/{domain}/renew`
+- [Update auto-renew for a domain](https://vercel.com/docs/rest-api/domains-registrar/update-auto-renew-for-a-domain) `PATCH /v1/registrar/domains/{domain}/auto-renew`
+- [Update nameservers for a domain](https://vercel.com/docs/rest-api/domains-registrar/update-nameservers-for-a-domain) `PATCH /v1/registrar/domains/{domain}/nameservers`
+- [Get contact verification status for a domain](https://vercel.com/docs/rest-api/domains-registrar/get-contact-verification-status-for-a-domain) `GET /v1/registrar/domains/{domain}/contact-verification`
+- [Get contact info schema](https://vercel.com/docs/rest-api/domains-registrar/get-contact-info-schema) `GET /v1/registrar/domains/{domain}/contact-info/schema`
+- [Get a domain order](https://vercel.com/docs/rest-api/domains-registrar/get-a-domain-order) `GET /v1/registrar/orders/{orderId}`
+
+### drains
+
+- [Create a new Drain](https://vercel.com/docs/rest-api/drains/create-a-new-drain) `POST /v1/drains`
+- [Retrieve a list of all Drains](https://vercel.com/docs/rest-api/drains/retrieve-a-list-of-all-drains) `GET /v1/drains`
+- [Delete a drain](https://vercel.com/docs/rest-api/drains/delete-a-drain) `DELETE /v1/drains/{id}`
+- [Find a Drain by id](https://vercel.com/docs/rest-api/drains/find-a-drain-by-id) `GET /v1/drains/{id}`
+- [Update an existing Drain](https://vercel.com/docs/rest-api/drains/update-an-existing-drain) `PATCH /v1/drains/{id}`
+- [Validate Drain delivery configuration](https://vercel.com/docs/rest-api/drains/validate-drain-delivery-configuration) `POST /v1/drains/test`
+
+### edge-cache
+
+- [Invalidate by tag](https://vercel.com/docs/rest-api/edge-cache/invalidate-by-tag) `POST /v1/edge-cache/invalidate-by-tags`
+- [Dangerously delete by tag](https://vercel.com/docs/rest-api/edge-cache/dangerously-delete-by-tag) `POST /v1/edge-cache/dangerously-delete-by-tags`
+- [Invalidate by source image](https://vercel.com/docs/rest-api/edge-cache/invalidate-by-source-image) `POST /v1/edge-cache/invalidate-by-src-images`
+- [Dangerously delete by source image](https://vercel.com/docs/rest-api/edge-cache/dangerously-delete-by-source-image) `POST /v1/edge-cache/dangerously-delete-by-src-images`
+
+### edge-config
+
+- [Get Edge Configs](https://vercel.com/docs/rest-api/edge-config/get-edge-configs) `GET /v1/edge-config`
+- [Create an Edge Config](https://vercel.com/docs/rest-api/edge-config/create-an-edge-config) `POST /v1/edge-config`
+- [Get an Edge Config](https://vercel.com/docs/rest-api/edge-config/get-an-edge-config) `GET /v1/edge-config/{edgeConfigId}`
+- [Update an Edge Config](https://vercel.com/docs/rest-api/edge-config/update-an-edge-config) `PUT /v1/edge-config/{edgeConfigId}`
+- [Delete an Edge Config](https://vercel.com/docs/rest-api/edge-config/delete-an-edge-config) `DELETE /v1/edge-config/{edgeConfigId}`
+- [Get Edge Config items](https://vercel.com/docs/rest-api/edge-config/get-edge-config-items) `GET /v1/edge-config/{edgeConfigId}/items`
+- [Update Edge Config items in batch](https://vercel.com/docs/rest-api/edge-config/update-edge-config-items-in-batch) `PATCH /v1/edge-config/{edgeConfigId}/items`
+- [Get Edge Config schema](https://vercel.com/docs/rest-api/edge-config/get-edge-config-schema) `GET /v1/edge-config/{edgeConfigId}/schema`
+- [Update Edge Config schema](https://vercel.com/docs/rest-api/edge-config/update-edge-config-schema) `POST /v1/edge-config/{edgeConfigId}/schema`
+- [Delete an Edge Config's schema](https://vercel.com/docs/rest-api/edge-config/delete-an-edge-config-s-schema) `DELETE /v1/edge-config/{edgeConfigId}/schema`
+- [Get an Edge Config item](https://vercel.com/docs/rest-api/edge-config/get-an-edge-config-item) `GET /v1/edge-config/{edgeConfigId}/item/{edgeConfigItemKey}`
+- [Get all tokens of an Edge Config](https://vercel.com/docs/rest-api/edge-config/get-all-tokens-of-an-edge-config) `GET /v1/edge-config/{edgeConfigId}/tokens`
+- [Delete one or more Edge Config tokens](https://vercel.com/docs/rest-api/edge-config/delete-one-or-more-edge-config-tokens) `DELETE /v1/edge-config/{edgeConfigId}/tokens`
+- [Get Edge Config token meta data](https://vercel.com/docs/rest-api/edge-config/get-edge-config-token-meta-data) `GET /v1/edge-config/{edgeConfigId}/token/{token}`
+- [Create an Edge Config token](https://vercel.com/docs/rest-api/edge-config/create-an-edge-config-token) `POST /v1/edge-config/{edgeConfigId}/token`
+- [Get Edge Config backup](https://vercel.com/docs/rest-api/edge-config/get-edge-config-backup) `GET /v1/edge-config/{edgeConfigId}/backups/{edgeConfigBackupVersionId}`
+- [Restore Edge Config backup](https://vercel.com/docs/rest-api/edge-config/restore-edge-config-backup) `POST /v1/edge-config/{edgeConfigId}/backups/{edgeConfigBackupVersionId}/restore`
+- [Get Edge Config backups](https://vercel.com/docs/rest-api/edge-config/get-edge-config-backups) `GET /v1/edge-config/{edgeConfigId}/backups`
+
+### environment
+
+- [Create one or more shared environment variables](https://vercel.com/docs/rest-api/environment/create-one-or-more-shared-environment-variables) `POST /v1/env`
+- [Lists all Shared Environment Variables for a team](https://vercel.com/docs/rest-api/environment/lists-all-shared-environment-variables-for-a-team) `GET /v1/env`
+- [Updates one or more shared environment variables](https://vercel.com/docs/rest-api/environment/updates-one-or-more-shared-environment-variables) `PATCH /v1/env`
+- [Delete one or more Env Var](https://vercel.com/docs/rest-api/environment/delete-one-or-more-env-var) `DELETE /v1/env`
+- [Retrieve the decrypted value of a Shared Environment Variable by id.](https://vercel.com/docs/rest-api/environment/retrieve-the-decrypted-value-of-a-shared-environment-variable-by-id) `GET /v1/env/{id}`
+- [Disconnects a shared environment variable for a given project](https://vercel.com/docs/rest-api/environment/disconnects-a-shared-environment-variable-for-a-given-project) `PATCH /v1/env/{id}/unlink/{projectId}`
+- [Create a custom environment for the current project.](https://vercel.com/docs/rest-api/environment/create-a-custom-environment-for-the-current-project) `POST /v9/projects/{idOrName}/custom-environments`
+- [Retrieve custom environments](https://vercel.com/docs/rest-api/environment/retrieve-custom-environments) `GET /v9/projects/{idOrName}/custom-environments`
+- [Retrieve a custom environment](https://vercel.com/docs/rest-api/environment/retrieve-a-custom-environment) `GET /v9/projects/{idOrName}/custom-environments/{environmentSlugOrId}`
+- [Update a custom environment](https://vercel.com/docs/rest-api/environment/update-a-custom-environment) `PATCH /v9/projects/{idOrName}/custom-environments/{environmentSlugOrId}`
+- [Remove a custom environment](https://vercel.com/docs/rest-api/environment/remove-a-custom-environment) `DELETE /v9/projects/{idOrName}/custom-environments/{environmentSlugOrId}`
+
+### feature-flags
+
+- [List flags](https://vercel.com/docs/rest-api/feature-flags/list-flags) `GET /v2/projects/{projectIdOrName}/feature-flags/flags`
+- [List flags](https://vercel.com/docs/rest-api/feature-flags/list-flags) `GET /v1/projects/{projectIdOrName}/feature-flags/flags`
+- [Create a flag](https://vercel.com/docs/rest-api/feature-flags/create-a-flag) `PUT /v1/projects/{projectIdOrName}/feature-flags/flags`
+- [Get a flag](https://vercel.com/docs/rest-api/feature-flags/get-a-flag) `GET /v1/projects/{projectIdOrName}/feature-flags/flags/{flagIdOrSlug}`
+- [Update a flag](https://vercel.com/docs/rest-api/feature-flags/update-a-flag) `PATCH /v1/projects/{projectIdOrName}/feature-flags/flags/{flagIdOrSlug}`
+- [Delete a flag](https://vercel.com/docs/rest-api/feature-flags/delete-a-flag) `DELETE /v1/projects/{projectIdOrName}/feature-flags/flags/{flagIdOrSlug}`
+- [List flag versions](https://vercel.com/docs/rest-api/feature-flags/list-flag-versions) `GET /v1/projects/{projectIdOrName}/feature-flags/flags/{flagIdOrSlug}/versions`
+- [Get project flag settings](https://vercel.com/docs/rest-api/feature-flags/get-project-flag-settings) `GET /v1/projects/{projectIdOrName}/feature-flags/settings`
+- [Update project flag settings](https://vercel.com/docs/rest-api/feature-flags/update-project-flag-settings) `PATCH /v1/projects/{projectIdOrName}/feature-flags/settings`
+- [List team project flag settings](https://vercel.com/docs/rest-api/feature-flags/list-team-project-flag-settings) `GET /v1/teams/{teamId}/feature-flags/settings`
+- [List all flags for a team](https://vercel.com/docs/rest-api/feature-flags/list-all-flags-for-a-team) `GET /v2/teams/{teamId}/feature-flags/flags`
+- [List all flags for a team](https://vercel.com/docs/rest-api/feature-flags/list-all-flags-for-a-team) `GET /v1/teams/{teamId}/feature-flags/flags`
+- [Create a segment](https://vercel.com/docs/rest-api/feature-flags/create-a-segment) `PUT /v1/projects/{projectIdOrName}/feature-flags/segments`
+- [List segments](https://vercel.com/docs/rest-api/feature-flags/list-segments) `GET /v1/projects/{projectIdOrName}/feature-flags/segments`
+- [Get a segment](https://vercel.com/docs/rest-api/feature-flags/get-a-segment) `GET /v1/projects/{projectIdOrName}/feature-flags/segments/{segmentIdOrSlug}`
+- [Delete a segment](https://vercel.com/docs/rest-api/feature-flags/delete-a-segment) `DELETE /v1/projects/{projectIdOrName}/feature-flags/segments/{segmentIdOrSlug}`
+- [Update a segment](https://vercel.com/docs/rest-api/feature-flags/update-a-segment) `PATCH /v1/projects/{projectIdOrName}/feature-flags/segments/{segmentIdOrSlug}`
+- [Retrieve the feature flags of a deployment](https://vercel.com/docs/rest-api/feature-flags/retrieve-the-feature-flags-of-a-deployment) `GET /v1/deployments/{deploymentId}/feature-flags`
+- [Get all SDK keys](https://vercel.com/docs/rest-api/feature-flags/get-all-sdk-keys) `GET /v1/projects/{projectIdOrName}/feature-flags/sdk-keys`
+- [Create an SDK key](https://vercel.com/docs/rest-api/feature-flags/create-an-sdk-key) `PUT /v1/projects/{projectIdOrName}/feature-flags/sdk-keys`
+- [Delete an SDK key](https://vercel.com/docs/rest-api/feature-flags/delete-an-sdk-key) `DELETE /v1/projects/{projectIdOrName}/feature-flags/sdk-keys/{hashKey}`
+
+### integrations
+
+- [List git namespaces by provider](https://vercel.com/docs/rest-api/integrations/list-git-namespaces-by-provider) `GET /v1/integrations/git-namespaces`
+- [List git repositories linked to namespace by provider](https://vercel.com/docs/rest-api/integrations/list-git-repositories-linked-to-namespace-by-provider) `GET /v1/integrations/search-repo`
+- [List integration billing plans](https://vercel.com/docs/rest-api/integrations/list-integration-billing-plans) `GET /v1/integrations/integration/{integrationIdOrSlug}/products/{productIdOrSlug}/plans`
+- [Connect integration resource to project](https://vercel.com/docs/rest-api/integrations/connect-integration-resource-to-project) `POST /v1/integrations/installations/{integrationConfigurationId}/resources/{resourceId}/connections`
+- [Get configurations for the authenticated user or team](https://vercel.com/docs/rest-api/integrations/get-configurations-for-the-authenticated-user-or-team) `GET /v1/integrations/configurations`
+- [Retrieve an integration configuration](https://vercel.com/docs/rest-api/integrations/retrieve-an-integration-configuration) `GET /v1/integrations/configuration/{id}`
+- [Delete an integration configuration](https://vercel.com/docs/rest-api/integrations/delete-an-integration-configuration) `DELETE /v1/integrations/configuration/{id}`
+- [List products for integration configuration](https://vercel.com/docs/rest-api/integrations/list-products-for-integration-configuration) `GET /v1/integrations/configuration/{id}/products`
+- [Create integration store (free and paid plans)](https://vercel.com/docs/rest-api/integrations/create-integration-store-free-and-paid-plans) `POST /v1/storage/stores/integration/direct`
+
+### logDrains
+
+- [Retrieves a Configurable Log Drain (deprecated)](https://vercel.com/docs/rest-api/logDrains/retrieves-a-configurable-log-drain-deprecated) `GET /v1/log-drains/{id}`
+- [Deletes a Configurable Log Drain (deprecated)](https://vercel.com/docs/rest-api/logDrains/deletes-a-configurable-log-drain-deprecated) `DELETE /v1/log-drains/{id}`
+- [Retrieves a list of all the Log Drains (deprecated)](https://vercel.com/docs/rest-api/logDrains/retrieves-a-list-of-all-the-log-drains-deprecated) `GET /v1/log-drains`
+- [Creates a Configurable Log Drain (deprecated)](https://vercel.com/docs/rest-api/logDrains/creates-a-configurable-log-drain-deprecated) `POST /v1/log-drains`
+- [Retrieves a list of Integration log drains (deprecated)](https://vercel.com/docs/rest-api/logDrains/retrieves-a-list-of-integration-log-drains-deprecated) `GET /v2/integrations/log-drains`
+- [Creates a new Integration Log Drain (deprecated)](https://vercel.com/docs/rest-api/logDrains/creates-a-new-integration-log-drain-deprecated) `POST /v2/integrations/log-drains`
+- [Deletes the Integration log drain with the provided `id` (deprecated)](https://vercel.com/docs/rest-api/logDrains/deletes-the-integration-log-drain-with-the-provided-id-deprecated) `DELETE /v1/integrations/log-drains/{id}`
+
+### logs
+
+- [Get logs for a deployment](https://vercel.com/docs/rest-api/logs/get-logs-for-a-deployment) `GET /v1/projects/{projectId}/deployments/{deploymentId}/runtime-logs`
+
+### marketplace
+
+- [Update Installation](https://vercel.com/docs/rest-api/marketplace/update-installation) `PATCH /v1/installations/{integrationConfigurationId}`
+- [Get Account Information](https://vercel.com/docs/rest-api/marketplace/get-account-information) `GET /v1/installations/{integrationConfigurationId}/account`
+- [Get Member Information](https://vercel.com/docs/rest-api/marketplace/get-member-information) `GET /v1/installations/{integrationConfigurationId}/member/{memberId}`
+- [Create Event](https://vercel.com/docs/rest-api/marketplace/create-event) `POST /v1/installations/{integrationConfigurationId}/events`
+- [Get Integration Resources](https://vercel.com/docs/rest-api/marketplace/get-integration-resources) `GET /v1/installations/{integrationConfigurationId}/resources`
+- [Get Integration Resource](https://vercel.com/docs/rest-api/marketplace/get-integration-resource) `GET /v1/installations/{integrationConfigurationId}/resources/{resourceId}`
+- [Delete Integration Resource](https://vercel.com/docs/rest-api/marketplace/delete-integration-resource) `DELETE /v1/installations/{integrationConfigurationId}/resources/{resourceId}`
+- [Import Resource](https://vercel.com/docs/rest-api/marketplace/import-resource) `PUT /v1/installations/{integrationConfigurationId}/resources/{resourceId}`
+- [Update Resource](https://vercel.com/docs/rest-api/marketplace/update-resource) `PATCH /v1/installations/{integrationConfigurationId}/resources/{resourceId}`
+- [Submit Billing Data](https://vercel.com/docs/rest-api/marketplace/submit-billing-data) `POST /v1/installations/{integrationConfigurationId}/billing`
+- [Submit Invoice](https://vercel.com/docs/rest-api/marketplace/submit-invoice) `POST /v1/installations/{integrationConfigurationId}/billing/invoices`
+- [Finalize Installation](https://vercel.com/docs/rest-api/marketplace/finalize-installation) `POST /v1/installations/{integrationConfigurationId}/billing/finalize`
+- [Get Invoice](https://vercel.com/docs/rest-api/marketplace/get-invoice) `GET /v1/installations/{integrationConfigurationId}/billing/invoices/{invoiceId}`
+- [Invoice Actions](https://vercel.com/docs/rest-api/marketplace/invoice-actions) `POST /v1/installations/{integrationConfigurationId}/billing/invoices/{invoiceId}/actions`
+- [Submit Prepayment Balances](https://vercel.com/docs/rest-api/marketplace/submit-prepayment-balances) `POST /v1/installations/{integrationConfigurationId}/billing/balance`
+- [Deprecated: true. Update Resource Secrets (Deprecated)](https://vercel.com/docs/rest-api/marketplace/deprecated-true-update-resource-secrets-deprecated) `PUT /v1/installations/{integrationConfigurationId}/products/{integrationProductIdOrSlug}/resources/{resourceId}/secrets`
+- [Update Resource Secrets](https://vercel.com/docs/rest-api/marketplace/update-resource-secrets) `PUT /v1/installations/{integrationConfigurationId}/resources/{resourceId}/secrets`
+- [Create one or multiple experimentation items](https://vercel.com/docs/rest-api/marketplace/create-one-or-multiple-experimentation-items) `POST /v1/installations/{integrationConfigurationId}/resources/{resourceId}/experimentation/items`
+- [Patch an existing experimentation item](https://vercel.com/docs/rest-api/marketplace/patch-an-existing-experimentation-item) `PATCH /v1/installations/{integrationConfigurationId}/resources/{resourceId}/experimentation/items/{itemId}`
+- [Delete an existing experimentation item](https://vercel.com/docs/rest-api/marketplace/delete-an-existing-experimentation-item) `DELETE /v1/installations/{integrationConfigurationId}/resources/{resourceId}/experimentation/items/{itemId}`
+- [Get the data of a user-provided Edge Config](https://vercel.com/docs/rest-api/marketplace/get-the-data-of-a-user-provided-edge-config) `HEAD /v1/installations/{integrationConfigurationId}/resources/{resourceId}/experimentation/edge-config`
+- [Get the data of a user-provided Edge Config](https://vercel.com/docs/rest-api/marketplace/get-the-data-of-a-user-provided-edge-config) `GET /v1/installations/{integrationConfigurationId}/resources/{resourceId}/experimentation/edge-config`
+- [Push data into a user-provided Edge Config](https://vercel.com/docs/rest-api/marketplace/push-data-into-a-user-provided-edge-config) `PUT /v1/installations/{integrationConfigurationId}/resources/{resourceId}/experimentation/edge-config`
+
+### microfrontends
+
+- [List microfrontends groups](https://vercel.com/docs/rest-api/microfrontends/list-microfrontends-groups) `GET /v1/microfrontends/groups`
+- [List projects in a microfrontends group](https://vercel.com/docs/rest-api/microfrontends/list-projects-in-a-microfrontends-group) `GET /v1/microfrontends/groups/{groupId}/projects`
+- [Get microfrontends config for a deployment](https://vercel.com/docs/rest-api/microfrontends/get-microfrontends-config-for-a-deployment) `GET /v1/microfrontends/{deploymentId}/config`
+- [Get microfrontends config for a project](https://vercel.com/docs/rest-api/microfrontends/get-microfrontends-config-for-a-project) `GET /v1/microfrontends/projects/{projectIdOrName}/production-mfe-config`
+- [Create a microfrontends group with applications](https://vercel.com/docs/rest-api/microfrontends/create-a-microfrontends-group-with-applications) `POST /v1/microfrontends/group`
+
+### networking
+
+- [List Secure Compute networks](https://vercel.com/docs/rest-api/networking/list-secure-compute-networks) `GET /v1/connect/networks`
+- [Create a Secure Compute network](https://vercel.com/docs/rest-api/networking/create-a-secure-compute-network) `POST /v1/connect/networks`
+- [Delete a Secure Compute network](https://vercel.com/docs/rest-api/networking/delete-a-secure-compute-network) `DELETE /v1/connect/networks/{networkId}`
+- [Update a Secure Compute network](https://vercel.com/docs/rest-api/networking/update-a-secure-compute-network) `PATCH /v1/connect/networks/{networkId}`
+- [Read a Secure Compute network](https://vercel.com/docs/rest-api/networking/read-a-secure-compute-network) `GET /v1/connect/networks/{networkId}`
+- [Configures Static IPs for a project](https://vercel.com/docs/rest-api/networking/configures-static-ip-s-for-a-project) `PATCH /v1/projects/{idOrName}/shared-connect-links`
+
+### project-routes
+
+- [Get project routing rules](https://vercel.com/docs/rest-api/project-routes/get-project-routing-rules) `GET /v1/projects/{projectId}/routes`
+- [Stage routing rules](https://vercel.com/docs/rest-api/project-routes/stage-routing-rules) `PUT /v1/projects/{projectId}/routes`
+- [Add a routing rule](https://vercel.com/docs/rest-api/project-routes/add-a-routing-rule) `POST /v1/projects/{projectId}/routes`
+- [Delete routing rules](https://vercel.com/docs/rest-api/project-routes/delete-routing-rules) `DELETE /v1/projects/{projectId}/routes`
+- [Edit a routing rule](https://vercel.com/docs/rest-api/project-routes/edit-a-routing-rule) `PATCH /v1/projects/{projectId}/routes/{routeId}`
+- [Generate a routing rule from natural language](https://vercel.com/docs/rest-api/project-routes/generate-a-routing-rule-from-natural-language) `POST /v1/projects/{projectId}/routes/generate`
+- [Get routing rule version history](https://vercel.com/docs/rest-api/project-routes/get-routing-rule-version-history) `GET /v1/projects/{projectId}/routes/versions`
+- [Promote, restore, or discard a routing rule version](https://vercel.com/docs/rest-api/project-routes/promote-restore-or-discard-a-routing-rule-version) `POST /v1/projects/{projectId}/routes/versions`
+
+### projectMembers
+
+- [List project members](https://vercel.com/docs/rest-api/projectMembers/list-project-members) `GET /v1/projects/{idOrName}/members`
+- [Adds a new member to a project.](https://vercel.com/docs/rest-api/projectMembers/adds-a-new-member-to-a-project) `POST /v1/projects/{idOrName}/members`
+- [Remove a Project Member](https://vercel.com/docs/rest-api/projectMembers/remove-a-project-member) `DELETE /v1/projects/{idOrName}/members/{uid}`
+
+### projects
+
+- [Retrieve a list of projects](https://vercel.com/docs/rest-api/projects/retrieve-a-list-of-projects) `GET /v10/projects`
+- [Create a new project](https://vercel.com/docs/rest-api/projects/create-a-new-project) `POST /v11/projects`
+- [Find a project by id or name](https://vercel.com/docs/rest-api/projects/find-a-project-by-id-or-name) `GET /v9/projects/{idOrName}`
+- [Update an existing project](https://vercel.com/docs/rest-api/projects/update-an-existing-project) `PATCH /v9/projects/{idOrName}`
+- [Delete a Project](https://vercel.com/docs/rest-api/projects/delete-a-project) `DELETE /v9/projects/{idOrName}`
+- [Upload a project avatar](https://vercel.com/docs/rest-api/projects/upload-a-project-avatar) `POST /v1/projects/{idOrName}/avatar`
+- [Retrieve project domains by project by id or name](https://vercel.com/docs/rest-api/projects/retrieve-project-domains-by-project-by-id-or-name) `GET /v9/projects/{idOrName}/domains`
+- [Get a project domain](https://vercel.com/docs/rest-api/projects/get-a-project-domain) `GET /v9/projects/{idOrName}/domains/{domain}`
+- [Update a project domain](https://vercel.com/docs/rest-api/projects/update-a-project-domain) `PATCH /v9/projects/{idOrName}/domains/{domain}`
+- [Remove a domain from a project](https://vercel.com/docs/rest-api/projects/remove-a-domain-from-a-project) `DELETE /v9/projects/{idOrName}/domains/{domain}`
+- [Add a domain to a project](https://vercel.com/docs/rest-api/projects/add-a-domain-to-a-project) `POST /v10/projects/{idOrName}/domains`
+- [Move a project domain](https://vercel.com/docs/rest-api/projects/move-a-project-domain) `POST /v1/projects/{idOrName}/domains/{domain}/move`
+- [Verify project domain](https://vercel.com/docs/rest-api/projects/verify-project-domain) `POST /v9/projects/{idOrName}/domains/{domain}/verify`
+- [Retrieve the environment variables of a project by id or name](https://vercel.com/docs/rest-api/projects/retrieve-the-environment-variables-of-a-project-by-id-or-name) `GET /v10/projects/{idOrName}/env`
+- [Create one or more environment variables](https://vercel.com/docs/rest-api/projects/create-one-or-more-environment-variables) `POST /v10/projects/{idOrName}/env`
+- [Retrieve the decrypted value of an environment variable of a project by id](https://vercel.com/docs/rest-api/projects/retrieve-the-decrypted-value-of-an-environment-variable-of-a-project-by-id) `GET /v1/projects/{idOrName}/env/{id}`
+- [Remove an environment variable](https://vercel.com/docs/rest-api/projects/remove-an-environment-variable) `DELETE /v9/projects/{idOrName}/env/{id}`
+- [Edit an environment variable](https://vercel.com/docs/rest-api/projects/edit-an-environment-variable) `PATCH /v9/projects/{idOrName}/env/{id}`
+- [Batch remove environment variables](https://vercel.com/docs/rest-api/projects/batch-remove-environment-variables) `DELETE /v1/projects/{idOrName}/env`
+- [Create project transfer request](https://vercel.com/docs/rest-api/projects/create-project-transfer-request) `POST /projects/{idOrName}/transfer-request`
+- [Accept project transfer request](https://vercel.com/docs/rest-api/projects/accept-project-transfer-request) `PUT /projects/transfer-request/{code}`
+- [Update Protection Bypass for Automation](https://vercel.com/docs/rest-api/projects/update-protection-bypass-for-automation) `PATCH /v1/projects/{idOrName}/protection-bypass`
+- [Point production traffic to a previous production deployment by ID](https://vercel.com/docs/rest-api/projects/point-production-traffic-to-a-previous-production-deployment-by-id) `POST /v1/projects/{projectId}/rollback/{deploymentId}`
+- [Updates the description for a rollback](https://vercel.com/docs/rest-api/projects/updates-the-description-for-a-rollback) `PATCH /v1/projects/{projectId}/rollback/{deploymentId}/update-description`
+- [Update the microfrontends settings](https://vercel.com/docs/rest-api/projects/update-the-microfrontends-settings) `PATCH /v1/projects/{projectId}/microfrontends`
+- [Point production traffic to a given deployment](https://vercel.com/docs/rest-api/projects/point-production-traffic-to-a-given-deployment) `POST /v10/projects/{projectId}/promote/{deploymentId}`
+- [Gets a list of aliases with status for the current promote](https://vercel.com/docs/rest-api/projects/gets-a-list-of-aliases-with-status-for-the-current-promote) `GET /v1/projects/{projectId}/promote/aliases`
+- [Pause a project](https://vercel.com/docs/rest-api/projects/pause-a-project) `POST /v1/projects/{projectId}/pause`
+- [Unpause a project](https://vercel.com/docs/rest-api/projects/unpause-a-project) `POST /v1/projects/{projectId}/unpause`
+
+### rolling-release
+
+- [Get rolling release billing status](https://vercel.com/docs/rest-api/rolling-release/get-rolling-release-billing-status) `GET /v1/projects/{idOrName}/rolling-release/billing`
+- [Get rolling release configuration](https://vercel.com/docs/rest-api/rolling-release/get-rolling-release-configuration) `GET /v1/projects/{idOrName}/rolling-release/config`
+- [Delete rolling release configuration](https://vercel.com/docs/rest-api/rolling-release/delete-rolling-release-configuration) `DELETE /v1/projects/{idOrName}/rolling-release/config`
+- [Update the rolling release settings for the project](https://vercel.com/docs/rest-api/rolling-release/update-the-rolling-release-settings-for-the-project) `PATCH /v1/projects/{idOrName}/rolling-release/config`
+- [Get the active rolling release information for a project](https://vercel.com/docs/rest-api/rolling-release/get-the-active-rolling-release-information-for-a-project) `GET /v1/projects/{idOrName}/rolling-release`
+- [Update the active rolling release to the next stage for a project](https://vercel.com/docs/rest-api/rolling-release/update-the-active-rolling-release-to-the-next-stage-for-a-project) `POST /v1/projects/{idOrName}/rolling-release/approve-stage`
+- [Complete the rolling release for the project](https://vercel.com/docs/rest-api/rolling-release/complete-the-rolling-release-for-the-project) `POST /v1/projects/{idOrName}/rolling-release/complete`
+
+### sandboxes
+
+- [List sandboxes](https://vercel.com/docs/rest-api/sandboxes/list-sandboxes) `GET /v2/sandboxes`
+- [Create a named sandbox](https://vercel.com/docs/rest-api/sandboxes/create-a-named-sandbox) `POST /v2/sandboxes`
+- [List drives](https://vercel.com/docs/rest-api/sandboxes/list-drives) `GET /v2/sandboxes/drives`
+- [Get or create a drive](https://vercel.com/docs/rest-api/sandboxes/get-or-create-a-drive) `POST /v2/sandboxes/drives/{name}`
+- [Delete a drive](https://vercel.com/docs/rest-api/sandboxes/delete-a-drive) `DELETE /v2/sandboxes/drives/{name}`
+- [List snapshots](https://vercel.com/docs/rest-api/sandboxes/list-snapshots) `GET /v2/sandboxes/snapshots`
+- [Get a snapshot](https://vercel.com/docs/rest-api/sandboxes/get-a-snapshot) `GET /v2/sandboxes/snapshots/{snapshotId}`
+- [Delete a snapshot](https://vercel.com/docs/rest-api/sandboxes/delete-a-snapshot) `DELETE /v2/sandboxes/snapshots/{snapshotId}`
+- [List sessions](https://vercel.com/docs/rest-api/sandboxes/list-sessions) `GET /v2/sandboxes/sessions`
+- [Get a session](https://vercel.com/docs/rest-api/sandboxes/get-a-session) `GET /v2/sandboxes/sessions/{sessionId}`
+- [Get a named sandbox](https://vercel.com/docs/rest-api/sandboxes/get-a-named-sandbox) `GET /v2/sandboxes/{name}`
+- [Update a sandbox](https://vercel.com/docs/rest-api/sandboxes/update-a-sandbox) `PATCH /v2/sandboxes/{name}`
+- [Delete a sandbox](https://vercel.com/docs/rest-api/sandboxes/delete-a-sandbox) `DELETE /v2/sandboxes/{name}`
+- [List commands](https://vercel.com/docs/rest-api/sandboxes/list-commands) `GET /v2/sandboxes/sessions/{sessionId}/cmd`
+- [Execute a command](https://vercel.com/docs/rest-api/sandboxes/execute-a-command) `POST /v2/sandboxes/sessions/{sessionId}/cmd`
+- [Get a command](https://vercel.com/docs/rest-api/sandboxes/get-a-command) `GET /v2/sandboxes/sessions/{sessionId}/cmd/{cmdId}`
+- [Kill a command](https://vercel.com/docs/rest-api/sandboxes/kill-a-command) `POST /v2/sandboxes/sessions/{sessionId}/cmd/{cmdId}/kill`
+- [Stream command logs](https://vercel.com/docs/rest-api/sandboxes/stream-command-logs) `GET /v2/sandboxes/sessions/{sessionId}/cmd/{cmdId}/logs`
+- [Stop a session](https://vercel.com/docs/rest-api/sandboxes/stop-a-session) `POST /v2/sandboxes/sessions/{sessionId}/stop`
+- [Extend session timeout](https://vercel.com/docs/rest-api/sandboxes/extend-session-timeout) `POST /v2/sandboxes/sessions/{sessionId}/extend-timeout`
+- [Update network policy](https://vercel.com/docs/rest-api/sandboxes/update-network-policy) `POST /v2/sandboxes/sessions/{sessionId}/network-policy`
+- [Read a file](https://vercel.com/docs/rest-api/sandboxes/read-a-file) `POST /v2/sandboxes/sessions/{sessionId}/fs/read`
+- [Create a directory](https://vercel.com/docs/rest-api/sandboxes/create-a-directory) `POST /v2/sandboxes/sessions/{sessionId}/fs/mkdir`
+- [Write files](https://vercel.com/docs/rest-api/sandboxes/write-files) `POST /v2/sandboxes/sessions/{sessionId}/fs/write`
+- [Create a snapshot](https://vercel.com/docs/rest-api/sandboxes/create-a-snapshot) `POST /v2/sandboxes/sessions/{sessionId}/snapshot`
+
+### security
+
+- [Update Attack Challenge mode](https://vercel.com/docs/rest-api/security/update-attack-challenge-mode) `POST /v1/security/attack-mode`
+- [Put Firewall Configuration](https://vercel.com/docs/rest-api/security/put-firewall-configuration) `PUT /v1/security/firewall/config`
+- [Update Firewall Configuration](https://vercel.com/docs/rest-api/security/update-firewall-configuration) `PATCH /v1/security/firewall/config`
+- [Read Firewall Configuration](https://vercel.com/docs/rest-api/security/read-firewall-configuration) `GET /v1/security/firewall/config/{configVersion}`
+- [Read active attack data](https://vercel.com/docs/rest-api/security/read-active-attack-data) `GET /v1/security/firewall/attack-status`
+- [Read System Bypass](https://vercel.com/docs/rest-api/security/read-system-bypass) `GET /v1/security/firewall/bypass`
+- [Create System Bypass Rule](https://vercel.com/docs/rest-api/security/create-system-bypass-rule) `POST /v1/security/firewall/bypass`
+- [Remove System Bypass Rule](https://vercel.com/docs/rest-api/security/remove-system-bypass-rule) `DELETE /v1/security/firewall/bypass`
+- [Read Firewall Actions by Project](https://vercel.com/docs/rest-api/security/read-firewall-actions-by-project) `GET /v1/security/firewall/events`
+
+### teams
+
+- [List team members](https://vercel.com/docs/rest-api/teams/list-team-members) `GET /v3/teams/{teamId}/members`
+- [Invite a user](https://vercel.com/docs/rest-api/teams/invite-a-user) `POST /v2/teams/{teamId}/members`
+- [Request access to a team](https://vercel.com/docs/rest-api/teams/request-access-to-a-team) `POST /v1/teams/{teamId}/request`
+- [Get access request status](https://vercel.com/docs/rest-api/teams/get-access-request-status) `GET /v1/teams/{teamId}/request/{userId}`
+- [Join a team](https://vercel.com/docs/rest-api/teams/join-a-team) `POST /v1/teams/{teamId}/members/teams/join`
+- [Update a Team Member](https://vercel.com/docs/rest-api/teams/update-a-team-member) `PATCH /v1/teams/{teamId}/members/{uid}`
+- [Remove a Team Member](https://vercel.com/docs/rest-api/teams/remove-a-team-member) `DELETE /v1/teams/{teamId}/members/{uid}`
+- [Get a Team](https://vercel.com/docs/rest-api/teams/get-a-team) `GET /v2/teams/{teamId}`
+- [Update a Team](https://vercel.com/docs/rest-api/teams/update-a-team) `PATCH /v2/teams/{teamId}`
+- [List all teams](https://vercel.com/docs/rest-api/teams/list-all-teams) `GET /v2/teams`
+- [Create a Team](https://vercel.com/docs/rest-api/teams/create-a-team) `POST /v1/teams`
+- [Update Team Directory Sync Role Mappings](https://vercel.com/docs/rest-api/teams/update-team-directory-sync-role-mappings) `POST /v1/teams/{teamId}/dsync-roles`
+- [Delete a Team](https://vercel.com/docs/rest-api/teams/delete-a-team) `DELETE /v1/teams/{teamId}`
+- [Delete a Team invite code](https://vercel.com/docs/rest-api/teams/delete-a-team-invite-code) `DELETE /v1/teams/{teamId}/invites/{inviteId}`
+- [Update a microfrontends group](https://vercel.com/docs/rest-api/teams/update-a-microfrontends-group) `PATCH /v1/teams/{teamId}/microfrontends/{groupId}`
+- [Delete a microfrontends group](https://vercel.com/docs/rest-api/teams/delete-a-microfrontends-group) `DELETE /v1/teams/{teamId}/microfrontends/{groupId}`
+
+### user
+
+- [List User Events](https://vercel.com/docs/rest-api/user/list-user-events) `GET /v3/events`
+- [List Event Types](https://vercel.com/docs/rest-api/user/list-event-types) `GET /v1/events/types`
+- [Get the User](https://vercel.com/docs/rest-api/user/get-the-user) `GET /v2/user`
+- [Delete User Account](https://vercel.com/docs/rest-api/user/delete-user-account) `DELETE /v1/user`
+
+### web-analytics
+
+- [Aggregates page views](https://vercel.com/docs/rest-api/web-analytics/aggregates-page-views) `GET /v1/query/web-analytics/visits/aggregate`
+- [Aggregates custom events](https://vercel.com/docs/rest-api/web-analytics/aggregates-custom-events) `GET /v1/query/web-analytics/events/aggregate`
+- [Counts page views](https://vercel.com/docs/rest-api/web-analytics/counts-page-views) `GET /v1/query/web-analytics/visits/count`
+- [Counts custom events](https://vercel.com/docs/rest-api/web-analytics/counts-custom-events) `GET /v1/query/web-analytics/events/count`
+
+### webhooks
+
+- [Creates a webhook](https://vercel.com/docs/rest-api/webhooks/creates-a-webhook) `POST /v1/webhooks`
+- [Get a list of webhooks](https://vercel.com/docs/rest-api/webhooks/get-a-list-of-webhooks) `GET /v1/webhooks`
+- [Get a webhook](https://vercel.com/docs/rest-api/webhooks/get-a-webhook) `GET /v1/webhooks/{id}`
+- [Deletes a webhook](https://vercel.com/docs/rest-api/webhooks/deletes-a-webhook) `DELETE /v1/webhooks/{id}`
+
+
+## SDK Examples
+
+- [Deployment Automation](https://vercel.com/docs/rest-api/sdk/examples/deployments-automation)
+- [Domain Management](https://vercel.com/docs/rest-api/sdk/examples/domain-management)
+- [Environment Variables](https://vercel.com/docs/rest-api/sdk/examples/environment-variables)
+- [Vercel WAF Management](https://vercel.com/docs/rest-api/sdk/examples/firewall-management)
+- [Integrations](https://vercel.com/docs/rest-api/sdk/examples/integrations)
+- [Logs and Monitoring](https://vercel.com/docs/rest-api/sdk/examples/logs-monitoring)
+- [Managing Redirects](https://vercel.com/docs/rest-api/sdk/examples/managing-redirects)
+- [Project Management](https://vercel.com/docs/rest-api/sdk/examples/project-management)
+- [Rolling Releases Management](https://vercel.com/docs/rest-api/sdk/examples/rolling-releases)
+- [Team and User Management](https://vercel.com/docs/rest-api/sdk/examples/team-management)
+
+# Knowledge Base
+
+## Topics
+
+- [Account](https://vercel.com/kb/account)
+- [Agent Stack](https://vercel.com/kb/agent-stack)
+- [AI](https://vercel.com/kb/ai)
+- [AI Gateway](https://vercel.com/kb/ai-gateway)
+- [AI SDK](https://vercel.com/kb/ai-sdk)
+- [Architecture](https://vercel.com/kb/architecture)
+- [Backend](https://vercel.com/kb/backend)
+- [Build and Deploy](https://vercel.com/kb/build-and-deploy)
+- [CDN](https://vercel.com/kb/cdn)
+- [Chat SDK](https://vercel.com/kb/chat-sdk)
+- [Claude Design](https://vercel.com/kb/claude-design)
+- [Collaboration](https://vercel.com/kb/collaboration)
+- [Comparisons](https://vercel.com/kb/comparisons)
+- [Elysia](https://vercel.com/kb/elysia)
+- [eve](https://vercel.com/kb/eve)
+- [Express](https://vercel.com/kb/express)
+- [FastAPI](https://vercel.com/kb/fastapi)
+- [Fastify](https://vercel.com/kb/fastify)
+- [Flask](https://vercel.com/kb/flask)
+- [Frameworks](https://vercel.com/kb/framework)
+- [Frontend](https://vercel.com/kb/frontend)
+- [H3](https://vercel.com/kb/h3)
+- [Hono](https://vercel.com/kb/hono)
+- [Infrastructure and Compute](https://vercel.com/kb/infrastructure-and-compute)
+- [Integrations](https://vercel.com/kb/integrations)
+- [Koa](https://vercel.com/kb/koa)
+- [Limits and Pricing](https://vercel.com/kb/limits-and-pricing)
+- [Migrations](https://vercel.com/kb/migrations)
+- [NestJS](https://vercel.com/kb/nestjs)
+- [Nitro](https://vercel.com/kb/nitro)
+- [Observability](https://vercel.com/kb/observability)
+- [Security](https://vercel.com/kb/security)
+- [Storage and Caching](https://vercel.com/kb/storage)
+- [TanStack](https://vercel.com/kb/tanstack)
+- [Vercel Agent](https://vercel.com/kb/vercel-agent)
+- [Vercel Connect](https://vercel.com/kb/vercel-connect)
+- [Vercel Drop](https://vercel.com/kb/vercel-drop)
+- [Vercel Passport](https://vercel.com/kb/vercel-passport)
+- [Vercel Sandbox](https://vercel.com/kb/vercel-sandbox)
+- [Webflow Cloud](https://vercel.com/kb/webflow-cloud)
+- [Workflow SDK](https://vercel.com/kb/workflow-sdk)
+- [xmcp](https://vercel.com/kb/xmcp)
+
+## Guides
+
+- [“Cannot Find Matching Keyid” Errors or “Corepack/PNPM Not Found” on GitHub Actions](https://vercel.com/kb/guide/corepack-errors-github-actions)
+- [A/B Testing on Vercel](https://vercel.com/kb/guide/ab-testing-on-vercel)
+- [Accessing Vercel-hosted sites from mainland China](https://vercel.com/kb/guide/accessing-vercel-hosted-sites-from-mainland-china)
+- [Add Auth to a Next.js Site with Magic.link](https://vercel.com/kb/guide/add-auth-to-nextjs-with-magic)
+- [Add MCP Apps to your AI SDK application](https://vercel.com/kb/guide/ai-sdk-mcp-apps)
+- [Add Rate Limiting with Vercel](https://vercel.com/kb/guide/add-rate-limiting-vercel)
+- [Add skills to your AI SDK agents](https://vercel.com/kb/guide/ai-sdk-skill-uploads)
+- [Add structured application logs to Vercel Functions](https://vercel.com/kb/guide/add-structured-application-logs-to-vercel-functions)
+- [Adding a response header](https://vercel.com/kb/guide/add-response-header)
+- [Adding keyboard shortcuts to React apps with TanStack Hotkeys](https://vercel.com/kb/guide/adding-keyboard-shortcuts-to-react-apps-with-tanstack-hotkeys)
+- [Agent Readability: A Specification for AI-Optimized Websites](https://vercel.com/kb/guide/agent-readability-spec)
+- [Agent Skills: Creating, Installing, and Sharing Reusable Agent Context](https://vercel.com/kb/guide/agent-skills-creating-installing-and-sharing-reusable-agent-context)
+- [AI Agents on Vercel](https://vercel.com/kb/guide/ai-agents)
+- [An Introduction to Evals](https://vercel.com/kb/guide/an-introduction-to-evals)
+- [Application Authentication on Vercel](https://vercel.com/kb/guide/application-authentication-on-vercel)
+- [Are Vercel Preview Deployments indexed by search engines?](https://vercel.com/kb/guide/are-vercel-preview-deployment-indexed-by-search-engines)
+- [Astro on Vercel vs Webflow Cloud](https://vercel.com/kb/guide/astro-on-vercel-vs-webflow-cloud)
+- [Avoiding duplicate-content SEO with vercel.app URLs and custom domains](https://vercel.com/kb/guide/avoiding-duplicate-content-with-vercel-app-urls)
+- [Block PHP requests](https://vercel.com/kb/guide/block-php-requests)
+- [Blocking traffic from a specific IP address.](https://vercel.com/kb/guide/traffic-spikes)
+- [Build a ChatGPT Connector (MCP server)](https://vercel.com/kb/guide/mcp-server-chatgpt-connector)
+- [Build a Claude Managed Agent with Vercel Sandbox](https://vercel.com/kb/guide/run-claude-managed-agent-tools-with-vercel-sandbox)
+- [Build a Claude Managed Agent with Vercel Workflow](https://vercel.com/kb/guide/claude-managed-agent-vercel)
+- [Build a daily digest bot with Chat SDK and Workflow SDK](https://vercel.com/kb/guide/daily-digest-bot-with-chat-sdk-and-workflow-sdk)
+- [Build a fullstack app with Next.js 16 and Prisma Postgres](https://vercel.com/kb/guide/nextjs-prisma-postgres)
+- [Build a multi-tenant app with Next.js and Vercel](https://vercel.com/kb/guide/nextjs-multi-tenant-application)
+- [Build a real-time chat app with WebSockets on Vercel](https://vercel.com/kb/guide/real-time-chat-websockets)
+- [Build a web research agent with Workflow SDK](https://vercel.com/kb/guide/durable-web-research-agent-with-workflow-sdk)
+- [Build AI agents with AI Gateway and AI SDK](https://vercel.com/kb/guide/ai-gateway-and-ai-sdk)
+- [Build an agent with Vercel and Flue](https://vercel.com/kb/guide/build-an-agent-with-vercel-and-flue)
+- [Build an AI Chat Agent with Weather API Tool Calling](https://vercel.com/kb/guide/build-ai-agent-weather-api)
+- [Build an integrations hub with Nuxt and Vercel Connect](https://vercel.com/kb/guide/nuxt-and-vercel-connect)
+- [Build an MCP Server with Weather tools using Express and Vercel](https://vercel.com/kb/guide/mcp-server-with-weather-tool-express)
+- [Build commission-free iOS checkouts with Vercel and Paddle](https://vercel.com/kb/guide/build-commission-free-ios-checkouts-with-vercel-and-paddle)
+- [Build Notion-style real-time presence on Vercel](https://vercel.com/kb/guide/real-time-presence-hono-react)
+- [Build with a FastAPI starter template](https://vercel.com/kb/guide/build-with-a-fastapi-starter-template)
+- [Build with a Flask starter template](https://vercel.com/kb/guide/build-with-a-flask-starter-template)
+- [Build with a Hono starter template](https://vercel.com/kb/guide/build-with-a-hono-starter-template)
+- [Build with a Nitro starter template](https://vercel.com/kb/guide/build-with-a-nitro-starter-template)
+- [Build with an Express starter template](https://vercel.com/kb/guide/build-with-a-express-starter-template)
+- [Build your first Slack agent with eve](https://vercel.com/kb/guide/eve-slack-agent-starter)
+- [Build your own Slackbot with Vercel Connect](https://vercel.com/kb/guide/build-a-slack-bot-with-vercel-connect)
+- [Building a Slack agent with durable workflows](https://vercel.com/kb/guide/building-a-slack-agent-with-durable-workflows)
+- [Building AI apps on Vercel: an overview](https://vercel.com/kb/guide/how-to-build-ai-app)
+- [Building AI-powered Article Embeddings with Chroma and GPT-4](https://vercel.com/kb/guide/ai-powered-article-embeddings-with-chroma-and-gpt-4)
+- [Building an agent with OpenAI Agents SDK and Vercel Sandbox](https://vercel.com/kb/guide/building-an-agent-with-openai-agents-sdk-and-vercel-sandbox)
+- [Building an AI Chatbot with Cohere, Next.js, and the Vercel AI SDK](https://vercel.com/kb/guide/cohere-nextjs-vercel-ai-sdk)
+- [Building an AI chatbot with Next.js, Langchain, and OpenAI](https://vercel.com/kb/guide/nextjs-langchain-vercel-ai)
+- [Building community moderation agents using AI SDK](https://vercel.com/kb/guide/building-community-moderation-agents-using-ai-sdk)
+- [Building Ecommerce Sites with Next.js and Shopify](https://vercel.com/kb/guide/building-ecommerce-sites-with-next-js-and-shopify)
+- [Building human-in-the-loop agents for community moderation with durable workflows](https://vercel.com/kb/guide/building-human-in-the-loop-agents-for-community-moderation-with-durable-workflows)
+- [Building Next.js Apps with GraphQL Fragment Colocation and Sanity CMS](https://vercel.com/kb/guide/building-nextjs-apps-with-graphql-fragment-colocation-and-sanity-cms)
+- [Building stateful Slack bots with Vercel Workflow](https://vercel.com/kb/guide/stateful-slack-bots-with-vercel-workflow)
+- [Can a CAA record be added to a Subdomain Configured with CNAME?](https://vercel.com/kb/guide/can-a-caa-record-be-added-to-a-subdomain-configured-with-cname)
+- [Can I connect a Pro team to a personal Git account?](https://vercel.com/kb/guide/connecting-teams-with-personal-git-accounts)
+- [Can I deploy a locally built Next.js app to Vercel?](https://vercel.com/kb/guide/deploying-locally-built-nextjs)
+- [Can I deploy Discord bots to Vercel?](https://vercel.com/kb/guide/can-i-deploy-discord-bots-to-vercel)
+- [Can I disable auto renewals for a domain registered with Vercel?](https://vercel.com/kb/guide/how-can-i-disable-auto-renewals-for-a-domain-registered-with-vercel)
+- [Can I get a fixed IP address for my Vercel deployments?](https://vercel.com/kb/guide/can-i-get-a-fixed-ip-address)
+- [Can I get a refund for a domain purchased or renewed with Vercel?](https://vercel.com/kb/guide/can-i-get-a-refund-for-a-domain-purchased-or-renewed-with-vercel)
+- [Can I redirect from a subdomain to a subpath?](https://vercel.com/kb/guide/can-i-redirect-from-a-subdomain-to-a-subpath)
+- [Can I route based on letter casing on Vercel?](https://vercel.com/kb/guide/can-i-route-based-on-letter-casing-on-vercel)
+- [Can I Set a Cookie from My Vercel Project Subdomain to Vercel.app?](https://vercel.com/kb/guide/can-i-set-a-cookie-from-my-vercel-project-subdomain-to-vercel-app)
+- [Can I use a proxy on top of my Vercel Deployment?](https://vercel.com/kb/guide/can-i-use-a-proxy-on-top-of-my-vercel-deployment)
+- [Can I use Bitbucket Data Center with Vercel?](https://vercel.com/kb/guide/can-i-use-bitbucket-data-center-with-vercel)
+- [Can I use GitHub Enterprise Server with Vercel?](https://vercel.com/kb/guide/can-i-use-github-enterprise-server-with-vercel)
+- [Can I use my domain on Vercel with A records?](https://vercel.com/kb/guide/a-record-and-caa-with-vercel)
+- [Can I use Preview Deployment Suffix without switching to Vercel Nameservers?](https://vercel.com/kb/guide/preview-deployment-suffix-without-vercel-nameservers)
+- [Can I use self-managed GitLab with Vercel?](https://vercel.com/kb/guide/can-i-use-self-managed-gitlab-with-vercel)
+- [Can I use SMTP with Vercel?](https://vercel.com/kb/guide/serverless-functions-and-smtp)
+- [Can I use Vercel as a reverse proxy?](https://vercel.com/kb/guide/vercel-reverse-proxy-rewrites-external)
+- [Can I use Vercel to deploy to a private cloud?](https://vercel.com/kb/guide/can-i-use-vercel-to-deploy-to-a-private-cloud)
+- [Can I use wildcard domains without switching to Vercel Nameservers?](https://vercel.com/kb/guide/wildcard-domain-without-vercel-nameservers)
+- [Can Vercel sponsor my open source project?](https://vercel.com/kb/guide/can-vercel-sponsor-my-open-source-project)
+- [Can you deploy based on tags/releases on Vercel?](https://vercel.com/kb/guide/can-you-deploy-based-on-tags-releases-on-vercel)
+- [Challenge cookie-less requests on a specific path](https://vercel.com/kb/guide/challenge-cookieless-requests-on-a-specific-path)
+- [Challenge cURL requests](https://vercel.com/kb/guide/challenge-curl-requests)
+- [Choosing between TanStack Intent and `skills`](https://vercel.com/kb/guide/tanstack-intent-vs-skills)
+- [Comparing MySQL, PostgreSQL, and MongoDB ](https://vercel.com/kb/guide/mysql-vs-postgresql-vs-mongodb)
+- [Connect Next.js to Amazon Aurora PostgreSQL using Vercel Marketplace](https://vercel.com/kb/guide/connect-next-js-to-amazon-aurora-postgresql-using-vercel-marketplace)
+- [Connection Pooling with Vercel Functions](https://vercel.com/kb/guide/connection-pooling-with-functions)
+- [Cost-aware model routing through AI Gateway](https://vercel.com/kb/guide/cost-aware-model-routing-with-ai-gateway)
+- [Create a Discord support bot with Nuxt and Redis](https://vercel.com/kb/guide/create-a-discord-support-bot-with-nuxt-and-redis)
+- [Create and Deploy a Crystallize E-commerce Site with Vercel](https://vercel.com/kb/guide/deploying-crystallize-with-vercel)
+- [Creating a Session Store with Redis and Next.js](https://vercel.com/kb/guide/session-store-nextjs-redis-vercel-kv)
+- [Custom 404 Page](https://vercel.com/kb/guide/custom-404-page)
+- [Debug and Troubleshoot Logs with Vercel and Sematext](https://vercel.com/kb/guide/debugging-and-troubleshooting-vercel-logs-with-sematext)
+- [Debug routing on Vercel](https://vercel.com/kb/guide/debug-routing-on-vercel)
+- [Deny non-browser traffic or blocklisted ASNs](https://vercel.com/kb/guide/deny-non-browser-traffic-or-blocklisted-asns)
+- [Deny traffic from a set of IP addresses](https://vercel.com/kb/guide/deny-traffic-from-a-set-of-ip-addresses)
+- [Dependencies from package.json are missing after install](https://vercel.com/kb/guide/dependencies-from-package-json-missing-after-install)
+- [Deploy a Bolt.new app with Vercel Drop](https://vercel.com/kb/guide/bolt-vercel-drop)
+- [Deploy a Claude Design project to Vercel](https://vercel.com/kb/guide/claude-design)
+- [Deploy a Google Stitch design with Vercel Drop](https://vercel.com/kb/guide/google-stitch-vercel-drop)
+- [Deploy a headless BigCommerce storefront with Vercel](https://vercel.com/kb/guide/deploy-headless-bigcommerce-storefront-with-vercel)
+- [Deploy a headless Shopify storefront with Vercel](https://vercel.com/kb/guide/deploy-headless-shopify-storefront-with-vercel)
+- [Deploy a TanStack Start app to Vercel](https://vercel.com/kb/guide/deploy-a-tanstack-start-app-to-vercel)
+- [Deploy Foundation with Vercel](https://vercel.com/kb/guide/deploying-foundation-with-vercel)
+- [Deploy Next.js and Userbase with Vercel](https://vercel.com/kb/guide/deploying-next-and-userbase-with-vercel)
+- [Deploying a Monorepo Using Yarn Workspaces to Vercel](https://vercel.com/kb/guide/deploying-yarn-monorepos-to-vercel)
+- [Deploying and testing BotID](https://vercel.com/kb/guide/deploying-and-testing-botid)
+- [Deploying Chained OpenAI LLM Calls to Vercel with the Inngest SDK](https://vercel.com/kb/guide/chained-openai-llm-calls-vercel-inngest)
+- [Deploying Puppeteer with Next.js on Vercel](https://vercel.com/kb/guide/deploying-puppeteer-with-nextjs-on-vercel)
+- [Deploying React Forms Using Formspree with Vercel](https://vercel.com/kb/guide/deploying-react-forms-using-formspree-with-vercel)
+- [Deploying Real-Time Apps with Pusher Channels and Vercel](https://vercel.com/kb/guide/deploying-pusher-channels-with-vercel)
+- [Deploying Storybook with Vercel](https://vercel.com/kb/guide/storybook-with-vercel)
+- [Detect memory and OOM failures in Vercel Functions](https://vercel.com/kb/guide/detect-memory-and-oom-failures-in-serverless-functions)
+- [Displaying headlines in social previews with Vercel OG](https://vercel.com/kb/guide/displaying-article-headlines-in-social-previews)
+- [Do Vercel Serverless Functions support WebSocket connections?](https://vercel.com/kb/guide/do-vercel-serverless-functions-support-websocket-connections)
+- [Does streaming affect SEO and can streamed content be indexed?](https://vercel.com/kb/guide/does-streaming-affect-seo)
+- [Does using Vercel's Nameserver's lock you in?](https://vercel.com/kb/guide/does-using-vercel-s-nameserver-s-lock-you-in)
+- [Does Vercel have a SOC 2 Type 2 attestation?](https://vercel.com/kb/guide/is-vercel-soc-2-compliant)
+- [Does Vercel support .htaccess files?](https://vercel.com/kb/guide/does-vercel-support-htaccess-files)
+- [Does Vercel support Docker deployments?](https://vercel.com/kb/guide/does-vercel-support-docker-deployments)
+- [Does Vercel support HIPAA compliance?](https://vercel.com/kb/guide/is-vercel-hipaa-compliant)
+- [Does Vercel support PCI compliance?](https://vercel.com/kb/guide/is-vercel-pci-compliant)
+- [Does Vercel support permanent redirects?](https://vercel.com/kb/guide/does-vercel-support-permanent-redirects)
+- [Does Vercel support Ruby on Rails applications?](https://vercel.com/kb/guide/does-vercel-support-ruby-on-rails-applications)
+- [Does Vercel support Yarn 2?](https://vercel.com/kb/guide/does-vercel-support-yarn-2)
+- [Does Vercel support Yarn 3?](https://vercel.com/kb/guide/does-vercel-support-yarn-3)
+- [Does Vercel support Yarn 4?](https://vercel.com/kb/guide/does-vercel-support-yarn-4)
+- [Domain Linked to Another Account](https://vercel.com/kb/guide/domain-linked-to-another-account)
+- [Draft content in your voice from Slack with eve](https://vercel.com/kb/guide/eve-content-agent)
+- [Dynamic redirects with Edge Config and Next.js proxy](https://vercel.com/kb/guide/dynamic-redirects-with-edge-config-and-next-js-proxy)
+- [Dynamically run build commands](https://vercel.com/kb/guide/dynamic-build-commands)
+- [Efficiently manage database connection pools with Fluid compute](https://vercel.com/kb/guide/efficiently-manage-database-connection-pools-with-fluid-compute)
+- [Emergency Redirect](https://vercel.com/kb/guide/emergency-redirect)
+- [Encrypting parameters](https://vercel.com/kb/guide/encrypting-parameters)
+- [Enhancing Security for Redirects and Rewrites](https://vercel.com/kb/guide/enhancing-security-for-redirects-and-rewrites)
+- [Ensuring safe and effective infrastructure testing](https://vercel.com/kb/guide/ensuring-safe-and-effective-infrastructure-testing)
+- [Error Reports for Your Projects with URIports and Vercel](https://vercel.com/kb/guide/client-side-error-reports-with-uriports-vercel)
+- [Export your Webflow site and host it on Vercel](https://vercel.com/kb/guide/webflow-vercel-drop)
+- [Filtering query parameters](https://vercel.com/kb/guide/filter-query-parameters)
+- [Fine-tuning GPT with OpenAI, Next.js, and Vercel AI SDK](https://vercel.com/kb/guide/fine-tuning-openai-nextjs)
+- [Firewall Terraform Configuration](https://vercel.com/kb/guide/firewall-terraform-configuration)
+- [First Input Delay (FID) vs. Interaction to Next Paint (INP)](https://vercel.com/kb/guide/first-input-delay-vs-interaction-to-next-paint)
+- [Fixing deployments that hang after the build step succeeds](https://vercel.com/kb/guide/fixing-deployments-that-hang-after-the-build-step-succeeds)
+- [Generate videos with AI SDK](https://vercel.com/kb/guide/ai-sdk-video-generation)
+- [Getting started with Next.js, TypeScript, and Stripe Checkout](https://vercel.com/kb/guide/getting-started-with-nextjs-typescript-stripe)
+- [Give your agents secure access to third-party APIs](https://vercel.com/kb/guide/vercel-connect)
+- [Handling Backpressure](https://vercel.com/kb/guide/handling-backpressure)
+- [Handling Node.js Request Bodies with Vercel](https://vercel.com/kb/guide/handling-node-request-body)
+- [HIPAA Compliance on Vercel](https://vercel.com/kb/guide/hipaa-compliance-guide-vercel)
+- [Hosting your API on Vercel](https://vercel.com/kb/guide/hosting-backend-apis)
+- [How can I add a custom build step to my project? ](https://vercel.com/kb/guide/how-can-i-add-a-custom-build-step-to-my-project)
+- [How can I allowlist IP addresses for a deployment?](https://vercel.com/kb/guide/how-to-allowlist-deployment-ip-address)
+- [How can I do a "Zero Downtime" DNS migration to Vercel?](https://vercel.com/kb/guide/zero-downtime-migration-for-dns)
+- [How can I enable CORS on Vercel?](https://vercel.com/kb/guide/how-to-enable-cors)
+- [How can I fix SharedArrayBuffer is not defined?](https://vercel.com/kb/guide/fix-shared-array-buffer-not-defined-nextjs-react)
+- [How can I improve function cold start performance on Vercel?](https://vercel.com/kb/guide/how-can-i-improve-serverless-function-lambda-cold-start-performance-on-vercel)
+- [How can I increase the limit of redirects or use dynamic redirects on Vercel?](https://vercel.com/kb/guide/how-can-i-increase-the-limit-of-redirects-or-use-dynamic-redirects-on-vercel)
+- [How can I make my library compatible with the Vercel Edge Runtime?](https://vercel.com/kb/guide/library-sdk-compatible-with-vercel-edge-runtime-and-functions)
+- [How can I manage my Vercel DNS records?](https://vercel.com/kb/guide/how-to-manage-vercel-dns-records)
+- [How can I migrate a site to Vercel without downtime?](https://vercel.com/kb/guide/zero-downtime-migration)
+- [How can I move a domain to a Vercel team?](https://vercel.com/kb/guide/how-can-i-move-a-domain-to-a-team)
+- [How can I prerender my application on Vercel?](https://vercel.com/kb/guide/how-can-i-prerender-my-application-on-vercel)
+- [How can I reduce my Serverless Execution usage on Vercel?](https://vercel.com/kb/guide/how-can-i-reduce-my-serverless-execution-usage-on-vercel)
+- [How can I run end-to-end tests after my Vercel Preview Deployment?](https://vercel.com/kb/guide/how-can-i-run-end-to-end-tests-after-my-vercel-preview-deployment)
+- [How can I run Next.js on localhost through HTTPS?](https://vercel.com/kb/guide/access-nextjs-localhost-https-certificate-self-signed)
+- [How can I serve multiple projects under a single domain?](https://vercel.com/kb/guide/how-can-i-serve-multiple-projects-under-a-single-domain)
+- [How can I set a custom build timeout?](https://vercel.com/kb/guide/custom-build-timeout)
+- [How can I share my Vercel cache across deployments?](https://vercel.com/kb/guide/share-vercel-cache-across-deployments-nextjs)
+- [How can I use AWS S3 with Vercel?](https://vercel.com/kb/guide/how-can-i-use-aws-s3-with-vercel)
+- [How can I use AWS SDK Environment Variables on Vercel?](https://vercel.com/kb/guide/how-can-i-use-aws-sdk-environment-variables-on-vercel)
+- [How can I use Bitbucket Pipelines with Vercel?](https://vercel.com/kb/guide/how-can-i-use-bitbucket-pipelines-with-vercel)
+- [How can I use CircleCI with Vercel?](https://vercel.com/kb/guide/how-can-i-use-circleci-with-vercel)
+- [How can I use files in Vercel Functions?](https://vercel.com/kb/guide/how-can-i-use-files-in-serverless-functions)
+- [How can I use geolocation IP headers?](https://vercel.com/kb/guide/geo-ip-headers-geolocation-vercel-functions)
+- [How can I use GitHub Actions with Vercel?](https://vercel.com/kb/guide/how-can-i-use-github-actions-with-vercel)
+- [How can I use GitLab Pipelines with Vercel?](https://vercel.com/kb/guide/how-can-i-use-gitlab-pipelines-with-vercel)
+- [How can I use Python and JavaScript in the same application?](https://vercel.com/kb/guide/how-to-use-python-and-javascript-in-the-same-application)
+- [How can I use special characters in my custom domain on Vercel?](https://vercel.com/kb/guide/how-can-i-use-special-characters-in-my-custom-domain)
+- [How can I use the Vercel CLI for custom workflows?](https://vercel.com/kb/guide/using-vercel-cli-for-custom-workflows)
+- [How do I add a custom domain to my Vercel project?](https://vercel.com/kb/guide/how-do-i-add-a-custom-domain-to-my-vercel-project)
+- [How do I add a domain using the Vercel API?](https://vercel.com/kb/guide/how-do-i-add-a-domain-using-the-vercel-api)
+- [How do I add environment variables to my Vercel project?](https://vercel.com/kb/guide/how-to-add-vercel-environment-variables)
+- [How do I add password protection to my Vercel deployment?](https://vercel.com/kb/guide/how-do-i-add-password-protection-to-my-vercel-deployment)
+- [How do I bypass the 4.5MB body size limit of Vercel Serverless Functions?](https://vercel.com/kb/guide/how-to-bypass-vercel-body-size-limit-serverless-functions)
+- [How do I change CAA records when using the Vercel CNAME record?](https://vercel.com/kb/guide/change-caa-records-with-vercel-cname)
+- [How do I change my Nameservers on Vercel?](https://vercel.com/kb/guide/how-do-i-change-my-nameservers-on-vercel)
+- [How do I change my Vercel avatar?](https://vercel.com/kb/guide/how-do-i-change-my-vercel-avatar)
+- [How do I change my Vercel username?](https://vercel.com/kb/guide/how-do-i-change-my-vercel-username)
+- [How do I change the name of my Vercel Project?](https://vercel.com/kb/guide/how-do-i-change-the-name-of-my-vercel-project)
+- [How do I create a minimal reproducible example for Vercel Support?](https://vercel.com/kb/guide/creating-a-minimal-reproducible-example)
+- [How do I debug a 502 error from a Vercel Serverless Function?](https://vercel.com/kb/guide/how-to-debug-a-502-error)
+- [How do I delete a Vercel team?](https://vercel.com/kb/guide/how-do-i-delete-a-vercel-team)
+- [How do I delete an individual deployment?](https://vercel.com/kb/guide/how-do-i-delete-an-individual-deployment)
+- [How do I delete my Vercel account?](https://vercel.com/kb/guide/how-do-i-delete-my-vercel-account)
+- [How do I disable Git Notifications from Deployments?](https://vercel.com/kb/guide/how-do-i-disable-git-notifications-from-deployments)
+- [How do I generate a “sitemap.xml” for my Next.js app on Vercel?](https://vercel.com/kb/guide/how-do-i-generate-a-sitemap-for-my-nextjs-app-on-vercel)
+- [How do I generate an SHA for uploading a file to the Vercel API?](https://vercel.com/kb/guide/how-do-i-generate-an-sha-for-uploading-a-file-to-the-vercel-api)
+- [How do I get notified when my Vercel deployment fails?](https://vercel.com/kb/guide/how-do-i-get-notified-when-my-vercel-deployment-fails)
+- [How do I get the raw body of a Serverless Function?](https://vercel.com/kb/guide/how-do-i-get-the-raw-body-of-a-serverless-function)
+- [How do I lower my Vercel Function execution time?](https://vercel.com/kb/guide/how-do-i-lower-my-serverless-function-execution-time)
+- [How do I migrate away from `vercel.json` env and build.env?](https://vercel.com/kb/guide/how-do-i-migrate-away-from-vercel-json-env-and-build-env)
+- [How do I perform Vercel redirects based on query strings?](https://vercel.com/kb/guide/how-do-i-perform-vercel-redirects-based-on-query-strings)
+- [How do I point a subdomain to a service outside of Vercel?](https://vercel.com/kb/guide/pointing-subdomains-to-external-services)
+- [How do I prevent the Vercel for GitHub integration comments?](https://vercel.com/kb/guide/how-to-prevent-vercel-github-comments)
+- [How do I reduce my build time with Next.js on Vercel?](https://vercel.com/kb/guide/how-do-i-reduce-my-build-time-with-next-js-on-vercel)
+- [How do I remove a domain from my Vercel account?](https://vercel.com/kb/guide/how-do-i-remove-a-domain-from-my-vercel-account)
+- [How do I resolve "ERR_SSL_PROTOCOL_ERROR" with Vercel?](https://vercel.com/kb/guide/resolve-err-ssl-protocol-error-with-vercel)
+- [How do I resolve "err_too_many_redirects" when using a Cloudflare proxy with Vercel?](https://vercel.com/kb/guide/resolve-err-too-many-redirects-when-using-cloudflare-proxy-with-vercel)
+- [How do I resolve a 'module not found' error?](https://vercel.com/kb/guide/how-do-i-resolve-a-module-not-found-error)
+- [How do I resolve a 'process.env.CI = true' error?](https://vercel.com/kb/guide/how-do-i-resolve-a-process-env-ci-true-error)
+- [How do I resolve alias related errors on Vercel?](https://vercel.com/kb/guide/how-to-resolve-alias-errors-on-vercel)
+- [How do I select a team on Vercel?](https://vercel.com/kb/guide/how-do-i-select-a-team-on-vercel)
+- [How do I send and receive emails with my Vercel purchased domain?](https://vercel.com/kb/guide/using-email-with-your-vercel-domain)
+- [How do I set up a staging environment on Vercel?](https://vercel.com/kb/guide/set-up-a-staging-environment-on-vercel)
+- [How do I store logs on Vercel?](https://vercel.com/kb/guide/how-do-i-store-logs-on-vercel)
+- [How do I transfer my domain out of Vercel?](https://vercel.com/kb/guide/how-do-i-transfer-my-domain-out-of-vercel)
+- [How do I transfer my domain to Vercel?](https://vercel.com/kb/guide/how-do-i-transfer-my-domain-to-vercel)
+- [How do I transfer ownership of a Vercel team?](https://vercel.com/kb/guide/how-do-i-transfer-ownership-of-a-vercel-team)
+- [How do I use a Vercel API Access Token?](https://vercel.com/kb/guide/how-do-i-use-a-vercel-api-access-token)
+- [How do I use private dependencies with Vercel?](https://vercel.com/kb/guide/using-private-dependencies-with-vercel)
+- [How do I use the "Ignored Build Step" field on Vercel?](https://vercel.com/kb/guide/how-do-i-use-the-ignored-build-step-field-on-vercel)
+- [How do I use the latest npm version for my Vercel Deployment?](https://vercel.com/kb/guide/how-do-i-use-the-latest-npm-version-for-my-vercel-deployment)
+- [How do I view and update my domain's ICANN registrant information on Vercel? ](https://vercel.com/kb/guide/update-icann-domain-information-for-vercel-domain)
+- [How does Vercel handle copyright infringement claims?](https://vercel.com/kb/guide/how-does-vercel-handle-copyright-infringement-claims)
+- [How I use OpenCode with Vercel AI Gateway to build features fast](https://vercel.com/kb/guide/how-i-use-opencode-with-vercel-ai-gateway-to-build-features-fast)
+- [How long does it take to get a response from Vercel Support?](https://vercel.com/kb/guide/vercel-support-queue-time)
+- [How long will it take for my Vercel DNS records to update?](https://vercel.com/kb/guide/how-long-to-update-dns-records)
+- [How Splits Work in Vercel Flags](https://vercel.com/kb/guide/how-splits-work-in-vercel-flags)
+- [How to add skills to your eve agent](https://vercel.com/kb/guide/how-to-add-eve-skills)
+- [How to add tools to your eve agent](https://vercel.com/kb/guide/how-to-add-eve-tools)
+- [How to alias a preview deployment using the CLI](https://vercel.com/kb/guide/how-to-alias-a-preview-deployment-using-the-cli)
+- [How to allow the Vercel Support team to access your deployments' source code?](https://vercel.com/kb/guide/how-to-allow-the-vercel-support-team-to-access-your-deployment-source-code)
+- [How to block bots from OpenAI GPTBot](https://vercel.com/kb/guide/how-to-block-bots-openai-gptbot)
+- [How to build a durable AI code agent on Vercel](https://vercel.com/kb/guide/how-to-build-a-durable-ai-code-agent-on-vercel)
+- [How to build a Slack bot that manages files in Vercel Blob](https://vercel.com/kb/guide/slack-bot-vercel-blob)
+- [How to build a Slack bot with Next.js and Redis](https://vercel.com/kb/guide/how-to-build-a-slack-bot-with-next-js-and-redis)
+- [How to Build a Weather API with Express and Vercel](https://vercel.com/kb/guide/weather-api-with-express)
+- [How to Build a Weather API with FastAPI and Vercel](https://vercel.com/kb/guide/weather-api-with-fastapi)
+- [How to Build a Weather API with Nitro and Vercel](https://vercel.com/kb/guide/weather-api-with-nitro)
+- [How to build AI Agents with Vercel and the AI SDK](https://vercel.com/kb/guide/how-to-build-ai-agents-with-vercel-and-the-ai-sdk)
+- [How to build an agent for Liveblocks with Chat SDK and AI SDK](https://vercel.com/kb/guide/liveblocks-chat-sdk-ai-sdk)
+- [How to build an AI agent for Slack with Chat SDK and AI SDK](https://vercel.com/kb/guide/how-to-build-an-ai-agent-for-slack-with-chat-sdk-and-ai-sdk)
+- [How to build an MCP server with Nuxt](https://vercel.com/kb/guide/how-to-build-an-mcp-server-with-nuxt)
+- [How to build an on-demand voice agent with Vercel Sandbox](https://vercel.com/kb/guide/how-to-build-an-on-demand-voice-agent-with-vercel-sandbox)
+- [How to conduct PCI scans on Vercel: A complete guide to IP safelisting](https://vercel.com/kb/guide/how-to-conduct-pci-scans-on-vercel-guide)
+- [How to Configure the Cache-Control Response Header in Vercel Projects](https://vercel.com/kb/guide/how-to-configure-the-cache-control-response-header-in-vercel-projects)
+- [How to contribute to the Vercel Community](https://vercel.com/kb/guide/how-to-contribute-to-the-vercel-community)
+- [How to create a HAR file for Vercel Support](https://vercel.com/kb/guide/create-a-har-file-for-vercel-support)
+- [How to debug 404 errors](https://vercel.com/kb/guide/how-to-debug-404-errors)
+- [How to Deploy a Brunch App with Vercel](https://vercel.com/kb/guide/deploying-brunch-with-vercel)
+- [How to Deploy a Charge App with Vercel](https://vercel.com/kb/guide/deploying-charge-with-vercel)
+- [How to Deploy a Docusaurus Site with Vercel](https://vercel.com/kb/guide/deploying-docusaurus-with-vercel)
+- [How to Deploy a Dojo App with Vercel](https://vercel.com/kb/guide/deploying-dojo-with-vercel)
+- [How to Deploy a Hexo Blog with Vercel](https://vercel.com/kb/guide/deploying-hexo-with-vercel)
+- [How to Deploy a Hugo Site with Vercel](https://vercel.com/kb/guide/deploying-hugo-with-vercel)
+- [How to Deploy a Jekyll Site with Vercel](https://vercel.com/kb/guide/deploying-jekyll-with-vercel)
+- [How to Deploy a Middleman App with Vercel](https://vercel.com/kb/guide/deploying-middleman-with-vercel)
+- [How to deploy a Next.js online store with Stripe](https://vercel.com/kb/guide/how-to-deploy-a-next-js-online-store-with-stripe)
+- [How to Deploy a Polymer App with Vercel](https://vercel.com/kb/guide/deploying-polymer-with-vercel)
+- [How to Deploy a Preact Site with Vercel](https://vercel.com/kb/guide/deploying-preact-with-vercel)
+- [How to Deploy a React Site with Vercel](https://vercel.com/kb/guide/deploying-react-with-vercel)
+- [How to Deploy a Redwood Site with Vercel](https://vercel.com/kb/guide/deploying-redwood-with-vercel)
+- [How to Deploy a Remix Site with Vercel](https://vercel.com/kb/guide/deploying-remix-with-vercel)
+- [How to Deploy a Solid App with Vercel](https://vercel.com/kb/guide/deploying-solid-with-vercel)
+- [How to Deploy a Stencil app with Vercel](https://vercel.com/kb/guide/deploying-stencil-with-vercel)
+- [How to Deploy a Vue.js Site with Vercel](https://vercel.com/kb/guide/deploying-vuejs-to-vercel)
+- [How to Deploy an Angular Site with Vercel](https://vercel.com/kb/guide/deploying-angular-with-vercel)
+- [How to Deploy an Aurelia App with Vercel](https://vercel.com/kb/guide/deploying-aurelia-with-vercel)
+- [How to Deploy an Eleventy Site with Vercel](https://vercel.com/kb/guide/deploying-eleventy-with-vercel)
+- [How to Deploy an Ember App with Vercel](https://vercel.com/kb/guide/deploying-ember-with-vercel)
+- [How to Deploy an UmiJS App with Vercel](https://vercel.com/kb/guide/deploying-umijs-with-vercel)
+- [How to Deploy MDX Deck with Vercel](https://vercel.com/kb/guide/deploying-mdx-deck-with-vercel)
+- [How to detect when user leaves the page and display a confirmation dialog?](https://vercel.com/kb/guide/leave-page-confirmation-dialog-before-unload-nextjs-react)
+- [How to determine which Vercel Deployment introduced an issue?](https://vercel.com/kb/guide/how-to-determine-which-vercel-deployment-introduced-an-issue)
+- [How to Effectively Load Test Your Vercel Application](https://vercel.com/kb/guide/how-to-effectively-load-test-your-vercel-application)
+- [How to evaluate a rapid AI prototyping tool](https://vercel.com/kb/guide/how-to-evaluate-a-rapid-ai-prototyping-tool)
+- [How to execute AI-generated code safely with Vercel Sandbox](https://vercel.com/kb/guide/how-to-execute-ai-generated-code-safely)
+- [How to Export Your Domain's DNS Records from Vercel](https://vercel.com/kb/guide/export-domain-dns-records-via-api)
+- [How to fix a domain suspended by serverHold or clientHold](https://vercel.com/kb/guide/how-to-fix-a-domain-suspended-by-serverhold-or-clienthold)
+- [How to Fix Sitecore JSS Middleware Performance](https://vercel.com/kb/guide/how-to-fix-sitecore-jss-middleware-performance)
+- [How to get good answers on Vercel Community](https://vercel.com/kb/guide/how-to-get-good-answers-on-vercel-community)
+- [How to gradually roll out new versions of your backend](https://vercel.com/kb/guide/how-to-gradually-roll-out-new-versions-of-your-backend)
+- [How to identify and authorize visitors with the Vercel Passport token in Next.js](https://vercel.com/kb/guide/vercel-passport-nextjs)
+- [How to install system packages in Vercel Sandbox](https://vercel.com/kb/guide/how-to-install-system-packages-in-vercel-sandbox)
+- [How to Integrate Next.js with Prismic's Headless CMS](https://vercel.com/kb/guide/how-to-integrate-nextjs-with-prismic)
+- [How to Integrate Optimizely Feature Experimentation with Next.js and Vercel](https://vercel.com/kb/guide/how-to-integrate-optimizely-feature-experimentation-next-vercel)
+- [How to internationalise error pages in Next.js App Router](https://vercel.com/kb/guide/how-to-internationalise-error-pages-in-next-js-app-router)
+- [How to Load Data from a File in Next.js](https://vercel.com/kb/guide/loading-static-file-nextjs-api-route)
+- [How to lock down deployments on Vercel and v0](https://vercel.com/kb/guide/locking-down-deployments)
+- [How to migrate from DurableAgent to WorkflowAgent](https://vercel.com/kb/guide/durableagent-to-workflowagent)
+- [How to migrate from Fastly to Vercel with zero downtime](https://vercel.com/kb/guide/how-to-migrate-from-fastly-to-vercel-with-zero-downtime)
+- [How to move a domain between Vercel projects with "Zero Downtime"?](https://vercel.com/kb/guide/how-to-move-a-domain-between-vercel-projects-with-zero-downtime)
+- [How to Optimize Next.js + Sitecore JSS](https://vercel.com/kb/guide/how-to-optimize-next.js-sitecore-jss)
+- [How to Optimize RSC Payload Size](https://vercel.com/kb/guide/how-to-optimize-rsc-payload-size)
+- [How to optimize your document size in Next.js](https://vercel.com/kb/guide/how-to-optimize-your-document-size-in-next-js)
+- [How to pin a specific Bun version for Vercel builds?](https://vercel.com/kb/guide/how-to-pin-a-specific-bun-version-for-vercel-builds)
+- [How to protect your AI app from bots](https://vercel.com/kb/guide/how-to-protect-your-ai-app-from-bots)
+- [How to protect your AI endpoints with Vercel BotID](https://vercel.com/kb/guide/protect-ai-endpoints-with-vercel-botid)
+- [How to reconnect to a running Sandbox](https://vercel.com/kb/guide/how-to-reconnect-to-a-running-sandbox)
+- [How to resolve IP blocking issues ](https://vercel.com/kb/guide/how-to-resolve-ip-blocking-issues)
+- [How to rotate the secrets of your Clerk integration](https://vercel.com/kb/guide/how-to-reset-the-secrets-of-your-clerk-integration)
+- [How to rotate the secrets of your Hypertune integration](https://vercel.com/kb/guide/how-to-reset-the-secrets-of-your-hypertune-integration)
+- [How to rotate the secrets of your MongoDB Atlas integration](https://vercel.com/kb/guide/how-to-reset-the-secret-for-your-mongodb-atlas-integration)
+- [How to rotate the secrets of your Neon integration](https://vercel.com/kb/guide/how-to-reset-a-secret-for-a-neon-integration)
+- [How to rotate the secrets of your Redis integration](https://vercel.com/kb/guide/how-to-reset-the-secret-for-your-redis-integration)
+- [How to rotate the secrets of your Supabase integration](https://vercel.com/kb/guide/how-to-reset-the-secrets-of-your-supabase-integration)
+- [How to rotate the secrets of your Upstash integration](https://vercel.com/kb/guide/how-to-reset-the-secrets-of-your-upstash-integration)
+- [How to serve documentation for agents](https://vercel.com/kb/guide/how-to-serve-documentation-for-agents)
+- [How to Setup Cron Jobs on Vercel](https://vercel.com/kb/guide/how-to-setup-cron-jobs-on-vercel)
+- [How to ship a FastAPI app on Vercel](https://vercel.com/kb/guide/ship-a-fastapi-app-on-vercel)
+- [How to ship a Fastify app on Vercel](https://vercel.com/kb/guide/ship-a-fastify-app-on-vercel)
+- [How to ship a Flask app on Vercel](https://vercel.com/kb/guide/ship-a-flask-app-on-vercel)
+- [How to ship a Hono app on Vercel](https://vercel.com/kb/guide/ship-a-hono-app-on-vercel)
+- [How to ship a Koa app on Vercel](https://vercel.com/kb/guide/ship-a-koa-app-on-vercel)
+- [How to ship a NestJS app on Vercel](https://vercel.com/kb/guide/ship-a-nestjs-app-on-vercel)
+- [How to ship a Nitro app on Vercel](https://vercel.com/kb/guide/ship-a-nitro-app-on-vercel)
+- [How to ship an Elysia app on Vercel](https://vercel.com/kb/guide/ship-a-elysia-app-on-vercel)
+- [How to ship an Express app on Vercel](https://vercel.com/kb/guide/ship-a-express-app-on-vercel)
+- [How to ship an H3 app on Vercel](https://vercel.com/kb/guide/ship-a-h3-app-on-vercel)
+- [How to test a Slack bot with your Vercel preview deployment](https://vercel.com/kb/guide/test-slack-bot-with-vercel-preview-deployment)
+- [How to troubleshoot stale content returned from the Edge Network when using an external proxy or CDN](https://vercel.com/kb/guide/how-to-troubleshoot-stale-content-returned-from-the-edge-network-when-using-an-external-proxy-or-cdn)
+- [How to Upload and Store Files with Vercel](https://vercel.com/kb/guide/how-to-upload-and-store-files-with-vercel)
+- [How to use Deploy Hooks with Vercel and a Headless CMS](https://vercel.com/kb/guide/set-up-and-use-deploy-hooks-with-vercel-and-headless-cms)
+- [How to Use ML Models from Hugging Face in Vercel Functions](https://vercel.com/kb/guide/ml-models-hugging-face)
+- [How to use OpenAI Function Calling with Next.js and the Vercel AI SDK](https://vercel.com/kb/guide/openai-function-calling)
+- [How to use snapshots for faster sandbox startup](https://vercel.com/kb/guide/how-to-use-snapshots-for-faster-sandbox-startup)
+- [How to use subagents with eve](https://vercel.com/kb/guide/how-to-use-eve-subagents)
+- [How to use Vercel Flags across projects](https://vercel.com/kb/guide/how-to-use-vercel-flags-across-projects)
+- [How to Utilize Vercel’s Bot Management Features](https://vercel.com/kb/guide/how-to-utilize-vercels-bot-management-features)
+- [How Vercel Flags are evaluated](https://vercel.com/kb/guide/how-vercel-flags-are-evaluated)
+- [How Vercel Flags resolves environments](https://vercel.com/kb/guide/how-vercel-flags-resolves-environments)
+- [Human-in-the-Loop with Chat SDK and Workflow SDK](https://vercel.com/kb/guide/human-in-the-loop-with-chat-sdk-and-workflow-sdk)
+- [Implementing Blue-Green Deployments on Vercel](https://vercel.com/kb/guide/blue_green_deployments_on_vercel)
+- [Implementing Canary Deployments on Vercel](https://vercel.com/kb/guide/implementing_canary_deployments_on_vercel)
+- [Incremental Migrations with Microfrontends](https://vercel.com/kb/guide/incremental-migrations-with-microfrontends)
+- [Integrate Vercel and Contentstack for your Headless CMS](https://vercel.com/kb/guide/integrate-vercel-and-contentstack)
+- [Integrating AWS Secrets Manager with Vercel Using Terraform](https://vercel.com/kb/guide/integrating_aws_secrets_manager_with_vercel_using_terraform)
+- [Integrating Next.js and Contentful for your Headless CMS](https://vercel.com/kb/guide/integrating-next-js-and-contentful-for-your-headless-cms)
+- [Integrating Terraform with Vercel](https://vercel.com/kb/guide/integrating-terraform-with-vercel)
+- [Investigate GitHub issues with `HarnessAgent` and Vercel Sandbox](https://vercel.com/kb/guide/sandboxed-coding-agent-with-harnessagent)
+- [Investigate latency issues and slowness on Vercel](https://vercel.com/kb/guide/investigate-latency-issues-and-slowness)
+- [Is SQLite supported in Vercel?](https://vercel.com/kb/guide/is-sqlite-supported-in-vercel)
+- [Is Vercel certified under DPF?](https://vercel.com/kb/guide/is-vercel-certified-under-dpf)
+- [Is Vercel ISO 27001 certified?](https://vercel.com/kb/guide/is-vercel-iso-27001-certified)
+- [ISR Observability: Framework Discrepancies ](https://vercel.com/kb/guide/isr-observability-framework-discrepancies)
+- [Lifecycle of a domain](https://vercel.com/kb/guide/lifecycle-of-a-domain)
+- [Limit Abuse with Rate Limiting](https://vercel.com/kb/guide/limit-abuse-with-rate-limiting)
+- [Load Google Analytics script based on user location in Next.js](https://vercel.com/kb/guide/geolocation-script)
+- [Make your documentation readable by AI agents](https://vercel.com/kb/guide/make-your-documentation-readable-by-ai-agents)
+- [Manage cache tags for external origins](https://vercel.com/kb/guide/how-to-manage-cache-tags-for-external-origins)
+- [Managing Redirects from your CMS using Vercel Bulk Redirects](https://vercel.com/kb/guide/managing-redirects-from-your-cms-using-vercel-bulk-redirects)
+- [Migrate a Next.js app from Webflow Cloud to Vercel](https://vercel.com/kb/guide/migrate-a-next-js-app-from-webflow-cloud-to-vercel)
+- [Migrate a TanStack Start app from Cloudflare to Vercel](https://vercel.com/kb/guide/migrate-a-tanstack-start-app-from-cloudflare-to-vercel)
+- [Migrate a TanStack Start app from Netlify to Vercel](https://vercel.com/kb/guide/migrate-a-tanstack-start-app-from-netlify-to-vercel)
+- [Migrate an Astro app from Webflow Cloud to Vercel](https://vercel.com/kb/guide/migrate-an-astro-app-from-webflow-cloud-to-vercel)
+- [Migrate to Vercel from Cloudflare](https://vercel.com/kb/guide/migrate-to-vercel-from-cloudflare)
+- [Migrate to Vercel from Netlify](https://vercel.com/kb/guide/migrate-to-vercel-from-netlify)
+- [Missing routes-manifest.json file or No Output Directory when using Turborepo or NX](https://vercel.com/kb/guide/missing-routes-manifest-or-output-turborepo-nx)
+- [Modifying request headers](https://vercel.com/kb/guide/modify-request-headers)
+- [Monitor Frontend Performance with DebugBear and Vercel](https://vercel.com/kb/guide/monitor-frontend-performance-with-debugbear-and-vercel)
+- [Monitor Performance with Calibre and Vercel](https://vercel.com/kb/guide/monitoring-performance-with-calibre-and-vercel)
+- [Monitor uptime for AI-native apps with Vercel Alerts](https://vercel.com/kb/guide/monitor-uptime-for-ai-native-apps-with-vercel-alerts)
+- [Next.js on Vercel vs Cloudflare](https://vercel.com/kb/guide/next-js-on-vercel-vs-cloudflare)
+- [Next.js on Vercel vs Netlify](https://vercel.com/kb/guide/nextjs-on-vercel-vs-netlify)
+- [Next.js on Vercel vs Webflow Cloud](https://vercel.com/kb/guide/next-js-on-vercel-vs-webflow-cloud)
+- [Optimizing Core Web Vitals in 2024](https://vercel.com/kb/guide/optimizing-core-web-vitals-in-2024)
+- [Optimizing hard navigations](https://vercel.com/kb/guide/optimizing-hard-navigations)
+- [Pass state to AI SDK tools and agents with context](https://vercel.com/kb/guide/ai-sdk-runtime-and-tool-context)
+- [Pause your project](https://vercel.com/kb/guide/pause-your-project)
+- [Penetration testing on Vercel](https://vercel.com/kb/guide/penetration-testing-on-vercel)
+- [Per-environment and per-branch Build Commands on Vercel](https://vercel.com/kb/guide/per-environment-and-per-branch-build-commands)
+- [Processing Data Chunks](https://vercel.com/kb/guide/processing-data-chunks)
+- [Publish and Subscribe to Realtime Data on Vercel](https://vercel.com/kb/guide/publish-and-subscribe-to-realtime-data-on-vercel)
+- [Rendering content based on device](https://vercel.com/kb/guide/rendering-content-based-on-device)
+- [Run AI prompts in your GitHub Actions with the Vercel AI Action](https://vercel.com/kb/guide/run-ai-prompts-in-your-github-actions-with-the-vercel-ai-action)
+- [Run and track deploys from Slack](https://vercel.com/kb/guide/run-and-track-deploys-from-slack)
+- [Run your AI SDK agent in the terminal](https://vercel.com/kb/guide/ai-sdk-terminal-ui)
+- [Running OpenClaw in Vercel Sandbox](https://vercel.com/kb/guide/running-openclaw-in-vercel-sandbox)
+- [Running OpenCode securely with the Vercel Sandbox](https://vercel.com/kb/guide/running-opencode-securely-with-the-vercel-sandbox)
+- [Safely running AI generated code in your Next.js application](https://vercel.com/kb/guide/running-ai-generated-code-sandbox)
+- [Securing your AI applications with Rate Limiting](https://vercel.com/kb/guide/securing-ai-app-rate-limiting)
+- [Sending a sample of events to Speed Insights](https://vercel.com/kb/guide/sending-sample-to-speed-insights)
+- [Sending Emails from an application on Vercel](https://vercel.com/kb/guide/sending-emails-from-an-application-on-vercel)
+- [Serverless Function contains invalid runtime error](https://vercel.com/kb/guide/serverless-function-contains-invalid-runtime-error)
+- [Set cache control headers for functions](https://vercel.com/kb/guide/set-cache-control-headers)
+- [Ship a GitHub code review bot with Hono and Redis](https://vercel.com/kb/guide/ship-a-github-code-review-bot-with-hono-and-redis)
+- [Should I use Cloudflare in front of Vercel?](https://vercel.com/kb/guide/cloudflare-with-vercel)
+- [SQL vs. NoSQL databases](https://vercel.com/kb/guide/sql-vs-nosql-databases)
+- [Streaming in web applications](https://vercel.com/kb/guide/what-is-streaming)
+- [Streaming responses from LLMs](https://vercel.com/kb/guide/streaming-from-llm)
+- [Supporting Compliance with Vercel WAF](https://vercel.com/kb/guide/supporting-compliance-with-vercel-waf)
+- [Suspicious Traffic in Specific Countries](https://vercel.com/kb/guide/suspicious-traffic-in-specific-countries)
+- [TanStack Start on Vercel vs Cloudflare](https://vercel.com/kb/guide/tanstack-start-on-vercel-vs-cloudflare)
+- [TanStack Start on Vercel vs Netlify](https://vercel.com/kb/guide/tanstack-start-on-vercel-vs-netlify)
+- [The complete guide to authentication on Vercel](https://vercel.com/kb/guide/complete-guide-authentication-vercel)
+- [The Complete Guide to Chat SDK](https://vercel.com/kb/guide/the-complete-guide-to-chat-sdk)
+- [The Complete Guide to Vercel Agent](https://vercel.com/kb/guide/vercel-agent)
+- [The Complete Guide to Vercel Passport](https://vercel.com/kb/guide/vercel-passport)
+- [Transferring Domains to Vercel](https://vercel.com/kb/guide/transferring-domains-to-vercel)
+- [Triage form submissions with Chat SDK](https://vercel.com/kb/guide/triage-form-submissions-with-chat-sdk)
+- [Troubleshooting Build Error: "Build step did not complete within the maximum of 45 minutes"](https://vercel.com/kb/guide/troubleshooting-build-error-build-step-did-not-complete-within-45-minutes)
+- [Troubleshooting Build Error: “Serverless Function has exceeded the unzipped maximum size of 250 MB”](https://vercel.com/kb/guide/troubleshooting-function-250mb-limit)
+- [Troubleshooting Builds Failing with SIGKILL or Out of Memory Errors](https://vercel.com/kb/guide/troubleshooting-sigkill-out-of-memory-errors)
+- [Troubleshooting connectivity issues to Vercel Deployments](https://vercel.com/kb/guide/troubleshooting-connectivity-issues)
+- [Troubleshooting Content Link](https://vercel.com/kb/guide/troubleshooting-content-link)
+- [Troubleshooting Cross-Origin Errors (net::ERR_BLOCKED_BY_ORB) with Deployment Protection](https://vercel.com/kb/guide/troubleshooting-cross-origin-errors-neterr-blocked-by-orb-with-deployment-protection)
+- [Troubleshooting Inconsistent Logs in Vercel Functions](https://vercel.com/kb/guide/troubleshooting-inconsistent-logs-in-vercel-functions)
+- [Troubleshooting request ECONNRESET errors](https://vercel.com/kb/guide/troubleshooting-request-econnreset-errors)
+- [Troubleshooting Vercel Cron Jobs](https://vercel.com/kb/guide/troubleshooting-vercel-cron-jobs)
+- [Unable to find GitHub repository](https://vercel.com/kb/guide/unable-to-find-github-repository)
+- [Understand the Cost Impact of Function Invocations](https://vercel.com/kb/guide/understand-cost-impact-of-function-invocations)
+- [Understanding Cookies](https://vercel.com/kb/guide/understanding-cookies)
+- [Understanding CSRF attacks](https://vercel.com/kb/guide/understanding-csrf-attacks)
+- [Understanding the SameSite cookie attribute](https://vercel.com/kb/guide/understanding-the-samesite-cookie-attribute)
+- [Understanding vector databases for AI apps](https://vercel.com/kb/guide/understanding-vector-databases-for-ai-apps)
+- [Understanding XSS Attacks](https://vercel.com/kb/guide/understanding-xss-attacks)
+- [Updating large-scale site navigation with minimal revalidation](https://vercel.com/kb/guide/update-mega-nav-min-reval)
+- [Upload provider files with AI SDK](https://vercel.com/kb/guide/ai-sdk-file-uploads)
+- [Use feature flags in Fumadocs with the Vercel Toolbar](https://vercel.com/kb/guide/use-feature-flags-in-fumadocs-with-the-vercel-toolbar)
+- [Use your Vercel-owned domain on Bluesky](https://vercel.com/kb/guide/use-my-domain-bluesky)
+- [Using a custom font in your OG Image](https://vercel.com/kb/guide/using-custom-font)
+- [Using a Headless CMS with Vercel](https://vercel.com/kb/guide/using-a-headless-cms-with-vercel)
+- [Using an external image as OG image](https://vercel.com/kb/guide/using-an-external-dynamic-image)
+- [Using an SVG image in your OG image](https://vercel.com/kb/guide/using-svg-image)
+- [Using coding agents to procure Vercel Marketplace integrations](https://vercel.com/kb/guide/using-coding-agents-to-procure-vercel-marketplace-integrations)
+- [Using dynamic text as your OG Image](https://vercel.com/kb/guide/dynamic-text-as-image)
+- [Using emoji in your OG image](https://vercel.com/kb/guide/using-emoji-in-image)
+- [Using Express.js with Vercel](https://vercel.com/kb/guide/using-express-with-vercel)
+- [Using Fathom Analytics with Next.js](https://vercel.com/kb/guide/deploying-nextjs-using-fathom-analytics-with-vercel)
+- [Using Headless WordPress with Next.js and Vercel](https://vercel.com/kb/guide/wordpress-with-vercel)
+- [Using languages in your OG image](https://vercel.com/kb/guide/using-different-languages)
+- [Using Non-default Branches for Production Deployments](https://vercel.com/kb/guide/can-i-use-a-non-default-branch-for-production)
+- [Using PostHog with the Next.js App Router and Vercel](https://vercel.com/kb/guide/posthog-nextjs-vercel-feature-flags-analytics)
+- [Using private GitHub repositories with Vercel Sandbox](https://vercel.com/kb/guide/sandbox-private-github-repositories)
+- [Using React Context for State Management with Next.js](https://vercel.com/kb/guide/react-context-state-management-nextjs)
+- [Using Self-hosted & Reverse Proxies with Vercel](https://vercel.com/kb/guide/how-to-setup-verified-proxy)
+- [Using SvelteKit Form Actions](https://vercel.com/kb/guide/using-sveltekit-form-actions)
+- [Using Tailwind CSS with your OG Image](https://vercel.com/kb/guide/using-tailwind)
+- [Using TanStack Intent to ship and consume agent skills](https://vercel.com/kb/guide/using-tanstack-intent-to-ship-and-consume-agent-skills)
+- [Using the crypto Web API to redirect requests with a unique token](https://vercel.com/kb/guide/use-crypto-web-api)
+- [Using Vercel as a Standalone CDN](https://vercel.com/kb/guide/using_vercel_as_a_cdn)
+- [Using Vercel Sandbox to run Claude’s Agent SDK](https://vercel.com/kb/guide/using-vercel-sandbox-claude-agent-sdk)
+- [Using xmcp with Next.js](https://vercel.com/kb/guide/using-xmcp-with-nextjs)
+- [Vector Databases Explained](https://vercel.com/kb/guide/vector-databases)
+- [Vercel AI SDK vs TanStack AI](https://vercel.com/kb/guide/vercel-ai-sdk-vs-tanstack-ai)
+- [Vercel Blob vs Netlify Blobs](https://vercel.com/kb/guide/vercel-blob-vs-netlify-blobs)
+- [Vercel BotID vs Cloudflare Turnstile](https://vercel.com/kb/guide/vercel-botid-vs-cloudflare-turnstile)
+- [Vercel Drop vs Cloudflare Direct Upload](https://vercel.com/kb/guide/vercel-drop-vs-cloudflare-direct-upload)
+- [Vercel Drop vs Netlify Drop](https://vercel.com/kb/guide/vercel-drop-vs-netlify-drop)
+- [Vercel Integration Guide for SAP Composable Storefront](https://vercel.com/kb/guide/integration-guide-for-sap-composable-storefront)
+- [Vercel Sandbox vs CodeSandbox](https://vercel.com/kb/guide/vercel-sandbox-vs-codesandbox)
+- [Vercel Sandbox vs E2B](https://vercel.com/kb/guide/vercel-sandbox-vs-e2b)
+- [Vercel vs Akamai](https://vercel.com/kb/guide/vercel-vs-akamai)
+- [Vercel vs Fastly](https://vercel.com/kb/guide/vercel-vs-fastly)
+- [Vercel vs Netlify](https://vercel.com/kb/guide/vercel-vs-netlify)
+- [Vercel vs Northflank](https://vercel.com/kb/guide/vercel-vs-northflank)
+- [Vercel vs Railway](https://vercel.com/kb/guide/vercel-vs-railway)
+- [Vercel vs Render](https://vercel.com/kb/guide/vercel-vs-render)
+- [Vercel vs Webflow Cloud](https://vercel.com/kb/guide/vercel-vs-webflow-cloud)
+- [Vercel WAF vs Cloudflare WAF](https://vercel.com/kb/guide/vercel-waf-vs-cloudflare-waf)
+- [What are the best practices for hosting videos on Vercel?](https://vercel.com/kb/guide/best-practices-for-hosting-videos-on-vercel-nextjs-mp4-gif)
+- [What can I do about Vercel Functions timing out?](https://vercel.com/kb/guide/what-can-i-do-about-vercel-serverless-functions-timing-out)
+- [What can I do when I run into build output limits with Next.js on Vercel?](https://vercel.com/kb/guide/what-can-i-do-when-i-run-into-build-output-limits-with-next-js-on-vercel)
+- [What is a Large Language Model (LLM)?](https://vercel.com/kb/guide/what-is-a-large-language-model)
+- [What is an LLM Tool?](https://vercel.com/kb/guide/what-is-an-llm-tool)
+- [What is Retrieval Augmented Generation (RAG)](https://vercel.com/kb/guide/what-is-rag)
+- [What is the best way to get support from Vercel?](https://vercel.com/kb/guide/how-to-get-vercel-support)
+- [What is the Nitro Vite plugin?](https://vercel.com/kb/guide/nitro-vite-plugin)
+- [What is Vercel's Green Energy Policy?](https://vercel.com/kb/guide/what-is-vercel-green-energy-policy)
+- [What is Vercel's policy regarding load testing deployments?](https://vercel.com/kb/guide/what-s-vercel-s-policy-regarding-load-testing-deployments)
+- [What is WorkflowAgent?](https://vercel.com/kb/guide/what-is-workflowagent)
+- [What should I do if I receive a 503 error on Vercel?](https://vercel.com/kb/guide/what-should-i-do-if-i-receive-a-503-error-on-vercel)
+- [When is the SSL Certificate on my Vercel Domain renewed?](https://vercel.com/kb/guide/renewal-of-ssl-certificates-with-a-vercel-domain)
+- [Where can I get copies of my Vercel Invoices?](https://vercel.com/kb/guide/where-can-i-get-copies-of-my-vercel-invoices)
+- [Where can I submit Vercel feature requests?](https://vercel.com/kb/guide/where-to-submit-feature-requests)
+- [Why am I no longer receiving email after adding my domain to Vercel?](https://vercel.com/kb/guide/why-has-email-stopped-working)
+- [Why am I unable to login or signup to the Vercel platform?](https://vercel.com/kb/guide/why-can-i-not-signup)
+- [Why are my branch specific variables and domains not linked to my CLI deployments?](https://vercel.com/kb/guide/branch-variables-and-domains-not-linked-to-cli-deployments)
+- [Why are my Build Logs loading infinitely and not showing up?](https://vercel.com/kb/guide/why-are-my-build-logs-loading-infinitely-and-not-showing-up)
+- [Why are my Vercel builds queued?](https://vercel.com/kb/guide/why-are-my-vercel-builds-queued)
+- [Why aren't commits triggering deployments on Vercel?](https://vercel.com/kb/guide/why-aren-t-commits-triggering-deployments-on-vercel)
+- [Why do my Vercel deployments have multiple domains?](https://vercel.com/kb/guide/why-do-my-vercel-deployments-have-multiple-domains)
+- [Why does my Serverless Function work locally but not when deployed?](https://vercel.com/kb/guide/why-does-my-serverless-function-work-locally-but-not-when-deployed)
+- [Why does npm run start not work on Vercel?](https://vercel.com/kb/guide/npm-run-start-not-working)
+- [Why has my account or deployment been paused?](https://vercel.com/kb/guide/why-is-my-account-deployment-blocked)
+- [Why is my deployed project showing a 404 error?](https://vercel.com/kb/guide/why-is-my-deployed-project-giving-404)
+- [Why is my domain not automatically generating an SSL/TLS certificate?](https://vercel.com/kb/guide/domain-not-generating-ssl-certificate)
+- [Why is my Vercel Deployment URL being shortened?](https://vercel.com/kb/guide/why-is-my-vercel-deployment-url-being-shortened)
+- [Why is my Vercel domain not verified?](https://vercel.com/kb/guide/why-is-my-vercel-domain-unverified)
+- [Why is running another CDN on top of Vercel not recommended?](https://vercel.com/kb/guide/why-running-another-cdn-on-top-of-vercel-is-not-recommended)
+- [Why is Vercel CLI asking me to log in? ](https://vercel.com/kb/guide/why-is-vercel-cli-asking-me-to-log-in)
+- [Why must we use the Domain Nameservers method for Wildcard Domains on Vercel?](https://vercel.com/kb/guide/why-use-domain-nameservers-method-wildcard-domains)

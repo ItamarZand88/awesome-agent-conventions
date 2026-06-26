@@ -1,37 +1,177 @@
 slug: skill-md
 research:
-  - label: Agent Skills specification
-    type: spec
-    url: https://agentskills.io/specification
-    why: Defines the portable SKILL.md contract, required frontmatter, and packaging model.
-  - label: Anthropic Agent Skills overview
-    type: docs
-    url: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview
-    why: Documents Anthropic product support and how skills are used by Claude.
-  - label: Claude Code skills and commands docs
-    type: docs
-    url: https://code.claude.com/docs/en/slash-commands
-    why: Captures Claude Code's command-to-skill convergence and runtime extensions.
-  - label: Amp manual
-    type: docs
-    url: https://ampcode.com/manual
-    why: Shows another implementation using skills and runtime-specific skill metadata.
-  - label: anthropics/skills
-    type: repo
-    url: https://github.com/anthropics/skills
-    why: Provides maintained public examples of complete skill packages.
+- label: Agent Skills specification
+  type: spec
+  url: https://agentskills.io/specification
+  why: Defines the portable SKILL.md contract, required frontmatter, and packaging model.
+- label: Anthropic Agent Skills overview
+  type: docs
+  url: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview
+  why: Documents Anthropic product support and how skills are used by Claude.
+- label: Claude Code skills and commands docs
+  type: docs
+  url: https://code.claude.com/docs/en/slash-commands
+  why: Captures Claude Code's command-to-skill convergence and runtime extensions.
+- label: Amp manual
+  type: docs
+  url: https://ampcode.com/manual
+  why: Shows another implementation using skills and runtime-specific skill metadata.
+- label: anthropics/skills
+  type: repo
+  url: https://github.com/anthropics/skills
+  why: Provides maintained public examples of complete skill packages.
 examples:
-  - label: mcp-builder
-    represents: A procedure-heavy skill with a precise activation description and implementation workflow.
-    upstream:
-      label: anthropics/skills
-      url: https://github.com/anthropics/skills
-    url: https://raw.githubusercontent.com/anthropics/skills/main/skills/mcp-builder/SKILL.md
-    filename: SKILL.md
-  - label: pdf
-    represents: A skill that relies on bundled tooling and domain-specific operational guidance.
-    upstream:
-      label: anthropics/skills
-      url: https://github.com/anthropics/skills
-    url: https://raw.githubusercontent.com/anthropics/skills/main/skills/pdf/SKILL.md
-    filename: SKILL.md
+- label: mcp-builder
+  represents: A procedure-heavy skill with a precise activation description and implementation workflow.
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/mcp-builder/SKILL.md
+  filename: SKILL.md
+- label: pdf
+  represents: A skill that relies on bundled tooling and domain-specific operational guidance.
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/pdf/SKILL.md
+  filename: SKILL.md
+- label: algorithmic-art
+  represents: Generative art with p5.js using seeded randomness and interactive parameter exploration
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/algorithmic-art/SKILL.md
+  filename: SKILL.md
+- label: brand-guidelines
+  represents: Applies Anthropic brand colors and typography to artifacts
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/brand-guidelines/SKILL.md
+  filename: SKILL.md
+- label: canvas-design
+  represents: Create visual art as .png/.pdf using design philosophy
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/canvas-design/SKILL.md
+  filename: SKILL.md
+- label: claude-api
+  represents: Building applications with the Claude API
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/claude-api/SKILL.md
+  filename: SKILL.md
+- label: doc-coauthoring
+  represents: Structured workflow for co-authoring documentation
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/doc-coauthoring/SKILL.md
+  filename: SKILL.md
+- label: docx
+  represents: Create, read, and edit Word .docx files
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/docx/SKILL.md
+  filename: SKILL.md
+- label: frontend-design
+  represents: Guidance for distinctive, intentional frontend UI design
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/frontend-design/SKILL.md
+  filename: SKILL.md
+- label: internal-comms
+  represents: Write internal communications in company formats
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/internal-comms/SKILL.md
+  filename: SKILL.md
+- label: pptx
+  represents: Create, read, and edit PowerPoint .pptx files
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/pptx/SKILL.md
+  filename: SKILL.md
+- label: skill-creator
+  represents: Create, modify, and measure Agent Skills
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/skill-creator/SKILL.md
+  filename: SKILL.md
+- label: slack-gif-creator
+  represents: Create animated GIFs optimized for Slack
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/slack-gif-creator/SKILL.md
+  filename: SKILL.md
+- label: theme-factory
+  represents: Toolkit for styling artifacts with a consistent theme
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/theme-factory/SKILL.md
+  filename: SKILL.md
+- label: web-artifacts-builder
+  represents: Build elaborate multi-component claude.ai HTML artifacts
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/web-artifacts-builder/SKILL.md
+  filename: SKILL.md
+- label: webapp-testing
+  represents: Test local web apps with Playwright
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/webapp-testing/SKILL.md
+  filename: SKILL.md
+- label: xlsx
+  represents: Create, read, and edit Excel .xlsx spreadsheets
+  upstream:
+    label: anthropics/skills
+    url: https://github.com/anthropics/skills
+  url: https://raw.githubusercontent.com/anthropics/skills/main/skills/xlsx/SKILL.md
+  filename: SKILL.md
+- label: xhs-note-creator
+  represents: 'Community: Xiaohongshu (RedBook) note creator with themed image cards'
+  upstream:
+    label: comeonzhj/Auto-Redbook-Skills
+    url: https://github.com/comeonzhj/Auto-Redbook-Skills
+  url: https://raw.githubusercontent.com/comeonzhj/Auto-Redbook-Skills/main/SKILL.md
+  filename: SKILL.md
+- label: repo-task-proof-loop
+  represents: 'Community: repo-local spec-freeze build-evidence-verify loop for large coding tasks'
+  upstream:
+    label: DenisSergeevitch/repo-task-proof-loop
+    url: https://github.com/DenisSergeevitch/repo-task-proof-loop
+  url: https://raw.githubusercontent.com/DenisSergeevitch/repo-task-proof-loop/main/SKILL.md
+  filename: SKILL.md
+- label: guardian-cli
+  represents: 'Community: AI-powered penetration-testing automation CLI orchestrating multiple agents'
+  upstream:
+    label: zakirkun/guardian-cli
+    url: https://github.com/zakirkun/guardian-cli
+  url: https://raw.githubusercontent.com/zakirkun/guardian-cli/main/SKILL.md
+  filename: SKILL.md
+- label: bazi
+  represents: 'Community: Chinese four-pillars (Bazi) birth-chart analysis'
+  upstream:
+    label: jinchenma94/bazi-skill
+    url: https://github.com/jinchenma94/bazi-skill
+  url: https://raw.githubusercontent.com/jinchenma94/bazi-skill/main/SKILL.md
+  filename: SKILL.md
+- label: web-access
+  represents: 'Community: route all networking via a real browser CDP skill'
+  upstream:
+    label: eze-is/web-access
+    url: https://github.com/eze-is/web-access
+  url: https://raw.githubusercontent.com/eze-is/web-access/main/SKILL.md
+  filename: SKILL.md

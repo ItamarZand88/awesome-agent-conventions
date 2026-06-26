@@ -1,0 +1,13 @@
+<!-- source: justicehub-platform — https://raw.githubusercontent.com/Acurioustractor/justicehub-platform/main/.mcp.json -->
+{
+  "mcpServers": {
+    "supabase": {
+      "command": "bash",
+      "args": ["scripts/mcp/supabase.sh"]
+    },
+    "gohighlevel": {
+      "command": "bash",
+      "args": ["scripts/mcp/gohighlevel.sh"]
+    }
+  }
+}

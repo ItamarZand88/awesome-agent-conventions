@@ -1,0 +1,33 @@
+<!-- source: a2a-planner — https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/planner_agent.json -->
+{
+    "name": "Langraph Planner Agent",
+    "description": "Helps breakdown a request in to actionable tasks",
+    "url": "http://localhost:10102/",
+    "version": "1.0.0",
+    "capabilities": {
+        "streaming": true,
+        "pushNotifications": true,
+        "stateTransitionHistory": false
+    },
+    "defaultInputModes": [
+        "text",
+        "text/plain"
+    ],
+    "defaultOutputModes": [
+        "text",
+        "text/plain"
+    ],
+    "skills": [
+        {
+            "id": "planner",
+            "name": "Task Planner",
+            "description": "Helps breakdown a request in to actionable tasks",
+            "tags": [
+                "planner"
+            ],
+            "examples": [
+                "Plan my business trip from San Francisco to London, submit an expense report"
+            ]
+        }
+    ]
+}

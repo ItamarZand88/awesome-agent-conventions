@@ -1,0 +1,67 @@
+<!-- source: vic-k-y-portfolio — https://raw.githubusercontent.com/vic-k-y/new-portfolio/main/ai.txt -->
+# AI Usage Policy for Vignesh Portfolio
+# Alternative format for AI systems and crawlers
+
+# General Policy
+Training: prohibited
+Personal-Data: prohibited
+Portfolio-Display: allowed
+Search-Indexing: allowed
+
+User-agent: *
+Training: prohibited
+Indexing: allowed
+Personal-Data-Extraction: prohibited
+Professional-Display: allowed
+
+User-agent: GPTBot
+Training: prohibited
+Search-Results: allowed
+Personal-Info: prohibited
+
+User-agent: ChatGPT-User  
+Training: prohibited
+Portfolio-Listing: allowed
+
+User-agent: Claude-Web
+Training: prohibited
+Professional-Showcase: allowed
+
+User-agent: Bard
+Training: prohibited
+Developer-Listing: allowed
+
+User-agent: PaLM
+Training: prohibited
+Skill-Display: allowed
+
+User-agent: Commercial-AI
+Training: prohibited
+Data-Collection: prohibited
+Contact: vignesh_m20@outlook.com
+
+# Content Guidelines
+Public-Portfolio: indexable
+Personal-Details: protected
+Project-Information: displayable
+Contact-Info: no-training
+
+# Prohibited Activities
+Disallow-Training: /
+Disallow-Personal-Data: /
+Disallow-Contact-Extraction: /
+Disallow-Photo-Training: /
+
+# Allowed Activities  
+Allow-Display: /
+Allow-Portfolio-Listing: /
+Allow-Professional-Search: /
+Allow-Skill-Showcase: /
+
+# Attribution
+Attribution: "Vignesh Portfolio - myvic.netlify.app"
+Citation-Required: yes
+
+# Contact
+Privacy-Questions: vignesh_m20@outlook.com
+Policy-Contact: vignesh_m20@outlook.com

@@ -6,7 +6,7 @@
 - **Location:** Site root or .well-known: /auth.md
 - **Spec:** [https://workos.com/auth-md](https://workos.com/auth-md)
 - **Evidence:** WorkOS publishes both the auth.md spec page and a live auth.md file, but adoption beyond that ecosystem remains early.
-- **Last verified:** 2026-06-18
+- **Last verified:** 2026-06-26
 - **Files:** `auth.md`
 
 ## Examples
@@ -17,7 +17,17 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
+| `apify` | [`apify.com`](https://apify.com) | [`examples/apify/auth.md`](examples/apify/auth.md) | [source](https://apify.com/auth.md) |
+| `firecrawl` | [`firecrawl.dev`](https://firecrawl.dev) | [`examples/firecrawl/auth.md`](examples/firecrawl/auth.md) | [source](https://firecrawl.dev/auth.md) |
+| `headless-domains` | [`headlessdomains.com`](https://headlessdomains.com) | [`examples/headless-domains/auth.md`](examples/headless-domains/auth.md) | [source](https://headlessdomains.com/auth.md) |
+| `knock` | [`knock.app`](https://knock.app) | [`examples/knock/auth.md`](examples/knock/auth.md) | [source](https://knock.app/auth.md) |
+| `lurkers` | [`lurkers.ntedvs.com`](https://lurkers.ntedvs.com) | [`examples/lurkers/auth.md`](examples/lurkers/auth.md) | [source](https://lurkers.ntedvs.com/auth.md) |
+| `monday` | [`monday.com`](https://monday.com) | [`examples/monday/auth.md`](examples/monday/auth.md) | [source](https://monday.com/auth.md) |
+| `nanogpt` | [`nano-gpt.com`](https://nano-gpt.com) | [`examples/nanogpt/auth.md`](examples/nanogpt/auth.md) | [source](https://nano-gpt.com/auth.md) |
+| `resend` | [`resend.com`](https://resend.com) | [`examples/resend/auth.md`](examples/resend/auth.md) | [source](https://resend.com/auth.md) |
+| `webclaw` | [`webclaw.io`](https://webclaw.io) | [`examples/webclaw/auth.md`](examples/webclaw/auth.md) | [source](https://webclaw.io/auth.md) |
 | `workos.com` | [`workos.com`](https://workos.com) | [`examples/workos/auth.md`](examples/workos/auth.md) | [source](https://workos.com/auth.md) |
+| `zapier` | [`zapier.com`](https://zapier.com) | [`examples/zapier/auth.md`](examples/zapier/auth.md) | [source](https://zapier.com/auth.md) |
 
 ## Field notes
 

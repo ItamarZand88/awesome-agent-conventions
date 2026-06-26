@@ -1,0 +1,418 @@
+<!-- source: pinecone — https://docs.pinecone.io/llms.txt -->
+# Pinecone Docs
+
+> Official Pinecone documentation for the vector database, Assistant, inference APIs, SDKs, and building production search and AI applications.
+
+## Docs
+
+- [2022 releases](https://docs.pinecone.io/assistant-release-notes/2022.md): Pinecone release notes — 2022 releases:
+- [2023 releases](https://docs.pinecone.io/assistant-release-notes/2023.md): Pinecone release notes — 2023 releases:
+- [2024 releases](https://docs.pinecone.io/assistant-release-notes/2024.md): Pinecone release notes — 2024 releases:
+- [2025 releases](https://docs.pinecone.io/assistant-release-notes/2025.md): Pinecone release notes — 2025 releases:
+- [2026 releases](https://docs.pinecone.io/assistant-release-notes/2026.md): Pinecone release notes — 2026 releases:
+- [Feature availability](https://docs.pinecone.io/assistant-release-notes/feature-availability.md): Pinecone release notes — Feature availability:
+- [Assistant examples](https://docs.pinecone.io/examples/assistant.md): Notebooks and sample apps for Pinecone Assistant: quickstart, context snippets, and a full-stack chat UI.
+- [Notebooks](https://docs.pinecone.io/examples/notebooks.md): Runnable Colab notebooks covering semantic search, lexical search, hybrid search, RAG, embeddings, reranking, and data ingestion with Pinecone.
+- [Reference architectures](https://docs.pinecone.io/examples/reference-architectures.md): Official AWS reference architecture for building high-scale production systems with Pinecone, including Pulumi IaC, documentation, and video tutorial.
+- [Sample apps](https://docs.pinecone.io/examples/sample-apps.md): Full-stack sample applications built with Pinecone: semantic search over PDFs, multi-tenant RAG with namespace isolation, multimodal search, and Assistant chat.
+- [Access your invoices](https://docs.pinecone.io/guides/assistant/admin/access-your-invoices.md): View and download billing invoices from Pinecone.
+- [Change your payment method](https://docs.pinecone.io/guides/assistant/admin/change-payment-method.md): Update billing payment method for your organization.
+- [Configure audit logs](https://docs.pinecone.io/guides/assistant/admin/configure-audit-logs.md): Track user and API actions with audit log configuration.
+- [Configure SSO with Okta](https://docs.pinecone.io/guides/assistant/admin/configure-sso-with-okta.md): Enable SSO authentication using Okta integration.
+- [Create a project](https://docs.pinecone.io/guides/assistant/admin/create-a-project.md): Create a new Pinecone project in your organization.
+- [Downgrade your plan](https://docs.pinecone.io/guides/assistant/admin/downgrade-billing-plan.md): Downgrade from a paid plan to the free Starter plan.
+- [Download a usage report](https://docs.pinecone.io/guides/assistant/admin/download-usage-report.md): Export organization usage and cost reports.
+- [Manage API keys](https://docs.pinecone.io/guides/assistant/admin/manage-api-keys.md): Create and manage API keys with custom permissions.
+- [Manage organization members](https://docs.pinecone.io/guides/assistant/admin/manage-organization-members.md): Invite and control organization member access levels.
+- [Manage service accounts at the organization-level](https://docs.pinecone.io/guides/assistant/admin/manage-organization-service-accounts.md): Create service accounts for organization-level API access.
+- [Manage project members](https://docs.pinecone.io/guides/assistant/admin/manage-project-members.md): Add and manage team members in your project.
+- [Manage service accounts at the project-level](https://docs.pinecone.io/guides/assistant/admin/manage-project-service-accounts.md): Enable programmatic access with project-level service accounts.
+- [Manage projects](https://docs.pinecone.io/guides/assistant/admin/manage-projects.md): View, rename, and delete projects in your organization.
+- [Monitor usage and cost](https://docs.pinecone.io/guides/assistant/admin/monitor-spend-and-usage.md): Set monthly spend alerts and monitor usage across your organization.
+- [Organizations overview](https://docs.pinecone.io/guides/assistant/admin/organizations-overview.md): Understand organization structure, projects, and billing.
+- [Projects overview](https://docs.pinecone.io/guides/assistant/admin/projects-overview.md): Learn about projects, roles, and collaboration.
+- [Security overview](https://docs.pinecone.io/guides/assistant/admin/security-overview.md): Understand Pinecone's security features, including authentication, encryption, and audit logs.
+- [Upgrade your plan](https://docs.pinecone.io/guides/assistant/admin/upgrade-billing-plan.md): Upgrade to a paid plan to access advanced features and limits.
+- [Chat through the OpenAI-compatible interface](https://docs.pinecone.io/guides/assistant/chat-through-the-openai-compatible-interface.md): Integrate OpenAI-compatible chat interface with Pinecone Assistant.
+- [Chat through the standard interface](https://docs.pinecone.io/guides/assistant/chat-with-assistant.md): Chat with your assistant using the standard interface and API.
+- [Context snippets overview](https://docs.pinecone.io/guides/assistant/context-snippets-overview.md): Retrieve context snippets from files uploaded to your assistant.
+- [Create an assistant](https://docs.pinecone.io/guides/assistant/create-assistant.md): Create and deploy a Pinecone Assistant with uploaded files for context.
+- [Evaluate answers](https://docs.pinecone.io/guides/assistant/evaluate-answers.md): Measure assistant response quality with LLM-based evaluation.
+- [Evaluation overview](https://docs.pinecone.io/guides/assistant/evaluation-overview.md): Learn about evaluating the correctness and completeness of assistant responses.
+- [Files in Pinecone Assistant](https://docs.pinecone.io/guides/assistant/files-overview.md): Understand supported file types and metadata in Pinecone Assistant.
+- [Manage assistants](https://docs.pinecone.io/guides/assistant/manage-assistants.md): View, update, and delete, and check the status of assistants.
+- [Manage files](https://docs.pinecone.io/guides/assistant/manage-files.md): List, check status, and delete files from your assistant.
+- [Use an Assistant MCP server](https://docs.pinecone.io/guides/assistant/mcp-server.md): Connect AI agents to Pinecone Assistant via Model Context Protocol.
+- [Multimodal context for assistants](https://docs.pinecone.io/guides/assistant/multimodal.md): Process images and charts in PDFs with multimodal assistants.
+- [Pinecone Assistant](https://docs.pinecone.io/guides/assistant/overview.md): Pinecone Assistant is a service that allow you to build production-grade chat and agent-based applications quickly.
+- [Pricing and limits](https://docs.pinecone.io/guides/assistant/pricing-and-limits.md): Understand Pinecone Assistant pricing and service limits.
+- [Pinecone Assistant: n8n quickstart](https://docs.pinecone.io/guides/assistant/quickstart/n8n-quickstart.md): Create an n8n workflow to chat with documents using Pinecone Assistant and OpenAI.
+- [Pinecone Assistant: SDK quickstart](https://docs.pinecone.io/guides/assistant/quickstart/sdk-quickstart.md): Use a Pinecone SDK to create an assistant, upload documents, and chat with the assistant.
+- [Retrieve context snippets](https://docs.pinecone.io/guides/assistant/retrieve-context-snippets.md): Access relevant context and citations from Pinecone Assistant.
+- [Upload files](https://docs.pinecone.io/guides/assistant/upload-files.md): Upload local files to an assistant.
+- [Agentic IDEs and CLIs](https://docs.pinecone.io/guides/get-started/ai-coding-tools.md): Use Pinecone with agentic IDEs and CLIs like Claude Code, Gemini CLI, Cursor, and more.
+- [Concepts](https://docs.pinecone.io/guides/get-started/concepts.md): Understand concepts in Pinecone and how they relate to each other.
+- [Architecture](https://docs.pinecone.io/guides/get-started/database-architecture.md): Learn how Pinecone's architecture enables fast, relevant vector search at any scale.
+- [Pinecone documentation](https://docs.pinecone.io/guides/get-started/overview.md): Pinecone is the leading vector database for building accurate and performant AI applications at scale in production.
+- [Quickstart](https://docs.pinecone.io/guides/get-started/quickstart.md): Get started with Pinecone manually, with AI assistance, or with no-code tools.
+- [Test Pinecone at scale](https://docs.pinecone.io/guides/get-started/test-at-scale.md): Test Pinecone with a real-world dataset and semantic search workload.
+- [Check data freshness](https://docs.pinecone.io/guides/index-data/check-data-freshness.md): Monitor data freshness in Pinecone using log sequence numbers and vector counts.
+- [Create an index](https://docs.pinecone.io/guides/index-data/create-an-index.md): Create indexes for full-text, semantic, lexical, and hybrid search.
+- [Data ingestion overview](https://docs.pinecone.io/guides/index-data/data-ingestion-overview.md): Learn about the different ways to ingest data into Pinecone.
+- [Data modeling](https://docs.pinecone.io/guides/index-data/data-modeling.md): Learn how to structure records for efficient data retrieval and management in Pinecone.
+- [Dedicated Read Nodes](https://docs.pinecone.io/guides/index-data/dedicated-read-nodes.md): Dedicated read nodes use provisioned hardware for read operations, providing predictable, low-latency performance at high query volumes.
+- [Implement multitenancy](https://docs.pinecone.io/guides/index-data/implement-multitenancy.md): Use namespaces to isolate tenant data securely.
+- [Import records](https://docs.pinecone.io/guides/index-data/import-data.md): Import large datasets efficiently from Amazon S3, Google Cloud Storage, or Azure Blob Storage into Pinecone serverless indexes using object storage.
+- [Indexing overview](https://docs.pinecone.io/guides/index-data/indexing-overview.md): Understand key concepts related to indexing data in Pinecone.
+- [Upsert records](https://docs.pinecone.io/guides/index-data/upsert-data.md): Add or update records in Pinecone indexes and manage data with namespaces.
+- [Back up a pod-based index](https://docs.pinecone.io/guides/indexes/pods/back-up-a-pod-based-index.md): Legacy guide for backing up Pinecone pod-based indexes using collections. Collections are a pod-only feature not available for serverless indexes.
+- [Choose a pod type and size](https://docs.pinecone.io/guides/indexes/pods/choose-a-pod-type-and-size.md): Legacy guide for selecting Pinecone pod types (s1, p1, p2) and sizes. Pod indexes are no longer available to new customers as of August 2025. Serverless indexes require no capacity planning.
+- [Create a pod-based index](https://docs.pinecone.io/guides/indexes/pods/create-a-pod-based-index.md): Legacy instructions for creating Pinecone pod-based indexes. New customers cannot create pod indexes as of August 2025. See serverless index creation for current instructions.
+- [Manage pod-based indexes](https://docs.pinecone.io/guides/indexes/pods/manage-pod-based-indexes.md): Legacy guide for managing Pinecone pod-based indexes. Pod indexes are no longer available to new customers as of August 2025. Serverless indexes are recommended for all new projects.
+- [Migrate a pod-based index to serverless](https://docs.pinecone.io/guides/indexes/pods/migrate-a-pod-based-index-to-serverless.md): Complete guide to migrating a Pinecone pod-based index to serverless. Serverless indexes offer better performance, automatic scaling, and usage-based pricing with no minimum spend.
+- [Restore a pod-based index](https://docs.pinecone.io/guides/indexes/pods/restore-a-pod-based-index.md): Legacy guide for restoring Pinecone pod-based indexes from collections. Pod indexes are no longer available to new customers as of August 2025.
+- [Scale pod-based indexes](https://docs.pinecone.io/guides/indexes/pods/scale-pod-based-indexes.md): Legacy guide for scaling Pinecone pod-based indexes. Pod indexes are no longer available to new customers as of August 2025. Serverless indexes scale automatically with no manual configuration.
+- [Understanding collections](https://docs.pinecone.io/guides/indexes/pods/understanding-collections.md): Legacy documentation for Pinecone collections, a pod-only feature for creating static index snapshots. Collections are not available for serverless indexes.
+- [Understanding pod-based indexes](https://docs.pinecone.io/guides/indexes/pods/understanding-pod-based-indexes.md): Legacy documentation for Pinecone pod-based indexes. Pod indexes are no longer available to new customers as of August 2025. Serverless indexes are recommended for all new projects.
+- [Manage cost](https://docs.pinecone.io/guides/manage-cost/manage-cost.md): Learn strategies for managing cost in Pinecone.
+- [Monitor usage and costs](https://docs.pinecone.io/guides/manage-cost/monitor-usage-and-costs.md): Monitor usage and costs for your Pinecone organization and indexes.
+- [Understanding cost](https://docs.pinecone.io/guides/manage-cost/understanding-cost.md): Understand how costs are incurred in Pinecone, including read units (RUs), write units (WUs), storage, and embedding.
+- [Back up an index](https://docs.pinecone.io/guides/manage-data/back-up-an-index.md): Create backups of serverless indexes for protection
+- [Backups overview](https://docs.pinecone.io/guides/manage-data/backups-overview.md): Learn about backups of serverless indexes in Pinecone.
+- [Delete records](https://docs.pinecone.io/guides/manage-data/delete-data.md): Delete records by ID or metadata filter from indexes
+- [Fetch records](https://docs.pinecone.io/guides/manage-data/fetch-data.md): Retrieve complete records by ID or metadata filter.
+- [List record IDs](https://docs.pinecone.io/guides/manage-data/list-record-ids.md): List the IDS of records in an index namespace.
+- [Manage serverless indexes](https://docs.pinecone.io/guides/manage-data/manage-indexes.md): List, describe, and configure serverless indexes.
+- [Manage namespaces](https://docs.pinecone.io/guides/manage-data/manage-namespaces.md): Create and manage namespaces in serverless indexes.
+- [Restore an index](https://docs.pinecone.io/guides/manage-data/restore-an-index.md): Restore serverless indexes from backup snapshots.
+- [Target an index](https://docs.pinecone.io/guides/manage-data/target-an-index.md): Target an index by host or name for data operations such as upsert and query.
+- [Update records](https://docs.pinecone.io/guides/manage-data/update-data.md): Update vectors and metadata for existing records
+- [Analytics and event logs](https://docs.pinecone.io/guides/marketplace/analytics-and-event-logs.md): Monitor end-user activity, refusals, and feedback for a Pinecone Marketplace deployment.
+- [Marketplace concepts](https://docs.pinecone.io/guides/marketplace/concepts.md): Core concepts in Pinecone Marketplace: knowledge applications, deployments, templates, manifests, KAT, layouts, and components.
+- [Configure components](https://docs.pinecone.io/guides/marketplace/configure-components.md): Enable visual components in a Pinecone Marketplace knowledge application.
+- [Configure layouts](https://docs.pinecone.io/guides/marketplace/configure-layouts.md): Choose the consumer layout for a Pinecone Marketplace knowledge application.
+- [Configure operating parameters](https://docs.pinecone.io/guides/marketplace/configure-operating-parameters.md): Tune the system prompt and response behavior of a Pinecone Marketplace knowledge application.
+- [Connectors overview](https://docs.pinecone.io/guides/marketplace/connectors-overview.md): How Pinecone Marketplace connectors ingest documents, keep them in sync with source systems, and let operators add manually uploaded files.
+- [Consumer authentication](https://docs.pinecone.io/guides/marketplace/consumer-auth-overview.md): Choose how end users sign in to a Pinecone Marketplace knowledge application: link access or Google sign-in.
+- [Create a deployment](https://docs.pinecone.io/guides/marketplace/create-a-deployment.md): Create a new deployment in Pinecone Marketplace from a vertical template.
+- [Deployer authentication](https://docs.pinecone.io/guides/marketplace/deployer-auth.md): How operators sign in to Pinecone Marketplace.
+- [Ask questions](https://docs.pinecone.io/guides/marketplace/end-user/ask-questions.md): Get the most out of a Pinecone Marketplace knowledge application by asking clear, specific questions.
+- [Understand answers](https://docs.pinecone.io/guides/marketplace/end-user/citations.md): Read citations, work with visual components, export and share answers, and give feedback in a Pinecone Marketplace knowledge application.
+- [End user guide](https://docs.pinecone.io/guides/marketplace/end-user/overview.md): What a Pinecone Marketplace knowledge application is and how to sign in to one.
+- [Evaluations](https://docs.pinecone.io/guides/marketplace/evaluations.md): How Pinecone Marketplace evaluates a knowledge application on every publish.
+- [Knowledge Agent Toolkit (KAT) overview](https://docs.pinecone.io/guides/marketplace/kat-overview.md): How the Knowledge Agent Toolkit orchestrates multi-domain knowledge applications in Pinecone Marketplace, including manifests, disambiguation, slot filling, and guardrails.
+- [Manage versions and rollback](https://docs.pinecone.io/guides/marketplace/manage-versions-and-rollback.md): Use versioned publishing in Pinecone Marketplace to ship safer changes and roll back when needed.
+- [Multi-domain routing](https://docs.pinecone.io/guides/marketplace/multi-domain-routing.md): How KAT routes queries across multiple knowledge bases in a Pinecone Marketplace deployment.
+- [Pinecone Marketplace](https://docs.pinecone.io/guides/marketplace/overview.md): Pinecone Marketplace is a no-code platform for creating, publishing, and operating knowledge applications powered by Pinecone.
+- [Marketplace pricing and limits](https://docs.pinecone.io/guides/marketplace/pricing-and-limits.md): How Pinecone Marketplace usage is billed and what limits apply.
+- [Publish a deployment](https://docs.pinecone.io/guides/marketplace/publish-a-deployment.md): How to publish a Pinecone Marketplace deployment so end users can use it.
+- [Marketplace quickstart](https://docs.pinecone.io/guides/marketplace/quickstart.md): Pick a template, connect a folder of documents, and publish your first Pinecone Marketplace knowledge application.
+- [Template catalog](https://docs.pinecone.io/guides/marketplace/template-catalog.md): The bundled vertical templates available in Pinecone Marketplace.
+- [Templates overview](https://docs.pinecone.io/guides/marketplace/templates-overview.md): How Pinecone Marketplace templates work, what they define, and how operators customize a deployment after creating it from a template.
+- [Integrate with Amazon S3](https://docs.pinecone.io/guides/operations/integrations/integrate-with-amazon-s3.md): Set up Amazon S3 integrationfor data import and audit logs.
+- [Integrate with Azure Blob Storage](https://docs.pinecone.io/guides/operations/integrations/integrate-with-azure-blob-storage.md): Set up Azure Blob Storage integration for data import.
+- [Integrate with Google Cloud Storage](https://docs.pinecone.io/guides/operations/integrations/integrate-with-google-cloud-storage.md): Integrate Google Cloud Storage for bulk data import
+- [Manage storage integrations](https://docs.pinecone.io/guides/operations/integrations/manage-storage-integrations.md): Update and manage cloud storage integrations.
+- [Local development with Pinecone Local](https://docs.pinecone.io/guides/operations/local-development.md): Develop locally with an in-memory Pinecone emulator.
+- [Use the Pinecone MCP server](https://docs.pinecone.io/guides/operations/mcp-server.md): Use Pinecone MCP server for AI agent integration.
+- [Decrease latency](https://docs.pinecone.io/guides/optimize/decrease-latency.md): Learn techniques to decrease latency for search and upsert operations.
+- [Increase search relevance](https://docs.pinecone.io/guides/optimize/increase-relevance.md): Learn techniques to improve search result quality.
+- [Increase throughput](https://docs.pinecone.io/guides/optimize/increase-throughput.md): Learn techniques to improve data operation performance and query throughput.
+- [Save on costs](https://docs.pinecone.io/guides/optimize/save-on-costs.md): Learn techniques to reduce spend when ingesting data, querying, and operating indexes.
+- [Access your invoices](https://docs.pinecone.io/guides/organizations/manage-billing/access-your-invoices.md): View and download organization billing invoices.
+- [Change your payment method](https://docs.pinecone.io/guides/organizations/manage-billing/change-payment-method.md): Update your billing payment method.
+- [Downgrade your plan](https://docs.pinecone.io/guides/organizations/manage-billing/downgrade-billing-plan.md): Downgrade from a paid plan to the free Starter plan.
+- [Download a usage report](https://docs.pinecone.io/guides/organizations/manage-billing/download-usage-report.md): Download detailed usage and cost reports.
+- [Account deactivation for non-payment](https://docs.pinecone.io/guides/organizations/manage-billing/non-payment-account-deactivation.md): Understand what happens when your account is deactivated for non-payment, including data retention and how to reactivate.
+- [Standard trial](https://docs.pinecone.io/guides/organizations/manage-billing/standard-trial.md): Get $300 credits for 21 days with the Standard plan trial.
+- [Upgrade your plan](https://docs.pinecone.io/guides/organizations/manage-billing/upgrade-billing-plan.md): Upgrade to a paid plan to access advanced features and limits.
+- [Manage organization members](https://docs.pinecone.io/guides/organizations/manage-organization-members.md): Add and manage organization members and roles.
+- [Manage service accounts at the organization-level](https://docs.pinecone.io/guides/organizations/manage-service-accounts.md): Create service accounts for organization-level API access.
+- [Understanding organizations](https://docs.pinecone.io/guides/organizations/understanding-organizations.md): Understand organization structure, projects, and billing.
+- [CI/CD with Pinecone Local and GitHub Actions](https://docs.pinecone.io/guides/production/automated-testing.md): Test Pinecone integration with CI/CD workflows.
+- [Bring your own cloud (BYOC)](https://docs.pinecone.io/guides/production/bring-your-own-cloud.md): Deploy Pinecone in your own cloud account (AWS, GCP, or Azure), with full control over your infrastructure
+- [Configure audit logs](https://docs.pinecone.io/guides/production/configure-audit-logs.md): Enable audit logging to Amazon S3 for compliance
+- [Configure customer-managed encryption keys](https://docs.pinecone.io/guides/production/configure-cmek.md): Use customer-managed encryption keys with AWS KMS.
+- [Configure Private Endpoints](https://docs.pinecone.io/guides/production/configure-private-endpoints.md): Secure Pinecone with private endpoints using AWS PrivateLink or Azure Private Link.
+- [Configure SSO with Okta](https://docs.pinecone.io/guides/production/configure-single-sign-on/okta.md): Configure SAML SSO with Okta for enterprise.
+- [Data deletion on Pinecone](https://docs.pinecone.io/guides/production/data-deletion.md): Understand Pinecone's secure data deletion process.
+- [Error handling](https://docs.pinecone.io/guides/production/error-handling.md): Handle errors with retry logic and best practices.
+- [Monitor performance](https://docs.pinecone.io/guides/production/monitoring.md): Monitor performance metrics in the Pinecone console or with Prometheus or Datadog.
+- [Production checklist](https://docs.pinecone.io/guides/production/production-checklist.md): Prepare your indexes for production with best practices.
+- [Security overview](https://docs.pinecone.io/guides/production/security-overview.md): Understand Pinecone's security features, including authentication, encryption, and audit logs.
+- [Create a project](https://docs.pinecone.io/guides/projects/create-a-project.md): Create a new Pinecone project in your organization.
+- [Manage API keys](https://docs.pinecone.io/guides/projects/manage-api-keys.md): Create and manage API keys with custom permissions.
+- [Manage project members](https://docs.pinecone.io/guides/projects/manage-project-members.md): Add and manage project members with role-based access control.
+- [Manage projects](https://docs.pinecone.io/guides/projects/manage-projects.md): View, rename, and delete projects in your organization.
+- [Manage service accounts at the project-level](https://docs.pinecone.io/guides/projects/manage-service-accounts.md): Enable service accounts for programmatic API access.
+- [Understanding projects](https://docs.pinecone.io/guides/projects/understanding-projects.md): Learn about projects, environments, and member roles.
+- [Filter by metadata](https://docs.pinecone.io/guides/search/filter-by-metadata.md): Narrow search results with metadata filtering.
+- [Full-text search](https://docs.pinecone.io/guides/search/full-text-search.md): Upsert and search typed JSON documents in Pinecone with BM25 scoring, Lucene query syntax, dense and sparse vector ranking, and metadata filters.
+- [Hybrid search](https://docs.pinecone.io/guides/search/hybrid-search.md): Combine semantic and lexical search for better results.
+- [Lexical search](https://docs.pinecone.io/guides/search/lexical-search.md): Perform sparse-vector keyword retrieval against a custom sparse encoder.
+- [Rerank results](https://docs.pinecone.io/guides/search/rerank-results.md): Improve the quality of results with reranking.
+- [Search overview](https://docs.pinecone.io/guides/search/search-overview.md): Explore full-text, semantic, lexical, and hybrid search options.
+- [Semantic search](https://docs.pinecone.io/guides/search/semantic-search.md): Find semantically similar records using dense vectors.
+- [Agent Skills](https://docs.pinecone.io/integrations/agent-skills.md): Connect Pinecone and Agent Skills to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [AI Engine](https://docs.pinecone.io/integrations/ai-engine.md): Connect Pinecone and AI Engine to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Airbyte](https://docs.pinecone.io/integrations/airbyte.md): Connect Pinecone and Airbyte to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Amazon Bedrock](https://docs.pinecone.io/integrations/amazon-bedrock.md): Connect Pinecone and Amazon Bedrock to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Amazon SageMaker](https://docs.pinecone.io/integrations/amazon-sagemaker.md): Integrate Pinecone with Amazon SageMaker for vector search, RAG, and production AI workloads.
+- [Anyscale](https://docs.pinecone.io/integrations/anyscale.md): Connect Pinecone and Anyscale to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Apify](https://docs.pinecone.io/integrations/apify.md): Connect Pinecone and Apify to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Aryn](https://docs.pinecone.io/integrations/aryn.md): Connect Pinecone and Aryn to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [AWS Marketplace](https://docs.pinecone.io/integrations/aws-marketplace.md): Integrate Pinecone with AWS Marketplace for vector search, RAG, and production AI workloads.
+- [Box](https://docs.pinecone.io/integrations/box.md): Connect Pinecone and Box to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Attribute usage to your integration](https://docs.pinecone.io/integrations/build-integration/attribute-usage-to-your-integration.md): Attribute Pinecone SDK and REST usage to your integration with source tags and User-Agent values so support and analytics can trace traffic to your product.
+- [Connect your users to Pinecone](https://docs.pinecone.io/integrations/build-integration/connect-your-users-to-pinecone.md): Embed a Connect to Pinecone flow in your app or notebook so users can sign in, choose a project, and receive an API key without leaving your integration.
+- [Integration ecosystem](https://docs.pinecone.io/integrations/build-integration/integration-ecosystem.md): Understand how native Pinecone integrations are built with public SDKs and APIs, and how curated listings on the Integrations hub are reviewed for partner support.
+- [Claude Code Plugin](https://docs.pinecone.io/integrations/claude-code.md): Integrate Pinecone with Claude Code Plugin for vector search, RAG, and production AI workloads.
+- [Cloudera AI](https://docs.pinecone.io/integrations/cloudera.md): Connect Pinecone and Cloudera AI to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Cohere](https://docs.pinecone.io/integrations/cohere.md): Connect Pinecone and Cohere to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Confluent](https://docs.pinecone.io/integrations/confluent.md): Connect Pinecone and Confluent to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Context Data](https://docs.pinecone.io/integrations/context-data.md): Connect Pinecone and Context Data to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Cursor Plugin](https://docs.pinecone.io/integrations/cursor.md): Integrate Pinecone with the Cursor plugin for vector search, RAG, and production AI workloads.
+- [Databricks](https://docs.pinecone.io/integrations/databricks.md): Connect Pinecone and Databricks to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Datadog](https://docs.pinecone.io/integrations/datadog.md): Connect Pinecone and Datadog to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Datavolo](https://docs.pinecone.io/integrations/datavolo.md): Connect Pinecone and Datavolo to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Estuary](https://docs.pinecone.io/integrations/estuary.md): Connect Pinecone and Estuary to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Fleak](https://docs.pinecone.io/integrations/fleak.md): Connect Pinecone and Fleak to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [FlowiseAI](https://docs.pinecone.io/integrations/flowise.md): Connect Pinecone and FlowiseAI to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Gathr](https://docs.pinecone.io/integrations/gathr.md): Connect Pinecone and Gathr to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Gemini CLI Extension](https://docs.pinecone.io/integrations/gemini-cli.md): Integrate Pinecone with Gemini CLI Extension for vector search, RAG, and production AI workloads.
+- [Genkit](https://docs.pinecone.io/integrations/genkit.md): Connect Pinecone and Genkit to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [GitHub Copilot](https://docs.pinecone.io/integrations/github-copilot.md): Integrate Pinecone with GitHub Copilot for vector search, RAG, and production AI workloads.
+- [Google Cloud Marketplace](https://docs.pinecone.io/integrations/google-cloud-marketplace.md): Integrate Pinecone with Google Cloud Marketplace for vector search, RAG, and production AI workloads.
+- [Haystack](https://docs.pinecone.io/integrations/haystack.md): Connect Pinecone and Haystack to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Hugging Face Inference Endpoints](https://docs.pinecone.io/integrations/hugging-face-inference-endpoints.md): Integrate Pinecone with Hugging Face Inference Endpoints for vector search, RAG, and production AI workloads.
+- [Instill AI](https://docs.pinecone.io/integrations/instill.md): Connect Pinecone and Instill AI to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Jina AI](https://docs.pinecone.io/integrations/jina.md): Connect Pinecone and Jina AI to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [LangChain](https://docs.pinecone.io/integrations/langchain.md): Connect Pinecone and LangChain to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Langtrace](https://docs.pinecone.io/integrations/langtrace.md): Connect Pinecone and Langtrace to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [LlamaIndex](https://docs.pinecone.io/integrations/llamaindex.md): Connect Pinecone and LlamaIndex to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Matillion](https://docs.pinecone.io/integrations/matillion.md): Connect Pinecone and Matillion to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Microsoft Marketplace](https://docs.pinecone.io/integrations/microsoft-marketplace.md): Integrate Pinecone with Microsoft Marketplace for vector search, RAG, and production AI workloads.
+- [n8n](https://docs.pinecone.io/integrations/n8n.md): Connect Pinecone and n8n to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [New Relic](https://docs.pinecone.io/integrations/new-relic.md): Connect Pinecone and New Relic to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Nexla](https://docs.pinecone.io/integrations/nexla.md): Connect Pinecone and Nexla to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Nuclia](https://docs.pinecone.io/integrations/nuclia.md): Connect Pinecone and Nuclia to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [OctoAI](https://docs.pinecone.io/integrations/octoai.md): Connect Pinecone and OctoAI to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [OpenAI](https://docs.pinecone.io/integrations/openai.md): Connect Pinecone and OpenAI to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Integrations](https://docs.pinecone.io/integrations/overview.md): Pinecone integrations enable you to build and deploy AI applications faster and more efficiently. Integrate Pinecone with your favorite frameworks, data sources, and infrastructure providers.
+- [Pulumi](https://docs.pinecone.io/integrations/pulumi.md): Connect Pinecone and Pulumi to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Redpanda](https://docs.pinecone.io/integrations/redpanda.md): Connect Pinecone and Redpanda to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Snowflake](https://docs.pinecone.io/integrations/snowflake.md): Connect Pinecone and Snowflake to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [StreamNative](https://docs.pinecone.io/integrations/streamnative.md): Connect Pinecone and StreamNative to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Terraform](https://docs.pinecone.io/integrations/terraform.md): Connect Pinecone and Terraform to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Traceloop](https://docs.pinecone.io/integrations/traceloop.md): Connect Pinecone and Traceloop to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [TruLens](https://docs.pinecone.io/integrations/trulens.md): Connect Pinecone and TruLens to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Twelve Labs](https://docs.pinecone.io/integrations/twelve-labs.md): Connect Pinecone and Twelve Labs to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Unstructured](https://docs.pinecone.io/integrations/unstructured.md): Connect Pinecone and Unstructured to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Vercel](https://docs.pinecone.io/integrations/vercel.md): Connect Pinecone and Vercel to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [VoltAgent](https://docs.pinecone.io/integrations/voltagent.md): Connect Pinecone and VoltAgent to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Voyage AI](https://docs.pinecone.io/integrations/voyage.md): Connect Pinecone and Voyage AI to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Zapier](https://docs.pinecone.io/integrations/zapier.md): Connect Pinecone and Zapier to ship vector search and RAG: embed, index, and query at scale with managed infrastructure.
+- [Model Gallery](https://docs.pinecone.io/models/overview.md): Pinecone integrations enable you to build and deploy AI applications faster and more efficiently. Integrate Pinecone with your favorite frameworks, data sources, and infrastructure providers.
+- [Create an API key](https://docs.pinecone.io/reference/api/2026-04/admin-assistant/create_api_key.md): Create a new API key for a project. Developers can use the API key to authenticate requests to Pinecone's Data Plane and Control Plane APIs.
+- [Create a new project](https://docs.pinecone.io/reference/api/2026-04/admin-assistant/create_project.md): Creates a new project.
+- [Delete an API key](https://docs.pinecone.io/reference/api/2026-04/admin-assistant/delete_api_key.md): Delete an API key from a project.
+- [Delete a project](https://docs.pinecone.io/reference/api/2026-04/admin-assistant/delete_project.md): Delete a project and all its associated configuration. Before deleting a project, you must delete all indexes, assistants, backups, and collections associated with the project. Other project resources, such as API keys, are automatically deleted when the project is deleted.
+- [Get API key details](https://docs.pinecone.io/reference/api/2026-04/admin-assistant/fetch_api_key.md): Get the details of an API key, excluding the API key secret.
+- [Get project details](https://docs.pinecone.io/reference/api/2026-04/admin-assistant/fetch_project.md): Get details about a project.
+- [Create an access token](https://docs.pinecone.io/reference/api/2026-04/admin-assistant/get_token.md): Obtain an access token for a service account using the OAuth2 client credentials flow. An access token is needed to authorize requests to the Pinecone Admin API. The host domain for OAuth endpoints is `login.pinecone.io`.
+- [List API keys](https://docs.pinecone.io/reference/api/2026-04/admin-assistant/list_api_keys.md): List all API keys in a project.
+- [List projects](https://docs.pinecone.io/reference/api/2026-04/admin-assistant/list_projects.md): List all projects in an organization.
+- [Update an API key](https://docs.pinecone.io/reference/api/2026-04/admin-assistant/update_api_key.md): Update the name and roles of an API key.
+- [Update a project](https://docs.pinecone.io/reference/api/2026-04/admin-assistant/update_project.md): Update a project's configuration details. You can update the project's name, maximum number of Pods, or enable encryption with a customer-managed encryption key (CMEK).
+- [Create an API key](https://docs.pinecone.io/reference/api/2026-04/admin/create_api_key.md): Create a new API key for a project. Developers can use the API key to authenticate requests to Pinecone's Data Plane and Control Plane APIs.
+- [Create a new project](https://docs.pinecone.io/reference/api/2026-04/admin/create_project.md): Creates a new project.
+- [Delete an API key](https://docs.pinecone.io/reference/api/2026-04/admin/delete_api_key.md): Delete an API key from a project.
+- [Delete a project](https://docs.pinecone.io/reference/api/2026-04/admin/delete_project.md): Delete a project and all its associated configuration. Before deleting a project, you must delete all indexes, assistants, backups, and collections associated with the project. Other project resources, such as API keys, are automatically deleted when the project is deleted.
+- [Get API key details](https://docs.pinecone.io/reference/api/2026-04/admin/fetch_api_key.md): Get the details of an API key, excluding the API key secret.
+- [Get project details](https://docs.pinecone.io/reference/api/2026-04/admin/fetch_project.md): Get details about a project.
+- [Create an access token](https://docs.pinecone.io/reference/api/2026-04/admin/get_token.md): Obtain an access token for a service account using the OAuth2 client credentials flow. An access token is needed to authorize requests to the Pinecone Admin API. The host domain for OAuth endpoints is `login.pinecone.io`.
+- [List API keys](https://docs.pinecone.io/reference/api/2026-04/admin/list_api_keys.md): List all API keys in a project.
+- [List projects](https://docs.pinecone.io/reference/api/2026-04/admin/list_projects.md): List all projects in an organization.
+- [Update an API key](https://docs.pinecone.io/reference/api/2026-04/admin/update_api_key.md): Update the name and roles of an API key.
+- [Update a project](https://docs.pinecone.io/reference/api/2026-04/admin/update_project.md): Update a project's configuration details. You can update the project's name, maximum number of Pods, or enable encryption with a customer-managed encryption key (CMEK).
+- [Chat with an assistant](https://docs.pinecone.io/reference/api/2026-04/assistant/chat_assistant.md): Chat with an assistant and get back citations in structured form.
+- [Chat through an OpenAI-compatible interface](https://docs.pinecone.io/reference/api/2026-04/assistant/chat_completion_assistant.md): Chat with an assistant. This endpoint is based on the OpenAI Chat Completion API, a commonly used and adopted API.
+- [Retrieve context from an assistant](https://docs.pinecone.io/reference/api/2026-04/assistant/context_assistant.md): Retrieve context snippets from an assistant to use as part of RAG or any agentic flow.
+- [Create an assistant](https://docs.pinecone.io/reference/api/2026-04/assistant/create_assistant.md): Create an assistant. This is where you specify the underlying training model, which cloud provider you would like to deploy with, and more.
+- [Delete an assistant](https://docs.pinecone.io/reference/api/2026-04/assistant/delete_assistant.md): Delete an existing assistant.
+- [Delete a file](https://docs.pinecone.io/reference/api/2026-04/assistant/delete_file.md): [Delete an uploaded file](https://docs.pinecone.io/guides/assistant/manage-files#delete-a-file) from an assistant.
+- [Check assistant status](https://docs.pinecone.io/reference/api/2026-04/assistant/describe_assistant.md): Get the status of an assistant.
+- [Describe a file](https://docs.pinecone.io/reference/api/2026-04/assistant/describe_file.md): [Get the current status and metadata of a file](https://docs.pinecone.io/guides/assistant/manage-files#get-the-status-of-a-file) uploaded to an assistant.
+- [Describe an operation](https://docs.pinecone.io/reference/api/2026-04/assistant/describe_operation.md): Get the status of an operation.
+- [List assistants](https://docs.pinecone.io/reference/api/2026-04/assistant/list_assistants.md): List of all assistants in a project.
+- [List Files](https://docs.pinecone.io/reference/api/2026-04/assistant/list_files.md): List all files in an assistant, with an option to filter files with metadata.
+- [List operations](https://docs.pinecone.io/reference/api/2026-04/assistant/list_operations.md): List all operations for an assistant. Returns operations that are in progress, as well as recently completed or failed operations. Both successful and failed operations are retained for 30 days after completion. Use the `operation_type` and `status` query parameters to filter results.
+- [Evaluate an answer](https://docs.pinecone.io/reference/api/2026-04/assistant/metrics_alignment.md): Evaluate the correctness and completeness of a response from an assistant or a RAG system. The correctness and completeness are evaluated based on the precision and recall of the generated answer with respect to the ground truth answer facts. Alignment is the harmonic mean of correctness and complet…
+- [Update an assistant](https://docs.pinecone.io/reference/api/2026-04/assistant/update_assistant.md): Update an existing assistant. You can modify the assistant's instructions.
+- [Upload a file](https://docs.pinecone.io/reference/api/2026-04/assistant/upload_file.md): Upload a file to the specified assistant.
+- [Upsert a file](https://docs.pinecone.io/reference/api/2026-04/assistant/upsert_file.md): Create or replace a file in the specified assistant. If a file with the given `assistant_file_id` already exists, it will be replaced with the new file. If it doesn't exist, a new file will be created with that identifier.
+- [Configure an index](https://docs.pinecone.io/reference/api/2026-04/control-plane/configure_index.md): Configure an existing index. For guidance and examples, see [Manage indexes](https://docs.pinecone.io/guides/manage-data/manage-indexes).
+- [Create a backup of an index](https://docs.pinecone.io/reference/api/2026-04/control-plane/create_backup.md): Create a backup of an index.
+- [Create backup schedule](https://docs.pinecone.io/reference/api/2026-04/control-plane/create_backup_schedule.md): Create a recurring backup schedule for an index.
+- [Create a collection](https://docs.pinecone.io/reference/api/2026-04/control-plane/create_collection.md): Create a Pinecone collection.    Serverless indexes do not support collections.
+- [Create an index with integrated embedding](https://docs.pinecone.io/reference/api/2026-04/control-plane/create_for_model.md): Create an index with integrated embedding. With this type of index, you provide source text, and  Pinecone uses a [hosted embedding model](https://docs.pinecone.io/guides/index-data/create-an-index#embedding-models)  to convert the text automatically during [upsert](https://docs.pinecone.io/referenc…
+- [Create an index](https://docs.pinecone.io/reference/api/2026-04/control-plane/create_index.md): Create a Pinecone index. This is where you specify the measure of similarity, the dimension of vectors to be stored in the index, which cloud provider you would like to deploy with, and more.    For guidance and examples, see [Create an index](https://docs.pinecone.io/guides/index-data/create-an-ind…
+- [Create an index from a backup](https://docs.pinecone.io/reference/api/2026-04/control-plane/create_index_from_backup.md): Create an index from a backup.
+- [Delete a backup](https://docs.pinecone.io/reference/api/2026-04/control-plane/delete_backup.md): Delete a backup.
+- [Delete backup schedule](https://docs.pinecone.io/reference/api/2026-04/control-plane/delete_backup_schedule.md): Delete a backup schedule.
+- [Delete a collection](https://docs.pinecone.io/reference/api/2026-04/control-plane/delete_collection.md): Delete an existing collection. Serverless indexes do not support collections.
+- [Delete an index](https://docs.pinecone.io/reference/api/2026-04/control-plane/delete_index.md): Delete an existing index.
+- [Describe a backup](https://docs.pinecone.io/reference/api/2026-04/control-plane/describe_backup.md): Get a description of a backup.
+- [Describe backup schedule](https://docs.pinecone.io/reference/api/2026-04/control-plane/describe_backup_schedule.md): Get details of a specific backup schedule.
+- [Describe a collection](https://docs.pinecone.io/reference/api/2026-04/control-plane/describe_collection.md): Get a description of a collection. Serverless indexes do not support collections.
+- [Describe an index](https://docs.pinecone.io/reference/api/2026-04/control-plane/describe_index.md): Get a description of an index.
+- [Describe a restore job](https://docs.pinecone.io/reference/api/2026-04/control-plane/describe_restore_job.md): Get a description of a restore job.
+- [List backup schedule history](https://docs.pinecone.io/reference/api/2026-04/control-plane/list_backup_schedule_history.md): List the execution history for a backup schedule.
+- [List backup schedules](https://docs.pinecone.io/reference/api/2026-04/control-plane/list_backup_schedules.md): List all backup schedules for an index.
+- [List collections](https://docs.pinecone.io/reference/api/2026-04/control-plane/list_collections.md): List all collections in a project. Serverless indexes do not support collections.
+- [List backups for an index](https://docs.pinecone.io/reference/api/2026-04/control-plane/list_index_backups.md): List all backups for an index.
+- [List indexes](https://docs.pinecone.io/reference/api/2026-04/control-plane/list_indexes.md): List all indexes in a project.
+- [List backups for all indexes in a project](https://docs.pinecone.io/reference/api/2026-04/control-plane/list_project_backups.md): List all backups for a project.
+- [List restore jobs](https://docs.pinecone.io/reference/api/2026-04/control-plane/list_restore_jobs.md): List all restore jobs for a project.
+- [Update backup schedule](https://docs.pinecone.io/reference/api/2026-04/control-plane/update_backup_schedule.md): Update a backup schedule.
+- [Cancel an import](https://docs.pinecone.io/reference/api/2026-04/data-plane/cancel_import.md): Cancel an import operation if it is not yet finished. It has no effect if the operation is already finished.
+- [Create a namespace](https://docs.pinecone.io/reference/api/2026-04/data-plane/createnamespace.md): Create a namespace in a serverless index.
+- [Delete records](https://docs.pinecone.io/reference/api/2026-04/data-plane/delete.md): Delete records by id or by metadata from a single namespace.
+- [Delete a namespace](https://docs.pinecone.io/reference/api/2026-04/data-plane/deletenamespace.md): Delete a namespace from a serverless index. Deleting a namespace is irreversible; all data in the namespace is permanently deleted.
+- [Describe an import](https://docs.pinecone.io/reference/api/2026-04/data-plane/describe_import.md): Return details of a specific import operation.
+- [Get index stats](https://docs.pinecone.io/reference/api/2026-04/data-plane/describeindexstats.md): Return statistics about the contents of an index, including the vector count per namespace, the number of dimensions, and the index fullness.
+- [Describe a namespace](https://docs.pinecone.io/reference/api/2026-04/data-plane/describenamespace.md): Describe a namespace in a serverless index, including the total number of vectors in the namespace.
+- [Fetch records](https://docs.pinecone.io/reference/api/2026-04/data-plane/fetch.md): Look up and return records by ID from a single namespace. The returned records include the vector data and/or metadata. For on-demand indexes, since vector values are retrieved from object storage, fetch operations may have increased latency. If you only need metadata or IDs, consider using the quer…
+- [Fetch records by metadata](https://docs.pinecone.io/reference/api/2026-04/data-plane/fetch_by_metadata.md): Look up and return records by metadata from a single namespace. The returned records include the vector data and metadata. For guidance and examples, see [Fetch data](https://docs.pinecone.io/guides/manage-data/fetch-data).
+- [List record IDs](https://docs.pinecone.io/reference/api/2026-04/data-plane/list.md): List the IDs of records in a single namespace of a serverless index. An optional prefix can be passed to limit the results to IDs with a common prefix.
+- [List imports](https://docs.pinecone.io/reference/api/2026-04/data-plane/list_imports.md): List all recent and ongoing import operations.
+- [List namespaces](https://docs.pinecone.io/reference/api/2026-04/data-plane/listnamespaces.md): List all namespaces in a serverless index.
+- [Search with a vector](https://docs.pinecone.io/reference/api/2026-04/data-plane/query.md): Search a namespace using a query vector. It retrieves the ids of the most similar items in a namespace, along with their similarity scores.
+- [Search with text](https://docs.pinecone.io/reference/api/2026-04/data-plane/search_records.md): Search a namespace with a query text, query vector, or record ID and return the most similar records, along with their similarity scores. Optionally, rerank the initial results based on their relevance to the query.
+- [Start import](https://docs.pinecone.io/reference/api/2026-04/data-plane/start_import.md): Start an asynchronous import of vectors from object storage into an index.
+- [Update a record](https://docs.pinecone.io/reference/api/2026-04/data-plane/update.md): Update records by ID or by metadata in a namespace. Updating by ID changes the vector and/or metadata of a single record. Updating by metadata changes metadata across multiple records using a metadata filter. If a vector value is included, it will overwrite the previous value. If `set_metadata` is i…
+- [Upsert records](https://docs.pinecone.io/reference/api/2026-04/data-plane/upsert.md): Upsert records into a namespace. If a new value is upserted for an existing record ID, it will overwrite the previous value.
+- [Upsert text](https://docs.pinecone.io/reference/api/2026-04/data-plane/upsert_records.md): Upsert text into a namespace. Pinecone converts the text to vectors automatically using the hosted embedding model associated with the index.
+- [Describe a model](https://docs.pinecone.io/reference/api/2026-04/inference/describe_model.md): Get a description of a model hosted by Pinecone.
+- [Generate vectors](https://docs.pinecone.io/reference/api/2026-04/inference/generate-embeddings.md): Generate vector embeddings for input data. This endpoint uses Pinecone's [hosted embedding models](https://docs.pinecone.io/guides/index-data/create-an-index#embedding-models).
+- [List available models](https://docs.pinecone.io/reference/api/2026-04/inference/list_models.md): List the embedding and reranking models hosted by Pinecone.
+- [Rerank results](https://docs.pinecone.io/reference/api/2026-04/inference/rerank.md): Rerank results according to their relevance to a query.
+- [Pinecone Assistant limits](https://docs.pinecone.io/reference/api/assistant/assistant-limits.md): Pinecone REST API:
+- [Authentication](https://docs.pinecone.io/reference/api/assistant/authentication.md): Pinecone REST API: All requests to the Pinecone Assistant API must contain a valid API key for the target project.
+- [Assistant API reference](https://docs.pinecone.io/reference/api/assistant/introduction.md): Pinecone REST API: Use the Assistant API to upload documents, ask questions, and receive responses that reference your documents.
+- [Authentication](https://docs.pinecone.io/reference/api/authentication.md): Pinecone REST API: All requests to Pinecone APIs must contain a valid API key for the target project.
+- [Pinecone Database limits](https://docs.pinecone.io/reference/api/database-limits.md): Pinecone Database limits: This page describes different types of limits for Pinecone Database.
+- [Errors](https://docs.pinecone.io/reference/api/errors.md): Pinecone REST API: Pinecone uses conventional HTTP response codes to indicate the success or failure of an API request. In general, codes in the range.
+- [API reference](https://docs.pinecone.io/reference/api/introduction.md): Pinecone REST API: Pinecone's APIs let you interact programmatically with your Pinecone account.
+- [Known limitations](https://docs.pinecone.io/reference/api/known-limitations.md): Pinecone REST API: This page describes known limitations and feature restrictions in Pinecone.
+- [Authentication](https://docs.pinecone.io/reference/api/marketplace/authentication.md): Authenticate to the Pinecone Marketplace API.
+- [Connectors](https://docs.pinecone.io/reference/api/marketplace/connectors.md): Manage source connectors for Pinecone Marketplace deployments.
+- [Deployments](https://docs.pinecone.io/reference/api/marketplace/deployments.md): Create and manage Pinecone Marketplace deployments programmatically.
+- [Evaluations](https://docs.pinecone.io/reference/api/marketplace/evaluations.md): Trigger and retrieve Pinecone Marketplace evaluation results.
+- [Events and analytics](https://docs.pinecone.io/reference/api/marketplace/events.md): Read deployment events and analytics counters from Pinecone Marketplace.
+- [Pinecone Marketplace API](https://docs.pinecone.io/reference/api/marketplace/introduction.md): Programmatic access to Pinecone Marketplace deployments, templates, connectors, versions, and analytics.
+- [Templates](https://docs.pinecone.io/reference/api/marketplace/templates.md): List the vertical templates available in Pinecone Marketplace.
+- [Versions and publishing](https://docs.pinecone.io/reference/api/marketplace/versions.md): Programmatically publish, list, and roll back Pinecone Marketplace deployment versions.
+- [API versioning](https://docs.pinecone.io/reference/api/versioning.md): Pinecone REST API: Pinecone's APIs are versioned to ensure that your applications continue to work as expected as the platform evolves.
+- [Pinecone Assistant architecture](https://docs.pinecone.io/reference/architecture/assistant-architecture.md): Pinecone Assistant architecture: This page describes the architecture for Pinecone Assistant.
+- [CLI authentication](https://docs.pinecone.io/reference/cli/authentication.md): Pinecone CLI: This document describes how to authenticate the Pinecone CLI to manage your Pinecone resources.
+- [CLI command reference](https://docs.pinecone.io/reference/cli/command-reference.md): CLI command reference: This document provides a complete reference for all Pinecone CLI commands.
+- [CLI quickstart](https://docs.pinecone.io/reference/cli/quickstart.md): Pinecone CLI: The Pinecone CLI ( ) lets you manage Pinecone resources directly from your terminal.
+- [CLI target context](https://docs.pinecone.io/reference/cli/target-context.md): Pinecone CLI: The CLI's **target context** determines which organization and project your commands operate on. You must authenticate before setting target.
+- [Introduction](https://docs.pinecone.io/reference/pinecone-sdks.md): Introduction: Pinecone SDKs
+- [Pinecone .NET SDK](https://docs.pinecone.io/reference/sdks/dotnet/overview.md): Install and use the Pinecone SDK for Pinecone .NET SDK: auth, typed clients, and API operations. For installation instructions and usage examples, see the.
+- [Reference](https://docs.pinecone.io/reference/sdks/dotnet/reference.md): Browse the Pinecone SDK reference for Reference: types and methods.
+- [Pinecone Go SDK](https://docs.pinecone.io/reference/sdks/go/overview.md): Install and use the Pinecone SDK for Pinecone Go SDK: auth, typed clients, and API operations. For installation instructions and usage examples, see the Go.
+- [Reference](https://docs.pinecone.io/reference/sdks/go/reference.md): Browse the Pinecone SDK reference for Reference: types and methods.
+- [OpenTelemetry support](https://docs.pinecone.io/reference/sdks/java/open-telemetry.md): Monitor Pinecone Java SDK operations with OpenTelemetry metrics, including latency breakdowns and error tracking.
+- [Pinecone Java SDK](https://docs.pinecone.io/reference/sdks/java/overview.md): Install and use the Pinecone SDK for Pinecone Java SDK: auth, typed clients, and API operations. For installation instructions and usage examples, see the.
+- [Reference](https://docs.pinecone.io/reference/sdks/java/reference.md): Browse the Pinecone SDK reference for Reference: types and methods.
+- [Pinecone Node.js SDK](https://docs.pinecone.io/reference/sdks/node/overview.md): Install and use the Pinecone SDK for Pinecone Node.js SDK: auth, typed clients, and API operations. For installation instructions, usage examples, and.
+- [Reference](https://docs.pinecone.io/reference/sdks/node/reference.md): Browse the Pinecone SDK reference for Reference: types and methods.
+- [Pinecone Python SDK](https://docs.pinecone.io/reference/sdks/python/overview.md): Install and use the Pinecone SDK for Pinecone Python SDK: auth, typed clients, and API operations. For installation instructions, usage examples, and.
+- [Reference](https://docs.pinecone.io/reference/sdks/python/reference.md): Browse the Pinecone SDK reference for Reference: types and methods.
+- [Pinecone Rust SDK](https://docs.pinecone.io/reference/sdks/rust/overview.md): Install and use the Pinecone SDK for Pinecone Rust SDK: auth, typed clients, and API operations. The Rust SDK is in alpha and under active development. It.
+- [Reference](https://docs.pinecone.io/reference/sdks/rust/reference.md): Browse the Pinecone SDK reference for Reference: types and methods.
+- [Spark-Pinecone connector](https://docs.pinecone.io/reference/tools/pinecone-spark-connector.md): Pinecone data tools: Use the connector to efficiently create, ingest, and update vector embeddings at scale with Databricks and Pinecone.
+- [2022 releases](https://docs.pinecone.io/release-notes/2022.md): Pinecone release notes — 2022 releases:
+- [2023 releases](https://docs.pinecone.io/release-notes/2023.md): Pinecone release notes — 2023 releases:
+- [2024 releases](https://docs.pinecone.io/release-notes/2024.md): Pinecone release notes — 2024 releases:
+- [2025 releases](https://docs.pinecone.io/release-notes/2025.md): Pinecone release notes — 2025 releases:
+- [2026 releases](https://docs.pinecone.io/release-notes/2026.md): Pinecone release notes — 2026 releases:
+- [Feature availability](https://docs.pinecone.io/release-notes/feature-availability.md): Pinecone release notes — Feature availability:
+- [Billing disputes and refunds](https://docs.pinecone.io/troubleshooting/billing-disputes-and-refunds.md): Troubleshoot “Billing disputes and refunds” in Pinecone: As a rule, Pinecone does not offer refunds for unused indexes. If you use a pod-based index, we.
+- [Contact Support](https://docs.pinecone.io/troubleshooting/contact-support.md): Troubleshoot “Contact Support” in Pinecone: Pinecone Support is available to customers on the Builder and Standard billing plans.
+- [CORS Issues](https://docs.pinecone.io/troubleshooting/cors-issues.md): Troubleshoot “CORS Issues” in Pinecone: Cross-Origin Resource Sharing (CORS) is an HTTP-header based security feature that
+- [Create and manage vectors with metadata](https://docs.pinecone.io/troubleshooting/create-and-manage-vectors-with-metadata.md): This is more efficient and will reduce the impact on the compute resources, minimize query latency, and maintain a more consistent user experience.
+- [Custom data processing agreements](https://docs.pinecone.io/troubleshooting/custom-data-processing-agreements.md): Troubleshoot “Custom data processing agreements” in Pinecone: If you need a data processing agreement (DPA) with Pinecone you can get started by filling out.
+- [Debug model vs. Pinecone recall issues](https://docs.pinecone.io/troubleshooting/debug-model-vs-pinecone-recall-issues.md): Troubleshoot “Debug model vs. Pinecone recall issues” in Pinecone: Before starting, establish an evaluation framework for your model and Pinecone recall.
+- [Delete your account](https://docs.pinecone.io/troubleshooting/delete-your-account.md): Troubleshoot “Delete your account” in Pinecone: To delete your Pinecone account, you need to remove your user from all organizations and delete any.
+- [Delete your organization](https://docs.pinecone.io/troubleshooting/delete-your-organization.md): Troubleshoot “Delete your organization” in Pinecone: If you want to delete your Pinecone organization entirely, you'll need to delete all projects, which.
+- [Differences between Lexical and Semantic Search regarding relevancy](https://docs.pinecone.io/troubleshooting/differences-between-lexical-semantic-search.md): Troubleshoot “Differences between Lexical and Semantic Search regarding relevancy” in Pinecone: When it comes to searching for information in a large corpus.
+- [Embedding values changed when upserted](https://docs.pinecone.io/troubleshooting/embedding-values-changed-when-upserted.md): Troubleshoot “Embedding values changed when upserted” in Pinecone: There are two distinct cases in which you might notice that the values of your embeddings.
+- [Error: Cannot import name 'Pinecone' from 'pinecone'](https://docs.pinecone.io/troubleshooting/error-cannot-import-name-pinecone.md): Troubleshoot “Error: Cannot import name 'Pinecone' from 'pinecone'” in Pinecone: When using an older version of the Python SDK (earlier than 3.0.0), trying.
+- [Error: Handshake read failed when connecting](https://docs.pinecone.io/troubleshooting/error-handshake-read-failed.md): Troubleshoot “Error: Handshake read failed when connecting” in Pinecone: When trying to connect to Pinecone server, some users may receive an error message.
+- [Export indexes](https://docs.pinecone.io/troubleshooting/export-indexes.md): Troubleshoot “Export indexes” in Pinecone: Pinecone does not support an export function. It is on our roadmap for the future, however.
+- [How to work with Support](https://docs.pinecone.io/troubleshooting/how-to-work-with-support.md): Troubleshoot “How to work with Support” in Pinecone: There are several best practices for working with Pinecone Support that can lead to faster resolutions.
+- [Serverless index creation error - max serverless indexes](https://docs.pinecone.io/troubleshooting/index-creation-error-max-serverless.md): Troubleshoot “Serverless index creation error - max serverless indexes” in Pinecone: Each project is limited to 20 serverless indexes. Trying to create more.
+- [Index creation error - missing spec parameter](https://docs.pinecone.io/troubleshooting/index-creation-error-missing-spec.md): Troubleshoot “Index creation error - missing spec parameter” in Pinecone: Using the new API, creating an index requires passing appropriate values into the.
+- [Keep customer data separate in Pinecone](https://docs.pinecone.io/troubleshooting/keep-customer-data-separate.md): Troubleshoot “Keep customer data separate in Pinecone” in Pinecone: Some use cases require vectors to be segmented by their customers, either physically or.
+- [Limitations of querying by ID](https://docs.pinecone.io/troubleshooting/limitations-of-querying-by-id.md): Understand why querying by record ID can omit that ID under ANN search, and when to use fetch or metadata filters to retrieve a specific vector reliably.
+- [Login code issues](https://docs.pinecone.io/troubleshooting/login-code-issues.md): Troubleshoot “Login code issues” in Pinecone: If the email token you received from Pinecone is not accepted when logging in there may be a few different.
+- [Minimize latencies](https://docs.pinecone.io/troubleshooting/minimize-latencies.md): Troubleshoot “Minimize latencies” in Pinecone: There are many aspects to consider to minimize latencies:
+- [Python AttributeError: module pinecone has no attribute init](https://docs.pinecone.io/troubleshooting/module-pinecone-has-no-attribute-init.md): Troubleshoot “Python AttributeError: module pinecone has no attribute init” in Pinecone: If you are using Pinecone serverless and getting the error , first.
+- [Node.js Troubleshooting](https://docs.pinecone.io/troubleshooting/nodejs-troubleshooting.md): Troubleshoot “Node.js Troubleshooting” in Pinecone: There could be several reasons why a Node.js application works in development mode but not in deployment.
+- [Parallel queries](https://docs.pinecone.io/troubleshooting/parallel-queries.md): Troubleshoot “Parallel queries” in Pinecone: There are many approaches to perform parallel queries in your application, from using the Python SDK to making.
+- [PineconeAttribute errors with LangChain](https://docs.pinecone.io/troubleshooting/pinecone-attribute-errors-with-langchain.md): Troubleshoot “PineconeAttribute errors with LangChain” in Pinecone: When using an outdated version of LangChain, you may encounter errors like the following:
+- [Pinecone Support SLAs](https://docs.pinecone.io/troubleshooting/pinecone-support-slas.md): Troubleshoot “Pinecone Support SLAs” in Pinecone: New first-response SLAs went into effect on September 16th, 2024. See the pricing page for more details.
+- [Remove a metadata field from a record](https://docs.pinecone.io/troubleshooting/remove-metadata-field.md): Troubleshoot “Remove a metadata field from a record” in Pinecone: You must perform an operation to remove existing metadata fields from a record.
+- [Restrictions on index names](https://docs.pinecone.io/troubleshooting/restrictions-on-index-names.md): Troubleshoot “Restrictions on index names” in Pinecone: There are two main restrictions on index names in Pinecone: character restrictions and a maximum.
+- [Return all vectors in an index](https://docs.pinecone.io/troubleshooting/return-all-vectors-in-an-index.md): Troubleshoot “Return all vectors in an index” in Pinecone: Pinecone is designed to find vectors that are similar to a given set of conditions, either by.
+- [Serverless index connection errors](https://docs.pinecone.io/troubleshooting/serverless-index-connection-errors.md): Troubleshoot “Serverless index connection errors” in Pinecone: To connect to a serverless index, you must use an updated Pinecone client. Trying to connect.
+- [Unable to pip install](https://docs.pinecone.io/troubleshooting/unable-to-pip-install.md): Resolve pip install issues for the Pinecone Python SDK: use pip3 on Python 3.x, choose pinecone[grpc] or plain pinecone for HTTP, and upgrade to the latest release.
+- [Wait for index creation to be complete](https://docs.pinecone.io/troubleshooting/wait-for-index-creation.md): The Python SDK and the REST API are designed to interact with the first system during index creation but not the second.
+
+## OpenAPI Specs
+
+- [db_data_2026-01.alpha.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2026-01.alpha/db_data_2026-01.alpha.oas.yaml)
+- [db_control_2026-01.alpha.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2026-01.alpha/db_control_2026-01.alpha.oas.yaml)
+- [assistant_data_2026-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2026-04/assistant_data_2026-04.oas.yaml)
+- [inference_2026-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2026-04/inference_2026-04.oas.yaml)
+- [db_data_2026-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2026-04/db_data_2026-04.oas.yaml)
+- [db_control_2026-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2026-04/db_control_2026-04.oas.yaml)
+- [oauth_2026-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2026-04/oauth_2026-04.oas.yaml)
+- [admin_2026-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2026-04/admin_2026-04.oas.yaml)
+- [assistant_evaluation_2026-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2026-04/assistant_evaluation_2026-04.oas.yaml)
+- [assistant_control_2026-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2026-04/assistant_control_2026-04.oas.yaml)
+- [db_data_2025-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-04/db_data_2025-04.oas.yaml)
+- [db_data_2025-10.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-10/db_data_2025-10.oas.yaml)
+- [db_control_2025-10.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-10/db_control_2025-10.oas.yaml)
+- [assistant_data_2025-10.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-10/assistant_data_2025-10.oas.yaml)
+- [assistant_control_2025-10.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-10/assistant_control_2025-10.oas.yaml)
+- [db_data_2025-01.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-01/db_data_2025-01.oas.yaml)
+- [data_2024-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2024-04/data_2024-04.oas.yaml)
+- [data_2024-07.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2024-07/data_2024-07.oas.yaml)
+- [db_data_2024-10.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2024-10/db_data_2024-10.oas.yaml)
+- [inference_2025-10.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-10/inference_2025-10.oas.yaml)
+- [assistant_evaluation_2025-10.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-10/assistant_evaluation_2025-10.oas.yaml)
+- [oauth_2025-10.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-10/oauth_2025-10.oas.yaml)
+- [admin_2025-10.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-10/admin_2025-10.oas.yaml)
+- [admin_2025-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-04/admin_2025-04.oas.yaml)
+- [assistant_data_2025-01.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-01/assistant_data_2025-01.oas.yaml)
+- [assistant_data_2025-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-04/assistant_data_2025-04.oas.yaml)
+- [db_control_2025-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-04/db_control_2025-04.oas.yaml)
+- [control_2024-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2024-04/control_2024-04.oas.yaml)
+- [control_2024-07.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2024-07/control_2024-07.oas.yaml)
+- [inference_2024-10.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2024-10/inference_2024-10.oas.yaml)
+- [db_control_2024-10.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2024-10/db_control_2024-10.oas.yaml)
+- [inference_2025-01.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-01/inference_2025-01.oas.yaml)
+- [db_control_2025-01.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-01/db_control_2025-01.oas.yaml)
+- [assistant_evaluation_2025-01.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-01/assistant_evaluation_2025-01.oas.yaml)
+- [assistant_control_2025-01.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-01/assistant_control_2025-01.oas.yaml)
+- [inference_2025-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-04/inference_2025-04.oas.yaml)
+- [assistant_evaluation_2025-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-04/assistant_evaluation_2025-04.oas.yaml)
+- [assistant_control_2025-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-04/assistant_control_2025-04.oas.yaml)
+- [oauth_2025-04.oas](https://raw.githubusercontent.com/pinecone-io/pinecone-api/refs/heads/main/2025-04/oauth_2025-04.oas.yaml)
+- [pinecone](https://docs.pinecone.io/pinecone.json)
+- [data_plane_api](https://docs.pinecone.io/data_plane_api.json)
+- [control_plane_api](https://docs.pinecone.io/control_plane_api.json)

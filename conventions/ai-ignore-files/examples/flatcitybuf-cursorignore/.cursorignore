@@ -1,0 +1,37 @@
+<!-- source: flatcitybuf-cursorignore — https://raw.githubusercontent.com/cityjson/flatcitybuf/main/.cursorignore -->
+# .env
+.env
+.env.*
+
+# node_modules
+node_modules/*
+
+# OSX
+.DS_Store
+
+# tmp
+/tmp/*
+!/tmp/.keep
+
+# ESLint
+.eslintcache
+
+# testing
+coverage/
+
+# AWS CDK
+.cdk.staging
+cdk.out
+
+# tmp
+/tmp/*
+!/tmp/.keep
+
+# Rust
+target/
+
+# Cargo
+Cargo.lock
+
+# data
+data/*

@@ -13,18 +13,18 @@ https://platform.claude.com
 
 The full documentation is available in the following languages on https://platform.claude.com/docs:
 
-- English (en) - 1751 pages - /docs - Content included below
-- German (Deutsch) (de) - 133 pages - /docs/de - Visit website for content
-- Spanish (Español) (es) - 133 pages - /docs/es - Visit website for content
-- French (Français) (fr) - 133 pages - /docs/fr - Visit website for content
-- Italian (Italiano) (it) - 133 pages - /docs/it - Visit website for content
-- Japanese (日本語) (ja) - 133 pages - /docs/ja - Visit website for content
-- Korean (한국어) (ko) - 133 pages - /docs/ko - Visit website for content
-- Portuguese (Português) (pt-BR) - 133 pages - /docs/pt-BR - Visit website for content
-- Russian (Русский) (ru) - 133 pages - /docs/ru - Visit website for content
-- Chinese Simplified (简体中文) (zh-CN) - 133 pages - /docs/zh-CN - Visit website for content
-- Chinese Traditional (繁體中文) (zh-TW) - 133 pages - /docs/zh-TW - Visit website for content
-- Indonesian (Bahasa Indonesia) (id) - 133 pages - /docs/id - Visit website for content
+- English (en) - 1753 pages - /docs - Content included below
+- German (Deutsch) (de) - 136 pages - /docs/de - Visit website for content
+- Spanish (Español) (es) - 136 pages - /docs/es - Visit website for content
+- French (Français) (fr) - 136 pages - /docs/fr - Visit website for content
+- Italian (Italiano) (it) - 136 pages - /docs/it - Visit website for content
+- Japanese (日本語) (ja) - 136 pages - /docs/ja - Visit website for content
+- Korean (한국어) (ko) - 136 pages - /docs/ko - Visit website for content
+- Portuguese (Português) (pt-BR) - 136 pages - /docs/pt-BR - Visit website for content
+- Russian (Русский) (ru) - 136 pages - /docs/ru - Visit website for content
+- Chinese Simplified (简体中文) (zh-CN) - 136 pages - /docs/zh-CN - Visit website for content
+- Chinese Traditional (繁體中文) (zh-TW) - 136 pages - /docs/zh-TW - Visit website for content
+- Indonesian (Bahasa Indonesia) (id) - 136 pages - /docs/id - Visit website for content
 
 ---
 
@@ -46,24 +46,25 @@ The full documentation is available in the following languages on https://platfo
 - [Bash tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/bash-tool.md)
 - [Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing.md)
 - [Build an orchestration mode](https://platform.claude.com/docs/en/build-with-claude/mid-conversation-effort-example.md)
-- [Extended thinking](https://platform.claude.com/docs/en/build-with-claude/extended-thinking.md) - Building with extended thinking
 - [Cache diagnostics (beta)](https://platform.claude.com/docs/en/build-with-claude/cache-diagnostics.md) - Cache diagnostics
 - [Citations](https://platform.claude.com/docs/en/build-with-claude/citations.md)
 - [Amazon Bedrock](https://platform.claude.com/docs/en/build-with-claude/claude-in-amazon-bedrock.md) - Claude in Amazon Bedrock
 - [Microsoft Foundry](https://platform.claude.com/docs/en/build-with-claude/claude-in-microsoft-foundry.md) - Claude in Microsoft Foundry
 - [Amazon Bedrock (legacy)](https://platform.claude.com/docs/en/build-with-claude/claude-on-amazon-bedrock-legacy.md) - Claude on Amazon Bedrock (legacy)
-- [Vertex AI](https://platform.claude.com/docs/en/build-with-claude/claude-on-vertex-ai.md) - Claude on Vertex AI
+- [Google Cloud](https://platform.claude.com/docs/en/build-with-claude/claude-on-vertex-ai.md) - Claude on Google Cloud
 - [Claude Platform on AWS](https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws.md)
 - [Code execution tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool.md)
 - [Compaction](https://platform.claude.com/docs/en/build-with-claude/compaction.md)
 - [Computer use tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool.md)
 - [Context editing](https://platform.claude.com/docs/en/build-with-claude/context-editing.md)
 - [Context windows](https://platform.claude.com/docs/en/build-with-claude/context-windows.md)
+- [Coordinates and bounding boxes](https://platform.claude.com/docs/en/build-with-claude/vision-coordinates.md)
 - [Define tools](https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools.md)
 - [Deploy with Docker Compose](https://platform.claude.com/docs/en/agents-and-tools/mcp-tunnels/deploy-compose.md) - Deploy MCP tunnels with Docker Compose
 - [Deploy with Helm](https://platform.claude.com/docs/en/agents-and-tools/mcp-tunnels/deploy-helm.md) - Deploy MCP tunnels with Helm
 - [Effort](https://platform.claude.com/docs/en/build-with-claude/effort.md)
 - [Embeddings](https://platform.claude.com/docs/en/build-with-claude/embeddings.md)
+- [Extended thinking](https://platform.claude.com/docs/en/build-with-claude/extended-thinking.md)
 - [Fallback credit](https://platform.claude.com/docs/en/build-with-claude/fallback-credit.md)
 - [Fast mode (research preview)](https://platform.claude.com/docs/en/build-with-claude/fast-mode.md)
 - [Files API](https://platform.claude.com/docs/en/build-with-claude/files.md)
@@ -106,7 +107,7 @@ The full documentation is available in the following languages on https://platfo
 - [Tutorial: Build a tool-using agent](https://platform.claude.com/docs/en/agents-and-tools/tool-use/build-a-tool-using-agent.md)
 - [Skills in the API](https://platform.claude.com/docs/en/build-with-claude/skills-guide.md) - Using Agent Skills with the API
 - [Using the Messages API](https://platform.claude.com/docs/en/build-with-claude/working-with-messages.md)
-- [Images and vision](https://platform.claude.com/docs/en/build-with-claude/vision.md) - Vision
+- [Overview](https://platform.claude.com/docs/en/build-with-claude/vision.md) - Vision
 - [Web fetch tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-fetch-tool.md)
 - [Web search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool.md)
 
@@ -151,6 +152,7 @@ The full documentation is available in the following languages on https://platfo
 - [AWS KMS](https://platform.claude.com/docs/en/manage-claude/cmek-aws-kms.md) - Configure AWS KMS for CMEK
 - [Azure Key Vault](https://platform.claude.com/docs/en/manage-claude/cmek-azure-key-vault.md) - Configure Azure Key Vault for CMEK
 - [Google Cloud KMS](https://platform.claude.com/docs/en/manage-claude/cmek-google-cloud-kms.md) - Configure Google Cloud KMS for CMEK
+- [Create an Admin API key](https://platform.claude.com/docs/en/manage-claude/admin-api-keys.md)
 - [Overview](https://platform.claude.com/docs/en/manage-claude/cmek.md) - Customer-managed encryption keys
 - [Data residency](https://platform.claude.com/docs/en/manage-claude/data-residency.md)
 - [Design your integration](https://platform.claude.com/docs/en/manage-claude/compliance-integration-patterns.md) - Design your compliance integration

@@ -1,0 +1,54 @@
+<!-- source: assemblyai — https://www.assemblyai.com/llms.txt -->
+# AssemblyAI
+
+> AssemblyAI provides production-ready Voice AI models for speech-to-text, real-time streaming transcription, speaker diarization, Speech Understanding, Guardrails, the Voice Agent API, and the LLM Gateway. This file indexes the Markdown sources agents should prefer over crawling the HTML marketing site.
+
+## Agent Instructions
+
+- Prefer the Markdown sources linked in this file over crawling HTML pages.
+- For documentation pages, append `.md` to the page URL to get the Markdown version (e.g. `https://www.assemblyai.com/docs/voice-agents/voice-agent-api.md`).
+- For the complete documentation index, use https://www.assemblyai.com/docs/llms.txt.
+- For all documentation in a single file, use https://www.assemblyai.com/docs/llms-full.txt.
+- For section-specific documentation indexes, append `/llms.txt` to any docs section URL.
+- For coding assistants and agentic IDEs, start with [Build with AI coding agents](https://www.assemblyai.com/docs/agent-instructions.md) and the docs MCP server at https://www.assemblyai.com/docs/mcp.
+
+## Core References
+
+- [Pricing](https://www.assemblyai.com/llms/pricing.md): canonical rate card, billing rules, and add-on stacking.
+- [Models & terminology](https://www.assemblyai.com/llms/models.md): model identifiers, language support, deprecations, capability matrices, API parameters, terminology rules, and streaming WebSocket URLs.
+
+## Documentation
+
+- [Documentation index — all pages](https://www.assemblyai.com/docs/llms.txt): the docs team's complete, authoritative index.
+- [All documentation in one file](https://www.assemblyai.com/docs/llms-full.txt)
+- [Build with AI coding agents](https://www.assemblyai.com/docs/agent-instructions.md): integration guidance for Cursor, Claude Code, Copilot, and other AI coding assistants.
+- [Models overview](https://www.assemblyai.com/docs/getting-started/models.md): how to choose a speech model.
+- [Universal-3 Pro](https://www.assemblyai.com/docs/getting-started/universal-3-pro.md): the flagship speech-to-text model.
+- [Transcribe a file — pre-recorded quickstart](https://www.assemblyai.com/docs/pre-recorded-audio/getting-started/transcribe-an-audio-file.md)
+- [Transcribe streaming audio — streaming quickstart](https://www.assemblyai.com/docs/streaming/getting-started/transcribe-streaming-audio.md)
+- [Voice Agent API](https://www.assemblyai.com/docs/voice-agents/voice-agent-api.md): real-time STT built for voice agents.
+- [Speech Understanding](https://www.assemblyai.com/docs/speech-understanding/getting-started.md): LLM-powered analysis over transcripts.
+- [LLM Gateway](https://www.assemblyai.com/docs/llm-gateway/overview.md): apply leading LLMs to audio through one API.
+- [API reference](https://www.assemblyai.com/docs/api-reference/overview.md)
+- [End-to-end examples](https://www.assemblyai.com/docs/getting-started/end-to-end-examples.md)
+- [FAQ](https://www.assemblyai.com/docs/faq.md)
+
+## Website Pages
+
+- [Home](https://www.assemblyai.com/index.md)
+- [Products overview](https://www.assemblyai.com/products.md)
+- [Speech-to-Text](https://www.assemblyai.com/products/speech-to-text.md)
+- [Streaming Speech-to-Text](https://www.assemblyai.com/products/streaming-speech-to-text.md)
+- [Voice Agent API](https://www.assemblyai.com/products/voice-agent-api.md)
+- [Speech Understanding](https://www.assemblyai.com/products/speech-understanding.md)
+- [Guardrails](https://www.assemblyai.com/products/guardrails.md)
+- [LLM Gateway](https://www.assemblyai.com/products/llm-gateway.md)
+- [Pricing](https://www.assemblyai.com/pricing.md)
+- [Benchmarks](https://www.assemblyai.com/benchmarks.md)
+- [Customers](https://www.assemblyai.com/customers.md)
+- [Blog](https://www.assemblyai.com/blog.md)
+- [Changelog](https://www.assemblyai.com/changelog.md)
+
+## Optional
+
+- [Security](https://www.assemblyai.com/security): security and compliance overview.

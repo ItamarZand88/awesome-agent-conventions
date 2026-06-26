@@ -1,0 +1,9 @@
+<!-- source: wonder-blocks — https://raw.githubusercontent.com/Khan/wonder-blocks/main/.mcp.json -->
+{
+    "mcpServers": {
+        "wonder-blocks-storybook": {
+            "type": "http",
+            "url": "http://localhost:6061/mcp"
+        }
+    }
+}

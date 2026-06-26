@@ -247,7 +247,7 @@ For any new platform building on Connect, always start with [How Connect Works](
 - [How Connect works](https://docs.stripe.com/connect/how-connect-works.md): Start here. Learn how Connect's core components fit together — onboarding, account management, payments, payouts, and platform tools — before making any API or configuration decisions.
 - [Connect and the Accounts v2 API](https://docs.stripe.com/connect/accounts-v2.md): Learn about the Accounts v2 model for Connect and how to create and manage connected accounts using the current recommended configuration.
 - [Introduction to SaaS platforms and marketplaces with Connect](https://docs.stripe.com/connect/saas-platforms-and-marketplaces.md): Compare Connect integration approaches for SaaS platforms and marketplaces and choose the model that matches how your business takes payments and moves money.
-- [Interactive platform guide](https://docs.stripe.com/connect/interactive-platform-guide.md): Use an interactive guide to determine the right Connect account type and payment flow for your platform based on your requirements.
+- [Build your Connect integration](https://docs.stripe.com/connect/interactive-platform-guide.md): Use an interactive guide to determine the right Connect account type and payment flow for your platform based on your requirements.
 
 ### SaaS platforms
 - [Build a SaaS platform](https://docs.stripe.com/connect/saas.md): Learn how to build a Connect integration for SaaS platforms, including recommended onboarding, payment flows, and platform fee setup.
@@ -295,8 +295,8 @@ For new integrations, use the Accounts v2 API as described in /connect/accounts-
 - [US tax reporting for Connect platforms](https://docs.stripe.com/connect/tax-reporting.md): Learn how to report the annual payments for your US-based connected accounts.
 - [Get started with tax reporting](https://docs.stripe.com/connect/get-started-tax-reporting.md): Use the Stripe 1099 tax reporting product to create, modify, file, and deliver tax forms for your connected accounts.
 - [Update and create 1099 tax forms](https://docs.stripe.com/connect/modify-tax-forms.md): Update and create 1099 tax forms for connected accounts.
-- [1099-K form state requirements](https://docs.stripe.com/connect/1099-K.md): View the state requirements for 1099-K forms.
-- [1099-NEC form state requirements](https://docs.stripe.com/connect/1099-NEC.md): View the state requirements for 1099-NEC forms.
+- [1099-K form state requirements](https://docs.stripe.com/connect/1099-k.md): View the state requirements for 1099-K forms.
+- [1099-NEC form state requirements](https://docs.stripe.com/connect/1099-nec.md): View the state requirements for 1099-NEC forms.
 
 ## Issuing
 Use the Stripe Issuing API to create, manage, and distribute payment cards for your business. Issuing is available in the United States, United Kingdom, and European Economic Area. You can create your own card designs, and approve transactions in real time. You can build Stripe Issuing alongside [Stripe Treasury](https://docs.stripe.com/treasury.md) to attach cards to open loop wallets, and offer your users additional money movement options.
@@ -337,7 +337,7 @@ Stripe Capital provides access to financing options for eligible users processin
 - [How Stripe Capital works](https://docs.stripe.com/capital/how-stripe-capital-works.md): Learn how Stripe Capital provides financing for eligible businesses.
 - [Set up Capital](https://docs.stripe.com/capital/getting-started.md): Determine which integration option to use when you set up Stripe Capital.
 - [How Stripe Capital for platforms works](https://docs.stripe.com/capital/how-capital-for-platforms-works.md): Learn the basics about Stripe Capital for platforms.
-- [Managing customer support](https://docs.stripe.com/capital/servicing.md): Support your Capital customers using Stripe-approved messaging.
+- [Managing customer support](https://docs.stripe.com/capital/servicing.md): Support your Capital customers by region.
 - [Capital financing component](https://docs.stripe.com/connect/supported-embedded-components/capital-financing.md): Allow a connected account to view and manage their active Capital financing.
 - [Build a custom Capital program](https://docs.stripe.com/capital/api-integration.md): Integrate with our API to build a custom Capital program.
 - [Capital application component](https://docs.stripe.com/connect/supported-embedded-components/capital-financing-application.md): Show an end-to-end application flow for Capital financing.
@@ -354,7 +354,7 @@ Pay with Crypto works with *Checkout*, *Elements*, or can be directly integrated
 - [Accept stablecoin payments](https://docs.stripe.com/payments/accept-stablecoin-payments.md): Start accepting stablecoins by enabling the Crypto payment method.
 - [Use the Stripe-hosted onramp](https://docs.stripe.com/crypto/onramp/stripe-hosted.md): Generate a redirect URL and mint a session for the standalone onramp.
 - [Set up an Embedded onramp integration](https://docs.stripe.com/crypto/onramp/embedded.md): Use this guide to fully customize the embeddable onramp.
-- [Embedded Components onramp](https://docs.stripe.com/crypto/onramp/embedded-components.md): Learn about the Embedded Components onramp.
+- [Embedded Components onramp](https://docs.stripe.com/crypto/onramp/embedded-components.md): Build a crypto onramp flow in your app or website.
 - [Set up an Embedded onramp integration](https://docs.stripe.com/crypto/onramp/embedded.md): Use this guide to fully customize the embeddable onramp.
 - [Set up an Embedded onramp integration](https://docs.stripe.com/crypto/onramp/embedded.md): Use this guide to fully customize the embeddable onramp.
 - [Set up an Embedded onramp integration](https://docs.stripe.com/crypto/onramp/embedded.md): Use this guide to fully customize the embeddable onramp.
@@ -502,7 +502,7 @@ Automate your accrual accounting process with Stripe Revenue Recognition. Revenu
 - [Revenue Recognition for Connect platforms](https://docs.stripe.com/revenue-recognition/connect.md): Learn how revenue recognition works with Connect platforms.
 - [Revenue Recognition with multiple currencies](https://docs.stripe.com/revenue-recognition/methodology/multi-currency.md): Understand the roles of presentment and settlement currencies in Stripe Revenue Recognition.
 - [Trial balance](https://docs.stripe.com/revenue-recognition/reports/trial-balance.md): View and analyze account balances over specific periods with the trial balance report.
-- [Data reconciliation with Stripe reports](https://docs.stripe.com/revenue-recognition/data-reconciliation.md): Learn how to reconcile revenue recognition data with other financial reports.
+- [Reconcile your Stripe balance with Revenue Recognition](https://docs.stripe.com/revenue-recognition/data-reconciliation.md): Use this guide to reconcile cash and fees from Revenue Recognition with the Balance summary report.
 - [Revenue Recognition with refunds and disputes](https://docs.stripe.com/revenue-recognition/methodology/refunds-and-disputes.md): Understand how refunds and disputes impact your revenue.
 - [Revenue Recognition Performance Obligations API](https://docs.stripe.com/revenue-recognition/performance-obligations-api.md): Learn how to model performance obligation fulfillment in Stripe Revenue Recognition.
 - [Manage imported data](https://docs.stripe.com/revenue-recognition/data-import/manage-imported-data.md): Search for and manage existing imported data.

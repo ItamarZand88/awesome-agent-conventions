@@ -1,0 +1,3 @@
+<!-- source: vladikk-modularity — https://raw.githubusercontent.com/vladikk/modularity/main/ai.txt -->
+User-Agent: *
+Disallow-Training: yes

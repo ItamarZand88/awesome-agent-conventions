@@ -1,0 +1,20 @@
+<!-- source: open-mind-gateway — https://raw.githubusercontent.com/choudharyyuvraj/open-mind/main/mcp.json -->
+{
+  "mcpServers": {
+    "openmind": {
+      "command": "python",
+      "args": [
+        "-m",
+        "gateway.mcp_server",
+        "--bff-url",
+        "http://127.0.0.1:3000",
+        "--api-key",
+        "${MINDMESH_API_KEY}"
+      ],
+      "env": {
+        "PYTHONPATH": "X:/OpenMind-main/OpenMind-main/openmind-subnet",
+        "OPENMIND_DEFAULT_SESSION_ID": "openmind_shared_main"
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<!-- source: weaive-context7 — https://raw.githubusercontent.com/thejackluo/weaive/main/.mcp.json -->
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/mnt/c/Users/Jack Luo/Desktop/(local) github software/weavelight"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
+      }
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
+    },
+    "notion": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@notionhq/mcp-server-notion"
+      ],
+      "env": {
+        "NOTION_API_KEY": "${NOTION_API_KEY}"
+      }
+    },
+    "browserstack": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@browserstack/mcp-server-browserstack"
+      ],
+      "env": {
+        "BROWSERSTACK_USERNAME": "${BROWSERSTACK_USERNAME}",
+        "BROWSERSTACK_ACCESS_KEY": "${BROWSERSTACK_ACCESS_KEY}"
+      }
+    }
+  }
+}

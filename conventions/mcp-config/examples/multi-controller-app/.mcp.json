@@ -1,0 +1,89 @@
+<!-- source: multi-controller-app — https://raw.githubusercontent.com/wtyler2505/multi-controller-app/main/.mcp.json -->
+{
+  "$schema": "https://schemas.modelcontextprotocol.org/v1/mcp.json",
+  "mcpServers": {
+    "cipher-memory": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\wtyle\\AppData\\Roaming\\npm\\node_modules\\@byterover\\cipher\\dist\\src\\app\\index.cjs",
+        "--mode",
+        "mcp"
+      ],
+      "timeout": 60000,
+      "env": {
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}",
+        "PERPLEXITY_API_KEY": "${PERPLEXITY_API_KEY}",
+        "USE_MEMORY_ONLY": "true",
+        "CIPHER_MAX_MEMORY_MB": "256",
+        "CIPHER_LOG_LEVEL": "info",
+        "CIPHER_PERSISTENCE_PATH": "./.cipher/memory/",
+        "CIPHER_EMBEDDINGS_ENABLED": "true",
+        "CIPHER_EMBEDDINGS_PROVIDER": "ollama",
+        "OLLAMA_BASE_URL": "http://localhost:11434",
+        "OLLAMA_MODEL": "nomic-embed-text",
+        "MCP_SERVER_MODE": "memory",
+        "MCP_MAX_RESPONSE_TOKENS": "25000"
+      }
+    },
+    "taskmaster-ai": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["C:\\Users\\wtyle\\node_modules\\task-master-ai\\mcp-server\\server.js"],
+      "timeout": 60000,
+      "env": {
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}",
+        "PERPLEXITY_API_KEY": "${PERPLEXITY_API_KEY}",
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+      }
+    },
+    "desktop-commander": {
+      "command": "node",
+      "args": ["C:\\Users\\wtyle\\node_modules\\@wonderwhy-er\\desktop-commander\\dist\\index.js"],
+      "timeout": 60000,
+      "type": "stdio"
+    },
+    "FileScopeMCP": {
+      "command": "node",
+      "args": ["C:\\Users\\wtyle\\FileScopeMCP\\dist\\mcp-server.js", "--base-dir=C:\\Users\\wtyle\\multi-controller-app", "--max-results=25", "--enable-pagination=true", "--min-importance=6"],
+      "timeout": 60000,
+      "env": {
+        "FILE_WATCHING_ENABLED": "false",
+        "MAX_FILE_RESULTS": "25",
+        "MIN_IMPORTANCE_SCORE": "6"
+      }
+    },
+    "clear-thought": {
+      "command": "node",
+      "args": ["C:\\Users\\wtyle\\node_modules\\@waldzellai\\clear-thought\\dist\\index.js"],
+      "timeout": 60000,
+      "type": "stdio"
+    },
+    "context7": {
+      "command": "node",
+      "args": ["C:\\Users\\wtyle\\node_modules\\@upstash\\context7-mcp\\dist\\index.js"],
+      "timeout": 60000
+    },
+    "perplexity-ask": {
+      "command": "node",
+      "args": ["C:\\Users\\wtyle\\node_modules\\server-perplexity-ask\\dist\\index.js"],
+      "timeout": 60000,
+      "env": {
+        "PERPLEXITY_API_KEY": "${PERPLEXITY_API_KEY}"
+      }
+    },
+    "memory": {
+      "command": "node",
+      "args": ["C:\\Users\\wtyle\\node_modules\\@modelcontextprotocol\\server-memory\\dist\\index.js", "--max-results=50", "--enable-pagination=true"],
+      "timeout": 60000,
+      "env": {
+        "MCP_MAX_RESPONSE_TOKENS": "20000",
+        "MEMORY_PAGINATION_SIZE": "50"
+      }
+    },
+    "time-server": {
+      "command": "node",
+      "args": ["C:\\Users\\wtyle\\RoverMissionControl\\kite-mcp-server-time\\dist\\index.js"],
+      "timeout": 15000
+    }
+  }
+}

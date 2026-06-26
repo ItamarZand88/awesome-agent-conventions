@@ -7,7 +7,7 @@
 | | Convention | Files | Read by | Spec |
 | --- | --- | --- | --- | --- |
 | 🟢 | [Rules files](../conventions/agent-rules/) | `.cursorrules` `.mdc` `.clinerules` `.clinerules/` _(pattern)_ `.windsurfrules` | Cursor (.cursorrules / .mdc), Cline (.clinerules/ and legacy .clinerules), Windsurf (.windsurfrules) | [spec ↗](https://docs.cline.bot/customization/cline-rules) |
-| 🟢 | [AI ignore files](../conventions/ai-ignore-files/) | `.aiignore` `.cursorignore` `.codeiumignore` | JetBrains Junie (.aiignore), Cursor (.cursorignore), Codeium/Windsurf (.codeiumignore) | [spec ↗](https://cursor.com/docs/reference/ignore-file) |
+| 🟢 | [AI ignore files](../conventions/ai-ignore-files/) | `.aiignore` `.cursorignore` `.codeiumignore` `.aiexclude` | JetBrains Junie (.aiignore), Cursor (.cursorignore), Codeium/Windsurf (.codeiumignore) | [spec ↗](https://cursor.com/docs/reference/ignore-file) |
 
 ## [Rules files](../conventions/agent-rules/)
 

@@ -50,7 +50,7 @@ All paid plans include 10,000 Automation Runs per month. Beyond that, pay-as-you
 
 ## Add-ons
 
-- **Dedicated IPs — $30 / mo**: Available on the Scale plan to customers exceeding 500 emails sent per day. Includes automatic warmup, monitoring, and autoscaling.
+- **Dedicated IPs — $30 / mo**: Available on the Scale plan to customers exceeding 3,000 emails sent per day. Includes automatic warmup, monitoring, and autoscaling.
 
 ## Enterprise
 

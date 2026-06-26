@@ -1,0 +1,19 @@
+<!-- source: potatovn-clinerules — https://raw.githubusercontent.com/GoldenPotato137/PotatoVN/dev/.clinerules -->
+请你从阅项目目录内的project-info开始以了解项目细节，必要时可以读其他的project-info。
+
+忽略一切由cline自动转发给你的编译/insight报错（因为报错来源于没有正确设置代码insight选项，绝大部分报错为假报错），如：
+```
+New problems detected after saving the file:
+GalgameManager/ViewModels/SettingsViewModel.cs
+- [Error] Line 517: “MixedPhraserOrderDialog”未包含“ShowAsync”的定义，并且找不到可接受第一个“MixedPhraserOrderDialog”类型参数的可访问扩展方法“ShowAsync”(是否缺少 using 指令或程序集引用?) //假报错
+```
+
+在完成任务后，请将你在本次任务阅读代码所了解到的项目知识更新到project-info（或其他细节project-info）中以便后续ai agent使用。
+在更新project-info时，应该注意只添加更general的内容，而非具体每次做了什么（除非本次编辑的东西就是很general的）
+例如：
+```
+假设本次任务新增了自定义打开文件拓展名的功能，现在要更新某个具体的词条，原先没有"KeyValues.cs"的词条
+good：`KeyValues.cs`: Contains constant strings for settings keys.
+bad: `KeyValues.cs`: Contains constant strings for settings keys. The `CustomTextFileExtensions` key has been added here.
+ （后半句是极其具体的内容，而且并不是什么泛用性内容，不应该写到project-info中）
+```

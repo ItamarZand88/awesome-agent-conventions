@@ -1,0 +1,56 @@
+<!-- source: aistack-mcp-cursor — https://raw.githubusercontent.com/mjdevaccount/AIStack-MCP/main/.cursor/mcp.json -->
+{
+  "mcpServers": {
+    "code-intelligence": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "python",
+        "C:\\AIStack-MCP\\mcp_intelligence_server.py",
+        "--workspace",
+        "C:\\AIStack-MCP"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\AIStack-MCP"
+      ]
+    },
+    "github": {
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\AIStack-MCP\\scripts\\run_github_mcp.ps1"
+      ]
+    },
+    "jupyter": {
+      "command": "python",
+      "args": [
+        "-m",
+        "cursor_notebook_mcp.server",
+        "--transport",
+        "stdio",
+        "--allow-root",
+        "C:\\AIStack-MCP"
+      ]
+    },
+    "qdrant": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@rocklerson/openai-mcp-qdrant"
+      ],
+      "env": {
+        "QDRANT_URL": "http://localhost:6333",
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+      }
+    }
+  }
+}

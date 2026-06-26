@@ -1,0 +1,12 @@
+<!-- source: smirakle-art-guardian — https://raw.githubusercontent.com/smirakle/art-guardian-ai/main/public/ai.txt -->
+# ai.txt — Site AI usage policy
+
+# This file communicates how automated AI agents may (not) use this site’s content.
+# While not a formal standard, multiple AI crawlers check for this file.
+
+User-Agent: *
+Allow: /
+Disallow-Training: /
+Disallow-Derivatives: /
+Policy: No AI training, dataset building, model fine-tuning, or synthetic data generation from any site assets (text, images, video, audio, metadata). Respect robots.txt and meta noai/noimageai.
+Contact: security@tsmo.example

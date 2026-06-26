@@ -1,0 +1,24 @@
+<!-- source: prompty-spec-multimodal — https://raw.githubusercontent.com/microsoft/prompty/main/spec/fixtures/multimodal.prompty -->
+---
+name: multimodal
+model:
+  id: gpt-4o
+  apiType: chat
+inputs:
+  - name: question
+    kind: string
+    default: What do you see?
+  - name: photo
+    kind: image
+  - name: recording
+    kind: audio
+---
+system:
+You can see images and hear audio.
+
+{{photo}}
+
+{{recording}}
+
+user:
+{{question}}

@@ -6,7 +6,7 @@
 - **Location:** Claude Code: ~/.claude/projects/<project>/memory/MEMORY.md (the index), with detail offloaded to topic files beside it
 - **Spec:** [https://code.claude.com/docs/en/memory](https://code.claude.com/docs/en/memory)
 - **Evidence:** Claude Code auto-memory docs describe MEMORY.md as the per-project memory index loaded every session, with public examples of the pattern.
-- **Last verified:** 2026-06-18
+- **Last verified:** 2026-06-26
 - **Files:** `MEMORY.md`
 
 ## Examples
@@ -17,8 +17,20 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
+| `agentmap` | [`remorses/agentmap`](https://github.com/remorses/agentmap) | [`examples/agentmap/MEMORY.md`](examples/agentmap/MEMORY.md) | [source](https://raw.githubusercontent.com/remorses/agentmap/main/MEMORY.md) |
+| `aya-is` | [`eser/aya.is`](https://github.com/eser/aya.is) | [`examples/aya-is/MEMORY.md`](examples/aya-is/MEMORY.md) | [source](https://raw.githubusercontent.com/eser/aya.is/main/MEMORY.md) |
+| `bizclaw` | [`nguyenduchoai/bizclaw`](https://github.com/nguyenduchoai/bizclaw) | [`examples/bizclaw/MEMORY.md`](examples/bizclaw/MEMORY.md) | [source](https://raw.githubusercontent.com/nguyenduchoai/bizclaw/main/Memory.md) |
+| `classicy` | [`robbiebyrd/classicy`](https://github.com/robbiebyrd/classicy) | [`examples/classicy/MEMORY.md`](examples/classicy/MEMORY.md) | [source](https://raw.githubusercontent.com/robbiebyrd/classicy/main/MEMORY.md) |
+| `cloud-agent-memory` | [`Prithpal-Sooriya/Cloud-Agent-Memory`](https://github.com/Prithpal-Sooriya/Cloud-Agent-Memory) | [`examples/cloud-agent-memory/MEMORY.md`](examples/cloud-agent-memory/MEMORY.md) | [source](https://raw.githubusercontent.com/Prithpal-Sooriya/Cloud-Agent-Memory/main/Memory.md) |
+| `firefly-skill` | [`HeartEase1/firefly-skill`](https://github.com/HeartEase1/firefly-skill) | [`examples/firefly-skill/MEMORY.md`](examples/firefly-skill/MEMORY.md) | [source](https://raw.githubusercontent.com/HeartEase1/firefly-skill/main/memory.md) |
 | `learn-likecc` | [`Harzva/learn-likecc`](https://github.com/Harzva/learn-likecc) | [`examples/learn-likecc/MEMORY.md`](examples/learn-likecc/MEMORY.md) | [source](https://raw.githubusercontent.com/Harzva/learn-likecc/main/MEMORY.md) |
+| `lite-edit` | [`arietan/lite-edit`](https://github.com/arietan/lite-edit) | [`examples/lite-edit/MEMORY.md`](examples/lite-edit/MEMORY.md) | [source](https://raw.githubusercontent.com/arietan/lite-edit/main/MEMORY.md) |
+| `mssql-extension` | [`hugr-lab/mssql-extension`](https://github.com/hugr-lab/mssql-extension) | [`examples/mssql-extension/MEMORY.md`](examples/mssql-extension/MEMORY.md) | [source](https://raw.githubusercontent.com/hugr-lab/mssql-extension/main/MEMORY.md) |
+| `nanolang` | [`jordanhubbard/nanolang`](https://github.com/jordanhubbard/nanolang) | [`examples/nanolang/MEMORY.md`](examples/nanolang/MEMORY.md) | [source](https://raw.githubusercontent.com/jordanhubbard/nanolang/main/MEMORY.md) |
+| `openclaw-setup` | [`ucsandman/OpenClaw-Setup`](https://github.com/ucsandman/OpenClaw-Setup) | [`examples/openclaw-setup/MEMORY.md`](examples/openclaw-setup/MEMORY.md) | [source](https://raw.githubusercontent.com/ucsandman/OpenClaw-Setup/main/MEMORY.md) |
+| `qbittorrent-nox-static` | [`userdocs/qbittorrent-nox-static`](https://github.com/userdocs/qbittorrent-nox-static) | [`examples/qbittorrent-nox-static/MEMORY.md`](examples/qbittorrent-nox-static/MEMORY.md) | [source](https://raw.githubusercontent.com/userdocs/qbittorrent-nox-static/master/MEMORY.md) |
 | `soul.md` | [`aaronjmars/soul.md`](https://github.com/aaronjmars/soul.md) | [`examples/soul/MEMORY.md`](examples/soul/MEMORY.md) | [source](https://raw.githubusercontent.com/aaronjmars/soul.md/main/MEMORY.md) |
+| `turboquantdc` | [`dhawalc/turboQuantDC`](https://github.com/dhawalc/turboQuantDC) | [`examples/turboquantdc/MEMORY.md`](examples/turboquantdc/MEMORY.md) | [source](https://raw.githubusercontent.com/dhawalc/turboQuantDC/master/MEMORY.md) |
 
 ## Field notes
 

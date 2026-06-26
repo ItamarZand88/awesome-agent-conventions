@@ -6,7 +6,7 @@
 - **Location:** .claude/commands/*.md (project) and ~/.claude/commands/*.md (user)
 - **Spec:** [https://code.claude.com/docs/en/slash-commands](https://code.claude.com/docs/en/slash-commands)
 - **Evidence:** Claude Code slash-command docs define .claude/commands/*.md, and active repos commit reusable command files.
-- **Last verified:** 2026-06-18
+- **Last verified:** 2026-06-26
 - **Files:** `.md`
 
 ## Examples
@@ -19,9 +19,28 @@ Any Markdown file under .claude/commands/; the filename is the command name (pr.
 
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
+| `ai-config-commit` | [`aspiers/ai-config`](https://github.com/aspiers/ai-config) | [`examples/ai-config-commit/commit.md`](examples/ai-config-commit/commit.md) | [source](https://raw.githubusercontent.com/aspiers/ai-config/main/.claude/commands/commit.md) |
+| `ai-config-pr-desc` | [`aspiers/ai-config`](https://github.com/aspiers/ai-config) | [`examples/ai-config-pr-desc/pr-desc.md`](examples/ai-config-pr-desc/pr-desc.md) | [source](https://raw.githubusercontent.com/aspiers/ai-config/main/.claude/commands/pr-desc.md) |
+| `ai-config-review` | [`aspiers/ai-config`](https://github.com/aspiers/ai-config) | [`examples/ai-config-review/review.md`](examples/ai-config-review/review.md) | [source](https://raw.githubusercontent.com/aspiers/ai-config/main/.claude/commands/review.md) |
+| `anthropics-triage-issue` | [`anthropics/claude-code`](https://github.com/anthropics/claude-code) | [`examples/anthropics-triage-issue/triage-issue.md`](examples/anthropics-triage-issue/triage-issue.md) | [source](https://raw.githubusercontent.com/anthropics/claude-code/main/.claude/commands/triage-issue.md) |
+| `bikeindex-pr` | [`bikeindex/bike_index`](https://github.com/bikeindex/bike_index) | [`examples/bikeindex-pr/pr.md`](examples/bikeindex-pr/pr.md) | [source](https://raw.githubusercontent.com/bikeindex/bike_index/main/.claude/commands/pr.md) |
 | `claude-code` | [`anthropics/claude-code`](https://github.com/anthropics/claude-code) | [`examples/claude-code/commit-push-pr.md`](examples/claude-code/commit-push-pr.md) | [source](https://raw.githubusercontent.com/anthropics/claude-code/main/.claude/commands/commit-push-pr.md) |
 | `claude-code` | [`anthropics/claude-code`](https://github.com/anthropics/claude-code) | [`examples/claude-code/dedupe.md`](examples/claude-code/dedupe.md) | [source](https://raw.githubusercontent.com/anthropics/claude-code/main/.claude/commands/dedupe.md) |
+| `eventsourcing-commit-beads` | [`CodeForBreakfast/eventsourcing`](https://github.com/CodeForBreakfast/eventsourcing) | [`examples/eventsourcing-commit-beads/commit-beads.md`](examples/eventsourcing-commit-beads/commit-beads.md) | [source](https://raw.githubusercontent.com/CodeForBreakfast/eventsourcing/main/.claude/commands/commit-beads.md) |
+| `fantomas-format` | [`fsprojects/fantomas`](https://github.com/fsprojects/fantomas) | [`examples/fantomas-format/format.md`](examples/fantomas-format/format.md) | [source](https://raw.githubusercontent.com/fsprojects/fantomas/main/.claude/commands/format.md) |
+| `fantomas-oak` | [`fsprojects/fantomas`](https://github.com/fsprojects/fantomas) | [`examples/fantomas-oak/oak.md`](examples/fantomas-oak/oak.md) | [source](https://raw.githubusercontent.com/fsprojects/fantomas/main/.claude/commands/oak.md) |
+| `hydra-bootstrap` | [`CategoricalData/hydra`](https://github.com/CategoricalData/hydra) | [`examples/hydra-bootstrap/bootstrap.md`](examples/hydra-bootstrap/bootstrap.md) | [source](https://raw.githubusercontent.com/CategoricalData/hydra/main/.claude/commands/bootstrap.md) |
+| `hydra-improve-docs` | [`CategoricalData/hydra`](https://github.com/CategoricalData/hydra) | [`examples/hydra-improve-docs/improve-docs.md`](examples/hydra-improve-docs/improve-docs.md) | [source](https://raw.githubusercontent.com/CategoricalData/hydra/main/.claude/commands/improve-docs.md) |
+| `hydra-lexicon` | [`CategoricalData/hydra`](https://github.com/CategoricalData/hydra) | [`examples/hydra-lexicon/lexicon.md`](examples/hydra-lexicon/lexicon.md) | [source](https://raw.githubusercontent.com/CategoricalData/hydra/main/.claude/commands/lexicon.md) |
+| `marigold-create-component` | [`marigold-ui/marigold`](https://github.com/marigold-ui/marigold) | [`examples/marigold-create-component/create-component.md`](examples/marigold-create-component/create-component.md) | [source](https://raw.githubusercontent.com/marigold-ui/marigold/main/.claude/commands/create-component.md) |
+| `marigold-vrt` | [`marigold-ui/marigold`](https://github.com/marigold-ui/marigold) | [`examples/marigold-vrt/vrt.md`](examples/marigold-vrt/vrt.md) | [source](https://raw.githubusercontent.com/marigold-ui/marigold/main/.claude/commands/vrt.md) |
+| `modelchecker-implement` | [`benbrastmckie/ModelChecker`](https://github.com/benbrastmckie/ModelChecker) | [`examples/modelchecker-implement/implement.md`](examples/modelchecker-implement/implement.md) | [source](https://raw.githubusercontent.com/benbrastmckie/ModelChecker/master/.claude/commands/implement.md) |
+| `sentry-gh-review` | [`getsentry/sentry`](https://github.com/getsentry/sentry) | [`examples/sentry-gh-review/gh-review.md`](examples/sentry-gh-review/gh-review.md) | [source](https://raw.githubusercontent.com/getsentry/sentry/master/.claude/commands/gh-review.md) |
+| `sentry-setup-dev` | [`getsentry/sentry`](https://github.com/getsentry/sentry) | [`examples/sentry-setup-dev/setup-dev.md`](examples/sentry-setup-dev/setup-dev.md) | [source](https://raw.githubusercontent.com/getsentry/sentry/master/.claude/commands/setup-dev.md) |
 | `sentry` | [`getsentry/sentry`](https://github.com/getsentry/sentry) | [`examples/sentry/gh-pr.md`](examples/sentry/gh-pr.md) | [source](https://raw.githubusercontent.com/getsentry/sentry/master/.claude/commands/gh-pr.md) |
+| `sidekiq-unique-jobs-review-pr` | [`mhenrixon/sidekiq-unique-jobs`](https://github.com/mhenrixon/sidekiq-unique-jobs) | [`examples/sidekiq-unique-jobs-review-pr/review-pr.md`](examples/sidekiq-unique-jobs-review-pr/review-pr.md) | [source](https://raw.githubusercontent.com/mhenrixon/sidekiq-unique-jobs/main/.claude/commands/review-pr.md) |
+| `sidekiq-unique-jobs-security` | [`mhenrixon/sidekiq-unique-jobs`](https://github.com/mhenrixon/sidekiq-unique-jobs) | [`examples/sidekiq-unique-jobs-security/security.md`](examples/sidekiq-unique-jobs-security/security.md) | [source](https://raw.githubusercontent.com/mhenrixon/sidekiq-unique-jobs/main/.claude/commands/security.md) |
+| `sidekiq-unique-jobs-tdd` | [`mhenrixon/sidekiq-unique-jobs`](https://github.com/mhenrixon/sidekiq-unique-jobs) | [`examples/sidekiq-unique-jobs-tdd/tdd.md`](examples/sidekiq-unique-jobs-tdd/tdd.md) | [source](https://raw.githubusercontent.com/mhenrixon/sidekiq-unique-jobs/main/.claude/commands/tdd.md) |
 
 ## Field notes
 

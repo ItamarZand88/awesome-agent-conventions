@@ -1,0 +1,9 @@
+<!-- source: claude-evolve-plugin — https://raw.githubusercontent.com/samuelzxu/claude-evolve/master/.mcp.json -->
+{
+  "mcpServers": {
+    "e": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/bridge/mcp-wrapper.mjs"]
+    }
+  }
+}

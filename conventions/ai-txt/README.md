@@ -6,7 +6,7 @@
 - **Location:** Site root /ai.txt in Spawning's deployed pattern; /.well-known/ai.txt in the newer Internet-Draft
 - **Spec:** [https://datatracker.ietf.org/doc/draft-car-ai-txt-wellknown/](https://datatracker.ietf.org/doc/draft-car-ai-txt-wellknown/)
 - **Evidence:** Spawning popularized deployed ai.txt files and a 2026 Internet-Draft proposes /.well-known/ai.txt, but crawler obedience and adoption remain unproven.
-- **Last verified:** 2026-06-18
+- **Last verified:** 2026-06-26
 - **Files:** `ai.txt`
 
 ## Examples
@@ -17,7 +17,18 @@ _Every file below was fetched from a public source by [`scripts/extract.py`](../
 
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
+| `fuhi-timebaibai` | [`FUHI12342/NewFUHI`](https://github.com/FUHI12342/NewFUHI) | [`examples/fuhi-timebaibai/ai.txt`](examples/fuhi-timebaibai/ai.txt) | [source](https://raw.githubusercontent.com/FUHI12342/NewFUHI/main/static/ai.txt) |
+| `hyperpolymath-standards` | [`hyperpolymath/standards`](https://github.com/hyperpolymath/standards) | [`examples/hyperpolymath-standards/ai.txt`](examples/hyperpolymath-standards/ai.txt) | [source](https://raw.githubusercontent.com/hyperpolymath/standards/main/.well-known/ai.txt) |
+| `in8finity-codex-formal` | [`in8finity/codex-formal-plugin`](https://github.com/in8finity/codex-formal-plugin) | [`examples/in8finity-codex-formal/ai.txt`](examples/in8finity-codex-formal/ai.txt) | [source](https://raw.githubusercontent.com/in8finity/codex-formal-plugin/main/plugins/formal-methods/ai.txt) |
+| `intruvurt-aivis` | [`intruvurt/aivis`](https://github.com/intruvurt/aivis) | [`examples/intruvurt-aivis/ai.txt`](examples/intruvurt-aivis/ai.txt) | [source](https://raw.githubusercontent.com/intruvurt/aivis/main/ai.txt) |
+| `koji-blog` | [`koji/blog`](https://github.com/koji/blog) | [`examples/koji-blog/ai.txt`](examples/koji-blog/ai.txt) | [source](https://raw.githubusercontent.com/koji/blog/master/public/ai.txt) |
+| `laura-esteves` | [`lauralesteves/quecoreagora.lauraesteves.com`](https://github.com/lauralesteves/quecoreagora.lauraesteves.com) | [`examples/laura-esteves/ai.txt`](examples/laura-esteves/ai.txt) | [source](https://raw.githubusercontent.com/lauralesteves/quecoreagora.lauraesteves.com/main/public/ai.txt) |
+| `manujdixit-resumio` | [`Manujdixit/resumio`](https://github.com/Manujdixit/resumio) | [`examples/manujdixit-resumio/ai.txt`](examples/manujdixit-resumio/ai.txt) | [source](https://raw.githubusercontent.com/Manujdixit/resumio/master/apps/web/public/ai.txt) |
 | `openverse` | [`WordPress/openverse`](https://github.com/WordPress/openverse) | [`examples/openverse/ai.txt`](examples/openverse/ai.txt) | [source](https://raw.githubusercontent.com/WordPress/openverse/main/frontend/src/static/ai.txt) |
+| `reserve-protocol-register` | [`reserve-protocol/register`](https://github.com/reserve-protocol/register) | [`examples/reserve-protocol-register/ai.txt`](examples/reserve-protocol-register/ai.txt) | [source](https://raw.githubusercontent.com/reserve-protocol/register/master/public/.well-known/ai.txt) |
+| `smirakle-art-guardian` | [`smirakle/art-guardian-ai`](https://github.com/smirakle/art-guardian-ai) | [`examples/smirakle-art-guardian/ai.txt`](examples/smirakle-art-guardian/ai.txt) | [source](https://raw.githubusercontent.com/smirakle/art-guardian-ai/main/public/ai.txt) |
+| `vic-k-y-portfolio` | [`vic-k-y/new-portfolio`](https://github.com/vic-k-y/new-portfolio) | [`examples/vic-k-y-portfolio/ai.txt`](examples/vic-k-y-portfolio/ai.txt) | [source](https://raw.githubusercontent.com/vic-k-y/new-portfolio/main/ai.txt) |
+| `vladikk-modularity` | [`vladikk/modularity`](https://github.com/vladikk/modularity) | [`examples/vladikk-modularity/ai.txt`](examples/vladikk-modularity/ai.txt) | [source](https://raw.githubusercontent.com/vladikk/modularity/main/ai.txt) |
 
 ## Field notes
 

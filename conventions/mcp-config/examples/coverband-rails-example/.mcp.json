@@ -1,0 +1,13 @@
+<!-- source: coverband-rails-example — https://raw.githubusercontent.com/danmayer/coverband_rails_example/main/.mcp.json -->
+{
+    "mcpServers": {
+        "coverband": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "mcp-remote@latest",
+                "http://localhost:9023"
+            ]
+        }
+    }
+}

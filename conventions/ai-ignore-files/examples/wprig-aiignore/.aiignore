@@ -1,0 +1,37 @@
+<!-- source: wprig-aiignore — https://raw.githubusercontent.com/wprig/wprig/master/.aiignore -->
+# Dependency folders
+node_modules/
+vendor/
+
+# Build artifacts
+dist/
+build/
+bundle/
+artifacts/
+playwright-report/
+test-results/
+
+# Temporary files
+*.log
+tmp/
+.DS_Store
+*.zip
+*.tar.gz
+
+# Assets
+assets/images/
+assets/fonts/
+screenshot.png
+
+# Minified assets (Build Artifacts)
+*.min.css
+*.min.css.map
+*.min.js
+*.min.js.map
+
+# WP Rig / WordPress Specific
+config/local.json
+wp-cli/config.yml
+wp-content/uploads/
+wp-content/cache/
+languages/

@@ -6,7 +6,7 @@
 - **Location:** Per tool: .mcp.json (Claude Code repo root), .cursor/mcp.json (Cursor), .vscode/mcp.json (VS Code / Copilot), or the app config dir (claude_desktop_config.json)
 - **Spec:** [https://code.claude.com/docs/en/mcp](https://code.claude.com/docs/en/mcp)
 - **Evidence:** MCP hosts including Claude Code, Claude Desktop, Cursor, and VS Code document project or app-level MCP server config files.
-- **Last verified:** 2026-06-18
+- **Last verified:** 2026-06-26
 - **Files:** `.mcp.json`
 
 ## Examples
@@ -19,7 +19,22 @@ Claude Code project-scoped MCP servers. The same { "mcpServers": {...} } schema 
 
 | Example | Upstream | File | Exact source |
 | --- | --- | --- | --- |
+| `ai-dev-starter` | [`christophvoe/ai-dev-starter`](https://github.com/christophvoe/ai-dev-starter) | [`examples/ai-dev-starter/.mcp.json`](examples/ai-dev-starter/.mcp.json) | [source](https://raw.githubusercontent.com/christophvoe/ai-dev-starter/master/.mcp.json) |
+| `aistack-mcp-cursor` | [`mjdevaccount/AIStack-MCP`](https://github.com/mjdevaccount/AIStack-MCP) | [`examples/aistack-mcp-cursor/.mcp.json`](examples/aistack-mcp-cursor/.mcp.json) | [source](https://raw.githubusercontent.com/mjdevaccount/AIStack-MCP/main/.cursor/mcp.json) |
+| `alexbocken-homepage` | [`AlexBocken/homepage`](https://github.com/AlexBocken/homepage) | [`examples/alexbocken-homepage/.mcp.json`](examples/alexbocken-homepage/.mcp.json) | [source](https://raw.githubusercontent.com/AlexBocken/homepage/master/.mcp.json) |
+| `alnretool-zen-shadcn` | [`maxepunk/ALNRetool`](https://github.com/maxepunk/ALNRetool) | [`examples/alnretool-zen-shadcn/.mcp.json`](examples/alnretool-zen-shadcn/.mcp.json) | [source](https://raw.githubusercontent.com/maxepunk/ALNRetool/main/.mcp.json) |
+| `bountystrike-community` | [`nilhemdot/bountystrike-community`](https://github.com/nilhemdot/bountystrike-community) | [`examples/bountystrike-community/.mcp.json`](examples/bountystrike-community/.mcp.json) | [source](https://raw.githubusercontent.com/nilhemdot/bountystrike-community/master/.mcp.json) |
+| `cc-mcp-filesystem` | [`lisaross/cc-mcp`](https://github.com/lisaross/cc-mcp) | [`examples/cc-mcp-filesystem/.mcp.json`](examples/cc-mcp-filesystem/.mcp.json) | [source](https://raw.githubusercontent.com/lisaross/cc-mcp/main/.mcp.json) |
+| `claude-evolve-plugin` | [`samuelzxu/claude-evolve`](https://github.com/samuelzxu/claude-evolve) | [`examples/claude-evolve-plugin/.mcp.json`](examples/claude-evolve-plugin/.mcp.json) | [source](https://raw.githubusercontent.com/samuelzxu/claude-evolve/master/.mcp.json) |
+| `coverband-rails-example` | [`danmayer/coverband_rails_example`](https://github.com/danmayer/coverband_rails_example) | [`examples/coverband-rails-example/.mcp.json`](examples/coverband-rails-example/.mcp.json) | [source](https://raw.githubusercontent.com/danmayer/coverband_rails_example/main/.mcp.json) |
+| `cultureamp-buildkite` | [`cultureamp/step-templates-buildkite-plugin`](https://github.com/cultureamp/step-templates-buildkite-plugin) | [`examples/cultureamp-buildkite/.mcp.json`](examples/cultureamp-buildkite/.mcp.json) | [source](https://raw.githubusercontent.com/cultureamp/step-templates-buildkite-plugin/main/.mcp.json) |
 | `inspec-vscode` | [`inspec/inspec`](https://github.com/inspec/inspec) | [`examples/inspec-vscode/.mcp.json`](examples/inspec-vscode/.mcp.json) | [source](https://raw.githubusercontent.com/inspec/inspec/main/.vscode/mcp.json) |
+| `justicehub-platform` | [`Acurioustractor/justicehub-platform`](https://github.com/Acurioustractor/justicehub-platform) | [`examples/justicehub-platform/.mcp.json`](examples/justicehub-platform/.mcp.json) | [source](https://raw.githubusercontent.com/Acurioustractor/justicehub-platform/main/.mcp.json) |
+| `multi-controller-app` | [`wtyler2505/multi-controller-app`](https://github.com/wtyler2505/multi-controller-app) | [`examples/multi-controller-app/.mcp.json`](examples/multi-controller-app/.mcp.json) | [source](https://raw.githubusercontent.com/wtyler2505/multi-controller-app/main/.mcp.json) |
+| `open-mind-gateway` | [`choudharyyuvraj/open-mind`](https://github.com/choudharyyuvraj/open-mind) | [`examples/open-mind-gateway/.mcp.json`](examples/open-mind-gateway/.mcp.json) | [source](https://raw.githubusercontent.com/choudharyyuvraj/open-mind/main/mcp.json) |
+| `timescale-pg-aiguide` | [`timescale/pg-aiguide`](https://github.com/timescale/pg-aiguide) | [`examples/timescale-pg-aiguide/.mcp.json`](examples/timescale-pg-aiguide/.mcp.json) | [source](https://raw.githubusercontent.com/timescale/pg-aiguide/main/mcp.json) |
+| `weaive-context7` | [`thejackluo/weaive`](https://github.com/thejackluo/weaive) | [`examples/weaive-context7/.mcp.json`](examples/weaive-context7/.mcp.json) | [source](https://raw.githubusercontent.com/thejackluo/weaive/main/.mcp.json) |
+| `wonder-blocks` | [`Khan/wonder-blocks`](https://github.com/Khan/wonder-blocks) | [`examples/wonder-blocks/.mcp.json`](examples/wonder-blocks/.mcp.json) | [source](https://raw.githubusercontent.com/Khan/wonder-blocks/main/.mcp.json) |
 | `wp-calypso` | [`Automattic/wp-calypso`](https://github.com/Automattic/wp-calypso) | [`examples/wp-calypso/.mcp.json`](examples/wp-calypso/.mcp.json) | [source](https://raw.githubusercontent.com/Automattic/wp-calypso/trunk/.mcp.json) |
 
 ## Field notes

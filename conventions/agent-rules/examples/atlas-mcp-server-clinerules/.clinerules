@@ -1,0 +1,392 @@
+<!-- source: atlas-mcp-server-clinerules — https://raw.githubusercontent.com/cyanheads/atlas-mcp-server/main/.clinerules -->
+# Atlas MCP Server Developer Cheat Sheet
+
+This document provides essential guidelines and code snippets for developers working within the Atlas MCP Server repository. Adhering to these conventions ensures consistency, maintainability, and security.
+
+## 1. Request Context (`src/utils/internal/requestContext.ts`)
+
+All operations that handle requests or perform distinct units of work MUST utilize a `RequestContext`. This context provides a unique `requestId` for tracing and a `timestamp`.
+
+**Interface:**
+```typescript
+export interface RequestContext {
+  requestId: string;
+  timestamp: string;
+  [key: string]: unknown; // For additional context-specific data
+}
+```
+
+**Creating a Request Context:**
+Use the `requestContextService` to create new contexts.
+```typescript
+import { requestContextService } from './src/utils/index.js'; // Or specific path
+
+// Basic context
+const context = requestContextService.createRequestContext();
+// { requestId: "uuid-v4-string", timestamp: "iso-string" }
+
+// Context with additional data
+const userContext = requestContextService.createRequestContext({
+  userId: "user123",
+  operationName: "getUserProfile"
+});
+// { requestId: "uuid-v4-string", timestamp: "iso-string", userId: "user123", operationName: "getUserProfile" }
+```
+
+**Usage:**
+Pass the `RequestContext` object (or its `requestId`) to logging functions and through service layers to correlate operations.
+
+## 2. Logging (`src/utils/internal/logger.ts`)
+
+Our `logger` is a singleton instance of a Winston-based logger, adapted for MCP. It supports multiple log levels and can send MCP notifications.
+
+**Log Levels (RFC 5424):**
+`emerg` (0), `alert` (1), `crit` (2), `error` (3), `warning` (4), `notice` (5), `info` (6), `debug` (7)
+
+**Initialization (in `src/index.ts`):**
+The logger is initialized within the `start` function in `src/index.ts`.
+```typescript
+// In src/index.ts
+import { logger } from './src/utils/index.js';
+import { config } from './src/config/index.js'; // McpLogLevel is typically part of config types
+
+async function start() {
+  // ... other setup ...
+  await logger.initialize(config.logLevel); // config.logLevel is McpLogLevel
+  // ... rest of app initialization
+}
+```
+
+**Using the Logger:**
+Always provide meaningful messages. For errors, include the `Error` object. Contextual information should be passed as the second argument (an object).
+```typescript
+import { logger } from './src/utils/index.js';
+import { requestContextService } from './src/utils/index.js';
+
+const requestContext = requestContextService.createRequestContext({ userId: 'user-abc' });
+
+// Debug log
+logger.debug('Processing user request', { requestId: requestContext.requestId, details: 'some detail' });
+
+// Info log
+logger.info('User authenticated successfully', { userId: requestContext.userId, requestId: requestContext.requestId });
+
+// Warning log
+logger.warning('User session nearing expiration', { userId: 'user-xyz', expiresIn: '5m', requestId: requestContext.requestId });
+
+// Error log
+try {
+  // ... some operation that might fail ...
+  throw new Error("Something went wrong");
+} catch (err) {
+  // The 'err' parameter in logger.error can be an Error instance or an object for additional context.
+  // If 'err' is an Error instance, its message and stack will be logged.
+  // The third parameter 'context' is for additional structured data.
+  logger.error('Failed to process payment', err as Error, { 
+    requestId: requestContext.requestId, 
+    paymentId: 'payment-123' 
+  });
+}
+
+// Critical error
+const criticalError = new Error("Database connection lost");
+logger.crit('Critical database failure', criticalError, { component: 'DatabaseService', requestId: requestContext.requestId });
+
+// Fatal error (alias for emerg)
+logger.fatal('System shutting down due to unrecoverable error', { reason: 'disk full' }, criticalError);
+```
+**Log Output:**
+- Logs are written to files in the `logs/` directory (e.g., `error.log`, `combined.log`).
+- Console logging is active if `logLevel` is `debug` AND `stdout` is a TTY.
+- Sensitive data in log context is automatically redacted (see Sanitization).
+
+## 3. Error Handling (`src/utils/internal/errorHandler.ts` & `src/types/errors.ts`)
+
+We use a standardized approach to error handling, centered around `McpError` and the `ErrorHandler` utility.
+
+**`McpError` (`src/types/errors.ts`):**
+Custom error class that includes an error `code` (from `BaseErrorCode` or feature-specific enums) and optional `details`.
+```typescript
+import { McpError, BaseErrorCode } from './src/types/errors.js';
+
+throw new McpError(
+  BaseErrorCode.VALIDATION_ERROR,
+  "User ID is missing.",
+  { field: "userId", inputReceived: { username: "test" } }
+);
+```
+
+**`ErrorHandler.handleError`:**
+Centralized function to log errors consistently and optionally rethrow them.
+```typescript
+import { ErrorHandler } from './src/utils/internal/errorHandler.js';
+import { BaseErrorCode } from './src/types/errors.js';
+import { requestContextService } from './src/utils/index.js';
+
+const requestContext = requestContextService.createRequestContext();
+
+async function someOperation(data: any) {
+  try {
+    if (!data.id) {
+      throw new Error("ID is required for this operation.");
+    }
+    // ... perform operation ...
+  } catch (error) {
+    // Handle and rethrow as McpError
+    throw ErrorHandler.handleError(error, {
+      operation: 'someOperation',
+      context: { requestId: requestContext.requestId, customInfo: 'some_value' },
+      input: data, // Will be sanitized for logging
+      errorCode: BaseErrorCode.VALIDATION_ERROR, // Optionally override determined code
+      rethrow: true, // Default is false
+      critical: false, // Default is false
+    });
+  }
+}
+```
+**Key `ErrorHandlerOptions`:**
+- `operation`: (string, required) Name of the operation (e.g., "UserLogin", "CreateTask").
+- `context`: (ErrorContext, optional) Includes `requestId` and other debug info.
+- `input`: (unknown, optional) Input data that caused the error (sanitized before logging).
+- `rethrow`: (boolean, optional, default: `false`) If `true`, rethrows the (potentially transformed) error.
+- `errorCode`: (BaseErrorCode, optional) Explicitly set the error code.
+- `critical`: (boolean, optional, default: `false`) Mark as critical for logging/alerting.
+
+**`ErrorHandler.tryCatch`:**
+A wrapper to simplify try-catch blocks for asynchronous or synchronous functions.
+```typescript
+import { ErrorHandler } from './src/utils/internal/errorHandler.js';
+
+async function getUser(userId: string) {
+  // ... logic to get user ...
+  // if (!user) throw new Error("User not found"); // Example error
+  return { id: userId, name: "Test User" }; // Example success
+}
+
+const safeGetUser = (userId: string) => ErrorHandler.tryCatch(
+  () => getUser(userId),
+  { operation: 'getUser', input: { userId } } // rethrow is true by default in tryCatch
+);
+
+try {
+  const user = await safeGetUser("123");
+} catch (e) {
+  // e will be an McpError, logged by ErrorHandler.handleError
+  // console.error("Caught error:", (e as McpError).code, (e as McpError).message);
+}
+```
+
+## 4. Sanitization (`src/utils/security/sanitization.ts`)
+
+Input sanitization is CRITICAL for security. Use the `sanitization` service (from `src/utils/index.js` or `src/utils/security/sanitization.js`).
+
+**`sanitizeInputForLogging(input: unknown): unknown`:**
+Automatically used by `ErrorHandler.handleError` for the `input` field. Manually use it if logging raw input elsewhere. Redacts sensitive fields like 'password', 'token', etc.
+```typescript
+import { sanitizeInputForLogging, logger } from './src/utils/index.js';
+
+const sensitiveData = { password: "supersecret", username: "admin" };
+logger.info("User login attempt", { data: sanitizeInputForLogging(sensitiveData) });
+// Log output for data.password will be "[REDACTED]"
+```
+
+**`sanitizeHtml(input: string, config?: HtmlSanitizeConfig): string`:**
+For cleaning HTML strings.
+```typescript
+import { sanitization } from './src/utils/index.js';
+const unsafeHtml = "<script>alert('xss')</script><p>Hello</p>";
+const safeHtml = sanitization.sanitizeHtml(unsafeHtml);
+// safeHtml will be "<p>Hello</p>"
+```
+
+**`sanitizeString(input: string, options?: SanitizeStringOptions): string`:**
+General string sanitization. Context can be 'text', 'html', 'attribute', 'url'.
+**NEVER use `context: 'javascript'`.**
+```typescript
+import { sanitization } from './src/utils/index.js';
+const userInput = " Test User <img src=x onerror=alert(1)> ";
+const safeText = sanitization.sanitizeString(userInput, { context: 'text' }); // "Test User <img src=x onerror=alert(1)>"
+const safeAttribute = sanitization.sanitizeString("javascript:alert(1)", { context: 'attribute' }); // ""
+```
+
+**`sanitizeUrl(input: string, allowedProtocols?: string[]): string`:**
+Validates and cleans URLs.
+```typescript
+import { sanitization } from './src/utils/index.js';
+try {
+  const cleanUrl = sanitization.sanitizeUrl("https://example.com/path?query=value");
+  // const maliciousUrl = sanitization.sanitizeUrl("javascript:alert('evil')"); // Throws McpError
+} catch (e) {
+  // logger.error("URL sanitization failed", e as Error);
+}
+```
+
+**`sanitizePath(input: string, options?: PathSanitizeOptions): SanitizedPathInfo`:**
+Crucial for handling file paths to prevent traversal.
+```typescript
+import { sanitization } from './src/utils/index.js';
+try {
+  // Basic relative path
+  const pathInfo1 = sanitization.sanitizePath("some/file.txt");
+  // pathInfo1.sanitizedPath will be "some/file.txt"
+
+  // Attempted traversal (throws McpError by default if not rooted and escapes CWD)
+  // const pathInfo2 = sanitization.sanitizePath("../../../etc/passwd"); 
+
+  // Rooted path
+  const pathInfo3 = sanitization.sanitizePath("user/uploads/image.jpg", { rootDir: "/var/www/app" });
+  // pathInfo3.sanitizedPath will be "user/uploads/image.jpg" (assuming it's within rootDir)
+
+  const pathInfo4 = sanitization.sanitizePath("/absolute/path/file.txt", { allowAbsolute: true });
+  // pathInfo4.sanitizedPath will be "/absolute/path/file.txt"
+
+} catch (e) {
+  // logger.error("Path sanitization failed", e as Error);
+}
+```
+
+**`sanitizeJson<T = unknown>(input: string, maxSize?: number): T`:**
+Parses JSON string safely, with optional size validation.
+```typescript
+import { sanitization } from './src/utils/index.js';
+const jsonString = '{"name": "Test", "value": 123}';
+try {
+  const jsonData = sanitization.sanitizeJson<{ name: string, value: number }>(jsonString);
+} catch (e) {
+  // logger.error("JSON sanitization failed", e as Error);
+}
+```
+
+**`sanitizeNumber(input: number | string, min?: number, max?: number): number`:**
+Validates and clamps numbers.
+```typescript
+import { sanitization } from './src/utils/index.js';
+const num1 = sanitization.sanitizeNumber("123.45"); // 123.45
+const num2 = sanitization.sanitizeNumber("5", 10, 20); // 10 (clamped)
+try {
+  const invalidNum = sanitization.sanitizeNumber("not-a-number"); // Throws McpError
+} catch (e) {
+  // logger.error("Number sanitization failed", e as Error);
+}
+```
+
+## 5. General Best Practices
+
+- **Imports:** Use `.js` extension for local module imports (e.g., `import { logger } from './logger.js';`). Prefer importing from barrel files (`index.ts` or `index.js`) where available (e.g. `import { logger } from '../index.js'`).
+- **Async/Await:** Use `async/await` for all asynchronous operations.
+- **Type Safety:** Leverage TypeScript. Define clear interfaces and types. Avoid `any` where possible.
+- **Configuration:** Access application configuration via the `config` object from `src/config/index.js`.
+- **Immutability:** Prefer immutable data structures where practical.
+- **Testing:** Write unit tests for new logic, especially for utilities and services.
+- **Code Comments:** Document complex logic, non-obvious decisions, and public APIs with JSDoc.
+
+## 6. Key Repository Structure and Conventions
+
+This section outlines other important directories and their roles within the Atlas MCP Server.
+
+### 6.0. Application Entry Point (`src/index.ts`)
+- **Purpose:** The main entry point for the Atlas MCP Server application. It orchestrates the startup sequence, including logger initialization, configuration loading, server transport initialization, and setting up graceful shutdown handlers.
+- **Key Responsibilities:**
+    - Initializes the `logger` (see Section 2).
+    - Loads application `config` and `environment` from `src/config/index.js` (see Section 6.1).
+    - Calls `initializeAndStartServer` from `src/mcp/server.js` to start the MCP server.
+    - Manages a global `serverInstance` for `stdio` transport to facilitate graceful shutdown.
+    - Implements a `shutdown` function that handles `SIGTERM`, `SIGINT`, `uncaughtException`, and `unhandledRejection` signals/events to ensure services like Neo4j connections (via `closeNeo4jConnection`) are closed properly before exiting.
+    - Uses `requestContextService` for creating context for startup and shutdown operations.
+- **Convention:** This file is critical for understanding the application lifecycle. Modifications here typically relate to fundamental startup or shutdown procedures.
+
+### 6.1. Configuration (`src/config/index.ts`)
+- **Purpose:** Centralized application configuration. This file likely exports a configuration object (`config`) and an environment identifier (`environment`), loaded from environment variables, `.env` files, or default values.
+- **Usage:** Import the `config` and `environment` objects from this module to access configuration settings and environment context throughout the application.
+  ```typescript
+  import { config, environment } from './src/config/index.js';
+  
+  const apiKey = config.someApiServiceKey;
+  const port = config.serverPort;
+  const currentEnv = environment; // e.g., 'development', 'production'
+  ```
+- **Convention:** Avoid hardcoding configuration values. Define them in `.env` (for local development, gitignored) or environment variables for production, and access them via the exported `config` object.
+
+### 6.2. MCP Layer (`src/mcp/`)
+This directory contains the core logic for the Model Context Protocol (MCP) server.
+
+#### 6.2.1. Resources (`src/mcp/resources/`)
+- **Purpose:** Defines and manages the data entities (like knowledge, projects, tasks) that the MCP server exposes. Each subdirectory (e.g., `knowledge/`, `projects/`, `tasks/`) typically handles CRUD-like operations or access logic for a specific resource type.
+- `index.ts` in this directory aggregates and exports all resource handlers.
+- `types.ts` defines common types or interfaces used across different resources.
+- **Convention:** When adding a new data entity to be managed by MCP, create a new subdirectory here with its corresponding logic (e.g., `*ResourceName*Resources.ts`) and types. Ensure it's exported via `src/mcp/resources/index.ts`.
+
+#### 6.2.2. Tools (`src/mcp/tools/`)
+- **Purpose:** Implements the specific tools that the MCP server offers (e.g., `atlas_deep_research`, `atlas_knowledge_add`). Each tool is usually in its own subdirectory.
+- **Structure per tool:**
+    - `*ToolName*.ts`: Contains the main execution logic for the tool (e.g., `addKnowledge.ts`).
+    - `index.ts`: Exports the tool's definition and handler.
+    - `responseFormat.ts`: Defines the structure of the tool's successful response.
+    - `types.ts`: Defines input/argument types and other specific types for the tool.
+- **Convention:** New tools should follow this established directory structure. Ensure tools perform input validation (using types from `types.ts`) and return responses as defined in `responseFormat.ts` or an `McpError`.
+
+#### 6.2.3. Transports (`src/mcp/transports/`)
+- **Purpose:** Handles the communication protocols for the MCP server, such as HTTP (`httpTransport.ts`) and standard I/O (`stdioTransport.ts`).
+- `authentication/authMiddleware.ts`: Handles JWT Bearer token authentication for HTTP transport. Verifies tokens, extracts `clientId` and `scopes` into an `AuthInfo` object (conforming to MCP SDK) on `req.auth`, and integrates `requestContextService` for logging.
+- **Convention:** Modifications to how the server receives requests or sends responses, or changes to authentication mechanisms, would be made here.
+
+#### 6.2.4. Server (`src/mcp/server.ts`)
+- **Purpose:** The main entry point or orchestrator for the MCP server logic. It likely initializes transports, registers tools and resources, and starts listening for incoming requests. This is called by `src/index.ts`.
+- **Convention:** This file ties together the different parts of the `src/mcp/` layer.
+
+### 6.3. Services (`src/services/neo4j/`)
+- **Purpose:** Encapsulates all interactions with the Neo4j graph database. Logic is typically separated into service files based on the data entity they manage (e.g., `knowledgeService.ts`, `projectService.ts`, `taskService.ts`, `searchService.ts`) or specific functionalities (`backupRestoreService.ts`).
+- `driver.ts`: Manages the Neo4j driver instance and database connection.
+- `events.ts`: May define or handle domain events related to database interactions.
+- `helpers.ts`, `utils.ts`: Contain utility functions specific to Neo4j interactions.
+- `types.ts`: Defines types and interfaces relevant to Neo4j data models and query results.
+- `index.ts`: Barrel file that exports key services and utilities for easy import.
+- **Convention:** All database operations MUST go through these services. Avoid direct database calls from other parts of the application (e.g., from MCP tools). Services should handle query building, execution, and mapping results to application-defined types.
+
+### 6.4. Core Types (`src/types/`)
+- **Purpose:** Defines global and core TypeScript types and interfaces used across the application.
+- `errors.ts`: (Covered in Section 3) Defines `McpError` and various error code enums.
+- `mcp.ts`: Likely defines core MCP structures, such as the shape of MCP requests and responses, content types, etc.
+- `tool.ts`: Probably defines the generic structure or interface for an MCP tool definition, including its input schema and handler function signature.
+- **Convention:** When defining types that are broadly applicable or fundamental to the MCP framework or tool interactions, place them here.
+
+### 6.5. Utility Scripts (`scripts/`)
+- **Purpose:** Contains various TypeScript-based utility scripts for development, maintenance, and operational tasks.
+- Examples:
+    - `clean.ts`: Possibly for cleaning build artifacts or temporary files.
+    - `db-backup.ts`, `db-import.ts`: For backing up and restoring the Neo4j database.
+    - `fetch-openapi-spec.ts`: For fetching or updating OpenAPI specifications, potentially for tool schema generation or documentation.
+    - `make-executable.ts`: Might be used to set execute permissions on scripts.
+    - `tree.ts`: Generates the `docs/tree.md` file.
+- **Convention:** Scripts should be well-documented regarding their purpose and usage. Use `npm run script-name` (after defining in `package.json` scripts section) or `npx tsx scripts/scriptName.ts` to execute them.
+
+### 6.6. Core Utilities (`src/utils/`)
+This directory houses various utility modules, organized by concern. Sections 1, 2, 3, and 4 of this document cover `requestContext.ts`, `logger.ts`, `errorHandler.ts` (all in `src/utils/internal/`) and `sanitization.ts` (in `src/utils/security/`) respectively. Other key subdirectories include:
+
+#### 6.6.1. Metrics (`src/utils/metrics/`)
+- **Purpose:** Provides utilities related to application metrics and monitoring.
+- `tokenCounter.ts`: Implements functionality for counting or tracking token usage, which can be essential for services interacting with token-based APIs (e.g., LLMs).
+- `index.ts`: Barrel file exporting metrics utilities.
+
+#### 6.6.2. Parsing (`src/utils/parsing/`)
+- **Purpose:** Contains modules for parsing various data formats safely and effectively.
+- `dateParser.ts`: Utilities for parsing and handling date strings or objects.
+- `jsonParser.ts`: Provides safe JSON parsing capabilities. Note: `sanitization.sanitizeJson` (Section 4) also offers JSON parsing with validation and should be preferred for external inputs. This module might offer alternative or supplementary JSON processing tools.
+- `index.ts`: Barrel file exporting parsing utilities.
+
+#### 6.6.3. Security (`src/utils/security/`)
+- **Purpose:** Centralizes security-related utilities beyond what's covered in Section 4 (Sanitization).
+- `sanitization.ts`: (Covered in detail in Section 4).
+- `idGenerator.ts`: Provides functions for generating various types of unique identifiers used within the application (e.g., UUIDs).
+- `rateLimiter.ts`: Implements mechanisms for rate limiting requests or operations to protect system resources and prevent abuse.
+- `index.ts`: Barrel file exporting security utilities.
+
+#### 6.6.4. General Utilities (`src/utils/index.ts`)
+- The `src/utils/index.ts` file serves as the primary barrel file for all utilities, re-exporting modules from `internal`, `metrics`, `parsing`, and `security` subdirectories, providing a single point of import for most utility functions.
+  ```typescript
+  // Example: Importing multiple utils
+  import { logger, requestContextService, sanitization, idGenerator } from './src/utils/index.js';
+  ```
+
+---
+*This cheat sheet is a living document. Please contribute improvements and keep it up-to-date.*

@@ -1,0 +1,228 @@
+<!-- source: better-auth — https://better-auth.com/llms.txt -->
+# Better Auth
+
+> The most comprehensive authentication framework for TypeScript
+
+## Table of Contents
+
+### Adapters
+
+- [Community Adapters](/llms.txt/docs/adapters/community-adapters.md): Community-built database adapters that extend Better Auth.
+- [Drizzle ORM Adapter](/llms.txt/docs/adapters/drizzle.md): Integrate Better Auth with Drizzle ORM.
+- [MongoDB Adapter](/llms.txt/docs/adapters/mongo.md): Integrate Better Auth with MongoDB.
+- [MS SQL](/llms.txt/docs/adapters/mssql.md): Integrate Better Auth with MS SQL.
+- [MySQL](/llms.txt/docs/adapters/mysql.md): Integrate Better Auth with MySQL.
+- [Other Relational Databases](/llms.txt/docs/adapters/other-relational-databases.md): Integrate Better Auth with other relational databases.
+- [PostgreSQL](/llms.txt/docs/adapters/postgresql.md): Integrate Better Auth with PostgreSQL.
+- [Prisma](/llms.txt/docs/adapters/prisma.md): Integrate Better Auth with Prisma.
+- [SQLite](/llms.txt/docs/adapters/sqlite.md): Integrate Better Auth with SQLite.
+
+### Ai Resources
+
+- [AI Resources](/llms.txt/docs/ai-resources.md): Ask AI in the docs, LLMs.txt, the documentation MCP server, and Better Auth skills for coding assistants.
+- [MCP](/llms.txt/docs/ai-resources/mcp.md): Connect Better Auth documentation to MCP-capable clients via the remote documentation MCP server.
+- [Skills](/llms.txt/docs/ai-resources/skills.md): Install Better Auth agent skills so your coding assistant follows library conventions and patterns.
+
+### Authentication
+
+- [Apple](/llms.txt/docs/authentication/apple.md): Apple provider setup and usage.
+- [Atlassian](/llms.txt/docs/authentication/atlassian.md): Atlassian provider setup and usage.
+- [Cognito](/llms.txt/docs/authentication/cognito.md): Amazon Cognito provider setup and usage.
+- [Discord](/llms.txt/docs/authentication/discord.md): Discord provider setup and usage.
+- [Dropbox](/llms.txt/docs/authentication/dropbox.md): Dropbox provider setup and usage.
+- [Email & Password](/llms.txt/docs/authentication/email-password.md): Implementing email and password authentication with Better Auth.
+- [Facebook](/llms.txt/docs/authentication/facebook.md): Facebook provider setup and usage.
+- [Figma](/llms.txt/docs/authentication/figma.md): Figma provider setup and usage.
+- [GitHub](/llms.txt/docs/authentication/github.md): GitHub provider setup and usage.
+- [GitLab](/llms.txt/docs/authentication/gitlab.md): GitLab provider setup and usage.
+- [Google](/llms.txt/docs/authentication/google.md): Google provider setup and usage.
+- [Hugging Face](/llms.txt/docs/authentication/huggingface.md): Hugging Face provider setup and usage.
+- [Kakao](/llms.txt/docs/authentication/kakao.md): Kakao provider setup and usage.
+- [Kick](/llms.txt/docs/authentication/kick.md): Kick provider setup and usage.
+- [LINE](/llms.txt/docs/authentication/line.md): LINE provider setup and usage.
+- [Linear](/llms.txt/docs/authentication/linear.md): Linear provider setup and usage.
+- [LinkedIn](/llms.txt/docs/authentication/linkedin.md): LinkedIn Provider
+- [Microsoft](/llms.txt/docs/authentication/microsoft.md): Microsoft provider setup and usage.
+- [Naver](/llms.txt/docs/authentication/naver.md): Naver provider setup and usage.
+- [Notion](/llms.txt/docs/authentication/notion.md): Notion provider setup and usage.
+- [Other Social Providers](/llms.txt/docs/authentication/other-social-providers.md): Other social providers setup and usage.
+- [Paybin](/llms.txt/docs/authentication/paybin.md): Paybin provider setup and usage.
+- [PayPal](/llms.txt/docs/authentication/paypal.md): Paypal provider setup and usage.
+- [Polar](/llms.txt/docs/authentication/polar.md): Polar provider setup and usage.
+- [Railway](/llms.txt/docs/authentication/railway.md): Railway provider setup and usage.
+- [Reddit](/llms.txt/docs/authentication/reddit.md): Reddit provider setup and usage.
+- [Roblox](/llms.txt/docs/authentication/roblox.md): Roblox provider setup and usage.
+- [Salesforce](/llms.txt/docs/authentication/salesforce.md): Salesforce provider setup and usage.
+- [Slack](/llms.txt/docs/authentication/slack.md): Slack provider setup and usage.
+- [Spotify](/llms.txt/docs/authentication/spotify.md): Spotify provider setup and usage.
+- [TikTok](/llms.txt/docs/authentication/tiktok.md): TikTok provider setup and usage.
+- [Twitch](/llms.txt/docs/authentication/twitch.md): Twitch provider setup and usage.
+- [Twitter (X)](/llms.txt/docs/authentication/twitter.md): Twitter provider setup and usage.
+- [Vercel](/llms.txt/docs/authentication/vercel.md): Vercel provider setup and usage.
+- [VK](/llms.txt/docs/authentication/vk.md): VK ID Provider
+- [WeChat](/llms.txt/docs/authentication/wechat.md): WeChat provider setup and usage.
+- [Zoom](/llms.txt/docs/authentication/zoom.md): Zoom provider setup and usage.
+
+### Basic Usage
+
+- [Basic Usage](/llms.txt/docs/basic-usage.md): Getting started with Better Auth
+
+### Comparison
+
+- [Comparison](/llms.txt/docs/comparison.md): Comparison of Better Auth versus over other auth libraries and services.
+
+### Concepts
+
+- [API](/llms.txt/docs/concepts/api.md): Learn how to call Better Auth API endpoints on the server, pass body, headers, and query parameters, retrieve response headers, and handle errors.
+- [CLI](/llms.txt/docs/concepts/cli.md): Learn about the Better Auth CLI commands for generating and migrating database schemas, initializing projects, generating secret keys, and gathering diagnostic info.
+- [Client](/llms.txt/docs/concepts/client.md): Learn how to set up the Better Auth client for React, Vue, Svelte, and other frameworks, use hooks, configure fetch options, handle errors, and extend with client plugins.
+- [Cookies](/llms.txt/docs/concepts/cookies.md): Learn how Better Auth uses cookies, including cookie prefixes, custom cookie attributes, cross-subdomain sharing, secure cookies, and handling Safari ITP with proxies.
+- [Database](/llms.txt/docs/concepts/database.md): Learn about database adapters, migrations, secondary storage with Redis, core schema (user, session, account, verification), custom tables, extending schemas, ID generation, database hooks, and plugin schemas.
+- [Email](/llms.txt/docs/concepts/email.md): Learn how to set up email verification, require verified emails for sign-in, auto sign-in after verification, handle post-verification callbacks, and implement password reset emails.
+- [Hooks](/llms.txt/docs/concepts/hooks.md): Learn how to use before and after hooks to customize endpoint behavior, modify requests and responses, handle cookies, throw errors, access auth context, and run background tasks.
+- [OAuth](/llms.txt/docs/concepts/oauth.md): Learn how to configure social OAuth providers, sign in and link accounts, request scopes, pass additional data, refresh access tokens, map profiles, and customize provider options.
+- [Plugins](/llms.txt/docs/concepts/plugins.md): Learn how to use and create Better Auth plugins, including defining endpoints, schemas, hooks, middleware, rate limits, trusted origins, and building client plugins with custom actions and atoms.
+- [Rate Limit](/llms.txt/docs/concepts/rate-limit.md): Learn how to configure rate limiting in Better Auth, including IP address detection, IPv6 support, custom rate limit windows, storage backends, error handling, and per-endpoint rules.
+- [Session Management](/llms.txt/docs/concepts/session-management.md): Learn about session management in Better Auth, including session expiration, freshness, cookie caching strategies, secondary storage, stateless sessions, and customizing session responses.
+- [TypeScript](/llms.txt/docs/concepts/typescript.md): Learn about TypeScript configuration for Better Auth, including strict mode, inferring types for sessions and users, defining additional fields, and inferring additional fields on the client.
+- [User & Accounts](/llms.txt/docs/concepts/users-accounts.md): Learn how to manage users and accounts, including updating user info, changing emails and passwords, deleting users with verification, token encryption, and account linking and unlinking.
+
+### Examples
+
+- [Astro Example](/llms.txt/docs/examples/astro.md): Better Auth Astro example.
+- [Next.js Example](/llms.txt/docs/examples/next-js.md): Better Auth Next.js example.
+- [Nuxt Example](/llms.txt/docs/examples/nuxt.md): Better Auth Nuxt example.
+- [React Router v7 Example](/llms.txt/docs/examples/react-router.md): Better Auth React Router v7 example.
+- [SvelteKit Example](/llms.txt/docs/examples/svelte-kit.md): Better Auth SvelteKit example.
+
+### Guides
+
+- [Migrating from Auth0 to Better Auth](/llms.txt/docs/guides/auth0-migration-guide.md): A step-by-step guide to transitioning from Auth0 to Better Auth.
+- [Browser Extension Guide](/llms.txt/docs/guides/browser-extension-guide.md): A step-by-step guide to creating a browser extension with Better Auth.
+- [Migrating from Clerk to Better Auth](/llms.txt/docs/guides/clerk-migration-guide.md): A step-by-step guide to transitioning from Clerk to Better Auth.
+- [Create a Database Adapter](/llms.txt/docs/guides/create-a-db-adapter.md): Learn how to create a custom database adapter for Better-Auth
+- [Dynamic Base URL](/llms.txt/docs/guides/dynamic-base-url.md): Configure Better Auth for preview deployments, multiple domains, and per-request URL resolution.
+- [Migrating from Auth.js to Better Auth](/llms.txt/docs/guides/next-auth-migration-guide.md): A step-by-step guide to transitioning from Auth.js to Better Auth.
+- [Optimizing for Performance](/llms.txt/docs/guides/optimizing-for-performance.md): A guide to optimizing your Better Auth application for performance.
+- [SAML SSO with Okta](/llms.txt/docs/guides/saml-sso-with-okta.md): A guide to integrating SAML Single Sign-On (SSO) with Better Auth, featuring Okta
+- [Migrating from Supabase Auth to Better Auth](/llms.txt/docs/guides/supabase-migration-guide.md): A step-by-step guide to transitioning from Supabase Auth to Better Auth.
+- [Migrating from WorkOS to Better Auth](/llms.txt/docs/guides/workos-migration-guide.md): A step-by-step guide to transitioning from WorkOS to Better Auth.
+- [Create your first plugin](/llms.txt/docs/guides/your-first-plugin.md): A step-by-step guide to creating your first Better Auth plugin.
+
+### Infrastructure
+
+- [Getting Started](/llms.txt/docs/infrastructure/getting-started.md): This guide will help you integrate Better Auth Infrastructure into your application.
+- [Better Auth Infrastructure](/llms.txt/docs/infrastructure/introduction.md): Enterprise-grade dashboard, security, and managed services for Better Auth.
+- [Audit Logs](/llms.txt/docs/infrastructure/plugins/audit-logs.md): Track and query authentication events across your application with automatic audit logging.
+- [Dashboard Plugin (dash)](/llms.txt/docs/infrastructure/plugins/dash.md): The `dash()` plugin connects your Better Auth instance to Better Auth Infrastructure, enabling analytics tracking, event logging, and admin dashboard APIs.
+- [Dashboard](/llms.txt/docs/infrastructure/plugins/dashboard.md): The `dash()` plugin connects your Better Auth instance to Better Auth Infrastructure, enabling analytics tracking, activity monitoring, and admin dashboard APIs.
+- [Security Plugin (sentinel)](/llms.txt/docs/infrastructure/plugins/sentinel.md): The `sentinel()` plugin provides comprehensive security and abuse protection for your authentication system. It detects and prevents various attack vectors including credential stuffing, impossible travel, free trial abuse, and more.
+- [Email Service](/llms.txt/docs/infrastructure/services/email.md): Better Auth Infrastructure provides a managed transactional email service with pre-built templates for common authentication flows. Send verification emails, password resets, invitations, and more without managing email infrastructure.
+- [SMS Service](/llms.txt/docs/infrastructure/services/sms.md): Better Auth Infrastructure provides a managed SMS service for sending OTP codes for phone verification and two-factor authentication. Send verification codes without managing SMS providers.
+
+### Installation
+
+- [Installation](/llms.txt/docs/installation.md): Learn how to configure Better Auth in your project.
+
+### Integrations
+
+- [Astro Integration](/llms.txt/docs/integrations/astro.md): Integrate Better Auth with Astro.
+- [Convex Integration](/llms.txt/docs/integrations/convex.md): Integrate Better Auth with Convex.
+- [Electron Integration](/llms.txt/docs/integrations/electron.md): Integrate Better Auth with Electron.
+- [Elysia Integration](/llms.txt/docs/integrations/elysia.md): Integrate Better Auth with Elysia.
+- [Encore Integration](/llms.txt/docs/integrations/encore.md): Integrate Better Auth with Encore.
+- [Expo Integration](/llms.txt/docs/integrations/expo.md): Integrate Better Auth with Expo.
+- [Express Integration](/llms.txt/docs/integrations/express.md): Integrate Better Auth with Express.
+- [Better Auth Fastify Integration Guide](/llms.txt/docs/integrations/fastify.md): Learn how to seamlessly integrate Better Auth with your Fastify application.
+- [Hono Integration](/llms.txt/docs/integrations/hono.md): Integrate Better Auth with Hono.
+- [Lynx Integration](/llms.txt/docs/integrations/lynx.md): Integrate Better Auth with Lynx cross-platform framework.
+- [NestJS Integration](/llms.txt/docs/integrations/nestjs.md): Integrate Better Auth with NestJS.
+- [Next.js integration](/llms.txt/docs/integrations/next.md): Integrate Better Auth with Next.js.
+- [Nitro Integration](/llms.txt/docs/integrations/nitro.md): Integrate Better Auth with Nitro.
+- [Nuxt Integration](/llms.txt/docs/integrations/nuxt.md): Integrate Better Auth with Nuxt.
+- [React Router v7 Integration](/llms.txt/docs/integrations/react-router.md): Integrate Better Auth with React Router v7 (formerly Remix).
+- [SolidStart Integration](/llms.txt/docs/integrations/solid-start.md): Integrate Better Auth with SolidStart.
+- [SvelteKit Integration](/llms.txt/docs/integrations/svelte-kit.md): Integrate Better Auth with SvelteKit.
+- [TanStack Start Integration](/llms.txt/docs/integrations/tanstack.md): Integrate Better Auth with TanStack Start.
+- [Waku Integration](/llms.txt/docs/integrations/waku.md): Integrate Better Auth with Waku.
+
+### Introduction
+
+- [Introduction](/llms.txt/docs/introduction.md): Introduction to Better Auth.
+
+### Plugins
+
+- [Two-Factor Authentication (2FA)](/llms.txt/docs/plugins/2fa.md): Enhance your app's security with two-factor authentication.
+- [Admin](/llms.txt/docs/plugins/admin.md): Admin plugin for Better Auth
+- [Agent Auth](/llms.txt/docs/plugins/agent-auth.md): Agent identity, registration, discovery, and capability-based authorization for AI agents.
+- [Anonymous](/llms.txt/docs/plugins/anonymous.md): Anonymous plugin for Better Auth.
+- [Autumn Billing](/llms.txt/docs/plugins/autumn.md): Better Auth Plugin for Autumn Billing
+- [Bearer Token Authentication](/llms.txt/docs/plugins/bearer.md): Authenticate API requests using Bearer tokens instead of browser cookies
+- [Captcha](/llms.txt/docs/plugins/captcha.md): Captcha plugin
+- [Chargebee](/llms.txt/docs/plugins/chargebee.md): Chargebee plugin for Better Auth to manage subscriptions and payments.
+- [Commet](/llms.txt/docs/plugins/commet.md): Better Auth Plugin for Billing and Subscriptions using Commet
+- [Community Plugins](/llms.txt/docs/plugins/community-plugins.md): Community-built plugins that extend Better Auth.
+- [Creem](/llms.txt/docs/plugins/creem.md): Better Auth Plugin for Payment and Subscriptions using Creem
+- [Device Authorization](/llms.txt/docs/plugins/device-authorization.md): OAuth 2.0 Device Authorization Grant for limited-input devices
+- [Dodo Payments](/llms.txt/docs/plugins/dodopayments.md): Better Auth Plugin for Dodo Payments
+- [Dub](/llms.txt/docs/plugins/dub.md): Better Auth Plugin for Lead Tracking using Dub links and OAuth Linking
+- [Email OTP](/llms.txt/docs/plugins/email-otp.md): Email OTP plugin for Better Auth.
+- [Generic OAuth](/llms.txt/docs/plugins/generic-oauth.md): Authenticate users with any OAuth provider
+- [Have I Been Pwned](/llms.txt/docs/plugins/have-i-been-pwned.md): A plugin to check if a password has been compromised
+- [i18n](/llms.txt/docs/plugins/i18n.md): Internationalization plugin for translating error messages
+- [Plugins](/llms.txt/docs/plugins.md): Browse all Better Auth plugins â authentication, authorization, payments, security, and more.
+- [JWT](/llms.txt/docs/plugins/jwt.md): Authenticate users with JWT tokens in services that can't use the session
+- [Last Login Method](/llms.txt/docs/plugins/last-login-method.md): Track and display the last authentication method used by users
+- [Magic link](/llms.txt/docs/plugins/magic-link.md): Magic link plugin
+- [MCP](/llms.txt/docs/plugins/mcp.md): MCP provider plugin for Better Auth
+- [Multi Session](/llms.txt/docs/plugins/multi-session.md): Learn how to use multi-session plugin in Better Auth.
+- [OAuth 2.1 Provider](/llms.txt/docs/plugins/oauth-provider.md): A Better Auth plugin that enables your auth server to serve as an OAuth 2.1 provider.
+- [OAuth Proxy](/llms.txt/docs/plugins/oauth-proxy.md): OAuth Proxy plugin for Better Auth
+- [OIDC Provider](/llms.txt/docs/plugins/oidc-provider.md): Open ID Connect plugin for Better Auth that allows you to have your own OIDC provider.
+- [One Tap](/llms.txt/docs/plugins/one-tap.md): One Tap plugin for Better Auth
+- [One-Time Token Plugin](/llms.txt/docs/plugins/one-time-token.md): Generate and verify single-use token
+- [Open API](/llms.txt/docs/plugins/open-api.md): Open API reference for Better Auth.
+- [Organization](/llms.txt/docs/plugins/organization.md): The organization plugin allows you to manage your organization's members and teams.
+- [Passkey](/llms.txt/docs/plugins/passkey.md): Passkey
+- [Phone Number](/llms.txt/docs/plugins/phone-number.md): Phone number plugin
+- [Polar](/llms.txt/docs/plugins/polar.md): Better Auth Plugin for Payment and Checkouts using Polar
+- [System for Cross-domain Identity Management (SCIM)](/llms.txt/docs/plugins/scim.md): Integrate SCIM with your application.
+- [Sign In With Ethereum (SIWE)](/llms.txt/docs/plugins/siwe.md): Sign in with Ethereum plugin for Better Auth
+- [Single Sign-On (SSO)](/llms.txt/docs/plugins/sso.md): Integrate Single Sign-On (SSO) with your application.
+- [Stripe](/llms.txt/docs/plugins/stripe.md): Stripe plugin for Better Auth to manage subscriptions and payments.
+- [Test Utils](/llms.txt/docs/plugins/test-utils.md): Testing utilities for integration and E2E testing
+- [Username](/llms.txt/docs/plugins/username.md): Username plugin
+- [Advanced Features](/llms.txt/docs/plugins/api-key/advanced.md): Advanced API Key features including sessions, multiple configurations, organization keys, storage modes, and more.
+- [API Key](/llms.txt/docs/plugins/api-key.md): API Key plugin for Better Auth.
+- [Reference](/llms.txt/docs/plugins/api-key/reference.md): API Key plugin options, permissions, and schema reference.
+
+### Reference
+
+- [Contributing to BetterAuth](/llms.txt/docs/reference/contributing.md): A concise guide to contributing to BetterAuth
+- [FAQ](/llms.txt/docs/reference/faq.md): Frequently asked questions about Better Auth.
+- [Instrumentation (Experimental)](/llms.txt/docs/reference/instrumentation.md): Distributed tracing for Better Auth
+- [Options](/llms.txt/docs/reference/options.md): Better Auth configuration options reference.
+- [Resources](/llms.txt/docs/reference/resources.md): A curated collection of resources to help you learn and master Better Auth.
+- [Security](/llms.txt/docs/reference/security.md): Better Auth security features.
+- [Telemetry](/llms.txt/docs/reference/telemetry.md): Better Auth now collects anonymous telemetry data about general usage.
+- [account_already_linked_to_different_user](/llms.txt/docs/reference/errors/account_already_linked_to_different_user.md): The account is already linked to a different user.
+- [account_not_linked](/llms.txt/docs/reference/errors/account_not_linked.md): The provider account is not linked to the current user and cannot be linked automatically.
+- [email_doesn't_match](/llms.txt/docs/reference/errors/email_doesn't_match.md): The email doesn't match the email of the account.
+- [email_not_found](/llms.txt/docs/reference/errors/email_not_found.md): The provider did not return an email address.
+- [Errors](/llms.txt/docs/reference/errors.md): Errors that can occur in Better Auth.
+- [internal_server_error](/llms.txt/docs/reference/errors/internal_server_error.md): An unexpected error occurred during authentication.
+- [invalid_callback_request](/llms.txt/docs/reference/errors/invalid_callback_request.md): The callback request is invalid.
+- [invalid_code](/llms.txt/docs/reference/errors/invalid_code.md): The provided authentication code is invalid or expired.
+- [no_callback_url](/llms.txt/docs/reference/errors/no_callback_url.md): The callback URL was not found in the request.
+- [no_code](/llms.txt/docs/reference/errors/no_code.md): The code was not found in the request.
+- [oauth_provider_not_found](/llms.txt/docs/reference/errors/oauth_provider_not_found.md): The OAuth provider was not found.
+- [signup_disabled](/llms.txt/docs/reference/errors/signup_disabled.md): Signup disabled error
+- [state_invalid](/llms.txt/docs/reference/errors/state_invalid.md): Failed to decrypt or parse the OAuth state during the callback.
+- [state_mismatch](/llms.txt/docs/reference/errors/state_mismatch.md): State verification failed during the OAuth callback. Covers all state-related error codes and their causes.
+- [state_not_found](/llms.txt/docs/reference/errors/state_not_found.md): The state parameter was not found in the request.
+- [unable_to_create_session](/llms.txt/docs/reference/errors/unable_to_create_session.md): The session could not be created during authentication.
+- [unable_to_create_user](/llms.txt/docs/reference/errors/unable_to_create_user.md): The user could not be created during authentication.
+- [unable_to_get_user_info](/llms.txt/docs/reference/errors/unable_to_get_user_info.md): The user info was not found in the request.
+- [unable_to_link_account](/llms.txt/docs/reference/errors/unable_to_link_account.md): The account could not be linked.
+- [Unknown error](/llms.txt/docs/reference/errors/unknown.md): An unknown error occurred.
+
