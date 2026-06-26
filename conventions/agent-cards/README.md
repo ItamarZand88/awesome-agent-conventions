@@ -6,7 +6,7 @@
 - **Location:** /.well-known/agent-card.json (the older /.well-known/agent.json is a legacy alias)
 - **Spec:** [https://a2a-protocol.org/latest/specification/](https://a2a-protocol.org/latest/specification/)
 - **Evidence:** A2A v1.0 specifies Agent Cards and the well-known agent-card.json path, with public sample cards but still-early ecosystem adoption.
-- **Last verified:** 2026-06-26
+- **Last verified:** 2026-06-27
 - **Files:** `agent-card.json`, `agent.json`
 
 ## Examples
@@ -27,12 +27,7 @@ Current A2A well-known Agent Card filename.
 | `air-ticketing` | [`a2aproject/a2a-samples`](https://github.com/a2aproject/a2a-samples) | [`examples/air-ticketing/agent-card.json`](examples/air-ticketing/agent-card.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/a2a_mcp/agent_cards/air_ticketing_agent.json) |
 | `currency` | [`a2aproject/a2a-samples`](https://github.com/a2aproject/a2a-samples) | [`examples/currency/agent-card.json`](examples/currency/agent-card.json) | [source](https://raw.githubusercontent.com/a2aproject/a2a-samples/main/samples/python/agents/adk_currency_agent/src/currency_agent/agent_card.json) |
 | `kagent-adk-basic` | [`kagent-dev/kagent`](https://github.com/kagent-dev/kagent) | [`examples/kagent-adk-basic/agent-card.json`](examples/kagent-adk-basic/agent-card.json) | [source](https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/adk/basic/basic/agent-card.json) |
-| `kagent-go-e2e-kebab` | [`kagent-dev/kagent`](https://github.com/kagent-dev/kagent) | [`examples/kagent-go-e2e-kebab/agent-card.json`](examples/kagent-go-e2e-kebab/agent-card.json) | [source](https://raw.githubusercontent.com/kagent-dev/kagent/main/go/core/test/e2e/agents/kebab/kebab/agent-card.json) |
 | `kagent-langgraph-currency` | [`kagent-dev/kagent`](https://github.com/kagent-dev/kagent) | [`examples/kagent-langgraph-currency/agent-card.json`](examples/kagent-langgraph-currency/agent-card.json) | [source](https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/langgraph/currency/currency/agent-card.json) |
-| `kagent-langgraph-hitl-tools` | [`kagent-dev/kagent`](https://github.com/kagent-dev/kagent) | [`examples/kagent-langgraph-hitl-tools/agent-card.json`](examples/kagent-langgraph-hitl-tools/agent-card.json) | [source](https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/langgraph/hitl-tools/hitl_tools/agent-card.json) |
-| `kagent-langgraph-kebab` | [`kagent-dev/kagent`](https://github.com/kagent-dev/kagent) | [`examples/kagent-langgraph-kebab/agent-card.json`](examples/kagent-langgraph-kebab/agent-card.json) | [source](https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/langgraph/kebab/kebab/agent-card.json) |
-| `kagent-openai-basic` | [`kagent-dev/kagent`](https://github.com/kagent-dev/kagent) | [`examples/kagent-openai-basic/agent-card.json`](examples/kagent-openai-basic/agent-card.json) | [source](https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/openai/basic_agent/basic_agent/agent-card.json) |
-| `kagent-poem-flow` | [`kagent-dev/kagent`](https://github.com/kagent-dev/kagent) | [`examples/kagent-poem-flow/agent-card.json`](examples/kagent-poem-flow/agent-card.json) | [source](https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/crewai/poem_flow/src/poem_flow/agent-card.json) |
 | `kagent-research-crew` | [`kagent-dev/kagent`](https://github.com/kagent-dev/kagent) | [`examples/kagent-research-crew/agent-card.json`](examples/kagent-research-crew/agent-card.json) | [source](https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/crewai/research-crew/src/research_crew/agent-card.json) |
 
 ### `agent.json`

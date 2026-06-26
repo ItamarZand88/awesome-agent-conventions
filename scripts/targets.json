@@ -577,7 +577,7 @@
       "category": "Memory & state",
       "maturity": "🟢",
       "evidence": "Cline documents Memory Bank as a structured multi-file context system, and public repositories commit the full file set.",
-      "last_verified": "2026-06-26",
+      "last_verified": "2026-06-27",
       "files": [
         {
           "name": "projectbrief.md",
@@ -671,156 +671,6 @@
         },
         {
           "type": "web",
-          "url": "https://raw.githubusercontent.com/dkopko/klox/master/memory-bank/projectbrief.md",
-          "source_label": "klox"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/dkopko/klox/master/memory-bank/productContext.md",
-          "source_label": "klox"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/dkopko/klox/master/memory-bank/activeContext.md",
-          "source_label": "klox"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/dkopko/klox/master/memory-bank/systemPatterns.md",
-          "source_label": "klox"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/dkopko/klox/master/memory-bank/techContext.md",
-          "source_label": "klox"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/dkopko/klox/master/memory-bank/progress.md",
-          "source_label": "klox"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/chapzin/parse-efd-fiscal/master/memory-bank/projectbrief.md",
-          "source_label": "parse-efd-fiscal"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/chapzin/parse-efd-fiscal/master/memory-bank/productContext.md",
-          "source_label": "parse-efd-fiscal"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/chapzin/parse-efd-fiscal/master/memory-bank/activeContext.md",
-          "source_label": "parse-efd-fiscal"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/chapzin/parse-efd-fiscal/master/memory-bank/systemPatterns.md",
-          "source_label": "parse-efd-fiscal"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/chapzin/parse-efd-fiscal/master/memory-bank/techContext.md",
-          "source_label": "parse-efd-fiscal"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/chapzin/parse-efd-fiscal/master/memory-bank/progress.md",
-          "source_label": "parse-efd-fiscal"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/dtg01100/pure3270/main/memory-bank/projectbrief.md",
-          "source_label": "pure3270"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/dtg01100/pure3270/main/memory-bank/productContext.md",
-          "source_label": "pure3270"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/dtg01100/pure3270/main/memory-bank/activeContext.md",
-          "source_label": "pure3270"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/dtg01100/pure3270/main/memory-bank/systemPatterns.md",
-          "source_label": "pure3270"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/dtg01100/pure3270/main/memory-bank/techContext.md",
-          "source_label": "pure3270"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/dtg01100/pure3270/main/memory-bank/progress.md",
-          "source_label": "pure3270"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/cfircoo/aws-sso-manager/main/memory-bank/projectbrief.md",
-          "source_label": "aws-sso-manager"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/cfircoo/aws-sso-manager/main/memory-bank/productContext.md",
-          "source_label": "aws-sso-manager"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/cfircoo/aws-sso-manager/main/memory-bank/activeContext.md",
-          "source_label": "aws-sso-manager"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/cfircoo/aws-sso-manager/main/memory-bank/systemPatterns.md",
-          "source_label": "aws-sso-manager"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/cfircoo/aws-sso-manager/main/memory-bank/techContext.md",
-          "source_label": "aws-sso-manager"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/cfircoo/aws-sso-manager/main/memory-bank/progress.md",
-          "source_label": "aws-sso-manager"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/sasamuku/repo-sprint-digest/main/memory-bank/projectbrief.md",
-          "source_label": "repo-sprint-digest"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/sasamuku/repo-sprint-digest/main/memory-bank/productContext.md",
-          "source_label": "repo-sprint-digest"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/sasamuku/repo-sprint-digest/main/memory-bank/activeContext.md",
-          "source_label": "repo-sprint-digest"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/sasamuku/repo-sprint-digest/main/memory-bank/systemPatterns.md",
-          "source_label": "repo-sprint-digest"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/sasamuku/repo-sprint-digest/main/memory-bank/techContext.md",
-          "source_label": "repo-sprint-digest"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/sasamuku/repo-sprint-digest/main/memory-bank/progress.md",
-          "source_label": "repo-sprint-digest"
-        },
-        {
-          "type": "web",
           "url": "https://raw.githubusercontent.com/ModusCreateOrg/app-med-ai-gen/main/memory-bank/projectbrief.md",
           "source_label": "app-med-ai-gen"
         },
@@ -848,96 +698,6 @@
           "type": "web",
           "url": "https://raw.githubusercontent.com/ModusCreateOrg/app-med-ai-gen/main/memory-bank/progress.md",
           "source_label": "app-med-ai-gen"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/EDsteve/ELOC-Control-Panel/main/memory-bank/projectbrief.md",
-          "source_label": "eloc-control-panel"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/EDsteve/ELOC-Control-Panel/main/memory-bank/productContext.md",
-          "source_label": "eloc-control-panel"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/EDsteve/ELOC-Control-Panel/main/memory-bank/activeContext.md",
-          "source_label": "eloc-control-panel"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/EDsteve/ELOC-Control-Panel/main/memory-bank/systemPatterns.md",
-          "source_label": "eloc-control-panel"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/EDsteve/ELOC-Control-Panel/main/memory-bank/techContext.md",
-          "source_label": "eloc-control-panel"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/EDsteve/ELOC-Control-Panel/main/memory-bank/progress.md",
-          "source_label": "eloc-control-panel"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/SylphxAI/filesystem-mcp/main/memory-bank/projectbrief.md",
-          "source_label": "filesystem-mcp"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/SylphxAI/filesystem-mcp/main/memory-bank/productContext.md",
-          "source_label": "filesystem-mcp"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/SylphxAI/filesystem-mcp/main/memory-bank/activeContext.md",
-          "source_label": "filesystem-mcp"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/SylphxAI/filesystem-mcp/main/memory-bank/systemPatterns.md",
-          "source_label": "filesystem-mcp"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/SylphxAI/filesystem-mcp/main/memory-bank/techContext.md",
-          "source_label": "filesystem-mcp"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/SylphxAI/filesystem-mcp/main/memory-bank/progress.md",
-          "source_label": "filesystem-mcp"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/talk2MeGooseman/stream-closed-captioner-extension/main/memory-bank/projectbrief.md",
-          "source_label": "stream-closed-captioner"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/talk2MeGooseman/stream-closed-captioner-extension/main/memory-bank/productContext.md",
-          "source_label": "stream-closed-captioner"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/talk2MeGooseman/stream-closed-captioner-extension/main/memory-bank/activeContext.md",
-          "source_label": "stream-closed-captioner"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/talk2MeGooseman/stream-closed-captioner-extension/main/memory-bank/systemPatterns.md",
-          "source_label": "stream-closed-captioner"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/talk2MeGooseman/stream-closed-captioner-extension/main/memory-bank/techContext.md",
-          "source_label": "stream-closed-captioner"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/talk2MeGooseman/stream-closed-captioner-extension/main/memory-bank/progress.md",
-          "source_label": "stream-closed-captioner"
         }
       ]
     },
@@ -946,7 +706,7 @@
       "category": "Spec-driven development",
       "maturity": "🟢",
       "evidence": "GitHub Spec Kit publishes templates and slash-command workflows that consume constitution, spec, plan, and tasks files.",
-      "last_verified": "2026-06-26",
+      "last_verified": "2026-06-27",
       "files": [
         {
           "name": "constitution.md",
@@ -1016,31 +776,6 @@
         },
         {
           "type": "web",
-          "url": "https://raw.githubusercontent.com/colossus-lab/openarg_backend/main/specs/constitution.md",
-          "source_label": "openarg-constitution"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/colossus-lab/openarg_backend/main/specs/003-auth/spec.md",
-          "source_label": "openarg-auth"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/colossus-lab/openarg_backend/main/specs/003-auth/plan.md",
-          "source_label": "openarg-auth"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/colossus-lab/openarg_backend/main/specs/004-semantic-cache/spec.md",
-          "source_label": "openarg-semantic-cache"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/colossus-lab/openarg_backend/main/specs/004-semantic-cache/plan.md",
-          "source_label": "openarg-semantic-cache"
-        },
-        {
-          "type": "web",
           "url": "https://raw.githubusercontent.com/aarthi-ntrjn/argus/master/.specify/memory/constitution.md",
           "source_label": "argus-constitution"
         },
@@ -1058,36 +793,6 @@
           "type": "web",
           "url": "https://raw.githubusercontent.com/aarthi-ntrjn/argus/master/specs/009-security-review/tasks.md",
           "source_label": "argus-security-review"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/aarthi-ntrjn/argus/master/specs/001-session-dashboard/spec.md",
-          "source_label": "argus-session-dashboard"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/aarthi-ntrjn/argus/master/specs/001-session-dashboard/plan.md",
-          "source_label": "argus-session-dashboard"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/aarthi-ntrjn/argus/master/specs/001-session-dashboard/tasks.md",
-          "source_label": "argus-session-dashboard"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/tui-cs/Editor/develop/specs/constitution.md",
-          "source_label": "editor-constitution"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/tui-cs/Editor/develop/specs/clipboard/spec.md",
-          "source_label": "editor-clipboard"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/tui-cs/Editor/develop/specs/multi-caret/spec.md",
-          "source_label": "editor-multi-caret"
         }
       ]
     },
@@ -1096,7 +801,7 @@
       "category": "Spec-driven development",
       "maturity": "🟢",
       "evidence": "Kiro docs define .kiro/steering files and public Kiro projects commit the standard product, structure, and tech files.",
-      "last_verified": "2026-06-26",
+      "last_verified": "2026-06-27",
       "files": [
         {
           "name": "product.md",
@@ -1133,36 +838,6 @@
         },
         {
           "type": "web",
-          "url": "https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/.kiro/steering/product.md",
-          "source_label": "awslabs-aws-icons-plantuml"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/.kiro/steering/structure.md",
-          "source_label": "awslabs-aws-icons-plantuml"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/.kiro/steering/tech.md",
-          "source_label": "awslabs-aws-icons-plantuml"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/awslabs/aws-java-nio-spi-for-s3/main/.kiro/steering/product.md",
-          "source_label": "awslabs-java-nio-s3"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/awslabs/aws-java-nio-spi-for-s3/main/.kiro/steering/structure.md",
-          "source_label": "awslabs-java-nio-s3"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/awslabs/aws-java-nio-spi-for-s3/main/.kiro/steering/tech.md",
-          "source_label": "awslabs-java-nio-s3"
-        },
-        {
-          "type": "web",
           "url": "https://raw.githubusercontent.com/awslabs/aws-solutions-constructs/main/.kiro/steering/product.md",
           "source_label": "awslabs-solutions-constructs"
         },
@@ -1178,66 +853,6 @@
         },
         {
           "type": "web",
-          "url": "https://raw.githubusercontent.com/aws-samples/aws-smart-product-onboarding/main/.kiro/steering/product.md",
-          "source_label": "aws-samples-smart-product-onboarding"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/aws-samples/aws-smart-product-onboarding/main/.kiro/steering/structure.md",
-          "source_label": "aws-samples-smart-product-onboarding"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/aws-samples/aws-smart-product-onboarding/main/.kiro/steering/tech.md",
-          "source_label": "aws-samples-smart-product-onboarding"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/aws-samples/sample-voice-of-customer-datalake/main/.kiro/steering/product.md",
-          "source_label": "aws-samples-voc-datalake"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/aws-samples/sample-voice-of-customer-datalake/main/.kiro/steering/structure.md",
-          "source_label": "aws-samples-voc-datalake"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/aws-samples/sample-voice-of-customer-datalake/main/.kiro/steering/tech.md",
-          "source_label": "aws-samples-voc-datalake"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/aws-solutions-library-samples/guidance-for-agentic-data-exploration-on-aws/main/.kiro/steering/product.md",
-          "source_label": "aws-soln-agentic-data-explorer"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/aws-solutions-library-samples/guidance-for-agentic-data-exploration-on-aws/main/.kiro/steering/structure.md",
-          "source_label": "aws-soln-agentic-data-explorer"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/aws-solutions-library-samples/guidance-for-agentic-data-exploration-on-aws/main/.kiro/steering/tech.md",
-          "source_label": "aws-soln-agentic-data-explorer"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/amazon-science/wraval/main/.kiro/steering/product.md",
-          "source_label": "amazon-science-wraval"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/amazon-science/wraval/main/.kiro/steering/structure.md",
-          "source_label": "amazon-science-wraval"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/amazon-science/wraval/main/.kiro/steering/tech.md",
-          "source_label": "amazon-science-wraval"
-        },
-        {
-          "type": "web",
           "url": "https://raw.githubusercontent.com/tinesoft/nxrocks/develop/.kiro/steering/product.md",
           "source_label": "tinesoft-nxrocks"
         },
@@ -1250,21 +865,6 @@
           "type": "web",
           "url": "https://raw.githubusercontent.com/tinesoft/nxrocks/develop/.kiro/steering/tech.md",
           "source_label": "tinesoft-nxrocks"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/raccoonyy/awspirin/main/.kiro/steering/product.md",
-          "source_label": "raccoonyy-awspirin"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/raccoonyy/awspirin/main/.kiro/steering/structure.md",
-          "source_label": "raccoonyy-awspirin"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/raccoonyy/awspirin/main/.kiro/steering/tech.md",
-          "source_label": "raccoonyy-awspirin"
         },
         {
           "type": "web",
@@ -1346,7 +946,7 @@
       "category": "Skills & prompt assets",
       "maturity": "🟢",
       "evidence": "Prompty, Genkit, and application repos publish external prompt files that tools load independently of source code.",
-      "last_verified": "2026-06-26",
+      "last_verified": "2026-06-27",
       "files": [
         {
           "name": ".prompty",
@@ -1369,11 +969,6 @@
         {
           "type": "web",
           "url": "https://raw.githubusercontent.com/microsoft/prompty/main/web/docs-examples/prompts/chat-basic.prompty",
-          "source_label": "prompty"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/microsoft/prompty/main/web/src/content/docs/assets/code/basic.prompty",
           "source_label": "prompty"
         },
         {
@@ -1408,48 +1003,8 @@
         },
         {
           "type": "web",
-          "url": "https://raw.githubusercontent.com/microsoft/prompty/main/web/src/content/docs/legacy/getting-started/first-prompty/shakespeare.prompty",
-          "source_label": "prompty-shakespeare"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/microsoft/prompty/main/runtime/python/prompty/tests/prompts/rich_metadata.prompty",
-          "source_label": "prompty-rich-metadata"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/microsoft/prompty/main/runtime/typescript/packages/foundry/tests/fixtures/azure-chat.prompty",
-          "source_label": "prompty-foundry-azure-chat"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/microsoft/prompty/main/runtime/python/prompty/tests/prompts/anthropic_chat.prompty",
-          "source_label": "prompty-anthropic-chat"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/microsoft/prompty/main/runtime/csharp/Prompty.Core.Tests/Prompts/tools.prompty",
-          "source_label": "prompty-csharp-tools"
-        },
-        {
-          "type": "web",
           "url": "https://raw.githubusercontent.com/firebase/genkit/main/go/samples/basic-agents/prompts/chef.prompt",
           "source_label": "genkit-chef-agent"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/firebase/genkit/main/go/samples/prompts/prompts/recipe.prompt",
-          "source_label": "genkit-go-recipe"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/firebase/genkit/main/js/testapps/dev-ui-gallery/prompts/hello.prompt",
-          "source_label": "genkit-hello"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/firebase/genkit/main/js/testapps/prompt-file/prompts/story.prompt",
-          "source_label": "genkit-story"
         },
         {
           "type": "web",
@@ -1460,11 +1015,6 @@
           "type": "web",
           "url": "https://raw.githubusercontent.com/firebase/genkit/main/js/genkit/tests/prompts/kitchensink.prompt",
           "source_label": "genkit-kitchensink"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/firebase/genkit/main/js/testapps/agents/prompts/tripPlanner.prompt",
-          "source_label": "genkit-trip-planner"
         },
         {
           "type": "web",
@@ -3188,7 +2738,7 @@
       "category": "Identity & protocols",
       "maturity": "🟠",
       "evidence": "A2A v1.0 specifies Agent Cards and the well-known agent-card.json path, with public sample cards but still-early ecosystem adoption.",
-      "last_verified": "2026-06-26",
+      "last_verified": "2026-06-27",
       "files": [
         {
           "name": "agent-card.json",
@@ -3256,12 +2806,6 @@
         },
         {
           "type": "web",
-          "url": "https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/crewai/poem_flow/src/poem_flow/agent-card.json",
-          "source_label": "kagent-poem-flow",
-          "as": "agent-card.json"
-        },
-        {
-          "type": "web",
           "url": "https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/adk/basic/basic/agent-card.json",
           "source_label": "kagent-adk-basic",
           "as": "agent-card.json"
@@ -3270,30 +2814,6 @@
           "type": "web",
           "url": "https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/langgraph/currency/currency/agent-card.json",
           "source_label": "kagent-langgraph-currency",
-          "as": "agent-card.json"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/langgraph/hitl-tools/hitl_tools/agent-card.json",
-          "source_label": "kagent-langgraph-hitl-tools",
-          "as": "agent-card.json"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/langgraph/kebab/kebab/agent-card.json",
-          "source_label": "kagent-langgraph-kebab",
-          "as": "agent-card.json"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/openai/basic_agent/basic_agent/agent-card.json",
-          "source_label": "kagent-openai-basic",
-          "as": "agent-card.json"
-        },
-        {
-          "type": "web",
-          "url": "https://raw.githubusercontent.com/kagent-dev/kagent/main/go/core/test/e2e/agents/kebab/kebab/agent-card.json",
-          "source_label": "kagent-go-e2e-kebab",
           "as": "agent-card.json"
         }
       ]
