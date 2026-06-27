@@ -2836,6 +2836,70 @@
       "summary": "A single maintainer's pre-registered namespace of ~74 aspirational .md \"protocols\" (proof.md, signature.md, reputation.md, …) staked as Schelling points for a future agent web. Published concept, no demonstrated adoption - see the page for the audited, honest caveats.",
       "manual_readme": true,
       "targets": []
+    },
+    "okf": {
+      "name": "OKF (Open Knowledge Format)",
+      "category": "Instruction & context",
+      "maturity": "🟠",
+      "evidence": "Google Cloud published the OKF spec and sample bundles (GA4, Bitcoin, Stack Overflow) under Apache-2.0 in 2026; a community ecosystem of CLIs, conformance checkers, and agent skills already builds on it.",
+      "last_verified": "2026-06-27",
+      "files": [
+        {
+          "name": ".md",
+          "note": "One concept per Markdown file with YAML frontmatter (required `type`, plus title/description/resource/tags); a bundle is a directory of these."
+        }
+      ],
+      "read_by": "Agents over MCP (okfy, openknowledge, superops okf CLIs); Google's knowledge-catalog ingests bundles",
+      "location": "A bundle directory in a Git repo; each concept is one .md file, nested index.md per directory",
+      "spec": "https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf",
+      "summary": "A machine-first organizational knowledge base: a version-controlled folder of typed Markdown files (one concept per file) that any agent reads as ground-truth context. Open-sourced by Google Cloud in 2026 as the content layer to MCP's transport.",
+      "targets": [
+        {
+          "type": "web",
+          "url": "https://raw.githubusercontent.com/GoogleCloudPlatform/knowledge-catalog/main/okf/bundles/ga4/index.md",
+          "source_label": "ga4-bundle"
+        },
+        {
+          "type": "web",
+          "url": "https://raw.githubusercontent.com/GoogleCloudPlatform/knowledge-catalog/main/okf/bundles/ga4/datasets/ga4_obfuscated_sample_ecommerce.md",
+          "source_label": "ga4-dataset"
+        },
+        {
+          "type": "web",
+          "url": "https://raw.githubusercontent.com/GoogleCloudPlatform/knowledge-catalog/main/okf/bundles/ga4/references/metrics/avg_pageviews.md",
+          "source_label": "ga4-metric-pageviews"
+        },
+        {
+          "type": "web",
+          "url": "https://raw.githubusercontent.com/GoogleCloudPlatform/knowledge-catalog/main/okf/bundles/ga4/references/metrics/event_count.md",
+          "source_label": "ga4-metric-event-count"
+        },
+        {
+          "type": "web",
+          "url": "https://raw.githubusercontent.com/GoogleCloudPlatform/knowledge-catalog/main/okf/bundles/ga4/references/joins/events___ads_clickstats.md",
+          "source_label": "ga4-join-clickstats"
+        },
+        {
+          "type": "web",
+          "url": "https://raw.githubusercontent.com/GoogleCloudPlatform/knowledge-catalog/main/okf/bundles/crypto_bitcoin/index.md",
+          "source_label": "bitcoin-bundle"
+        },
+        {
+          "type": "web",
+          "url": "https://raw.githubusercontent.com/GoogleCloudPlatform/knowledge-catalog/main/okf/bundles/crypto_bitcoin/tables/blocks.md",
+          "source_label": "bitcoin-table-blocks"
+        },
+        {
+          "type": "web",
+          "url": "https://raw.githubusercontent.com/GoogleCloudPlatform/knowledge-catalog/main/okf/bundles/crypto_bitcoin/tables/transactions.md",
+          "source_label": "bitcoin-table-transactions"
+        },
+        {
+          "type": "web",
+          "url": "https://raw.githubusercontent.com/GoogleCloudPlatform/knowledge-catalog/main/okf/bundles/crypto_bitcoin/datasets/crypto_bitcoin.md",
+          "source_label": "bitcoin-dataset"
+        }
+      ]
     }
   }
 }

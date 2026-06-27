@@ -9,6 +9,7 @@
 | 🟢 | [AGENTS.md](../conventions/agents-md/) | `AGENTS.md` | Most coding agents - OpenAI Codex, Cursor, Jules, Aider, Gemini CLI, Zed, and others | [spec ↗](https://agents.md) |
 | 🟢 | [CLAUDE.md](../conventions/claude-md/) | `CLAUDE.md` | Claude Code, and tools that read the Claude memory convention | [spec ↗](https://code.claude.com/docs/en/memory) |
 | 🟢 | [Tool-specific instruction files](../conventions/tool-specific-instructions/) | `GEMINI.md` `AGENT.md` `QWEN.md` `WARP.md` `CONVENTIONS.md` `copilot-instructions.md` | Each file is read by its namesake tool - Gemini CLI, Amp, Qwen Code, Warp, Aider, GitHub Copilot - often alongside or as a bridge to AGENTS.md | [spec ↗](https://agents.md) |
+| 🟠 | [OKF (Open Knowledge Format)](../conventions/okf/) | `.md` | Agents over MCP (okfy, openknowledge, superops okf CLIs); Google's knowledge-catalog ingests bundles | [spec ↗](https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf) |
 
 ## [AGENTS.md](../conventions/agents-md/)
 
@@ -21,3 +22,7 @@ Anthropic's memory file for Claude Code - loaded automatically at session start 
 ## [Tool-specific instruction files](../conventions/tool-specific-instructions/)
 
 Per-tool instruction files that predate or coexist with AGENTS.md. Some tools now default to AGENTS.md while keeping legacy filenames alive, so these variants still matter when auditing real repositories.
+
+## [OKF (Open Knowledge Format)](../conventions/okf/)
+
+A machine-first organizational knowledge base: a version-controlled folder of typed Markdown files (one concept per file) that any agent reads as ground-truth context. Open-sourced by Google Cloud in 2026 as the content layer to MCP's transport.
