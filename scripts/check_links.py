@@ -9,7 +9,7 @@ migrated `sources.yml` files for conventions that have complete local metadata.
 Failure policy is deliberately honest-but-not-flaky:
 
 - 2xx / 3xx                  → ok
-- 404 / 410                  → FAIL (the link is genuinely gone)
+- persistent 404 / 410       → FAIL (the link is genuinely gone)
 - persistent connection error → FAIL (dead host / DNS)
 - 401 / 403 / 429 / 5xx      → WARN, not fail (bot-blocking or transient - a
                                CI runner getting Cloudflare-challenged is not
@@ -45,7 +45,7 @@ TARGETS_PATH = os.path.join(ROOT, "scripts", "targets.json")
 
 UA = "awesome-agent-conventions-linkcheck/1.0 (+https://github.com/ItamarZand88/awesome-agent-conventions)"
 TIMEOUT = 30
-RETRIES = 2          # retry transient/connection failures before giving up
+RETRIES = 2          # retry transient HTTP/connection failures before giving up
 DEAD = {404, 410}    # the only codes that mean "this link is gone"
 
 
@@ -83,15 +83,18 @@ def check(item):
                 return (item, "ok", resp.status)
         except urllib.error.HTTPError as e:
             if e.code in DEAD:
-                return (item, "fail", e.code)
-            last = ("warn", e.code)            # 401/403/429/5xx - don't fail
+                if e.code == 410:
+                    return (item, "fail", e.code)
+                last = ("dead", e.code)
+            else:
+                last = ("warn", e.code)        # 401/403/429/5xx - don't fail
         except Exception as e:                 # noqa: BLE001 - connection/DNS/timeout
             last = ("conn", type(e).__name__)
         if attempt < RETRIES:
             time.sleep(1.5 * (attempt + 1))
-    # Persistent connection error => treat as dead; a tolerated HTTP code => warn.
+    # Persistent connection error or 404 => dead; a tolerated HTTP code => warn.
     status, detail = last
-    return (item, "fail" if status == "conn" else "warn", detail)
+    return (item, "fail" if status in {"conn", "dead"} else "warn", detail)
 
 
 def main():
