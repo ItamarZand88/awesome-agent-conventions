@@ -877,3 +877,11 @@ examples:
   url: https://raw.githubusercontent.com/chujianyun/skills/main/skills/remove-ai-flavor/SKILL.md
   filename: SKILL.md
   domain: Content & Comms
+- label: x-twitter-scraper
+  represents: X data access for search, monitoring, exports, media, MCP, SDK, and approval-gated publishing
+  upstream:
+    label: Xquik-dev/x-twitter-scraper
+    url: https://github.com/Xquik-dev/x-twitter-scraper
+  url: https://raw.githubusercontent.com/Xquik-dev/x-twitter-scraper/master/skills/x-twitter-scraper/SKILL.md
+  filename: SKILL.md
+  domain: Data & Analysis

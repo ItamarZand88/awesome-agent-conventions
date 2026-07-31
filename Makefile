@@ -1,7 +1,7 @@
 PYTHON ?= python3
 PIP ?= pip
 
-.PHONY: install validate build extract check-links check-examples verify-generated verify open-source-check license-report clean
+.PHONY: install validate build extract test check-links check-examples verify-generated verify open-source-check license-report clean
 
 install:
 	$(PIP) install -r scripts/requirements.txt
@@ -17,6 +17,9 @@ extract:
 	$(PYTHON) scripts/extract.py
 	$(PYTHON) scripts/build_readme.py
 
+test:
+	$(PYTHON) -m unittest discover -s scripts -p 'test_*.py'
+
 check-links:
 	$(PYTHON) scripts/check_links.py
 
@@ -26,7 +29,7 @@ check-examples:
 verify-generated:
 	$(PYTHON) scripts/check_generated.py
 
-verify: validate verify-generated check-examples check-links
+verify: validate verify-generated check-examples test check-links
 
 open-source-check: verify
 	test -f LICENSE
