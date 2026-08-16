@@ -32,6 +32,18 @@ examples, honest maturity labels.
 - Add "adoption evidence" links for each maturity tier.
 - Move watchlist items into full entries only when they meet the promotion bar.
 
+## v0.5 - Effective context semantics
+
+- Track how a convention becomes active at runtime: always-on, path-scoped,
+  glob-scoped, explicit invocation, model-selected, or tool-configured.
+- Track precedence when several files can apply at once: global vs repo vs
+  folder rules, legacy vs modern rule files, and user prompt overrides.
+- Track boundaries that affect what actually reaches the agent: ignore files,
+  indexing-only excludes, generated outputs, MCP/tool exposure, and prompt assets.
+- Add portability notes for same-looking Markdown files whose runtime behavior
+  differs across Cursor, Claude Code, Codex, Cline, Devin/Cascade, Windsurf, and
+  Copilot.
+
 ## Non-goals
 
 - Becoming a glossary of AI terms.
