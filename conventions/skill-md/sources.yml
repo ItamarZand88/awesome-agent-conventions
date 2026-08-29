@@ -149,6 +149,14 @@ examples:
   url: https://raw.githubusercontent.com/anthropics/skills/main/skills/webapp-testing/SKILL.md
   filename: SKILL.md
   domain: Dev & Tooling
+- label: agent-qa-authoring
+  represents: Authors and runs natural-language web, Android, and iOS regression tests with reviewable run evidence
+  upstream:
+    label: vostride/agent-qa
+    url: https://github.com/vostride/agent-qa
+  url: https://raw.githubusercontent.com/vostride/agent-qa/main/skills/agent-qa-authoring/SKILL.md
+  filename: SKILL.md
+  domain: Dev & Tooling
 - label: xlsx
   represents: Create, read, and edit Excel .xlsx spreadsheets
   upstream:
