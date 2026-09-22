@@ -2815,6 +2815,12 @@
           "url": "https://raw.githubusercontent.com/kagent-dev/kagent/main/python/samples/langgraph/currency/currency/agent-card.json",
           "source_label": "kagent-langgraph-currency",
           "as": "agent-card.json"
+        },
+        {
+          "type": "web",
+          "url": "https://feeless402.com/.well-known/agent-card.json",
+          "source_label": "feeless402",
+          "as": "agent-card.json"
         }
       ]
     },
