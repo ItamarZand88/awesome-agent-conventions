@@ -1,0 +1,73 @@
+<!-- source: feeless402 — https://feeless402.com/.well-known/agent-card.json -->
+{
+  "protocolVersion": "0.3.0",
+  "name": "Feeless402 Rail Quote",
+  "description": "Read-only x402 pricing agent: send it any x402 (HTTP 402 Payment Required) API URL and it fetches the live payment quote without paying, then prices the same call on every rail the server offers \u2014 gas rails floor micro-prices; the feeless Nano (XNO) rail quotes the true metered amount. Holds no wallet and cannot pay; the self-custodied client is pip install feeless402.",
+  "url": "https://feeless402.com/a2a",
+  "preferredTransport": "JSONRPC",
+  "version": "0.2.3",
+  "provider": {
+    "organization": "Feeless402",
+    "url": "https://feeless402.com"
+  },
+  "documentationUrl": "https://feeless402.com/docs.html",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "defaultInputModes": [
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "securitySchemes": {},
+  "security": [],
+  "skills": [
+    {
+      "id": "x402-quote-and-compare",
+      "name": "Quote an x402 endpoint across rails",
+      "description": "Give it an x402 API URL (optionally with a JSON body). It returns the endpoint's live 402 quote \u2014 full offer menu, XNO price, destination \u2014 plus a per-rail payer-cost comparison. Read-only: nothing is paid.",
+      "tags": [
+        "x402",
+        "pricing",
+        "402",
+        "nano",
+        "rails"
+      ],
+      "examples": [
+        "quote https://feeless402.com/premium",
+        "what would https://nano-gpt.com/api/v1/chat/completions cost per call?"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "faucet-info",
+      "name": "Starter-funds faucet status",
+      "description": "Live status of the Feeless402 onboarding faucet: address, per-claim amount, remaining claims, and how an agent claims.",
+      "tags": [
+        "faucet",
+        "nano",
+        "onboarding"
+      ],
+      "examples": [
+        "faucet status"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ]
+}
